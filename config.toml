@@ -1,0 +1,136 @@
+baseurl = "https://www.bmpi.dev"
+title = "Build My Passive Income"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+pluralizelisttitles = false
+
+disqusShortname = "Dawei Ma"
+
+[params]
+    author = "Dawei Ma"
+    info = "self/dev/money"
+    description = "Self-management + IT technology + Investment transactions = build my passive income"
+    keywords = "life,dev,trade,passive income,money,developer,Self-management,IT technology,investment transactions"
+    avatarurl = "images/mdw.png"
+
+    favicon_32 = "images/f/favicon-32x32.png"
+    favicon_16 = "images/f/favicon-16x16.png"
+
+    # footercontent = "self/dev/money"
+
+    hidecredits = true
+    hidecopyright = false
+
+    # Git Commit in Footer, uncomment the line below to enable it.
+    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
+
+    rtl = false
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "auto"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    math = true
+    custom_css = []
+    custom_js = []
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/bmpi-dev"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter fa-2x"
+    weight = 2
+    url = "https://twitter.com/madawei2699"
+[[params.social]]
+    name = "Telegram"
+    icon = "fab fa-telegram fa-2x"
+    weight = 3
+    url = "https://t.me/bmpi365"
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+                name = "About"
+                weight = 1
+                url = "/about/"
+            [[languages.en.menu.main]]
+                name = "Self"
+                weight = 2
+                url  = "/self/"
+            [[languages.en.menu.main]]
+                name = "Dev"
+                weight = 3
+                url  = "/dev/"
+            [[languages.en.menu.main]]
+                name = "Money"
+                weight = 4
+                url  = "/money/"
+            [[languages.en.menu.main]]
+                name = "Project"
+                weight = 5
+                url  = "/projects/"
+            [[languages.en.menu.main]]
+                name = "Plan"
+                weight = 6
+                url  = "/plan/"
+
+
+    [languages.zh-cn]
+        languagename = "Chinese"
+        title = "构建我的被动收入"
+
+        [languages.zh-cn.params]
+            author = "马大伟"
+            info = "self/dev/money"
+            description = "Self-management + IT technology + Investment transactions = build my passive income"
+            keywords = "life,dev,trade,passive income,money,developer,Self-management,IT technology,investment transactions"
+            # footercontent = "self/dev/money"
+
+        [languages.zh-cn.menu]
+
+            [[languages.zh-cn.menu.main]]
+                name = "About"
+                weight = 1
+                url = "/about/"
+            [[languages.zh-cn.menu.main]]
+                name = "Self"
+                weight = 2
+                url  = "/self/"
+            [[languages.zh-cn.menu.main]]
+                name = "Dev"
+                weight = 3
+                url  = "/dev/"
+            [[languages.zh-cn.menu.main]]
+                name = "Money"
+                weight = 4
+                url  = "/money/"
+            [[languages.zh-cn.menu.main]]
+                name = "Project"
+                weight = 5
+                url  = "/projects/"
+            [[languages.zh-cn.menu.main]]
+                name = "Plan"
+                weight = 6
+                url  = "/plan/"
