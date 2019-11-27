@@ -12,8 +12,6 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 pluralizelisttitles = false
 
-disqusShortname = "Dawei Ma"
-
 [params]
     author = "Dawei Ma"
     info = "self/dev/money"
@@ -28,9 +26,6 @@ disqusShortname = "Dawei Ma"
 
     hidecredits = true
     hidecopyright = false
-
-    # Git Commit in Footer, uncomment the line below to enable it.
-    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 
     rtl = false
 
@@ -47,6 +42,12 @@ disqusShortname = "Dawei Ma"
     math = true
     custom_css = []
     custom_js = []
+
+# Comments on github issue
+[params.utteranc]
+    repo = "bmpi-dev/bmpi.dev"
+    issue-term = "pathname"
+    theme = "github-light"
 
 # Social links
 [[params.social]]
