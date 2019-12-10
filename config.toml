@@ -79,19 +79,19 @@ pluralizelisttitles = false
             [[languages.en.menu.main]]
                 name = "Self"
                 weight = 2
-                url  = "/self/"
+                url  = "/blog/self/"
             [[languages.en.menu.main]]
                 name = "Dev"
                 weight = 3
-                url  = "/dev/"
+                url  = "/blog/dev/"
             [[languages.en.menu.main]]
                 name = "Money"
                 weight = 4
-                url  = "/money/"
+                url  = "/blog/money/"
             [[languages.en.menu.main]]
                 name = "Project"
                 weight = 5
-                url  = "/projects/"
+                url  = "/project/"
             [[languages.en.menu.main]]
                 name = "Goal"
                 weight = 6
@@ -118,19 +118,19 @@ pluralizelisttitles = false
             [[languages.zh-cn.menu.main]]
                 name = "Self"
                 weight = 2
-                url  = "/self/"
+                url  = "/blog/self/"
             [[languages.zh-cn.menu.main]]
                 name = "Dev"
                 weight = 3
-                url  = "/dev/"
+                url  = "/blog/dev/"
             [[languages.zh-cn.menu.main]]
                 name = "Money"
                 weight = 4
-                url  = "/money/"
+                url  = "/blog/money/"
             [[languages.zh-cn.menu.main]]
                 name = "Project"
                 weight = 5
-                url  = "/projects/"
+                url  = "/project/"
             [[languages.zh-cn.menu.main]]
                 name = "Goal"
                 weight = 6
