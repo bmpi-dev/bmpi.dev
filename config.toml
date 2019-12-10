@@ -12,6 +12,11 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 pluralizelisttitles = false
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
 [params]
     author = "Dawei Ma"
     info = "self/dev/money"
@@ -26,6 +31,8 @@ pluralizelisttitles = false
 
     hidecredits = true
     hidecopyright = false
+
+    series = true
 
     rtl = false
 
@@ -79,15 +86,15 @@ pluralizelisttitles = false
             [[languages.en.menu.main]]
                 name = "Self"
                 weight = 2
-                url  = "/blog/self/"
+                url  = "/self/"
             [[languages.en.menu.main]]
                 name = "Dev"
                 weight = 3
-                url  = "/blog/dev/"
+                url  = "/dev/"
             [[languages.en.menu.main]]
                 name = "Money"
                 weight = 4
-                url  = "/blog/money/"
+                url  = "/money/"
             [[languages.en.menu.main]]
                 name = "Project"
                 weight = 5
@@ -118,15 +125,15 @@ pluralizelisttitles = false
             [[languages.zh-cn.menu.main]]
                 name = "Self"
                 weight = 2
-                url  = "/blog/self/"
+                url  = "/self/"
             [[languages.zh-cn.menu.main]]
                 name = "Dev"
                 weight = 3
-                url  = "/blog/dev/"
+                url  = "/dev/"
             [[languages.zh-cn.menu.main]]
                 name = "Money"
                 weight = 4
-                url  = "/blog/money/"
+                url  = "/money/"
             [[languages.zh-cn.menu.main]]
                 name = "Project"
                 weight = 5
