@@ -93,9 +93,9 @@ pluralizelisttitles = false
                 weight = 5
                 url  = "/projects/"
             [[languages.en.menu.main]]
-                name = "Plan"
+                name = "Goal"
                 weight = 6
-                url  = "/plan/"
+                url  = "/goal/"
 
 
     [languages.zh-cn]
@@ -132,6 +132,6 @@ pluralizelisttitles = false
                 weight = 5
                 url  = "/projects/"
             [[languages.zh-cn.menu.main]]
-                name = "Plan"
+                name = "Goal"
                 weight = 6
-                url  = "/plan/"
+                url  = "/goal/"
