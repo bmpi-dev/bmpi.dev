@@ -66,7 +66,7 @@
     {{ range .Site.Params.custom_js }}
       <script src="{{ . | relURL }}"></script>
     {{ end }}
-    
+
     <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
 
@@ -75,6 +75,16 @@
     {{ end -}}
 
     {{ hugo.Generator }}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154678195-1');
+    </script>
   </head>
 
   {{ $csClass := "colorscheme-light" }}
