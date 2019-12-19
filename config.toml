@@ -7,10 +7,12 @@ defaultcontentlanguage = "en"
 paginate = 20
 canonifyurls = true
 
-pygmentsstyle = "bw"
+pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 pluralizelisttitles = false
+
+FootnoteReturnLinkContents = "↑"
 
 [taxonomies]
   category = "categories"

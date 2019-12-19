@@ -212,10 +212,27 @@ img {
   }
 }
 
-hr {
-  border: 0.5px LightGrey solid;
-  margin-top: 60px;
-  @media only screen and (max-width : 768px) {
-    margin-top: 0;
+// hr {
+//   border: 0.5px LightGrey solid;
+//   margin-top: 60px;
+//   @media only screen and (max-width : 768px) {
+//     margin-top: 0;
+//   }
+// }
+
+// footnote link
+a[href^="#fn:"],
+// Back to footnote link
+a[href^="#fnref:"] {
+  text-decoration: none;
+  color: $orange;
+  font-family: monospace;
+}
+a[href^="#fn:"]:before{ content: '[' }
+a[href^="#fn:"]:after{ content: ']' }
+
+.footnotes {
+  > hr {
+    display: none;
   }
 }
