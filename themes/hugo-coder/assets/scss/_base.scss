@@ -226,7 +226,7 @@ a[href^="#fn:"],
 a[href^="#fnref:"] {
   text-decoration: none;
   color: $orange;
-  font-family: monospace;
+  // font-family: monospace;
 }
 a[href^="#fn:"]:before{ content: '[' }
 a[href^="#fn:"]:after{ content: ']' }

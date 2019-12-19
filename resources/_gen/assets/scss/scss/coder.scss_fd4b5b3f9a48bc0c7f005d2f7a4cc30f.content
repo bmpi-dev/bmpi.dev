@@ -188,8 +188,7 @@ img {
 a[href^="#fn:"],
 a[href^="#fnref:"] {
   text-decoration: none;
-  color: #FFA500;
-  font-family: monospace; }
+  color: #FFA500; }
 
 a[href^="#fn:"]:before {
   content: '['; }
