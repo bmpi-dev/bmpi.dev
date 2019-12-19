@@ -23,16 +23,6 @@ GTD(Getting Things Done)[^1]是一种时间管理方法，它可以帮你把生�
 
 如果只是简单得管理一周内得工作任务，完全可以通过日历去管理。
 
-## Code
-``` elixir
-File.read!("./data.txt") 
-|> String.split("\n") 
-|> Enum.map(fn x -> {:ok, date, _} = DateTime.from_iso8601("2019-08-12T" <> x <> "Z"); date end) 
-|> Enum.group_by(fn x -> x end) 
-|> Enum.map(fn {k, v} -> [k, length(v)] end) 
-|> Enum.sort(fn l, r -> l <= r end) 
-|> Enum.reduce("", fn x, acc -> d = Enum.at(x, 0); acc <> "#{d.year}/#{d.month}/#{d.day} #{d.hour}:#{d.minute}:#{d.second}" <> ", #{Enum.at(x, 1)}"  <> "\n" end) |> (fn s -> File.write("./data.csv", s) end).()
-```
 
 ### *References*
 [^1]: <https://gettingthingsdone.com/>
