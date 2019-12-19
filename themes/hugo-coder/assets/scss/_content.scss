@@ -7,22 +7,26 @@
     header {
       margin-top: 6.4rem;
       margin-bottom: 3.2rem;
+      @media only screen and (max-width : 768px) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
       h1 {
-        font-size: 4.2rem;
+        font-size: 30px;
         line-height: 4.6rem;
         margin: 0;
         @media only screen and (max-width : 768px) {
-          font-size: 4.0rem;
+          font-size: 24px;
           line-height: 4.4rem;
         }
       }
     }
     footer {
-      margin-top: 4.0rem;
+      // margin-top: 4.0rem;
       .see-also {
-        margin: 3.2rem 0;
+        // margin: 3.2rem 0;
         h3 {
-          margin: 3.2rem 0;
+          // margin: 3.2rem 0;
         }
       }
     }
@@ -39,9 +43,25 @@
         margin-right: 0.5rem;
       }
       .date {
+        font-size: 18px;
+        @media only screen and (max-width : 768px) {
+          font-size: 14px;
+        }
         .posted-on {
           margin-left: 0;
           margin-right: 1.5rem;
+        }
+      }
+      .tags {
+        font-size: 18px;
+        @media only screen and (max-width : 768px) {
+          font-size: 14px;
+        }
+      }
+      .categories {
+        font-size: 18px;
+        @media only screen and (max-width : 768px) {
+          font-size: 14px;
         }
       }
     }
@@ -89,13 +109,13 @@
       }
       .title {
         font-size: 1.8rem;
-        color: $fg-color;
+        color: $link-color;
         font-family: $heading-font-family;
         font-weight: 700;
-        &:hover,
-        &:focus {
-          color: $link-color
-        }
+        // &:hover,
+        // &:focus {
+        //   color: $link-color
+        // }
       }
     }
   }

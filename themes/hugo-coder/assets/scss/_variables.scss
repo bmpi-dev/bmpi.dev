@@ -1,14 +1,15 @@
 // Fonts
-$text-font-family: Merriweather, Georgia, serif;
-$heading-font-family: Lato, Helvetica, sans-serif;
+$text-font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$heading-font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
 $code-font-family: 'Source Code Pro', 'Lucida Console', monospace;
 
 // Colors
 $bg-color: #FAFAFA !default;
 $fg-color: #212121 !default;
+$header-color: #666666 !default;
 $alt-bg-color: #E0E0E0 !default;
 $alt-fg-color: #000 !default;
-$link-color: #1565c0 !default;
+$link-color: #428bca !default;
 
 // Colors dark
 $bg-color-dark: #212121 !default;

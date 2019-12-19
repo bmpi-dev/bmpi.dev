@@ -1,0 +1,85 @@
+/* H1 {
+    margin-bottom: 35px;
+    margin-bottom: 25px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666 !important;
+} */
+
+H2 {
+    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666 !important;
+}
+
+
+H3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666 !important;
+}
+
+
+H4 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666 !important;
+}
+
+H5 {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666 !important;
+}
+
+H6 {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    border-bottom: 1px LightGrey solid;
+    width: 98%;
+    line-height: 150%;
+    color: #666666 !important;
+}
+
+.list {
+    font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif !important;
+    font-size: 28px !important;
+}
+
+.list .title {
+    font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif !important;
+    font-size: 24px !important;
+}
+
+/* .footer .container {
+    color: #666666;
+    font-size: small;
+} */
+
+.list .title a {
+    color: #428bca !important;
+    text-decoration: none !important;
+}
+
+/* .footnotes {
+    font-size: large;
+} */
+
+.footnotes p {
+    margin: 10px 0;
+}

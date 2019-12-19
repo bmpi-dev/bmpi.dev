@@ -13,11 +13,11 @@ body {
   color: $fg-color;
   background-color: $bg-color;
 	font-family: $text-font-family;
-	font-size: 1.6em;
+	font-size: 21px;
 	font-weight: 300;
   line-height: 1.8em;
   @media only screen and (max-width : 768px) {
-    font-size: 1.6em;
+    font-size: 16px;
     line-height: 1.6em;
   }
 }
@@ -45,54 +45,55 @@ h6 {
   font-family: $heading-font-family;
   font-weight: 700;
   color: $alt-fg-color;
-  margin: 6.4rem 0 3.2rem 0;
+  // margin: 6.4rem 0 3.2rem 0;
+  color: #666666;
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 30px;
   line-height: 3.6rem;
   @media only screen and (max-width : 768px) {
-    font-size: 3.0rem;
+    font-size: 24px;
     line-height: 3.4rem;
   }
 }
 h2 {
-  font-size: 2.8rem;
+  font-size: 26px;
   line-height: 3.2rem;
   @media only screen and (max-width : 768px) {
-    font-size: 2.6rem;
+    font-size: 20px;
     line-height: 3.0rem;
   }
 }
 h3 {
-  font-size: 2.4rem;
+  font-size: 22px;
   line-height: 2.8rem;
   @media only screen and (max-width : 768px) {
-    font-size: 2.2rem;
+    font-size: 16px;
     line-height: 2.6rem;
   }
 }
 h4 {
-  font-size: 2.2rem;
+  font-size: 18px;
   line-height: 2.6rem;
   @media only screen and (max-width : 768px) {
-    font-size: 2.0rem;
+    font-size: 12px;
     line-height: 2.4rem;
   }
 }
 h5 {
-  font-size: 2.0rem;
+  font-size: 14px;
   line-height: 2.4rem;
   @media only screen and (max-width : 768px) {
-    font-size: 1.8rem;
+    font-size: 8px;
     line-height: 2.2rem;
   }
 }
 h6 {
-  font-size: 1.8rem;
+  font-size: 14px;
   line-height: 2.2rem;
   @media only screen and (max-width : 768px) {
-    font-size: 1.6rem;
+    font-size: 6px;
     line-height: 2.0rem;
   }
 }
@@ -200,4 +201,21 @@ img {
 
 .fas {
   font-weight: 900;
+}
+
+.footer .container {
+  color: #666666;
+  font-size: small;
+  @media only screen and (max-width : 768px) {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+}
+
+hr {
+  border: 0.5px LightGrey solid;
+  margin-top: 60px;
+  @media only screen and (max-width : 768px) {
+    margin-top: 0;
+  }
 }

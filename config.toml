@@ -47,7 +47,7 @@ pluralizelisttitles = false
     maxSeeAlsoItems = 5
 
     math = true
-    custom_css = []
+    custom_css = ["/css/main.css"]
     custom_js = []
 
 # Comments on github issue
