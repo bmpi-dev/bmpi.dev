@@ -128,23 +128,41 @@ v3的工具组合：
 
 当你做完这些，可以立即在VSCode的左侧窗口看到那些任务正在做，哪些任务很重要但未开始做。
 
-![](2019-12-20-22-26-36.png =250x)
+{{< figure src="2019-12-20-22-57-16.png" height="588" width="294">}}
+
+大家可以使用GitHub的这个模版来创建自己的仓库：[todo_starter](https://github.com/bmpi-dev/todo_starter)。解决了电脑端的操作问题后，移动端有个很重要的功能就是提醒，如何能在手机端每天收到当前正在做的事情和重要但未开始做的事情？
+
+为了解决这个问题，我开发了一个todo文件的parser库：[todo_parser_lib](https://github.com/bmpi-dev/todo_parser_lib)，这个库可以解析指定目录下的todo文件，筛选出当前正在做的事情和重要但未开始做的事情然后渲染成一个html文件。有了这个库后我们可以结合GitHub提供的Actions[^7]功能，在每次我们push更新到仓库时，可以自动使用这个库渲染出html，然后自动给我们指定的邮箱发邮件来提醒。这个GitHub Actions的配置也放在了 **todo_starter** 这个模版库中了，你只需要提供发送邮件的邮箱和邮件服务商的SMTP地址即可。最终的效果如下：
+
+![](2019-12-20-23-15-24.png)
+
+我同时设置了定时任务，GitHub Actions会在每天的早上9点定时自动构建，然后发送邮件提醒你。由于数据是纯文本的，你可以把他放到任何地方（网盘、GitHub等）。
 
 ### v3的优点
 
-    1. 纯文本格式。
-    2. 灵活度高。
-    3. 可扩展性强。
+    1. 纯文本格式。很容易做一个parser去解析这种格式，同时也很容易编辑，使用任何编辑器都可以操作。当然最好使用VSCode+插件，这样会方便一些。
+    2. 灵活度高。可以随意的通过目录来区分不同领域，同时可以在单个文件中建立各种相关的项目，项目可以无限拆分。
+    3. 可扩展性强。比如你要扩展一个功能，加入非重要但未开始做的待办事项查看和提醒功能，这时候可以扩展VSCode插件和 todo_parser_lib 。
+    4. 数据私有。数据是你的，再也不需要依赖特定公司和特定平台了。
+    5. 免费。这一切都是免费的，除了耗费你一些时间。
 
-### VSCode插件（TODO++）
+### v3的使用场景
 
-### todo-plus-parser
+想象下每天早上你收到一份邮件提醒你今天该做哪些事及那些对你很重要但还没开始做的事情，时刻提醒你自己的重要目标。当有了一些新的要做的事情，打开电脑添加进去，推送到GitHub的云服务中，之后你的手机自动收到一份新构建成功的待办事项清单邮件。当你不在电脑旁的时候，又需要记录一些idea该怎么办？可以临时先记录到手机的备忘录中去，当有了电脑后，再重新整理进你的任务列表文件中。对于那些在特定时间发生的需要提醒的事件，直接加入到日历中去。
 
-### workflow
+### v3的进一步构想
 
-邮件 -> 日历
+我们有了电脑端编辑TODO的工具，手机端只接受提醒可能还不够好，能不能搞个基于Telegram的Bot通知？能不能搞个App去支持手机端编辑？能不能搞个命令行的工具？当然是可以的，既然我们做出了parser，有了parser解析后的json数据，我们可以进一步基于json这种数据格式做进一步的处理。当我有了这个想法后，突然意识到肯定有人已经想到了并且做了，经过一番查找，最终找到了todotxt[^8]。
+
+虽然todotxt也是基于txt的任务管理工具，但是和我的需求还是不匹配，所以最终我决定自己搞一套出来。
 
 ## Emacs ORG-MODE
+
+提到To Do，不提Emacs的org实在说不过去。
+
+> Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.[^9]
+
+可以说Org是万能的，既可以做笔记，又可以做TODO，还可以规划项目，编写文档，这一切都是纯文本的！唯一的缺点，可能就是你需要掌握Emacs这个上古神器，同时可能还需要掌握上古语言elisp，这两座大山不好爬，吓跑了好多人，所以神器虽好，使用成本也不得不考虑，他不符合我学习成本低的要求。
 
 #### *References*
 [^0]: 出自《增广贤文》
@@ -154,3 +172,6 @@ v3的工具组合：
 [^4]: [为什么GTD工具对于大部分人的结果都是无法坚持使用？](https://www.zhihu.com/question/24287111/answer/30106040)
 [^5]: [用GTD理念管理你的时间](https://zhuanlan.zhihu.com/p/21265727)
 [^6]: [Todo+](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus)
+[^7]: [Github Actions](https://github.com/features/actions)
+[^8]: <http://todotxt.org/>
+[^9]: <https://orgmode.org/>
