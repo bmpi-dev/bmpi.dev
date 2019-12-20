@@ -13,7 +13,7 @@ body {
   color: $fg-color;
   background-color: $bg-color;
 	font-family: $text-font-family;
-	font-size: 21px;
+	font-size: 18px;
 	font-weight: 300;
   line-height: 1.8em;
   @media only screen and (max-width : 768px) {
@@ -109,7 +109,7 @@ pre {
   font-weight: 400;
   line-height: 2.6rem;
   margin: 2.0rem 0 2.0rem 0;
-  padding: 2.0rem;
+  padding: 0 2.0rem;
   overflow-x: auto;
   code {
     display: inline-block;
@@ -233,7 +233,19 @@ a[href^="#fn:"]:after{ content: ']' }
 
 .footnotes {
   font-size: medium;
+  overflow-wrap: break-word;
   > hr {
     display: none;
   }
+}
+
+img {
+  display: block;
+  box-shadow: 0 0 10px #555;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 0 10px #555;
 }

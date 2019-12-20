@@ -11,7 +11,7 @@ body {
   color: #212121;
   background-color: #FFFFFF;
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.8em; }
   @media only screen and (max-width: 768px) {
@@ -98,7 +98,7 @@ pre {
   font-weight: 400;
   line-height: 2.6rem;
   margin: 2.0rem 0 2.0rem 0;
-  padding: 2.0rem;
+  padding: 0 2.0rem;
   overflow-x: auto; }
   pre code {
     display: inline-block;
@@ -197,9 +197,20 @@ a[href^="#fn:"]:after {
   content: ']'; }
 
 .footnotes {
-  font-size: medium; }
+  font-size: medium;
+  overflow-wrap: break-word; }
   .footnotes > hr {
     display: none; }
+
+img {
+  display: block;
+  box-shadow: 0 0 10px #555;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 0 10px #555; }
 
 .content {
   flex: 1;
@@ -229,7 +240,7 @@ a[href^="#fn:"]:after {
     margin-left: 0;
     margin-right: 0.5rem; }
   .content .post .post-meta .date {
-    font-size: 18px; }
+    font-size: 16px; }
     @media only screen and (max-width: 768px) {
       .content .post .post-meta .date {
         font-size: 14px; } }
@@ -237,12 +248,12 @@ a[href^="#fn:"]:after {
       margin-left: 0;
       margin-right: 1.5rem; }
   .content .post .post-meta .tags {
-    font-size: 18px; }
+    font-size: 16px; }
     @media only screen and (max-width: 768px) {
       .content .post .post-meta .tags {
         font-size: 14px; } }
   .content .post .post-meta .categories {
-    font-size: 18px; }
+    font-size: 16px; }
     @media only screen and (max-width: 768px) {
       .content .post .post-meta .categories {
         font-size: 14px; } }
@@ -268,10 +279,12 @@ a[href^="#fn:"]:after {
   list-style: none;
   padding: 0; }
   .list ul li {
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    line-height: 1.8; }
     @media only screen and (max-width: 768px) {
       .list ul li {
-        margin: 1.6rem 0 1.6rem 0; } }
+        margin: 1.6rem 0 1.6rem 0;
+        line-height: 1.6; } }
     .list ul li .date {
       display: inline-block;
       width: 20.0rem;

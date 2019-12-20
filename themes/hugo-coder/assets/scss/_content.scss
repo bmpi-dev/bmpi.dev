@@ -43,7 +43,7 @@
         margin-right: 0.5rem;
       }
       .date {
-        font-size: 18px;
+        font-size: 16px;
         @media only screen and (max-width : 768px) {
           font-size: 14px;
         }
@@ -53,13 +53,13 @@
         }
       }
       .tags {
-        font-size: 18px;
+        font-size: 16px;
         @media only screen and (max-width : 768px) {
           font-size: 14px;
         }
       }
       .categories {
-        font-size: 18px;
+        font-size: 16px;
         @media only screen and (max-width : 768px) {
           font-size: 14px;
         }
@@ -94,8 +94,10 @@
     padding: 0;
     li {
       font-size: 1.8rem;
+      line-height: 1.8;
       @media only screen and (max-width : 768px) {
         margin: 1.6rem 0 1.6rem 0;
+        line-height: 1.6;
       }
       .date {
         display: inline-block;
