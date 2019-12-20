@@ -22,7 +22,7 @@ H2 {
 H3 {
     margin-top: 20px;
     margin-bottom: 10px;
-    border-bottom: 1px LightGrey solid;
+    /* border-bottom: 1px LightGrey solid; */
     width: 98%;
     line-height: 150%;
     color: #666666 !important;
@@ -32,7 +32,7 @@ H3 {
 H4 {
     margin-top: 16px;
     margin-bottom: 8px;
-    border-bottom: 1px LightGrey solid;
+    /* border-bottom: 1px LightGrey solid; */
     width: 98%;
     line-height: 150%;
     color: #666666 !important;
@@ -41,7 +41,7 @@ H4 {
 H5 {
     margin-top: 12px;
     margin-bottom: 4px;
-    border-bottom: 1px LightGrey solid;
+    /* border-bottom: 1px LightGrey solid; */
     width: 98%;
     line-height: 150%;
     color: #666666 !important;
@@ -50,7 +50,7 @@ H5 {
 H6 {
     margin-top: 8px;
     margin-bottom: 0px;
-    border-bottom: 1px LightGrey solid;
+    /* border-bottom: 1px LightGrey solid; */
     width: 98%;
     line-height: 150%;
     color: #666666 !important;
@@ -82,4 +82,10 @@ H6 {
 
 .footnotes p {
     margin: 10px 0;
+}
+
+#references {
+    border-bottom: 1px dashed #FFA500;
+    width: 50%;
+    margin: 0;
 }

@@ -196,8 +196,10 @@ a[href^="#fn:"]:before {
 a[href^="#fn:"]:after {
   content: ']'; }
 
-.footnotes > hr {
-  display: none; }
+.footnotes {
+  font-size: medium; }
+  .footnotes > hr {
+    display: none; }
 
 .content {
   flex: 1;

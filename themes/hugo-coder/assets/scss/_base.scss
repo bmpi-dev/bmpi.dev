@@ -232,6 +232,7 @@ a[href^="#fn:"]:before{ content: '[' }
 a[href^="#fn:"]:after{ content: ']' }
 
 .footnotes {
+  font-size: medium;
   > hr {
     display: none;
   }

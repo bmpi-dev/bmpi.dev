@@ -23,6 +23,5 @@ GTD(Getting Things Done)[^1]是一种时间管理方法，它可以帮你把生�
 
 如果只是简单得管理一周内得工作任务，完全可以通过日历去管理。
 
-
-### *References*
+#### *References*
 [^1]: <https://gettingthingsdone.com/>
