@@ -190,11 +190,189 @@ test3:
 
 Javascript的jison自带了词法分析功能，不过也可以使用第三方的词法分析库，由于yaml/python缩进风格的文法，本身不是CFG，需要我们做一定的处理才能正常的Token化[^8]。在这里我们使用[lexer](https://github.com/aaditmshah/lexer)来解析缩进风格的文法。
 
+```javascript
+const Lexer = require('lex');
+const row = 1;
+let col = 1;
+const indent = [0];
+const lexer = module.exports = new Lexer(function(char) {
+  throw new Error('Unexpected character at row ' + row + ', col ' + col + ': ' + char);
+});
+global.flag = 0; // 0 - doing, 1 - critical
+module.exports.changeFlag = function changeFlag(flag) {
+  global.flag = flag;
+};
+lexer.addRule(/^[\t ]*/gm, function(lexeme) {
+  const indentation = lexeme.length;
+  col += indentation;
+  if (indentation > indent[0]) {
+    indent.unshift(indentation);
+    return 'INDENT';
+  }
+  const tokens = [];
+  while (indentation < indent[0]) {
+    tokens.push('DEDENT');
+    indent.shift();
+  }
+  if (tokens.length) return tokens;
+});
+lexer.addRule(/\n+/gm, function(lexeme) {
+  // col = 1;
+  // row += lexeme.length;
+  // return "NEWLINE";
+});
+lexer.addRule(/.*/gm, function(lexeme) {
+  col += lexeme.length;
+  const projectRe = /^.*:$/g;
+  if (lexeme.length == 0) {
+    // return "EMPTY"
+  } else if (lexeme.trim().startsWith('> ')) {
+    // return "COMMENT"
+  } else if (lexeme.trim().includes('@done') || lexeme.trim().includes('@cancelled')) {
+    // return "DONE"
+  } else if (projectRe.test(lexeme.trim())) {
+    this.yytext = lexeme;
+    return 'NAME';
+  } else {
+    // doing todo item
+    if (global.flag == 0 && lexeme.trim().includes('@started')) {
+      this.yytext = lexeme;
+      return 'NAME';
+    }
+    // critical item but is not doing
+    if (global.flag == 1 && lexeme.trim().includes('@critical') && !lexeme.trim().includes('started')) {
+      this.yytext = lexeme;
+      return 'NAME';
+    }
+  }
+});
+lexer.addRule(/$/gm, function() {
+  col++;
+  return 'EOF';
+});
+```
+
+Token化的核心是使用特殊的Token替代被Token化文件中的符合正则表达式的字符串，我们这里只关注缩进INDENT/DEDENT和Todo待办事项的NAME，还有文件结束符EOF，所以你可以猜到最终被lexer输出的是个Token List:
+```
+NAME: test1:
+INDENT
+NAME: ☐ test list1 @started(19-12-11 21:16)
+NAME: ✘ cancel @cancelled(19-12-11 21:28)
+NAME: test2:
+INDENT
+NAME: ☐ test list21 @started(19-12-11 21:16)
+NAME: ✘ test list23 cancel @cancelled(19-12-11 21:28)
+DEDENT
+DEDENT
+NAME: test3:
+INDENT
+NAME: ☐ test list31 @started(19-12-11 21:16)
+DEDENT
+EOF
+```
+
 ### step2/语法分析
+
+有了上述Token List做输入给jison做BNF语法分析，最终解析出json AST。先看BNF语法：
+
+```
+{
+  'bnf': {
+    'todo-plus': [
+      ['todo-list EOF', 'return $1;'],
+      ['EOF', 'return null'],
+    ],
+    'todo-list': [
+      ['todo', '$$ = $1 == null ? null : [$1];'],
+      ['todo-list todo',
+        'if ($1 == null) { $$ = $2; } ' +
+        'else { if ($2 == null) { $$ == $1; } ' +
+        'else { $$ = [].concat($1).concat($2); } };'],
+    ],
+    'todo': [
+      ['item', '$$ = {name: $1, todo: []};'],
+      ['item INDENT todo-list DEDENT', '$$ = $3 == null ? $3 : {name: $1, todo: $3};'],
+      ['item INDENT DEDENT', '$$ = null;'],
+      ['INDENT DEDENT', '$$ = null'],
+    ],
+    'item': [
+      ['NAME', '$$ = yytext;'],
+    ],
+  },
+}
+```
+
+BNF就是递归的分解要解析的文件字符串，直到遇到不可分割的Token，比如文件一开始肯定会拆解为 'todo-list EOF' ，然后 todo-list 可以进一步分割直到 NAME 和 INDENT/DEDENT ，jison是兼容bison语法的，所以如果一脸懵比可以先看下[bison语法帮助文档](http://dinosaur.compilertools.net/bison/bison_6.html#SEC34)。
 
 ### step3/Render
 
+经过语法分析，我们得到了json字符串，在这里我们可以使用[mustache.js](https://github.com/janl/mustache.js)将json渲染为HTML，我们只需要定义好Template，然后调用mustache render即可。
+
+```javascript
+const Mustache = require('mustache');
+const fs = require('fs');
+
+module.exports = function render(doingJson, criticalJson) {
+  const todoTemplate = fs.readFileSync(__dirname + '/template/todo_template.mustache');
+  const outputDoingHtml = Mustache.render(todoTemplate.toString(), doingJson, {
+    recurse: todoTemplate.toString(),
+  });
+  const outputCriticalHtml = Mustache.render(todoTemplate.toString(), criticalJson, {
+    recurse: todoTemplate.toString(),
+  });
+  const indexTemplate = fs.readFileSync(__dirname + '/template/index_template.mustache');
+  const outputIndexHtml = Mustache.to_html(indexTemplate.toString(), {doing: {}, critical: {}}, {
+    doing: outputDoingHtml,
+    critical: outputCriticalHtml,
+  });
+  return outputIndexHtml;
+};
+```
+
+```
+<ul class='todos' style='margin: 10px 0;'>
+{{#todo}}
+<li class='todo' style='list-style-type: none;'> {{ name }} </li>
+{{> recurse }}
+{{/todo}}
+</ul>
+```
+
+需要在这里注意的时，由于我们的JSON Scheme是嵌套的todo list，所以模版的渲染也需要嵌套[^9]。
+
 ### step4/工程化
+
+核心代码完成后，我们需要重构，应用一些工程实践，比如单元测试[^10]、命令行工具[^11]、CI自动发布工具到NPM仓库[^12]。
+
+```bash
+.
+├── README.md
+├── bin
+│   └── todo-cli.js
+├── lib
+│   ├── ast.js
+│   ├── lexer.js
+│   ├── parser.js
+│   ├── render.js
+│   └── template
+│       ├── index_template.mustache
+│       └── todo_template.mustache
+├── package-lock.json
+├── package.json
+└── test
+    ├── test_data
+    │   ├── critical.json
+    │   ├── doing.json
+    │   ├── test.doing.json
+    │   ├── test.lex
+    │   ├── test.todo
+    │   ├── test1.critical.json
+    │   ├── test1.lex
+    │   └── test1.todo
+    └── test_parser.js
+```
+
+这块不在赘述，感兴趣的可以参考[源代码](https://github.com/bmpi-dev/todo_parser_lib)。
 
 ## Nginx配置文件Parser
 
@@ -218,3 +396,7 @@ Javascript的jison自带了词法分析功能，不过也可以使用第三方�
 [^6]: [如何愉快地写个小parser](https://zhuanlan.zhihu.com/p/20178871)
 [^7]: <https://zh.wikipedia.org/wiki/%E7%B7%A8%E8%AD%AF%E5%99%A8%E7%B7%A8%E8%AD%AF%E7%A8%8B%E5%BC%8F>
 [^8]: [Looking for examples of Jison grammars that use indentation for block-structure](https://stackoverflow.com/questions/14803043/looking-for-examples-of-jison-grammars-that-use-indentation-for-block-structure)
+[^9]: <https://github.com/janl/mustache.js/issues/468>
+[^10]: [学习 Node.js，第 9 单元：单元测试](https://www.ibm.com/developerworks/cn/opensource/os-tutorials-learn-nodejs-unit-testing-in-nodejs/index.html)
+[^11]: [Node.js 命令行程序开发教程](https://www.kancloud.cn/kancloud/command-line-with-node/48657)
+[^12]: [npm-publish.yml](https://github.com/bmpi-dev/todo_parser_lib/blob/master/.github/workflows/npm-publish.yml)
