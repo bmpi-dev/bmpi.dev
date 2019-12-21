@@ -18,7 +18,11 @@
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              {{ i18n "reading_time" .ReadingTime }}
+              {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
+              {{ $minutes := math.Floor (div $readTime 60) }}
+              {{ $seconds := mod $readTime 60 }}
+              Reading time: {{ $minutes }}:{{ $seconds }}
+              <!-- {{ i18n "reading_time" .ReadingTime }} -->
             </span>
           </div>
           {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
