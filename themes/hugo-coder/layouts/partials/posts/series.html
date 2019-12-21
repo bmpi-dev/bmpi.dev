@@ -5,7 +5,7 @@
     {{ $name := . | urlize }}
     {{ $series := index $.Site.Taxonomies.series $name }}
     {{ if gt (len $series.Pages) 1 }}
-      <h3>See also in {{ . }}</h3>
+      <h4>See also in {{ . }}</h4>
       <nav>
         <ul>
         {{ $maxItems := $.Site.Params.maxSeeAlsoItems | default 5 }}
