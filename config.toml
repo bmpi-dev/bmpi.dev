@@ -105,6 +105,10 @@ FootnoteReturnLinkContents = "↑"
                 name = "Goal"
                 weight = 6
                 url  = "/goal/"
+            [[languages.en.menu.main]]
+                name = "Wiki"
+                weight = 7
+                url  = "https://wiki.bmpi.dev"
 
 
     [languages.zh-cn]
@@ -144,3 +148,7 @@ FootnoteReturnLinkContents = "↑"
                 name = "Goal"
                 weight = 6
                 url  = "/goal/"
+            [[languages.zh-cn.menu.main]]
+                name = "Wiki"
+                weight = 7
+                url  = "https://wiki.bmpi.dev"
