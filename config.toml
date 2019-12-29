@@ -73,7 +73,7 @@ FootnoteReturnLinkContents = "↑"
     name = "Telegram"
     icon = "fab fa-telegram fa-2x"
     weight = 3
-    url = "https://t.me/bmpi365"
+    url = "https://t.me/s/bmpi365"
 
 [languages]
     [languages.en]
