@@ -135,7 +135,7 @@ wiki资料通过GitHub公共仓库托管，通过netlify生成静态网站。
 
 密钥等信息通过`1Password`托管，重要的资料制作成md文件后通过Google Drive/Microsoft OneDrive等托管，经常需要的重要的资料可通过手机备忘录加密存放。
 
-#### *Reference*
+#### *References*
 [^0]: <https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode>
 [^1]: <https://github.com/bmpi-dev/wiki.bmpi.dev>
 [^2]: <https://web.archive.org/web/20191230143823/https://gigaom.com/2012/09/19/the-disappearing-web-information-decay-is-eating-away-our-history/>
