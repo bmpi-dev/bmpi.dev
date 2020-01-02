@@ -89,3 +89,7 @@ H6 {
     width: 50%;
     margin: 0;
 }
+
+[type=checkbox], [type=radio] {
+    margin: 0 10px;
+}
