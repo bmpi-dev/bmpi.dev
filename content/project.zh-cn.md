@@ -21,7 +21,7 @@ title = "Project"
 
 ### 记账系统
 
-* 我的记账工具*
+* [我的财务管理方案](/zh-cn/money/my-accounting-tool/)
 
 ### 交易系统
 
