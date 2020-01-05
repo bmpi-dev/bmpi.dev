@@ -19,7 +19,7 @@ title = "Project"
 
 * [打造优雅高效的写作环境](/zh-cn/self/build-write-tool-v1/)
 
-### 记账系统
+### 财务系统
 
 * [我的财务管理方案](/zh-cn/money/my-accounting-tool/)
 
