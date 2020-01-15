@@ -3,10 +3,15 @@ title: "我的时间管理工具"
 date: 2019-12-18
 draft: false
 series: ["GTD"]
-tags: ["gtd", "tool"]
+tags: ["时间管理", "工具"]
 categories: [
-    "TODO"
+    "时间管理"
 ]
+aliases: [
+    "/zh-cn/self/gtd-tools-i-used/"
+]
+keywords: ["时间管理", "Emacs", "OneNote", "GTD"]
+description: "本文介绍了我近3年对时间管理工具（GTD）的思考，最终构建了一套以VSCode工具为基础结合邮件通知的可以长期免费使用的时间任务目标管理工具"
 ---
 “一寸光阴一寸金，寸金难买寸光阴”[^0]，"Time Is Money"[^1]，这两句尽人皆知的名言，告诉了大家一个道理：穷不要紧，只要你有时间就行。虽然每个人的时间从单位上看都是一样长的，但单位时间的工作效率差异很大，不考虑智力和外部资源的因素，每个人管理时间的方式不同，是决定时间利用率重要的因素。
 

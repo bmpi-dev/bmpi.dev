@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ if .Description }} <meta name="description" content="{{ .Description }}">
+    {{else}}
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ end }}
+    {{ if .Keywords }} <meta name="keywords" content="{{ delimit .Keywords ", " }}">
+    {{else}}
     {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+    {{ end }}
 
-    {{ template "_internal/twitter_cards.html" . }}
-    {{ template "_internal/opengraph.html" . }}
+    <!-- {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }} -->
 
     {{ if .Permalink }}
       <base href="{{ .Permalink }}">

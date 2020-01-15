@@ -1,29 +1,24 @@
 +++
-title = "Project"
+title = "副业项目"
+description = "通过个人业余网赚项目建立被动收入"
+keywords = "自我成长、个人项目、业余西安面馆、网赚项目、被动收入、Web流量研究"
 +++
 
-## 当代年轻人的成长套餐
+## 自我成长系列
 
-* [人生游戏之路](/zh-cn/self/road_to_life_games/)
+| 成长之路 | 文章 |
+|  ----  | ----  |
+| 人生之路 | [人生游戏之路](/self/road_to_life_games/) |
+| 时间系统 | [我的时间管理工具](/self/gtd-tools-i-used/) |
+| 笔记系统 | 1. [我的笔记系统](/self/note-system/) / 2. [用OneNote管理你的知识](/self/onenote-intro/) |
+| 写作系统 | [打造优雅高效的写作环境](/self/build-write-tool-v1/) |
+| 财务系统 | [我的财务管理方案](/money/my-accounting-tool/) |
+| 交易系统 | 1. [年轻上班族的系统化投资之路](/money/investment-path-for-young/) / 2. [构建你的交易系统](/money/build-trade-system/) |
 
-### 时间系统
+## Ins流量站
 
-* [我的时间管理工具](/zh-cn/self/gtd-tools-i-used/)
+<https://www.instaghub.com>
 
-### 笔记系统
+## 交易日记App
 
-* [我的笔记系统](/zh-cn/self/note-system/)
-* [用OneNote管理你的知识](/zh-cn/self/onenote-intro/)
-
-### 写作系统
-
-* [打造优雅高效的写作环境](/zh-cn/self/build-write-tool-v1/)
-
-### 财务系统
-
-* [我的财务管理方案](/zh-cn/money/my-accounting-tool/)
-
-### 交易系统
-
-* [年轻上班族的系统化投资之路](/zh-cn/money/investment-path-for-young/)
-* [构建你的交易系统](/zh-cn/money/build-trade-system/)
+[一款产品的从0到1之旅](/dev/zero-to-one/)

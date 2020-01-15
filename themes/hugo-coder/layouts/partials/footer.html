@@ -1,9 +1,16 @@
 <footer class="footer">
+  <div class="footer-taxonomy">
+    <a href= {{ relLangURL "tags" }} >Tags</a>
+    /
+    <a href= {{ relLangURL "categories" }} >Categories</a>
+    /
+    <a href= {{ relLangURL "series" }} >Series</a>
+  </div>
   <section class="container">
     {{ with .Site.Params.footercontent | safeHTML }}
       <p>{{.}}</p>
     {{ end }}
-    {{ if not .Site.Params.hideCopyright }} © {{ now.Format "2006" }}{{ end }}
+    {{ if not .Site.Params.hideCopyright }} © 2019 - {{ now.Format "2006" }}{{ end }}
     {{ if not .Site.Params.hideCredits }}
       {{ if not .Site.Params.hideCopyright }} · {{ end }}
       {{ i18n "powered_by" }} <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.

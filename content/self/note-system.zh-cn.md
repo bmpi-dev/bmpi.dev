@@ -2,10 +2,12 @@
 title: "我的笔记系统"
 date: 2020-01-01
 draft: false
-tags: ["self", "note", "wiki", "tiddlywiki"]
-categories: [
-    "self"
+tags: ["笔记系统", "笔记管理", "知识管理", "个人Wiki", "TiddlyWiki", "Wayback Machine", "AWS S3"]
+aliases: [
+    "/zh-cn/self/note-system/"
 ]
+keywords: ["笔记系统", "笔记管理", "知识系统", "个人Wiki", "TiddlyWiki", "Wayback Machine", "AWS S3"]
+description: "本文介绍了如何使用TiddlyWiki打造个人长期的知识管理系统（图片使用AWS S3云存储管理），同时介绍了OneNote、EveryNote、Emacs Org等工具的优缺点"
 ---
 
 一个好的笔记系统，应该把你所学习到的任何资料串联起来，形成一个知识系统，在你需要他们的时候，可以很容易找到他们，然后形成自己新的知识。

@@ -3,6 +3,8 @@ title: "Coding Anytime Anywhere"
 date: 2019-02-08
 draft: false
 tags: ["elixir"]
+keywords: "elixir"
+description: "Use Elixir write hello world"
 ---
 
 ## Coding Anytime Anywhere

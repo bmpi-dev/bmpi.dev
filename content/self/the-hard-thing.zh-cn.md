@@ -2,17 +2,19 @@
 title: "思维导图 |《创业维艰》读书笔记"
 date: 2016-06-15
 draft: false
-tags: ["book", "self"]
-categories: [
-    "self"
+tags: ["读书笔记", "创业", "比难更难的事情"]
+aliases: [
+    "/zh-cn/self/the-hard-thing/"
 ]
+keywords: ["读书笔记", "创业", "比难更难的事情", "HBO硅谷"]
+description: "本文分享了《创业维艰》这本书的读书笔记以及对创业的思考"
 ---
 
 ![](https://img.bmpi.dev/ead48153-99e7-a136-6486-c0a2e8ff4f9f.png)
 
 ![](https://img.bmpi.dev/c57dc8ba-d55d-c888-3859-f06d50f0aaef.png)
 
-## 创业是什么？
+## 创业是什么
 
 这本书的副标题告诉我们创业是完成一件比难更难的事情。大部分的创业都可能以失败告终。但创业的魅力也在于如何用极其有限的资源和时间解决一件件比难更难的事情，如何管理好公司各利益方、产品、用户及资金是需要很强的平衡能力。
 

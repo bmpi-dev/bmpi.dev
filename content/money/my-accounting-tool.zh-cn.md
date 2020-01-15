@@ -2,10 +2,12 @@
 title: "我的财务管理方案"
 date: 2020-01-05
 draft: false
-tags: ["accounting", "money", "tool"]
-categories: [
-    "money"
+tags: ["挖财App", "记账工具", "财务规划", "标准普尔家庭资产配置"]
+aliases: [
+    "/zh-cn/money/my-accounting-tool/"
 ]
+keywords: "挖财App、记账工具、财务规划、标准普尔家庭资产配置"
+description: "本文介绍了我使用挖财App坚持8年记账后带来的积极变化，使用记账工具帮助我分析个人以及家庭财务规划最终帮助我作出更好的投资理财决策"
 ---
 
 自2012年2月9日14:05分用挖财记下第一笔帐后，至今已经持续了2888天（8年），这算是我坚持最久的一个习惯。

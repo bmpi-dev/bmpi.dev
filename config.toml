@@ -1,8 +1,11 @@
 baseurl = "https://www.bmpi.dev"
 title = "Build My Passive Income"
 theme = "hugo-coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
+languagecode = "zh-cn"
+defaultcontentlanguage = "zh-cn"
+
+enableRobotsTXT = true
+canonifyURLs = true
 
 paginate = 20
 canonifyurls = true
@@ -52,6 +55,8 @@ FootnoteReturnLinkContents = "↑"
     custom_css = ["/css/main.css"]
     custom_js = []
 
+    dateFormat = "2006-01-02"
+
 # Comments on github issue
 [params.utteranc]
     repo = "bmpi-dev/bmpi.dev"
@@ -94,20 +99,16 @@ FootnoteReturnLinkContents = "↑"
                 weight = 3
                 url  = "/dev/"
             [[languages.en.menu.main]]
-                name = "Money"
-                weight = 4
-                url  = "/money/"
-            [[languages.en.menu.main]]
                 name = "Project"
-                weight = 5
+                weight = 4
                 url  = "/project/"
             [[languages.en.menu.main]]
                 name = "Goal"
-                weight = 6
+                weight = 5
                 url  = "/goal/"
             [[languages.en.menu.main]]
                 name = "Wiki"
-                weight = 7
+                weight = 6
                 url  = "https://wiki.bmpi.dev"
 
 
@@ -118,34 +119,34 @@ FootnoteReturnLinkContents = "↑"
         [languages.zh-cn.params]
             author = "马大伟"
             info = "self/dev/money"
-            description = "Self-management + IT technology + Investment transactions = build my passive income"
-            keywords = "life,dev,trade,passive income,money,developer,Self-management,IT technology,investment transactions"
+            description = "通过自我管理（GTD、时间管理、知识管理、写作、财务管理）、全栈开发（前端、后端、移动端、DevOps）、投资交易（指数投资、基金、股票、债券）、网赚项目（SEO、Affiliate、Media Buy、Niche、社交媒体）来建立被动收入"
+            keywords = "自我管理、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚"
             # footercontent = "self/dev/money"
 
         [languages.zh-cn.menu]
 
             [[languages.zh-cn.menu.main]]
-                name = "About"
+                name = "关于"
                 weight = 1
                 url = "/about/"
             [[languages.zh-cn.menu.main]]
-                name = "Self"
+                name = "自我管理"
                 weight = 2
                 url  = "/self/"
             [[languages.zh-cn.menu.main]]
-                name = "Dev"
+                name = "全栈开发"
                 weight = 3
                 url  = "/dev/"
             [[languages.zh-cn.menu.main]]
-                name = "Money"
+                name = "投资交易"
                 weight = 4
                 url  = "/money/"
             [[languages.zh-cn.menu.main]]
-                name = "Project"
+                name = "副业"
                 weight = 5
                 url  = "/project/"
             [[languages.zh-cn.menu.main]]
-                name = "Goal"
+                name = "目标"
                 weight = 6
                 url  = "/goal/"
             [[languages.zh-cn.menu.main]]

@@ -2,7 +2,12 @@
 title: "优惠券项目小结"
 date: 2019-02-20
 draft: false
-tags: ["coupon", "seo", "affiliate", "media buy"]
+tags: ["优惠券", "SEO", "affiliate", "网赚项目", "media buy"]
+aliases: [
+    "/zh-cn/dev/coupon-project-review/"
+]
+keywords: "优惠券、SEO、affiliate、网赚项目、media buy"
+description: "记录开发HasOffer网站通过SEO提高网站流量的过程，也涉及一些media buy和affiliate以及国外用户使用coupon的介绍"
 ---
 
 大概在半年前我参加了一个国外优惠券聚合平台的项目，项目背景简单介绍下：网站聚合展示很多品牌的最新优惠券，用户可以在里面查看及搜索不同品牌的最新优惠券，优惠券分为两类，用户点击后有展示优惠码的，也有点击后跳转到品牌折扣页的，通过Google相应品牌折扣关键词引流。网站的优惠券来源于两类渠道，一类是Aff网盟平台，我们网站对接了三个平台，包括shareasale、linkshare、CJ。另一类是社交平台，主要是Twitter平台。第一类平台通过接口对接拉取数据自动入库上架至我们网站，人工主要在这几个网盟平台申请各品牌的优惠券offer即可。对于网盟平台的优惠券offer，用户点击优惠券跳转到品牌官网后购买此商品我们有佣金提成，不同商品的提成佣金率不同。第二类如Twitter平台的优惠券没有提成，不过量特别大，可以扩充我们的优惠券数量，也可以提高我们网站的页面数量和Google收录页面。

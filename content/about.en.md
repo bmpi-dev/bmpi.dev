@@ -1,5 +1,7 @@
 +++
-title = "About"
+title = "About Me"
+description = "About me"
+keywords = "about me"
 +++
 
 ```text

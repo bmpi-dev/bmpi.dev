@@ -2,10 +2,12 @@
 title: "简单的投资策略为何能赚钱"
 date: 2020-01-04
 draft: false
-tags: ["trade", "money", "invest", "etf", "ma"]
-categories: [
-    "money"
+tags: ["投资策略", "指数基金", "ETF定投", "华泰证券"]
+aliases: [
+    "/zh-cn/money/why-simple-investment-strategies-make-money/"
 ]
+keywords: ["投资策略", "指数基金", "ETF", "华泰证券"]
+description: "本文分析了为何使用简单的ETF指数定投可以带来年化40%多的收益甚至跑赢了华泰证券涨乐财富通App 94.4% 的用户（华泰证券用户量占A股自然人数量的10%，而其App的用户量占其客户的近90%），证明了指数投资的力量"
 ---
 
 ## 指数投资的威力

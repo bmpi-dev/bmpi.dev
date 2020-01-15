@@ -2,10 +2,12 @@
 title: "2019年金融投资总结"
 date: 2020-01-02
 draft: false
-tags: ["trade", "money", "etf"]
-categories: [
-    "money"
+tags: ["2019投资总结", "指数定投", "ETF"]
+aliases: [
+    "/zh-cn/money/invest-review-2019/"
 ]
+keywords: "2019投资总结、指数定投、ETF定投"
+description: "本文总结了我在2019年使用ETF指数定投战胜大盘达到40%多的投资收益的过程"
 ---
 
 2019年过去了，这一年A股的走势不错，虽然屡次突破3千大关无果，但是如果你从年前一直持有到现在的话，收益率大概是不会差的。

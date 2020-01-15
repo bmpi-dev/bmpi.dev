@@ -2,10 +2,12 @@
 title: "玩CASHFLOW打造你的财务自由之路"
 date: 2016-06-11
 draft: false
-tags: ["cashflow", "game", "money"]
-categories: [
-    "money"
+tags: ["现金流游戏", "财务自由"]
+aliases: [
+    "/zh-cn/money/play-cashflow-to-build-your-financial-freedom/"
 ]
+keywords: "现金流游戏、富爸爸穷爸爸、财务自由"
+description: "介绍了通过玩富爸爸穷爸爸书中介绍的现金流游戏，了解普通人如何走向财务自由之路，还有一些关于财务会计报表的知识介绍，如收入支出与资产负债及现金流量表的知识"
 ---
 
 ## 玩CASHFLOW的启示

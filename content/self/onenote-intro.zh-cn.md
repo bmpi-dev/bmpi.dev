@@ -2,10 +2,12 @@
 title: "用OneNote管理你的知识"
 date: 2016-06-01
 draft: false
-tags: ["onenote", "self", "note", "wiki"]
-categories: [
-    "self"
+tags: ["OneNote", "个人Wiki", "知识管理", "笔记系统"]
+aliases: [
+    "/zh-cn/self/onenote-intro/"
 ]
+keywords: ["笔记系统", "笔记管理", "知识系统", "个人Wiki", "OneNote"]
+description: "本文介绍了如何使用OneNote打造个人长期的知识管理系统"
 ---
 
 ## 信息孤岛毁掉你的创作力

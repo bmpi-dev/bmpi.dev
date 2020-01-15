@@ -2,10 +2,15 @@
 title: "一款产品的从0到1之旅"
 date: 2016-05-27
 draft: false
-tags: ["dev", "full-stack", "trade"]
+tags: ["全栈开发", "投资交易", "App开发", "从0到1", "产品营销"]
 categories: [
-    "dev"
+    "交易日记"
 ]
+aliases: [
+    "/zh-cn/dev/zero-to-one/"
+]
+keywords: "全栈开发、投资交易、App开发、Python、从0到1、邮件营销、社交媒体营销"
+description: "记录交易日记App开发的过程，包括移动端App以及服务端的全栈开发过程，还有一些关于产品运营及营销知识的介绍"
 ---
 
 从0到1打造一款产品是一种什么样的体验？为了回答这种知乎范的问题，让我来介绍下我是如何打造交易日记这款App的过程。需要提前说明的是整款iOS APP的全部工作都是我一个人完成的。
