@@ -2,7 +2,7 @@
 title: "Parser黑魔法"
 date: 2019-12-21
 draft: false
-series: ["时间管理"]
+series: ["GTD"]
 tags: ["时间管理", "工具", "parser解析器", "jison", "bison", "lex", "flex", "bnf", "yacc", "dsl", "词法分析", "语法分析", "编译原理"]
 aliases: [
     "/zh-cn/dev/parser_black_magic/"

@@ -3,9 +3,6 @@ title: "如何快速学习一项新技能？"
 date: 2016-06-11
 draft: false
 tags: ["快速学习", "终身学习", "元学习", "技能组合"]
-categories: [
-    "self"
-]
 aliases: [
     "/zh-cn/self/learn-skill/"
 ]
