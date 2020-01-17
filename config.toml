@@ -79,6 +79,16 @@ FootnoteReturnLinkContents = "↑"
     icon = "fab fa-telegram fa-2x"
     weight = 3
     url = "https://t.me/s/bmpi365"
+[[params.social]]
+    name = "WeChat"
+    icon = "fab fa-weixin fa-2x"
+    weight = 4
+    url = "https://img.bmpi.dev/755b406f-43ae-e382-e13c-547116d3e7d5.png"
+[[params.social]]
+    name = "ZhiHu"
+    icon = "fab fa-zhihu fa-2x"
+    weight = 5
+    url = "https://zhuanlan.zhihu.com/improve365"
 
 [languages]
     [languages.en]
