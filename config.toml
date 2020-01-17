@@ -138,7 +138,7 @@ FootnoteReturnLinkContents = "↑"
                 weight = 3
                 url  = "/dev/"
             [[languages.zh-cn.menu.main]]
-                name = "投资交易"
+                name = "被动收入"
                 weight = 4
                 url  = "/money/"
             [[languages.zh-cn.menu.main]]

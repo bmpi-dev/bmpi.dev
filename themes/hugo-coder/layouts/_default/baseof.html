@@ -15,8 +15,8 @@
     {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
     {{ end }}
 
-    <!-- {{ template "_internal/twitter_cards.html" . }}
-    {{ template "_internal/opengraph.html" . }} -->
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
 
     {{ if .Permalink }}
       <base href="{{ .Permalink }}">

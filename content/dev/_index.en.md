@@ -1,0 +1,5 @@
+---
+title: "Full Stack Development Articles"
+keywords: ["Programming skills", "Full-stack development", "Front-end development", "Back-end development", "Mobile-end development", "DevOps technology", "Python", "Crawler", "SEO", "Quantitative trading technology" , "Java", "Elixir", "Functional Development", "Object-Oriented Development", "High Concurrency System Architecture", "Refactoring", "TDD", "DDD", "System Architecture", "Distributed and Microservices "," P2P technology "," GitHub open source project "," Arbitrage technology "," Bot development "]
+description: "Full-stack development series articles, share some of my programming skills, full-stack development technologies including front-end and back-end mobile and DevOps technology, Python learning, crawler development, SEO related technologies, quantitative trading Tushare library related tool development, Java and Elixir programming Tips, Nodejs, microservices and distributed, refactoring TDD and DDD, development of GitHub open source projects, etc."
+---
