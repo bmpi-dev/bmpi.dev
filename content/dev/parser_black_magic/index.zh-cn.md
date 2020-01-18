@@ -13,6 +13,8 @@ description: "本文讲述了基于词法分析和语法分析等编译原理知
 
 我们在开发过程中对于文本处理一般会用Regex来搞定，比如识别一个字符串中的邮箱及手机号之类。但是对于复杂的文本格式，我们可能会通过写一个解析工具来解析，但是你可能很难想到用flex/bison来做。想象下这么一个场景，你需要将Nginx的conf文件转换成json格式。
 
+{{< ad_embed_post >}}
+
 ```nginx
 worker_processes  1;
 events {
