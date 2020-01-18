@@ -109,16 +109,20 @@ FootnoteReturnLinkContents = "↑"
                 weight = 3
                 url  = "/dev/"
             [[languages.en.menu.main]]
-                name = "Project"
+                name = "Money"
                 weight = 4
+                url  = "/money/"
+            [[languages.en.menu.main]]
+                name = "Project"
+                weight = 5
                 url  = "/project/"
             [[languages.en.menu.main]]
                 name = "Goal"
-                weight = 5
+                weight = 6
                 url  = "/goal/"
             [[languages.en.menu.main]]
                 name = "Wiki"
-                weight = 6
+                weight = 7
                 url  = "https://wiki.bmpi.dev"
 
 
