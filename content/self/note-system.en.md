@@ -9,6 +9,8 @@ description: "This article explains how to use TiddlyWiki to build a personal lo
 
 A good note-taking system should connect any information you learn to form a knowledge system, when you need them, you can easily find them, and then form their own new knowledge.
 
+{{< ad_embed_post >}}
+
 In the article ["Manage your knowledge with OneNote"](/zh-cn/self/onenote-intro/), I was introduced to manage my data with OneNote. Although OneNote has done a very good job, it cannot meet my requirements due to the following problems:
 
 1. Syntax highlighting is not supported in typesetting. As someone who writes a lot of code, this is intolerable.
@@ -133,6 +135,8 @@ A collection of private, non-public data related to private notes and work. Non-
 ## Important Note
 
 Keys and other information are hosted by `1Password`. Important materials are made into md files and then hosted by Google Drive / Microsoft OneDrive. Important information that is often needed can be encrypted and stored by mobile memo.
+
+{{< ad_embed_post >}}
 
 #### *References*
 [^0]: <https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode>

@@ -12,6 +12,8 @@ description: "本文介绍了如何使用TiddlyWiki打造个人长期的知识�
 
 一个好的笔记系统，应该把你所学习到的任何资料串联起来，形成一个知识系统，在你需要他们的时候，可以很容易找到他们，然后形成自己新的知识。
 
+{{< ad_embed_post >}}
+
 在[《用OneNote管理你的知识》](/zh-cn/self/onenote-intro/)这篇文章中介绍了我用OneNote管理我的各种资料，虽然OneNote已经做的非常好了，但是存在以下问题无法达到我的要求:
 
 1. 排版不支持语法高亮。作为一个经常写代码的，这点不能忍。
@@ -136,6 +138,8 @@ wiki资料通过GitHub公共仓库托管，通过netlify生成静态网站。
 ## 重要资料
 
 密钥等信息通过`1Password`托管，重要的资料制作成md文件后通过Google Drive/Microsoft OneDrive等托管，经常需要的重要的资料可通过手机备忘录加密存放。
+
+{{< ad_embed_post >}}
 
 #### *References*
 [^0]: <https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode>

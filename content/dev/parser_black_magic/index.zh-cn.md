@@ -390,6 +390,8 @@ module.exports = function render(doingJson, criticalJson) {
 
 想看大型编程语言的语法分析，可以看看Elixir基于Erlang平台是怎么把自己编译成Erlang的：[elixir_parser.yrl](https://github.com/elixir-lang/elixir/blob/master/lib/elixir/src/elixir_parser.yrl)
 
+{{< ad_embed_post >}}
+
 #### *References*
 [^0]: [List of Text Processing Tools](https://www.shlomifish.org/open-source/resources/text-processing-tools/)
 [^1]: <https://en.wikipedia.org/wiki/Abstract_syntax_tree>

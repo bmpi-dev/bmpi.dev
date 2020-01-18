@@ -15,6 +15,8 @@ description: "本文讲述了基于VSCode编辑器开发一款ToDo插件并分�
 
 VSCode是微软开源的一款基于Electron开发的代码编辑器。Electron 是一个基于 Chromium 的项目，可用于开发基于 Node.js 的本地应用程序。VSCode 使用 Blink 排版引擎渲染用户界面。虽然基于 Electron 框架，但并不是Atom的复刻。Code是由“Monaco”的编辑器核心制作，与 Visual Studio Team Services 相同。
 
+{{< ad_embed_post >}}
+
 在2019年的Stack Overflow组织的开发者调研中，VS Code被认为是最受开发者欢迎的开发环境，据调查87317名受访者中有50.7%的受访者声称正在使用VS Code[^0]。
 
 ![](2019-12-22-12-06-14.png)
@@ -253,6 +255,8 @@ jobs:
 可研究下VSCode官方提供了一些插件的Demo: [vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)。
 
 插件开发中不可避免要Debug，VSCode也提供了强大的Debug能力，可参考[Debugging extensions](https://vscode-docs.readthedocs.io/en/stable/extensions/debugging-extensions/)。
+
+{{< ad_embed_post >}}
 
 #### *References*
 [^0]: [ Developer Survey Results 2019 - Most Popular Development Environments](https://insights.stackoverflow.com/survey/2019)
