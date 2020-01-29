@@ -17,6 +17,13 @@ pluralizelisttitles = false
 
 FootnoteReturnLinkContents = "↑"
 
+[outputs]
+  page     = ["HTML", "AMP"]
+  home     = ["HTML", "RSS"]
+  section  = ["HTML"]
+  taxonomyTerm = ["HTML"]
+  taxonomy = ["HTML"]
+
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -28,6 +35,13 @@ FootnoteReturnLinkContents = "↑"
     description = "Self-management + IT technology + Investment transactions = build my passive income"
     keywords = "life,dev,trade,passive income,money,developer,Self-management,IT technology,investment transactions"
     avatarurl = "images/mdw.png"
+    logoImg = "images/bmpi_logo.jpg"
+    header = "BMPI.dev"
+
+    twitter = "madawei2699"
+    github = "bmpi-dev"
+    telegram = "bmpi365"
+    zhihu = "improve365"
 
     favicon_32 = "images/f/favicon-32x32.png"
     favicon_16 = "images/f/favicon-16x16.png"

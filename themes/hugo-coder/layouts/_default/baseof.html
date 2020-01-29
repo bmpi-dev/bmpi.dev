@@ -18,6 +18,8 @@
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
 
+    {{ partial "schema.html" . }}
+
     {{ if .Permalink }}
       <base href="{{ .Permalink }}">
     {{ end }}

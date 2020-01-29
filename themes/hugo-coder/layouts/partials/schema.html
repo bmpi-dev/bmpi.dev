@@ -1,0 +1,50 @@
+{{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": {{ .Site.Params.header }},
+    "url": {{ .Site.BaseURL }},
+    "sameAs": [
+      "https://twitter.com/{{ .Site.Params.twitter }}",
+      "https://github.com/{{ .Site.Params.github }}",
+      "https://t.me/s/{{ .Site.Params.telegram }}",
+      "https://zhuanlan.zhihu.com/{{ .Site.Params.zhihu }}"
+    ]
+  }
+  </script>
+{{ end }}
+{{ if or (eq .Section "self") (eq .Section "dev") (eq .Section "money") }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      {{ if .IsPage }}
+      "@type": "BlogPosting",
+      {{ else }}
+      "@type": "Blog",
+      {{ end }}
+      "headline": {{ .Title }},
+      "image": {{ .Site.Params.logoImg | absURL }},
+      "datePublished": {{ .PublishDate }},
+      "dateModified": {{ .Lastmod }},
+      "author": {
+        "@type": "Person",
+        "name": {{ .Site.Params.author }}
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ .Permalink }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ .Site.Params.header }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ .Site.Params.logoImg | absURL }}
+        }
+      },
+      "description": {{ .Params.description }},
+      "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
+    }
+    </script>
+{{ end }}
