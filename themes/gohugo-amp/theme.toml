@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "gohugo-amp"
+license = "MIT"
+licenselink = "https://github.com/wildhaber/gohugo-amp/blob/master/LICENSE"
+description = "starter theme featuring AMP project"
+homepage = "https://gohugo-amp.gohugohq.com"
+tags = ["blog", "amp", "seo", "starter"]
+features = ["structured data","shortcodes","partials","amp","seo","schema"]
+min_version = 0.17
+
+[author]
+    name = "Raphael Wildhaber"
+    homepage = "https://github.com/wildhaber"

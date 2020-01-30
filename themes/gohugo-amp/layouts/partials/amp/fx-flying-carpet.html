@@ -1,0 +1,8 @@
+<amp-fx-flying-carpet {{ with .height }}height="{{ . }}"{{ end }}>
+    <amp-img {{ with .imgSrc }}src="{{ . }}"{{ end }}
+             {{ with .imgWidth }}width="{{ . }}"{{ end }}
+             {{ with .imgHeight }}height="{{ . }}"{{ end }}
+             {{ with .imgAlt }}alt="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+             {{ with .imgSrcSet }}alt="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+             {{ with .imgAttribution }}attribution="{{ . }}"{{ end }}></amp-img>
+</amp-fx-flying-carpet>

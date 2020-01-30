@@ -1,0 +1,15 @@
+{
+  "trackPageview": {
+    "on": "visible",
+    "request": "pageview"
+  },
+  "trackEvent" : {
+    "selector": "body",
+    "on": "click",
+    "request": "event",
+    "vars": {
+      "eventCategory": "body-click",
+      "eventAction": "click"
+    }
+  }
+}

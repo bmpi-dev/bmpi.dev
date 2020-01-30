@@ -71,6 +71,13 @@ FootnoteReturnLinkContents = "↑"
 
     dateFormat = "2006-01-02"
 
+    # AMP
+    amp = true
+    ampElements = ["amp-ad","amp-analytics"]
+    themeColor = "#000000"
+    adsensePublisher = "ca-pub-1886683614725279"
+    googleAnalytics = "UA-154678195-1"
+
 # Comments on github issue
 [params.utteranc]
     repo = "bmpi-dev/bmpi.dev"

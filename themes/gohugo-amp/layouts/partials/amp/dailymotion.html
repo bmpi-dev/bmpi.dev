@@ -1,0 +1,12 @@
+<amp-dailymotion
+        {{ with .video }}data-videoid="{{ . }}"{{ end }}
+        {{ with .logo }}data-ui-logo="{{ . }}"{{ end }}
+        {{ with .info }}data-info="{{ . }}"{{ end }}
+        {{ with .highlight }}data-highlight="{{ . }}"{{ end }}
+        {{ with .layout }}layout="{{ . }}"{{ end }}
+        {{ with .mute }}data-mute="{{ . }}"{{ end }}
+        {{ with .endscreen }}data-endscreen-enable="{{ . }}"{{ end }}
+        {{ with .sharing }}data-sharing="{{ . }}"{{ end }}
+        {{ with .start }}data-start="{{ . }}"{{ end }}
+        {{ with .width }}width="{{ . }}"{{ end }}
+        {{ with .height }}height="{{ . }}"{{ end }}></amp-dailymotion>

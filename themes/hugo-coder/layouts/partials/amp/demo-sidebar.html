@@ -1,0 +1,26 @@
+<button class="hamburger" on='tap:sidebar1.toggle'>Toggle</button>
+<button on="tap:sidebar1.open">Open</button>
+<button on="tap:sidebar1.close">x</button>
+
+<amp-sidebar id="sidebar1"
+             layout="nodisplay"
+             side="right">
+    <ul>
+        <li tabindex="0">
+            <a href="/">Home</a>
+        </li>
+
+        <li tabindex="0">
+            <a href="/">Nav 2</a>
+        </li>
+
+        <li tabindex="0">
+            <a href="/">Nav 7</a>
+        </li>
+
+        <li tabindex="0">
+            <a href="/">Nav 2</a>
+        </li>
+        <li tabindex="0" role="close" on="tap:sidebar1.close"> Close</li>
+    </ul>
+</amp-sidebar>

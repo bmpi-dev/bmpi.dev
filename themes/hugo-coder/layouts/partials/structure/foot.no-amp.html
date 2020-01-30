@@ -1,0 +1,37 @@
+{{ with $.Site.Params.stylesheetRegular }}
+<script>
+    (function() {
+        var styles = [{{ range . }}"{{- . -}}",{{ end }}];
+        window.setTimeout(function() {
+            styles.forEach(function(style) {
+                var styleNode = document.createElement('link');
+                styleNode.setAttribute('href', style);
+                styleNode.setAttribute('media', 'screen');
+                styleNode.setAttribute('rel', 'stylesheet');
+                styleNode.setAttribute('async', 'true');
+                styleNode.setAttribute('type', 'text/css');
+                document.head.appendChild(styleNode);
+            });
+        });
+    })();
+</script>
+{{ end }}
+
+{{ with $.Site.Params.javascriptRegular }}
+<script>
+    (function() {
+        var scripts = [{{ range . }}"{{- . -}}",{{ end }}];
+        window.setTimeout(function() {
+            scripts.forEach(function(script) {
+                var scriptNode = document.createElement('script');
+                scriptNode.setAttribute('src', script);
+                scriptNode.setAttribute('async', 'true');
+                document.body.appendChild(scriptNode);
+            });
+        });
+    })();
+</script>
+{{ end }}
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Recipe",
+  "name": "{{ .Title }}",
+  "description": "{{ .Params.description }}",
+  "recipeCategory": "{{ .Params.recipe.category }}",
+  "author": {
+    "name" : "{{ .Params.author.name }}"
+  },
+  "description": "{{ .Params.description }}",
+  "datePublished" : "{{ .PublishDate.Format "2006-01-02T15:04:05" }}",
+  "dateModified" : "{{ .Date.Format "2006-01-02T15:04:05"  }}",
+  "prepTime": "{{ .Params.recipe.prepTime }}",
+  "totalTime": "{{ .Params.recipe.totalTime }}",
+  "recipeYield": "{{ .Params.recipe.recipeYield }}",
+  "recipeIngredient": {{ .Params.recipe.ingredients }},
+  "recipeInstructions": {{ .Params.recipe.instructions }},
+  "aggregateRating" : {
+      "@context": "http://schema.org",
+      "@type": "AggregateRating",
+      "ratingValue": "{{ .Params.rating.value }}",
+      "reviewCount": "{{ .Params.rating.reviewCount }}",
+      "bestRating": "{{ .Params.rating.best }}",
+      "worstRating": "{{ .Params.rating.worst }}"
+  },
+  "image" : {
+      "@context": "http://schema.org",
+      "@type": "ImageObject",
+      "author": "{{ .Params.image.author }}",
+      "url": "{{ .Params.image.src }}",
+      "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05" }}",
+      "name": "{{ .Params.image.title }}",
+      "height" : {{ .Params.image.height }},
+      "width" : {{ .Params.image.width }},
+      "license" : "{{ .Params.image.license_link }}",
+      "isBasedOn" : "{{ .Params.image.link }}"
+    },
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "{{ .Params.nutrition.servingSize }}",
+    "calories": "{{ .Params.nutrition.calories }}",
+    "fatContent": "{{ .Params.nutrition.fatContent }}",
+    "carbohydrateContent": "{{ .Params.nutrition.carbohydrateContent }}",
+    "cholesterolContent": "{{ .Params.nutrition.cholesterolContent }}",
+    "fiberContent": "{{ .Params.nutrition.fiberContent }}",
+    "proteinContent": "{{ .Params.nutrition.proteinContent }}",
+    "saturatedFatContent": "{{ .Params.nutrition.saturatedFatContent }}",
+    "sodiumContent": "{{ .Params.nutrition.sodiumContent }}",
+    "sugarContent": "{{ .Params.nutrition.sugarContent }}",
+    "transFatContent": "{{ .Params.nutrition.transFatContent }}"
+  }
+}
+</script>

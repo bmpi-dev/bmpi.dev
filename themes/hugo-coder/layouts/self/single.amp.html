@@ -1,0 +1,33 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>{{ .Title }}</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+                {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+              </time>
+            </span>
+          </div>
+          {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+          {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+        </div>
+      </header>
+      <div>
+        {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
+        {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
+        {{ $REPLACEMENT := "<amp-img src=\"$1\" alt=\"$2\" layout=\"responsive\" width=\"266\" height=\"150\"></amp-img>" }}
+        {{ $outContent := .Content | replaceRE $PATTERN_EMPTY_ALT $REPLACEMENT | replaceRE $PATTERN_ALT $REPLACEMENT | safeHTML }}
+        {{ $outContent }}
+      </div>
+    </article>
+
+  </section>
+{{ end }}

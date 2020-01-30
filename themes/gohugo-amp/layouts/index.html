@@ -1,0 +1,11 @@
+{{ partial "structure/head" . }}
+
+<main>
+    {{ range .Data.Pages }}
+        {{ if eq .Params.index true }}
+            {{ .Content }}
+        {{ end }}
+    {{ end }}
+</main>
+
+{{ partial "structure/foot" . }}

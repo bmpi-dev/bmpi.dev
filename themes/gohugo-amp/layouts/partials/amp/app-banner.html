@@ -1,0 +1,10 @@
+<amp-app-banner layout="nodisplay" id="{{ if isset . "id" }}{{ .id }}{{ else }}app-banner-id{{ end }}">
+    <amp-img src="{{ .src }}"
+             width="60" height="51">
+    </amp-img>
+    <h3>{{ .name }}</h3>
+    <p>{{ .description }}</p>
+    <div class="actions">
+        <button open-button>{{ if isset . "opentext" }}{{ .opentext }}{{ else }}Get the app{{ end }}</button>
+    </div>
+</amp-app-banner>

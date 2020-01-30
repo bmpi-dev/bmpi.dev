@@ -1,0 +1,17 @@
+<amp-video
+        {{ if isset . "src" }}src="{{ .src }}"{{ end }}
+        {{ if isset . "poster" }}poster="{{ .poster }}"{{ end }}
+        {{ if isset . "width" }}width="{{ .width }}"{{ end }}
+        {{ if isset . "height" }}height="{{ .height }}"{{ end }}
+        {{ if isset . "layout" }}layout="{{ .layout }}"{{ end }}
+        {{ if isset . "controls" }} controls {{ end }}
+        {{ if isset . "autoplay" }} autoplay {{ end }}
+        {{ if isset . "muted" }} muted {{ end }}
+        {{ if isset . "loop" }} loop {{ end }}>
+    <div fallback>
+        <p>Your browser doesn't support HTML5 video.</p>
+    </div>
+    {{ if isset . "source" }}
+        {{ .source | safeHTML }}
+    {{ end }}
+</amp-video>

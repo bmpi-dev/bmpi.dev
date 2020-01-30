@@ -1,0 +1,9 @@
+<amp-iframe {{ with .src }}src="{{ . }}"{{ end }}
+            {{ with .width }}width="{{ . }}"{{ end }}
+            {{ with .height }}height="{{ . }}"{{ end }}
+            {{ with .layout }}layout="{{ . }}"{{ end }}
+            {{ with .frameborder }}frameborder="{{ . }}"{{ end }}
+            {{ with .resizable }} resizable {{ end }}
+            {{ with .sandbox }}sandbox="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}>
+    {{ with .overflow }}<div overflow tabindex=0 role=button aria-label="Read more">{{ . }}</div>{{ end }}
+</amp-iframe>

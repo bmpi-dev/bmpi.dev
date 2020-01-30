@@ -1,0 +1,10 @@
+<amp-reddit
+        {{ with .width }}width="{{ . }}"{{ end }}
+        {{ with .height }}height="{{ . }}"{{ end }}
+        {{ with .layout }}layout="{{ . }}"{{ end }}
+        data-embedtype="comment"
+        {{ with .src }}data-src="{{ . }}"{{ end }}
+        {{ with .uuid }}data-uuid="{{ . }}"{{ end }}
+        {{ with .created }}data-embedcreated="{{ . }}"{{ end }}
+        {{ with .parent }}data-embedparent="{{ . }}"{{ end }}
+        {{ with .live }}data-embedlive="{{ . }}"{{ end }}></amp-reddit>

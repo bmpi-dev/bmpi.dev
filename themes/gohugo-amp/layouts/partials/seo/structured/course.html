@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "name" : "{{ .Title }}",
+  "description": "{{ .Params.description }}",
+  "provider" : {
+    "@type": "Organization",
+    "name" : "{{ .Params.provider.name }}",
+    "sameAs" : "{{ .Params.provider.url }}"
+  }
+}
+</script>

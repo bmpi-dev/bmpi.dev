@@ -1,0 +1,20 @@
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+    {{ with .Get "link"}}<a href="{{.}}">{{ end }}
+        {{ if not (in .Page.URL "/amp/") }}
+            <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
+        {{ else }}
+            <amp-img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} layout="responsive" width="266" height="150"></amp-img>
+        {{ end }}
+    {{ if .Get "link"}}</a>{{ end }}
+    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+    <figcaption>{{ if isset .Params "title" }}
+        <h4>{{ .Get "title" }}</h4>{{ end }}
+        {{ if or (.Get "caption") (.Get "attr")}}<p>
+        {{ .Get "caption" }}
+        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+            {{ .Get "attr" }}
+        {{ if .Get "attrlink"}}</a> {{ end }}
+        </p> {{ end }}
+    </figcaption>
+    {{ end }}
+</figure>

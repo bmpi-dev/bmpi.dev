@@ -1,0 +1,14 @@
+{{ if isset $.Site.Params "googleanalytics" }}
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "{{ $.Site.Params.googleAnalytics }}"
+            },
+            "triggers": {{ .Site.Data.analytics.triggers }}
+        }
+    </script>
+</amp-analytics>
+{{ else }}
+You must set a googleAnalytics UA-Code within the global config.toml Params.
+{{ end }}

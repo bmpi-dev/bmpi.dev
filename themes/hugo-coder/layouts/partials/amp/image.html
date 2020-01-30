@@ -1,0 +1,12 @@
+<amp-img
+        {{ with .src }}src="{{ . }}"{{ end }}
+    {{ with .alt }}alt="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+    {{ with .attribution }}attribution="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+    {{ with .srcset }}srcset="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+    {{ with .tabindex }}tabindex="{{ . }}"{{ end }}
+    {{ with .onTap }}on="tap:{{- . -}}"{{ end }}
+    {{ with .role }}role="{{ . }}"{{ end }}
+    {{ with .width }}width="{{ . }}"{{ end }}
+    {{ with .height }}height="{{ . }}"{{ end }}
+    {{ with .layout }}layout="{{ . }}"{{ end }}>
+</amp-img>

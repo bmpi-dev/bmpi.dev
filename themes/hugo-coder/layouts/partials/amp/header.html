@@ -1,0 +1,27 @@
+{{ if isset $.Site.Params "amp" }}
+
+    {{- range $.Site.Params.ampElements -}}
+        {{- if (index (index $.Site.Data "amp-modules") .) -}}
+            <script async custom-element="{{ . }}" src="{{ (index (index $.Site.Data "amp-modules") .) }}"></script>
+        {{- end }}
+    {{- end }}
+
+    {{ with .Params.amp.elements }}
+        {{ range . }}
+            {{ if in $.Site.Params.ampElements . }}
+            {{ else }}
+                {{- if (index (index $.Site.Data "amp-modules") .) -}}
+                    <script async custom-element="{{ . }}" src="{{ (index (index $.Site.Data "amp-modules") .) }}"></script>
+                {{- end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{- $ampCorePath := index (index $.Site.Data "amp-modules") "amp-core" -}}
+    <script async src="{{ $ampCorePath }}"></script>
+
+    {{ if isset $.Site.Params "ampmanifest" }}
+        {{ partial "amp/app-banner-header" . }}
+    {{ end }}
+
+{{ end }}

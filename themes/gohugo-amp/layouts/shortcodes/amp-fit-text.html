@@ -1,0 +1,7 @@
+<amp-fit-text {{ with .Params.width }}width="{{ . }}"{{ end }}
+              {{ with .Params.height }}height="{{ . }}"{{ end }}
+              {{ with .Params.layout }}layout="{{ . }}"{{ end }}
+              {{ with .Params.min }}min-font-size="{{ . }}"{{ end }}
+              {{ with .Params.max }}max-font-size="{{ . }}"{{ end }}>
+    {{ .Inner }}
+</amp-fit-text>

@@ -1,0 +1,7 @@
+{
+  "id" : "app-banner-id",
+  "src" : "https://placehold.it/60x51/ff3300/cccccc",
+  "name" : "My Apps Name",
+  "description" : "Short app description. Really short.",
+  "openText" : "get the app"
+}

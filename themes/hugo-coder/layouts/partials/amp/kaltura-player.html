@@ -1,0 +1,9 @@
+<amp-kaltura-player
+        {{ with .uiconf }}data-uiconf="{{ . }}"{{ end }}
+        {{ with .partner }}data-partner="{{ . }}"{{ end }}
+        {{ with .entry }}data-entryid="{{ . }}"{{ end }}
+        {{ with .streamerType }}data-param-streamerType="{{ . }}"{{ end }}
+        {{ with .width }}width="{{ . }}"{{ end }}
+        {{ with .height }}height="{{ . }}"{{ end }}
+        {{ with .layout }}layout="{{ . }}"{{ end }}>
+</amp-kaltura-player>

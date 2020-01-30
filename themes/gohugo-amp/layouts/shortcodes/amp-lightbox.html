@@ -1,0 +1,9 @@
+<amp-lightbox id="{{ with .Params.id }}{{ . }}{{ else }}custom-lightbox-id-please-set-your-id{{ end }}"
+              layout="nodisplay">
+    <div class="lightbox"
+         on="tap:{{ with .Params.id }}{{ . }}{{ else }}custom-lightbox-id-please-set-your-id{{ end }}.close"
+         role="button"
+         tabindex="0">
+        {{ .Inner }}
+    </div>
+</amp-lightbox>

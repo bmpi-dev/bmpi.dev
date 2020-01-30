@@ -1,0 +1,39 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "description": "describe your project",
+  "main": "index.js",
+  "scripts": {
+    "go": "npm run hugo:server",
+    "hugo:server": "hugo server --buildDrafts --buildFuture",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "npm run theme:build && hugo && npm run optimize:html",
+    "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json",
+    "theme:build": "node ./.bin/styling",
+    "theme:watch": "./node_modules/.bin/nodemon -e scss -w ./ -x npm run theme:build"
+  },
+  "author": "Your Name",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "html-minifier": "^3.1.1",
+    "autoprefixer": "^6.5.3",
+    "cssnano": "^3.8.0",
+    "node-sass": "^3.11.3",
+    "nodemon": "^1.11.0",
+    "postcss": "^5.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://LINK-TO-YOUR-REPOSITORY"
+  },
+  "keywords": [
+    "kw1",
+    "kw2",
+    "kw3"
+  ],
+  "bugs": {
+    "url": "https://LINK-TO-YOUR-BUG-TRACKER"
+  },
+  "homepage": "https://YOUR-HOMEPAGE.TLD"
+}

@@ -1,0 +1,25 @@
+baseurl = "https://gohugo-amp.gohugohq.com/"
+languageCode = "en-us"
+title = "gohugo-amp starter theme"
+theme = "gohugo-amp"
+enableRobotsTXT = true
+
+[params]
+    amp = true
+    ampElements = ["amp-accordion","amp-ad","amp-analytics","amp-app-banner","amp-carousel","amp-iframe","amp-dynamic-css-classes","amp-form","amp-fx-flying-carpet","amp-image-lightbox","amp-lightbox","amp-sidebar","amp-social-share","amp-sticky-ad","amp-user-notification"]
+    themeColor = "#ff1d55"
+    adsensePublisher = "ca-pub-123456789"
+    googleAnalytics = "UA-12345678-123"
+    appleItunesApp = "app-id=123456789, app-argument=app-name://link/to/app-content"
+    ampManifest = "/amp-manifest.json"
+    alternatePageName = "HUGO AMP"
+    organizationLogo = "https://gohugo-amp.gohugohq.com/logo.png"
+    organizationName = "gohugohq.com"
+    organizationAddress = "Some Street 123, 12345 City"
+    socialProfiles = ["http://www.facebook.com/your-profile","http://instagram.com/yourProfile","http://www.linkedin.com/in/yourprofile","http://plus.google.com/your_profile"]
+    publisherName = "gohugohq.com"
+    publisherLogo = "https://gohugo-amp.gohugohq.com/logo-publisher.png" # https://developers.google.com/search/docs/data-types/articles#logo-guidelines
+    publisherLogoWidth = 600
+    publisherLogoHeight = 60
+    stylesheetRegular = ["/base-styling.css"] # these styles are used when amp is disabled for a specific page
+    javascriptRegular = ["/script.js"] # these scripts are used when amp is disabled for a specific page

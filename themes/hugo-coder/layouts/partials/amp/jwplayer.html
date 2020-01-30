@@ -1,0 +1,8 @@
+<amp-jwplayer
+        {{ with .player }}data-player-id="{{ . }}"{{ end }}
+        {{ with .media }}data-media-id="{{ . }}"{{ end }}
+        {{ with .playlist }}data-playlist-id="{{ . }}"{{ end }}
+        {{ with .width }}width="{{ . }}"{{ end }}
+        {{ with .height }}height="{{ . }}"{{ end }}
+        {{ with .layout }}layout="{{ . }}"{{ end }}>
+</amp-jwplayer>

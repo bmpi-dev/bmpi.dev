@@ -1,0 +1,30 @@
+{
+  "name": "gohugo-amp",
+  "version": "1.0.0",
+  "description": "AMP starter theme for gohugo https://gohugo-amp.gohugohq.com ",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Raphael Wildhaber",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wildhaber/gohugo-amp.git"
+  },
+  "keywords": [
+    "gohugo",
+    "hugo",
+    "amp",
+    "theme",
+    "template",
+    "starter",
+    "seed",
+    "boilerplate",
+    "seo"
+  ],
+  "bugs": {
+    "url": "https://github.com/wildhaber/gohugo-amp/issues"
+  },
+  "homepage": "https://gohugo-amp.gohugohq.com"
+}

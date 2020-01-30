@@ -1,0 +1,14 @@
+<amp-audio
+        {{ with .width }}width="{{ . }}"{{ end }}
+        {{ with .height }}height="{{ . }}"{{ end }}
+        {{ with .src }}src="{{ . }}"{{ end }}
+        {{ with .layout }}layout="{{ . }}"{{ end }}
+        {{ with .autoplay }}autoplay{{ end }}
+        {{ with .loop }}loop{{ end }}
+        {{ with .muted }}muted{{ end }}>
+    <div fallback>
+        <p>Your browser doesn’t support HTML5 audio</p>
+    </div>
+    {{ with .mp3 }}<source type="audio/mpeg" src="{{ . }}">{{ end }}
+    {{ with .ogg }}<source type="audio/ogg" src="{{ . }}">{{ end }}
+</amp-audio>

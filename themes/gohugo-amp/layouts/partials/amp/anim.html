@@ -1,0 +1,14 @@
+<amp-anim src="{{ .src }}"
+        {{ if isset . "srcset" }}srcset="{{ range (split .srcset " ") }}{{ . }} {{ end }}"{{ end }}
+        {{ if isset . "alt" }}alt="{{ range (split .alt " ") }}{{ . }} {{ end }}"{{ end }}
+        {{ if isset . "attribution" }}attribution="{{ range (split .attribution " ") }}{{ . }} {{ end }}"{{ end }}
+        {{ if isset . "width" }}width="{{ .width }}"{{ end }}
+        {{ if isset . "height" }}height="{{ .height }}"{{ end }}
+        {{ if isset . "layout" }}layout="{{ .layout }}"{{ end }}>
+    {{ if isset . "placeholder" }}
+        <amp-img placeholder
+           {{ if isset . "width" }}width="{{ .width }}"{{ end }}
+            {{ if isset . "height" }}height="{{ .height }}"{{ end }}
+            {{ if isset . "placeholder" }}src="{{ .placeholder }}"{{ end }}></amp-img>
+    {{ end }}
+</amp-anim>

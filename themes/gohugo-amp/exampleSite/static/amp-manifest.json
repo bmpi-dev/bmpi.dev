@@ -1,0 +1,10 @@
+{
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.app.path",
+      "url": "android-app://com.app.path/https/host.com/path/to/app-content"
+    }
+  ]
+}

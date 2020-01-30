@@ -1,0 +1,44 @@
+{
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+1-123-456-789",
+    "contactType": "customer service",
+    "contactOption": "TollFree",
+    "areaServed": "US"
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+1-123-445-687",
+    "contactType": "customer service"
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+1-123-296-1018",
+    "contactType": "customer service",
+    "contactOption": [
+      "HearingImpairedSupported",
+      "TollFree"
+    ],
+    "areaServed": "US"
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+1-123-234-1304",
+    "contactType": "technical support",
+    "contactOption": "TollFree",
+    "areaServed": [
+      "US",
+      "CA"
+    ],
+    "availableLanguage": [
+      "English",
+      "French"
+    ]
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+1-123-333-234",
+    "contactType": "bill payment",
+    "contactOption": "TollFree",
+    "areaServed": [
+      "US",
+      "CA"
+    ]
+  }]
+}
