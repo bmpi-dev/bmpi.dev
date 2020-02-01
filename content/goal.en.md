@@ -2,6 +2,7 @@
 title = "My Long Term Goal"
 description = "My ten years personal goal"
 keywords = "Technology creation, investment transactions, independence and freedom, trading systems, personal brands, passive income"
+outputs = "html"
 +++
 
 ## My Life Goal

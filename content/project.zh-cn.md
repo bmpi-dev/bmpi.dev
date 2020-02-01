@@ -2,6 +2,7 @@
 title = "副业项目"
 description = "通过个人业余网赚项目建立被动收入"
 keywords = "自我成长、个人项目、业余西安面馆、网赚项目、被动收入、Web流量研究"
+outputs = "html"
 +++
 
 ## 自我成长系列
