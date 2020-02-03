@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/bmpi-dev/bmpi.dev#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
   }
 }
