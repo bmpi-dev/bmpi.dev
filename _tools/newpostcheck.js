@@ -27,8 +27,8 @@ const fetch = require("node-fetch");
         var request = require('request');
 
         var headers = {
-            'webpushrKey': process.env.$webpushrAuthToken,
-            'webpushrAuthToken': process.env.$webpushrKey,
+            'webpushrKey': process.env.WEBPUSHRKEY,
+            'webpushrAuthToken': process.env.WEBPUSHRAUTHTOKEN,
             'Content-Type': 'application/json'
         };
 
