@@ -1,0 +1,7 @@
+{
+    "latest-post": {
+        "url": "{{ (index .Site.RegularPages 0).RelPermalink }}",
+        "title": "{{ (index .Site.RegularPages 0).Title }}",
+        "publish-date": "{{ (index .Site.RegularPages 0).PublishDate }}"
+    }
+}
