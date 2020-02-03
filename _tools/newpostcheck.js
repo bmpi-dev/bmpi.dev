@@ -14,11 +14,11 @@ const fetch = require("node-fetch");
     }
 
     const currentFeedPosts = await response.json();
-    console.log("Current feed post is ", currentFeedPosts['latest-post']);
+    // console.log("Current feed post is ", currentFeedPosts['latest-post']);
 
     // read the locally built version of the data source
     const onlineFeedPosts = JSON.parse(fs.readFileSync("./public/feed/index.json", { encoding: "utf8" }));
-    console.log("Online feed post is ", onlineFeedPosts['latest-post']);
+    // console.log("Online feed post is ", onlineFeedPosts['latest-post']);
 
     // compare the two
     if (currentFeedPosts['latest-post']['url'] !== onlineFeedPosts['latest-post']['url']) {
@@ -50,14 +50,15 @@ const fetch = require("node-fetch");
         };
 
         function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
+            console.log(response.statusCode);
+            if (response.statusCode !== 200) {
                 console.log(body);
             } else {
                 console.log("Push new post success")
             }
         }
 
-        request(options, callback);
+        await request(options, callback);
 
     } else {
         console.log("No New post detected!");
