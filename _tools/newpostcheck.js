@@ -27,10 +27,12 @@ const fetch = require("node-fetch");
         var request = require('request');
 
         var headers = {
-            'webpushrKey': "${webpushrAuthToken}",
-            'webpushrAuthToken': "${webpushrKey}",
+            'webpushrKey': $webpushrAuthToken,
+            'webpushrAuthToken': $webpushrKey,
             'Content-Type': 'application/json'
         };
+
+        console.log(headers);
 
         var postData = {
             'title': onlineFeedPosts['latest-post']['title'],
