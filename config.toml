@@ -145,7 +145,10 @@ FootnoteReturnLinkContents = "↑"
                 name = "Wiki"
                 weight = 7
                 url  = "https://wiki.bmpi.dev"
-
+            [[languages.en.menu.main]]
+                name = "Talk"
+                weight = 8
+                url  = "https://talk.bmpi.dev"
 
     [languages.zh-cn]
         languagename = "Chinese"
@@ -188,3 +191,7 @@ FootnoteReturnLinkContents = "↑"
                 name = "Wiki"
                 weight = 7
                 url  = "https://wiki.bmpi.dev"
+            [[languages.zh-cn.menu.main]]
+                name = "Talk"
+                weight = 8
+                url  = "https://talk.bmpi.dev"
