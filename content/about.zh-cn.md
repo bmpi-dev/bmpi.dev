@@ -33,6 +33,8 @@ outputs = "html"
 
 分享我如何在一周开发一个图片流量站并在一个月达到Google千万索引自然搜索达百万UV并赚取上千美刀💰然后在三个月被Google Kill的神奇经历。
 
+![](https://img.bmpi.dev/5494437c-08e0-0d08-5f91-6bdb4fcdece6.png)
+
 也会分享一些Web流量站创建相关的核心技术，如SEO技术、爬虫、资源聚合、API对接、Affiliate Network、Adsense、广告对接平台评测、CPC/CPM/CTR的研究、社交引流等。
 
 电报频道地址：<https://t.me/web_cpc>
