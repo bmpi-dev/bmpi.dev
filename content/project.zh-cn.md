@@ -1,7 +1,7 @@
 +++
 title = "副业项目"
-description = "通过个人业余网赚项目建立被动收入"
-keywords = "自我成长、个人项目、业余西安面馆、网赚项目、被动收入、Web流量研究"
+description = "通过个人产品、业余项目、网赚项目建立被动收入"
+keywords = "自我成长系列文章、个人产品、业余项目、网赚项目、被动收入、Web流量研究"
 outputs = "html"
 +++
 
@@ -18,8 +18,16 @@ outputs = "html"
 
 ## Ins流量站
 
-<https://www.instaghub.com>
+<https://github.com/bmpi-dev/instaghub>
+
+## git2pdf
+
+<https://github.com/bmpi-dev/git2pdf>
 
 ## 交易日记App
 
 [一款产品的从0到1之旅](/dev/zero-to-one/)
+
+## 群品电子书项目
+
+<https://groups.google.com/forum/#!forum/qunpin>
