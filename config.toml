@@ -31,7 +31,7 @@ FootnoteReturnLinkContents = "↑"
 
 [params]
     author = "Dawei Ma"
-    info = "self/dev/money"
+    info = "self🐶dev🐱money"
     description = "Self-management + IT technology + Investment transactions = build my passive income"
     keywords = "life,dev,trade,passive income,money,developer,Self-management,IT technology,investment transactions"
     avatarurl = "images/mdw.png"
@@ -141,14 +141,6 @@ FootnoteReturnLinkContents = "↑"
                 name = "Goal"
                 weight = 6
                 url  = "/goal/"
-            [[languages.en.menu.main]]
-                name = "Wiki"
-                weight = 7
-                url  = "https://wiki.bmpi.dev"
-            [[languages.en.menu.main]]
-                name = "Talk"
-                weight = 8
-                url  = "https://talk.bmpi.dev"
 
     [languages.zh-cn]
         languagename = "Chinese"
@@ -156,7 +148,7 @@ FootnoteReturnLinkContents = "↑"
 
         [languages.zh-cn.params]
             author = "马大伟"
-            info = "self/dev/money"
+            info = "self🐶dev🐱money"
             description = "通过自我管理（GTD、时间管理、知识管理、写作、财务管理）、全栈开发（前端、后端、移动端、DevOps）、投资交易（指数投资、基金、股票、债券）、网赚项目（SEO、Affiliate、Media Buy、Niche、社交媒体）来建立被动收入"
             keywords = "自我管理、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚"
             # footercontent = "self/dev/money"
@@ -187,11 +179,3 @@ FootnoteReturnLinkContents = "↑"
                 name = "目标"
                 weight = 6
                 url  = "/goal/"
-            [[languages.zh-cn.menu.main]]
-                name = "Wiki"
-                weight = 7
-                url  = "https://wiki.bmpi.dev"
-            [[languages.zh-cn.menu.main]]
-                name = "Talk"
-                weight = 8
-                url  = "https://talk.bmpi.dev"
