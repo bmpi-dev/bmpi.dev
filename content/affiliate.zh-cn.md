@@ -10,6 +10,15 @@ outputs = "html"
 这种模式在国外称之为Affiliate Network（联盟营销）/ CPS，也就是我们常说的的推广链接。
 ```
 
+## 我在用的服务器
+
+{{< figure src="https://img.bmpi.dev/f81c828c-acb1-224b-cda5-a42a65066af2.png" caption="Vultr" link="https://www.vultr.com/?ref=7252988">}}
+
+## 我在用的机场/梯子
+
+主用 [Blinkload](https://blinkload.to/aff/LYWO) ，备用 [JMS](https://justmysocks.net/members/aff.php?aff=3519
+)
+
 ## 我心目中的好书
 
 ### 投资类
@@ -40,7 +49,4 @@ outputs = "html"
 - [全球通史](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgZUHVwdChs3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUDEwFSE1McMmB8HBw7RUFCZQxtIBNVdmwnXDIUZnILWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRtdEwYSBVErXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdVpCBkYDBR4LEgcaAlASXRQKGgAHHl4VC0BQXRsPEVBHN1caWhEL)
 - [奇特的一生](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgddGlkVBBI3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUCGgZXG10VMlZ1Khkdd1tXYk9PDX1paWZQHRldUkQLWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRtTFQIbB1QrXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdQtCC0EGABsIEVZAAlBJU0YKRlcCG1JFAEEAVxlSEQtFN1caWhEL)
 
-## 我在用的机场/梯子
 
-主用 [Blinkload](https://blinkload.to/aff/LYWO) ，备用 [JMS](https://justmysocks.net/members/aff.php?aff=3519
-)
