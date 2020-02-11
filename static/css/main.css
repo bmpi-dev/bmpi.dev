@@ -110,3 +110,11 @@ H6 {
   top:0;
   left:0;
 }
+
+.about-social {
+    text-align: left;
+}
+
+.about-social li {
+    padding-bottom: 10px;
+}

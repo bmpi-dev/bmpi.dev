@@ -87,29 +87,39 @@ FootnoteReturnLinkContents = "↑"
 # Social links
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github fa-2x"
+    icon = "fab fa-github"
     weight = 1
     url = "https://github.com/bmpi-dev"
 [[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
+    icon = "fab fa-twitter"
     weight = 2
     url = "https://twitter.com/madawei2699"
 [[params.social]]
     name = "Telegram"
-    icon = "fab fa-telegram fa-2x"
+    icon = "fab fa-telegram"
     weight = 3
     url = "https://t.me/s/bmpi365"
 [[params.social]]
     name = "WeChat"
-    icon = "fab fa-weixin fa-2x"
+    icon = "fab fa-weixin"
     weight = 4
     url = "https://img.bmpi.dev/755b406f-43ae-e382-e13c-547116d3e7d5.png"
 [[params.social]]
     name = "ZhiHu"
-    icon = "fab fa-zhihu fa-2x"
+    icon = "fab fa-zhihu"
     weight = 5
     url = "https://zhuanlan.zhihu.com/improve365"
+[[params.social]]
+    name = "Newsletter"
+    icon = "fas fa-envelope"
+    weight = 6
+    url = "https://tinyletter.com/i365"
+[[params.social]]
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 7
+    url = "index.xml"
 
 [languages]
     [languages.en]
