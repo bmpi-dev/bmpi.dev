@@ -12,7 +12,7 @@ H2 {
     margin-bottom: 30px;
     margin-bottom: 20px;
     padding: 5px;
-    border-bottom: 2px LightGrey solid;
+    border-bottom: 1px LightGrey solid;
     width: 98%;
     line-height: 150%;
     color: #666666 !important;
@@ -117,4 +117,22 @@ H6 {
 
 .about-social li {
     padding-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+table td, table th {
+    border: 1px solid #eee;
+}
+
+table thead tr th {
+    color: #5A4C4C;
 }
