@@ -30,4 +30,4 @@ outputs = "html"
 
 ## 群品电子书项目[已下线]
 
-<https://groups.google.com/forum/#!forum/qunpin>
+[项目Google邮件列表](https://groups.google.com/forum/#!forum/qunpin)
