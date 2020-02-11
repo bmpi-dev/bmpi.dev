@@ -24,10 +24,10 @@ outputs = "html"
 
 <https://github.com/bmpi-dev/git2pdf>
 
-## 交易日记App
+## 交易日记App[已下线]
 
 [一款产品的从0到1之旅](/dev/zero-to-one/)
 
-## 群品电子书项目
+## 群品电子书项目[已下线]
 
 <https://groups.google.com/forum/#!forum/qunpin>
