@@ -10,14 +10,20 @@ outputs = "html"
 这种模式在国外称之为Affiliate Network（联盟营销）/ CPS，也就是我们常说的的推广链接。
 ```
 
-## 我在用的服务器
+## 我在用的服务器与域名
 
 {{< figure src="https://img.bmpi.dev/f81c828c-acb1-224b-cda5-a42a65066af2.png" caption="Vultr" link="https://www.vultr.com/?ref=7252988">}}
+
+{{< figure src="https://img.bmpi.dev/2619ddcc-f159-0ca3-62b0-e5c9ecbde404.png" caption="Namecheap" link="https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ">}}
 
 ## 我在用的机场/梯子
 
 主用 [Blinkload](https://blinkload.to/aff/LYWO) ，备用 [JMS](https://justmysocks.net/members/aff.php?aff=3519
 )
+
+## 我在用的键盘
+
+吃灰中的[HHKB](https://union-click.jd.com/jdc?e=&p=AyIGZRprFQMTBlUaUhcLFwJUKx9KWkxYZUIeUENQDEsFA1BWThgJBABAHUBZCQUdRUFGGRJDD1MdQlUQQwVKDFRXFk8jQA4SBlQaWxQLEA5QHloleAxfAHw7XH5weTNyWmNwTVcGTBhgYh4LZRprFQMTBFYTWhcHFzdlG1wlVHwHVBpaFAoRAFYTaxQyEgNcG14XBhMGUxtZFzIVB1wrB0VXQkEBQ1gSCho3ZStYJTIiB2UYa1dsFwYBG1gcVhRQAEgJEFZGDl1OXkUAFwFVGVwQV0AEBxxrFwMTA1w%3D)
 
 ## 我心目中的好书
 
@@ -28,6 +34,9 @@ outputs = "html"
 - [低风险投资之路](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgddGlwdABY3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUCGgZSE1kRMmdVLRsYbgdpZFxhDRYHdGEBBQ9OSWILWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRpeEwoWB1YrXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdQsQUUJQV08MFgJHAFAdCRwLFwRRG11AVxUBBRlfEQUaN1caWhEL)
 - [股票作手操盘术+股票作手回忆录](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgRQGVwQCxI3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUBFwVSHlIVMggFEkgmQmEIZCx5X2oYZUYqfzIRY3ILWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRtaFQQbA1QrXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdQhAAhNXAkxYEQEaBlAYCBYLGg9dGQtABhRQUR1fRgsaN1caWhEL)
 - [一个交易者的资金管理系统](https://union-click.jd.com/jdc?e=&p=AyIGZRtTEAIQDlQSUhMyFQNUH1oWARsAURNrUV1KWQorAlBHU0VeBUVNR0ZbSkdETlcNVQtHRVNSUVNLXANBRA1XB14DS10cQQVYD21XHgBRGl8UAREOUh9TJRx3cxwYC1VScAEdQzBCRnVYVl4PaXIeC2UaaxUDEwRWE1oXBxc3ZRtcJUN8B1QaXxMEEg5lGmsVBhsHVxtbFQEaA1EaaxICGzcJSw5FREZfVhxTHTIiN1YrayUCIgRlWTUQBEYOXRheQgUSD1QeU0cEG1BTTgtBBxsEUEkOEgUWUmUZWhQGGw%3D%3D)
+- [Trading System](https://amzn.to/2UHNJnS)
+- [Definitive Guide To Position Sizing](https://amzn.to/2SzCj2N)
+- [Building Winning Algorithmic Trading Systems](https://amzn.to/38pdhuc)
 
 ### 编程类
 
