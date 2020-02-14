@@ -18,6 +18,8 @@ outputs = "html"
 
 ## 我在用的机场/梯子
 
+> 如果你的网络上不了Google/YouTube/Twitter，那你就需要一个机场或梯子，它能去除那股神秘的力量，助你正常上网
+
 主用 [Blinkload](https://blinkload.to/aff/LYWO) ，备用 [JMS](https://justmysocks.net/members/aff.php?aff=3519
 )
 
