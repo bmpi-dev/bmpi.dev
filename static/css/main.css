@@ -137,6 +137,10 @@ table thead tr th {
     color: #5A4C4C;
 }
 
+p {
+    overflow-wrap: break-word;
+}
+
 /*
 fontawesome minify
 */
@@ -190,6 +194,21 @@ fontawesome minify
 }
 .fa-zhihu:before {
     content: "\f63f"
+}
+.fa-calendar:before {
+    content:"\f133"
+}
+.fa-clock:before {
+    content:"\f017"
+}
+.fa-bars:before {
+    content:"\f0c9"
+}
+.fa-folder:before {
+    content:"\f07b"
+}
+.fa-tag:before {
+    content:"\f02b"
 }
 .fab {
     font-family: "Font Awesome 5 Brands"
