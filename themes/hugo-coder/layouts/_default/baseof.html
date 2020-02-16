@@ -97,12 +97,6 @@
 
   <meta name="baidu-site-verification" content="TiReu51WyJ" />
 
-  {{ if or (in .Permalink "/dev/") (in .Permalink "/self/") (in .Permalink "/money/") }}
-  {{ if not (in .Permalink "/amp/") }}
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  {{ end }}
-  {{ end }}
-
 </head>
 
 {{ $csClass := "colorscheme-light" }}
