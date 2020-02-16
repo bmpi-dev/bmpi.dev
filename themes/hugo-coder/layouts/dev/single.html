@@ -33,7 +33,7 @@
       <div>
         {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
         {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
-        {{ $REPLACEMENT := "<img src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}
+        {{ $REPLACEMENT := "<img data-src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}
         {{ $outContent := .Content | replaceRE $PATTERN_EMPTY_ALT $REPLACEMENT | replaceRE $PATTERN_ALT $REPLACEMENT | safeHTML }}
         {{ $outContent }}
 

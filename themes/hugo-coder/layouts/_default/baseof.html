@@ -34,7 +34,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
   {{ end }}
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700"
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
     integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
@@ -83,7 +83,7 @@
   {{ end }}
 
   {{ range .Site.Params.custom_js }}
-  <script src="{{ . | relURL }}"></script>
+  <script src="{{ . | relURL }}" async></script>
   {{ end }}
 
   <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}"

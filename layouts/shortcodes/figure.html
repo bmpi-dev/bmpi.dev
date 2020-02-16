@@ -1,7 +1,7 @@
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
     {{ with .Get "link"}}<a href="{{.}}">{{ end }}
         {{ if not (in .Page.Permalink "/amp/") }}
-            <img src="{{ .Get "src" }}" class="lazyload" loading="lazy" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
+            <img data-src="{{ .Get "src" }}" class="lazyload" loading="lazy" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
         {{ else }}
             <amp-img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} layout="responsive" width="266" height="150"></amp-img>
         {{ end }}
