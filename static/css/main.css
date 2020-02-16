@@ -136,3 +136,70 @@ table td, table th {
 table thead tr th {
     color: #5A4C4C;
 }
+
+/*
+fontawesome minify
+*/
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+    font-display:swap;src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-brands-400.eot);
+    src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-brands-400.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-brands-400.woff) format("woff"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-brands-400.ttf) format("truetype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 400;
+    font-display:swap;src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-regular-400.eot);
+    src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-regular-400.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-regular-400.woff) format("woff"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-regular-400.ttf) format("truetype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display:swap;src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.eot);
+    src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.woff) format("woff"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.ttf) format("truetype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+.fa,.fab,.fad,.fal,.far,.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1
+}
+.fa-twitter:before {
+    content: "\f099"
+}
+.fa-envelope:before {
+    content: "\f0e0"
+}
+.fa-github:before {
+    content: "\f09b"
+}
+.fa-rss:before {
+    content: "\f09e"
+}
+.fa-telegram:before {
+    content: "\f2c6"
+}
+.fa-weixin:before {
+    content: "\f1d7"
+}
+.fa-zhihu:before {
+    content: "\f63f"
+}
+.fab {
+    font-family: "Font Awesome 5 Brands"
+}
+.fa,.far,.fas {
+    font-family: "Font Awesome 5 Free"
+}
+.fa,.fas {
+    font-weight: 900
+}
+.far {
+    font-weight: 400
+}
