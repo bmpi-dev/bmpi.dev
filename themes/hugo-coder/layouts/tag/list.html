@@ -4,7 +4,7 @@
 {{ define "content" }}
   <section class="container list">
     <h1 class="title" style="color: #B36D61;">{{ .Title }}</h1>
-    <div style="margin-bottom: 15px;">
+    <div style="margin-bottom: 15px;word-break: keep-all;">
     {{ $tags := $.Site.Taxonomies.tags.ByCount }}
     {{ $v1 := where $tags "Count" ">=" 1 }}
     {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}

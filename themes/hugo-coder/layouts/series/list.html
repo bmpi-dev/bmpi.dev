@@ -4,7 +4,7 @@
 {{ define "content" }}
   <section class="container list">
     <h1 class="title" style="color: #519A73;">{{ .Title }}</h1>
-    <div style="margin-bottom: 15px;">
+    <div style="margin-bottom: 15px;word-break: keep-all;">
     {{ $series := $.Site.Taxonomies.series.ByCount }}
     {{ $v1 := where $series "Count" ">=" 1 }}
     {{ range $v1 }}
