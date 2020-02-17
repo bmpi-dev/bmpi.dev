@@ -4,14 +4,14 @@
 {{ define "content" }}
   <section class="container list">
     <h1 class="title" style="color: #B36D61;">{{ .Title }}</h1>
-    <div style="margin-bottom: 15px;word-break: keep-all;">
+    <div class="tag-cloud">
     {{ $tags := $.Site.Taxonomies.tags.ByCount }}
     {{ $v1 := where $tags "Count" ">=" 1 }}
     {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}
     {{ range $v2 }}
     {{ if .Term }}
     {{ $tagURL := printf "%s" .Term }}
-    <a href="{{ $tagURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; padding-right: 10px; padding-left: 10px; color: #B36D61;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    <a href="{{ $tagURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; color: #B36D61;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
     {{ end }}
     {{ end }}
     </div>

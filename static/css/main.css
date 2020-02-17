@@ -232,4 +232,14 @@ fontawesome minify
     text-align: center;
     border-radius: 100%;
     font-size: 12px;
+    margin-left: -4px;
+    margin-right: 10px;
+    vertical-align: super;
+}
+
+.tag-cloud {
+    margin-bottom: 15px;
+    word-break: keep-all;
+    display: flex;
+    flex-flow: wrap;
 }

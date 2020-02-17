@@ -4,13 +4,13 @@
 {{ define "content" }}
   <section class="container list">
     <h1 class="title" style="color: #519A73;">{{ .Title }}</h1>
-    <div style="margin-bottom: 15px;word-break: keep-all;">
+    <div class="tag-cloud">
     {{ $series := $.Site.Taxonomies.series.ByCount }}
     {{ $v1 := where $series "Count" ">=" 1 }}
     {{ range $v1 }}
     {{ if .Term }}
     {{ $seriesURL := printf "%s" .Term }}
-    <a href="{{ $seriesURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; padding-right: 10px; padding-left: 10px; color: #519A73;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    <a href="{{ $seriesURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; color: #519A73;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
     {{ end }}
     {{ end }}
     </div>
