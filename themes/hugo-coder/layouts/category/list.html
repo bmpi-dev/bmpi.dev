@@ -11,7 +11,7 @@
     {{ range $v2 }}
     {{ if .Term }}
     {{ $categoryURL := printf "%s" .Term }}
-    <a href="{{ $categoryURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; color: #FF8C31;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    <a href="{{ $categoryURL }}" class="font_size_6" role="button" style="text-transform: uppercase; color: #FF8C31; margin: 5px 5px;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
     {{ end }}
     {{ end }}
     </div>

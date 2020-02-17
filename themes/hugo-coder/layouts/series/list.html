@@ -10,7 +10,7 @@
     {{ range $v1 }}
     {{ if .Term }}
     {{ $seriesURL := printf "%s" .Term }}
-    <a href="{{ $seriesURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; color: #519A73;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    <a href="{{ $seriesURL }}" class="font_size_6" role="button" style="text-transform: uppercase; color: #519A73; margin: 5px 5px;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
     {{ end }}
     {{ end }}
     </div>

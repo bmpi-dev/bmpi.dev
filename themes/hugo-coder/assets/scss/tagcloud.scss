@@ -1,10 +1,10 @@
 @for $i from 1 through 1000 {
     @if $i <= 20 {
-      $font-size: 0.5em + ( 2 / 20 ) * $i;
+      $font-size: 0.3em + ( 2 / 20 ) * $i;
       .font_size_#{$i} { font-size: $font-size; }
     }
     @if $i >  20 {
-      $font-size: 1em;
+      $font-size: 0.5em;
       .font_size_#{$i} { font-size: $font-size; }
     }
 }
