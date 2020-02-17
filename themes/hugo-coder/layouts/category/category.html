@@ -1,0 +1,33 @@
+{{ define "title" }}
+  {{ .Title }}
+  {{ if eq .Site.Language.Lang "zh-cn" }}
+    分类
+  {{ else }}
+    Category
+  {{ end }}
+   ·
+  {{ .Site.Title }}
+{{ end }}
+{{ define "description" }}
+  {{ if eq .Site.Language.Lang "zh-cn" }}
+    {{ .Title }}分类文章
+  {{ else }}
+    {{ .Title }} category articles
+  {{ end }}
+{{ end }}
+{{ define "content" }}
+  <section class="container list">
+    <h1 class="title">{{- .Title -}}
+      {{ if eq .Site.Language.Lang "zh-cn" }}
+        分类
+      {{ else }}
+        Category
+      {{ end }}
+    </h1>
+    <ul>
+      {{- range .Paginator.Pages -}}
+        {{- .Render "li" -}}
+      {{- end -}}
+    </ul>
+  </section>
+{{ end }}

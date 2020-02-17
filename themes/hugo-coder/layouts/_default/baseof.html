@@ -10,8 +10,7 @@
   {{ if .Description }}
   <meta name="description" content="{{ .Description }}">
   {{else}}
-  {{ with .Site.Params.description }}
-  <meta name="description" content="{{ . }}">{{ end }}
+  <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
   {{ end }}
   {{ if .Keywords }}
   <meta name="keywords" content="{{ delimit .Keywords ", " }}">
@@ -96,6 +95,10 @@
   {{ hugo.Generator }}
 
   <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  {{ $tag_sass := resources.Get "scss/tagcloud.scss" }}
+  {{ $tag_style := $tag_sass | toCSS }}
+  <link rel="stylesheet" href="{{ $tag_style.RelPermalink }}" media="screen" />
 
 </head>
 
