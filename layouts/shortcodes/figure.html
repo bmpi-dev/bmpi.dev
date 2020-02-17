@@ -3,7 +3,7 @@
         {{ if not (in .Page.Permalink "/amp/") }}
             <img data-src="{{ .Get "src" }}" class="lazyload" loading="lazy" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
         {{ else }}
-            <amp-img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} layout="responsive" width="266" height="150"></amp-img>
+            <div class="fixed-container"><amp-img src="{{ .Get "src" }}" class="contain" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} layout="fill"></amp-img></div>
         {{ end }}
     {{ if .Get "link"}}</a>{{ end }}
     {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
