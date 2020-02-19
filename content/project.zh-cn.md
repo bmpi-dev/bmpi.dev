@@ -1,5 +1,5 @@
 +++
-title = "副业项目"
+title = "项目"
 description = "通过个人产品、业余项目、网赚项目建立被动收入"
 keywords = "自我成长系列文章、个人产品、业余项目、网赚项目、被动收入、Web流量研究"
 outputs = "html"

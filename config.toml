@@ -182,7 +182,7 @@ FootnoteReturnLinkContents = "↑"
                 weight = 4
                 url  = "/money/"
             [[languages.zh-cn.menu.main]]
-                name = "副业"
+                name = "项目"
                 weight = 5
                 url  = "/project/"
             [[languages.zh-cn.menu.main]]
