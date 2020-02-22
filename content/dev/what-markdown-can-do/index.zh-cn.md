@@ -25,7 +25,7 @@ Markdown由 John Gruber 于 2004 年创立，它是一种纯文本标记语言�
 
 ![](https://img.bmpi.dev/602bfd5d-0b33-390e-18e2-a61816d4e788.png)
 
-在这里可以体验下Markdown的具体用法：[zybuluo.com](https://www.zybuluo.com/mdeditor#)[^1]
+在这里可以体验下Markdown的具体用法：[微信公众号Markdown在线排版](https://wechat.bmpi.dev)[^1]
 
 ### Markdown工作流
 
@@ -96,7 +96,7 @@ Markdown是一种非常简单的排版方法，以上是我的一些经验，如
 
 #### *References*
 [^0]: https://raw.githubusercontent.com/bmpi-dev/bmpi.dev/master/content/dev/what-markdown-can-do/index.zh-cn.md
-[^1]: https://www.zybuluo.com/mdeditor#
+[^1]: https://wechat.bmpi.dev
 [^2]: https://plantuml.com/zh/
 [^3]: https://gohugo.io/
 [^4]: https://github.com/bmpi-dev/bmpi.dev
