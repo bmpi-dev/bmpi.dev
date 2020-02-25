@@ -10,3 +10,5 @@ work like a slave
 command like a king
 create like a god
 ```
+
+This is my [resume](/resume/en).
