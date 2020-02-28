@@ -16,6 +16,10 @@ outputs = "html"
 | 财务系统 | [我的财务管理方案](/money/my-accounting-tool/) |
 | 交易系统 | 1. [年轻上班族的系统化投资之路](/money/investment-path-for-young/) 2. [构建你的交易系统](/money/build-trade-system/) |
 
+## 电报频道静态化工具
+
+[tg2web](https://github.com/bmpi-dev/tg2web)
+
 ## Ins流量站
 
 <https://github.com/bmpi-dev/instaghub>
