@@ -25,7 +25,7 @@ outputs = "html"
 
 - 被动收入：曾一周开发某流量站，一个月被Google收录千万索引流量达百万UV，三个月被Google Kill，收入上千美刀💰
 
-我的个人频道地址：<https://t.me/improve365>
+我的个人频道地址：<https://t.me/improve365>([不翻墙镜像版](https://tg.bmpi.dev/improve365/index.html))
 
 电报群地址：<https://t.me/bmpi_group>
 
@@ -37,10 +37,10 @@ outputs = "html"
 
 也会分享一些Web流量站创建相关的核心技术，如SEO技术、爬虫、资源聚合、API对接、Affiliate Network、Adsense、广告对接平台评测、CPC/CPM/CTR的研究、社交引流等。
 
-电报频道地址：<https://t.me/web_cpc>
+电报频道地址：<https://t.me/web_cpc>([不翻墙镜像版](https://tg.bmpi.dev/web_cpc/index.html))
 
 ## BMPI频道
 
 通过研究【网赚/被动收入/投资理财/技术/联盟营销/Media Buy/SEO/搜索聚合站/社交引流/Niche/套利/关键词挖掘/广告/Amazon/Google/FB】等建立个人被动收入，期望达到躺赚月入上千美刀💰
 
-电报频道地址：<https://t.me/bmpi365>
+电报频道地址：<https://t.me/bmpi365>([不翻墙镜像版](https://tg.bmpi.dev/bmpi365/index.html))
