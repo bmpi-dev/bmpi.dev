@@ -9,7 +9,7 @@ outputs = "html"
 
 | | |
 | -- | -- |
-| [DHTalk's Blog](http://zhangdinghao.cn/) | Stay hungry Stay foolish |
+| [DHTalk's Blog](https://zhangdinghao.cn/) | Stay hungry Stay foolish |
 | [Indie Hackers](https://indiehackers.net/) | 独立开发者 |
 | [食灯鬼](https://shidenggui.com/) | 人生意何存，我思故我在 |
 | [GeekPlux](https://geekplux.com/) | Data Visualization & Full-stack programmer |
