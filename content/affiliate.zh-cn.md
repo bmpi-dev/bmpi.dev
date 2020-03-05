@@ -34,7 +34,7 @@ math = true
 
 | | | |
 | -- | -- | -- |
-| [蟒营™ Python 入门班](https://py.101.camp/) | 由专注 Python 实践推广 17 年的 `Zoom.Quiet` 亲自授课。只要坚持 6 周，以后再也不用购买任何网课，就能自学任何实用技能。<div style="text-align:center;border-top-style:dotted;border-top-color:gray;border-top-width:1px;"> 🐍蟒营<sup>™</sup><sub style="margin-left:-10px;">Reactivate Joy by Self-tech with You</sub></div> | 推荐写 `bmpi.dev` 享受 **85** 折优惠 |
+| [蟒营™ Python 入门班](https://py.101.camp/) | 由专注 Python 实践推广 17 年的 `Zoom.Quiet` 亲自授课。只要坚持 6 周，以后再也不用购买任何网课，就能自学任何实用技能。<div style="text-align:center;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;"> 🐍蟒营<sup>™</sup><sub style="margin-left:-10px;">Reactivate Joy by Self-tech with You</sub></div> | 推荐写 `bmpi.dev` 享受 **85** 折优惠 |
 
 ## 我心目中的好书
 
