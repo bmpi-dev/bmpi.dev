@@ -17,6 +17,9 @@ pluralizelisttitles = false
 
 FootnoteReturnLinkContents = "↑"
 
+[markup.goldmark.renderer]
+    unsafe= true
+
 [outputs]
   page     = ["HTML", "AMP"]
   home     = ["HTML", "RSS"]

@@ -14,6 +14,7 @@ outputs = "html"
 | [食灯鬼](https://shidenggui.com/) | 人生意何存，我思故我在 |
 | [GeekPlux](https://geekplux.com/) | Data Visualization & Full-stack programmer |
 | [Future iDeal](https://www.fi-ads.com/) | 网络营销之路 |
+| [ZoomQuiet](https://blog.zoomquiet.io/) | 是也乎(￣▽￣) |
 
 ## 我关注的博客
 

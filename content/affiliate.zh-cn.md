@@ -3,6 +3,7 @@ title = "我的好物推荐"
 description = "分享我在使用的一些产品和服务，基准是我正在使用的感觉不错的东西"
 keywords = "好物推荐"
 outputs = "html"
+math = true
 +++
 
 ```
@@ -26,6 +27,14 @@ outputs = "html"
 ## 我在用的键盘
 
 吃灰中的 [HHKB](https://union-click.jd.com/jdc?e=&p=AyIGZRprFQMTBlUaUhcLFwJUKx9KWkxYZUIeUENQDEsFA1BWThgJBABAHUBZCQUdRUFGGRJDD1MdQlUQQwVKDFRXFk8jQA4SBlQaWxQLEA5QHloleAxfAHw7XH5weTNyWmNwTVcGTBhgYh4LZRprFQMTBFYTWhcHFzdlG1wlVHwHVBpaFAoRAFYTaxQyEgNcG14XBhMGUxtZFzIVB1wrB0VXQkEBQ1gSCho3ZStYJTIiB2UYa1dsFwYBG1gcVhRQAEgJEFZGDl1OXkUAFwFVGVwQV0AEBxxrFwMTA1w%3D)
+
+## 我推荐的课程
+
+### Python
+
+| | | |
+| -- | -- | -- |
+| [蟒营™ Python 入门班](https://py.101.camp/) | 由专注 Python 实践推广 17 年的 `Zoom.Quiet` 亲自授课。只要坚持 6 周，以后再也不用购买任何网课，就能自学任何实用技能。<div style="text-align:center;border-top-style:dotted;border-top-color:gray;border-top-width:1px;"> 🐍蟒营<sup>™</sup><sub style="margin-left:-10px;">Reactivate Joy by Self-tech with You</sub></div> | 推荐写 `bmpi.dev` 享受 **85** 折优惠 |
 
 ## 我心目中的好书
 
