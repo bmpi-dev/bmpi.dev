@@ -4,9 +4,6 @@ date: 2019-12-18
 draft: false
 series: ["GTD"]
 tags: ["时间管理", "工具"]
-categories: [
-    "时间管理"
-]
 aliases: [
     "/zh-cn/self/gtd-tools-i-used/"
 ]

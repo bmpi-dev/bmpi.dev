@@ -1,10 +1,10 @@
 ---
-title: "零成本搭建现代博客指南-1"
+title: "零成本搭建现代博客之搭建篇"
 date: 2020-02-29
 draft: false
 tags: ["Markdown", "独立博客", "Hugo", "Netlify", "Github", "Namecheap", "AWS"]
 keywords: "Markdown, 独立博客, Hugo, Netlify, Github, Namecheap, AWS"
-description: "本文介绍了如何零成本搭建一个自由独立的写作平台-独立博客指南1"
+description: "本文介绍了如何零成本搭建一个自由独立的写作平台-博客搭建指南"
 series: ["零成本搭建现代博客指南"]
 ---
 

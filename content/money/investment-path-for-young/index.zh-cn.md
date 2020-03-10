@@ -3,10 +3,6 @@ title: "年轻上班族的系统化投资之路"
 date: 2016-06-19
 draft: false
 tags: ["投资理财", "指数基金", "指数定投", "ETF", "股票交易", "交易系统", "上班族理财"]
-categories: [
-    "指数定投",
-    "交易系统"
-]
 aliases: [
     "/zh-cn/money/investment-path-for-young/"
 ]

@@ -3,9 +3,6 @@ title: "一款产品的从0到1之旅"
 date: 2016-05-27
 draft: false
 tags: ["全栈开发", "投资交易", "App开发", "从0到1", "产品营销"]
-categories: [
-    "交易日记"
-]
 aliases: [
     "/zh-cn/dev/zero-to-one/"
 ]

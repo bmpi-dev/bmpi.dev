@@ -13,3 +13,5 @@ $RECYCLE.BIN/
 
 node_modules/
 .metals/
+
+out/
