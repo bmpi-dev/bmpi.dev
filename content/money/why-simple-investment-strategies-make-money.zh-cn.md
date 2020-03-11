@@ -2,6 +2,7 @@
 title: "简单的投资策略为何能赚钱"
 date: 2020-01-04
 draft: false
+series: ["投资实证"]
 tags: ["投资策略", "指数基金", "ETF定投", "华泰证券"]
 aliases: [
     "/zh-cn/money/why-simple-investment-strategies-make-money/"

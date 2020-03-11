@@ -2,6 +2,7 @@
 title: "2019年金融投资总结"
 date: 2020-01-02
 draft: false
+series: ["投资实证"]
 tags: ["2019投资总结", "指数定投", "ETF"]
 aliases: [
     "/zh-cn/money/invest-review-2019/"

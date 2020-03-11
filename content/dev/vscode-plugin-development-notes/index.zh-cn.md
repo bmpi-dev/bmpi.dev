@@ -2,7 +2,6 @@
 title: "VSCode插件开发小记"
 date: 2019-12-22
 draft: false
-series: ["GTD"]
 tags: ["Get Things Done", "时间管理", "工具", "VSCode Extension", "VSCode插件开发"]
 aliases: [
     "/zh-cn/dev/vscode-plugin-development-notes/"

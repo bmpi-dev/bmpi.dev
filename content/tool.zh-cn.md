@@ -16,6 +16,6 @@ outputs = "html"
 
 | | |
 | -- | -- |
-| 相关文章 | [我的时间管理工具](/self/gtd-tools-i-used/) |
+| 相关文章 | [我的时间管理工具](/self/gtd-tools-i-used/)<div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[VSCode插件开发小记](/dev/vscode-plugin-development-notes/)<div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[Parser黑魔法](/dev/parser_black_magic/) |
 | 邮件提醒模版 | [todo_starter](https://github.com/bmpi-dev/todo_starter) |
 | VSCode插件 | [Todo++](https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus) |
