@@ -39,7 +39,7 @@ http {
 
 ## Compiler Architecture
 
-{{< figure src="2019-12-21-19-15-21.png" caption="Compiler Architecture" link="https://cs.lmu.edu/~ray/notes/compilerarchitecture/">}}
+{{< figure src="https://img.bmpi.dev/2019-12-21-19-15-21.png" caption="Compiler Architecture" link="https://cs.lmu.edu/~ray/notes/compilerarchitecture/">}}
 
 如上图所示，在我们的问题域中最关心的是Lexical Analysis与Syntax Analysis。
 
@@ -69,11 +69,11 @@ CLOSE_BRACE: }
 ### Syntax Analysis
 Syntax Analysis将Token序列解析为Abstract Syntax Tree[^1]:
 
-![](2019-12-21-19-29-39.png)
+![](https://img.bmpi.dev/2019-12-21-19-29-39.png)
 
 有了AST（抽象语法树）后，可以进一步生成IR（中间语言），也可以在语义分析中做语法正确性检查（如各种语法lint工具）。
 
-{{< figure src="2019-12-21-19-35-40.png" caption="BNF/Flex/Bison" link="https://starbeamrainbowlabs.com/blog/article.php?article=posts%2F267-Compilers-101.html">}}
+{{< figure src="https://img.bmpi.dev/2019-12-21-19-35-40.png" caption="BNF/Flex/Bison" link="https://starbeamrainbowlabs.com/blog/article.php?article=posts%2F267-Compilers-101.html">}}
 
 如上图所示，第1、2、3步中出现了BNF、Flex、Bison。
 
@@ -105,7 +105,7 @@ LL分析器是一种处理某些上下文无关文法的自顶向下分析器。
 
 我们知道，自动化理论（automata theory）里，有FSA（Finite State Automata）和PDA（PushDown Automata），前者可以用regular expression表述，而后者可以处理CFG（Context Free Grammar）。而CFG便是flex/bison要处理的对象！[^6]
 
-{{< figure src="2019-12-21-22-56-22.png" caption="Automata Theory" height="400" width="400">}}
+{{< figure src="https://img.bmpi.dev/2019-12-21-22-56-22.png" caption="Automata Theory" height="400" width="400">}}
 
 能被DFA和NFA识别的语言是正则语言。能被PDA识别的语言为CFG语言。几乎所有程序设计语言都是通过CFG来定义的。BNF经常用来表达CFG。
 

@@ -18,12 +18,12 @@ Archimedes said, "Give me a fulcrum, I can lift the entire planet." This is phys
 
 ## What's GTD
 
-![](gtd.png)
+![](https://img.bmpi.dev/gtd.png)
 
 GTD (Getting Things Done) [^2] is a time management method, which can help you systematically formulate random transactions in life into planned tasks, liberate your brain, and help you work more effectively Achieve the goals of life.
 Let's first review the process of the brain in everyday work and life: "A very important thing, such as exercising requires you to choose a few days a week to exercise, which is a long-term return goal. Today was originally You need to move according to plan. Suddenly, a more urgent but insignificant event prompts you to abandon your plan and resolve it, and then there is a high probability that your plan is ruined by many urgent and unimportant things. Will this happen? Because our brains are more inclined to deal with urgent matters rather than important and non-urgent ones in evolution. This is determined by survival priority, because urgent matters may have a greater impact on life in the short term. But this has prevented many important, but urgent, long-term planning goals from being achieved. Long-term goals need to be advanced step by step according to the plan, such as reading habits, writing habits, bookkeeping habits, and acquisition of many important skills.
 
-![](gtd2.png)
+![](https://img.bmpi.dev/gtd2.png)
 
 ## GTD Workflow
 
@@ -51,8 +51,8 @@ My tool set in this version:
 2. OmniFocus: The realization of GTD, can complete 6 major links of GTD
 3. Calendar: Simple to-do list + notification
 
-![](2019-12-20-18-21-43.png)
-![](2019-12-20-18-22-32.png)
+![](https://img.bmpi.dev/2019-12-20-18-21-43.png)
+![](https://img.bmpi.dev/2019-12-20-18-22-32.png)
 
 ### v1 problem
 
@@ -72,7 +72,7 @@ My tool set in this version:
 2. Memorandum: Partial implementation of GTD
 3. Calendar: Simple to-do list + notification
 
-![](2019-12-20-18-51-30.png)
+![](https://img.bmpi.dev/2019-12-20-18-51-30.png)
 
 ### v2 problem
 
@@ -95,12 +95,12 @@ Calendar
 
 First explain why this combination is? As a developer, the editor is most often used on weekdays. I chose VSCode because his ecology is better than Emacs. The startup speed is still very fast after installing many plug-ins. Plug-in development is simple. Backed by Microsoft, the software experience is very good. There just happens to be a Todo + [^6] plug-in. This plug-in supports a plain text file with a todo suffix. This file is very easy to create a to-do item, supports project nesting, and uses shortcut keys to mark pending To do status, as shown below:
 
-![](2019-12-20-22-03-47.png)
+![](https://img.bmpi.dev/2019-12-20-22-03-47.png)
 
 When I found this plug-in, after using it for a while, I found it very suitable for to-do management, but there is a problem that the plug-in window on the left does not support viewing **What is being done**, and I hope to see To to-dos that are marked as **important but have not started**. Because when I create a lot of to-do items, the priority of many items is not high, I may do it at some time in the future, these are things that I don't care about at present. I am most concerned about what is currently being done. At the same time, I am also very concerned about the most important but not urgent things in my life goals. I must always remind me to review and do not lose important goals in urgent and unimportant things.
 
 Because this plugin is open source, I cloned a copy and added a viewing window to view what is currently being done and important but not started, and published it as [Todo++](https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus).
-![](todo++.png)
+![](https://img.bmpi.dev/todo++.png)
 
 With this VSCode plug-in, I solved the problem of editing to-do items on the computer. This method is flexible enough. You can manage your work, study, and life in the following ways:
 
@@ -131,7 +131,7 @@ Project B_2:
 
 When you have done this, you can immediately see in the left window of VSCode which tasks are being done and which tasks are important but have not started.
 
-{{< figure src="2019-12-20-22-57-16.png" height="588" width="294">}}
+{{< figure src="https://img.bmpi.dev/2019-12-20-22-57-16.png" height="588" width="294">}}
 
 I also made a template library for todo, use this template to create my own private repository: [todo_starter](https://github.com/bmpi-dev/todo_starter). After creating the clone, use VSCode and TODO ++ plugins to start using it.
 
@@ -176,7 +176,7 @@ jobs:
 
 I set up a scheduled task at the same time, GitHub Actions will automatically build at 9 am every day, and then send an email to remind you. Since the data is plain text, you can put it anywhere (web disk, GitHub, etc.). The final effect is as follows:
 
-![](2019-12-20-23-15-24.png)
+![](https://img.bmpi.dev/2019-12-20-23-15-24.png)
 
 
 ### v3 pro

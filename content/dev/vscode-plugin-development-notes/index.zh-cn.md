@@ -19,31 +19,31 @@ VSCode是微软开源的一款基于Electron开发的代码编辑器。Electron 
 
 在2019年的Stack Overflow组织的开发者调研中，VS Code被认为是最受开发者欢迎的开发环境，据调查87317名受访者中有50.7%的受访者声称正在使用VS Code[^0]。
 
-![](2019-12-22-12-06-14.png)
+![](https://img.bmpi.dev/2019-12-22-12-06-14.png)
 
 ### Feature Overview
 
-{{< figure src="2019-12-22-11-52-59.png" caption="Visual Studio Code feature overview" link="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">}}
+{{< figure src="https://img.bmpi.dev/2019-12-22-11-52-59.png" caption="Visual Studio Code feature overview" link="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">}}
 
 ### Context View
 
-{{< figure src="2019-12-22-11-47-35.png" caption="Context view diagram" link="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">}}
+{{< figure src="https://img.bmpi.dev/2019-12-22-11-47-35.png" caption="Context view diagram" link="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">}}
 
 ### Module Organization
 
-{{< figure src="2019-12-22-11-51-53.png" caption="Module organization" link="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">}}
+{{< figure src="https://img.bmpi.dev/2019-12-22-11-51-53.png" caption="Module organization" link="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">}}
 
 ### VSCode Architecture
 
-{{< figure src="2019-12-22-11-46-42.png" caption="VSCode architecture" link="https://programmer.help/blogs/disclosure-of-vscode-technology.html">}}
+{{< figure src="https://img.bmpi.dev/2019-12-22-11-46-42.png" caption="VSCode architecture" link="https://programmer.help/blogs/disclosure-of-vscode-technology.html">}}
 
-{{< figure src="2019-12-22-11-46-56.png" caption="Process structure of VSCode" link="https://programmer.help/blogs/disclosure-of-vscode-technology.html">}}
+{{< figure src="https://img.bmpi.dev/2019-12-22-11-46-56.png" caption="Process structure of VSCode" link="https://programmer.help/blogs/disclosure-of-vscode-technology.html">}}
 
 从上图可以看出来渲染进程与调试/插件进程都是隔离的，通过RPC去调用，这保证了VSCode在安装很多插件时都能以极快的速度启动，这点对于用户体验很重要，因为启动太慢会让人焦虑（想想IDEA和Emacs在插件多的时候的感人启动速度）。
 
 ### Emacs Architecture
 
-{{< figure src="2019-12-22-11-39-24.png" caption="EMACS Conceptual Architecture" link="https://chrismennie.ca/EMACS-Conceptual-Architecture.pdf">}}
+{{< figure src="https://img.bmpi.dev/2019-12-22-11-39-24.png" caption="EMACS Conceptual Architecture" link="https://chrismennie.ca/EMACS-Conceptual-Architecture.pdf">}}
 
 分析完VSCode的架构后，我们还可以学习下上古神器Emacs的架构，Emacs拥有极其强大的扩展能力，号称伪装成操作系统的编辑器（只差一个内核了）。
 

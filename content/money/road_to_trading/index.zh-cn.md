@@ -10,204 +10,204 @@ keywords: "交易系统、策略回测、指数定投、股票投资、基金投
 description: "本文详细介绍了如何从零构建自己的投资交易系统，包括交易系统的设计与历史回测、股票基金投资基本知识、技术分析与基本面分析的区别、投资交易的心理建设、交易仓位的资金管理及风险管理、止损点的设置、大类资产相关度的分析与配置、海龟交易系统与双均线交易系统的介绍，最后介绍了交易日记的详细编写过程，致力于提高你的股票基金交易能力的建设"
 ---
 
-![](小白的交易之路.001.png)
+![](https://img.bmpi.dev/road-to-trade.001.png)
 
 {{< ad_embed_post >}}
 
-![](小白的交易之路.002.png)
+![](https://img.bmpi.dev/road-to-trade.002.png)
 
-![](小白的交易之路.003.png)
+![](https://img.bmpi.dev/road-to-trade.003.png)
 
-![](小白的交易之路.004.png)
+![](https://img.bmpi.dev/road-to-trade.004.png)
 
-![](小白的交易之路.005.png)
+![](https://img.bmpi.dev/road-to-trade.005.png)
 
-![](小白的交易之路.006.png)
+![](https://img.bmpi.dev/road-to-trade.006.png)
 
-![](小白的交易之路.007.png)
+![](https://img.bmpi.dev/road-to-trade.007.png)
 
-![](小白的交易之路.008.png)
+![](https://img.bmpi.dev/road-to-trade.008.png)
 
-![](小白的交易之路.009.png)
+![](https://img.bmpi.dev/road-to-trade.009.png)
 
-![](小白的交易之路.010.png)
+![](https://img.bmpi.dev/road-to-trade.010.png)
 
-![](小白的交易之路.011.png)
+![](https://img.bmpi.dev/road-to-trade.011.png)
 
-![](小白的交易之路.012.png)
+![](https://img.bmpi.dev/road-to-trade.012.png)
 
-![](小白的交易之路.013.png)
+![](https://img.bmpi.dev/road-to-trade.013.png)
 
-![](小白的交易之路.014.png)
+![](https://img.bmpi.dev/road-to-trade.014.png)
 
-![](小白的交易之路.015.png)
+![](https://img.bmpi.dev/road-to-trade.015.png)
 
-![](小白的交易之路.016.png)
+![](https://img.bmpi.dev/road-to-trade.016.png)
 
-![](小白的交易之路.017.png)
+![](https://img.bmpi.dev/road-to-trade.017.png)
 
-![](小白的交易之路.018.png)
+![](https://img.bmpi.dev/road-to-trade.018.png)
 
-![](小白的交易之路.019.png)
+![](https://img.bmpi.dev/road-to-trade.019.png)
 
-![](小白的交易之路.020.png)
+![](https://img.bmpi.dev/road-to-trade.020.png)
 
-![](小白的交易之路.021.png)
+![](https://img.bmpi.dev/road-to-trade.021.png)
 
-![](小白的交易之路.022.png)
+![](https://img.bmpi.dev/road-to-trade.022.png)
 
-![](小白的交易之路.023.png)
+![](https://img.bmpi.dev/road-to-trade.023.png)
 
-![](小白的交易之路.024.png)
+![](https://img.bmpi.dev/road-to-trade.024.png)
 
-![](小白的交易之路.025.png)
+![](https://img.bmpi.dev/road-to-trade.025.png)
 
-![](小白的交易之路.026.png)
+![](https://img.bmpi.dev/road-to-trade.026.png)
 
-![](小白的交易之路.027.png)
+![](https://img.bmpi.dev/road-to-trade.027.png)
 
-![](小白的交易之路.028.png)
+![](https://img.bmpi.dev/road-to-trade.028.png)
 
-![](小白的交易之路.029.png)
+![](https://img.bmpi.dev/road-to-trade.029.png)
 
-![](小白的交易之路.030.png)
+![](https://img.bmpi.dev/road-to-trade.030.png)
 
-![](小白的交易之路.031.png)
+![](https://img.bmpi.dev/road-to-trade.031.png)
 
-![](小白的交易之路.032.png)
+![](https://img.bmpi.dev/road-to-trade.032.png)
 
-![](小白的交易之路.033.png)
+![](https://img.bmpi.dev/road-to-trade.033.png)
 
-![](小白的交易之路.034.png)
+![](https://img.bmpi.dev/road-to-trade.034.png)
 
-![](小白的交易之路.035.png)
+![](https://img.bmpi.dev/road-to-trade.035.png)
 
-![](小白的交易之路.036.png)
+![](https://img.bmpi.dev/road-to-trade.036.png)
 
-![](小白的交易之路.037.png)
+![](https://img.bmpi.dev/road-to-trade.037.png)
 
-![](小白的交易之路.038.png)
+![](https://img.bmpi.dev/road-to-trade.038.png)
 
-![](小白的交易之路.039.png)
+![](https://img.bmpi.dev/road-to-trade.039.png)
 
-![](小白的交易之路.040.png)
+![](https://img.bmpi.dev/road-to-trade.040.png)
 
-![](小白的交易之路.041.png)
+![](https://img.bmpi.dev/road-to-trade.041.png)
 
-![](小白的交易之路.042.png)
+![](https://img.bmpi.dev/road-to-trade.042.png)
 
-![](小白的交易之路.043.png)
+![](https://img.bmpi.dev/road-to-trade.043.png)
 
-![](小白的交易之路.044.png)
+![](https://img.bmpi.dev/road-to-trade.044.png)
 
-![](小白的交易之路.045.png)
+![](https://img.bmpi.dev/road-to-trade.045.png)
 
-![](小白的交易之路.046.png)
+![](https://img.bmpi.dev/road-to-trade.046.png)
 
-![](小白的交易之路.047.png)
+![](https://img.bmpi.dev/road-to-trade.047.png)
 
-![](小白的交易之路.048.png)
+![](https://img.bmpi.dev/road-to-trade.048.png)
 
-![](小白的交易之路.049.png)
+![](https://img.bmpi.dev/road-to-trade.049.png)
 
-![](小白的交易之路.050.png)
+![](https://img.bmpi.dev/road-to-trade.050.png)
 
-![](小白的交易之路.051.png)
+![](https://img.bmpi.dev/road-to-trade.051.png)
 
-![](小白的交易之路.052.png)
+![](https://img.bmpi.dev/road-to-trade.052.png)
 
-![](小白的交易之路.053.png)
+![](https://img.bmpi.dev/road-to-trade.053.png)
 
-![](小白的交易之路.054.png)
+![](https://img.bmpi.dev/road-to-trade.054.png)
 
-![](小白的交易之路.055.png)
+![](https://img.bmpi.dev/road-to-trade.055.png)
 
-![](小白的交易之路.056.png)
+![](https://img.bmpi.dev/road-to-trade.056.png)
 
-![](小白的交易之路.057.png)
+![](https://img.bmpi.dev/road-to-trade.057.png)
 
-![](小白的交易之路.058.png)
+![](https://img.bmpi.dev/road-to-trade.058.png)
 
-![](小白的交易之路.059.png)
+![](https://img.bmpi.dev/road-to-trade.059.png)
 
-![](小白的交易之路.060.png)
+![](https://img.bmpi.dev/road-to-trade.060.png)
 
-![](小白的交易之路.061.png)
+![](https://img.bmpi.dev/road-to-trade.061.png)
 
-![](小白的交易之路.062.png)
+![](https://img.bmpi.dev/road-to-trade.062.png)
 
-![](小白的交易之路.063.png)
+![](https://img.bmpi.dev/road-to-trade.063.png)
 
-![](小白的交易之路.064.png)
+![](https://img.bmpi.dev/road-to-trade.064.png)
 
-![](小白的交易之路.065.png)
+![](https://img.bmpi.dev/road-to-trade.065.png)
 
-![](小白的交易之路.066.png)
+![](https://img.bmpi.dev/road-to-trade.066.png)
 
-![](小白的交易之路.067.png)
+![](https://img.bmpi.dev/road-to-trade.067.png)
 
-![](小白的交易之路.068.png)
+![](https://img.bmpi.dev/road-to-trade.068.png)
 
-![](小白的交易之路.069.png)
+![](https://img.bmpi.dev/road-to-trade.069.png)
 
-![](小白的交易之路.070.png)
+![](https://img.bmpi.dev/road-to-trade.070.png)
 
-![](小白的交易之路.071.png)
+![](https://img.bmpi.dev/road-to-trade.071.png)
 
-![](小白的交易之路.072.png)
+![](https://img.bmpi.dev/road-to-trade.072.png)
 
-![](小白的交易之路.073.png)
+![](https://img.bmpi.dev/road-to-trade.073.png)
 
-![](小白的交易之路.074.png)
+![](https://img.bmpi.dev/road-to-trade.074.png)
 
-![](小白的交易之路.075.png)
+![](https://img.bmpi.dev/road-to-trade.075.png)
 
-![](小白的交易之路.076.png)
+![](https://img.bmpi.dev/road-to-trade.076.png)
 
-![](小白的交易之路.077.png)
+![](https://img.bmpi.dev/road-to-trade.077.png)
 
-![](小白的交易之路.078.png)
+![](https://img.bmpi.dev/road-to-trade.078.png)
 
-![](小白的交易之路.079.png)
+![](https://img.bmpi.dev/road-to-trade.079.png)
 
-![](小白的交易之路.080.png)
+![](https://img.bmpi.dev/road-to-trade.080.png)
 
-![](小白的交易之路.081.png)
+![](https://img.bmpi.dev/road-to-trade.081.png)
 
-![](小白的交易之路.082.png)
+![](https://img.bmpi.dev/road-to-trade.082.png)
 
-![](小白的交易之路.083.png)
+![](https://img.bmpi.dev/road-to-trade.083.png)
 
-![](小白的交易之路.084.png)
+![](https://img.bmpi.dev/road-to-trade.084.png)
 
-![](小白的交易之路.085.png)
+![](https://img.bmpi.dev/road-to-trade.085.png)
 
-![](小白的交易之路.086.png)
+![](https://img.bmpi.dev/road-to-trade.086.png)
 
-![](小白的交易之路.087.png)
+![](https://img.bmpi.dev/road-to-trade.087.png)
 
-![](小白的交易之路.088.png)
+![](https://img.bmpi.dev/road-to-trade.088.png)
 
-![](小白的交易之路.089.png)
+![](https://img.bmpi.dev/road-to-trade.089.png)
 
-![](小白的交易之路.090.png)
+![](https://img.bmpi.dev/road-to-trade.090.png)
 
-![](小白的交易之路.091.png)
+![](https://img.bmpi.dev/road-to-trade.091.png)
 
-![](小白的交易之路.092.png)
+![](https://img.bmpi.dev/road-to-trade.092.png)
 
-![](小白的交易之路.093.png)
+![](https://img.bmpi.dev/road-to-trade.093.png)
 
-![](小白的交易之路.094.png)
+![](https://img.bmpi.dev/road-to-trade.094.png)
 
-![](小白的交易之路.095.png)
+![](https://img.bmpi.dev/road-to-trade.095.png)
 
-![](小白的交易之路.096.png)
+![](https://img.bmpi.dev/road-to-trade.096.png)
 
-![](小白的交易之路.097.png)
+![](https://img.bmpi.dev/road-to-trade.097.png)
 
-![](小白的交易之路.098.png)
+![](https://img.bmpi.dev/road-to-trade.098.png)
 
 {{< ad_embed_post >}}
 
-![](小白的交易之路.099.png)
+![](https://img.bmpi.dev/road-to-trade.099.png)
