@@ -15,7 +15,7 @@ outputs = "html"
 | [GeekPlux](https://geekplux.com/) | Data Visualization & Full-stack programmer |
 | [Future iDeal](https://www.fi-ads.com/) | 网络营销之路 |
 | [ZoomQuiet](https://blog.zoomquiet.io/) | 是也乎(￣▽￣) |
-| [认知.xKnow](https://xknow.net/) | 认知.xKnow |
+| [认知.xKnow](https://blog.xknow.net/) | 认知.xKnow |
 
 ## 我关注的博客
 
