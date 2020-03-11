@@ -5,16 +5,10 @@ keywords = "自我成长系列文章、个人产品、业余项目、网赚项�
 outputs = "html"
 +++
 
-## 自我成长系列
+## 系列写作
 
-| 成长之路 | 文章 |
-|  ----  | ----  |
-| 人生之路 | [人生游戏之路](/self/road_to_life_games/) |
-| 时间系统 | [我的时间管理工具](/self/gtd-tools-i-used/) |
-| 笔记系统 | [我的笔记系统](/self/note-system/) <div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[用OneNote管理你的知识](/self/onenote-intro/)</div> |
-| 写作系统 | [打造优雅高效的写作环境](/self/build-write-tool-v1/) |
-| 财务系统 | [我的财务管理方案](/money/my-accounting-tool/) |
-| 交易系统 | [年轻上班族的系统化投资之路](/money/investment-path-for-young/) <div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[构建你的交易系统](/money/build-trade-system/)</div> |
+- [零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)
+- [自我成长](/series/自我成长/)
 
 ## 电报频道静态化工具
 
