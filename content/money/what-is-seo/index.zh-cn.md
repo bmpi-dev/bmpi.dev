@@ -8,6 +8,7 @@ description: "什么是SEO？怎么做SEO？SEO有未来吗？SEO的资源和工
 categories: [
     "什么是X"
 ]
+series: ["SEO实践日志"]
 ---
 
 ![](https://img.bmpi.dev/227e91cc-a2a8-942e-19fe-8246d9a7abbd.png)
