@@ -4,7 +4,7 @@ date: 2020-02-13
 draft: false
 tags: ["互联网广告", "CPC", "CPM", "CPS", "CPT", "CPI", "CPV", "网络广告", "在线广告", "数字广告", "Web广告", "数字营销", "广告投放", "抖音广告", "YouTube广告收入", "Vlog收入", "博客广告", "DSP", "Affiliate", "Media Buy", "视频广告", "网站广告", "网络营销"]
 keywords: "互联网广告、CPC、CPM、CPS、CPT、CPI、CPV、网络广告、在线广告、数字广告、Web广告、数字营销、广告投放、抖音广告、YouTube广告收入、Vlog收入、博客广告、DSP、Affiliate、Media Buy、视频广告、网站广告、网络营销"
-description: "广告无处不在，它是支撑互联网高速发展的经济基石。互联网广告对互联网公司意味着什么？互联网的产业组成有哪些？CPC/CPM/CPS/CPI，这些术语意味着什么？各种Vlog博主能赚多少钱？普通人如何利用互联网广告赚钱？这篇文章告诉你答案。"
+description: "什么是市场营销？什么是广告？什么是互联网广告？互联网广告对互联网公司意味着什么？互联网的产业组成有哪些？什么是CPC、CPM、CPS、CPI？各种Vlog博主能赚多少钱？普通人如何利用互联网广告赚钱？这篇文章告诉你答案。"
 categories: [
     "什么是X"
 ]
