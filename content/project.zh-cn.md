@@ -20,11 +20,11 @@ outputs = "html"
 
 ## Ins流量站
 
-<https://github.com/bmpi-dev/instaghub>
+[instaghub](https://github.com/bmpi-dev/instaghub)
 
 ## git2pdf
 
-<https://github.com/bmpi-dev/git2pdf>
+[git2pdf](https://github.com/bmpi-dev/git2pdf)
 
 ## 交易日记App[已下线]
 
