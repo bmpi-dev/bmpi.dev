@@ -14,6 +14,14 @@ outputs = "html"
 | [投资实证](/series/投资实证/) | 我的投资交易策略及年度金融投资报告 |
 | [自我成长](/series/自我成长/) | 交易/财务/写作/笔记/时间🛠五个系统维度助我不断成长 |
 
+## GitHub Top X
+
+[gitopx.com](https://www.gitopx.com)
+
+## Web Telegram
+
+[webtg.org](https://www.webtg.org)
+
 ## 电报频道静态化工具
 
 [tg2web](https://github.com/bmpi-dev/tg2web)
