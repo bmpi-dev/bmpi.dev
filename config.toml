@@ -196,3 +196,7 @@ FootnoteReturnLinkContents = "↑"
                 name = "扯淡"
                 weight = 7
                 url  = "https://tg.bmpi.dev"
+            [[languages.zh-cn.menu.main]]
+                name = "投资组合"
+                weight = 8
+                url  = "https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea"
