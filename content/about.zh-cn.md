@@ -16,7 +16,7 @@ outputs = "html"
 我的技术栈：
 
 - 全栈开发：
-  - java/elixir/python/swift/go/js/rust；
+  - Java/Elixir/Python/Clojure/Swift/JavaScript/Golang；
   - 既熟练后端/移动端，又能搞前端/DevOps，还可搭分布式微服务架构，也做过网站SEO优化；
   - 曾从事过传统能源/互联网金融/智能硬件/在线广告/互联网行业。
   - 曾三个月开发个人设计的交易日记App与后端服务。
