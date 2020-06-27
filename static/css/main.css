@@ -177,6 +177,9 @@ fontawesome minify
 .fa-twitter:before {
     content: "\f099"
 }
+.fa-youtube:before {
+    content: "\f167"; 
+}
 .fa-envelope:before {
     content: "\f0e0"
 }
