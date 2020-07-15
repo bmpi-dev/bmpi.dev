@@ -8,7 +8,7 @@ aliases: [
 ]
 keywords: ["笔记系统", "笔记管理", "知识系统", "个人Wiki", "TiddlyWiki", "Wayback Machine", "AWS S3"]
 description: "本文介绍了如何使用TiddlyWiki打造个人长期的知识管理系统（图片使用AWS S3云存储管理），同时介绍了OneNote、EveryNote、Emacs Org等工具的优缺点"
-series: ["自我成长"]
+series: ["自我提升"]
 ---
 
 一个好的笔记系统，应该能把你所学习到的任何资料串联起来，形成一个知识系统，在你需要他们的时候，可以很容易找到，进而形成自己新的知识。

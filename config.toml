@@ -167,8 +167,8 @@ FootnoteReturnLinkContents = "↑"
         [languages.zh-cn.params]
             author = "马大伟"
             info = "self 🐶 dev 🐱 money"
-            description = "通过自我管理（GTD、时间管理、知识管理、写作、财务管理）、全栈开发（前端、后端、移动端、DevOps）、投资交易（指数投资、基金、股票、债券）、网赚项目（SEO、Affiliate、Media Buy、Niche、社交媒体）来建立被动收入"
-            keywords = "自我管理、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚"
+            description = "通过自我提升（GTD、时间管理、知识管理、写作、财务管理）、全栈开发（前端、后端、移动端、DevOps）、投资交易（指数投资、基金、股票、债券）、网赚项目（SEO、Affiliate、Media Buy、Niche、社交媒体）来建立被动收入"
+            keywords = "自我提升、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚"
             # footercontent = "self/dev/money"
 
         [languages.zh-cn.menu]
@@ -178,7 +178,7 @@ FootnoteReturnLinkContents = "↑"
                 weight = 1
                 url = "/about/"
             [[languages.zh-cn.menu.main]]
-                name = "自我管理"
+                name = "自我提升"
                 weight = 2
                 url  = "/self/"
             [[languages.zh-cn.menu.main]]
