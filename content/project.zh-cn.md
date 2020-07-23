@@ -15,6 +15,10 @@ outputs = "html"
 | [SEO实践日志](/series/seo实践日志/) | 记录我的`SEO`学习实践过程 |
 | [零成本搭建现代博客指南](/series/零成本搭建现代博客指南/) | 记录从零开始以零成本打造现代`SEO`友好架构的博客网站 |
 
+## scrape google keyword
+
+[scrape_google_keyword](https://github.com/bmpi-dev/scrape_google_keyword)
+
 ## GitHub Top X
 
 [gitopx.com](https://www.gitopx.com)
