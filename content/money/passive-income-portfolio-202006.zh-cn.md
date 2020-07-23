@@ -137,6 +137,14 @@ categories: [
 
 每个月我都会在这个[ Portfolio ](https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea)页面发布最新的投资组合净值及这个月的交易记录，如果你对这个十年/十五年之约感兴趣，可以在这个页面持续关注。为了让这个过程不是太寂寞，我每个月都会在我的[ YouTube ](https://www.youtube.com/channel/UCbg-Y24Z1H0nONW-bxgzv6w)/[ Bilibili ](https://space.bilibili.com/13457583/channel/detail?cid=136506)频道发布该组合的详细交易信息及对这些交易的思考，当然也会有一些投资的干货在内。
 
+### YouTube
+
+{{< youtube id="_GElBEi3R_I" autoplay="false" >}}
+
+### bilibili
+
+{{< bilibili 883647341 >}}
+
 #### *References*
 [^0]: [三驾马车](https://wiki.mbalib.com/wiki/%E4%B8%89%E9%A9%BE%E9%A9%AC%E8%BD%A6)
 [^1]: [美股近150年回报率分析:"时间"真的能换来"空间"](https://finance.sina.com.cn/stock/usstock/c/2019-03-14/doc-ihrfqzkc3824417.shtml)
