@@ -11,19 +11,17 @@ outputs = "html"
 
 ## 个人介绍
 
-全栈开发/投资理财/被动收入，我关注的三个焦点。欲与我联系，请通过[Email](mailto:bmpidev@gmail.com)。
+学习/技术/投资，我关注的三个焦点。欲与我联系，请通过[ Email ](mailto:bmpidev@gmail.com)。
 
-我的技术栈：
+我的能力圈：
 
-- 全栈开发：
+- 技术：
   - Java/Elixir/Python/Clojure/Swift/JavaScript/Golang；
   - 既熟练后端/移动端，又能搞前端/DevOps，还可搭分布式微服务架构，也做过网站SEO优化；
   - 曾从事过传统能源/互联网金融/智能硬件/在线广告/互联网行业。
   - 曾三个月开发个人设计的交易日记App与后端服务。
 
-- 投资理财：有金融行业的创业经历，经历过15年股灾。目前使用自己设计的交易系统去投资交易。
-
-- 被动收入：曾一周开发某流量站，一个月被Google收录千万索引流量达百万UV，三个月被Google Kill，收入上千美刀💰
+- 投资：有金融行业的创业经历，经历过15年股灾。目前使用自己设计的交易系统去投资交易。
 
 我的个人频道地址：<https://t.me/improve365>([不翻墙镜像版](https://tg.bmpi.dev/improve365/index.html))
 
