@@ -198,6 +198,6 @@ FootnoteReturnLinkContents = "↑"
                 weight = 6
                 url  = "/goal/"
             [[languages.zh-cn.menu.main]]
-                name = "扯淡"
+                name = "思考"
                 weight = 7
                 url  = "https://tg.bmpi.dev"
