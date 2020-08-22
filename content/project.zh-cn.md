@@ -15,34 +15,26 @@ outputs = "html"
 | [SEO实践日志](/series/seo实践日志/) | 记录我的`SEO`学习实践过程 |
 | [零成本搭建现代博客指南](/series/零成本搭建现代博客指南/) | 记录从零开始以零成本打造现代`SEO`友好架构的博客网站 |
 
-## scrape google keyword
+## 产品/工具
 
-[scrape_google_keyword](https://github.com/bmpi-dev/scrape_google_keyword)
+| | |
+| -- | -- |
+| [Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy) | |
+| [scrape_google_keyword](https://github.com/bmpi-dev/scrape_google_keyword) | 刮取Google关键词Top10排名网站信息 |
+| [tg2web](https://github.com/bmpi-dev/tg2web) | 电报频道静态化工具 |
+| [git2pdf](https://github.com/bmpi-dev/git2pdf) | 打印GitHub README文档 |
 
-## GitHub Top X
+## 流量站
 
-[gitopx.com](https://www.gitopx.com)
+| | |
+| -- | -- |
+| [gitopx.com](https://www.gitopx.com) | GitHub Top100 用户/仓库排名信息 |
+| [webtg.org](https://www.webtg.org) | Web Telegram |
+| [instaghub](https://github.com/bmpi-dev/instaghub) | Instagram流量站 |
 
-## Web Telegram
+## 归档
 
-[webtg.org](https://www.webtg.org)
-
-## 电报频道静态化工具
-
-[tg2web](https://github.com/bmpi-dev/tg2web)
-
-## Ins流量站
-
-[instaghub](https://github.com/bmpi-dev/instaghub)
-
-## git2pdf
-
-[git2pdf](https://github.com/bmpi-dev/git2pdf)
-
-## 交易日记App[已下线]
-
-[一款产品的从0到1之旅](/dev/zero-to-one/)
-
-## 群品电子书项目[已下线]
-
-[项目Google邮件列表](https://groups.google.com/forum/#!forum/qunpin)
+| | |
+| -- | -- |
+| [一款产品的从0到1之旅](/dev/zero-to-one/) | 交易日记iOS App[已下线] |
+| [项目Google邮件列表](https://groups.google.com/forum/#!forum/qunpin) | 群品电子书项目[已下线] |
