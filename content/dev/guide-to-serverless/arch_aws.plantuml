@@ -1,0 +1,98 @@
+@startuml Basic Sample
+
+!include <awslib/AWSCommon>
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+' Uncomment the following line to create simplified view
+' !include <awslib/AWSSimplified>
+
+!include <awslib/General/all>
+!include <awslib/NetworkingAndContentDelivery/all>
+!include <awslib/Compute/all>
+!include <awslib/SecurityIdentityAndCompliance/IAMResource>
+!include <awslib/SecurityIdentityAndCompliance/CertificateManager>
+!include <awslib/Storage/S3Bucket>
+!include <awslib/ApplicationIntegration/SNS>
+!include <awslib/ManagementAndGovernance/CloudWatch>
+!include <awslib/ManagementAndGovernance/CloudFormation>
+
+' System_Boundary(c1, "Sample System") {
+'     Container(web_app, "Web Application", "C#, ASP.NET Core 2.1 MVC", "Allows users to compare multiple Twitter timelines")
+' }
+
+LAYOUT_LEFT_RIGHT
+
+Users(users, "Users", "millions of users")
+System(terraform, "Terraform", "infrastructure")
+
+System_Boundary(aws, "AWS Cloud") {
+
+    CloudWatch(cw_event, "CloudWatch Events", "cloud watch schedule events")
+    CloudWatch(cw_log, "CloudWatch Logs", "cloud watch log groups")
+    S3Bucket(s3_data, "S3 Data", "S3 for store data")
+    SNS(sns, "SNS", "trade-signal-topic", "SNS for email")
+
+    System_Boundary(core_service, "Core Service") {
+        S3Bucket(s3_core_terraform, "S3 Terraform State", "S3 for backup terraform state")
+
+        System_Boundary(ecs, "ECS Cluster") {
+            package "Default VPC" {
+                package "Public Subnet" {
+                    Fargate(core_service_task, "Fargate", "ec2 fargate spot", "Core Service Schedule Task")
+                }
+            }
+        }
+
+        System_Boundary(ecr, "ECR") {
+            EC2ContainerRegistry(ec2repo, "ECR", "repo for docker images")
+            EC2ContainerRegistryImage(ecr_img, "Docker Image", "core service docker image")
+        }
+    }
+
+    System_Boundary(web_service, "Web Service") {
+        package "Web CloudFormation Stack" {
+            APIGateway2(web_api_gateway, "Web", "api gateway for api service")
+            S3Bucket(s3_web_sls_lambda, "S3 Serverless Web", "S3 for Serverless Web Lambda")
+            Lambda(web_nuxt, "Web Lambda", "Node.js, Vue.js, Nuxt.js", "web service nuxt function")
+            CloudFront(web_cloudfront, "CloudFront", "for web service")
+            Route53(r53, "Route53", "DNS", "DNS for custom domain")
+            CertificateManager(cm, "CertificateManager", "TLS for web service")
+        }
+    }
+
+    System_Boundary(api_service, "API Service") {
+        package "API CloudFormation Stack" {
+            APIGateway2(api_api_gateway, "API", "api gateway for web service")
+            S3Bucket(s3_api_sls_lambda, "S3 Serverless API", "S3 for Serverless API Lambda")
+            Lambda(api_subscribe_sns, "API Lambda", "Python", "api service sns fucntion")
+        }
+    }
+}
+
+' core service
+ec2repo <-- ecr_img
+core_service_task --> ec2repo
+cw_event --> core_service_task
+core_service_task --> s3_data
+core_service_task --> sns
+core_service_task --> cw_log
+terraform --> s3_core_terraform
+
+' api service
+users --> api_api_gateway
+api_api_gateway --> cw_log
+api_api_gateway --> api_subscribe_sns
+s3_api_sls_lambda <.. api_subscribe_sns
+api_subscribe_sns --> cw_log
+
+' web service
+users --> r53
+r53 --> web_cloudfront
+cm <.. web_cloudfront
+web_cloudfront --> web_api_gateway
+web_api_gateway --> web_nuxt
+web_api_gateway --> cw_log
+s3_web_sls_lambda <.. web_nuxt
+web_nuxt --> cw_log
+
+@enduml

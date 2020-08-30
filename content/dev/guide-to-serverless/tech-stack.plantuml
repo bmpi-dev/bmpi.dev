@@ -1,0 +1,36 @@
+@startmindmap
+skinparam monochrome true
+* 技术栈
+** 编程语言
+*** Python
+*** Javascript
+**** Node.js
+**** Vue.js
+** 构建部署
+*** Serverless Framework
+*** Terraform
+*** Docker
+*** Make
+** 基础设施
+*** AWS
+**** 计算
+***** ECS
+***** ECR
+***** Lambda
+***** Fargate
+**** 存储
+***** S3
+**** 应用集成
+***** SNS
+**** 治理
+***** CloudWatch
+***** CloudFormation
+**** 安全/身份认证
+***** IAM
+***** CM
+**** 网络/内容分发
+***** CloudFront
+***** API Gateway
+***** Route53
+***** VPC
+@endmindmap
