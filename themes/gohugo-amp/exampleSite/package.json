@@ -19,7 +19,7 @@
     "html-minifier": "^3.1.1",
     "autoprefixer": "^6.5.3",
     "cssnano": "^3.8.0",
-    "node-sass": "^3.11.3",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.11.0",
     "postcss": "^5.2.5"
   },
