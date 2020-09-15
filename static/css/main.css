@@ -144,7 +144,7 @@ p {
 /*
 fontawesome minify
 */
-@font-face {
+/* @font-face {
     font-family: "Font Awesome 5 Brands";
     font-style: normal;
     font-weight: normal;
@@ -164,6 +164,15 @@ fontawesome minify
     font-weight: 900;
     font-display:swap;src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.eot);
     src: url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.woff) format("woff"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.ttf) format("truetype"),url(https://use.fontawesome.com/releases/v5.11.2/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+} */
+@font-face {
+    font-family: 'iconfont';  /* project id 2068085 */
+    src: url('//at.alicdn.com/t/font_2068085_toxeuon9bt.eot');
+    src: url('//at.alicdn.com/t/font_2068085_toxeuon9bt.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.svg#iconfont') format('svg');
 }
 .fa,.fab,.fad,.fal,.far,.fas {
     -moz-osx-font-smoothing: grayscale;
@@ -175,49 +184,49 @@ fontawesome minify
     line-height: 1
 }
 .fa-twitter:before {
-    content: "\f099"
+    content: '\e9b2';
 }
 .fa-youtube:before {
-    content: "\f167"; 
+    content: "\e601"; 
 }
 .fa-envelope:before {
-    content: "\f0e0"
+    content: "\e6eb";
 }
 .fa-github:before {
-    content: "\f09b"
+    content: "\e600";
 }
 .fa-rss:before {
-    content: "\f09e"
+    content: "\e602";
 }
 .fa-telegram:before {
-    content: "\f2c6"
+    content: "\eaf9";
 }
 .fa-weixin:before {
-    content: "\f1d7"
+    content: "\e68b";
 }
 .fa-zhihu:before {
-    content: "\f63f"
+    content: "\f276";
 }
 .fa-calendar:before {
-    content:"\f133"
+    content:"\e9de";
 }
 .fa-clock:before {
-    content:"\f017"
+    content:"\e6d3";
 }
 .fa-bars:before {
-    content:"\f0c9"
+    content:"\e625";
 }
 .fa-folder:before {
-    content:"\f07b"
+    content:"\e671";
 }
 .fa-tag:before {
-    content:"\f02b"
+    content:"\e66c";
 }
 .fab {
-    font-family: "Font Awesome 5 Brands"
+    font-family: "iconfont"
 }
 .fa,.far,.fas {
-    font-family: "Font Awesome 5 Free"
+    font-family: "iconfont"
 }
 .fa,.fas {
     font-weight: 900
