@@ -45,12 +45,10 @@ outputs = "html"
 
 ---
 
-### 本站变更历史
+### 本站变更日志
 
 ```
-☐ Pinterest图片引流
-☐ 网站商业模型画布撰写
-> https://t.me/bmpi365/172
+✔ 集成flying-pages实现预加载页面 @done(20-09-29 08:25)
 ✔ 加入友链页面 @done(20-03-02 10:25)
 ✔ 集成`tg.bmpi.dev` @started(20-02-25 14:00) @done(20-02-28 19:51) @lasted(3d5h51m57s)
 > telegram MTProto/s3/cloudfront
