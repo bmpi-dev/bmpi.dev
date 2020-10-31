@@ -26,3 +26,7 @@ java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.Call
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2020.10.31 15:52:11 INFO  started: Metals version 0.9.4 in workspace '/Users/dawei.ma/Workspace/blog/bmpi.dev' for client vscode.
+2020.10.31 15:52:12 INFO  time: initialize in 1.17s
+2020.10.31 15:52:13 WARN  resetting database: /Users/dawei.ma/Workspace/blog/bmpi.dev/.metals/metals.h2.db
+2020.10.31 15:52:13 WARN  no build tool detected in workspace '/Users/dawei.ma/Workspace/blog/bmpi.dev'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 

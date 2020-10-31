@@ -8,5 +8,8 @@
         // "tinyPngKey": "1tKLgcKNcT8YZTZDnQX7Xj43cGv4289t",
         "s3Bucket": "img.bmpi.dev",
         "s3PreUrl": "https://img.bmpi.dev/",
+    },
+    "files.watcherExclude": {
+        "**/target": true
     }
 }
