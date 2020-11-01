@@ -38,3 +38,4 @@ java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.Call
 2020.11.01 21:45:44 INFO  started: Metals version 0.9.4 in workspace '/Users/dawei.ma/Workspace/blog/bmpi.dev' for client vscode.
 2020.11.01 21:45:45 INFO  time: initialize in 1.28s
 2020.11.01 21:45:46 WARN  no build tool detected in workspace '/Users/dawei.ma/Workspace/blog/bmpi.dev'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.01 21:49:22 INFO  shutting down Metals
