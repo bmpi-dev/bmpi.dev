@@ -16,7 +16,6 @@ outputs = "html"
 | [Future iDeal](https://www.fi-ads.com/) | 网络营销之路 |
 | [ZoomQuiet](https://blog.zoomquiet.io/) | 是也乎(￣▽￣) |
 | [认知.xKnow](https://blog.xknow.net/) | 认知.xKnow |
-| [朱双印个人日志](https://www.zsythink.net/) | 朱双印个人日志 |
 
 ## 我关注的博客
 
