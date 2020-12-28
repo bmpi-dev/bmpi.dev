@@ -8,6 +8,9 @@ description: "什么是市场营销？什么是广告？什么是互联网广告
 categories: [
     "什么是X"
 ]
+aliases: [
+    "/money/what-is-internet-advertising/"
+]
 ---
 
 广告无处不在，它是支撑互联网高速发展的经济基石。互联网广告对互联网公司意味着什么？互联网的产业组成有哪些？CPC/CPM/CPS/CPI，这些术语意味着什么？各种Vlog博主能赚多少钱？普通人如何利用互联网广告赚钱？这篇文章告诉你答案。
