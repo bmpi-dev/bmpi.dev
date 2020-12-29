@@ -22,7 +22,7 @@ series: ["零成本搭建现代博客指南"]
 
 ## 博客迁移至 vercel 过程
 
-1. 本博客仓库部署在 [bmpi-dev/bmpi-dev](https://github.com/bmpi-dev/bmpi.dev)，而`vercel`要求个人用户的仓库必须来自个人用户，所以我只能 fork 至我的个人仓库 [madawei2699/bmpi.dev](https://github.com/madawei2699/bmpi.dev) 部署。考虑到一些原仓库有一些链接已经在使用了，所以我做了两个仓库间自动同步，具体可见此 [GitHub Actions](https://github.com/bmpi-dev/bmpi.dev/actions/runs/449669408/workflow)，之后以个人仓库为主仓库推送代码。
+1. 本博客仓库部署在 [bmpi-dev/bmpi-dev](https://github.com/bmpi-dev/bmpi.dev)，而`vercel`要求个人用户的仓库必须来自个人用户，所以我只能 fork 至我的个人仓库 [madawei2699/bmpi.dev](https://github.com/madawei2699/bmpi.dev) 部署。考虑到一些原仓库有一些链接已经在使用了，所以我做了两个仓库间自动同步，具体可见此 [GitHub Actions](https://github.com/madawei2699/sync-repo-actions)，之后以个人仓库为主仓库推送代码。
 
 2. 域名`DNS`修改。在`vercel`设置好域名后，它会自动申请`HTTPS证书`，之后在`AWS Route53`将`DNS`的`CNAME`指向其配置记录即可。同时需要做一些主域名跳转至`www`域名的设置，还有强制浏览器使用`HTTPS`等设置。`vercel`默认还启用了`OCSP Stapling` (可忽略证书校验，加速网站 HTTPS 访问)。
 
