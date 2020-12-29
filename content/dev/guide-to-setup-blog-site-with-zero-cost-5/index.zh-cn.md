@@ -10,6 +10,38 @@ series: ["零成本搭建现代博客指南"]
 
 > 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第五篇【优化国内访问速度篇】。
 
+<strong><span style="color:red">更新自2020年12月29日</span></strong>
+
+---
+
+在V2EX发了该篇文章的帖子[优化托管在国外博客的国内访问速度](https://www.v2ex.com/t/739279)后，一些回复中多次提到使用 [vercel](https://vercel.com/) 部署的站在国内访问速度很快，而阿里云会产生如下问题：
+
+> 阿里云国际版 CDN 就算你解析到香港或者新加坡这种带 CN2 地方，CDN 的 IP 过几天就会被墙，阿里可不会因为 IP 被墙而换 IP，毕竟没有保证CDN国外节点能够在国内访问。而且你现在还没手动解析到带 CN2 的 IP，现在命中的阿里 CDN 新加坡的路由简直可以说是绕了地球一圈。（电信测试）（@mason961125）
+
+帖子回复中很多电信用户根本打不开网站，经路由测试某些地区是绕了一大圈，甚至到欧洲后再转发到新加坡，经过一番测试后我决定把网站迁移至 `vercel`。也考虑过 [cloudflare CDN](https://www.cloudflare.com/zh-cn/) ，虽然速度在国内挺一般，但是比`阿里云 CDN`要快。最终因为`cloudflare`要求必须托管域名的`DNS`，而我的域名托管至`AWS Route53`，此域名设置了很多其他的`DNS`记录，迁移起来成本过高，还涉及到证书的问题，所以放弃了。
+
+## 博客迁移至 vercel 过程
+
+1. 本博客仓库部署在 [bmpi-dev/bmpi-dev](https://github.com/bmpi-dev/bmpi.dev)，而`vercel`要求个人用户的仓库必须来自个人用户，所以我只能 fork 至我的个人仓库 [madawei2699/bmpi.dev](https://github.com/madawei2699/bmpi.dev) 部署。考虑到一些原仓库有一些链接已经在使用了，所以我做了两个仓库间自动同步，具体可见此 [GitHub Actions](https://github.com/bmpi-dev/bmpi.dev/actions/runs/449669408/workflow)，之后以个人仓库为主仓库推送代码。
+
+2. 域名`DNS`修改。在`vercel`设置好域名后，它会自动申请`HTTPS证书`，之后在`AWS Route53`将`DNS`的`CNAME`指向其配置记录即可。同时需要做一些主域名跳转至`www`域名的设置，还有强制浏览器使用`HTTPS`等设置。`vercel`默认还启用了`OCSP Stapling` (可忽略证书校验，加速网站 HTTPS 访问)。
+
+3. 对`SEO`的影响。`vercel`在每次部署后都会生成一个随机预览链接，这个链接在请求响应里已经做了`x-robots-tag: noindex`，提示`Google爬虫`不要索引此页面，这点是很好的。但是它默认还给了两个域名链接，并且每次在`git commit`中评论附上此链接，而这个两个链接并没有`noindex`的设置，爬虫会直接索引此页面，进一步导致内容重复的问题。考虑到我的主站已经被`Google`索引了一段时间，此首页重复的问题对网站的影响倒不大。但是我还是无法理解这种设计，希望`vercel`能够在后续改进下。
+
+4. 由于本站使用了`hugo 0.61.0`构建，所以添加了`vercel.json`配置`hugo`版本，同时在页面配置中指定了构建命令`hugo --gc && node _tools/newpostcheck.js`，这样在构建的时候可以触发[新文章浏览器推送通知](/dev/guide-to-setup-blog-site-with-zero-cost-3/)的功能。
+
+5. 网站测速结果。测速结果来自`17ce.com/boce.com/ce8.com`。
+
+![](https://img.bmpi.dev/96368bb8-c705-514c-2ef0-b3b350d82d70.png)
+
+![](https://img.bmpi.dev/0429775b-f261-018a-744a-82c7bca3672f.png)
+
+![](https://img.bmpi.dev/a07e54ac-cd6a-142f-ec74-d54110f95af0.png)
+
+<strong><span style="color:red">以下是旧文，仅供参考</span></strong>
+
+---
+
 [构建我的被动收入](https://www.bmpi.dev/)网站部署在`Netlify CDN`上，我在[零成本搭建现代博客之加载速度优化篇](/dev/guide-to-setup-blog-site-with-zero-cost-4/)这篇文章中对它做了大量的基础技术性加载速度优化。最终达到在 [Google PageSpeed Insights
 ](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.bmpi.dev%2F&hl=en&tab=desktop) 上PC端98分的评分:
 
