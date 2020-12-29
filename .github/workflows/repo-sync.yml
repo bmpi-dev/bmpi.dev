@@ -15,5 +15,5 @@ jobs:
       with:
         source_repo: "https://github.com/madawei2699/bmpi.dev"
         source_branch: "master"
-        destination_branch: "master"
+        destination_branch: "mirrior-of-vercel"
         github_token: ${{ secrets.PAT }}
