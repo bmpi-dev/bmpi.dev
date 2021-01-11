@@ -15,7 +15,7 @@ outputs = "html"
 | [SEO实践日志](/series/seo实践日志/) | 记录我的`SEO`学习实践过程 |
 | [零成本搭建现代博客指南](/series/零成本搭建现代博客指南/) | 记录从零开始以零成本打造现代`SEO`友好架构的博客网站 |
 
-## 产品/工具
+## 产品/工具/开源项目
 
 | | |
 | -- | -- |
@@ -23,6 +23,7 @@ outputs = "html"
 | [scrape_google_keyword](https://github.com/bmpi-dev/scrape_google_keyword) | 刮取Google关键词Top10排名网站信息 |
 | [tg2web](https://github.com/bmpi-dev/tg2web) | 电报频道静态化工具 |
 | [git2pdf](https://github.com/bmpi-dev/git2pdf) | 打印GitHub README文档 |
+| [awesome-seo](https://github.com/madawei2699/awesome-seo) | 我整理的关于Google SEO系统学习的收藏资源及通过流量变现的介绍 |
 
 ## 流量站
 
