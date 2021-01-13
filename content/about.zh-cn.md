@@ -1,15 +1,15 @@
 +++
-title = "关于我"
-description = "关于我"
-keywords = "关于我"
+title = "关于本站"
+description = "关于本站"
+keywords = "关于本站"
 outputs = "html"
 +++
 
 ```text
-林中有两条路，我选择了人迹更少的那一条，一切皆源于此
+终身学习（知识杠杆） -> 全栈技术（时间杠杆） -> 投资理财（财务杠杆） => 被动收入（人生杠杆）
 ```
 
-## 个人介绍
+## 关于我
 
 学习/技术/投资，我关注的三个焦点。欲与我联系，请通过[ Email ](mailto:bmpidev@gmail.com)。
 
@@ -26,7 +26,6 @@ outputs = "html"
 我的个人频道地址：<https://t.me/improve365>([不翻墙镜像版](https://tg.bmpi.dev/improve365/index.html))
 
 电报群地址：<https://t.me/bmpi_group>
-
 ## 流量站日志频道
 
 分享我如何在一周开发一个图片流量站并在一个月达到Google千万索引自然搜索达百万UV并赚取上千美刀💰然后在三个月被Google Kill的神奇经历。
@@ -44,6 +43,10 @@ outputs = "html"
 电报频道地址：<https://t.me/bmpi365>([不翻墙镜像版](https://tg.bmpi.dev/bmpi365/index.html))
 
 ---
+
+### 本站Logo
+
+![](https://img.bmpi.dev/81107268-954c-5a99-a4f6-1a58676ede69.png)
 
 ### 本站变更日志
 

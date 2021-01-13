@@ -7,7 +7,7 @@ defaultcontentlanguage = "zh-cn"
 enableRobotsTXT = true
 canonifyURLs = true
 
-paginate = 20
+paginate = 9999
 canonifyurls = true
 
 pygmentsstyle = "b2"
