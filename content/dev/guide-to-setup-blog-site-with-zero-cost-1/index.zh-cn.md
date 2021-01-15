@@ -2,19 +2,19 @@
 title: "零成本搭建现代博客之搭建篇"
 date: 2020-02-29
 draft: false
-tags: ["Markdown", "独立博客", "Hugo", "Netlify", "Github", "Namecheap", "AWS"]
+tags: ["Markdown", "独立博客", "个人博客", "技术博客", "GitHub博客", "Hugo", "Netlify", "Github", "Namecheap", "AWS"]
 keywords: "Markdown, 独立博客, Hugo, Netlify, Github, Namecheap, AWS"
-description: "本文介绍了如何零成本搭建一个自由独立的写作平台-博客搭建指南"
+description: "本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南"
 series: ["零成本搭建现代博客指南"]
 ---
 
-> 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第一篇【博客搭建篇】。
+> 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第一篇【个人技术博客搭建篇】。
 > ![](https://img.bmpi.dev/3972bce0-19ad-3c31-78da-99b35aab1f8a.png)
 > 这个系列不少的东西需要你科学上网才能访问，也就是你需要一把[梯子](/affiliate)。
 
-## 为什么要搭建自己的独立博客
+## 为什么要搭建自己的个人博客
 
-你可能会想，我们有知乎专栏、微信公众号、简书、头条号与百家号等等，为什么还要搭建一个博客呢？在自媒体的时代，博客看起来就像是一个古董一样老旧，不仅需要自己维护，还没有多少人阅读。
+你可能会想，我们有知乎专栏、微信公众号、简书、头条号与百家号等等，为什么还要搭建一个博客呢？在自媒体的时代，个人博客看起来就像是一个古董一样老旧，不仅需要自己维护，还没有多少人阅读。
 
 一开始我也是这么想的，直到我经历了这些：
 
@@ -30,7 +30,7 @@ series: ["零成本搭建现代博客指南"]
 
 {{< ad_embed_post >}}
 
-## 网站搭建基本流程
+## 个人博客搭建基本流程
 
 搭建一个网站在十年前可能很麻烦，但是在2020年就算你完全不懂技术也可以在很短的时间譬如半小时内搭建一个属于自己的网站。在很久以前要做一个静态网站需要以下流程：
 
@@ -72,7 +72,7 @@ series: ["零成本搭建现代博客指南"]
 2. 如果你懂一点技术，玩过 Linux 或者 Windows 版本的 [LAMP](https://wiki.deepin.org/wiki/LAMP%E6%9C%8D%E5%8A%A1)，那么还是推荐使用 Wordpress。
 3. 如果玩过 Wordpress 但对性能有很高的要求，也不想在性能提升上浪费精力，又想使用 Markdown 的话，那么建议体验下 Hugo 吧，本文正是为这类人准备的，当然不懂技术也可以了解下，看完至少你会了解到如何不花钱搭建一个属于自己的博客。
 
-## 使用Hugo搭建博客
+## 使用Hugo搭建个人博客
 
 > 在以下部分我都以 Mac 的安装环境为例，但是其他平台应该也都是相似的
 
@@ -150,7 +150,7 @@ hugo server
 
 以上就是一个非常简单的使用 Hugo 创建网站的过程，当然这只是开始，如果你想深度定制 Hugo 的话，最好先看看它的官方[帮助文档](https://gohugo.io/documentation/)，主要包括模版定制、内容组织、配置等。
 
-## 使用GitHub存储博客
+## 使用GitHub托管个人博客
 
 本博客的代码都存放到了`全球最大同性交友网站` GitHub 上了，具体看这里 [bmpi.dev](https://github.com/bmpi-dev/bmpi.dev) 。
 
@@ -181,7 +181,7 @@ git commit -m "update"
 git push
 ```
 
-## 使用Netlify部署博客
+## 使用Netlify部署个人博客
 
 上传到 GitHub 后，接下来让我们开始部署网站：
 
@@ -214,7 +214,7 @@ theme = "hugo-coder"
 
 > 需要注意的是这个网站已经自带 CDN 功能了，你无需再次集成如 [cloudflare](https://www.cloudflare.com/) 之类的 CDN，默认免费的账户 Netlify 给我们每月[100GB](https://www.netlify.com/pricing/)的流量，超出需要掏钱了，不过这个对小站来说足够了。
 
-## 博客集成评论功能
+## 个人博客集成评论功能
 
 网站加入评论可以让我们和网站的受众互动起来，也可以对某个主题进行持久的讨论，我的[博客](https://www.bmpi.dev)使用了 [utteranc](https://utteranc.es/)，而我的[电报群聚合站](https://tg.bmpi.dev)则使用了 [disqus](https://disqus.com/)。
 
@@ -224,7 +224,7 @@ theme = "hugo-coder"
 
 集成 disqus 很简单，网上有大量的帖子，具体集成方式这里不做赘述了。而集成 utteranc 的代码也可以看这里 [utteranc.html](https://github.com/bmpi-dev/bmpi.dev/blob/master/themes/hugo-coder/layouts/partials/posts/utteranc.html)。
 
-## 博客集成自定义域名
+## 个人博客集成自定义域名
 
 域名一般我在 [Namecheap](https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ) 上购买，当然 GoDaddy 上也可以。比如这个 `bmpi.dev` 第一年是91元人民币，第二年是120元。也有非常便宜的域名，譬如 xyz 后缀的第一年只要7元。有人担心这些域名对 SEO 不友好，其实没啥影响，com 域名主要是历史悠久，一般人想到一个品牌可能第一时间想到的就是 com 域名，不过我们的博客初始没啥影响力，选个小众后缀但好记的的反而比较好。
 
@@ -242,7 +242,7 @@ theme = "hugo-coder"
 
 ![ac75bf15b8e74ef39e56cd95197d7422_th.gif](https://s5.gifyu.com/images/ac75bf15b8e74ef39e56cd95197d7422_th.gif)
 
-## 博客集成流量监控
+## 个人博客集成流量监控
 
 本博客使用了 [Google Analytics](https://analytics.google.com/analytics/web/)，也就是我们常说的 GA 统计:
 
@@ -272,7 +272,7 @@ theme = "hugo-coder"
 
 ![](https://img.bmpi.dev/255b9c52-ef00-8db8-c3b9-dcea7fb63a7b.png)
 
-## 博客集成广告投放
+## 个人博客集成广告投放
 
 零成本的关键，广告收入覆盖我们的域名支出费用，如果你对广告不了解，建议先看这篇[什么是互联网广告](/money/what-is-internet-advertising/)。
 
@@ -282,7 +282,7 @@ theme = "hugo-coder"
 
 ![](https://img.bmpi.dev/f8ce36bb-94df-98f2-2438-eaad3cc44f00.png)
 
-## 博客图床的选择
+## 个人博客图床的选择
 
 博客中最常见的就是图片资源了，图片一般会存放到某个图床或者云服务当中。
 
@@ -292,7 +292,7 @@ theme = "hugo-coder"
 
 当然你也可以使用 GitHub 来托管图片，只要在 Markdown 中引用相对路径的图片即可。
 
-## 关于备案的问题
+## 关于个人博客备案的问题
 
 2020年3月1日国家互联网信息办公室发布了[《网络信息内容生态治理规定》](http://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm)。在这份公告中鼓励以下内容制作：
 

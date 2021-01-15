@@ -2,9 +2,9 @@
 title: "零成本搭建现代博客之订阅推送篇"
 date: 2020-03-28
 draft: false
-tags: ["独立博客",  "博客推送", "博客订阅", "webpushr", "tinyletter", "mailchimp", "邮件列表"]
+tags: ["独立博客", "个人博客", "技术博客", "博客推送", "博客订阅", "webpushr", "tinyletter", "mailchimp", "邮件列表"]
 keywords: "独立博客、博客推送、博客订阅、webpushr、tinyletter、mailchimp、邮件列表"
-description: "博客搭建好后，如何让你的读者第一时间收到文章更新？本文告诉你答案"
+description: "个人博客搭建好后，如何让你的读者第一时间收到文章更新？本文告诉你答案"
 series: ["零成本搭建现代博客指南"]
 ---
 
