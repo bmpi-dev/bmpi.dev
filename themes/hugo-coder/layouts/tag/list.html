@@ -11,7 +11,12 @@
     {{ range $v2 }}
     {{ if .Term }}
     {{ $tagURL := printf "%s" .Term }}
-    <a href="{{ $tagURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; color: #B36D61;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    {{ if le .Count 6 }}
+    <a href="{{ $tagURL }}" class="font_size_{{ .Count }}" role="button" style="text-transform: uppercase; color: #B36D61;margin-bottom: 5px;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    {{ end }}
+    {{ if gt .Count 6 }}
+    <a href="{{ $tagURL }}" class="font_size_6" role="button" style="text-transform: uppercase; color: #B36D61;margin-bottom: 5px;" >{{ .Term }} <span class="badge">{{ .Count }}</span></a>
+    {{ end }}
     {{ end }}
     {{ end }}
     </div>
