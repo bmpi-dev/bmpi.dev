@@ -8,7 +8,7 @@ description: "本文介绍我构建个人知识体系的过程，包括如何收
 series: ["自我提升"]
 ---
 
-![知识宫殿](https://img.bmpi.dev/b87b9e33-a4ce-ef8d-2ce3-6ff9bcbfad90.png)
+<!-- ![知识宫殿](https://img.bmpi.dev/6cdac746-f99f-2408-0600-9a359ff778af.png) -->
 
 ## 为何要构建个人知识体系
 
@@ -182,7 +182,7 @@ Twitter 里我一般会关注一些 List，比如 [Elixir](https://twitter.com/i
 
 几乎我所有的待办事项都使用目前这个以 VSCode + 文本 + Email 的方式管理，我把收集的信息拆解到这五个维度里的某个项目中，对于正在做和优先级高的项目都可以在 VSCode 左侧的窗口看到，每天早上还可以收到正在做的事情的邮件提醒：
 
-![邮件待办事项列表](https://img.bmpi.dev/61d45f58-1282-776d-f768-814eed36dd6c.png)
+![邮件待办事项列表](https://img.bmpi.dev/5d38f550-046c-dcd2-8ac2-0887a0a155b8.png)
 
 ![邮件待办事项内容](https://img.bmpi.dev/09a4c3f0-1d47-4571-5f40-cfcb6079272b.png)
 
@@ -202,7 +202,7 @@ TiddlyWiki 这种以卡片 ( Tiddler ) 的形式组织信息，这些 Tiddler �
 
 Notion 我一般会放一些非公开的个人信息，还可以多人协作，适合家庭成员共同编辑。当然 Notion 的功能非常强大，已经超出笔记管理的范畴，你可以用它做非常多的事情，比如任务管理、电子看板、博客、电子表格等。
 
-![Notion](https://img.bmpi.dev/3328a60e-a8eb-b9f9-4f00-a4f7be51e80a.png)
+![Notion](https://img.bmpi.dev/785dec95-043d-99bd-d2bd-4f4c4dce36c0.png)
 
 我整理了一个 [Notion 的导航页面](https://github.com/madawei2699/notion-sites) ，你可以在里面看看别人是怎么玩 Notion 的。
 
@@ -245,6 +245,8 @@ Notion 我一般会放一些非公开的个人信息，还可以多人协作，�
 排版规范可参考这篇 [中文文案排版指北](https://github.com/mzlogin/chinese-copywriting-guidelines) 。
 
 如果使用 VSCode 编辑 Markdown 的话还可以安装这个 [Pangu-Markdown-VSCode](https://marketplace.visualstudio.com/items?itemName=zhuyuanxiang.pangu-markdown-vscode) 插件，在写完文章后一键自动排出上述规范要求的效果。
+
+文章配图可以使用 [TinyPNG](https://tinypng.com/) 压缩后上传，这样不仅可以使网页加载速度变得更快，还可以降低你 CDN 和用户的流量费用。
 
 #### 写作渠道
 
