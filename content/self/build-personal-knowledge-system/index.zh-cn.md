@@ -292,6 +292,8 @@ idea 不重要，重要的是具体的做法。一旦我有了某个让我产生
 
 ---
 
+{{< ad_embed_post >}}
+
 ### 参考文章
 
 1. [捕蛇者说：个人知识管理体系系列](https://pythonhunter.org/episodes/ep23)
