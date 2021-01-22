@@ -30,7 +30,7 @@
         </div>
       </header>
 
-      <div>
+      <div class="article">
         {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
         {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
         {{ $REPLACEMENT := "<img data-src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}
@@ -47,6 +47,7 @@
       </div>
 
       <footer>
+        {{ partial "posts/share.html" . }}
         {{ partial "posts/series.html" . }}
         {{ partial "posts/disqus.html" . }}
         {{ partial "posts/commento.html" . }}

@@ -202,7 +202,7 @@ a[href^="#fn:"]:after {
   .footnotes > hr {
     display: none; }
 
-img {
+.article img {
   display: block;
   box-shadow: 0 0 10px #555;
   border-radius: 6px;
