@@ -44,9 +44,12 @@
           <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">CC BY-NC-ND 4.0</a></p>
           {{ end }}
         </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
       </div>
 
       <footer>
+        {{ partial "posts/related.html" . }}
         {{ partial "posts/share.html" . }}
         {{ partial "posts/subscribe.html" . }}
         {{ partial "posts/series.html" . }}

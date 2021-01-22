@@ -1,0 +1,33 @@
+<div>
+  {{ if eq .Site.Language.Lang "zh-cn" }}
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  {{ else }}
+  <h2 style="border-style: none;margin: 10px 0;">Related posts recommended</h2>
+  {{ end }}
+  <div>
+    {{ $.Scratch.Set "count" 0 }}
+    {{ $currentPagePermalink := .Permalink }}
+    {{ $tags := .Params.tags }}
+    {{/* range (where .Site.Pages "Section" "tutorials") */}}
+    {{ range .Site.Pages }}
+    {{ $isMatchTags := intersect $tags .Params.tags | len | lt 1 }}
+    {{ if and $isMatchTags (ne .Permalink $currentPagePermalink) }}
+    <li style="list-style: none;"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ $.Scratch.Add "count" 1 }}
+    {{ end }}
+    {{ end }}
+
+    {{ if eq ($.Scratch.Get "count") 0 }}
+    {{ $.Scratch.Set "limit" 0 }}
+    {{/* range (where .Site.Pages "Section" "tutorials") */}}
+    {{ range .Site.Pages }}
+    {{ $isMatchTags := intersect $tags .Params.tags | len | lt 0 }}
+    {{ if and $isMatchTags (ne .Permalink $currentPagePermalink) (lt ($.Scratch.Get "limit") 10) }}
+    <li style="list-style: none;"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ $.Scratch.Add "limit" 1 }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
