@@ -100,7 +100,9 @@
   {{ $tag_style := $tag_sass | toCSS }}
   <link rel="stylesheet" href="{{ $tag_style.RelPermalink }}" media="screen" />
 
+  {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  {{ end }}
 
 </head>
 
