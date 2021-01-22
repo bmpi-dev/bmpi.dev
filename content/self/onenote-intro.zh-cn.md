@@ -9,6 +9,7 @@ aliases: [
 keywords: ["笔记系统", "笔记管理", "知识系统", "个人Wiki", "OneNote"]
 description: "本文介绍了如何使用OneNote打造个人长期的知识管理系统"
 series: ["自我提升"]
+isCJKLanguage: true
 ---
 
 ## 信息孤岛毁掉你的创作力

@@ -5,6 +5,7 @@ draft: false
 tags: ["绘图工具", "PlantUML", "Sketch", "PPT", "Excel", "draw.io", "Google Drawings", "OmniGraffle", "Python Jupyter Notebook", "时序图", "架构图", "部署图", "线框图", "甘特图", "WBS", "思维导图"]
 keywords: "浏览器插件、Chrome插件、SEO浏览器插件"
 description: "本文分享我常用的绘图工具，包括文本绘图、代码绘图与专业绘图等工具。"
+isCJKLanguage: true
 ---
 
 由于在写作中经常需要配图，本文分享下我常用的绘图工具以及如何存储并展示配图。

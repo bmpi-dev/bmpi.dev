@@ -5,6 +5,7 @@ draft: false
 tags: ["AWS", "Lambda", "Serverless", "Terraform", "Infrastructure as code", "无服务器架构", "Docker", "AWS ECS", "DevOps"]
 keywords: ""
 description: "本文描述了笔者开发一个基于 AWS Serverless 技术的应用的全过程。"
+isCJKLanguage: true
 ---
 
 ## 背景

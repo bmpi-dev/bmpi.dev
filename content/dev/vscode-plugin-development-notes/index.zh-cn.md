@@ -8,6 +8,7 @@ aliases: [
 ]
 keywords: "GTD、时间管理、工具、VSCode插件开发、Emacs、TypeScript、Github Actions、VSCode Extension"
 description: "本文讲述了基于VSCode编辑器开发一款ToDo插件并分析了Emacs和VSCode架构的差异"
+isCJKLanguage: true
 ---
 
 ## VSCode介绍

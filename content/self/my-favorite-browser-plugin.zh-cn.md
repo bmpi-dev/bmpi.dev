@@ -5,6 +5,7 @@ draft: false
 tags: ["浏览器插件", "Chrome插件", "SEO浏览器插件"]
 keywords: "浏览器插件、Chrome插件、SEO浏览器插件"
 description: "本文分享我常用的浏览器Chrome的一些能提高日常工作效率、开发效率与SEO优化的插件。"
+isCJKLanguage: true
 ---
 
 本文分享我常用的浏览器Chrome的一些能提高日常工作效率、开发效率与SEO优化的插件。

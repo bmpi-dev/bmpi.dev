@@ -5,6 +5,7 @@ draft: false
 tags: ["TF-IDF", "网站页面相似度", "SEO", "Python", "机器学习"]
 keywords: "TF-IDF、网站页面相似度、SEO、Python、机器学习"
 description: "如果网页重复过多会影响网站排名，那么如何计算网站内网页的相似度分布？本文教你通过开发Python脚本使用TF-IDF计算网站全站页面相似度分布并可视化展示出来"
+isCJKLanguage: true
 ---
 
 如果你的网站网页重复或者相似页面过多将会影响你网站的排名，那么如何计算网站内网页的相似度分布？

@@ -6,6 +6,7 @@ tags: ["独立博客", "个人博客", "技术博客", "博客推送", "博客�
 keywords: "独立博客、博客推送、博客订阅、webpushr、tinyletter、mailchimp、邮件列表"
 description: "个人博客搭建好后，如何让你的读者第一时间收到文章更新？本文告诉你答案"
 series: ["零成本搭建现代博客指南"]
+isCJKLanguage: true
 ---
 
 > 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第三篇【订阅推送篇】。

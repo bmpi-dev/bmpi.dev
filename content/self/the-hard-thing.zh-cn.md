@@ -8,6 +8,7 @@ aliases: [
 ]
 keywords: ["读书笔记", "创业", "比难更难的事情", "HBO硅谷"]
 description: "本文分享了《创业维艰》这本书的读书笔记以及对创业的思考"
+isCJKLanguage: true
 ---
 
 ![](https://img.bmpi.dev/ead48153-99e7-a136-6486-c0a2e8ff4f9f.png)

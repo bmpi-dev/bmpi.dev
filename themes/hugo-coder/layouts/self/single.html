@@ -24,6 +24,11 @@
               {{ $minutes }}:{{ $seconds }}
               <!-- {{ i18n "reading_time" .ReadingTime }} -->
             </span>
+            {{ if eq .Site.Language.Lang "zh-cn" }}
+            <span class="post-word-count"> | {{ .WordCount }} 字</span>
+            {{ else }}
+            <span class="post-word-count"> | {{ .WordCount }} words</span>
+            {{ end }}
           </div>
           {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
           {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
