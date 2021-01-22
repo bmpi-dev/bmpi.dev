@@ -51,6 +51,10 @@ outputs = "html"
 ### 本站变更日志
 
 ```
+✔ 社交分享按钮集成 @started(21-01-22 12:57) @done(21-01-22 17:58) @lasted(5h1m51s)
+  > Google SEO
+✔ 相关文章模块/文章阅读数/文章字数/文章目录 @started(21-01-22 12:57) @done(21-01-22 21:01) @lasted(8h4m39s)
+  > 百度SEO
 ✔ 博客托管从Netlify迁移至Vercel @done(20-12-29 08:34)
 ✔ 通过阿里云CDN提升博客国内访问速度 @done(20-12-24 20:36)
 ✔ 集成flying-pages实现预加载页面 @done(20-09-29 08:25)
