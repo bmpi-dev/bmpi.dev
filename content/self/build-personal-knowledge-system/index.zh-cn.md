@@ -8,6 +8,17 @@ description: "如何建立个人知识体系？如何管理个人知识？如何
 series: ["自我提升"]
 ---
 
+ToC
+---
+
+1. [为何要建立个人知识体系](#heading)
+2. [建立个人知识体系流程](#heading-1)
+   * [信息输入](#heading-2)
+   * [目标设定](#heading-10)
+   * [知识内化](#heading-12)
+   * [知识输出](#heading-16)
+   * [知识应用](#heading-23)
+
 <!-- ![知识宫殿](https://img.bmpi.dev/6cdac746-f99f-2408-0600-9a359ff778af.png) -->
 
 ## 为何要建立个人知识体系
