@@ -4,7 +4,7 @@
   {{ else }}
   <h2 style="border-style: none;margin: 10px 0;">Related posts recommended</h2>
   {{ end }}
-  <div>
+  <div style="padding-left: 10px;">
     {{ $.Scratch.Set "count" 0 }}
     {{ $currentPagePermalink := .Permalink }}
     {{ $tags := .Params.tags }}
