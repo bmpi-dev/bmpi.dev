@@ -25,13 +25,17 @@ function main() {
             set_home_page_all_views(JSON.parse(res).count);
         });
         get_post_views(singlePageViewsAPI, res => {});
-    }
-    postViews = document.getElementById("post-views");
-    if (postViews != undefined) {
-        get_post_views(allPageViewsAPI, res => {});
-        get_post_views(singlePageViewsAPI, res => {
-            postViews.textContent = JSON.parse(res).count;
-        });
+    } else {
+        postViews = document.getElementById("post-views");
+        if (postViews != undefined) {
+            get_post_views(allPageViewsAPI, res => {});
+            get_post_views(singlePageViewsAPI, res => {
+                postViews.textContent = JSON.parse(res).count;
+            });
+        } else {
+            get_post_views(allPageViewsAPI, res => {});
+            get_post_views(singlePageViewsAPI, res => {});
+        }
     }
 }
 
