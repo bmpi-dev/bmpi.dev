@@ -51,6 +51,8 @@ outputs = "html"
 ### 本站变更日志
 
 ```
+✔ Dashboard数据集成 @started(21-01-23 08:07) @done(21-01-23 10:07) @lasted(2h41s)
+  > https://leerob.io/
 ✔ 社交分享按钮集成 @started(21-01-22 12:57) @done(21-01-22 17:58) @lasted(5h1m51s)
   > Google SEO
 ✔ 相关文章模块/文章阅读数/文章字数/文章目录 @started(21-01-22 12:57) @done(21-01-22 21:01) @lasted(8h4m39s)

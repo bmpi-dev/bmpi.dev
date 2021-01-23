@@ -216,6 +216,23 @@ a[href^="#fn:"]:after {
   margin: 10px 10px;
   font-size: medium; }
 
+.dashboard {
+  font-size: 14px;
+  font-weight: 100;
+  font-style: oblique;
+  text-transform: lowercase;
+  color: #cccccc; }
+  .dashboard .left {
+    text-align: left; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .left {
+        text-align: center; } }
+  .dashboard .right {
+    text-align: right; }
+    @media only screen and (max-width: 768px) {
+      .dashboard .right {
+        text-align: center; } }
+
 .content {
   flex: 1;
   display: flex;

@@ -256,3 +256,23 @@ a[href^="#fn:"]:after{ content: ']' }
   margin: 10px 10px;
   font-size: medium;
 }
+
+.dashboard {
+  font-size: 14px;
+  font-weight: 100;
+  font-style: oblique;
+  text-transform: lowercase;
+  color: #cccccc;
+  .left {
+    text-align: left;
+    @media only screen and (max-width : 768px) {
+      text-align: center;
+    }
+  }
+  .right {
+    text-align: right;
+    @media only screen and (max-width : 768px) {
+      text-align: center;
+    }
+  }
+}
