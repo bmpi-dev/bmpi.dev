@@ -25,9 +25,11 @@
               <!-- {{ i18n "reading_time" .ReadingTime }} -->
             </span>
             {{ if eq .Site.Language.Lang "zh-cn" }}
-            <span class="post-word-count"> | {{ .WordCount }} 字</span>
+            <span class="post-word-count"> | {{ .WordCount }} 字 | </span>
+            <span id="post-views"></span> 次阅读
             {{ else }}
-            <span class="post-word-count"> | {{ .WordCount }} words</span>
+            <span class="post-word-count"> | {{ .WordCount }} words | </span>
+            <span id="post-views"></span> views
             {{ end }}
           </div>
           {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
