@@ -39,6 +39,11 @@ const viewsEndpoint = new awsx.apigateway.API("bmpi-dev-post-views", {
             
             return {
                 statusCode: 200,
+                headers: {
+                    "Access-Control-Allow-Headers" : "Content-Type",
+                    "Access-Control-Allow-Origin": "https://www.bmpi.dev",
+                    "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+                },
                 body: JSON.stringify({ route, count }),
             };
         },
