@@ -1,7 +1,16 @@
-<div style="text-align: center;margin: 20px 0;color: forestgreen;border-style: dotted;padding: 10px 10px;border-width: 2px;">
-  {{ if eq .Site.Language.Lang "zh-cn" }}
-  <span>想第一时间收到本站更新？欢迎订阅我的邮件组：<a href="https://tinyletter.com/i365">i365</a></span>
-  {{ else }}
-  <span>Get weekly updates, right in your mailbox：<a href="https://tinyletter.com/i365">i365</a></span>
-  {{ end }}
+<div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    {{ if eq .Site.Language.Lang "zh-cn" }}
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    {{ else }}
+    <span>Get weekly updates, right in your mailbox</span>
+    {{ end }}
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    {{ if eq .Site.Language.Lang "zh-cn" }}
+    <input type="submit" value="订阅" />
+    {{ else }}
+    <input type="submit" value="Subscribe" />
+    {{ end }}
+  </form>
 </div>
