@@ -1,34 +1,51 @@
 import * as aws from "@pulumi/aws";
-import * as AWS from "aws-sdk";
 import * as awsx from "@pulumi/awsx";
 
-const hits = new aws.dynamodb.Table("bmpi-dev", {
-    attributes: [{ name: "BMPI", type: "S" }],
-    hashKey: "BMPI",
-    billingMode: "PAY_PER_REQUEST",
+// Create a mapping from 'route' to a count
+const counterTable = new aws.dynamodb.Table("api-bmpi-dev", {
+    attributes: [{
+        name: "id",
+        type: "S",
+    }],
+    hashKey: "id",
+    readCapacity: 5,
+    writeCapacity: 5,
 });
 
-const site = new awsx.apigateway.API("api-bmpi-dev-views", {
+// Create an API endpoint
+const endpoint = new awsx.apigateway.API("bmpi-dev-post-views", {
     routes: [{
         path: "/{route+}",
         method: "GET",
         eventHandler: async (event) => {
             const route = event.pathParameters!["route"];
             console.log(`Getting count for '${route}'`);
-            const dc = new AWS.DynamoDB.DocumentClient();
-            const result = await dc.update({
-                TableName: hits.name.get(),
+
+            const client = new aws.sdk.DynamoDB.DocumentClient();
+
+            // get previous value and increment
+            // reference outer `counterTable` object
+            const tableData = await client.get({
+                TableName: counterTable.name.get(),
                 Key: { id: route },
-                UpdateExpression: "SET Hits = if_not_exists(Hits, :zero) + :incr",
-                ExpressionAttributeValues: { ":zero": 0, ":incr": 1 },
-                ReturnValues:"UPDATED_NEW",
+                ConsistentRead: true,
             }).promise();
+
+            const value = tableData.Item;
+            let count = (value && value.count) || 0;
+
+            await client.put({
+                TableName: counterTable.name.get(),
+                Item: { id: route, count: ++count },
+            }).promise();
+
+            console.log(`Got count ${count} for '${route}'`);
             return {
                 statusCode: 200,
-                headers: { "Content-Type": "application/json; charset=utf-8" },
-                body: `{"hits":${result.Attributes!.Hits}}`,
+                body: JSON.stringify({ route, count }),
             };
         },
     }],
 });
-export const url = site.url;
+
+exports.endpoint = endpoint.url;
