@@ -70,7 +70,7 @@ FootnoteReturnLinkContents = "↑"
 
     math = true
     custom_css = ["/css/main.css"]
-    custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js"]
+    custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js", "/js/custom.js"]
 
     dateFormat = "2006-01-02"
 
