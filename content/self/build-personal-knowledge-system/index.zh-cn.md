@@ -32,13 +32,13 @@ ToC
 
 我们可以从获取信息通过学习内化成自己的知识，也可以进一步将多种知识转变为自己认知的提高，不断提高的认知加上阅历的提升，最终可能成为某种智慧。 ( 本文只探讨从信息到知识这一环节。 )
 
-![学习的层次](https://img.bmpi.dev/eefffe63-6d21-438e-d9fb-4eea79a5a22a.png)
+![为何要建立个人知识体系之学习的层次](https://img.bmpi.dev/eefffe63-6d21-438e-d9fb-4eea79a5a22a.png)
 
 从信息到智慧的过程中，学习贯穿整个流程。构建个人知识体系的流程，在我看来就是一个**编排出适合自身的持续学习流程**，它能帮助我在信息洪流中实现阶段性的人生目标。
 
 ## 建立个人知识体系流程
 
-![建立个人知识体系流程](https://img.bmpi.dev/bf1093ef-68c2-c92a-0de5-a08decb02b31.png)
+![建立个人知识体系总流程](https://img.bmpi.dev/bf1093ef-68c2-c92a-0de5-a08decb02b31.png)
 
 ### 信息输入
 
@@ -120,7 +120,7 @@ Twitter 里我一般会关注一些 List，比如 [Elixir](https://twitter.com/i
 
 #### 信息输入渠道金字塔
 
-![信息输入渠道金字塔](https://img.bmpi.dev/975bf070-9303-4759-5c77-f6e143f5cd43.png)
+![建立个人知识体系之信息输入渠道金字塔](https://img.bmpi.dev/975bf070-9303-4759-5c77-f6e143f5cd43.png)
 
 如上图，信息输入渠道分不同层次，最底层的碎片化信息数量最多，但是质量有好有坏且不好区分。而中层主题阅读更适合系统性学习某个领域知识时，我们可以阅读该领域推荐的书单。最顶层的与人交流包含咨询、培训及与拥有该领域经验的人沟通。上面两层已经不算信息输入了，应该算知识与经验输入。
 
@@ -167,7 +167,7 @@ Twitter 里我一般会关注一些 List，比如 [Elixir](https://twitter.com/i
 
 在知识内化的过程中，主要涉及以下几个问题。
 
-![知识内化需解决的三个问题](https://img.bmpi.dev/a66b81f2-d887-2f28-f602-61837e345b15.png)
+![建立个人知识体系之知识内化需解决的三个问题](https://img.bmpi.dev/a66b81f2-d887-2f28-f602-61837e345b15.png)
 
 #### 如何管理时间
 
@@ -182,25 +182,25 @@ Twitter 里我一般会关注一些 List，比如 [Elixir](https://twitter.com/i
 └── side_project.todo
 ```
 
-![inbox.todo](https://img.bmpi.dev/5bb9960a-90c2-5f56-e5f4-5f7bed261fba.png)
+![建立个人知识体系之时间管理-inbox.todo](https://img.bmpi.dev/5bb9960a-90c2-5f56-e5f4-5f7bed261fba.png)
 
-![goal.todo](https://img.bmpi.dev/8fd0f870-5299-c37c-a700-b2109bc84166.png)
+![建立个人知识体系之时间管理-goal.todo](https://img.bmpi.dev/8fd0f870-5299-c37c-a700-b2109bc84166.png)
 
-![study.todo](https://img.bmpi.dev/7879f1ea-5dbd-bec5-8ef5-d1521a3511eb.png)
+![建立个人知识体系之时间管理-study.todo](https://img.bmpi.dev/7879f1ea-5dbd-bec5-8ef5-d1521a3511eb.png)
 
-![write.todo](https://img.bmpi.dev/4c5708db-8fe2-683c-c87a-bc7d07086c89.png)
+![建立个人知识体系之时间管理-write.todo](https://img.bmpi.dev/4c5708db-8fe2-683c-c87a-bc7d07086c89.png)
 
-![side_project.todo](https://img.bmpi.dev/674688dc-d7e2-9544-561f-cb76f521efb6.png)
+![建立个人知识体系之时间管理-side_project.todo](https://img.bmpi.dev/674688dc-d7e2-9544-561f-cb76f521efb6.png)
 
 几乎我所有的待办事项都使用目前这个以 VSCode + 文本 + Email 的方式管理，我把收集的信息拆解到这五个维度里的某个项目中，对于正在做和优先级高的项目都可以在 VSCode 左侧的窗口看到，每天早上还可以收到正在做的事情的邮件提醒：
 
-![邮件待办事项列表](https://img.bmpi.dev/5d38f550-046c-dcd2-8ac2-0887a0a155b8.png)
+![建立个人知识体系之时间管理-邮件待办事项列表](https://img.bmpi.dev/5d38f550-046c-dcd2-8ac2-0887a0a155b8.png)
 
-![邮件待办事项内容](https://img.bmpi.dev/09a4c3f0-1d47-4571-5f40-cfcb6079272b.png)
+![建立个人知识体系之时间管理-邮件待办事项内容](https://img.bmpi.dev/09a4c3f0-1d47-4571-5f40-cfcb6079272b.png)
 
 一些杂事都会放在手机日历中，尤其是一些定期重复的事项：
 
-![手机日历待办事项](https://img.bmpi.dev/06f5e5e7-d9a8-22b1-a189-5896c3a55fdc.png)
+![建立个人知识体系之时间管理-手机日历待办事项](https://img.bmpi.dev/06f5e5e7-d9a8-22b1-a189-5896c3a55fdc.png)
 
 目前这种时间管理的方式成本很低，数据都托管至 `GitHub`，可长期持续运行，不受具体软件的影响。
 
@@ -208,13 +208,13 @@ Twitter 里我一般会关注一些 List，比如 [Elixir](https://twitter.com/i
 
 我在 [我的笔记系统](/self/note-system/) 中详细阐述了我的笔记管理流程。目前我的笔记管理主要以 `TiddlyWiki` 为主，部分还使用 `Notion` 管理。笔记管理的核心在于可以让我们以很低成本对知识碎片复用且很容易对这些知识片段打 `Tag` 并建立双向链接，在我们需要该知识碎片的时候很容易找到它。
 
-![TiddlyWiki双向链接](https://img.bmpi.dev/f9d4e535-0f43-577b-f354-312f01c173a2.png)
+![建立个人知识体系之个人知识库-TiddlyWiki双向链接](https://img.bmpi.dev/f9d4e535-0f43-577b-f354-312f01c173a2.png)
 
 TiddlyWiki 这种以卡片 ( Tiddler ) 的形式组织信息，这些 Tiddler 又可以添加 Tag，还可以设置双向链接。对于我组织整理笔记来说足够用了。
 
 Notion 我一般会放一些非公开的个人信息，还可以多人协作，适合家庭成员共同编辑。当然 Notion 的功能非常强大，已经超出笔记管理的范畴，你可以用它做非常多的事情，比如任务管理、电子看板、博客、电子表格等。
 
-![Notion](https://img.bmpi.dev/785dec95-043d-99bd-d2bd-4f4c4dce36c0.png)
+![建立个人知识体系之个人知识库-Notion](https://img.bmpi.dev/785dec95-043d-99bd-d2bd-4f4c4dce36c0.png)
 
 我整理了一个 [Notion 的导航页面](https://github.com/madawei2699/notion-sites) ，你可以在里面看看别人是怎么玩 Notion 的。
 
@@ -224,7 +224,7 @@ Notion 我一般会放一些非公开的个人信息，还可以多人协作，�
 
 对于刚开始接触某个领域，先通过检视阅读多本基础书快速了解这个领域的轮廓。之后整理出主题阅读需要精读的书单，最后通过待办事项设定阅读计划，按计划逐步啃这些书，一般主题阅读可能耗时半年以上。比如我在技术提升目标方面设置的阅读计划如下：
 
-![技术领域阅读计划](https://img.bmpi.dev/6a50d6a3-5abe-0af8-b666-166a14c8ae22.png)
+![建立个人知识体系之如何系统阅读](https://img.bmpi.dev/6a50d6a3-5abe-0af8-b666-166a14c8ae22.png)
 
 这个阅读清单近 140 多本书，几乎全方面涉及了我感兴趣的领域。投资领域里我也设定了近 40 本书的清单。对于这么多书我并不会全部阅读，这里有很多书是通过检视阅读读个大概，目的就是要更全面的去了解这个领域，防止遗漏某些方面导致作出错误的分析判断。最终主题阅读里的书不会超过 10 本，主题阅读的书单都是一些经典可以长读的书籍。
 
@@ -262,7 +262,7 @@ Notion 我一般会放一些非公开的个人信息，还可以多人协作，�
 
 #### 写作渠道
 
-![知识输出渠道](https://img.bmpi.dev/d0fc8d1b-c56d-e880-d8a4-c1cd6ee85502.png)
+![建立个人知识体系之知识输出渠道](https://img.bmpi.dev/d0fc8d1b-c56d-e880-d8a4-c1cd6ee85502.png)
 
 我在 [零成本搭建现代博客指南](/series/零成本搭建现代博客指南/) 这个系列里写了几篇关于如何搭建个人博客的系列文章，感兴趣的可以看看。
 
