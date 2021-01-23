@@ -10,13 +10,13 @@
       {{ range sort .}}
         {{ if .icon }}
           <li>
-            <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+            <a href="{{ .url }}" rel="nofollow" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
               <i class="{{ .icon }}" aria-hidden="true"></i>
             </a>
           </li>
         {{ else }}
           <li>
-            <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
+            <a href="{{ .url }}" rel="nofollow" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
           </li>
         {{ end }}
       {{ end }}
@@ -26,34 +26,34 @@
     <div class="dashboard">
       <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2 left">
-          GitHub Stars: 534
+          <a href="https://github.com/madawei2699/" rel="nofollow">GitHub Stars: 534</a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 right">
-          微信公众号/微信群: 2615/310
+          <a href="https://img.bmpi.dev/755b406f-43ae-e382-e13c-547116d3e7d5.png" rel="nofollow">微信公众号/微信群: 2615/310</a>
         </div>
       </div>
       <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2 left">
-          知乎关注者: 8263
+          <a href="https://www.zhihu.com/people/improve365" rel="nofollow">知乎关注者: 8263</a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 right">
-          Telegram: 1345
+          <a href="https://t.me/bmpi_group" rel="nofollow">Telegram: 1345</a>
         </div>
       </div>
       <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2 left">
-          Twitter Followers: 241
+          <a href="https://twitter.com/madawei2699/" rel="nofollow">Twitter Followers: 241</a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 right">
-          YouTube: 21
+          <a href="https://www.youtube.com/channel/UCbg-Y24Z1H0nONW-bxgzv6w" rel="nofollow">YouTube: 21</a>
         </div>
       </div>
       <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2 left">
-          浏览器通知: 921
+          <a href="/dev/guide-to-setup-blog-site-with-zero-cost-3/">浏览器通知: 921</a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 right">
-          邮件列表: 13
+          <a href="https://tinyletter.com/i365" rel="nofollow">邮件列表: 13</a>
         </div>
       </div>
       <div class="pure-g">
@@ -62,6 +62,14 @@
         </div>
         <div class="pure-u-1 pure-u-md-1-2 right">
           网站运行时间: {{ div (sub now.Unix 1576540800) 86400 }} 天
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 left">
+          <a href="/categories/被动收入投资组合/">被动收入投资组合净值: 1.53</a>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 right">
+          数据更新时间: 2021.01.23
         </div>
       </div>
     </div>
