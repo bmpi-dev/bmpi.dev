@@ -118,7 +118,7 @@ const viewsEndpoint = new awsx.apigateway.API("bmpi-dev-post-views", {
 
 // We have registered a domain, and a cert already (we could do most of this with Pulumi as well if we wanted!)
 let domainName = "api.bmpi.dev"; // `bmpi.dev` is regitered with Route53 
-let route53DomainZoneId = "Z3D746J1ZFXBYQ"; // The Hosted Zone I got when I registered `lukestestapp.net`
+let route53DomainZoneId = "Z3D746J1ZFXBYQ"; // The Hosted Zone I got when I registered `bmpi.dev`
 let certARN = "arn:aws:acm:us-east-1:745121664662:certificate/6e610430-46c8-4884-a1f7-471be45decf4"; // ACM cert for `*.bmpi.dev`
 
 // API Gateway requires we register the Domain with it first
