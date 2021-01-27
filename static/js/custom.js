@@ -12,6 +12,13 @@ function set_home_page_all_views(hit) {
     document.getElementById("all-page-views").textContent = hit;
 }
 
+function set_home_page_site_run_days() {
+    var dateStart = new Date("2019-12-17");
+    var dateEnd = new Date();
+    var difValue = (dateEnd - dateStart) / (1000 * 60 * 60 * 24);
+    document.getElementById("site-run-days").textContent = Math.ceil(difValue);
+}
+
 let allPageViewsAPI = "https://api.bmpi.dev/page-views/bmpi-dev-all-page-views/";
 let singlePageViewsAPI = "https://api.bmpi.dev/page-views/bmpi.dev" + window.location.pathname;
 
@@ -21,6 +28,7 @@ function get_post_views(url, callback) {
 
 function main() {
     if (window.location.pathname === "/") {
+        set_home_page_site_run_days();
         get_post_views(allPageViewsAPI, res => {
             set_home_page_all_views(JSON.parse(res).count);
         });
