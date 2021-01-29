@@ -172,32 +172,35 @@ FootnoteReturnLinkContents = "↑"
             # footercontent = "self/dev/money"
 
         [languages.zh-cn.menu]
-
+            [[languages.zh-cn.menu.main]]
+                name = "Dashboard"
+                weight = 1
+                url  = "https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b"
             [[languages.zh-cn.menu.main]]
                 name = "关于"
-                weight = 1
+                weight = 2
                 url = "/about/"
             [[languages.zh-cn.menu.main]]
                 name = "学习"
-                weight = 2
+                weight = 3
                 url  = "/self/"
             [[languages.zh-cn.menu.main]]
                 name = "技术"
-                weight = 3
+                weight = 4
                 url  = "/dev/"
             [[languages.zh-cn.menu.main]]
                 name = "投资"
-                weight = 4
+                weight = 5
                 url  = "/money/"
             [[languages.zh-cn.menu.main]]
                 name = "个人项目"
-                weight = 5
+                weight = 6
                 url  = "/project/"
             [[languages.zh-cn.menu.main]]
                 name = "长期目标"
-                weight = 6
+                weight = 7
                 url  = "/goal/"
             [[languages.zh-cn.menu.main]]
                 name = "思考"
-                weight = 7
+                weight = 8
                 url  = "https://tg.bmpi.dev"

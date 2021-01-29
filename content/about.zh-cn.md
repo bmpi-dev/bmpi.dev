@@ -9,6 +9,10 @@ outputs = "html"
 终身学习（认知杠杆） -> 全栈技术（时间杠杆） -> 投资理财（财务杠杆） => 被动收入（人生杠杆）
 ```
 
+## Dashboard
+
+{{< dashboard >}}
+
 ## 关于我
 
 学习/技术/投资，我关注的三个焦点。欲与我联系，请通过[ Email ](mailto:bmpidev@gmail.com)。
