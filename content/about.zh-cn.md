@@ -55,6 +55,8 @@ outputs = "html"
 ### 本站变更日志
 
 ```
+✔ Notion与Dashboard集成GA @done(21-01-30 22:35)
+✔ 基于Google Datastudio开发Dashboard @done(21-01-30 22:34)
 ✔ Dashboard数据集成 @started(21-01-23 08:07) @done(21-01-23 10:07) @lasted(2h41s)
   > https://leerob.io/
 ✔ 社交分享按钮集成 @started(21-01-22 12:57) @done(21-01-22 17:58) @lasted(5h1m51s)
