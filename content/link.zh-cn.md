@@ -17,6 +17,7 @@ outputs = "html"
 | [ZoomQuiet](https://blog.zoomquiet.io/) | 是也乎(￣▽￣) |
 | [认知.xKnow](https://blog.xknow.net/) | 认知.xKnow |
 | [刘悦的技术博客](https://v3u.cn/) | 刘悦的技术博客 |
+| [卡拉搜索](https://kalasearch.cn/) | 让每次搜索成为享受 |
 
 ## 我关注的博客
 
