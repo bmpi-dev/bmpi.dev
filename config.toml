@@ -130,6 +130,11 @@ FootnoteReturnLinkContents = "↑"
     icon = "fas fa-rss"
     weight = 8
     url = "index.xml"
+[[params.social]]
+    name = "Dev.to"
+    icon = "fas fa-dev-to"
+    weight = 9
+    url = "https://dev.to/madawei2699"
 
 [languages]
     [languages.en]

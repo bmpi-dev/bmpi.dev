@@ -167,12 +167,12 @@ fontawesome minify
 } */
 @font-face {
     font-family: 'iconfont';  /* project id 2068085 */
-    src: url('//at.alicdn.com/t/font_2068085_toxeuon9bt.eot');
-    src: url('//at.alicdn.com/t/font_2068085_toxeuon9bt.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.woff2') format('woff2'),
-    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.woff') format('woff'),
-    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_2068085_toxeuon9bt.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_2068085_azmc2ixyt2r.eot');
+    src: url('//at.alicdn.com/t/font_2068085_azmc2ixyt2r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2068085_azmc2ixyt2r.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2068085_azmc2ixyt2r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2068085_azmc2ixyt2r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2068085_azmc2ixyt2r.svg#iconfont') format('svg');
 }
 .fa,.fab,.fad,.fal,.far,.fas {
     -moz-osx-font-smoothing: grayscale;
@@ -206,6 +206,9 @@ fontawesome minify
 }
 .fa-zhihu:before {
     content: "\f276";
+}
+.fa-dev-to:before {
+    content: "\e632";
 }
 .fa-calendar:before {
     content:"\e9de";
