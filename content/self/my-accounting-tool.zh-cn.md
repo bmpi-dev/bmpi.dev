@@ -4,7 +4,8 @@ date: 2020-01-05
 draft: false
 tags: ["挖财App", "记账工具", "财务规划", "标准普尔家庭资产配置"]
 aliases: [
-    "/zh-cn/money/my-accounting-tool/"
+    "/zh-cn/money/my-accounting-tool/",
+    "/money/my-accounting-tool/"
 ]
 keywords: "挖财App、记账工具、财务规划、标准普尔家庭资产配置"
 description: "本文介绍了我使用挖财App坚持8年记账后带来的积极变化，使用记账工具帮助我分析个人以及家庭财务规划最终帮助我作出更好的投资理财决策"
