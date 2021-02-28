@@ -24,6 +24,14 @@ outputs = "html"
 | 邮件提醒模版 | [todo_starter](https://github.com/bmpi-dev/todo_starter) |
 | VSCode插件 | [Todo++](https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus) |
 
+## 笔记工具
+
+[TiddlyWiki - 公开笔记](https://wiki.bmpi.dev)
+
+[Logseq - 私有笔记](https://logseq.com/)
+
 ## 白板工具
 
-[Whiteboard](https://wb.bmpi.dev)
+[Excalidraw](https://excalidraw.com/)
+
+[Excalidraw - 自托管白板](https://wb.bmpi.dev)
