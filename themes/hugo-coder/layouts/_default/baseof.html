@@ -19,9 +19,21 @@
   <meta name="keywords" content="{{ . }}">{{ end }}
   {{ end }}
 
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/opengraph.html" . }}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="{{ .Title }}"/>
+  <meta name="twitter:description" content="{{ .Description }}"/>
+  {{ if .Params.og_image }}
+  <meta property="twitter:image" content="{{ .Params.og_image }}" />
+  {{ else }}
+  {{ with .Site.Params.og_image }}
+  <meta name="twitter:image" content="{{ . }}">{{ end }}
+  {{ end }}
 
+  <!-- Open Graph -->
+  {{ template "_internal/opengraph.html" . }}
   {{ if .Params.og_image }}
   <meta property="og:image" content="{{ .Params.og_image }}" />
   {{ else }}

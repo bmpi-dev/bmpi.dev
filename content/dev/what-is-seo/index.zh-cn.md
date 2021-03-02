@@ -10,6 +10,7 @@ categories: [
 ]
 series: ["SEO实践日志"]
 isCJKLanguage: true
+og_image: "https://img.bmpi.dev/227e91cc-a2a8-942e-19fe-8246d9a7abbd.png"
 ---
 
 ![](https://img.bmpi.dev/227e91cc-a2a8-942e-19fe-8246d9a7abbd.png)

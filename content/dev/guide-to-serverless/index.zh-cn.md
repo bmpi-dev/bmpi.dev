@@ -6,6 +6,7 @@ tags: ["AWS", "Lambda", "Serverless", "Terraform", "Infrastructure as code", "�
 keywords: ""
 description: "本文描述了笔者开发一个基于 AWS Serverless 技术的应用的全过程。"
 isCJKLanguage: true
+og_image: "https://img.bmpi.dev/48504c01-c2d0-e05a-1eda-d82b88f6496d.png"
 ---
 
 ## 背景
