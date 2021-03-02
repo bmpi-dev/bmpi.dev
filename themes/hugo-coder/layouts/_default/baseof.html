@@ -28,7 +28,7 @@
   {{ if .Params.og_image }}
   <meta property="twitter:image" content="{{ .Params.og_image }}" />
   {{ else }}
-  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.og_image }}">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}/{{ .Site.Params.og_image }}">
   {{ end }}
 
   <!-- Open Graph -->
@@ -36,7 +36,7 @@
   {{ if .Params.og_image }}
   <meta property="og:image" content="{{ .Params.og_image }}" />
   {{ else }}
-  <meta name="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.og_image }}">
+  <meta name="og:image" content="{{ .Site.BaseURL }}/{{ .Site.Params.og_image }}">
   {{ end }}
 
   {{ partial "schema.html" . }}
