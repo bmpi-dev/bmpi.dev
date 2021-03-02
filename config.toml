@@ -83,6 +83,9 @@ FootnoteReturnLinkContents = "↑"
     adsensePublisher = "ca-pub-1886683614725279"
     googleAnalytics = "UA-154678195-1"
 
+    # OG
+    og_image = "images/mdw.png"
+
 # Comments on github issue
 [params.utteranc]
     repo = "bmpi-dev/bmpi.dev"
