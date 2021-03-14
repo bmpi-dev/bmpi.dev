@@ -94,7 +94,7 @@ og_image: "https://img.bmpi.dev/cf3a1023-57ae-b3ce-4110-9624c26f860b.png"
 - **Beancount**。负责记录相关 Tag 的资金开销，当然也是我的记账工具，最终帮助我生成家庭财务健康度的评估报告。
 - **Tiddlywiki**。负责公开笔记的输出。和 Logseq 的区别在于，我会将 Logseq 的一些笔记整理成可供分享的知识后发布到 Tiddlywiki 上。虽然 Logseq 支持公开某个页面，但是为了更好的区分私人笔记和公开笔记，我还是做了这个区分。
 - **Amazon AWS**。我的个人云平台。目前主要是用 S3 + CloudFront 做博客的图床。[博客的页面访问数据](/dev/pulumi-aws-serverless-hugo-site-vists/) 也是用 [AWS Serverless](/dev/guide-to-serverless/) 开发实现的。
-- **Wayback Machine**。类似 OneNote 和 Evernote 的 Web 剪藏工具。它可以永久保存网页的所有变更版本，所以一般无需自己把网页内容下载到笔记工具里，这样会导致笔记工具同步缓慢，我当时用 OneNote 剪藏了很多网页导致其存储达几 GB ，每次换设备同步都很头疼。实际上只需要保存网页链接即可，最多加几句总结的话帮自己助记。有 Wayback Machine 再也无需担心网页突然不见了。
+- **Wayback Machine**。类似 OneNote 和 Evernote 的 Web 剪藏工具。它可以永久保存网页的所有变更版本，所以一般无需自己把网页内容下载到笔记工具里，这样会导致笔记工具同步缓慢。我当时用 OneNote 剪藏了很多网页导致其存储达几 GB ，每次换设备同步都很头疼。实际上只需要保存网页链接即可，最多加几句总结的话助记。有 Wayback Machine 再也无需担心网页突然不见了。
 - **GitHub**。项目托管与云存储平台。博客、记账与时间管理的所有数据包括文件（某些文件会放到 Google Drive 里）都存放到 GitHub 公开或私有仓库中。
 - **Vercel**。博客与Wiki托管平台。可直接关联 GitHub 后一键发布网站并自带 CDN 且 [国内访问速度不错](/dev/guide-to-setup-blog-site-with-zero-cost-5/)。
 - **VSCode**。文本编辑工具。一般我会用它完成博客写作、笔记写作（也可用浏览器）、绘图（也可用浏览器）、记账及代码开发。
