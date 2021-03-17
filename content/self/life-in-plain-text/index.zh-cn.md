@@ -118,3 +118,5 @@ og_image: "https://img.bmpi.dev/cf3a1023-57ae-b3ce-4110-9624c26f860b.png"
 底部的区块是和 `OKR` 相关的信息，让我可以快速了解到目前最重要的 Objective 有哪些。
 
 当然这个系统远不止如此，更多的信息我会新开一篇文章来介绍如何用 Logseq 实现这些功能。也会写一篇文章介绍如何基于文本使用 Beancount 做复式记账。
+
+> 本文配图皆用 Excalidraw 绘制，更多我常用的绘图工具见 [我的绘图工具箱](/self/my-drawing-toolbox/) 这篇文章介绍。
