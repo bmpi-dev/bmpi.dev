@@ -6,13 +6,16 @@ tags: ["绘图工具", "PlantUML", "Sketch", "PPT", "Excel", "draw.io", "Google 
 keywords: "浏览器插件、Chrome插件、SEO浏览器插件"
 description: "本文分享我常用的绘图工具，包括白板绘图、文本绘图、代码绘图与专业绘图等工具。"
 isCJKLanguage: true
+og_image: "https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png"
 ---
 
 由于在写作中经常需要配图，本文分享下我常用的绘图工具以及如何存储并展示配图。
 
 ## 白板绘图
 
-白板绘图的好处在于灵活度非常高。好的白板工具可以很方便的绘制自由的图片和预定义的结构化图形，这方面我在用的工具是 [Excalidraw](https://excalidraw.com/)，由于是本工具是开源的，我也部署了自己的 Excalidraw [白板工具](https://wb.bmpi.dev)。
+白板绘图的好处在于灵活度非常高。好的白板工具可以很方便的绘制自由的图片和预定义的结构化图形，这方面我在用的工具是 [Excalidraw](https://excalidraw.com/)，由于是本工具是开源的，我也部署了自己的 Excalidraw [白板工具](https://wb.bmpi.dev)。在 [基于纯文本的人生管理](/self/life-in-plain-text/) 这篇文章里所有的配图都是用 Excalidraw 绘制，比如下图：
+
+![Excalidraw](https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png)
 
 一个好的白板工具应该需要有什么特性呢？Excalidraw 的创始人写了一篇很好的文章 [Rethinking Virtual Whiteboard](https://blog.excalidraw.com/rethinking-virtual-whiteboard/) 来回答这个问题。
 
