@@ -36,11 +36,13 @@ isCJKLanguage: true
 
 ![](https://img.bmpi.dev/80b1312f-a32f-998a-61d5-1581bcc618d9.png)
 
-### [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+### ~~The Great Suspender~~
 
-自动将当前不使用的标签冻结节省内存，Chrome毕竟是内存大户，这个插件可以降低我们Chrome的电脑内存使用。
+~~自动将当前不使用的标签冻结节省内存，Chrome毕竟是内存大户，这个插件可以降低我们Chrome的电脑内存使用。~~
 
 ![](https://img.bmpi.dev/eb2aa4f8-e183-996b-b9f6-b25238ad1d7c.png)
+
+> 注：因涉嫌传播恶意软件，此插件已被 Google 移除。一些替代品可参考 [3 Secure alternatives to The Great Suspender](https://www.comparitech.com/blog/vpn-privacy/great-suspender-alternatives/) 这篇文章。
 
 ### [Internet Archive](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)
 
