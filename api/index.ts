@@ -25,13 +25,15 @@ const viewsEndpoint = new awsx.apigateway.API("bmpi-dev-post-views", {
 
             console.log(`Getting count for '${route}'`);
 
+            let incr = event.headers["Referer"]?.includes("www.bmpi.dev") ? 1 : 0;
+
             const client = new aws.sdk.DynamoDB.DocumentClient();
 
             const result = await client.update({
                 TableName: counterTable.name.get(),
                 Key: { id: route },
                 UpdateExpression: "SET hit = if_not_exists(hit, :zero) + :incr",
-                ExpressionAttributeValues: { ":zero": 0, ":incr": 1 },
+                ExpressionAttributeValues: { ":zero": 0, ":incr": incr },
                 ReturnValues:"UPDATED_NEW",
             }).promise();
 
