@@ -13,6 +13,8 @@ og_image: "https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png"
 
 ## 白板绘图
 
+### Excalidraw
+
 白板绘图的好处在于灵活度非常高。好的白板工具可以很方便的绘制自由的图片和预定义的结构化图形，这方面我在用的工具是 [Excalidraw](https://excalidraw.com/)，由于是本工具是开源的，我也部署了自己的 Excalidraw [白板工具](https://wb.bmpi.dev)。在 [基于纯文本的人生管理](/self/life-in-plain-text/) 这篇文章里所有的配图都是用 Excalidraw 绘制，比如下图：
 
 ![Excalidraw](https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png)
@@ -34,6 +36,12 @@ Excalidraw 的优点有以下：
 ](https://pakstech.com/blog/draw-diagrams/) 这两篇文章里可以看到使用 Excalidraw 画常见的结构图如架构图、结构图、流程图与交互图等，也可以自由绘制如品牌Logo、事件风暴图、原型图、对比图、手绘图、四格漫画与平面图等。
 
 除了 Excalidraw 外，其创始人早期用了另一个白板工具近 10 年，这个工具是 [zwibbler](https://zwibbler.com/)，我看了下感觉用 Excalidraw 完全可以替代它。
+
+### Perfect FreeHand
+
+[带有压感的在线手写板工具](https://hw.bmpi.dev)，以下是用手写板手写的效果：
+
+![](https://img.bmpi.dev/cb9a0d14-9e1c-800c-19ab-c2b82316cce0.png)
 
 ## 文本绘图
 

@@ -32,6 +32,6 @@ outputs = "html"
 
 ## 白板工具
 
-[Excalidraw](https://excalidraw.com/)
+[whiteboard](https://wb.bmpi.dev)
 
-[Excalidraw - 自托管白板](https://wb.bmpi.dev)
+[handwriting](https://hw.bmpi.dev)
