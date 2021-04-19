@@ -35,3 +35,7 @@ outputs = "html"
 [whiteboard](https://wb.bmpi.dev)
 
 [handwriting](https://hw.bmpi.dev)
+
+## 英语学习
+
+[单词练习](https://word.bmpi.dev)
