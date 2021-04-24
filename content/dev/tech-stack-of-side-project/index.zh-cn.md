@@ -133,7 +133,7 @@ isCJKLanguage: true
   - Certificate Manager — HTTPS 证书管理服务，我所有的域名 TLS 证书都用它免费申请的。
   - API Gateway — API 网关，我一般用它做 Serverless 架构的 REST API 网关。
   - Billing — 时刻关注账单变化，可以设置某个阈值，超过立即发邮件告警。
-  - 其他服务 — 这里面有一些非常隐蔽收费很贵的服务，我就曾掉过坑里，比如 Aurora Serverless、VPC 等服务，具体可看我的这个 [AWS各服务解释](https://wiki.bmpi.dev/#AWS各服务解释:AWS各服务解释%20Index) 的详细介绍。
+  - 其他服务 — 这里面有一些非常隐蔽收费很贵的服务，我就曾掉过坑里，比如 Aurora Serverless、VPC 等服务，具体可看我的这个 [AWS各服务解释](https://wiki.bmpi.dev/#AWS各服务解释) 的详细介绍。
 - [Vercel](https://vercel.com/) — 非常好的静态网站部署服务，[Vercel 的 CDN 在国内访问速度很快](/dev/guide-to-setup-blog-site-with-zero-cost-5/)。本博客与 [我常用的工具](/tool/) 网站都是用其一键部署的。
 - ~~Netlify~~ — 静态网站部署服务，已被 Vercel 替代，因为其 CDN 在国内访问很慢。
 - ~~Vultr~~ — VPS 服务，已被 AWS 替代，AWS EC2 Spot 实例很便宜。
@@ -182,7 +182,7 @@ isCJKLanguage: true
 - lsof — 我一般用 lsof 查看端口占用的进程、进程打开文件及进程的网络链接。
 - netstat — 我一般用 netstat 查看当前端口占用、当前网络链接及 TCP 协议的某个端口监听进程。
 
-具体详见我的 Wiki 笔记 [网络调试](https://wiki.bmpi.dev/#网络调试:网络调试%20curl%20Index)。
+具体详见我的 Wiki 笔记 [网络调试](https://wiki.bmpi.dev/#网络调试)。
 
 ### 设计
 
