@@ -147,6 +147,7 @@ Wiki 资料通过 GitHub 公共仓库托管，通过 netlify 生成静态网站�
 
 [Notion](https://www.notion.so/) 虽然非常适合搭建个人/团队/家人 Wiki ，但是由于其非开源，商业的不确定性导致我不敢把全部的资料迁移至其上。目前只是用来做一些简单的页面，比如[ 收藏网站 ](https://www.notion.so/mdw/a722ba82bf184833bb33628c85b18dae)这个页面是我制作的个人收藏网站书签页面，而这个[ Portfolio ](https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea)页面更能体现 Notion 如**乐高积木般**搭建 Wiki 页面特性的能力。
 
+如果想了解更多 Notion 制作的网站见 [notion-sites](https://github.com/madawei2699/notion-sites) 这个 Repo。
 ### Roam Research
 
 [ Roam Research ](https://roamresearch.com/)的设计很超前，它是一款能将碎片化信息整理成个人知识的网状笔记工具。通过它你可以很容易把一些关联的信息建立双向链接。甚至这篇[ How to use Roam Research: a tool for metacognition ](https://nesslabs.com/roam-research) 称之为“元认知工具”。
