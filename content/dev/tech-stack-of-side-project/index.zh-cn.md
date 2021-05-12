@@ -107,6 +107,7 @@ isCJKLanguage: true
   - 将日志存放上去做进一步的分析，比如网站的请求日志存放上去通过 [AWS Athena](https://aws.amazon.com/athena/) 以SQL形式查询做数据分析。
 - [Google Sheets](https://www.google.com/sheets/about/) — Google Sheets 不只是个具备实时协作的电子表格。它还可以：
   - 可作为数据库。比如 [Sheety](https://sheety.co/) 这个服务可将电子表格作为数据库并发布成 API 以供应用去消费数据；
+  - 可作为 TMS 系统。这个 [Tweet](https://twitter.com/THlNGSWORK/status/1391641654403256323) 显示如何用 Google Sheets 做多国语言的翻译；
   - 可作为 CMS 系统。比如结合 AWS Lambda 可做出一个 [博客后台管理系统](https://andreaskeller.name/blog/nextjs-google-sheets-cms)。比如我的 [社交数据监控 Dashboard](https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b) 后台就是 Google Sheets，结合 [Apps Script](https://script.google.com/) 可以做到自动获取最新社交数据。
 
 ## 基础设施
