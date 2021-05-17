@@ -96,7 +96,7 @@ isCJKLanguage: true
 核心是数据。
 ```
 
-- [SQLite](https://github.com/sqlite/sqlite) — SQLite是个 [严肃的数据库](https://antonz.org/sqlite-is-not-a-toy-database/)，甚至是 [真正的 Serverless 数据库](https://www.sqlite.org/serverless.html)，比如这个 [datasette](https://github.com/simonw/datasette) 库可以将 SQLite 数据库的数据直接发布成在线数据。我的一些小工具甚至静态化渲染的网站背后的数据库就是它。其还可以用作强大的数据分析平台。要说缺点的话，它的数据库不支持并发写入，这也是我在个人项目中不得不使用重量级的关系数据库。
+- [SQLite](https://github.com/sqlite/sqlite) — SQLite是个 [严肃的数据库](https://antonz.org/sqlite-is-not-a-toy-database/)，还是 [真正的 Serverless 数据库](https://www.sqlite.org/serverless.html)，比如这个 [datasette](https://github.com/simonw/datasette) 库可以将 SQLite 数据库的数据直接发布成在线数据。甚至可以将 [SQLite 托管至 Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)。我的一些小工具甚至静态化渲染的网站背后的数据库就是它。其还可以用作强大的数据分析平台。要说缺点的话，它的数据库不支持并发写入，这也是我在个人项目中不得不使用重量级的关系数据库。
 - [MySQL](https://github.com/mysql/mysql-server) — 公司项目和个人项目都会用的数据库。MySQL 除了有点重量级外，对于个人项目来说没有啥缺点。
 - [PostgreSQL](https://github.com/postgres/postgres) — 相比 MySQL 来说，PostgreSQL 支持很多高级特性。比如这个 [postgrest](https://github.com/PostgREST/postgrest) 库可直接将 PostgreSQL 数据库发布成 REST API，甚至有基于此库的 SaaS 服务如 [supabase](https://github.com/supabase/supabase) 可提供类 [Google Firebase](https://firebase.google.com/) 的功能。
 - [Redis](https://github.com/redis/redis) — Redis 本身的功能很丰富（缓存、计数、分布式锁与排行榜等），不过我在个人项目中主要用来做缓存。
