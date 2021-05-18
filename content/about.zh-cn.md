@@ -9,9 +9,9 @@ outputs = "html"
 终身学习（认知杠杆） -> 全栈技术（时间杠杆） -> 投资理财（财务杠杆） => 被动收入（人生杠杆）
 ```
 
-## Dashboard
+<!-- ## Dashboard
 
-{{< dashboard >}}
+{{< dashboard >}} -->
 
 ## 关于我
 
