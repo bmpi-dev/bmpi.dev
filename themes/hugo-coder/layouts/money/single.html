@@ -44,6 +44,7 @@
         {{ $outContent := .Content | replaceRE $PATTERN_EMPTY_ALT $REPLACEMENT | replaceRE $PATTERN_ALT $REPLACEMENT | safeHTML }}
         {{ $outContent }}
 
+        {{ if .GitInfo }}
         <div style="color: #5c7080;font-size: small;font-style: italic;">
           更新时间:
           <!-- Calculate the age in days and months -->
@@ -61,6 +62,7 @@
           {{ end }}
            版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>
         </div>
+        {{ end }}
 
         <div style="text-align: center;color: darkgray;">
           {{ if eq .Site.Language.Lang "zh-cn" }}
