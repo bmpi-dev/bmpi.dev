@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>Parser黑魔法</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/parser_black_magic/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/parser_black_magic\/",
+          "name": "parser_black_magic"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>Parser黑魔法</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2019-12-21T00:00:00Z'>
+                2019-12-21
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/">时间管理</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/parser%E8%A7%A3%E6%9E%90%E5%99%A8/">parser解析器</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/jison/">jison</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/bison/">bison</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/lex/">lex</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/flex/">flex</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/bnf/">bnf</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/yacc/">yacc</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/dsl/">dsl</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/">词法分析</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/">语法分析</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <p>我们在开发过程中对于文本处理一般会用Regex来搞定，比如识别一个字符串中的邮箱及手机号之类。但是对于复杂的文本格式，我们可能会通过写一个解析工具来解析，但是你可能很难想到用flex/bison来做。想象下这么一个场景，你需要将Nginx的conf文件转换成json格式。</p>
+
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#fff;font-weight:bold">worker_processes</span>  <span style="color:#ff0;font-weight:bold">1</span>;
+<span style="color:#fff;font-weight:bold">events</span> {
+    <span style="color:#fff;font-weight:bold">worker_connections</span>  <span style="color:#ff0;font-weight:bold">1024</span>;
+}
+<span style="color:#fff;font-weight:bold">http</span> {
+    <span style="color:#fff;font-weight:bold">include</span>       <span style="color:#0ff;font-weight:bold">mime.types</span>;
+    <span style="color:#fff;font-weight:bold">default_type</span>  <span style="color:#0ff;font-weight:bold">application/octet-stream</span>;
+    <span style="color:#fff;font-weight:bold">sendfile</span>        on;
+    <span style="color:#fff;font-weight:bold">keepalive_timeout</span>  <span style="color:#ff0;font-weight:bold">65</span>;
+    <span style="color:#fff;font-weight:bold">server</span> {
+        <span style="color:#fff;font-weight:bold">listen</span>       <span style="color:#ff0;font-weight:bold">80</span>;
+        <span style="color:#fff;font-weight:bold">server_name</span>  <span style="color:#0ff;font-weight:bold">localhost</span>;
+        <span style="color:#fff;font-weight:bold">location</span> <span style="color:#0ff;font-weight:bold">/</span> {
+            <span style="color:#fff;font-weight:bold">root</span>   <span style="color:#0ff;font-weight:bold">html</span>;
+            <span style="color:#fff;font-weight:bold">index</span>  <span style="color:#0ff;font-weight:bold">index.html</span> <span style="color:#0ff;font-weight:bold">index.htm</span>;
+        }
+    }
+}
+</code></pre></div><p>这个格式解析单靠Regex是搞不定的。我们需要更强的Text Processing Tools<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。我们知道一门计算机语言和一个Nginx配置文件本质上是由特定词法和语法组成的，了解编译器识别计算机语言的过程有助于我们进一步解决Nginx配置文件的解析。</p>
+<h2 id="compiler-architecture">Compiler Architecture</h2>
+<figure >
+    <a href="https://cs.lmu.edu/~ray/notes/compilerarchitecture/">
+        <div class="fixed-container"><amp-img src="https://img.bmpi.dev/2019-12-21-19-15-21.png" class="contain" alt="Compiler Architecture" layout="fill"></amp-img></div>
+    </a>
+    
+    <figcaption>
+        <p>
+        Compiler Architecture
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<p>如上图所示，在我们的问题域中最关心的是Lexical Analysis与Syntax Analysis。</p>
+<h3 id="lexical-analysis">Lexical Analysis</h3>
+<p>Lexical Analysis将以下的C语言函数：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#fff;font-weight:bold">void</span> do_awesome_stuff(<span style="color:#fff;font-weight:bold">int</span> a, string b) {
+    <span style="color:#007f7f">/* Code here */</span>
+}
+</code></pre></div><p>Token化为：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">TYPE: void
+IDENTIFIER: do_awesome_stuff
+OPEN_BRACKET: (
+TYPE: int
+IDENTIFIER: a,
+COMMA: ,
+TYPE: string
+IDENTIFIER: b
+CLOSE_BRACKET: )
+OPEN_BRACE: {
+COMMENT: /* Code here */*
+CLOSE_BRACE: }
+</code></pre></div><h3 id="syntax-analysis">Syntax Analysis</h3>
+<p>Syntax Analysis将Token序列解析为Abstract Syntax Tree<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2019-12-21-19-29-39.png" alt="" layout="fill"></amp-img></div></p>
+<p>有了AST（抽象语法树）后，可以进一步生成IR（中间语言），也可以在语义分析中做语法正确性检查（如各种语法lint工具）。</p>
+<figure >
+    <a href="https://starbeamrainbowlabs.com/blog/article.php?article=posts%2F267-Compilers-101.html">
+        <div class="fixed-container"><amp-img src="https://img.bmpi.dev/2019-12-21-19-35-40.png" class="contain" alt="BNF/Flex/Bison" layout="fill"></amp-img></div>
+    </a>
+    
+    <figcaption>
+        <p>
+        BNF/Flex/Bison
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<p>如上图所示，第1、2、3步中出现了BNF、Flex、Bison。</p>
+<h3 id="bnfbackus-normal-form">BNF(Backus normal form)</h3>
+<blockquote>
+<p>Backus–Naur form or Backus normal form (BNF) is a notation technique for context-free grammars, often used to describe the syntax of languages used in computing, such as computer programming languages, document formats, instruction sets and communication protocols. They are applied wherever exact descriptions of languages are needed: for instance, in official language specifications, in manuals, and in textbooks on programming language theory.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+</blockquote>
+<p>简单来说，BNF是一种用于表示上下文无关(CFG)文法的形式语言(形式语言一般有两个方面：语法和语义，由字母表上的某些有限长字符串的集合)。</p>
+<h3 id="cfgcontext-free-grammars">CFG(context-free grammars)</h3>
+<p>在计算机科学中，若一个形式文法 G = (V, Σ, P, S) 的产生式规则都取如下的形式：A -&gt; α，则谓之。其中 A∈V ，α∈(V∪Σ)* 。上下文无关文法取名为“上下文无关”的原因就是因为字符 A 总可以被字符串 α 自由替换，而无需考虑字符 A 出现的上下文。一个形式语言是上下文无关的，如果它是由上下文无关文法生成的。上下文无关文法重要的原因在于它们拥有足够强的表达力来表示大多数程序设计语言的语法；实际上，几乎所有程序设计语言都是通过上下文无关文法来定义的。BNF（巴克斯-诺尔范式）经常用来表达上下文无关文法。<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h3 id="flex">Flex</h3>
+<p>Flex在Lexical Analysis阶段用来生成词法分析器。</p>
+<h3 id="bison">Bison</h3>
+<p>Bison用于自动生成语法分析器(Parser)程序，实际上可用于所有常见的操作系统。Bison把LALR形式的上下文无关文法描述转换为可做语法分析的C或C++程序。</p>
+<h3 id="lalrlllr">LALR/LL/LR</h3>
+<p>在计算机科学中，LALR分析器是一种规范LR分析方法的简化形式。它可以对上下无关文法进行语法分析。LALR即“Look-Ahead LR”。其中，Look-Ahead为“向前看”，L代表对输入进行从左到右的检查，R代表反向构造出最右推导序列。 LALR分析器可以根据一种程序设计语言的正式语法的产生式而对一段文本程序输入进行语法分析，从而在语法层面上判断输入程序是否合法。 实际应用中的LALR分析器并不是由人手工写成的，而是由类似于yacc和GNU Bison之类的LALR语法分析器生成工具构成。<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<p>LL分析器是一种处理某些上下文无关文法的自顶向下分析器。因为它从左（Left）到右处理输入，再对句型执行最左推导出语法树（Left derivation，相对于LR分析器）。能以此方法分析的文法称为LL文法。<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
+<h3 id="automata-theory">Automata Theory</h3>
+<p>我们知道，自动化理论（automata theory）里，有FSA（Finite State Automata）和PDA（PushDown Automata），前者可以用regular expression表述，而后者可以处理CFG（Context Free Grammar）。而CFG便是flex/bison要处理的对象！<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
+<figure >
+    
+        <div class="fixed-container"><amp-img src="https://img.bmpi.dev/2019-12-21-22-56-22.png" class="contain" alt="Automata Theory" layout="fill"></amp-img></div>
+    
+    
+    <figcaption>
+        <p>
+        Automata Theory
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<p>能被DFA和NFA识别的语言是正则语言。能被PDA识别的语言为CFG语言。几乎所有程序设计语言都是通过CFG来定义的。BNF经常用来表达CFG。</p>
+<p><strong>所以我们知道靠正则是解决不了Nginx配置文件这种CFG语言的。这种情况需要我们写BNF文法来解决。</strong></p>
+<h3 id="compiler-compiler">Compiler-compiler</h3>
+<p>一个编译器编译程序(compiler-compiler)或者编译器产生程序(compiler generator)是一个帮助用户根据某种语言或机器的规则来产生语法分析器，解释器或者编译器的工具。当前最早也是最常见的编译器编译程序是语法分析器产生程序(parser generator)这个形式，其输入是一个编程语言的形式文法 (一般是用BNF表示)，然后产生出一些语法分析器的代码，作为这个语言编译器的一部分。</p>
+<p>理想的编译器编译程序，只要给予一个编程语言的完整描述以及目标的指令集架构，然后就能自动从中产生出合适的编译器。实际上, 最先进的技术还没有到达这么复杂的地步，而大多数现有的编译器产生程序都不能处理语义学或者目标架构的信息部分。<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup></p>
+<h2 id="不同语言的parser生成器">不同语言的Parser生成器</h2>
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>Parser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c</td>
+<td>bison</td>
+</tr>
+<tr>
+<td>clojure</td>
+<td>instaparse</td>
+</tr>
+<tr>
+<td>javascript</td>
+<td>jison</td>
+</tr>
+<tr>
+<td>javascript</td>
+<td>peg.js</td>
+</tr>
+<tr>
+<td>各种语言</td>
+<td>antlr4</td>
+</tr>
+<tr>
+<td>golang</td>
+<td>participle</td>
+</tr>
+<tr>
+<td>erlang</td>
+<td>yecc</td>
+</tr>
+</tbody>
+</table>
+<p>其他的详见 <a href="https://en.wikipedia.org/wiki/Comparison_of_parser_generators">Comparison_of_parser_generators</a> 。</p>
+<h2 id="使用js写一个parser">使用JS写一个Parser</h2>
+<p>了解完上面这么多枯燥的理论，是时候该实战了，让我们使用Parser解决一个真正的问题。在<a href="https://www.bmpi.dev/zh-cn/self/gtd-tools-i-used/">《我的时间管理工具》</a>这篇文章中提到我开发了<a href="https://github.com/bmpi-dev/todo_parser_lib">todo_parser_lib</a>，这个库便是用JavaScript的jison库开发的解析todo文件为json的AST格式的功能。</p>
+<p>jison到底有多强，可以从这里感受下: <a href="https://github.com/zaach/jison/wiki/ProjectsUsingJison">ProjectsUsingJison</a>。</p>
+<p>todo文件是一种类似yaml/python缩进风格的纯文本格式的文件，如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">test1:
+    ☐ test list1 @started(19-12-11 21:16)
+    &gt; test list1 comm
+    ✔ test list2 @critical @started(19-12-11 21:16) @done(19-12-11 21:17) @lasted(1m2s)
+    ✘ cancel @cancelled(19-12-11 21:28)
+    test2:
+        ☐ test list21 @started(19-12-11 21:16)
+        ✔ test list22 @critical @started(19-12-11 21:16) @done(19-12-11 21:17) @lasted(1m2s)
+        ✘ test list23 cancel @cancelled(19-12-11 21:28)
+
+test3:
+    ☐ test list31 @started(19-12-11 21:16)
+    ✔ test list32 @critical @started(19-12-16 09:24) @done(19-12-16 09:24) @lasted(41s)
+</code></pre></div><p>我们最终要生成如下的JSON Scheme:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;test1:&#34;</span>,
+    <span style="font-weight:bold">&#34;todo&#34;</span>: [
+      {
+        <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;☐ test list1 @started(19-12-11 21:16)&#34;</span>,
+        <span style="font-weight:bold">&#34;todo&#34;</span>: []
+      },
+      {
+        <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;test2:&#34;</span>,
+        <span style="font-weight:bold">&#34;todo&#34;</span>: [
+          {
+            <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;☐ test list21 @started(19-12-11 21:16)&#34;</span>,
+            <span style="font-weight:bold">&#34;todo&#34;</span>: []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;test3:&#34;</span>,
+    <span style="font-weight:bold">&#34;todo&#34;</span>: [
+      {
+        <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;☐ test list31 @started(19-12-11 21:16)&#34;</span>,
+        <span style="font-weight:bold">&#34;todo&#34;</span>: []
+      }
+    ]
+  }
+]
+</code></pre></div><h3 id="step1词法分析">step1/词法分析</h3>
+<p>Javascript的jison自带了词法分析功能，不过也可以使用第三方的词法分析库，由于yaml/python缩进风格的文法，本身不是CFG，需要我们做一定的处理才能正常的Token化<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>。在这里我们使用<a href="https://github.com/aaditmshah/lexer">lexer</a>来解析缩进风格的文法。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">const</span> Lexer = require(<span style="color:#0ff;font-weight:bold">&#39;lex&#39;</span>);
+<span style="color:#fff;font-weight:bold">const</span> row = <span style="color:#ff0;font-weight:bold">1</span>;
+<span style="color:#fff;font-weight:bold">let</span> col = <span style="color:#ff0;font-weight:bold">1</span>;
+<span style="color:#fff;font-weight:bold">const</span> indent = [<span style="color:#ff0;font-weight:bold">0</span>];
+<span style="color:#fff;font-weight:bold">const</span> lexer = module.exports = <span style="color:#fff;font-weight:bold">new</span> Lexer(<span style="color:#fff;font-weight:bold">function</span>(<span style="color:#fff;font-weight:bold">char</span>) {
+  <span style="color:#fff;font-weight:bold">throw</span> <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Error</span>(<span style="color:#0ff;font-weight:bold">&#39;Unexpected character at row &#39;</span> + row + <span style="color:#0ff;font-weight:bold">&#39;, col &#39;</span> + col + <span style="color:#0ff;font-weight:bold">&#39;: &#39;</span> + <span style="color:#fff;font-weight:bold">char</span>);
+});
+global.flag = <span style="color:#ff0;font-weight:bold">0</span>; <span style="color:#007f7f">// 0 - doing, 1 - critical
+</span><span style="color:#007f7f"></span>module.exports.changeFlag = <span style="color:#fff;font-weight:bold">function</span> changeFlag(flag) {
+  global.flag = flag;
+};
+lexer.addRule(<span style="color:#0ff;font-weight:bold">/^[\t ]*/gm</span>, <span style="color:#fff;font-weight:bold">function</span>(lexeme) {
+  <span style="color:#fff;font-weight:bold">const</span> indentation = lexeme.length;
+  col += indentation;
+  <span style="color:#fff;font-weight:bold">if</span> (indentation &gt; indent[<span style="color:#ff0;font-weight:bold">0</span>]) {
+    indent.unshift(indentation);
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;INDENT&#39;</span>;
+  }
+  <span style="color:#fff;font-weight:bold">const</span> tokens = [];
+  <span style="color:#fff;font-weight:bold">while</span> (indentation &lt; indent[<span style="color:#ff0;font-weight:bold">0</span>]) {
+    tokens.push(<span style="color:#0ff;font-weight:bold">&#39;DEDENT&#39;</span>);
+    indent.shift();
+  }
+  <span style="color:#fff;font-weight:bold">if</span> (tokens.length) <span style="color:#fff;font-weight:bold">return</span> tokens;
+});
+lexer.addRule(<span style="color:#0ff;font-weight:bold">/\n+/gm</span>, <span style="color:#fff;font-weight:bold">function</span>(lexeme) {
+  <span style="color:#007f7f">// col = 1;
+</span><span style="color:#007f7f"></span>  <span style="color:#007f7f">// row += lexeme.length;
+</span><span style="color:#007f7f"></span>  <span style="color:#007f7f">// return &#34;NEWLINE&#34;;
+</span><span style="color:#007f7f"></span>});
+lexer.addRule(<span style="color:#0ff;font-weight:bold">/.*/gm</span>, <span style="color:#fff;font-weight:bold">function</span>(lexeme) {
+  col += lexeme.length;
+  <span style="color:#fff;font-weight:bold">const</span> projectRe = <span style="color:#0ff;font-weight:bold">/^.*:$/g</span>;
+  <span style="color:#fff;font-weight:bold">if</span> (lexeme.length == <span style="color:#ff0;font-weight:bold">0</span>) {
+    <span style="color:#007f7f">// return &#34;EMPTY&#34;
+</span><span style="color:#007f7f"></span>  } <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span> (lexeme.trim().startsWith(<span style="color:#0ff;font-weight:bold">&#39;&gt; &#39;</span>)) {
+    <span style="color:#007f7f">// return &#34;COMMENT&#34;
+</span><span style="color:#007f7f"></span>  } <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span> (lexeme.trim().includes(<span style="color:#0ff;font-weight:bold">&#39;@done&#39;</span>) || lexeme.trim().includes(<span style="color:#0ff;font-weight:bold">&#39;@cancelled&#39;</span>)) {
+    <span style="color:#007f7f">// return &#34;DONE&#34;
+</span><span style="color:#007f7f"></span>  } <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span> (projectRe.test(lexeme.trim())) {
+    <span style="color:#fff;font-weight:bold">this</span>.yytext = lexeme;
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;NAME&#39;</span>;
+  } <span style="color:#fff;font-weight:bold">else</span> {
+    <span style="color:#007f7f">// doing todo item
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">if</span> (global.flag == <span style="color:#ff0;font-weight:bold">0</span> &amp;&amp; lexeme.trim().includes(<span style="color:#0ff;font-weight:bold">&#39;@started&#39;</span>)) {
+      <span style="color:#fff;font-weight:bold">this</span>.yytext = lexeme;
+      <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;NAME&#39;</span>;
+    }
+    <span style="color:#007f7f">// critical item but is not doing
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">if</span> (global.flag == <span style="color:#ff0;font-weight:bold">1</span> &amp;&amp; lexeme.trim().includes(<span style="color:#0ff;font-weight:bold">&#39;@critical&#39;</span>) &amp;&amp; !lexeme.trim().includes(<span style="color:#0ff;font-weight:bold">&#39;started&#39;</span>)) {
+      <span style="color:#fff;font-weight:bold">this</span>.yytext = lexeme;
+      <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;NAME&#39;</span>;
+    }
+  }
+});
+lexer.addRule(<span style="color:#0ff;font-weight:bold">/$/gm</span>, <span style="color:#fff;font-weight:bold">function</span>() {
+  col++;
+  <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;EOF&#39;</span>;
+});
+</code></pre></div><p>Token化的核心是使用特殊的Token替代被Token化文件中的符合正则表达式的字符串，我们这里只关注缩进INDENT/DEDENT和Todo待办事项的NAME，还有文件结束符EOF，所以你可以猜到最终被lexer输出的是个Token List:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">NAME: test1:
+INDENT
+NAME: ☐ test list1 @started(19-12-11 21:16)
+NAME: ✘ cancel @cancelled(19-12-11 21:28)
+NAME: test2:
+INDENT
+NAME: ☐ test list21 @started(19-12-11 21:16)
+NAME: ✘ test list23 cancel @cancelled(19-12-11 21:28)
+DEDENT
+DEDENT
+NAME: test3:
+INDENT
+NAME: ☐ test list31 @started(19-12-11 21:16)
+DEDENT
+EOF
+</code></pre></div><h3 id="step2语法分析">step2/语法分析</h3>
+<p>有了上述Token List做输入给jison做BNF语法分析，最终解析出json AST。先看BNF语法：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{
+  &#39;bnf&#39;: {
+    &#39;todo-plus&#39;: [
+      [&#39;todo-list EOF&#39;, &#39;return $1;&#39;],
+      [&#39;EOF&#39;, &#39;return null&#39;],
+    ],
+    &#39;todo-list&#39;: [
+      [&#39;todo&#39;, &#39;$$ = $1 == null ? null : [$1];&#39;],
+      [&#39;todo-list todo&#39;,
+        &#39;if ($1 == null) { $$ = $2; } &#39; +
+        &#39;else { if ($2 == null) { $$ == $1; } &#39; +
+        &#39;else { $$ = [].concat($1).concat($2); } };&#39;],
+    ],
+    &#39;todo&#39;: [
+      [&#39;item&#39;, &#39;$$ = {name: $1, todo: []};&#39;],
+      [&#39;item INDENT todo-list DEDENT&#39;, &#39;$$ = $3 == null ? $3 : {name: $1, todo: $3};&#39;],
+      [&#39;item INDENT DEDENT&#39;, &#39;$$ = null;&#39;],
+      [&#39;INDENT DEDENT&#39;, &#39;$$ = null&#39;],
+    ],
+    &#39;item&#39;: [
+      [&#39;NAME&#39;, &#39;$$ = yytext;&#39;],
+    ],
+  },
+}
+</code></pre></div><p>BNF就是递归的分解要解析的文件字符串，直到遇到不可分割的Token，比如文件一开始肯定会拆解为 &lsquo;todo-list EOF&rsquo; ，然后 todo-list 可以进一步分割直到 NAME 和 INDENT/DEDENT ，jison是兼容bison语法的，所以如果一脸懵比可以先看下<a href="http://dinosaur.compilertools.net/bison/bison_6.html#SEC34">bison语法帮助文档</a>。</p>
+<h3 id="step3render">step3/Render</h3>
+<p>经过语法分析，我们得到了json字符串，在这里我们可以使用<a href="https://github.com/janl/mustache.js">mustache.js</a>将json渲染为HTML，我们只需要定义好Template，然后调用mustache render即可。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">const</span> Mustache = require(<span style="color:#0ff;font-weight:bold">&#39;mustache&#39;</span>);
+<span style="color:#fff;font-weight:bold">const</span> fs = require(<span style="color:#0ff;font-weight:bold">&#39;fs&#39;</span>);
+
+module.exports = <span style="color:#fff;font-weight:bold">function</span> render(doingJson, criticalJson) {
+  <span style="color:#fff;font-weight:bold">const</span> todoTemplate = fs.readFileSync(<span style="color:#ff0;font-weight:bold">__</span>dirname + <span style="color:#0ff;font-weight:bold">&#39;/template/todo_template.mustache&#39;</span>);
+  <span style="color:#fff;font-weight:bold">const</span> outputDoingHtml = Mustache.render(todoTemplate.toString(), doingJson, {
+    recurse: todoTemplate.toString(),
+  });
+  <span style="color:#fff;font-weight:bold">const</span> outputCriticalHtml = Mustache.render(todoTemplate.toString(), criticalJson, {
+    recurse: todoTemplate.toString(),
+  });
+  <span style="color:#fff;font-weight:bold">const</span> indexTemplate = fs.readFileSync(<span style="color:#ff0;font-weight:bold">__</span>dirname + <span style="color:#0ff;font-weight:bold">&#39;/template/index_template.mustache&#39;</span>);
+  <span style="color:#fff;font-weight:bold">const</span> outputIndexHtml = Mustache.to_html(indexTemplate.toString(), {doing: {}, critical: {}}, {
+    doing: outputDoingHtml,
+    critical: outputCriticalHtml,
+  });
+  <span style="color:#fff;font-weight:bold">return</span> outputIndexHtml;
+};
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;ul class=&#39;todos&#39; style=&#39;margin: 10px 0;&#39;&gt;
+{{#todo}}
+&lt;li class=&#39;todo&#39; style=&#39;list-style-type: none;&#39;&gt; {{ name }} &lt;/li&gt;
+{{&gt; recurse }}
+{{/todo}}
+&lt;/ul&gt;
+</code></pre></div><p>需要在这里注意的时，由于我们的JSON Scheme是嵌套的todo list，所以模版的渲染也需要嵌套<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>。</p>
+<h3 id="step4工程化">step4/工程化</h3>
+<p>核心代码完成后，我们需要重构，应用一些工程实践，比如单元测试<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>、命令行工具<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>、CI自动发布工具到NPM仓库<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── README.md
+├── bin
+│   └── todo-cli.js
+├── lib
+│   ├── ast.js
+│   ├── lexer.js
+│   ├── parser.js
+│   ├── render.js
+│   └── template
+│       ├── index_template.mustache
+│       └── todo_template.mustache
+├── package-lock.json
+├── package.json
+└── <span style="color:#fff;font-weight:bold">test</span>
+    ├── test_data
+    │   ├── critical.json
+    │   ├── doing.json
+    │   ├── test.doing.json
+    │   ├── test.lex
+    │   ├── test.todo
+    │   ├── test1.critical.json
+    │   ├── test1.lex
+    │   └── test1.todo
+    └── test_parser.js
+</code></pre></div><p>这块不在赘述，感兴趣的可以参考<a href="https://github.com/bmpi-dev/todo_parser_lib">源代码</a>。</p>
+<h2 id="nginx配置文件parser">Nginx配置文件Parser</h2>
+<p>让我们回到开始的问题，现在你可以使用BNF去大胆的写一个解析Nginx配置文件的Parser吧。</p>
+<h2 id="进一步阅读">进一步阅读</h2>
+<p>创作一门属于自己的Toy Language/Compiler，可以看看这篇文章 <a href="https://gnuu.org/2009/09/18/writing-your-own-toy-compiler/">Writing Your Own Toy Compiler Using Flex, Bison and LLVM</a> 。</p>
+<p>当然也可以看看王垠的 <a href="http://www.yinwang.org/blog-cn/2015/09/19/parser">《对 Parser 的误解》</a> 。</p>
+<p>想看大型编程语言的语法分析，可以看看Elixir基于Erlang平台是怎么把自己编译成Erlang的：<a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/src/elixir_parser.yrl">elixir_parser.yrl</a></p>
+
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://www.shlomifish.org/open-source/resources/text-processing-tools/">List of Text Processing Tools</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">https://en.wikipedia.org/wiki/Abstract_syntax_tree</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95">https://zh.wikipedia.org/wiki/%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://zh.wikipedia.org/wiki/LALR%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8">https://zh.wikipedia.org/wiki/LALR%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://zh.wikipedia.org/wiki/LL%E5%89%96%E6%9E%90%E5%99%A8">https://zh.wikipedia.org/wiki/LL%E5%89%96%E6%9E%90%E5%99%A8</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://zhuanlan.zhihu.com/p/20178871">如何愉快地写个小parser</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://zh.wikipedia.org/wiki/%E7%B7%A8%E8%AD%AF%E5%99%A8%E7%B7%A8%E8%AD%AF%E7%A8%8B%E5%BC%8F">https://zh.wikipedia.org/wiki/%E7%B7%A8%E8%AD%AF%E5%99%A8%E7%B7%A8%E8%AD%AF%E7%A8%8B%E5%BC%8F</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/14803043/looking-for-examples-of-jison-grammars-that-use-indentation-for-block-structure">Looking for examples of Jison grammars that use indentation for block-structure</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="https://github.com/janl/mustache.js/issues/468">https://github.com/janl/mustache.js/issues/468</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p><a href="https://www.ibm.com/developerworks/cn/opensource/os-tutorials-learn-nodejs-unit-testing-in-nodejs/index.html">学习 Node.js，第 9 单元：单元测试</a>&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p><a href="https://www.kancloud.cn/kancloud/command-line-with-node/48657">Node.js 命令行程序开发教程</a>&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13" role="doc-endnote">
+<p><a href="https://github.com/bmpi-dev/todo_parser_lib/blob/master/.github/workflows/npm-publish.yml">npm-publish.yml</a>&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

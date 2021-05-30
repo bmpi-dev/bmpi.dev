@@ -1,0 +1,15 @@
+@startmindmap
+skinparam monochrome true
+* 现代博客指南
+** 博客搭建-1
+** SEO优化-2
+** 订阅推送-3
+*** 订阅
+**** mailchimp
+**** tinyletter
+*** 推送
+**** Webpushr
+**** OneSignal
+** 加载速度优化-4
+** 推广-5
+@endmindmap

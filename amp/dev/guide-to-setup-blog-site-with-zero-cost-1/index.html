@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>零成本搭建现代博客之搭建篇</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/guide-to-setup-blog-site-with-zero-cost-1\/",
+          "name": "guide-to-setup-blog-site-with-zero-cost-1"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>零成本搭建现代博客之搭建篇</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2020-02-29T00:00:00Z'>
+                2020-02-29
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/markdown/">Markdown</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/github%E5%8D%9A%E5%AE%A2/">GitHub博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/hugo/">Hugo</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/netlify/">Netlify</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/github/">Github</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/namecheap/">Namecheap</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/aws/">AWS</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <blockquote>
+<p>本文属于<a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a>系列第一篇【个人技术博客搭建篇】。
+<div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/3972bce0-19ad-3c31-78da-99b35aab1f8a.png" alt="" layout="fill"></amp-img></div>
+这个系列不少的东西需要你科学上网才能访问，也就是你需要一把<a href="https://www.bmpi.dev/affiliate">梯子</a>。</p>
+</blockquote>
+<h2 id="为什么要搭建自己的个人博客">为什么要搭建自己的个人博客</h2>
+<p>你可能会想，我们有知乎专栏、微信公众号、简书、头条号与百家号等等，为什么还要搭建一个博客呢？在自媒体的时代，个人博客看起来就像是一个古董一样老旧，不仅需要自己维护，还没有多少人阅读。</p>
+<p>一开始我也是这么想的，直到我经历了这些：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/6c9080d7-473c-cace-8b20-9e704f8fe4d9.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/f2f0120a-9764-4a9b-f3fb-af48c5434861.png" alt="" layout="fill"></amp-img></div></p>
+<p>毕竟在别人的地方上不自由，让我们还是花点时间搭建一个自己的网站吧！除了独立自由，自己的博客还有以下优点：</p>
+<ol>
+<li>个人品牌打造</li>
+<li>备份归档文章</li>
+<li>广告被动收入</li>
+</ol>
+
+<h2 id="个人博客搭建基本流程">个人博客搭建基本流程</h2>
+<p>搭建一个网站在十年前可能很麻烦，但是在2020年就算你完全不懂技术也可以在很短的时间譬如半小时内搭建一个属于自己的网站。在很久以前要做一个静态网站需要以下流程：</p>
+<ol>
+<li><del>选择一个成熟的CMS平台，如Wordpress。</del></li>
+<li><del>租一台独立服务器或者共享的虚拟主机空间。</del></li>
+<li><del>配置服务器，安装各种复杂软件。</del></li>
+<li><del>配置CMS平台，选择主题皮肤，定制修改。</del></li>
+<li><del>买域名，配置域名解析。</del></li>
+<li><del>在CMS平台上写第一篇文章。</del></li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/b832b17e-473c-adcd-4630-1c243176ec28.png" alt="" layout="fill"></amp-img></div></p>
+<p>这么复杂的流程劝退了很多人。在 SasS 时代一切都变得简单起来，现在我们只需要以下的流程：</p>
+<ol>
+<li>使用 <a href="https://gohugo.io/">Hugo</a>/<a href="https://hexo.io/">Hexo</a> 等静态网站生成工具生成一个网站。</li>
+<li>在 <a href="https://github.com/">GitHub</a> 开一个仓库，将网站使用Git上传至仓库。</li>
+<li>在 <a href="https://www.netlify.com/">Netlify</a> 上绑定GitHub仓库。</li>
+<li>用<a href="https://www.bmpi.dev/dev/what-markdown-can-do/">Markdown写第一篇文章</a>。通过Git推送到仓库后，网站自动更新发布上线！</li>
+<li><a href="https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ">买域名</a>，配置域名解析。</li>
+</ol>
+<p>看起来依旧很麻烦，不过少了最麻烦的服务器购买与配置环节，让以上5步<strong>仅需要几分钟即可完成一个网站的发布创建</strong>。</p>
+<p>之前我写了一篇<a href="https://www.bmpi.dev/self/build-write-tool-v1/">《打造优雅高效的写作环境》</a>，里面介绍我使用 Hexo 搭建博客的过程，而现在我的博客是基于 Hugo 搭建的，本质两者没啥区别，都是基于 Markdown 的静态网站生成器，它们都属于 <a href="https://jamstack.org/">JAMStack</a> 技术栈（这个技术栈主要研究无服务器的静态网站生成技术，利用 CDN 部署网站）。Hugo 和 Hexo 的最大差异在于生成网站的速度，如果你有大量网页需要生成，最好使用 Hugo，因为它是使用 <a href="https://golang.org/">Golang</a> 语言开发的，这也是我最终选择 Hugo 的原因。</p>
+<p>目前还有大量的网站例如博客、品牌网站、图片站甚至电商站等都是用 <a href="https://zh-cn.wordpress.com/">Wordpress</a> 建站工具搭建的，互联网上近 35% 的网站是用它搭建的，所以先说说 Wordpress 和 Hugo 这类静态化站的差异：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Wordpress</th>
+<th>Hugo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部署</td>
+<td>一般需要独立的服务器</td>
+<td>一般不需要服务器，直接部署到 CDN</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>因为是 PHP 开发的动态站，所以在性能上有瓶颈，可能需要做不少设置才能提高一些性能，但和 Hugo 的静态网站相比还是太差</td>
+<td>纯静态化的页面，理论上性能极高，可以不考虑性能问题</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>加载速度和 CDN 有很大的关系，也和服务器渲染网页的速度有关系，因为 Wordpress 是动态网站，需要动态渲染，所以速度也差一些</td>
+<td>已经生成好的网页，速度取决于 CDN 的速度了</td>
+</tr>
+<tr>
+<td>定制化</td>
+<td>生态已经很繁荣了，所以几乎你需要的任何东西都有插件可以满足</td>
+<td>插件少，如果想定制很多功能，那么需要你对 Hugo 有深入的了解</td>
+</tr>
+<tr>
+<td>后台管理</td>
+<td>本身就是 CMS 系统，可以在后台管理各种功能</td>
+<td>本身是个静态化工具，没有后台管理功能，很多设置都直接使用文本来配置，对非程序员不友好。但是目前也有相关的 CMS 系统，如 <a href="https://forestry.io/">forestry</a>，配合 <a href="https://www.gatsbyjs.org/">gatsbyjs</a> 之类的技术可以开发出任何你想要的网站</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td>对 SEO 很友好</td>
+<td>需要一些定制才能提高 SEO</td>
+</tr>
+</tbody>
+</table>
+<p>从上述对比可知：</p>
+<ol>
+<li>如果你完全不懂技术的话，可以使用Hugo在本地生成一个静态站体验下，然后学习一点<a href="https://learnxinyminutes.com/docs/zh-cn/git-cn/">Git基本知识</a>，将网站推送到 GitHub ，然后使用 Netlify 配置部署。之所以不推荐用Wordpress是因为配置服务器是个复杂而麻烦的过程，可能直接劝退了非程序员的朋友。</li>
+<li>如果你懂一点技术，玩过 Linux 或者 Windows 版本的 <a href="https://wiki.deepin.org/wiki/LAMP%E6%9C%8D%E5%8A%A1">LAMP</a>，那么还是推荐使用 Wordpress。</li>
+<li>如果玩过 Wordpress 但对性能有很高的要求，也不想在性能提升上浪费精力，又想使用 Markdown 的话，那么建议体验下 Hugo 吧，本文正是为这类人准备的，当然不懂技术也可以了解下，看完至少你会了解到如何不花钱搭建一个属于自己的博客。</li>
+</ol>
+<h2 id="使用hugo搭建个人博客">使用Hugo搭建个人博客</h2>
+<blockquote>
+<p>在以下部分我都以 Mac 的安装环境为例，但是其他平台应该也都是相似的</p>
+</blockquote>
+<p>先看个动图，展示下 Hugo 是如何简单的搭建一个网站：</p>
+<p><a href="https://gifyu.com/image/IxgR"><div class="fixed-container"><amp-img class="contain" src="https://s5.gifyu.com/images/Kapture-2020-03-01-at-0.34.57.gif" alt="Kapture-2020-03-01-at-0.34.57.gif" layout="fill"></amp-img></div></a></p>
+<ol>
+<li>安装Hugo和Git</li>
+</ol>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">brew install hugo
+brew install git
+</code></pre></div><ol start="2">
+<li>选择主题皮肤</li>
+</ol>
+<p>在 Hugo 官方的<a href="https://themes.gohugo.io/">主题站</a>我们可以找到大量别人已经开发好的主题皮肤。我们以本博客主题 <a href="https://themes.gohugo.io/hugo-coder/">Coder</a> 为例：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo new site bmpi.dev
+</code></pre></div><p>执行这个命令后我们得到了这些文件:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.
+├── archetypes
+│   └── default.md
+├── config.toml # 配置文件入口
+├── content # Markdown 文件存放入口
+├── data
+├── layouts # 网站页面结构管理入口
+├── static # 网站静态资源存放入口
+└── themes # 网站主题皮肤入口
+</code></pre></div><p>这是Hugo帮我们生成好的网站骨架，其中 <code>content</code> 是我们写文章的地方，每篇文章就是一个 Markdown 文件。如下图是我博客目前的文章：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/bfbb42ad-6007-b1d0-d5d2-e96ced5c116b.png" alt="" layout="fill"></amp-img></div></p>
+<p>然后开始添加主题：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd bmpi.dev
+git init
+git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
+</code></pre></div><p>配置 Hugo，主要是修改 <code>config.toml</code>：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="display:block;width:100%;background-color:#191919"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">baseURL = <span style="color:#0ff;font-weight:bold">&#34;http://example.org/&#34;</span>
+languageCode = <span style="color:#0ff;font-weight:bold">&#34;en-us&#34;</span>
+title = <span style="color:#0ff;font-weight:bold">&#34;My New Hugo Site&#34;</span>
+<span style="display:block;width:100%;background-color:#191919">theme = <span style="color:#0ff;font-weight:bold">&#34;hugo-coder&#34;</span>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>这是最简单的配置，本博客的配置文件在这里可以看到：<a href="https://github.com/bmpi-dev/bmpi.dev/blob/master/config.toml">bmpi.dev config.toml</a>。</p>
+<p>复制一些主题样本数据：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cp -R themes/hugo-coder/exampleSite/ .
+</code></pre></div><p>启动！</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo server
+</code></pre></div><p>最终效果：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/11caabbc-5203-a45c-af8d-141ab3c5a829.png" alt="" layout="fill"></amp-img></div></p>
+<p>以上就是一个非常简单的使用 Hugo 创建网站的过程，当然这只是开始，如果你想深度定制 Hugo 的话，最好先看看它的官方<a href="https://gohugo.io/documentation/">帮助文档</a>，主要包括模版定制、内容组织、配置等。</p>
+<h2 id="使用github托管个人博客">使用GitHub托管个人博客</h2>
+<p>本博客的代码都存放到了<code>全球最大同性交友网站</code> GitHub 上了，具体看这里 <a href="https://github.com/bmpi-dev/bmpi.dev">bmpi.dev</a> 。</p>
+<p>GitHub 目前已经从代码存放库进化到了无所不包，有人在里面写小说，有人在里面写博客，有人在里面存放自己的照片。无论你是不是程序员，都可以了解下如何利用好这个网站。</p>
+<p>让我们开始建立一个仓库，不过你得先注册一个账号：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/ff7a7542-1a49-0153-891b-aef08ef5007c.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/86e6fc0b-6c70-faec-b867-0aa426e8f50f.png" alt="" layout="fill"></amp-img></div></p>
+<p>接下来让我们把上一步创建的网站数据通过 Git 上传到 GitHub 托管。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;first commit&#34;
+git remote add origin https://github.com/bmpi-dev/test.bmpi.dev.git
+git push -u origin master
+</code></pre></div><p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/1c62cc67-96b1-b926-3918-c68c7d2259cd.png" alt="" layout="fill"></amp-img></div></p>
+<p>至此，我们已经将网站上传到了 GitHub 。如果之后你要新增文章后上传也只需要执行：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;update&#34;
+git push
+</code></pre></div><h2 id="使用netlify部署个人博客">使用Netlify部署个人博客</h2>
+<p>上传到 GitHub 后，接下来让我们开始部署网站：</p>
+<p><a href="https://gifyu.com/image/Ixgo"><div class="fixed-container"><amp-img class="contain" src="https://s5.gifyu.com/images/Kapture-2020-03-01-at-1.16.11.gif" alt="Kapture-2020-03-01-at-1.16.11.gif" layout="fill"></amp-img></div></a></p>
+<p>Netlify 本身是个具备 CI/CD 功能的 CDN 网站托管平台，同类还有 <a href="https://zeit.co/"><code>ZEIT Now</code></a>。注册好账号后，开始新建一个网站：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/84d75f2e-9f66-b248-7202-e0508428388a.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上点 <code>Deploy site</code> 后：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/7e9976fa-b4cb-9708-bef0-55fb9e3441f7.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/a38c93b5-3041-f16c-4ea6-a01d3ddfb1d3.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上图，我们的网站因为域名配置不正确，导致一些静态资源无法正常加载，让我们开始修复这个问题：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="display:block;width:100%;background-color:#191919"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="display:block;width:100%;background-color:#191919">baseurl = <span style="color:#0ff;font-weight:bold">&#34;https://frosty-colden-937773.netlify.com/&#34;</span>
+</span>title = <span style="color:#0ff;font-weight:bold">&#34;johndoe&#34;</span>
+
+theme = <span style="color:#0ff;font-weight:bold">&#34;hugo-coder&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改好 <code>config.toml</code> 后，使用之前介绍的 Git 上传方法将更新的文件上传至 GitHub，然后再次访问 <code>https://frosty-colden-937773.netlify.com/</code>:</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/fcd662df-9f23-e3dc-e521-c12a4ec736dd.png" alt="" layout="fill"></amp-img></div></p>
+<p>网站上线了！至此我们没有花一毛钱，不过你会发现这个域名很奇怪，这是 Netlify 免费给我们的二级域名，要想使用自己的域名，我们的花钱买个域名，不过这个域名的费用一般也可以用网站的广告收入来 cover，所以可以说是零成本建站。</p>
+<blockquote>
+<p>需要注意的是这个网站已经自带 CDN 功能了，你无需再次集成如 <a href="https://www.cloudflare.com/">cloudflare</a> 之类的 CDN，默认免费的账户 Netlify 给我们每月<a href="https://www.netlify.com/pricing/">100GB</a>的流量，超出需要掏钱了，不过这个对小站来说足够了。</p>
+</blockquote>
+<h2 id="个人博客集成评论功能">个人博客集成评论功能</h2>
+<p>网站加入评论可以让我们和网站的受众互动起来，也可以对某个主题进行持久的讨论，我的<a href="https://www.bmpi.dev">博客</a>使用了 <a href="https://utteranc.es/">utteranc</a>，而我的<a href="https://tg.bmpi.dev">电报群聚合站</a>则使用了 <a href="https://disqus.com/">disqus</a>。</p>
+<p>可能一般网站使用 disqus 的居多，这也是很成熟的评论框架，但是 utteranc 的优势在于完全集成了 GitHub，所有的评论数据都存放到 GitHub 的 issue 里了：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/30573d3e-d39f-438b-900c-bc29cd6ee635.png" alt="" layout="fill"></amp-img></div></p>
+<p>集成 disqus 很简单，网上有大量的帖子，具体集成方式这里不做赘述了。而集成 utteranc 的代码也可以看这里 <a href="https://github.com/bmpi-dev/bmpi.dev/blob/master/themes/hugo-coder/layouts/partials/posts/utteranc.html">utteranc.html</a>。</p>
+<h2 id="个人博客集成自定义域名">个人博客集成自定义域名</h2>
+<p>域名一般我在 <a href="https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ">Namecheap</a> 上购买，当然 GoDaddy 上也可以。比如这个 <code>bmpi.dev</code> 第一年是91元人民币，第二年是120元。也有非常便宜的域名，譬如 xyz 后缀的第一年只要7元。有人担心这些域名对 SEO 不友好，其实没啥影响，com 域名主要是历史悠久，一般人想到一个品牌可能第一时间想到的就是 com 域名，不过我们的博客初始没啥影响力，选个小众后缀但好记的的反而比较好。</p>
+<p>买好域名后，我们需要将 DNS 配置成 Netlify 的，当然我的博客选择的是 <code>AWS Route53</code> 做我的域名解析服务。Netlify 配置域名很简单，安装它的提示来即可。因为 <code>bmpi.dev</code> 主 DNS 已经用 <code>AWS Route53</code> 配置了，我就按它的配置界面来介绍了。</p>
+<ol>
+<li>先在 Netlify 的域名配置里加入 <code>test.bmpi.dev</code>：</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/6568d8b5-d2b6-fb3e-94c9-756f3df501e0.png" alt="" layout="fill"></amp-img></div></p>
+<ol start="2">
+<li>在 <code>AWS Route53</code> 中配置 CNAME 域名解析：</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/8692c1b5-dff4-1ad5-6b59-8ae74f36fc25.png" alt="" layout="fill"></amp-img></div></p>
+<p>稍等一会，等 Netlify 给我们自动配置好 HTTPS 证书后，在此之前我们先把网站的 <code>config.toml</code> 里的网站域名修改成 <code>test.bmpi.dev</code>，之后大概等个10分钟左右让我们访问 <a href="https://test.bmpi.dev">test.bmpi.dev</a>。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://s5.gifyu.com/images/ac75bf15b8e74ef39e56cd95197d7422_th.gif" alt="ac75bf15b8e74ef39e56cd95197d7422_th.gif" layout="fill"></amp-img></div></p>
+<h2 id="个人博客集成流量监控">个人博客集成流量监控</h2>
+<p>本博客使用了 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a>，也就是我们常说的 GA 统计:</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/a850bb38-7eaa-398f-486f-de798305f4e3.png" alt="" layout="fill"></amp-img></div></p>
+<p>接下来让我们给 <code>test.bmpi.dev</code> 集成 GA，因为主域名已经通过 DNS 验证过了，所以直接添加跟踪代码即可：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/46c3ed2f-0aa6-b754-fefd-60d335fd6470.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/6d650f52-99c6-6f24-0257-5bdb8aeeded0.png" alt="" layout="fill"></amp-img></div></p>
+<p>注意跟踪代码要添加到每个网页文件 <HEAD> 标记中，在 Hugo 中一般在主题的模版里直接添加，这个公共的文件在 <a href="https://github.com/bmpi-dev/test.bmpi.dev/blob/master/themes/hugo-coder/layouts/_default/baseof.html#L91"><code>/themes/hugo-coder/layouts/_default/baseof.html</code></a>：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">99
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#007f7f">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span>
+&lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">async</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#34;https://www.googletagmanager.com/gtag/js?id=UA-154678195-6&#34;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
+&lt;<span style="font-weight:bold">script</span>&gt;
+  <span style="color:#fff;font-weight:bold">window</span>.dataLayer = <span style="color:#fff;font-weight:bold">window</span>.dataLayer || [];
+  <span style="color:#fff;font-weight:bold">function</span> gtag(){dataLayer.push(arguments);}
+  gtag(<span style="color:#0ff;font-weight:bold">&#39;js&#39;</span>, <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Date</span>());
+
+  gtag(<span style="color:#0ff;font-weight:bold">&#39;config&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;UA-154678195-6&#39;</span>);
+&lt;/<span style="font-weight:bold">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>以上就是集成 GA 的流程，同时建议把 <a href="https://search.google.com/search-console/about"><code>GoogleSearchConsole</code></a>集成上，这就是我们常说的站长工具，可以了解 Google 爬虫对我们网站的索引率，网站出现的一些影响 SEO 的因素都可以通过这个工具发现。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/255b9c52-ef00-8db8-c3b9-dcea7fb63a7b.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="个人博客集成广告投放">个人博客集成广告投放</h2>
+<p>零成本的关键，广告收入覆盖我们的域名支出费用，如果你对广告不了解，建议先看这篇<a href="https://www.bmpi.dev/money/what-is-internet-advertising/">什么是互联网广告</a>。</p>
+<p>本博客集成了 <a href="https://www.google.com/adsense/start/"><code>Google AdSense</code></a>。Google 还要一个 <a href="https://ads.google.com/home/"><code>Ads</code></a>，AdSense 是媒体如站长用来接广告的平台，而 Ads 是广告主用来投放广告的。</p>
+<p>集成 Google AdSense 有一些条件，域名需要一些时间，网站内容不能太少，所以前期可以不接这个，等你的流量达到一定规模了再接，否则审核可能无法通过。集成过程和 GA 很相似，这里不在赘述。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/f8ce36bb-94df-98f2-2438-eaad3cc44f00.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="个人博客图床的选择">个人博客图床的选择</h2>
+<p>博客中最常见的就是图片资源了，图片一般会存放到某个图床或者云服务当中。</p>
+<p>在国内如果你的域名备案过的话可以使用<a href="https://www.qiniu.com/">七牛云服务</a>，具体集成方式参考<a href="https://www.bmpi.dev/self/build-write-tool-v1/">《打造优雅高效的写作环境》</a>。</p>
+<p>本博客由于域名没有备案，所以使用的是 AWS S3 + CloudFront，具体集成方式参考<a href="https://www.bmpi.dev/self/note-system/">《我的笔记系统》</a>中<code>VSCode插件一键存储图片至S3</code>部分的介绍。</p>
+<p>当然你也可以使用 GitHub 来托管图片，只要在 Markdown 中引用相对路径的图片即可。</p>
+<h2 id="关于个人博客备案的问题">关于个人博客备案的问题</h2>
+<p>2020年3月1日国家互联网信息办公室发布了<a href="http://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm">《网络信息内容生态治理规定》</a>。在这份公告中鼓励以下内容制作：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/5ed7aad5-6164-1efe-55d7-c693bfce0eec.png" alt="" layout="fill"></amp-img></div></p>
+<p>备案还是不备案，这是一个问题。</p>
+<p>对于商业产品用户都是国内的话那必须要备案，备案后你也可以使用国内的云服务和 CDN 了，这样网站在国内的加载速度也会很快。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">最初，
+没有人在意这场灾难，
+这不过是一场山火，
+一次旱灾，
+一个物种的灭绝，
+一座城市的消失，
+直到这场灾难与每个人息息相关。
+</code></pre></div>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="本文分享笔者对失败驱动开发（Failure Driven Development）的理解。">
+  
+  
+  
+  <meta name="keywords" content="自我提升、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="失败驱动开发"/>
+  <meta name="twitter:description" content="本文分享笔者对失败驱动开发（Failure Driven Development）的理解。"/>
+  
+  <meta property="twitter:image" content="https://img.bmpi.dev/27015307-1633-2ad8-7868-f1edb27bfeb8.png" />
+  
+
+  
+  <meta property="og:title" content="失败驱动开发" />
+<meta property="og:description" content="本文分享笔者对失败驱动开发（Failure Driven Development）的理解。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/failure-driven-development/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-05-23T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-05-25T07:52:10&#43;08:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+
+  
+  <meta property="og:image" content="https://img.bmpi.dev/27015307-1633-2ad8-7868-f1edb27bfeb8.png" />
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "失败驱动开发",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2021-05-23T00:00:00Z",
+      "dateModified": "2021-05-25T07:52:10+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/failure-driven-development/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "本文分享笔者对失败驱动开发（Failure Driven Development）的理解。",
+      "keywords": ["FDD", "Clojure", "Functional Programming"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/failure-driven-development/">
+  
+  <title>
+  失败驱动开发 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/failure-driven-development/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/dev/failure-driven-development/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">失败驱动开发</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2021-05-23T00:00:00Z'>
+                2021-05-23
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              15:54
+              
+            </span>
+            
+            <span class="post-word-count"> | 3499 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/fdd/">FDD</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/clojure/">Clojure</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/functional-programming/">Functional Programming</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <p><img data-src="https://img.bmpi.dev/27015307-1633-2ad8-7868-f1edb27bfeb8.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>多年以后，面对这篇文章，我会想起那两天失败的令人崩溃的开发过程。当时，只是一个简单的编码需求，我信心满满的计划一下午搞定，但是最终的过程却是令人如此沮丧，让我不得不怀疑我还适不适合继续当程序员。</p>
+<p>思绪飘到那天的场景，我在开发过程中遇到一个很简单的需求：将 JSON 格式的文件转换成 JavaScript 的常量文件。如下图：</p>
+<p><img data-src="https://img.bmpi.dev/f2f3df66-7cc2-c4b9-2e36-a757c847e2de.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>我的想法是先把 JSON 转成一棵抽象语法树（AST），然后遍历这棵树，在特定的节点打印出所需的字符就可以了。JSON 转 AST 直接用 Clojure 的神器 instaparse 库。我对 Clojure 不熟悉，刚好可以通过这个过程提升下，也能试试这个神器到底神不神。通过这种特殊需求能一举多得，让无聊的开发过程变得有期待。</p>
+<p>第一步是将 JSON 转 AST。对于 instaparse 库来说这是个很简单的任务，网上随便搜索下就找到了解析 JSON 的代码。耗时不过几分钟。</p>
+<p>第二步是需要遍历这棵树。遍历树是我在大学算法课程上就学过的，虽然年代久远算法的细节都已经忘记，但是我还记得有深度遍历和广度遍历两种方式。我的这个需求特殊之处在于需要在遍历的时候打印相关的字符，比如需要在遍历某个节点开始和结束的时候都得打印 [] 或 {} 。Clojure 应该有具体的库做这个事，简单搜索下很快就找到了 walk 和 tree-seq 这两个函数。这两个函数看起来比较复杂，找了一些例子大概了解到： walk 函数可以在遍历是提供入和出两个钩子来执行对集合元素的转换，而 tree-seq 会以深度遍历树的方式输出一个节点序列。理解后就开始尝试，花了半天后发现事情比我想象中的复杂，这两个函数看起来强大，但是无法在遍历节点时保存状态，而我却需要这个状态来记录我遍历的路径。看起来需要自己写个遍历算法来实现了，这时候半天已经过去了，但我目前的进度只解决了一半的问题。</p>
+<p>自己写遍历树的算法是一件不难的事情，我用 Java 也实现过，现在用 Clojure 实现看起来也不难。但是 Clojure 和 Java 的差异很大：它是函数式的，数据类型都不可变，很多操作都是通过递归来完成。用递归来实现深度遍历也不是难事，但是当你用不熟悉的语言去实现问题可能就会变得不可控。</p>
+<p>在尝试了一天多并写了三个失败的版本后我陷入了绝望的状态，因为一个非常简单的问题我却搞不定。在第二个版本的时候我以为我解决了这个问题，最终把实际的数据输入却发现结果不符合预期。因为我用了简单的测试数据，实际的数据比测试数据全面，我写的版本只是解决了测试数据的问题。在第三个版本的时候因为考虑的情况更多写的也更复杂了，导致程序始终跑不起来。因为我不熟悉 Clojure 的语法，始终难以写出满足条件的递归代码。</p>
+<p><img data-src="https://img.bmpi.dev/ba8de0ec-05e9-8947-9036-6ea8a54fcd83.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>由于长时间在这个问题上耗着又没有任何思路，我在周末连续搞了十几小时后眼睛和腰终于受不了了。第二天整个人身心俱疲，在床上躺了半天后琢磨如何寻求帮助。脑海中第一个念头就是在 Clojure 的社区里直接提问。为了能让大家有意愿回答我的问题，我首先把自己的问题梳理了下，画了一个简单的草图：</p>
+<p><img data-src="https://img.bmpi.dev/4c5e878b-74ea-a4d6-ca23-5d7a2d030940.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>然后在 StackOverflow 提了这个问题，并在 Clojure 的 Discord 群组、Telegram 国内社群和微信群里发了这个问题。大概不到半小时，微信群里有两个人发了自己的代码。这两种代码体现了不同的解决思路，并且附带优雅的实现：</p>
+<p><img data-src="https://img.bmpi.dev/af401ed1-9164-3675-e0c6-8d5934d4491d.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/fc6b9da5-399c-e9e1-327c-54a236ab0691.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>第一种方案直接通过递归将 AST 语法树转换成了目标 Map 的数据结构，然后使用 Json 库打印成 Json 格式。第二种方案没有使用 AST 语法树，直接通过 Json 库拿到 Json 数据结构然后递归遍历输出最终目标数据结构。</p>
+<p>在群里与这两个人沟通的过程中，我发觉我在不知不觉中犯了几个错误：</p>
+<ul>
+<li>不熟悉 Clojure 代码，导致没法使用最佳的函数和思路去解决问题；</li>
+<li>通过 Json 库去输出最终数据结构，而我却是采用打印的方式将问题复杂化；</li>
+<li>没必要通过抽象语法树去解决，通过 Json 库递归遍历 Json 是更简单的方案；</li>
+<li>没使用更好的工具。我一开始用命令行自带的 Repl，后来觉得编辑长函数不方便，所以在网上找了一个在线 Repl。不过后来看到群友提供的在线 livebook， 这种能更方便的开发并记录这类代码。</li>
+</ul>
+<p>回顾这个问题的解决过程，我总结此次开发失败的原因有以下：</p>
+<ul>
+<li>理解需求错误。我在遇到这个问题后并未做深入的分析思考，导致一开始就冲着问题的表象去解决。想着用打印的方式去解决问题，实际上可以用库来输出目标格式。</li>
+<li>不熟悉相关技术。我对 Clojure 的熟悉程度还不足以解决这类并不简单的问题。</li>
+<li>解决问题不全面。问题总有很多解，拿着锤子很容易看啥都是钉子。我从一开始就想通过 AST 去解决这个问题，导致思维局限到一条线上了。</li>
+<li>害怕失败。因为一开始觉得问题很简单，害怕自己没法在很短的时间解决，心态处于失衡的状态。后期耗着的时间越长，思考能力越不在状态，反而越来越迷糊。</li>
+</ul>
+<h2 id="失败驱动开发">失败驱动开发</h2>
+<p>不了解程序员的人眼中的程序员可能是这样的：</p>
+<p><img data-src="https://img.bmpi.dev/32e5e295-1c93-edab-7051-9d921b3bdbed.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>但开发程序或维护程序，失败是很常见的：</p>
+<ul>
+<li>编译失败；</li>
+<li>运行失败；</li>
+<li>网络失败；</li>
+<li>内存失败；</li>
+<li>并发失败；</li>
+<li>I/O 失败；</li>
+<li>认证失败；</li>
+<li>权限失败；</li>
+<li>依赖失败；</li>
+<li>资源失败；</li>
+<li>上线失败；</li>
+<li>升级失败；</li>
+<li>环境设置失败；</li>
+<li>理解需求失败；</li>
+<li>项目管理失败；</li>
+<li>架构设计失败；</li>
+</ul>
+<p>程序员的日常就是要在无数失败中找寻让程序正常运行的那一种组合，成功运行更像是运气与实力的双重作用，这也就有了失败驱动开发（<code>Failure Driven Development</code>）。</p>
+<p>失败既然是不可避免的，要做好一个程序员，与失败平和相处是必须要解决的问题，不然情绪会长期处于失衡状态。</p>
+<p>如何以失败驱动开发？我会从以下清单出发找寻处理失败的方法：</p>
+<ul>
+<li><strong>是否全面理解问题？</strong> 很多时候不是问题复杂，而是我错误的理解了问题，在错误的路上越走越远。每当失败时我会重新全面的思考问题，看是否能发现新的解决问题的思路。</li>
+<li><strong>是否涉及知识盲区？</strong> 盲区是你不知道自己不知道。用有限的知识去解决未知的问题很容易陷入盲区而不自知。我的方法是如果一个失败的原因我没法在几天内解决，那很可能就是遇到知识盲区了。要跳脱盲区必须全面的搜索关联的知识，通过知识的交叉理解或寻找更了解这个领域的人帮忙是有效的解决方法。</li>
+<li><strong>对技术的掌握是否满足要求？</strong> 用不熟悉的技术去解决不懂的问题很容易失败。如果对技术不熟悉并且难以解决问题的话，我会从短期和长期两个方面出发制定不同的方案。短期可能会寻求外部帮助让更了解的人来帮我解决，长期我会投入更多时间提升这方面的技术。</li>
+<li><strong>所用技术或工具是否合适？</strong> 用不合适的技术和工具去解决问题也很容易导致失败，并且这种失败是难以察觉的。有时候不合适的技术或工具并不会让问题无法得到解决，而是会浪费你大量的时间去解决技术或工具本身的问题。要解决这类失败需要扩大知识广度，在搜索资料时不局限某一种技术，如果你对多种技术有一定的理解，就很容易发觉技术之间的差异。用合适的技术或工具能达到事半功倍的效果。</li>
+<li><strong>是否存在解决方案？</strong> 很多问题早已经被前人解决。所以当遇到感觉复杂的问题，我会先搜索一番已经存在的解决方法，对问题现存的解决方法有个大概的认知，然后修改这些解决方法让其能更好的解决我的问题。</li>
+<li><strong>是否需要记录问题？</strong> 各类很难搞的问题是提高能力的好机会，学习现存的解决方法能消灭知识盲区。所以不断的记录总结这种问题是提高我能力的好方法。如果一个人一辈子遇不到难题，他也只能停留在现有的能力圈无法破圈。</li>
+<li><strong>是否需要寻求帮助？</strong> 花了很多时间问题却解决不了是很令人沮丧，有些问题还很紧迫。在尝试一定时间还毫无头绪时我就会想办法找人帮忙。让人愿意帮忙也需要一些技巧，如果你提出一个很大的问题，没人会愿意免费帮忙。所以我会把问题相关的上下文都写下来或画下来，然后将我错误的解决方法放上去，标记清楚失败的点在哪里，然后把问题发给我觉得有这方面技术的朋友、同事及相关的社区。如果问题比较复杂，我会提出付费咨询的请求。在别人帮忙解决后，及时表达感谢之情，如有必要也可以发个红包。当你通过这种方法认识不同领域的人，逐渐地你解决问题的效率也会得到提高。一些人会担心，将自己的愚蠢公开暴露出来，尤其是一些低级错误出现的时候，是一件很掉面子的事情。其实一开始我也担心，但是在网上你可以有很多虚拟身份，能缓解这种不适。更重要的是，暴露自己的愚蠢能有效的解决自己的知识盲区，你觉得很复杂的问题在有经验的人看来是很简单的事情。这其实是一种极其有效的学习成长方式，在这个过程中我不仅可以解决我的难题，还能学习有经验的人在这领域里的方法论和效率工具。</li>
+<li><strong>身体状态是否合适？</strong> 长时间耗在一个问题上，身体和大脑都会疲惫。当心态失衡时，解决问题的能力也会直线下降。我经常会陷入一种急迫解决问题的困境，直到身体完全扛不住才放弃。这其实是一种低效的方式，情绪会在这个过程中逐渐压制理智，让人很难全面的思考问题。与自己平和相处，接纳自己的不足，休息好重新出发才能走的更长远。所以当遇到自己很难解决的问题时，试着先确保身体状态是正常的，如果身体很疲惫，先休息而不是直接攻克难题。</li>
+</ul>
+<p>每一次失败都是一次提升自己的机会。正是对失败过程的不断迭代解决，多年以后，让我成为一个更好的开发者。</p>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              5天前
+          
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/f0b5491a944ca15b460ca1395fd21e4a97279407">f0b5491</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

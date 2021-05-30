@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>我的笔记系统</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/self/note-system/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/self\/",
+          "name": "self"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/self\/note-system\/",
+          "name": "note-system"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>我的笔记系统</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2020-07-07T00:00:00Z'>
+                2020-07-07
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F/">笔记系统</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E7%AC%94%E8%AE%B0%E7%AE%A1%E7%90%86/">笔记管理</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/">知识管理</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BAwiki/">个人Wiki</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/tiddlywiki/">TiddlyWiki</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/wayback-machine/">Wayback Machine</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/aws-s3/">AWS S3</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/notion/">Notion</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/roam-research/">Roam Research</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <p>一个好的笔记系统，应该能把你所学习到的任何资料串联起来，形成一个知识系统，在你需要他们的时候，可以很容易找到，进而形成自己新的知识。</p>
+<p>我在<a href="https://www.bmpi.dev/zh-cn/self/onenote-intro/">《用OneNote管理你的知识》</a>这篇文章中介绍了如何用 OneNote 管理各种资料，虽然 OneNote 已经做的非常好了，依然存在以下问题无法达到我的要求:</p>
+<ol>
+<li>排版不支持语法高亮。作为一个经常写代码的人，这点不能忍。</li>
+<li>没有 Tag 系统。无法很灵活的给页面插入各种 Tag ，导致资料无法有效互联，形成一个个知识孤岛，最终变成一个资料备份工具。</li>
+<li>数据格式专有。只能用 OneNote 才能打开笔记本，假如微软突然放弃了这个工具，那就很尴尬了。</li>
+<li>体积庞大。在使用了近5年之后，我的 OneNote 已经有几 GB 大小了，每次换电脑同步总是很慢，这可能和我的使用习惯有关系，遇到好的资料都是复制进去。</li>
+<li>扩展能力差。无法安装插件，也没有定制能力，更无法将你的笔记发布成网站，也很难与别人分享你的知识。</li>
+</ol>
+<p>这些问题开始驱使我寻求新的解决方案，新方案应该满足以下需求：</p>
+<ol>
+<li>有强大的抓取能力。OneNote 的这点很不错，你可以通过 OneNote 的浏览器插件很容易将外部文章存至 OneNote 的分区中，也可以将微信公众号文章发送给 OneNote 公众号进行保存。</li>
+<li>有好的 Tag 系统。可以将分散的知识串联起来。虽然 OneNote 通过分页这种树形的方式组织相关的知识，但是资料一旦多了，分页真的很不方便，会让找资料变的很痛苦。</li>
+<li>能容易的更新 tag/link/text。如果重命名相关的资料名或者 Tag，应该很方便去自动重命名关联的链接。</li>
+<li>文件格式最好是纯文本的。如果不是纯文本，至少格式也不是专有的才好。</li>
+<li>有强大的扩展能力。能通过插件去扩展定制。</li>
+<li>开源。这点可以让我们放心的去使用，不太可能无人维护。</li>
+</ol>
+<p>经过一番查找对比后，最终找到两个可以满足我需求的工具，Emacs Org mode 和 Tiddlywiki。虽然 Wiki 工具非常多，比如 Wikipedia 使用的 mediawiki 之类，但这类系统过于庞大，要运行起来也很麻烦。</p>
+<h2 id="emacs-org-mode">Emacs Org mode</h2>
+<p>提到笔记系统，Emacs的Org mode总是绕不过去，当你想要找一个个人笔记系统的时候，在网上很容易看到大家对Org mode的盛赞，甚至很多人花长时间学习Emacs也是为了用Org mode。</p>
+<p>Org mode神奇的魔力在这篇<a href="http://doc.norang.ca/org-mode.html"> Org Mode - Organize Your Life In Plain Text! </a>文章中体现的淋漓尽致 。简单来说，作者使用Org mode管理了他人生中的方方面面，比如写作系统、待办事项提醒、笔记系统等。得益于Emacs强大的定制开发能力，几乎你的一切需求都可以通过编写一些函数去扩展，这种扩展能力比VSCode/Vim/Sublime Text的插件系统等要强大的多。可以说，除了学习难度高，几乎没啥缺点了。它有以下特点：</p>
+<ol>
+<li>17 years old。在时间的长河中，Org mode已经证明了自己。</li>
+<li>定制能力强大。通过eLisp去开发，几乎无所不能。</li>
+<li>纯文本。可自动生成多种格式的文件，也很容易发布成网页。</li>
+<li>使用门槛很高。需要花费很多时间学习适应，这个“很多时间”可能比你想象的都要多一些。</li>
+<li>生态差。由于高门槛，所以用户就少一些，生态就差一些。当然你能力强，可以用它来实现各种功能，但是这样挺累的。</li>
+<li>技术迁移度差。eLisp太古老了，Emacs太独特了，这种上古技术，就像一把绝世好剑，注定能用好它的人会很少。这意味着你写出来的东西很多人都看不懂，当然也就无法进行技术交流互动了，自己造轮子造到心累。</li>
+</ol>
+<h2 id="tiddlywiki">Tiddlywiki</h2>
+<p><a href="http://www.tiddlywiki.cn/"> Tiddlywiki </a>是一款独特的非线性笔记本，用于捕获、组织和分享复杂信息。其设计思想是将信息通过一种名为 Tiddler 的单元分割，利用它们之间丰富的关系模型，从而最大化信息的可复用性。 然后，通过聚合和构思来把片段编排在一起，以呈现具有叙述性的故事。</p>
+<p>它具备以下特点：</p>
+<ol>
+<li>15 years old。这个历史足够久了，时间验证了其稳定性和可持续性，而且是开源的。</li>
+<li>Tag系统强大。最让我印象深刻的就是它的Tag系统，很容易通过Tag将不同的信息组织到一起。</li>
+<li>单 HTML 文件架构。所有的信息都在一个Html中存放，你可以直接下载下来在浏览器中运行，非常的简单。默认的空的系统在最新的版本5中大约是2MB，一般存储几千个条目（Tiddler）大概能增长几 MB，由于是单文件架构，为了不影响性能，应尽可能通过将图片外部引用来降低总体积。</li>
+<li>插件众多。很容易通过 JavaScript 给其扩展功能。</li>
+<li>无法多人协作。但可用作团队知识共享简单的 Wiki 系统。</li>
+</ol>
+<h2 id="org-mode-vs-tiddlywiki">Org mode VS Tiddlywiki</h2>
+<p>在这里可以看到一些人对这两个工具的对比评价<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。在花了几天时间学习了 Org mode 之后，我被它复杂强大的能力劝退了，所有选择了 Tiddlywiki。</p>
+<h2 id="tiddlywiki使用指南">Tiddlywiki使用指南</h2>
+<p>Tiddlywiki 的使用和运行是极其简单的，就这点秒杀了 Org mode。在这篇<a href="http://www.tiddlywiki.cn/#Learning"> Learning </a>文章中，你可以花费十几分钟了解下它的基本知识。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/cf2e8f40-4c61-c32a-2a97-da5f44ea127d.png" alt="" layout="fill"></amp-img></div></p>
+<p>在上图右侧点击+号新增一个条目后：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/451f2b30-8e51-32b8-6d05-06c1c5f94d48.png" alt="" layout="fill"></amp-img></div></p>
+<p>右侧红色的保存按钮点击了后，你会发现直接下载了一个名为<code>tiddlywiki.html</code>的文件，用浏览器打开后，会发现和你刚才在网上的tiddlywiki一摸一样。当你再对这个本地tiddlywiki进行一番操作保存后发现它又给你下载了一个<code>tiddlywiki.html</code>，也就是说每当你保存的时候，都会通过下载副本的形式保存，因为它在浏览器中运行，不具备自己更新自己的能力，这种可以通过一个chrome的app来解决，下载<a href="https://github.com/Arlen22/tiddly-chrome-app"> tiddly-chrome-app </a>，然后用此chrome app加载<code>tiddlywiki.html</code>即可自动更新了，当然也可以通过搭建Nodejs环境来实现自动保存，不过最简单的还是这种方式。</p>
+<p>需要注意的有以下几点：</p>
+<ol>
+<li>备份。因为是单文件架构，所有的资料都在一个Html中存放，所以保护好这个文件至关重要，可以通过Git去备份。比如我的<a href="https://wiki.bmpi.dev/"> tiddlywiki </a>就在GitHub中备份<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。</li>
+<li>性能。图片、文件等资源最好通过存放第三方的云盘中，然后通过引用链接等方式引入。</li>
+<li>Relink。当你重新命名一个条目或者Tag的时候，可以通过安装这个<a href="https://github.com/flibbles/tw5-relink"> tw5-relink </a>插件解决。</li>
+</ol>
+<h2 id="capture方案">Capture方案</h2>
+<p>Capture 是一个笔记系统很重要的能力，这方面 OneNote 做的很好，但是 tiddlywiki 做的却不好，不过可以有一些方法来解决。让我们先来重新思考下一个笔记记录的过程：</p>
+<ol>
+<li>你看到一篇好文章，想要保存起来。这篇文章可能是一个网页，也可能是个邮件或者文件之类。</li>
+<li>你把这篇文章直接全部扔到笔记本中存起来，想象某天会用到它，或者你会将里面的某个章节，某个图片单独保存起来。</li>
+</ol>
+<p>当我在用OneNote的时候，对于微信中的文章，我一般直接通过发送到公众号去保存，然后就忘了这个事情。而对于电脑端看到的一些资料，我会直接复制到 OneNote 中去。在某些时候我会整理一下这些资料，但是大多数它们就被遗忘了，甚至当我需要的时候，我都不记得之前保存过这些资料。</p>
+<p>在这个场景中，暴露了以下这几个问题：</p>
+<ol>
+<li>资料没有被处理就直接被存储了。</li>
+<li>大多数资料都是全部被存放到 OneNote 中去。</li>
+</ol>
+<p>因为 tiddlywiki 本质是个网页，无法像 OneNote 一样可以直接复制一篇文章到里面去，而且这种复制手法会导致你的笔记越来越大，找寻有效信息变得越来越难。所以这本质是个习惯问题，资料必须被二次处理后才能进入笔记系统中，否则这个存储毫无意义，只需要存放一个链接即可了。</p>
+<p>经过一些思考，我制定了自己资料长期归档的方式：</p>
+<ol>
+<li>引用文章可以保存到<a href="https://web.archive.org/"> Wayback Machine </a>中；</li>
+<li>文件可以保存到 GitHub 私有库和网盘中（包括s3等专业云存储，还有各大互联网公司的网盘）；</li>
+<li>通过第三方备份 Capture 资料，笔记中只存储链接。</li>
+</ol>
+<p>在我的 Capture 方案，对于网上阅读的一些资料，考虑到互联网信息丢失的速度，大部分文章存活的寿命并不长<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>，为了能长期保存，我会把这些网页使用 Wayback Machine 备份，这样再也不会丢失了，我只需要把它的链接存储起来即可，对于需要单独存储的资料可以存放到笔记系统中。对于需要存储的图片，我会存放到 AWS S3<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> 中，然后引用其链接即可，当然这类云存储方案很多，你也可以选择国内七牛云（需要域名备案）等。</p>
+<h3 id="wayback-machine">Wayback Machine</h3>
+<p>20多年的历史，互联网的记忆，数字图书馆，网站时光机。这是一个非商业的项目，创立目的就是给整个互联网的网站做不停的备份，目前已经有4500多亿<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>的缓存页面了，在这个网站你可以看到很多网站的历史，像时光机一样穿梭在网站的不同历史版本中去。</p>
+<p>它具备以下能力：</p>
+<ol>
+<li>可爬取网页 HTML 及其外部链接。</li>
+<li>可生成网页快照图片。</li>
+<li>可将网页存储至自己的 Wayback Machine 账户。</li>
+<li>可以使用 API 来请求网页缓存<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>。</li>
+</ol>
+<h3 id="vscode插件一键存储图片至s3">VSCode插件一键存储图片至S3</h3>
+<p>在 Markdown 文档中当你想把网页的图片黏贴过去是件很麻烦的事情，首先你要把图片下载到本地（引用网页图片地址不太好，图片可能会神秘消失），然后在文档中使用相对路径引用这个图片，当图片很多的时候，这是个非常痛苦的过程。</p>
+<p>能不能做到复制网页图片后，在 VSCode 中黏贴后自动插入一个 S3 的链接到 Markdown 文档中去呢？我找到一款插件，可以做到一键上传七牛/GitHub/sm.ms等，但是它没有提供 S3 的支持，所以我 fork 此代码仓库后加了这个功能，如果你也需要这个功能的话，可以在这里下载安装: <a href="https://github.com/bmpi-dev/vscode-extension-mardown-image-paste">markdown image paste</a></p>
+<p>有了这个插件后，写 wiki/md 文件遇到图片复制后黏贴进去自动插入S3链接，这样图片永远存放到你的 S3 账号中去，还自带全球 CDN 加速。</p>
+<h2 id="netlify发布网站">Netlify发布网站</h2>
+<p>公共 Wiki 是重新整理后的知识资料集合，其中非文本的资源如图片、PDF、Office格式文件、Keynote等存放至 Amazon S3/Aliyun OSS 等云服务，网页等内容的快照可使用 Wayback Machine 备份，然后将这些链接存放至 Wiki 系统。</p>
+<p>Wiki 资料通过 GitHub 公共仓库托管，通过 netlify 生成静态网站。</p>
+<p>我的<a href="https://wiki.bmpi.dev/"> Wiki </a>网站就是通过 netlify 自动发布，每次更新 wiki 后，push 到 GitHub，netlify 自动发布，这个过程只需要不到十几秒。</p>
+<h2 id="私有note">私有Note</h2>
+<p>私人备忘和工作涉及的私有非公开的资料集合，其中非文本的资源如图片、PDF、Office格式文件、Keynote等存放至Google Drive/Microsoft OneDrive。然后将这些链接存放至私有Markdown文件中，通过 GitHub 私有库托管。</p>
+<p><strong><span style="color:red">更新自2021年5月2日：</span>我使用 Logseq 实现私有 Note 的管理，具体见这篇 <a href="https://www.bmpi.dev/self/okr-gtd-note-logseq/">OKR + GTD + Note =&gt; Logseq</a> 文章。</strong></p>
+<h2 id="重要资料">重要资料</h2>
+<p>密钥等信息通过<code>1Password</code>托管，重要的资料制作成md文件后通过 Google Drive/Microsoft OneDrive 等托管，经常需要的重要的资料可通过手机备忘录加密存放。</p>
+<h2 id="一些新型的笔记系统">一些新型的笔记系统</h2>
+<h3 id="notion">Notion</h3>
+<p><a href="https://www.notion.so/">Notion</a> 虽然非常适合搭建个人/团队/家人 Wiki ，但是由于其非开源，商业的不确定性导致我不敢把全部的资料迁移至其上。目前只是用来做一些简单的页面，比如<a href="https://www.notion.so/mdw/a722ba82bf184833bb33628c85b18dae"> 收藏网站 </a>这个页面是我制作的个人收藏网站书签页面，而这个<a href="https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea"> Portfolio </a>页面更能体现 Notion 如<strong>乐高积木般</strong>搭建 Wiki 页面特性的能力。</p>
+<p>如果想了解更多 Notion 制作的网站见 <a href="https://github.com/madawei2699/notion-sites">notion-sites</a> 这个 Repo。</p>
+<h3 id="roam-research">Roam Research</h3>
+<p><a href="https://roamresearch.com/"> Roam Research </a>的设计很超前，它是一款能将碎片化信息整理成个人知识的网状笔记工具。通过它你可以很容易把一些关联的信息建立双向链接。甚至这篇<a href="https://nesslabs.com/roam-research"> How to use Roam Research: a tool for metacognition </a> 称之为“元认知工具”。</p>
+<p>该工具没有免费版，收费也不便宜。不过已经有人将其核心的双向链接功能移植到了 Tiddlywiki 上，这就是 <a href="https://giffmex.org/stroll/stroll.html">Stroll</a>。通过双向链接，可以很容易找出文章上下文关联的其他文章。我也将我的 <a href="https://wiki.bmpi.dev/"> Wiki </a> 更新为了这个版本的 Tiddlywiki，感兴趣的朋友可以体验下它的强大之处。</p>
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode">https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://github.com/bmpi-dev/wiki.bmpi.dev">https://github.com/bmpi-dev/wiki.bmpi.dev</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://web.archive.org/web/20191230143823/https://gigaom.com/2012/09/19/the-disappearing-web-information-decay-is-eating-away-our-history/">https://web.archive.org/web/20191230143823/https://gigaom.com/2012/09/19/the-disappearing-web-information-decay-is-eating-away-our-history/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://aws.amazon.com/cn/s3/">https://aws.amazon.com/cn/s3/</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Wayback_Machine">https://en.wikipedia.org/wiki/Wayback_Machine</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://wiki.bmpi.dev/#wayback%20machine">https://wiki.bmpi.dev/#wayback%20machine</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

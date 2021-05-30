@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>零成本搭建现代博客之优化国内访问速度</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/guide-to-setup-blog-site-with-zero-cost-5\/",
+          "name": "guide-to-setup-blog-site-with-zero-cost-5"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>零成本搭建现代博客之优化国内访问速度</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2020-12-26T00:00:00Z'>
+                2020-12-26
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/">加载速度优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/cdn/">CDN</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">阿里云</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%A2%83%E5%A4%96%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/">境外网站国内访问速度优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/https%E5%8A%A0%E9%80%9F/">HTTPS加速</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <blockquote>
+<p>本文属于<a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a>系列第五篇【优化国内访问速度篇】。</p>
+</blockquote>
+<p><strong><span style="color:red">更新自2020年12月29日</span></strong></p>
+<hr>
+<p>在V2EX发了该篇文章的帖子<a href="https://www.v2ex.com/t/739279">优化托管在国外博客的国内访问速度</a>后，一些回复中多次提到使用 <a href="https://vercel.com/">vercel</a> 部署的站在国内访问速度很快，而阿里云会产生如下问题：</p>
+<blockquote>
+<p>阿里云国际版 CDN 就算你解析到香港或者新加坡这种带 CN2 地方，CDN 的 IP 过几天就会被墙，阿里可不会因为 IP 被墙而换 IP，毕竟没有保证CDN国外节点能够在国内访问。而且你现在还没手动解析到带 CN2 的 IP，现在命中的阿里 CDN 新加坡的路由简直可以说是绕了地球一圈。（电信测试）（@mason961125）</p>
+</blockquote>
+<p>帖子回复中很多电信用户根本打不开网站，经路由测试某些地区是绕了一大圈，甚至到欧洲后再转发到新加坡，经过一番测试后我决定把网站迁移至 <code>vercel</code>。也考虑过 <a href="https://www.cloudflare.com/zh-cn/">cloudflare CDN</a> ，虽然速度在国内挺一般，但是比<code>阿里云 CDN</code>要快。最终因为<code>cloudflare</code>要求必须托管域名的<code>DNS</code>，而我的域名托管至<code>AWS Route53</code>，此域名设置了很多其他的<code>DNS</code>记录，迁移起来成本过高，还涉及到证书的问题，所以放弃了。</p>
+<h2 id="博客迁移至-vercel-过程">博客迁移至 vercel 过程</h2>
+<ol>
+<li>
+<p>本博客仓库部署在 <a href="https://github.com/bmpi-dev/bmpi.dev">bmpi-dev/bmpi-dev</a>，而<code>vercel</code>要求个人用户的仓库必须来自个人用户，所以我只能 fork 至我的个人仓库 <a href="https://github.com/madawei2699/bmpi.dev">madawei2699/bmpi.dev</a> 部署。考虑到一些原仓库有一些链接已经在使用了，所以我做了两个仓库间自动同步，具体可见此 <a href="https://github.com/madawei2699/sync-repo-actions">GitHub Actions</a>，之后以个人仓库为主仓库推送代码。</p>
+</li>
+<li>
+<p>域名<code>DNS</code>修改。在<code>vercel</code>设置好域名后，它会自动申请<code>HTTPS证书</code>，之后在<code>AWS Route53</code>将<code>DNS</code>的<code>CNAME</code>指向其配置记录即可。同时需要做一些主域名跳转至<code>www</code>域名的设置，还有强制浏览器使用<code>HTTPS</code>等设置。<code>vercel</code>默认还启用了<code>OCSP Stapling</code> (可忽略证书校验，加速网站 HTTPS 访问)。</p>
+</li>
+<li>
+<p>对<code>SEO</code>的影响。<code>vercel</code>在每次部署后都会生成一个随机预览链接，这个链接在请求响应里已经做了<code>x-robots-tag: noindex</code>，提示<code>Google爬虫</code>不要索引此页面，这点是很好的。但是它默认还给了两个域名链接，并且每次在<code>git commit</code>中评论附上此链接，而这个两个链接并没有<code>noindex</code>的设置，爬虫会直接索引此页面，进一步导致内容重复的问题。考虑到我的主站已经被<code>Google</code>索引了一段时间，此首页重复的问题对网站的影响倒不大。但是我还是无法理解这种设计，希望<code>vercel</code>能够在后续改进下。</p>
+</li>
+<li>
+<p>由于本站使用了<code>hugo 0.61.0</code>构建，所以添加了<code>vercel.json</code>配置<code>hugo</code>版本，同时在页面配置中指定了构建命令<code>hugo --gc &amp;&amp; node _tools/newpostcheck.js</code>，这样在构建的时候可以触发<a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">新文章浏览器推送通知</a>的功能。</p>
+</li>
+<li>
+<p>网站测速结果。测速结果来自<code>17ce.com/boce.com/ce8.com</code>。</p>
+</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/96368bb8-c705-514c-2ef0-b3b350d82d70.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/0429775b-f261-018a-744a-82c7bca3672f.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/a07e54ac-cd6a-142f-ec74-d54110f95af0.png" alt="" layout="fill"></amp-img></div></p>
+<p><strong><span style="color:red">以下是旧文，仅供参考</span></strong></p>
+<hr>
+<p><a href="https://www.bmpi.dev/">构建我的被动收入</a>网站部署在<code>Netlify CDN</code>上，我在<a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">零成本搭建现代博客之加载速度优化篇</a>这篇文章中对它做了大量的基础技术性加载速度优化。最终达到在 <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.bmpi.dev%2F&amp;hl=en&amp;tab=desktop">Google PageSpeed Insights
+</a> 上PC端98分的评分:</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/e3402768-d1c4-dcfa-0674-051ebeb874e4.png" alt="" layout="fill"></amp-img></div></p>
+<p>但是由于<code>Netlify CDN</code>在国内的访问速度并不好，导致国内用户访问速度非常的慢，甚至不可用。为了优化国内的访问速度，需要通过<code>CDN</code>给国内用户加速。</p>
+<h2 id="博客架构">博客架构</h2>
+<p>为了更好的分析这个问题，我画了本博客的网络架构图：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/b35c877d-7bdd-aed8-afb2-b968a2a2002b.png" alt="" layout="fill"></amp-img></div></p>
+<h3 id="优化前">优化前</h3>
+<ul>
+<li>Step 1.1: 本地写完文章后，推送到 <a href="https://github.com/bmpi-dev/bmpi.dev">BMPI.dev GitHub Repository</a>。</li>
+<li>Step 1.2: <a href="https://www.netlify.com/">Netlify</a> 在检测到 <code>GitHub</code> 推送的<code>Commit</code>后，触发<code>Deploy</code>流水线，把此次变更发布自动上线。
+<div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/c2be44e4-f78d-e7c6-a6df-f6c2b841118b.png" alt="" layout="fill"></amp-img></div></li>
+<li>Step 2.1: 本博客的<code>DNS</code>解析托管在<code>AWS Route53</code>服务上，当用户请求<code>https://www.bmpi.dev</code>，浏览器在解析过程中根据默认的配置找到了<code>Netlify CDN</code>地址，最终获取到了网站内容。</li>
+</ul>
+<h3 id="问题分析">问题分析</h3>
+<p>国内用户访问网站慢的原因是，国内电信出口链路到<code>Netlify CDN</code>最近的边缘节点(<code>新加坡digitalocean</code>)延迟高，可能是其节点对国内链路没有做优化。</p>
+<p>如果能使用支持国内网络的<code>CDN</code>或针对国内链路做优化的国际<code>CDN</code>，则能提高国内用户的访问加载速度，根据这篇<a href="https://www.bilibili.com/read/cv4759943/">提升你的外国服务器网站国内访问速度</a>里提到的：</p>
+<blockquote>
+<p>利用阿里云海外CDN，中国访客大部分会解析到亚太一区节点，而亚太一区CDN节点到中国大陆的线路大部分都经过了优化（香港节点和新加坡节点为<a href="https://zhuanlan.zhihu.com/p/68381011">三网GIA</a>），而节点到源站服务器的线路又没有经过我国运营商国际出口，没有审查所以速度本来就不会太慢。</p>
+</blockquote>
+<p>那么可以通过给网站配置<code>阿里云CDN</code>，在<code>AWS Route53</code>配置基于<code>地理位置</code>的<code>DNS</code>路由策略，将国内的请求转发至<code>阿里云CDN</code>，将国外的请求转发至<code>Netlify CDN</code>。如下图的<code>DNS</code>配置：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/3ab55443-fe2d-5fcd-1abd-3d094d9a6231.png" alt="" layout="fill"></amp-img></div></p>
+<p>考虑到备案的复杂性（内容审查及流程繁琐），我使用了<code>阿里云CDN全球（不含中国）</code>的加速配置（只要加速地区包含中国，所加速的域名必须做备案，但是本博客的域名托管至国外且顶级域名为<code>dev</code>，这种小众域名在国内还<a href="http://xn--eqrt2g.xn--vuq861b/">不能备案</a>），国内用户的请求最终由阿里云新加坡节点服务，而阿里云新加坡的节点到国内相比<code>Netlify CDN</code>是做过链路优化的。</p>
+<h3 id="优化后">优化后</h3>
+<p>如博客架构图所示，加入了红框中的<code>Step 2.3</code>后，我们可以基于<code>DNS</code>路由策略将不同区域的用户请求转发至不同的<code>CDN</code>。</p>
+<h2 id="优化过程">优化过程</h2>
+<ol>
+<li>
+<p>配置阿里云CDN。具体过程见<a href="https://www.bilibili.com/read/cv4759943/">提升你的外国服务器网站国内访问速度</a>。<strong>必须注意加速域名不能和源站域名相同，所以需要在Netlify上重新部署一个相同的网站(网址不同)作为CDN源站，同时需要考虑屏蔽爬虫爬取CDN源站，防止内容重复。考虑到此网址未公开，搜索引擎无法通过其他网址爬取此网址，所以不做爬虫屏蔽也可以。</strong></p>
+</li>
+<li>
+<p>需要在DNS配置基于位置的路由策略。中国区流量分配至<code>阿里云CDN</code>，其他默认流量分配给<code>Netlify CDN</code>。</p>
+</li>
+<li>
+<p><code>HTTPS证书</code>。需手动在阿里云上申请免费证书给<code>CDN域名</code>使用，同时下载此证书配置给<code>Netlify</code>使用。过期前需要重新申请证书并更新。</p>
+</li>
+<li>
+<p><code>HTTPS加速</code>。如下图所示，<code>HTTPS</code>中<code>TLS</code>的加解密是个耗时的过程，更不要说浏览器还需要校验证书的合法性。在这篇<a href="https://kalasearch.cn/blog/high-performance-nginx-tls-tuning/">高性能 Nginx HTTPS 调优 - 如何为 HTTPS 提速 30%</a>中，提到了一些优化<code>HTTPS</code>的手段，这些优化的设置在<code>阿里云CDN</code>中都可以设置。</p>
+</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/f14027df-6283-3dad-1f7e-2c49bdc1c145.png" alt="" layout="fill"></amp-img></div></p>
+<ul>
+<li>开启<code>HTTP/2</code>: HTTP/2 中可以在一个连接中进行并行多个请求。</li>
+<li>调整<code>Cipher</code>优先级: 尽量挑选更新更快的 Cipher，有助于减少延迟。</li>
+<li>启用<code>OCSP Stapling</code>: 忽略证书验证，能加快与网站连接速度。</li>
+<li>调整<code>ssl_buffer_size</code>: 如果是<code>Rest API</code>服务器，则有必要调整小此值。</li>
+<li>启用<code>SSL Session</code>缓存: 启用<code>SSL Session</code>缓存可以大大减少<code>TLS</code>的反复验证，减少<code>TLS</code>握手的 roundtrip。</li>
+</ul>
+<p>在<code>阿里云CDN</code>中可做如下设置优化：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/ef49c333-0d2c-68bb-7f94-fcfb63f701e8.png" alt="" layout="fill"></amp-img></div></p>
+<ol start="5">
+<li>测试不同地区用户访问的<code>CDN</code>：</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/a5107ab6-2b01-37f5-9e47-6b239c77176f.png" alt="" layout="fill"></amp-img></div></p>
+<p>如果响应头里看到<code>server: Netlify</code>，则请求是到<code>Netlify CDN</code>的。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/dcfab9dd-233d-fb9e-43f5-6038ecf45836.png" alt="" layout="fill"></amp-img></div></p>
+<p>如果看到<code>server: Tengine</code>，则请求是到<code>阿里云CDN</code>的。</p>
+<ol start="6">
+<li><a href="https://www.17ce.com/">网站线路测速</a>:</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/a5ce7b4b-8530-bec5-14ff-8b295cbeefc5.png" alt="" layout="fill"></amp-img></div></p>
+<p>看起来国内不同地区访问速度相差还是挺大的，考虑到测速网站本身的机房网络问题，与实际用户访问的速度差异估计不同。</p>
+<p><code>阿里云CDN</code>国内用户访问不同地区的平均响应时间：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/9fd9b60d-593c-841e-8656-d571e917a760.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="总结">总结</h2>
+<p>经过此番优化，最终本站获得了如下的优势：</p>
+<ul>
+<li>网站源内容在国外<code>CDN</code>托管；</li>
+<li>域名在国外<code>AWS Route53</code>托管；</li>
+<li>网站无需备案与内容审查；</li>
+<li>国内用户请求至<code>阿里云新加坡CDN</code>，国外用户直接请求至<code>Netlify CDN</code>；</li>
+<li>爬虫不会受到影响，经测速百度爬虫请求的还是<code>Netlify CDN</code>；</li>
+<li>双站部署对SEO没有影响，<code>阿里云CDN</code>请求的<code>Netlify</code>源站网址没有公开，不会被爬虫爬取到；</li>
+<li>HTTPS加速（通过<a href="https://help.aliyun.com/document_detail/109894.html">阿里云CDN配置</a>）。</li>
+</ul>
+<p><strong>如果你所在的地区访问速度特别慢的话，可以留言告知我。</strong></p>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

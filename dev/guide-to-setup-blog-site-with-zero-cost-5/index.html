@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="网站部署国外又不想备案，国内访问速度太慢怎么办？本文教你优化国外部署网站在国内的访问速度。">
+  
+  
+  <meta name="keywords" content="独立博客、加载速度优化、CDN、阿里云、境外网站国内访问速度优化、HTTPS加速">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="零成本搭建现代博客之优化国内访问速度"/>
+  <meta name="twitter:description" content="网站部署国外又不想备案，国内访问速度太慢怎么办？本文教你优化国外部署网站在国内的访问速度。"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="零成本搭建现代博客之优化国内访问速度" />
+<meta property="og:description" content="网站部署国外又不想备案，国内访问速度太慢怎么办？本文教你优化国外部署网站在国内的访问速度。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2020-12-26T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-22T21:01:13&#43;08:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "零成本搭建现代博客之优化国内访问速度",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2020-12-26T00:00:00Z",
+      "dateModified": "2021-01-22T21:01:13+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "网站部署国外又不想备案，国内访问速度太慢怎么办？本文教你优化国外部署网站在国内的访问速度。",
+      "keywords": ["独立博客", "个人博客", "技术博客", "加载速度优化", "CDN", "阿里云", "境外网站国内访问速度优化", "HTTPS加速"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">
+  
+  <title>
+  零成本搭建现代博客之优化国内访问速度 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/dev/guide-to-setup-blog-site-with-zero-cost-5/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">零成本搭建现代博客之优化国内访问速度</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-12-26T00:00:00Z'>
+                2020-12-26
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              14:3
+              
+            </span>
+            
+            <span class="post-word-count"> | 3094 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/">加载速度优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/cdn/">CDN</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">阿里云</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%A2%83%E5%A4%96%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/">境外网站国内访问速度优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/https%E5%8A%A0%E9%80%9F/">HTTPS加速</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <blockquote>
+<p>本文属于<a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a>系列第五篇【优化国内访问速度篇】。</p>
+</blockquote>
+<p><strong><span style="color:red">更新自2020年12月29日</span></strong></p>
+<hr>
+<p>在V2EX发了该篇文章的帖子<a href="https://www.v2ex.com/t/739279">优化托管在国外博客的国内访问速度</a>后，一些回复中多次提到使用 <a href="https://vercel.com/">vercel</a> 部署的站在国内访问速度很快，而阿里云会产生如下问题：</p>
+<blockquote>
+<p>阿里云国际版 CDN 就算你解析到香港或者新加坡这种带 CN2 地方，CDN 的 IP 过几天就会被墙，阿里可不会因为 IP 被墙而换 IP，毕竟没有保证CDN国外节点能够在国内访问。而且你现在还没手动解析到带 CN2 的 IP，现在命中的阿里 CDN 新加坡的路由简直可以说是绕了地球一圈。（电信测试）（@mason961125）</p>
+</blockquote>
+<p>帖子回复中很多电信用户根本打不开网站，经路由测试某些地区是绕了一大圈，甚至到欧洲后再转发到新加坡，经过一番测试后我决定把网站迁移至 <code>vercel</code>。也考虑过 <a href="https://www.cloudflare.com/zh-cn/">cloudflare CDN</a> ，虽然速度在国内挺一般，但是比<code>阿里云 CDN</code>要快。最终因为<code>cloudflare</code>要求必须托管域名的<code>DNS</code>，而我的域名托管至<code>AWS Route53</code>，此域名设置了很多其他的<code>DNS</code>记录，迁移起来成本过高，还涉及到证书的问题，所以放弃了。</p>
+<h2 id="博客迁移至-vercel-过程">博客迁移至 vercel 过程</h2>
+<ol>
+<li>
+<p>本博客仓库部署在 <a href="https://github.com/bmpi-dev/bmpi.dev">bmpi-dev/bmpi-dev</a>，而<code>vercel</code>要求个人用户的仓库必须来自个人用户，所以我只能 fork 至我的个人仓库 <a href="https://github.com/madawei2699/bmpi.dev">madawei2699/bmpi.dev</a> 部署。考虑到一些原仓库有一些链接已经在使用了，所以我做了两个仓库间自动同步，具体可见此 <a href="https://github.com/madawei2699/sync-repo-actions">GitHub Actions</a>，之后以个人仓库为主仓库推送代码。</p>
+</li>
+<li>
+<p>域名<code>DNS</code>修改。在<code>vercel</code>设置好域名后，它会自动申请<code>HTTPS证书</code>，之后在<code>AWS Route53</code>将<code>DNS</code>的<code>CNAME</code>指向其配置记录即可。同时需要做一些主域名跳转至<code>www</code>域名的设置，还有强制浏览器使用<code>HTTPS</code>等设置。<code>vercel</code>默认还启用了<code>OCSP Stapling</code> (可忽略证书校验，加速网站 HTTPS 访问)。</p>
+</li>
+<li>
+<p>对<code>SEO</code>的影响。<code>vercel</code>在每次部署后都会生成一个随机预览链接，这个链接在请求响应里已经做了<code>x-robots-tag: noindex</code>，提示<code>Google爬虫</code>不要索引此页面，这点是很好的。但是它默认还给了两个域名链接，并且每次在<code>git commit</code>中评论附上此链接，而这个两个链接并没有<code>noindex</code>的设置，爬虫会直接索引此页面，进一步导致内容重复的问题。考虑到我的主站已经被<code>Google</code>索引了一段时间，此首页重复的问题对网站的影响倒不大。但是我还是无法理解这种设计，希望<code>vercel</code>能够在后续改进下。</p>
+</li>
+<li>
+<p>由于本站使用了<code>hugo 0.61.0</code>构建，所以添加了<code>vercel.json</code>配置<code>hugo</code>版本，同时在页面配置中指定了构建命令<code>hugo --gc &amp;&amp; node _tools/newpostcheck.js</code>，这样在构建的时候可以触发<a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">新文章浏览器推送通知</a>的功能。</p>
+</li>
+<li>
+<p>网站测速结果。测速结果来自<code>17ce.com/boce.com/ce8.com</code>。</p>
+</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/96368bb8-c705-514c-2ef0-b3b350d82d70.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/0429775b-f261-018a-744a-82c7bca3672f.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/a07e54ac-cd6a-142f-ec74-d54110f95af0.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><strong><span style="color:red">以下是旧文，仅供参考</span></strong></p>
+<hr>
+<p><a href="https://www.bmpi.dev/">构建我的被动收入</a>网站部署在<code>Netlify CDN</code>上，我在<a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">零成本搭建现代博客之加载速度优化篇</a>这篇文章中对它做了大量的基础技术性加载速度优化。最终达到在 <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.bmpi.dev%2F&amp;hl=en&amp;tab=desktop">Google PageSpeed Insights
+</a> 上PC端98分的评分:</p>
+<p><img data-src="https://img.bmpi.dev/e3402768-d1c4-dcfa-0674-051ebeb874e4.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>但是由于<code>Netlify CDN</code>在国内的访问速度并不好，导致国内用户访问速度非常的慢，甚至不可用。为了优化国内的访问速度，需要通过<code>CDN</code>给国内用户加速。</p>
+<h2 id="博客架构">博客架构</h2>
+<p>为了更好的分析这个问题，我画了本博客的网络架构图：</p>
+<p><img data-src="https://img.bmpi.dev/b35c877d-7bdd-aed8-afb2-b968a2a2002b.png" alt="" class="lazyload" loading="lazy"/></p>
+<h3 id="优化前">优化前</h3>
+<ul>
+<li>Step 1.1: 本地写完文章后，推送到 <a href="https://github.com/bmpi-dev/bmpi.dev">BMPI.dev GitHub Repository</a>。</li>
+<li>Step 1.2: <a href="https://www.netlify.com/">Netlify</a> 在检测到 <code>GitHub</code> 推送的<code>Commit</code>后，触发<code>Deploy</code>流水线，把此次变更发布自动上线。
+<img data-src="https://img.bmpi.dev/c2be44e4-f78d-e7c6-a6df-f6c2b841118b.png" alt="" class="lazyload" loading="lazy"/></li>
+<li>Step 2.1: 本博客的<code>DNS</code>解析托管在<code>AWS Route53</code>服务上，当用户请求<code>https://www.bmpi.dev</code>，浏览器在解析过程中根据默认的配置找到了<code>Netlify CDN</code>地址，最终获取到了网站内容。</li>
+</ul>
+<h3 id="问题分析">问题分析</h3>
+<p>国内用户访问网站慢的原因是，国内电信出口链路到<code>Netlify CDN</code>最近的边缘节点(<code>新加坡digitalocean</code>)延迟高，可能是其节点对国内链路没有做优化。</p>
+<p>如果能使用支持国内网络的<code>CDN</code>或针对国内链路做优化的国际<code>CDN</code>，则能提高国内用户的访问加载速度，根据这篇<a href="https://www.bilibili.com/read/cv4759943/">提升你的外国服务器网站国内访问速度</a>里提到的：</p>
+<blockquote>
+<p>利用阿里云海外CDN，中国访客大部分会解析到亚太一区节点，而亚太一区CDN节点到中国大陆的线路大部分都经过了优化（香港节点和新加坡节点为<a href="https://zhuanlan.zhihu.com/p/68381011">三网GIA</a>），而节点到源站服务器的线路又没有经过我国运营商国际出口，没有审查所以速度本来就不会太慢。</p>
+</blockquote>
+<p>那么可以通过给网站配置<code>阿里云CDN</code>，在<code>AWS Route53</code>配置基于<code>地理位置</code>的<code>DNS</code>路由策略，将国内的请求转发至<code>阿里云CDN</code>，将国外的请求转发至<code>Netlify CDN</code>。如下图的<code>DNS</code>配置：</p>
+<p><img data-src="https://img.bmpi.dev/3ab55443-fe2d-5fcd-1abd-3d094d9a6231.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>考虑到备案的复杂性（内容审查及流程繁琐），我使用了<code>阿里云CDN全球（不含中国）</code>的加速配置（只要加速地区包含中国，所加速的域名必须做备案，但是本博客的域名托管至国外且顶级域名为<code>dev</code>，这种小众域名在国内还<a href="http://xn--eqrt2g.xn--vuq861b/">不能备案</a>），国内用户的请求最终由阿里云新加坡节点服务，而阿里云新加坡的节点到国内相比<code>Netlify CDN</code>是做过链路优化的。</p>
+<h3 id="优化后">优化后</h3>
+<p>如博客架构图所示，加入了红框中的<code>Step 2.3</code>后，我们可以基于<code>DNS</code>路由策略将不同区域的用户请求转发至不同的<code>CDN</code>。</p>
+<h2 id="优化过程">优化过程</h2>
+<ol>
+<li>
+<p>配置阿里云CDN。具体过程见<a href="https://www.bilibili.com/read/cv4759943/">提升你的外国服务器网站国内访问速度</a>。<strong>必须注意加速域名不能和源站域名相同，所以需要在Netlify上重新部署一个相同的网站(网址不同)作为CDN源站，同时需要考虑屏蔽爬虫爬取CDN源站，防止内容重复。考虑到此网址未公开，搜索引擎无法通过其他网址爬取此网址，所以不做爬虫屏蔽也可以。</strong></p>
+</li>
+<li>
+<p>需要在DNS配置基于位置的路由策略。中国区流量分配至<code>阿里云CDN</code>，其他默认流量分配给<code>Netlify CDN</code>。</p>
+</li>
+<li>
+<p><code>HTTPS证书</code>。需手动在阿里云上申请免费证书给<code>CDN域名</code>使用，同时下载此证书配置给<code>Netlify</code>使用。过期前需要重新申请证书并更新。</p>
+</li>
+<li>
+<p><code>HTTPS加速</code>。如下图所示，<code>HTTPS</code>中<code>TLS</code>的加解密是个耗时的过程，更不要说浏览器还需要校验证书的合法性。在这篇<a href="https://kalasearch.cn/blog/high-performance-nginx-tls-tuning/">高性能 Nginx HTTPS 调优 - 如何为 HTTPS 提速 30%</a>中，提到了一些优化<code>HTTPS</code>的手段，这些优化的设置在<code>阿里云CDN</code>中都可以设置。</p>
+</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/f14027df-6283-3dad-1f7e-2c49bdc1c145.png" alt="" class="lazyload" loading="lazy"/></p>
+<ul>
+<li>开启<code>HTTP/2</code>: HTTP/2 中可以在一个连接中进行并行多个请求。</li>
+<li>调整<code>Cipher</code>优先级: 尽量挑选更新更快的 Cipher，有助于减少延迟。</li>
+<li>启用<code>OCSP Stapling</code>: 忽略证书验证，能加快与网站连接速度。</li>
+<li>调整<code>ssl_buffer_size</code>: 如果是<code>Rest API</code>服务器，则有必要调整小此值。</li>
+<li>启用<code>SSL Session</code>缓存: 启用<code>SSL Session</code>缓存可以大大减少<code>TLS</code>的反复验证，减少<code>TLS</code>握手的 roundtrip。</li>
+</ul>
+<p>在<code>阿里云CDN</code>中可做如下设置优化：</p>
+<p><img data-src="https://img.bmpi.dev/ef49c333-0d2c-68bb-7f94-fcfb63f701e8.png" alt="" class="lazyload" loading="lazy"/></p>
+<ol start="5">
+<li>测试不同地区用户访问的<code>CDN</code>：</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/a5107ab6-2b01-37f5-9e47-6b239c77176f.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>如果响应头里看到<code>server: Netlify</code>，则请求是到<code>Netlify CDN</code>的。</p>
+<p><img data-src="https://img.bmpi.dev/dcfab9dd-233d-fb9e-43f5-6038ecf45836.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>如果看到<code>server: Tengine</code>，则请求是到<code>阿里云CDN</code>的。</p>
+<ol start="6">
+<li><a href="https://www.17ce.com/">网站线路测速</a>:</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/a5ce7b4b-8530-bec5-14ff-8b295cbeefc5.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>看起来国内不同地区访问速度相差还是挺大的，考虑到测速网站本身的机房网络问题，与实际用户访问的速度差异估计不同。</p>
+<p><code>阿里云CDN</code>国内用户访问不同地区的平均响应时间：</p>
+<p><img data-src="https://img.bmpi.dev/9fd9b60d-593c-841e-8656-d571e917a760.png" alt="" class="lazyload" loading="lazy"/></p>
+<h2 id="总结">总结</h2>
+<p>经过此番优化，最终本站获得了如下的优势：</p>
+<ul>
+<li>网站源内容在国外<code>CDN</code>托管；</li>
+<li>域名在国外<code>AWS Route53</code>托管；</li>
+<li>网站无需备案与内容审查；</li>
+<li>国内用户请求至<code>阿里云新加坡CDN</code>，国外用户直接请求至<code>Netlify CDN</code>；</li>
+<li>爬虫不会受到影响，经测速百度爬虫请求的还是<code>Netlify CDN</code>；</li>
+<li>双站部署对SEO没有影响，<code>阿里云CDN</code>请求的<code>Netlify</code>源站网址没有公开，不会被爬虫爬取到；</li>
+<li>HTTPS加速（通过<a href="https://help.aliyun.com/document_detail/109894.html">阿里云CDN配置</a>）。</li>
+</ul>
+<p><strong>如果你所在的地区访问速度特别慢的话，可以留言告知我。</strong></p>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              4个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/5750fdef29285eb60bd558bc0522244f1fb90224">5750fde</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/">基于Serverless实现静态博客访问统计功能</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">零成本搭建现代博客之加载速度优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">零成本搭建现代博客之订阅推送篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">零成本搭建现代博客之SEO优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">零成本搭建现代博客之搭建篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

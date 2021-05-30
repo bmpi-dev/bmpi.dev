@@ -1,0 +1,35 @@
+@startmindmap
+skinparam monochrome true
++ 学习
+++ 输出
++++ 收集整理
+++++ Notion
+++++ 笔记Wiki
++++ 文章写作
+++++ 博客
+++++ 微信公众号
+++++ 知乎
++++ 社交媒体
+++++ Twitter
+++++ 电报
+++++ V2EX
+++++ 雪球
++++ 个人项目
+++++ GitHub
+++++ 产品/工具/网站
++++ 视频
+++++ Youtube
+++++ Bilibili
+-- 输入
+--- 阅读
+---- 实体书
+---- 电子书(微信读书)
+---- 微信公众号
+---- 博客文章(搜索/邮件列表)
+--- 交流
+---- 社区(elixir/seo/serverless/aws)
+---- 电报/微信群
+--- 其他
+---- 播客(Podcast)
+---- 培训
+@endmindmap

@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="本文介绍了使用GitHub Pages以及Hexo工具打造个人优化高效的写作系统">
+  
+  
+  <meta name="keywords" content="写作系统, Hexo, GitHub Pages, 图床">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="打造优雅高效的写作环境"/>
+  <meta name="twitter:description" content="本文介绍了使用GitHub Pages以及Hexo工具打造个人优化高效的写作系统"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="打造优雅高效的写作环境" />
+<meta property="og:description" content="本文介绍了使用GitHub Pages以及Hexo工具打造个人优化高效的写作系统" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/self/build-write-tool-v1/" /><meta property="article:section" content="self" />
+<meta property="article:published_time" content="2016-06-26T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-22T21:01:13&#43;08:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "打造优雅高效的写作环境",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2016-06-26T00:00:00Z",
+      "dateModified": "2021-01-22T21:01:13+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/self/build-write-tool-v1/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "本文介绍了使用GitHub Pages以及Hexo工具打造个人优化高效的写作系统",
+      "keywords": ["写作系统", "Hexo", "GitHub Pages", "图床"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/self/build-write-tool-v1/">
+  
+  <title>
+  打造优雅高效的写作环境 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/self/build-write-tool-v1/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/self/build-write-tool-v1/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">打造优雅高效的写作环境</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2016-06-26T00:00:00Z'>
+                2016-06-26
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              22:9
+              
+            </span>
+            
+            <span class="post-word-count"> | 4873 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E5%86%99%E4%BD%9C%E7%B3%BB%E7%BB%9F/">写作系统</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/hexo/">Hexo</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/github-pages/">GitHub Pages</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%9B%BE%E5%BA%8A/">图床</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <p>写作是一件很有趣的事情，长期形成良好的写作习惯可以帮助我们有条理的处理解决问题，同时给人生留下点回忆也不错。在我们很小的时候也许就有记日记的习惯，大脑的记忆量毕竟很有限，所以我们用纸和笔来记东西，但是传统的纸和笔存在很大的问题，无法长久的保存东西。进入互联网时代后我们有了很多选择，各类网站博客、专栏、微博、公众号等可以让我们写作的地方，但是这些都无法解决以下几个问题。</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<ol>
+<li>排版。编辑器不支持Markdown语法。每次看到那种糟糕的排版都让人没有看的欲望了。很多宝贵的时间都浪费到排版上了。</li>
+<li>版本管理。如果有多个版本常规的博客只能你自己来保存了，一旦出错就很难回到之前的版本了。</li>
+<li>难以长期保存。诸如网站关闭或者电脑损坏丢失都会导致之前的资料丢失，资料很难长期保存。</li>
+<li>网站难看。很多网站博客只提供一些难看的主题，你很难定制好看的主题，大部分这些难看的主题对移动终端还不友好。</li>
+<li>文章发布流程繁琐。很多网站的编辑写作界面都很糟糕，发布起来还很麻烦，如果能通过简单的命令就可以发布上去是多么优雅的事情。</li>
+<li>不支持自定义域名。难以个性化的域名很难体现个人的品牌。</li>
+<li>受限的写作环境。一些网站为了通过政府部门的内容审查，你写的内容很可能不经意被强制删除，总之在别人的地盘上你的东西不一定是你的。
+以上就是可能存在的几个问题，我理想的写作环境应该是可以解决上述几个问题的，下面我通过几步来打造一个专属于我们自己的优雅的写作发布环境。</li>
+</ol>
+<h2 id="环境搭建">环境搭建</h2>
+<h3 id="博客系统hexo--主题next">博客系统（Hexo） &amp; 主题（Next）</h3>
+<p>首先我们需要一个博客系统，目前市场上存在很多完整的博客系统：如Wordpress或一些CMS系统等，但是这些系统都太大，很臃肿。我们需要一个轻量级别的博客系统，并且能配合GitHub Pages来管理我们的文章及相关信息。Hexo就是一个满足我们需求的博客系统。
+在Mac下通过命令行安装：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install hexo-cli -g
+hexo init blog
+<span style="color:#fff;font-weight:bold">cd</span> blog
+npm install
+hexo server
+</code></pre></div><blockquote>
+<p>如果是Windows或者Linux系统也可以通过如下命令来安装，Windows系统需要提前安装好NPM软件包，安装流程可以通过Google或者官方文档来查看。</p>
+</blockquote>
+<p>这时候你已经部署好了Hexo博客系统，并且初始化好了博客系统所需的文件，blog就是你的博客根目录。这时候我们需要安装一款名为Next的主题，这个主题也是本博客目前使用的主题，你也可以选择你自己喜欢的主题。Next主题很强大，响应式设计并且支持很多第三方服务的特性，这个大家可以通过官网Hexo来查看。</p>
+<p>经过Next主题官方文档的指导后，相信你已经配置好了该主题。那目前我们已经完成了博客系统和主题的配置，接下来需要把博客系统发布到互联网上，这样所有人就可以来访问我们的博客了。</p>
+<h3 id="系统部署github-pages">系统部署（GitHub Pages）</h3>
+<p>如果是传统的个人博客的话，一般需要租一台在线的VPS系统或者空间来存放我们的软件，但是这样你需要操心很多事情了，不仅需要自己维护服务器，还需要每月付费供养服务器，比较麻烦。我们有更好更优雅的方式，就是通过GitHub Pages来存放我们的博客系统。具体安装介绍可以看官网GitHub Pages。</p>
+<p>为什么我们需要GitHub Pages来部署我们的系统，一方面是因为GitHub Pages是免费的，很多服务器的维护都不需要你操心，更重要的一方面是你可以用Git来管理你的博客，通过几条简单的命令就可以发布、回滚之前版本来管理你的博客网站。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add --all
+~$git commit -m <span style="color:#0ff;font-weight:bold">&#34;Initial commit&#34;</span>
+~$git push -u origin master
+</code></pre></div><p>上面的命令就是在你的blog目录里面操作的，一旦你注册好了一个GitHub帐号后，在上面建立一个仓库（repository）后，在你计算上设置好SSH Key来打通和GitHub仓库的通道后，你就可以通过上述几条命令来把你本地的代码上传同步到仓库里面去。用人话讲就是，你通过那几条命令把你的网站上传到GitHub的网站上去了。然后你可以访问： <a href="http://username.github.io">http://username.github.io</a> ，这网址就是你的博客地址，需要把里面的username替换为你的GitHub账户名。</p>
+<h3 id="域名绑定">域名绑定</h3>
+<p>毕竟 <a href="http://username.github.io">http://username.github.io</a> 这种域名无法体现我们对逼格，可以在Godaddy或者万网注册一个域名去，可以以你的名字来注册，一般短的都注册不到了。万网的域名如果托管到阿里云到话需要备案，至于备案流程的话阿里云会有相关的流程帮你做，大概需要半个月之久。备案后我们可以在域名管理里把域名解析到 <a href="http://username.github.io">http://username.github.io</a> ，如果觉得万网的DNS不好的话可以把DNS解析放到DNSNode上面去，然后在里面设置CNAME子域名。</p>
+<p><img data-src="https://img.bmpi.dev/51239c3c-dddc-1fd7-b54d-72e5f7328f29.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>然后在blog目录里面的source目录下新建一个CNAME文件，文件内容就是你自己的域名。</p>
+<p><img data-src="https://img.bmpi.dev/da244afe-1bac-0063-b0a0-70cd5cb2535e.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>这样你可以直接访问你的域名就可以访问你的博客了。实际上做了一次跳转。</p>
+<h3 id="运营统计">运营统计</h3>
+<p>接下来我们需要对博客和主题进行一些配置，以达到更好的一些效果，比如评论分享（多说）、文章阅读次数（LeanCloud）、文章分类标签、侧边栏的设置、第三方服务的配置（Google Webmaster &amp; Analytics、腾讯站点分析）。这方面可以看Next主题的配置文档。
+大概说下流程，评论可以在Next主题里面启用多说评论系统（你需要注册一个多说账户），文章阅读次数可以参考这篇文章。文章分类标签可以在用Hexo命令来新建分类和标签页面，这个可以参考Hexo官方文档，如果你想对主题CSS等文件进行一些修改后发现并没有效果的话，那可以先清空Hexo数据库和产生的文件。进入blog目录在命令行执行：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hexo clean <span style="color:#007f7f">#清空Hexo数据库和产生的文件</span>
+hexo d -g <span style="color:#007f7f">#重新产生博客文章并发布到GitHub，前提得在Hexo里配置好GitHub账户</span>
+</code></pre></div><p>侧边栏得配置可以在Next主题里面配置。第三方服务等都可以参考Next主题的配置文档。这样通过Google的Webmaster你可以把你的站点设置的对搜索引擎更友好，这样别人就可以方便的通过搜索引擎找到你的文章了，提高流量了。同时设置腾讯分析和Google Analytics可以让你很方便的了解网站的流量和访问情况等。腾讯分析可以每天或每周订阅网站统计分析报告。</p>
+<h2 id="写作发布">写作发布</h2>
+<p>搞定了烦人的环境配置后，我们开始了最重要的部分：写作！一切都是为了更优雅的写作。</p>
+<p>Markdown语法</p>
+<p>Hexo博客系统的写作方式很简单，通过Markdown语法来写作。首先让我们新建一个文章吧。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hexo new title <span style="color:#007f7f">#title是你的写作</span>
+hexo d -g <span style="color:#007f7f">#重新产生博客文章并发布到GitHub，前提得在Hexo里配置好GitHub账户</span>
+</code></pre></div><p>这样在blog/source/_post目录就产生一个title的md文件，这个文件就是我们要写作的，当然有个小麻烦在于你每次敲完命令都需要去找这个文件，我们可以通过以下的设置来让hexo系统自动用软件来给我们打开这个要写作的文件。首先在blog目前新建一个scripts的目录，然后在里面新建一个open-tools.js的文件，文件内容如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">var</span> exec = require(<span style="color:#0ff;font-weight:bold">&#39;child_process&#39;</span>).exec;
+<span style="color:#007f7f">// Hexo 3
+</span><span style="color:#007f7f"></span>hexo.on(<span style="color:#0ff;font-weight:bold">&#39;new&#39;</span>, <span style="color:#fff;font-weight:bold">function</span>(data){
+    exec(<span style="color:#0ff;font-weight:bold">&#39;open -a &#34;/Applications/Mou.app&#34; &#39;</span> + data.path);
+});
+</code></pre></div><p>这个文件的意思就是新建一篇文章后hexo会自动用Mou这个app来打开这个md文件，然后你就可以用Mou这个Markdown编辑软件来写作了。
+至于Markdown语法怎么搞，网上有很多教程，但是为了直观的给你一个感受，你可以看看我这篇文章的md文件，然后对比下输出的文章就大概理解Markdown的精髓了。</p>
+<p><img data-src="https://img.bmpi.dev/e1e841ef-4d74-34a5-8c74-801fcddb0592.png" alt="" class="lazyload" loading="lazy"/></p>
+<h3 id="编辑工具">编辑工具</h3>
+<p>目前我用Ulysses来书写Markdown文件。</p>
+<p><img data-src="https://img.bmpi.dev/60c0dc31-a5d3-a039-f17e-c16f4dd50e0a.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>写作发布流程</p>
+<p>在Mac打开iTerm终端</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd blog
+</code></pre></div><p>新建文章并用Mou编写文章内容</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hexo new title
+</code></pre></div><p>发布文章到GitHub Pages</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hexo d -g
+</code></pre></div><p>修改文章后继续执行第3步即可重新发布上去</p>
+<h3 id="版本管理">版本管理</h3>
+<p>如果我们想回到某一个写作版本的话也可以很方便的通过GitHub仓库里面进行回滚操作。每次当我们执行hexo d -g命令的时候实际上就是产生一个版本，你可以登陆到GitHub仓库里面看到每次提交的版本，当然这个仓库存放的是已经产生的Html文件，也就是在blog目录里面的public目录，这个目录的所有文件都会被发布到GitHub仓库里面去。但是source/_post目录里面存放的才是你真正的源文件，都是些md文件，那这些文件并没有被GitHub仓库管理，所以为了对这些源文件进行版本管理，你需要在GitHub新建一个仓库用来存放blog目录，blog目录里面有些文件并不需要发布到GitHub，这些不需要的文件你可以在.gitignore（存放在blog根目录下，如果没有你可以新建一个）里面写明，我的这个文件内容如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+</code></pre></div><p>这里面的node_modules目录里面放着一些node的模块，public目录存放着hexo产生的html文件（也就是你的博客）。当你部署好这个仓库后，你可以通过以下git命令来把你的博客系统发布GitHub仓库：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add . #把此次更改写入git缓存
+git commit -m &#34;some changes&#34; #把此次更改提交到本地库里去
+git push #把本地库更改同步到GitHub远程库里去
+git status #查看本地git库状态
+</code></pre></div><p>在这个库里你可以找到你写作源文件的所有发布的版本，当然也可以回滚到任意版本中去，相当简单方便。</p>
+<h3 id="图床">图床</h3>
+<p>当我们写作的时候，经常需要引用图片到文章里去，如果图片少的话我们可以直接把图片放入每篇文章的目录里面，然后发布到GitHub里去，但是这样会导致GitHub仓库变得越来越大，并且同步会非常慢。所以我们需要一个稳定强大长久的私人图床。一般小型网站的图床都不做考虑。</p>
+<p>新浪微博图床</p>
+<p><img data-src="https://img.bmpi.dev/e3706295-909d-5605-8c3f-1517eea78d1b.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>这个可以安装一个Chrome插件来实现（微博图床）。</p>
+<p>微博图床的优点就是自动给你产生不同尺寸的图片，还贴心的给你Markdown的语法，但是一个问题可能出在新浪微博屏蔽这种外链了，长期会有一些隐患的。</p>
+<h3 id="七牛云存储">七牛云存储</h3>
+<p>付费的存储空间里面七牛云存储稳定而且不错，免费认证的用户就有10GB存储空间，每月10G下载流量，足够博客用了。当你注册后建立一个新空间后，下载一个qrsync同步工具，可以很方便的把你本地的文件推送到七牛云存储空间里面，具体安装文档你可以看官方的说明文档，我这里贴出来这个工具的配置文档(conf.json)供你参考：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="font-weight:bold">&#34;src&#34;</span>:<span style="color:#0ff;font-weight:bold">&#34;your src dir&#34;</span>,
+    <span style="font-weight:bold">&#34;dest&#34;</span>:<span style="color:#0ff;font-weight:bold">&#34;qiniu:access_key=123&amp;secret_key=456&amp;bucket=789&#34;</span>,
+    <span style="font-weight:bold">&#34;debug_level&#34;</span>:  <span style="color:#ff0;font-weight:bold">1</span>
+}
+</code></pre></div><p>在这里把src替换成泥实际目录的绝对路径。dest里面替换access_key、secret_key及bucket。
+这样每当你在src目录里添加图片后，执行如下命令即可把src目录的文件推送到bucket里面。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">qrsync conf.json
+</code></pre></div><p>需要注意的是src目录里面不需要建立子目录，因为这个同步工具会忽略子目录，直接把文件全部放到src根目录即可。
+那怎么访问bucket里面的图片呢？每个存储空间都有一个域名，那任何一张图片访问的形式就是：http://七牛存储域名/xxx.jpg 。那么所有图片都可以这么调用外链。考虑到存储空间有流量的限制，为了防止别人调用你的图片，你可以在存储空间管理里面设置白名单，把你的域名添加进去即可，这样只有你的域名可以访问这个图片等外链了。
+如果你觉得七牛云存储无法长期存活的话，你可以把本地这个图片文件夹同步到OneDrive网盘里去，你甚至可以把所有的文件都放到OneDrive里面同步上去，这样几个地方互为备份，就可以长久的写下去了。</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<h3 id="优雅的写作环境">优雅的写作环境</h3>
+<p>这就是我觉得优雅的写作环境了，任何不懂编程的人也可以这么给自己搞一个长期写作的地方，你只需要花几十块钱买一个域名，剩下的都是免费的。除了环境搭建前期稍微有点复杂外，一旦环境搭建好后剩下的工作就很简单。
+你拥有了一个非常简单强大的写作环境，流程简单，只需要输入两条命令＋写一个MD文档，不需要麻烦的排版，也不需要麻烦的发布，图片等存储也是非常简单的，只需要一条同步命令即可在MD文档里访问图片地址。然后你就可以在任何地方访问你的博客了，各类文档都有几个地方互为备份（异地灾备），长期下去你写的东西都可以安全的存储、访问和搜索，同时有强大的版本管理，任何时候你都可以回滚到任意版本，不要担心出错。</p>
+<blockquote>
+<p>优雅的写作是为了更自由的表达自己。</p>
+</blockquote>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              4个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/5750fdef29285eb60bd558bc0522244f1fb90224">5750fde</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

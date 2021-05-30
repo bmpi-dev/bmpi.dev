@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="博客搭建好后，如何优化加载速度？本文告诉你答案">
+  
+  
+  <meta name="keywords" content="独立博客、加载速度优化、Chrome, Audits、webpagetest、图片优化、CDN、AMP、广告加载优化">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="零成本搭建现代博客之加载速度优化篇"/>
+  <meta name="twitter:description" content="博客搭建好后，如何优化加载速度？本文告诉你答案"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="零成本搭建现代博客之加载速度优化篇" />
+<meta property="og:description" content="博客搭建好后，如何优化加载速度？本文告诉你答案" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2020-04-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-22T21:01:13&#43;08:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "零成本搭建现代博客之加载速度优化篇",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2020-04-19T00:00:00Z",
+      "dateModified": "2021-01-22T21:01:13+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "博客搭建好后，如何优化加载速度？本文告诉你答案",
+      "keywords": ["独立博客", "个人博客", "技术博客", "加载速度优化", "Chrome Audits", "webpagetest", "图片优化", "CDN", "AMP", "广告加载优化"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">
+  
+  <title>
+  零成本搭建现代博客之加载速度优化篇 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/dev/guide-to-setup-blog-site-with-zero-cost-4/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">零成本搭建现代博客之加载速度优化篇</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-04-19T00:00:00Z'>
+                2020-04-19
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              10:8
+              
+            </span>
+            
+            <span class="post-word-count"> | 2231 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/">加载速度优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/chrome-audits/">Chrome Audits</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/webpagetest/">webpagetest</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96/">图片优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/cdn/">CDN</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/amp/">AMP</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%B9%BF%E5%91%8A%E5%8A%A0%E8%BD%BD%E4%BC%98%E5%8C%96/">广告加载优化</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <blockquote>
+<p>本文属于<a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a>系列第四篇【加载速度优化篇】。
+<img data-src="https://img.bmpi.dev/e4e1ee7e-2f99-972a-b691-07edeb0b4935.png" alt="" class="lazyload" loading="lazy"/>
+这个系列不少的东西需要你科学上网才能访问，也就是你需要一把<a href="https://www.bmpi.dev/affiliate">梯子</a>。</p>
+</blockquote>
+<p>个人博客搭建好后，如何优化加载速度？我们都知道如果一个网页在2至3秒还没有加载出来的话，用户因为焦虑就会关闭这个网页了。</p>
+<p>在<a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">《零成本搭建现代博客之SEO优化篇》</a>这篇文章里我们知道网站加载速度属于<a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E6%80%A7%E4%BC%98%E5%8C%96/">SEO技术性优化</a>很重要的一个方面。如何提高网站加载速度对获取流量来说是个很重要的环节。</p>
+<p>通过一个对Google的爬取规律观察，<strong>Google爬虫对新站一天大约爬半个小时，网站响应越慢，爬虫爬的速度也越慢</strong>。所以从网站被收录的角度看，提高网站加载速度也是很有必要的。</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<p>先说结果，本博客优化之前，Google PageSpeed Insights 在移动端的评分为76分：</p>
+<p><img data-src="https://img.bmpi.dev/aab2bb8f-60ca-f2da-cc00-b5d605c4779e.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>经过以下的一些方法优化后，移动端的评分为95分：</p>
+<p><img data-src="https://img.bmpi.dev/b171195b-d106-87cf-67ed-73889c9b6417.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><strong>Google搜索结果现在对移动端越来越重视了，用户在移动端上对网站加载速度的要求也越高，所以对移动端的加载速度优化要更重视一些。</strong></p>
+<h2 id="加载速度评估">加载速度评估</h2>
+<p>要想优化加载速度，我们首先要通过一些方法量化分析网站加载速度，这样才能更好的对加载速度进行优化。以下是常用的一些分析网站加载速度的工具。</p>
+<h3 id="google-pagespeed-insightshttpsdevelopersgooglecomspeedpagespeedinsights"><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></h3>
+<p><img data-src="https://img.bmpi.dev/tg_media/web_cpc-244.jpg" alt="" class="lazyload" loading="lazy"/></p>
+<p>PageSpeed是检测网站加载速度很重要的工具，它可以给予我们非常详细的优化点，从中可以发现拖慢网站的元凶。</p>
+<h3 id="chrome-auditslighthouse">Chrome Audits(Lighthouse)</h3>
+<p><img data-src="https://img.bmpi.dev/tg_media/web_cpc-249.jpg" alt="" class="lazyload" loading="lazy"/></p>
+<p>Chrome浏览器自带的Audits除了能让我们查看网站的加载速度，还可以查看网站最佳实践、可用性、SEO及PWA方面的评分及改进点。如果你的网站在这几方面评分都超过90分，那一定是Google在这几方面很喜欢的网站了。</p>
+<h3 id="webpagetesthttpswwwwebpagetestorg"><a href="https://www.webpagetest.org/">webpagetest</a></h3>
+<p><img data-src="https://img.bmpi.dev/tg_media/web_cpc-322.jpg" alt="" class="lazyload" loading="lazy"/></p>
+<p>webpagetest是<strong>非常强大</strong>的测试网站加载速度并深入分析网站资源加载速度的工具，还可以测试网站在不加载（屏蔽）某些资源的情况下网站加载速度与正常加载的对比，这样可以发现让网站加载速度变慢的资源或库。</p>
+<p>我在测试本站的时候曾保留了一份<a href="https://www.webpagetest.org/video/compare.php?tests=200216_D1_4561cee4859af5b0cb0dcb6740902455%2C200216_GB_ab54b9bcbb4ce9b55b3820a58a6d87fc&amp;thumbSize=100&amp;ival=100&amp;end=visual">测试报告</a>，最终通过这个工具定位到了让网站评分降低的原因。</p>
+<h3 id="用户反馈">用户反馈</h3>
+<p>有时候不同地区的加载速度是不同的，更麻烦的是你很难知道当地的网络情况，这时候就需要用户的反馈了。</p>
+<h2 id="加载速度优化">加载速度优化</h2>
+<h3 id="图片优化">图片优化</h3>
+<h4 id="图片大小优化">图片大小优化</h4>
+<p>在这篇<a href="https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/">《使用AWS Lambda提高网站图片加载速度1X倍》</a>，我使用了Webp这种新型的图片格式让网站在Chrome下图片加载速度提高了十倍多。</p>
+<p>优化图片大小非常重要，网站资源大头一般都是图片，图片太大会导致加载速度很慢，在手机端也很耗费用户的流量。一般可以通过对图片大小进行裁剪，对图片格式进行转换这些方式来降低图片大小。</p>
+<h4 id="图片懒加载">图片懒加载</h4>
+<p>在这篇<a href="https://web.dev/codelab-use-lazysizes-to-lazyload-images/">《Lazy load offscreen images with lazysizes》</a>中提到了使用图片懒加载来延迟图片加载时机。当用户浏览到某个区域的时候该区域的图片才会开始加载，并不会一次加载网页全部的图片，<a href="https://github.com/aFarkas/lazysizes">lazysizes</a>是一个对SEO友好的图片懒加载库，本站使用它实现图片懒加载。</p>
+<h3 id="前端资源优化">前端资源优化</h3>
+<p>网站的前端资源越来越大了，尤其是当你使用了很多第三方库的时候。</p>
+<blockquote>
+<p>用库一时爽，优化火葬场！</p>
+</blockquote>
+<p>如果想极大的提高网站加载速度，尽可能使用少的第三方库。</p>
+<h4 id="js和css优化">JS和CSS优化</h4>
+<p>在这篇<a href="https://web.dev/render-blocking-resources/">《Eliminate render-blocking resources》</a>中提到了如何识别非重要的CSS和JS代码，通过去除不需要的代码减小前端资源文件大小。</p>
+<h4 id="第三方库优化">第三方库优化</h4>
+<p>在这篇<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/">《Loading Third-Party JavaScript》</a>中提到了如何正确加载第三方包，通过分析第三方包的加载时序图来判断对加载速度影响最大的几个因素，从而帮助你优化第三方包的加载。</p>
+<h3 id="内容结构优化">内容结构优化</h3>
+<h4 id="加载更多">加载更多</h4>
+<p>一般对于瀑布流布局的网站，通过加载更多来降低每页返回的页面大小。不过这种方式对爬虫并不算友好，只有第一个页面可以被爬取到。</p>
+<h4 id="分页">分页</h4>
+<p>常规网站一般通过分页来控制每页返回的页面大小。分页页面通过设置唯一的 <a href="https://support.google.com/webmasters/answer/139066?hl=zh-Hans">canonical url</a> 可以让爬虫更好的爬取到分页页面。</p>
+<h3 id="cdn">CDN</h3>
+<p>本站使用了免费的 <a href="https://www.netlify.com/">netlify</a> 作为CDN来提高网站在不同地区的加载速度，CDN通过边缘服务器缓存来提高用户请求网页的速度，一般的CDN都会设置某个失效时间后自动去源站拉取最新的内容缓存到边缘服务器。</p>
+<p>你也可以选择诸如 <a href="https://aws.amazon.com/cn/cloudfront/">Amazon CloudFront</a> 与 <a href="https://www.cloudflare.com/">cloudflare</a> 这类CDN。还有一些特殊的比如具备反爬虫的CDN，如imperva收购的 <a href="https://www.imperva.com/products/bot-management/">distilnetworks</a> 就是很厉害的反爬虫CDN。</p>
+<h3 id="静态化技术">静态化技术</h3>
+<p>动态网站一般需要做一些查询数据库和页面渲染的额外工作，为了提高网站响应速度，一些框架可以自动生成静态化页面部署到CDN中来提高网站响应速度。比如本站使用了基于 <a href="https://gohugo.io/">Hugo</a> 的静态化技术框架，类似的还有 <a href="https://hexo.io/">Hexo</a>，这类技术都属于 <a href="https://jamstack.org/">JAMSTACK</a>，还有新型的 <a href="https://www.gatsbyjs.org/">gatsbyjs</a> 技术让我们更容易开发出更快的网站。</p>
+<h3 id="amphttpsampdev"><a href="https://amp.dev/">AMP</a></h3>
+<p>AMP是Google推出的Web组件框架，可以加速移动端的访问速度，比如你可以看看<a href="https://www.bmpi.dev/amp/dev/guide-to-setup-blog-site-with-zero-cost-4/">本篇文章的AMP</a>版本页面，在移动端访问速度是非常快的。</p>
+<h3 id="广告优化">广告优化</h3>
+<p>使用webpagetest研究本站前端资源的加载速度，最终发现让网站变慢的是Google Adsense广告资源。</p>
+<p>通过将广告延迟5秒展示加载的方式来提高页面访问速度，具体代码见 <a href="https://github.com/bmpi-dev/bmpi.dev/commit/a98beba8e14a4a75884c3ecfa3b9037469caae67">seo improve by delay google ads load</a>，此举将网站加载速度评分提升至90+了。但是测试后发现这种延迟广告展示的方式会降低广告收入😂。</p>
+<h2 id="总结">总结</h2>
+<p>在SEO技术性优化中，提升加载速度是很重要的一个方面，我们需要使用多种手段去降低页面返回的大小来提升网站的加载速度。而且在设计、开发与运营网站的全流程中，加载速度始终是各个环节都需要考虑的问题。本篇文章介绍的只是几个很简单的方面去提升，如果你有更好的方式，请留言交流，共同进步。</p>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              4个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/5750fdef29285eb60bd558bc0522244f1fb90224">5750fde</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/">基于Serverless实现静态博客访问统计功能</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">零成本搭建现代博客之优化国内访问速度</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">零成本搭建现代博客之订阅推送篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">零成本搭建现代博客之SEO优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">零成本搭建现代博客之搭建篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

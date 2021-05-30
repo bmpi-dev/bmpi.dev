@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南">
+  
+  
+  <meta name="keywords" content="Markdown,, 独立博客,, Hugo,, Netlify,, Github,, Namecheap,, AWS">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="零成本搭建现代博客之搭建篇"/>
+  <meta name="twitter:description" content="本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="零成本搭建现代博客之搭建篇" />
+<meta property="og:description" content="本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2020-02-29T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-02-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "零成本搭建现代博客之搭建篇",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2020-02-29T00:00:00Z",
+      "dateModified": "2020-02-29T00:00:00Z",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南",
+      "keywords": ["Markdown", "独立博客", "个人博客", "技术博客", "GitHub博客", "Hugo", "Netlify", "Github", "Namecheap", "AWS"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">
+  
+  <title>
+  零成本搭建现代博客之搭建篇 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/dev/guide-to-setup-blog-site-with-zero-cost-1/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">零成本搭建现代博客之搭建篇</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-02-29T00:00:00Z'>
+                2020-02-29
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              19:0
+              
+            </span>
+            
+            <span class="post-word-count"> | 4180 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/markdown/">Markdown</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/github%E5%8D%9A%E5%AE%A2/">GitHub博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/hugo/">Hugo</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/netlify/">Netlify</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/github/">Github</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/namecheap/">Namecheap</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/aws/">AWS</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <blockquote>
+<p>本文属于<a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a>系列第一篇【个人技术博客搭建篇】。
+<img data-src="https://img.bmpi.dev/3972bce0-19ad-3c31-78da-99b35aab1f8a.png" alt="" class="lazyload" loading="lazy"/>
+这个系列不少的东西需要你科学上网才能访问，也就是你需要一把<a href="https://www.bmpi.dev/affiliate">梯子</a>。</p>
+</blockquote>
+<h2 id="为什么要搭建自己的个人博客">为什么要搭建自己的个人博客</h2>
+<p>你可能会想，我们有知乎专栏、微信公众号、简书、头条号与百家号等等，为什么还要搭建一个博客呢？在自媒体的时代，个人博客看起来就像是一个古董一样老旧，不仅需要自己维护，还没有多少人阅读。</p>
+<p>一开始我也是这么想的，直到我经历了这些：</p>
+<p><img data-src="https://img.bmpi.dev/6c9080d7-473c-cace-8b20-9e704f8fe4d9.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/f2f0120a-9764-4a9b-f3fb-af48c5434861.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>毕竟在别人的地方上不自由，让我们还是花点时间搭建一个自己的网站吧！除了独立自由，自己的博客还有以下优点：</p>
+<ol>
+<li>个人品牌打造</li>
+<li>备份归档文章</li>
+<li>广告被动收入</li>
+</ol>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<h2 id="个人博客搭建基本流程">个人博客搭建基本流程</h2>
+<p>搭建一个网站在十年前可能很麻烦，但是在2020年就算你完全不懂技术也可以在很短的时间譬如半小时内搭建一个属于自己的网站。在很久以前要做一个静态网站需要以下流程：</p>
+<ol>
+<li><del>选择一个成熟的CMS平台，如Wordpress。</del></li>
+<li><del>租一台独立服务器或者共享的虚拟主机空间。</del></li>
+<li><del>配置服务器，安装各种复杂软件。</del></li>
+<li><del>配置CMS平台，选择主题皮肤，定制修改。</del></li>
+<li><del>买域名，配置域名解析。</del></li>
+<li><del>在CMS平台上写第一篇文章。</del></li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/b832b17e-473c-adcd-4630-1c243176ec28.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>这么复杂的流程劝退了很多人。在 SasS 时代一切都变得简单起来，现在我们只需要以下的流程：</p>
+<ol>
+<li>使用 <a href="https://gohugo.io/">Hugo</a>/<a href="https://hexo.io/">Hexo</a> 等静态网站生成工具生成一个网站。</li>
+<li>在 <a href="https://github.com/">GitHub</a> 开一个仓库，将网站使用Git上传至仓库。</li>
+<li>在 <a href="https://www.netlify.com/">Netlify</a> 上绑定GitHub仓库。</li>
+<li>用<a href="https://www.bmpi.dev/dev/what-markdown-can-do/">Markdown写第一篇文章</a>。通过Git推送到仓库后，网站自动更新发布上线！</li>
+<li><a href="https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ">买域名</a>，配置域名解析。</li>
+</ol>
+<p>看起来依旧很麻烦，不过少了最麻烦的服务器购买与配置环节，让以上5步<strong>仅需要几分钟即可完成一个网站的发布创建</strong>。</p>
+<p>之前我写了一篇<a href="https://www.bmpi.dev/self/build-write-tool-v1/">《打造优雅高效的写作环境》</a>，里面介绍我使用 Hexo 搭建博客的过程，而现在我的博客是基于 Hugo 搭建的，本质两者没啥区别，都是基于 Markdown 的静态网站生成器，它们都属于 <a href="https://jamstack.org/">JAMStack</a> 技术栈（这个技术栈主要研究无服务器的静态网站生成技术，利用 CDN 部署网站）。Hugo 和 Hexo 的最大差异在于生成网站的速度，如果你有大量网页需要生成，最好使用 Hugo，因为它是使用 <a href="https://golang.org/">Golang</a> 语言开发的，这也是我最终选择 Hugo 的原因。</p>
+<p>目前还有大量的网站例如博客、品牌网站、图片站甚至电商站等都是用 <a href="https://zh-cn.wordpress.com/">Wordpress</a> 建站工具搭建的，互联网上近 35% 的网站是用它搭建的，所以先说说 Wordpress 和 Hugo 这类静态化站的差异：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Wordpress</th>
+<th>Hugo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部署</td>
+<td>一般需要独立的服务器</td>
+<td>一般不需要服务器，直接部署到 CDN</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>因为是 PHP 开发的动态站，所以在性能上有瓶颈，可能需要做不少设置才能提高一些性能，但和 Hugo 的静态网站相比还是太差</td>
+<td>纯静态化的页面，理论上性能极高，可以不考虑性能问题</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>加载速度和 CDN 有很大的关系，也和服务器渲染网页的速度有关系，因为 Wordpress 是动态网站，需要动态渲染，所以速度也差一些</td>
+<td>已经生成好的网页，速度取决于 CDN 的速度了</td>
+</tr>
+<tr>
+<td>定制化</td>
+<td>生态已经很繁荣了，所以几乎你需要的任何东西都有插件可以满足</td>
+<td>插件少，如果想定制很多功能，那么需要你对 Hugo 有深入的了解</td>
+</tr>
+<tr>
+<td>后台管理</td>
+<td>本身就是 CMS 系统，可以在后台管理各种功能</td>
+<td>本身是个静态化工具，没有后台管理功能，很多设置都直接使用文本来配置，对非程序员不友好。但是目前也有相关的 CMS 系统，如 <a href="https://forestry.io/">forestry</a>，配合 <a href="https://www.gatsbyjs.org/">gatsbyjs</a> 之类的技术可以开发出任何你想要的网站</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td>对 SEO 很友好</td>
+<td>需要一些定制才能提高 SEO</td>
+</tr>
+</tbody>
+</table>
+<p>从上述对比可知：</p>
+<ol>
+<li>如果你完全不懂技术的话，可以使用Hugo在本地生成一个静态站体验下，然后学习一点<a href="https://learnxinyminutes.com/docs/zh-cn/git-cn/">Git基本知识</a>，将网站推送到 GitHub ，然后使用 Netlify 配置部署。之所以不推荐用Wordpress是因为配置服务器是个复杂而麻烦的过程，可能直接劝退了非程序员的朋友。</li>
+<li>如果你懂一点技术，玩过 Linux 或者 Windows 版本的 <a href="https://wiki.deepin.org/wiki/LAMP%E6%9C%8D%E5%8A%A1">LAMP</a>，那么还是推荐使用 Wordpress。</li>
+<li>如果玩过 Wordpress 但对性能有很高的要求，也不想在性能提升上浪费精力，又想使用 Markdown 的话，那么建议体验下 Hugo 吧，本文正是为这类人准备的，当然不懂技术也可以了解下，看完至少你会了解到如何不花钱搭建一个属于自己的博客。</li>
+</ol>
+<h2 id="使用hugo搭建个人博客">使用Hugo搭建个人博客</h2>
+<blockquote>
+<p>在以下部分我都以 Mac 的安装环境为例，但是其他平台应该也都是相似的</p>
+</blockquote>
+<p>先看个动图，展示下 Hugo 是如何简单的搭建一个网站：</p>
+<p><a href="https://gifyu.com/image/IxgR"><img data-src="https://s5.gifyu.com/images/Kapture-2020-03-01-at-0.34.57.gif" alt="Kapture-2020-03-01-at-0.34.57.gif" class="lazyload" loading="lazy"/></a></p>
+<ol>
+<li>安装Hugo和Git</li>
+</ol>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">brew install hugo
+brew install git
+</code></pre></div><ol start="2">
+<li>选择主题皮肤</li>
+</ol>
+<p>在 Hugo 官方的<a href="https://themes.gohugo.io/">主题站</a>我们可以找到大量别人已经开发好的主题皮肤。我们以本博客主题 <a href="https://themes.gohugo.io/hugo-coder/">Coder</a> 为例：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo new site bmpi.dev
+</code></pre></div><p>执行这个命令后我们得到了这些文件:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.
+├── archetypes
+│   └── default.md
+├── config.toml # 配置文件入口
+├── content # Markdown 文件存放入口
+├── data
+├── layouts # 网站页面结构管理入口
+├── static # 网站静态资源存放入口
+└── themes # 网站主题皮肤入口
+</code></pre></div><p>这是Hugo帮我们生成好的网站骨架，其中 <code>content</code> 是我们写文章的地方，每篇文章就是一个 Markdown 文件。如下图是我博客目前的文章：</p>
+<p><img data-src="https://img.bmpi.dev/bfbb42ad-6007-b1d0-d5d2-e96ced5c116b.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>然后开始添加主题：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd bmpi.dev
+git init
+git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
+</code></pre></div><p>配置 Hugo，主要是修改 <code>config.toml</code>：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="display:block;width:100%;background-color:#191919"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">baseURL = <span style="color:#0ff;font-weight:bold">&#34;http://example.org/&#34;</span>
+languageCode = <span style="color:#0ff;font-weight:bold">&#34;en-us&#34;</span>
+title = <span style="color:#0ff;font-weight:bold">&#34;My New Hugo Site&#34;</span>
+<span style="display:block;width:100%;background-color:#191919">theme = <span style="color:#0ff;font-weight:bold">&#34;hugo-coder&#34;</span>
+</span></code></pre></td></tr></table>
+</div>
+</div><p>这是最简单的配置，本博客的配置文件在这里可以看到：<a href="https://github.com/bmpi-dev/bmpi.dev/blob/master/config.toml">bmpi.dev config.toml</a>。</p>
+<p>复制一些主题样本数据：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cp -R themes/hugo-coder/exampleSite/ .
+</code></pre></div><p>启动！</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo server
+</code></pre></div><p>最终效果：</p>
+<p><img data-src="https://img.bmpi.dev/11caabbc-5203-a45c-af8d-141ab3c5a829.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>以上就是一个非常简单的使用 Hugo 创建网站的过程，当然这只是开始，如果你想深度定制 Hugo 的话，最好先看看它的官方<a href="https://gohugo.io/documentation/">帮助文档</a>，主要包括模版定制、内容组织、配置等。</p>
+<h2 id="使用github托管个人博客">使用GitHub托管个人博客</h2>
+<p>本博客的代码都存放到了<code>全球最大同性交友网站</code> GitHub 上了，具体看这里 <a href="https://github.com/bmpi-dev/bmpi.dev">bmpi.dev</a> 。</p>
+<p>GitHub 目前已经从代码存放库进化到了无所不包，有人在里面写小说，有人在里面写博客，有人在里面存放自己的照片。无论你是不是程序员，都可以了解下如何利用好这个网站。</p>
+<p>让我们开始建立一个仓库，不过你得先注册一个账号：</p>
+<p><img data-src="https://img.bmpi.dev/ff7a7542-1a49-0153-891b-aef08ef5007c.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/86e6fc0b-6c70-faec-b867-0aa426e8f50f.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>接下来让我们把上一步创建的网站数据通过 Git 上传到 GitHub 托管。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;first commit&#34;
+git remote add origin https://github.com/bmpi-dev/test.bmpi.dev.git
+git push -u origin master
+</code></pre></div><p><img data-src="https://img.bmpi.dev/1c62cc67-96b1-b926-3918-c68c7d2259cd.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>至此，我们已经将网站上传到了 GitHub 。如果之后你要新增文章后上传也只需要执行：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;update&#34;
+git push
+</code></pre></div><h2 id="使用netlify部署个人博客">使用Netlify部署个人博客</h2>
+<p>上传到 GitHub 后，接下来让我们开始部署网站：</p>
+<p><a href="https://gifyu.com/image/Ixgo"><img data-src="https://s5.gifyu.com/images/Kapture-2020-03-01-at-1.16.11.gif" alt="Kapture-2020-03-01-at-1.16.11.gif" class="lazyload" loading="lazy"/></a></p>
+<p>Netlify 本身是个具备 CI/CD 功能的 CDN 网站托管平台，同类还有 <a href="https://zeit.co/"><code>ZEIT Now</code></a>。注册好账号后，开始新建一个网站：</p>
+<p><img data-src="https://img.bmpi.dev/84d75f2e-9f66-b248-7202-e0508428388a.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>如上点 <code>Deploy site</code> 后：</p>
+<p><img data-src="https://img.bmpi.dev/7e9976fa-b4cb-9708-bef0-55fb9e3441f7.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/a38c93b5-3041-f16c-4ea6-a01d3ddfb1d3.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>如上图，我们的网站因为域名配置不正确，导致一些静态资源无法正常加载，让我们开始修复这个问题：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="display:block;width:100%;background-color:#191919"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="display:block;width:100%;background-color:#191919">baseurl = <span style="color:#0ff;font-weight:bold">&#34;https://frosty-colden-937773.netlify.com/&#34;</span>
+</span>title = <span style="color:#0ff;font-weight:bold">&#34;johndoe&#34;</span>
+
+theme = <span style="color:#0ff;font-weight:bold">&#34;hugo-coder&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改好 <code>config.toml</code> 后，使用之前介绍的 Git 上传方法将更新的文件上传至 GitHub，然后再次访问 <code>https://frosty-colden-937773.netlify.com/</code>:</p>
+<p><img data-src="https://img.bmpi.dev/fcd662df-9f23-e3dc-e521-c12a4ec736dd.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>网站上线了！至此我们没有花一毛钱，不过你会发现这个域名很奇怪，这是 Netlify 免费给我们的二级域名，要想使用自己的域名，我们的花钱买个域名，不过这个域名的费用一般也可以用网站的广告收入来 cover，所以可以说是零成本建站。</p>
+<blockquote>
+<p>需要注意的是这个网站已经自带 CDN 功能了，你无需再次集成如 <a href="https://www.cloudflare.com/">cloudflare</a> 之类的 CDN，默认免费的账户 Netlify 给我们每月<a href="https://www.netlify.com/pricing/">100GB</a>的流量，超出需要掏钱了，不过这个对小站来说足够了。</p>
+</blockquote>
+<h2 id="个人博客集成评论功能">个人博客集成评论功能</h2>
+<p>网站加入评论可以让我们和网站的受众互动起来，也可以对某个主题进行持久的讨论，我的<a href="https://www.bmpi.dev">博客</a>使用了 <a href="https://utteranc.es/">utteranc</a>，而我的<a href="https://tg.bmpi.dev">电报群聚合站</a>则使用了 <a href="https://disqus.com/">disqus</a>。</p>
+<p>可能一般网站使用 disqus 的居多，这也是很成熟的评论框架，但是 utteranc 的优势在于完全集成了 GitHub，所有的评论数据都存放到 GitHub 的 issue 里了：</p>
+<p><img data-src="https://img.bmpi.dev/30573d3e-d39f-438b-900c-bc29cd6ee635.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>集成 disqus 很简单，网上有大量的帖子，具体集成方式这里不做赘述了。而集成 utteranc 的代码也可以看这里 <a href="https://github.com/bmpi-dev/bmpi.dev/blob/master/themes/hugo-coder/layouts/partials/posts/utteranc.html">utteranc.html</a>。</p>
+<h2 id="个人博客集成自定义域名">个人博客集成自定义域名</h2>
+<p>域名一般我在 <a href="https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ">Namecheap</a> 上购买，当然 GoDaddy 上也可以。比如这个 <code>bmpi.dev</code> 第一年是91元人民币，第二年是120元。也有非常便宜的域名，譬如 xyz 后缀的第一年只要7元。有人担心这些域名对 SEO 不友好，其实没啥影响，com 域名主要是历史悠久，一般人想到一个品牌可能第一时间想到的就是 com 域名，不过我们的博客初始没啥影响力，选个小众后缀但好记的的反而比较好。</p>
+<p>买好域名后，我们需要将 DNS 配置成 Netlify 的，当然我的博客选择的是 <code>AWS Route53</code> 做我的域名解析服务。Netlify 配置域名很简单，安装它的提示来即可。因为 <code>bmpi.dev</code> 主 DNS 已经用 <code>AWS Route53</code> 配置了，我就按它的配置界面来介绍了。</p>
+<ol>
+<li>先在 Netlify 的域名配置里加入 <code>test.bmpi.dev</code>：</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/6568d8b5-d2b6-fb3e-94c9-756f3df501e0.png" alt="" class="lazyload" loading="lazy"/></p>
+<ol start="2">
+<li>在 <code>AWS Route53</code> 中配置 CNAME 域名解析：</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/8692c1b5-dff4-1ad5-6b59-8ae74f36fc25.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>稍等一会，等 Netlify 给我们自动配置好 HTTPS 证书后，在此之前我们先把网站的 <code>config.toml</code> 里的网站域名修改成 <code>test.bmpi.dev</code>，之后大概等个10分钟左右让我们访问 <a href="https://test.bmpi.dev">test.bmpi.dev</a>。</p>
+<p><img data-src="https://s5.gifyu.com/images/ac75bf15b8e74ef39e56cd95197d7422_th.gif" alt="ac75bf15b8e74ef39e56cd95197d7422_th.gif" class="lazyload" loading="lazy"/></p>
+<h2 id="个人博客集成流量监控">个人博客集成流量监控</h2>
+<p>本博客使用了 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a>，也就是我们常说的 GA 统计:</p>
+<p><img data-src="https://img.bmpi.dev/a850bb38-7eaa-398f-486f-de798305f4e3.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>接下来让我们给 <code>test.bmpi.dev</code> 集成 GA，因为主域名已经通过 DNS 验证过了，所以直接添加跟踪代码即可：</p>
+<p><img data-src="https://img.bmpi.dev/46c3ed2f-0aa6-b754-fefd-60d335fd6470.png" alt="" class="lazyload" loading="lazy"/></p>
+<p><img data-src="https://img.bmpi.dev/6d650f52-99c6-6f24-0257-5bdb8aeeded0.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>注意跟踪代码要添加到每个网页文件 <HEAD> 标记中，在 Hugo 中一般在主题的模版里直接添加，这个公共的文件在 <a href="https://github.com/bmpi-dev/test.bmpi.dev/blob/master/themes/hugo-coder/layouts/_default/baseof.html#L91"><code>/themes/hugo-coder/layouts/_default/baseof.html</code></a>：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">99
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#007f7f">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span>
+&lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">async</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#34;https://www.googletagmanager.com/gtag/js?id=UA-154678195-6&#34;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
+&lt;<span style="font-weight:bold">script</span>&gt;
+  <span style="color:#fff;font-weight:bold">window</span>.dataLayer = <span style="color:#fff;font-weight:bold">window</span>.dataLayer || [];
+  <span style="color:#fff;font-weight:bold">function</span> gtag(){dataLayer.push(arguments);}
+  gtag(<span style="color:#0ff;font-weight:bold">&#39;js&#39;</span>, <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Date</span>());
+
+  gtag(<span style="color:#0ff;font-weight:bold">&#39;config&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;UA-154678195-6&#39;</span>);
+&lt;/<span style="font-weight:bold">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>以上就是集成 GA 的流程，同时建议把 <a href="https://search.google.com/search-console/about"><code>GoogleSearchConsole</code></a>集成上，这就是我们常说的站长工具，可以了解 Google 爬虫对我们网站的索引率，网站出现的一些影响 SEO 的因素都可以通过这个工具发现。</p>
+<p><img data-src="https://img.bmpi.dev/255b9c52-ef00-8db8-c3b9-dcea7fb63a7b.png" alt="" class="lazyload" loading="lazy"/></p>
+<h2 id="个人博客集成广告投放">个人博客集成广告投放</h2>
+<p>零成本的关键，广告收入覆盖我们的域名支出费用，如果你对广告不了解，建议先看这篇<a href="https://www.bmpi.dev/money/what-is-internet-advertising/">什么是互联网广告</a>。</p>
+<p>本博客集成了 <a href="https://www.google.com/adsense/start/"><code>Google AdSense</code></a>。Google 还要一个 <a href="https://ads.google.com/home/"><code>Ads</code></a>，AdSense 是媒体如站长用来接广告的平台，而 Ads 是广告主用来投放广告的。</p>
+<p>集成 Google AdSense 有一些条件，域名需要一些时间，网站内容不能太少，所以前期可以不接这个，等你的流量达到一定规模了再接，否则审核可能无法通过。集成过程和 GA 很相似，这里不在赘述。</p>
+<p><img data-src="https://img.bmpi.dev/f8ce36bb-94df-98f2-2438-eaad3cc44f00.png" alt="" class="lazyload" loading="lazy"/></p>
+<h2 id="个人博客图床的选择">个人博客图床的选择</h2>
+<p>博客中最常见的就是图片资源了，图片一般会存放到某个图床或者云服务当中。</p>
+<p>在国内如果你的域名备案过的话可以使用<a href="https://www.qiniu.com/">七牛云服务</a>，具体集成方式参考<a href="https://www.bmpi.dev/self/build-write-tool-v1/">《打造优雅高效的写作环境》</a>。</p>
+<p>本博客由于域名没有备案，所以使用的是 AWS S3 + CloudFront，具体集成方式参考<a href="https://www.bmpi.dev/self/note-system/">《我的笔记系统》</a>中<code>VSCode插件一键存储图片至S3</code>部分的介绍。</p>
+<p>当然你也可以使用 GitHub 来托管图片，只要在 Markdown 中引用相对路径的图片即可。</p>
+<h2 id="关于个人博客备案的问题">关于个人博客备案的问题</h2>
+<p>2020年3月1日国家互联网信息办公室发布了<a href="http://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm">《网络信息内容生态治理规定》</a>。在这份公告中鼓励以下内容制作：</p>
+<p><img data-src="https://img.bmpi.dev/5ed7aad5-6164-1efe-55d7-c693bfce0eec.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>备案还是不备案，这是一个问题。</p>
+<p>对于商业产品用户都是国内的话那必须要备案，备案后你也可以使用国内的云服务和 CDN 了，这样网站在国内的加载速度也会很快。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">最初，
+没有人在意这场灾难，
+这不过是一场山火，
+一次旱灾，
+一个物种的灭绝，
+一座城市的消失，
+直到这场灾难与每个人息息相关。
+</code></pre></div>
+
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/">基于Serverless实现静态博客访问统计功能</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">零成本搭建现代博客之优化国内访问速度</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">零成本搭建现代博客之加载速度优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">零成本搭建现代博客之订阅推送篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">零成本搭建现代博客之SEO优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

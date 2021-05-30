@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="编程技术系列文章，分享我关于软件工程、全栈开发、DevOps、云原生、Serverless、SEO、流量站开发、爬虫技术、机器学习应用、分布式技术、系统架构及编程语言范式等方面的个人经验">
+  
+  
+  <meta name="keywords" content="编程技巧, 全栈开发, 前端开发, 后端开发, 移动端开发, DevOps技术, Python, 爬虫, SEO, 量化交易技术, Java, Elixir, 函数式开发, 面向对象开发, 高并发系统架构, 重构, TDD, DDD, 系统架构, 分布式与微服务, P2P技术, GitHub开源项目, 套利技术, Bot开发">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="编程技术系列文章"/>
+  <meta name="twitter:description" content="编程技术系列文章，分享我关于软件工程、全栈开发、DevOps、云原生、Serverless、SEO、流量站开发、爬虫技术、机器学习应用、分布式技术、系统架构及编程语言范式等方面的个人经验"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="编程技术系列文章" />
+<meta property="og:description" content="编程技术系列文章，分享我关于软件工程、全栈开发、DevOps、云原生、Serverless、SEO、流量站开发、爬虫技术、机器学习应用、分布式技术、系统架构及编程语言范式等方面的个人经验" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "Blog",
+      
+      "headline": "编程技术系列文章",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "0001-01-01T00:00:00Z",
+      "dateModified": "2020-12-14T00:10:52+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "编程技术系列文章，分享我关于软件工程、全栈开发、DevOps、云原生、Serverless、SEO、流量站开发、爬虫技术、机器学习应用、分布式技术、系统架构及编程语言范式等方面的个人经验",
+      "keywords": []
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/">
+  
+  <title>
+  编程技术系列文章 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container list">
+    <h1 class="title" style="font-size: 1.6rem !important;border-bottom:1px dotted #bf7326;padding-bottom:20px;">编程技术系列文章，分享我关于软件工程、全栈开发、DevOps、云原生、Serverless、SEO、流量站开发、爬虫技术、机器学习应用、分布式技术、系统架构及编程语言范式等方面的个人经验</h1>
+
+    <ul><li>
+  <span class="date">2021-05-23</span>
+  <a class="title" href="https://www.bmpi.dev/dev/failure-driven-development/">失败驱动开发</a>
+</li>
+<li>
+  <span class="date">2021-05-09</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-mining/">加密币挖矿小记</a>
+</li>
+<li>
+  <span class="date">2021-04-17</span>
+  <a class="title" href="https://www.bmpi.dev/dev/tech-stack-of-side-project/">我的个人项目技术栈</a>
+</li>
+<li>
+  <span class="date">2021-01-24</span>
+  <a class="title" href="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/">基于Serverless实现静态博客访问统计功能</a>
+</li>
+<li>
+  <span class="date">2020-12-26</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">零成本搭建现代博客之优化国内访问速度</a>
+</li>
+<li>
+  <span class="date">2020-08-30</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-serverless/">Serverless应用开发小记</a>
+</li>
+<li>
+  <span class="date">2020-04-19</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">零成本搭建现代博客之加载速度优化篇</a>
+</li>
+<li>
+  <span class="date">2020-03-28</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">零成本搭建现代博客之订阅推送篇</a>
+</li>
+<li>
+  <span class="date">2020-03-13</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">零成本搭建现代博客之SEO优化篇</a>
+</li>
+<li>
+  <span class="date">2020-03-08</span>
+  <a class="title" href="https://www.bmpi.dev/dev/what-is-seo/">什么是SEO</a>
+</li>
+<li>
+  <span class="date">2020-02-29</span>
+  <a class="title" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">零成本搭建现代博客之搭建篇</a>
+</li>
+<li>
+  <span class="date">2020-02-21</span>
+  <a class="title" href="https://www.bmpi.dev/dev/what-markdown-can-do/">用Markdown可以做什么</a>
+</li>
+<li>
+  <span class="date">2020-02-13</span>
+  <a class="title" href="https://www.bmpi.dev/dev/what-is-internet-advertising/">什么是互联网广告</a>
+</li>
+<li>
+  <span class="date">2020-02-06</span>
+  <a class="title" href="https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/">使用AWS Lambda提高网站图片加载速度1X倍</a>
+</li>
+<li>
+  <span class="date">2020-01-18</span>
+  <a class="title" href="https://www.bmpi.dev/dev/calculates-similarity-distribution-of-website-by-tf-idf/">使用TF-IDF算法计算网站页面相似度分布（Python）</a>
+</li>
+<li>
+  <span class="date">2019-12-22</span>
+  <a class="title" href="https://www.bmpi.dev/dev/vscode-plugin-development-notes/">VSCode插件开发小记</a>
+</li>
+<li>
+  <span class="date">2019-12-21</span>
+  <a class="title" href="https://www.bmpi.dev/dev/parser_black_magic/">Parser黑魔法</a>
+</li>
+<li>
+  <span class="date">2019-02-20</span>
+  <a class="title" href="https://www.bmpi.dev/dev/coupon-project-review/">优惠券项目小结</a>
+</li>
+<li>
+  <span class="date">2016-05-27</span>
+  <a class="title" href="https://www.bmpi.dev/dev/zero-to-one/">一款产品的从0到1之旅</a>
+</li>
+</ul>
+
+    
+
+
+
+
+
+
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>失败驱动开发</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/failure-driven-development/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/failure-driven-development\/",
+          "name": "failure-driven-development"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>失败驱动开发</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2021-05-23T00:00:00Z'>
+                2021-05-23
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/fdd/">FDD</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/clojure/">Clojure</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/functional-programming/">Functional Programming</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/27015307-1633-2ad8-7868-f1edb27bfeb8.png" alt="" layout="fill"></amp-img></div></p>
+<p>多年以后，面对这篇文章，我会想起那两天失败的令人崩溃的开发过程。当时，只是一个简单的编码需求，我信心满满的计划一下午搞定，但是最终的过程却是令人如此沮丧，让我不得不怀疑我还适不适合继续当程序员。</p>
+<p>思绪飘到那天的场景，我在开发过程中遇到一个很简单的需求：将 JSON 格式的文件转换成 JavaScript 的常量文件。如下图：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/f2f3df66-7cc2-c4b9-2e36-a757c847e2de.png" alt="" layout="fill"></amp-img></div></p>
+<p>我的想法是先把 JSON 转成一棵抽象语法树（AST），然后遍历这棵树，在特定的节点打印出所需的字符就可以了。JSON 转 AST 直接用 Clojure 的神器 instaparse 库。我对 Clojure 不熟悉，刚好可以通过这个过程提升下，也能试试这个神器到底神不神。通过这种特殊需求能一举多得，让无聊的开发过程变得有期待。</p>
+<p>第一步是将 JSON 转 AST。对于 instaparse 库来说这是个很简单的任务，网上随便搜索下就找到了解析 JSON 的代码。耗时不过几分钟。</p>
+<p>第二步是需要遍历这棵树。遍历树是我在大学算法课程上就学过的，虽然年代久远算法的细节都已经忘记，但是我还记得有深度遍历和广度遍历两种方式。我的这个需求特殊之处在于需要在遍历的时候打印相关的字符，比如需要在遍历某个节点开始和结束的时候都得打印 [] 或 {} 。Clojure 应该有具体的库做这个事，简单搜索下很快就找到了 walk 和 tree-seq 这两个函数。这两个函数看起来比较复杂，找了一些例子大概了解到： walk 函数可以在遍历是提供入和出两个钩子来执行对集合元素的转换，而 tree-seq 会以深度遍历树的方式输出一个节点序列。理解后就开始尝试，花了半天后发现事情比我想象中的复杂，这两个函数看起来强大，但是无法在遍历节点时保存状态，而我却需要这个状态来记录我遍历的路径。看起来需要自己写个遍历算法来实现了，这时候半天已经过去了，但我目前的进度只解决了一半的问题。</p>
+<p>自己写遍历树的算法是一件不难的事情，我用 Java 也实现过，现在用 Clojure 实现看起来也不难。但是 Clojure 和 Java 的差异很大：它是函数式的，数据类型都不可变，很多操作都是通过递归来完成。用递归来实现深度遍历也不是难事，但是当你用不熟悉的语言去实现问题可能就会变得不可控。</p>
+<p>在尝试了一天多并写了三个失败的版本后我陷入了绝望的状态，因为一个非常简单的问题我却搞不定。在第二个版本的时候我以为我解决了这个问题，最终把实际的数据输入却发现结果不符合预期。因为我用了简单的测试数据，实际的数据比测试数据全面，我写的版本只是解决了测试数据的问题。在第三个版本的时候因为考虑的情况更多写的也更复杂了，导致程序始终跑不起来。因为我不熟悉 Clojure 的语法，始终难以写出满足条件的递归代码。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/ba8de0ec-05e9-8947-9036-6ea8a54fcd83.png" alt="" layout="fill"></amp-img></div></p>
+<p>由于长时间在这个问题上耗着又没有任何思路，我在周末连续搞了十几小时后眼睛和腰终于受不了了。第二天整个人身心俱疲，在床上躺了半天后琢磨如何寻求帮助。脑海中第一个念头就是在 Clojure 的社区里直接提问。为了能让大家有意愿回答我的问题，我首先把自己的问题梳理了下，画了一个简单的草图：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/4c5e878b-74ea-a4d6-ca23-5d7a2d030940.png" alt="" layout="fill"></amp-img></div></p>
+<p>然后在 StackOverflow 提了这个问题，并在 Clojure 的 Discord 群组、Telegram 国内社群和微信群里发了这个问题。大概不到半小时，微信群里有两个人发了自己的代码。这两种代码体现了不同的解决思路，并且附带优雅的实现：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/af401ed1-9164-3675-e0c6-8d5934d4491d.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/fc6b9da5-399c-e9e1-327c-54a236ab0691.png" alt="" layout="fill"></amp-img></div></p>
+<p>第一种方案直接通过递归将 AST 语法树转换成了目标 Map 的数据结构，然后使用 Json 库打印成 Json 格式。第二种方案没有使用 AST 语法树，直接通过 Json 库拿到 Json 数据结构然后递归遍历输出最终目标数据结构。</p>
+<p>在群里与这两个人沟通的过程中，我发觉我在不知不觉中犯了几个错误：</p>
+<ul>
+<li>不熟悉 Clojure 代码，导致没法使用最佳的函数和思路去解决问题；</li>
+<li>通过 Json 库去输出最终数据结构，而我却是采用打印的方式将问题复杂化；</li>
+<li>没必要通过抽象语法树去解决，通过 Json 库递归遍历 Json 是更简单的方案；</li>
+<li>没使用更好的工具。我一开始用命令行自带的 Repl，后来觉得编辑长函数不方便，所以在网上找了一个在线 Repl。不过后来看到群友提供的在线 livebook， 这种能更方便的开发并记录这类代码。</li>
+</ul>
+<p>回顾这个问题的解决过程，我总结此次开发失败的原因有以下：</p>
+<ul>
+<li>理解需求错误。我在遇到这个问题后并未做深入的分析思考，导致一开始就冲着问题的表象去解决。想着用打印的方式去解决问题，实际上可以用库来输出目标格式。</li>
+<li>不熟悉相关技术。我对 Clojure 的熟悉程度还不足以解决这类并不简单的问题。</li>
+<li>解决问题不全面。问题总有很多解，拿着锤子很容易看啥都是钉子。我从一开始就想通过 AST 去解决这个问题，导致思维局限到一条线上了。</li>
+<li>害怕失败。因为一开始觉得问题很简单，害怕自己没法在很短的时间解决，心态处于失衡的状态。后期耗着的时间越长，思考能力越不在状态，反而越来越迷糊。</li>
+</ul>
+<h2 id="失败驱动开发">失败驱动开发</h2>
+<p>不了解程序员的人眼中的程序员可能是这样的：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/32e5e295-1c93-edab-7051-9d921b3bdbed.png" alt="" layout="fill"></amp-img></div></p>
+<p>但开发程序或维护程序，失败是很常见的：</p>
+<ul>
+<li>编译失败；</li>
+<li>运行失败；</li>
+<li>网络失败；</li>
+<li>内存失败；</li>
+<li>并发失败；</li>
+<li>I/O 失败；</li>
+<li>认证失败；</li>
+<li>权限失败；</li>
+<li>依赖失败；</li>
+<li>资源失败；</li>
+<li>上线失败；</li>
+<li>升级失败；</li>
+<li>环境设置失败；</li>
+<li>理解需求失败；</li>
+<li>项目管理失败；</li>
+<li>架构设计失败；</li>
+</ul>
+<p>程序员的日常就是要在无数失败中找寻让程序正常运行的那一种组合，成功运行更像是运气与实力的双重作用，这也就有了失败驱动开发（<code>Failure Driven Development</code>）。</p>
+<p>失败既然是不可避免的，要做好一个程序员，与失败平和相处是必须要解决的问题，不然情绪会长期处于失衡状态。</p>
+<p>如何以失败驱动开发？我会从以下清单出发找寻处理失败的方法：</p>
+<ul>
+<li><strong>是否全面理解问题？</strong> 很多时候不是问题复杂，而是我错误的理解了问题，在错误的路上越走越远。每当失败时我会重新全面的思考问题，看是否能发现新的解决问题的思路。</li>
+<li><strong>是否涉及知识盲区？</strong> 盲区是你不知道自己不知道。用有限的知识去解决未知的问题很容易陷入盲区而不自知。我的方法是如果一个失败的原因我没法在几天内解决，那很可能就是遇到知识盲区了。要跳脱盲区必须全面的搜索关联的知识，通过知识的交叉理解或寻找更了解这个领域的人帮忙是有效的解决方法。</li>
+<li><strong>对技术的掌握是否满足要求？</strong> 用不熟悉的技术去解决不懂的问题很容易失败。如果对技术不熟悉并且难以解决问题的话，我会从短期和长期两个方面出发制定不同的方案。短期可能会寻求外部帮助让更了解的人来帮我解决，长期我会投入更多时间提升这方面的技术。</li>
+<li><strong>所用技术或工具是否合适？</strong> 用不合适的技术和工具去解决问题也很容易导致失败，并且这种失败是难以察觉的。有时候不合适的技术或工具并不会让问题无法得到解决，而是会浪费你大量的时间去解决技术或工具本身的问题。要解决这类失败需要扩大知识广度，在搜索资料时不局限某一种技术，如果你对多种技术有一定的理解，就很容易发觉技术之间的差异。用合适的技术或工具能达到事半功倍的效果。</li>
+<li><strong>是否存在解决方案？</strong> 很多问题早已经被前人解决。所以当遇到感觉复杂的问题，我会先搜索一番已经存在的解决方法，对问题现存的解决方法有个大概的认知，然后修改这些解决方法让其能更好的解决我的问题。</li>
+<li><strong>是否需要记录问题？</strong> 各类很难搞的问题是提高能力的好机会，学习现存的解决方法能消灭知识盲区。所以不断的记录总结这种问题是提高我能力的好方法。如果一个人一辈子遇不到难题，他也只能停留在现有的能力圈无法破圈。</li>
+<li><strong>是否需要寻求帮助？</strong> 花了很多时间问题却解决不了是很令人沮丧，有些问题还很紧迫。在尝试一定时间还毫无头绪时我就会想办法找人帮忙。让人愿意帮忙也需要一些技巧，如果你提出一个很大的问题，没人会愿意免费帮忙。所以我会把问题相关的上下文都写下来或画下来，然后将我错误的解决方法放上去，标记清楚失败的点在哪里，然后把问题发给我觉得有这方面技术的朋友、同事及相关的社区。如果问题比较复杂，我会提出付费咨询的请求。在别人帮忙解决后，及时表达感谢之情，如有必要也可以发个红包。当你通过这种方法认识不同领域的人，逐渐地你解决问题的效率也会得到提高。一些人会担心，将自己的愚蠢公开暴露出来，尤其是一些低级错误出现的时候，是一件很掉面子的事情。其实一开始我也担心，但是在网上你可以有很多虚拟身份，能缓解这种不适。更重要的是，暴露自己的愚蠢能有效的解决自己的知识盲区，你觉得很复杂的问题在有经验的人看来是很简单的事情。这其实是一种极其有效的学习成长方式，在这个过程中我不仅可以解决我的难题，还能学习有经验的人在这领域里的方法论和效率工具。</li>
+<li><strong>身体状态是否合适？</strong> 长时间耗在一个问题上，身体和大脑都会疲惫。当心态失衡时，解决问题的能力也会直线下降。我经常会陷入一种急迫解决问题的困境，直到身体完全扛不住才放弃。这其实是一种低效的方式，情绪会在这个过程中逐渐压制理智，让人很难全面的思考问题。与自己平和相处，接纳自己的不足，休息好重新出发才能走的更长远。所以当遇到自己很难解决的问题时，试着先确保身体状态是正常的，如果身体很疲惫，先休息而不是直接攻克难题。</li>
+</ul>
+<p>每一次失败都是一次提升自己的机会。正是对失败过程的不断迭代解决，多年以后，让我成为一个更好的开发者。</p>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

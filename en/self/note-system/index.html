@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="Dawei Ma">
+  
+  <meta name="description" content="This article explains how to use TiddlyWiki to build a personal long-term knowledge management system, and introduces the pro vs con of OneNote, EveryNote, Emacs Org">
+  
+  
+  <meta name="keywords" content="Note System, Note Manage, Knowledge management, Personal Wiki, TiddlyWiki, Wayback Machine, AWS S3">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="My Note System"/>
+  <meta name="twitter:description" content="This article explains how to use TiddlyWiki to build a personal long-term knowledge management system, and introduces the pro vs con of OneNote, EveryNote, Emacs Org"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="My Note System" />
+<meta property="og:description" content="This article explains how to use TiddlyWiki to build a personal long-term knowledge management system, and introduces the pro vs con of OneNote, EveryNote, Emacs Org" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/en/self/note-system/" /><meta property="article:section" content="self" />
+<meta property="article:published_time" content="2020-01-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-01-18T10:19:51&#43;08:00" />
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "My Note System",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2020-01-15T00:00:00Z",
+      "dateModified": "2020-01-18T10:19:51+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Dawei Ma"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/en/self/note-system/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "This article explains how to use TiddlyWiki to build a personal long-term knowledge management system, and introduces the pro vs con of OneNote, EveryNote, Emacs Org",
+      "keywords": ["Note System", "Note Manage", "Knowledge management", "Personal Wiki", "TiddlyWiki", "Wayback Machine", "AWS S3"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/en/self/note-system/">
+  
+  <title>
+  My Note System · Build My Passive Income
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/en/self/note-system/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/en/amp/self/note-system/" title="Build My Passive Income" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/en">
+      Build My Passive Income
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/self/">Self</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/dev/">Dev</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/money/">Money</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/project/">Project</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/goal/">Goal</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/">Chinese</a>
+            </li>
+          
+        
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">My Note System</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-01-15T00:00:00Z'>
+                2020-01-15
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              10:14
+              
+            </span>
+            
+            <span class="post-word-count"> | 2253 words | </span>
+            <span id="post-views"></span> views
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/en/tags/note-system/">Note System</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/note-manage/">Note Manage</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/knowledge-management/">Knowledge management</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/personal-wiki/">Personal Wiki</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/tiddlywiki/">TiddlyWiki</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/wayback-machine/">Wayback Machine</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/aws-s3/">AWS S3</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <p>A good note-taking system should connect any information you learn to form a knowledge system, when you need them, you can easily find them, and then form their own new knowledge.</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<p>In the article <a href="https://www.bmpi.dev/zh-cn/self/onenote-intro/">&ldquo;Manage your knowledge with OneNote&rdquo;</a>, I was introduced to manage my data with OneNote. Although OneNote has done a very good job, it cannot meet my requirements due to the following problems:</p>
+<ol>
+<li>Syntax highlighting is not supported in typesetting. As someone who writes a lot of code, this is intolerable.</li>
+<li>No Tag system. Unable to flexibly insert various tags into the page, resulting in the lack of effective interconnection of data, forming an island of knowledge, and finally become a data backup tool.</li>
+<li>Proprietary data format. You can only open a laptop with OneNote, which would be awkward if Microsoft suddenly dropped the tool.</li>
+<li>Bulky. After nearly 5 years of use, my OneNote has been a few GB size, every time to change the computer synchronization is always very slow, this may have something to do with my use habits, encounter good data is copied in.</li>
+<li>Poor ability to expand. You can&rsquo;t install plugins, you don&rsquo;t have the ability to customize, you can&rsquo;t publish your notes on the web, and it&rsquo;s hard to share your knowledge.</li>
+</ol>
+<p>Because of these problems, I began to seek for a new solution, which should meet the following needs:</p>
+<ol>
+<li>Strong capture ability. OneNote is a good example of this. You can easily save external articles to the OneNote partition via the OneNote browser plugin, or you can send WeChat public accounts to the OneNote public accounts to save them.</li>
+<li>Good Tag system. Scattered knowledge can be linked together. Although OneNote organizes relevant knowledge through pagination as a tree, it is really inconvenient to paginate when there is too much data. It can make searching for data very painful.</li>
+<li>Can easily update tag/link/text. If you rename the associated data name or Tag, it should be easy to automatically rename the associated link.</li>
+<li>The file format should be plain text. If not plain text, at least the format is not proprietary.</li>
+<li>Strong ability to expand. Can be extended through plug-ins to customize.</li>
+<li>Open source. This allows us to release it for use and is unlikely to be unmaintained.</li>
+</ol>
+<p>After some searching, I finally found two tools that met my needs, Emacs orgmode and Tiddlywiki. While there are many wiki tools, such as mediawiki, used by Wikipedia, such systems are large and cumbersome to run.</p>
+<h2 id="emacs-orgmode">Emacs orgmode</h2>
+<p>When it comes to note systems, Emacs&rsquo;s orgmode can&rsquo;t get around. When you want to find a personal note system, it&rsquo;s easy to see everyone&rsquo;s praise for orgmode on the Internet. Even many people spend long time learning Emacs to use orgmode .</p>
+<p>The magic of orgmode is reflected in this article: <a href="http://doc.norang.ca/org-mode.html">&ldquo;Org Mode-Organize Your Life In Plain Text!&quot;</a>. In simple terms, the author uses orgmode to manage every aspect of his life, such as a writing system, to-do reminders, note-taking system, and so on. Thanks to the powerful custom development capabilities of Emacs, almost all your needs can be extended by writing some functions. This expansion capability is much more powerful than the plug-in system of VSCode / Vim / Sublime Text. It can be said that apart from the difficulty of learning, there are almost no shortcomings. It has the following characteristics:</p>
+<ol>
+<li>17 years old. Over time, orgmode has proven itself.</li>
+<li>Powerful customization. Development through elisp is almost omnipotent.</li>
+<li>Plain text. It can automatically generate files in multiple formats and easily publish them to web pages.</li>
+<li>The threshold for use is high. It takes a lot of time to learn to adapt, and this may take more time than you think.</li>
+<li>Poor ecology. Due to the high threshold, there are fewer users and the ecology is worse. Of course you have the ability to use it for various functions, but it&rsquo;s tiring.</li>
+<li>Poor technology migration. elisp is too old and emacs is too unique. This ancient technology is like a peerless sword. Few people are destined to use it well. This means that many people can&rsquo;t understand what you write, and of course, they can&rsquo;t perform technical communication and interaction.</li>
+</ol>
+<h2 id="tiddlywiki">Tiddlywiki</h2>
+<p><a href="http://www.tiddlywiki.cn/">Tiddlywiki</a> is a unique non-linear notebook for capturing, organizing and sharing complex information. His design idea is to divide the information through a unit called Tiddler and use the rich relationship model between them to maximize the reusability of the information. Aggregates and ideas are then used to arrange the pieces together to present a narrative story.</p>
+<p>It has the following characteristics:</p>
+<ol>
+<li>15 years old. This history is long enough, time has proven its stability and sustainability, and it is open source.</li>
+<li>Tag system is powerful. What impresses me most is its tag system, which is easy to organize different information together through tags.</li>
+<li>Single HTML file structure. All the information is stored in a HTML, you can download it and run it in the browser, it is very simple. The default empty system is about 2MB in the latest version 5, and generally stores thousands of entries (Tiddler). It can grow by a few MB. Because it is a single file architecture, in order not to affect performance, you should use external references to pictures as much as possible Reduce total volume.</li>
+<li>Many plugins. It&rsquo;s easy to give it extensions via JavaScript.</li>
+<li>Unable to collaborate with multiple people. But it can be used as a simple wiki system for team knowledge sharing.</li>
+</ol>
+<h2 id="orgmode-vs-tiddlywiki">orgmode VS Tiddlywiki</h2>
+<p>Here you can see some people&rsquo;s comparative evaluation of these two tools <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. After spending a few days learning orgmode, I was dismissed by its complexity and power, so I chose Tiddlywiki.</p>
+<h2 id="tiddlywiki-users-guide">Tiddlywiki User&rsquo;s Guide</h2>
+<p>Tiddlywiki is extremely simple to use and run. This is the point where orgmode is killed. In this <a href="http://www.tiddlywiki.cn/#Learning">Learning</a> article, you can spend more than ten minutes to understand its basic knowledge.</p>
+<p><img data-src="https://img.bmpi.dev/cf2e8f40-4c61-c32a-2a97-da5f44ea127d.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>After clicking the + sign on the right side of the figure to add an entry:</p>
+<p><img data-src="https://img.bmpi.dev/451f2b30-8e51-32b8-6d05-06c1c5f94d48.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>After clicking the red save button on the right, you will find that a file named <code>tiddlywiki.html</code> was downloaded directly. After opening it with a browser, you will find that it is exactly the same as the tiddlywiki on the Internet. When you save this local tiddlywiki again and find that it downloads a <code>tiddlywiki.html</code> again, that is to say, whenever you save, it will be saved by downloading a copy, because it is in the browser It does not have the ability to update itself. This can be solved by a chrome app. Download <a href="https://github.com/Arlen22/tiddly-chrome-app">tiddly-chrome-app</a>, and then use This chrome app can be automatically updated by loading <code>tiddlywiki.html</code>. Of course, you can also set up a Nodejs environment to achieve automatic saving.</p>
+<p>Note the following:</p>
+<ol>
+<li>Back up. Because it is a single file structure, all data is stored in a Html, so it is important to protect this file. You can back it up through Git. For example, my <a href="https://wiki.bmpi.dev/">tiddlywiki</a> is backed up <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> in GitHub.</li>
+<li>Performance. Resources such as pictures and files are best stored in a third-party cloud disk, and then introduced by means of reference links.</li>
+<li>Relink. When you rename an entry or tag, you can solve it by installing this <a href="https://github.com/flibbles/tw5-relink">tw5-relink</a> plugin.</li>
+</ol>
+<h2 id="capture">Capture</h2>
+<p>Capture is an important ability of a note taking system. OneNote does a good job in this respect, but tiddlywiki does not do well, but there are some ways to solve it. Let&rsquo;s rethink the process of taking the next note:</p>
+<ol>
+<li>You see a good article and want to save it. This article may be a web page, or it may be an email or a file.</li>
+<li>You throw this article all directly into your notebook and save it. Imagine you will use it some day, or you will save a chapter and a picture in it separately.</li>
+</ol>
+<p>When I was using OneNote, I generally saved the articles in WeChat directly by sending them to the public account, and then forgot about this. As for some information seen on the computer, I will directly copy it to OneNote. At some point I sort out some of these materials, but most of them are forgotten, and even when I need them, I don&rsquo;t remember that I saved them before.</p>
+<p>In this scenario, the following issues are exposed:</p>
+<ol>
+<li>The data is stored without being processed.</li>
+<li>Most of the information is stored in OneNote.</li>
+</ol>
+<p>Because tiddlywiki is essentially a webpage, you cannot copy an article directly into it like OneNote, and this copying method will cause your notes to grow larger and larger, and it will become more and more difficult to find valid information. So this is essentially a habitual problem. The data must be processed twice before it can be entered into the note-taking system, otherwise this storage is meaningless and only a link needs to be stored.</p>
+<p>After some thinking, I developed a way to archive my data for a long time:</p>
+<ol>
+<li>The cited article can be saved in <a href="https://web.archive.org/">Wayback Machine</a>;</li>
+<li>Files can be saved to GitHub private libraries and web disks (including professional cloud storage such as s3, as well as web disks of major Internet companies);</li>
+<li>Back up Capture data through a third party. Only links are stored in the notes.</li>
+</ol>
+<p>In my Capture solution, for some materials read online, considering the speed of Internet information loss, most articles have a short life span <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. In order to save them for a long time, I will use Wayback Machine to back up these pages. This will never be lost again, I just need to store its link, and for the materials that need to be stored separately can be stored in the note system. For images that need to be stored, I will store them in AWS S3 <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>, and then refer to their links. Of course, there are many types of cloud storage solutions. You can also choose the domestic Seven Cow Cloud (requires domain name registration), etc.</p>
+<h3 id="wayback-machine">Wayback Machine</h3>
+<p>20 years of history, Internet memories, digital libraries, website time machines. This is a non-commercial project. The purpose of its creation is to make non-stop backups of the entire Internet website. At present, there are more than 450 billion <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> cached pages. On this website you can see the history of many websites, like The time machine also travels through different historical versions of the website.</p>
+<p>It has the following capabilities:</p>
+<ol>
+<li>Crawl webpage HTML and its external links.</li>
+<li>Can generate webpage snapshot pictures.</li>
+<li>You can store web pages in your Wayback Machine account.</li>
+<li>You can use the API to request web caching <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</li>
+</ol>
+<h3 id="vscode-plug-in-stores-pictures-to-s3-in-one-click">VSCode plug-in stores pictures to S3 in one click</h3>
+<p>In a Markdown document, when you want to paste a picture of a web page into the past, it is very troublesome. First you have to download the picture locally (refer to the picture address of the web page is not good, the picture may disappear mysteriously), and then use The relative path refers to this picture. When there are many pictures, this is a very painful process.</p>
+<p>Is it possible to automatically insert an S3 link into a Markdown document after pasting a web page image after pasting it in VSCode? I found a plugin that can upload Qiniu / GitHub / sm.ms etc. in one click, but it does not provide S3 support, so I added this feature after the fork. If you also need this feature, you can here Download and install: <a href="https://github.com/bmpi-dev/vscode-extension-mardown-image-paste">markdown image paste</a></p>
+<p>With this plugin, write wiki / md files and paste them into the S3 link after copying the pictures. This way the pictures will always be stored in your S3 account. It also comes with global CDN acceleration.</p>
+<h2 id="netlify-publish-website">Netlify Publish Website</h2>
+<p>The public wiki is a reorganized collection of knowledge materials. Non-text resources such as pictures, PDFs, Office files, and Keynote are stored on cloud services such as Amazon S3 / Aliyun OSS. Snapshots of web pages and other content can be backed up using Wayback Machine, and then Save these links to the wiki system.</p>
+<p>The wiki materials are hosted through a GitHub public repository, and static websites are generated through netlify.</p>
+<p>My <a href="https://wiki.bmpi.dev/">wiki</a> website is automatically published through netlify. After each update of the wiki, push to GitHub and netlify is automatically published. This process takes less than ten seconds.</p>
+<h2 id="private-note">Private Note</h2>
+<p>A collection of private, non-public data related to private notes and work. Non-text resources such as pictures, PDFs, Office files, Keynote, etc. are stored on Google Drive / Microsoft OneDrive. These links are then stored in private Markdown files and hosted through a private GitHub repository.</p>
+<h2 id="important-note">Important Note</h2>
+<p>Keys and other information are hosted by <code>1Password</code>. Important materials are made into md files and then hosted by Google Drive / Microsoft OneDrive. Important information that is often needed can be encrypted and stored by mobile memo.</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode">https://www.slant.co/versus/5116/8769/~tiddlywiki_vs_org-mode</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://github.com/bmpi-dev/wiki.bmpi.dev">https://github.com/bmpi-dev/wiki.bmpi.dev</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://web.archive.org/web/20191230143823/https://gigaom.com/2012/09/19/the-disappearing-web-information-decay-is-eating-away-our-history/">https://web.archive.org/web/20191230143823/https://gigaom.com/2012/09/19/the-disappearing-web-information-decay-is-eating-away-our-history/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://aws.amazon.com/cn/s3/">https://aws.amazon.com/cn/s3/</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Wayback_Machine">https://en.wikipedia.org/wiki/Wayback_Machine</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://wiki.bmpi.dev/#wayback%20machine">https://wiki.bmpi.dev/#wayback%20machine</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              16个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/e84b260d5e1a7d1704bc4ce1fd6368675fc15ba5">e84b260</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">CC BY-NC-ND 4.0</a></p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">Related posts recommended</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>Get weekly updates, right in your mailbox</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="Subscribe" />
+    
+  </form>
+</div>
+
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /en/affiliate >Affiliate</a>
+      ⚡️
+      <a href= /en/tool >Tool</a>
+      ⚡️
+      <a href= /en/link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /en/tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /en/categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /en/series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

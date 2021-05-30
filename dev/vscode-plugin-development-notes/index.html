@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="本文讲述了基于VSCode编辑器开发一款ToDo插件并分析了Emacs和VSCode架构的差异">
+  
+  
+  <meta name="keywords" content="GTD、时间管理、工具、VSCode插件开发、Emacs、TypeScript、Github, Actions、VSCode, Extension">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="VSCode插件开发小记"/>
+  <meta name="twitter:description" content="本文讲述了基于VSCode编辑器开发一款ToDo插件并分析了Emacs和VSCode架构的差异"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="VSCode插件开发小记" />
+<meta property="og:description" content="本文讲述了基于VSCode编辑器开发一款ToDo插件并分析了Emacs和VSCode架构的差异" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/vscode-plugin-development-notes/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2019-12-22T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-22T21:01:13&#43;08:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "VSCode插件开发小记",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2019-12-22T00:00:00Z",
+      "dateModified": "2021-01-22T21:01:13+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/vscode-plugin-development-notes/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "本文讲述了基于VSCode编辑器开发一款ToDo插件并分析了Emacs和VSCode架构的差异",
+      "keywords": ["Get Things Done", "时间管理", "工具", "VSCode Extension", "VSCode插件开发"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/vscode-plugin-development-notes/">
+  
+  <title>
+  VSCode插件开发小记 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/vscode-plugin-development-notes/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/dev/vscode-plugin-development-notes/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">VSCode插件开发小记</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-12-22T00:00:00Z'>
+                2019-12-22
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              9:55
+              
+            </span>
+            
+            <span class="post-word-count"> | 2182 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/get-things-done/">Get Things Done</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/">时间管理</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/vscode-extension/">VSCode Extension</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/">VSCode插件开发</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <h2 id="vscode介绍">VSCode介绍</h2>
+<p>VSCode是微软开源的一款基于Electron开发的代码编辑器。Electron 是一个基于 Chromium 的项目，可用于开发基于 Node.js 的本地应用程序。VSCode 使用 Blink 排版引擎渲染用户界面。虽然基于 Electron 框架，但并不是Atom的复刻。Code是由“Monaco”的编辑器核心制作，与 Visual Studio Team Services 相同。</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<p>在2019年的Stack Overflow组织的开发者调研中，VS Code被认为是最受开发者欢迎的开发环境，据调查87317名受访者中有50.7%的受访者声称正在使用VS Code<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<p><img data-src="https://img.bmpi.dev/2019-12-22-12-06-14.png" alt="" class="lazyload" loading="lazy"/></p>
+<h3 id="feature-overview">Feature Overview</h3>
+<figure >
+    <a href="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">
+        <img data-src="https://img.bmpi.dev/2019-12-22-11-52-59.png" class="lazyload" loading="lazy" alt="Visual Studio Code feature overview" />
+    </a>
+    
+    <figcaption>
+        <p>
+        Visual Studio Code feature overview
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<h3 id="context-view">Context View</h3>
+<figure >
+    <a href="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">
+        <img data-src="https://img.bmpi.dev/2019-12-22-11-47-35.png" class="lazyload" loading="lazy" alt="Context view diagram" />
+    </a>
+    
+    <figcaption>
+        <p>
+        Context view diagram
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<h3 id="module-organization">Module Organization</h3>
+<figure >
+    <a href="https://delftswa.gitbooks.io/desosa-2017/content/vscode/chapter.html">
+        <img data-src="https://img.bmpi.dev/2019-12-22-11-51-53.png" class="lazyload" loading="lazy" alt="Module organization" />
+    </a>
+    
+    <figcaption>
+        <p>
+        Module organization
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<h3 id="vscode-architecture">VSCode Architecture</h3>
+<figure >
+    <a href="https://programmer.help/blogs/disclosure-of-vscode-technology.html">
+        <img data-src="https://img.bmpi.dev/2019-12-22-11-46-42.png" class="lazyload" loading="lazy" alt="VSCode architecture" />
+    </a>
+    
+    <figcaption>
+        <p>
+        VSCode architecture
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<figure >
+    <a href="https://programmer.help/blogs/disclosure-of-vscode-technology.html">
+        <img data-src="https://img.bmpi.dev/2019-12-22-11-46-56.png" class="lazyload" loading="lazy" alt="Process structure of VSCode" />
+    </a>
+    
+    <figcaption>
+        <p>
+        Process structure of VSCode
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<p>从上图可以看出来渲染进程与调试/插件进程都是隔离的，通过RPC去调用，这保证了VSCode在安装很多插件时都能以极快的速度启动，这点对于用户体验很重要，因为启动太慢会让人焦虑（想想IDEA和Emacs在插件多的时候的感人启动速度）。</p>
+<h3 id="emacs-architecture">Emacs Architecture</h3>
+<figure >
+    <a href="https://chrismennie.ca/EMACS-Conceptual-Architecture.pdf">
+        <img data-src="https://img.bmpi.dev/2019-12-22-11-39-24.png" class="lazyload" loading="lazy" alt="EMACS Conceptual Architecture" />
+    </a>
+    
+    <figcaption>
+        <p>
+        EMACS Conceptual Architecture
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+<p>分析完VSCode的架构后，我们还可以学习下上古神器Emacs的架构，Emacs拥有极其强大的扩展能力，号称伪装成操作系统的编辑器（只差一个内核了）。</p>
+<p>在Emacs的世界里，用户的输入通过终端输入给Command Dispatcher组件，前者与Lisp解释器共同处理用户的输入，然后调用底层的Display Processer（处理显示）和Primitives（提供基本功能，例如刷新屏幕，插入一个字符并加载文件），这两个组件又调用最底层的Buffer（缓存区）和OS（操作系统原生命令）。</p>
+<p>这种架构很类似我们Web开发中的MVC架构，通过Lisp解释器提供强大的定制能力，用户可以编写elisp代码给Emacs添加各种功能。</p>
+<p>同样的VSCode也提供了各种插件API，虽不及Emacs这么强大，但是对于我们的很多需求都足够了，加上VSCode的生态的确要远比Emacs的好，入门门槛极低，我在不了解VSCode插件开发到发布第一款插件总共花了不到两天的时间（还是断断续续的开发）。</p>
+<h2 id="vscode插件开发">VSCode插件开发</h2>
+<h3 id="背景">背景</h3>
+<p>如果只是做一个很简单的demo插件，可能不到半小时就搞定了，不过真实的场景一般是比较复杂的，在<a href="https://www.bmpi.dev/zh-cn/self/gtd-tools-i-used/">《我的时间管理工具》</a>这篇文章中提到我开发了VSCode插件<a href="https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus">TODO++</a>，这是一款基于别人插件的修改版本，我需要的很多功能<a href="https://github.com/fabiospampinato/vscode-todo-plus">vscode-todo-plus</a>都已经提供了，但是我需要查看我当前正在做的事情以及当前标记为很重要但是未开始做的事情，我需要在VSCode左侧的窗口中再提供两个窗口（DOING/CRITICAL）。</p>
+<h3 id="step1开发">step1/开发</h3>
+<p>因为要添加TreeView的两个窗口，首先要了解TreeView的基本知识，可以查看VSCode官方的<a href="https://code.visualstudio.com/api/extension-guides/tree-view">Tree View Guide</a>及<a href="https://code.visualstudio.com/api/get-started/your-first-extension">your-first-extension</a>。</p>
+<p>全部的代码在这里 <a href="https://github.com/bmpi-dev/vscode-todo-plus-plus/commit/73b25e64bfc3c75d992a8e20d3b5ec4842efb2e2">add doing task tree view</a>。</p>
+<p>需要注意的是需要先在<code>package.json</code>的加入自己的command，因为我们要在TreeView中添加刷新按钮，当点击刷新按钮时，需要调用我们添加的这个刷新命令。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="font-weight:bold">&#34;command&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;todo.refreshDoingEntry&#34;</span>,
+    <span style="font-weight:bold">&#34;title&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Refresh&#34;</span>,
+    <span style="font-weight:bold">&#34;icon&#34;</span>: {
+        <span style="font-weight:bold">&#34;light&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;resources/icons/refresh_light.svg&#34;</span>,
+        <span style="font-weight:bold">&#34;dark&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;resources/dark/refresh_dark.svg&#34;</span>
+    }
+}
+</code></pre></div><p>这个json会注册 <code>todo.refreshDoingEntry</code> 到VSCode的命令表中，那这个命令真正在<a href="https://github.com/bmpi-dev/vscode-todo-plus-plus/blob/master/src/commands.ts"><code>commands.ts</code></a>中：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">function</span> refreshDoingEntry () {
+  DoingFiles.refresh ( <span style="color:#fff;font-weight:bold">true</span> );
+}
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#fff;font-weight:bold">class</span> Doing <span style="color:#fff;font-weight:bold">extends</span> View {
+
+  id = <span style="color:#0ff;font-weight:bold">&#39;todo.views.0doing&#39;</span>;
+  clear = <span style="color:#fff;font-weight:bold">false</span>;
+  filePathRe = <span style="color:#0ff;font-weight:bold">/^(?!~).*(?:\\|\/)/</span>;
+
+  getTreeItem ( item: <span style="color:#fff;font-weight:bold">Item</span> ): vscode.TreeItem {
+    <span style="color:#fff;font-weight:bold">return</span> item
+  }
+
+  <span style="color:#fff;font-weight:bold">async</span> getChildren ( item?: <span style="color:#fff;font-weight:bold">Item</span> ): Promise&lt;<span style="font-weight:bold">Item</span><span style="color:#f00">[]</span>&gt; {
+
+    <span style="color:#fff;font-weight:bold">if</span> ( <span style="color:#fff;font-weight:bold">this</span>.clear ) {
+
+      setTimeout ( <span style="color:#fff;font-weight:bold">this</span>.refresh.bind ( <span style="color:#fff;font-weight:bold">this</span> ), <span style="color:#ff0;font-weight:bold">0</span> );
+
+      <span style="color:#fff;font-weight:bold">return</span> [];
+
+    }
+
+    <span style="color:#fff;font-weight:bold">let</span> obj = item ? item.obj : <span style="color:#fff;font-weight:bold">await</span> Utils.files.<span style="color:#fff;font-weight:bold">get</span> ();
+
+    <span style="color:#fff;font-weight:bold">while</span> ( obj &amp;&amp; <span style="color:#0ff;font-weight:bold">&#39;&#39;</span> <span style="color:#fff;font-weight:bold">in</span> obj ) obj = obj[<span style="color:#0ff;font-weight:bold">&#39;&#39;</span>]; <span style="color:#007f7f">// Collapsing unnecessary groups
+</span><span style="color:#007f7f"></span>
+    <span style="color:#fff;font-weight:bold">if</span> ( _.isEmpty ( obj ) ) <span style="color:#fff;font-weight:bold">return</span> [<span style="color:#fff;font-weight:bold">new</span> Placeholder ( <span style="color:#0ff;font-weight:bold">&#39;No todo files found&#39;</span> )];
+
+    <span style="color:#fff;font-weight:bold">if</span> ( obj.textEditor ) {
+
+      <span style="color:#fff;font-weight:bold">const</span> items = [],
+            lineNr = obj.hasOwnProperty ( <span style="color:#0ff;font-weight:bold">&#39;lineNr&#39;</span> ) ? obj.lineNr : -<span style="color:#ff0;font-weight:bold">1</span>;
+
+      Utils.ast.walkChildren ( obj.textEditor, lineNr, data =&gt; {
+
+        data.textEditor = obj.textEditor;
+        data.filePath = obj.filePath;
+        data.lineNr = data.line.lineNumber;
+
+        <span style="color:#fff;font-weight:bold">let</span> isDoing = data.line.text.includes(<span style="color:#0ff;font-weight:bold">&#34;@doing&#34;</span>) || (data.line.text.includes(<span style="color:#0ff;font-weight:bold">&#34;@started&#34;</span>) &amp;&amp; !data.line.text.includes(<span style="color:#0ff;font-weight:bold">&#34;@done&#34;</span>));
+
+        <span style="color:#fff;font-weight:bold">let</span> isGroup = <span style="color:#fff;font-weight:bold">false</span>;
+
+        Utils.ast.walkChildren2 ( obj.textEditor, data.line.lineNumber, data =&gt; {
+          <span style="color:#fff;font-weight:bold">if</span> ((data.line.text.includes(<span style="color:#0ff;font-weight:bold">&#34;@doing&#34;</span>) || data.line.text.includes(<span style="color:#0ff;font-weight:bold">&#34;@started&#34;</span>)) &amp;&amp; !data.line.text.includes(<span style="color:#0ff;font-weight:bold">&#34;@done&#34;</span>)) {
+            isGroup = <span style="color:#fff;font-weight:bold">true</span>;
+            <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">false</span>;
+          }
+          <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">true</span>;
+      });
+
+        <span style="color:#fff;font-weight:bold">if</span> (isDoing || isGroup) {
+          <span style="color:#fff;font-weight:bold">const</span> label = _.trimStart ( data.line.text ),
+              item = isGroup ? <span style="color:#fff;font-weight:bold">new</span> Group ( data, label ) : <span style="color:#fff;font-weight:bold">new</span> Todo ( data, label );
+          items.push ( item );
+        }
+      });
+
+      <span style="color:#fff;font-weight:bold">if</span> ( !items.length ) { <span style="color:#fff;font-weight:bold">return</span> []; }
+
+      <span style="color:#fff;font-weight:bold">return</span> items;
+
+    } <span style="color:#fff;font-weight:bold">else</span> {
+
+      <span style="color:#fff;font-weight:bold">const</span> keys = <span style="color:#fff;font-weight:bold">Object</span>.keys ( obj ).sort ();
+
+      <span style="color:#fff;font-weight:bold">return</span> keys.map ( key =&gt; {
+
+        <span style="color:#fff;font-weight:bold">const</span> val = obj[key];
+
+        <span style="color:#fff;font-weight:bold">if</span> ( <span style="color:#fff;font-weight:bold">this</span>.filePathRe.test ( key ) ) {
+
+          <span style="color:#fff;font-weight:bold">const</span> uri = Utils.view.getURI ( val );
+
+          <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">new</span> File ( val, uri );
+
+        } <span style="color:#fff;font-weight:bold">else</span> {
+
+          <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">new</span> Group ( val, key, <span style="color:#fff;font-weight:bold">this</span>.config.embedded.view.icons );
+
+        }
+
+      });
+
+    }
+
+  }
+
+  refresh ( clear? ) {
+
+    <span style="color:#fff;font-weight:bold">this</span>.clear = !!clear;
+
+    <span style="color:#fff;font-weight:bold">super</span>.refresh ();
+
+  }
+
+}
+</code></pre></div><p><code>Doing extends View implements vscode.TreeDataProvider&lt;Item&gt;</code>，这就是VSCode的TreeView，以<code>id = 'todo.views.0doing'</code>注册，在<code>package.json</code>中:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0ff;font-weight:bold">&#34;views&#34;</span><span style="color:#f00">:</span> {
+      <span style="font-weight:bold">&#34;todo&#34;</span>: [
+        {
+          <span style="font-weight:bold">&#34;id&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;todo.views.0doing&#34;</span>,
+          <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Doing&#34;</span>
+        },
+        {
+          <span style="font-weight:bold">&#34;id&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;todo.views.3critical&#34;</span>,
+          <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Critical&#34;</span>
+        },
+        {
+          <span style="font-weight:bold">&#34;id&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;todo.views.1files&#34;</span>,
+          <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Files&#34;</span>
+        },
+        {
+          <span style="font-weight:bold">&#34;id&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;todo.views.2embedded&#34;</span>,
+          <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Embedded&#34;</span>
+        }
+      ]
+    }
+</code></pre></div><p>注册刷新按钮到TreeView中:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0ff;font-weight:bold">&#34;view/title&#34;</span><span style="color:#f00">:</span> [
+        {
+          <span style="font-weight:bold">&#34;command&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;todo.refreshDoingEntry&#34;</span>,
+          <span style="font-weight:bold">&#34;when&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;view == todo.views.0doing&#34;</span>,
+          <span style="font-weight:bold">&#34;group&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;navigation@0&#34;</span>
+        }
+    ]
+</code></pre></div><p>最后别忘了在<code>index.ts</code>中export:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#fff;font-weight:bold">export</span> <span style="color:#fff;font-weight:bold">default</span> [Doing, Critical, Files, Embedded];
+</code></pre></div><h3 id="step2发布">step2/发布</h3>
+<p>开发完毕后，我们可以利用Github Actions提供的自动化发布插件<a href="https://github.com/marketplace/actions/vscode-release-plugin">Vscode release plugin</a>编写自己的插件发布pipeline:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">on</span>: push
+<span style="font-weight:bold">name</span>: <span style="color:#0ff;font-weight:bold">&#34;Release Vscode Plugin &#34;</span>
+<span style="font-weight:bold">jobs</span>:
+  <span style="font-weight:bold">npmInstall</span>:
+    <span style="font-weight:bold">name</span>: npm install
+    <span style="font-weight:bold">runs-on</span>: ubuntu-latest
+    <span style="font-weight:bold">steps</span>:
+      - <span style="font-weight:bold">uses</span>: actions/checkout@v1
+      - <span style="font-weight:bold">name</span>: npm install
+        <span style="font-weight:bold">run</span>: npm install
+      - <span style="font-weight:bold">name</span>: Vscode release plugin
+        <span style="font-weight:bold">uses</span>: JCofman/vscodeaction@master
+        <span style="font-weight:bold">env</span>:
+          <span style="font-weight:bold">PUBLISHER_TOKEN</span>: ${{ secrets.PUBLISHER_TOKEN }}
+        <span style="font-weight:bold">with</span>:
+          <span style="font-weight:bold">args</span>: publish -p $PUBLISHER_TOKEN
+</code></pre></div><p>这样每次push都会触发自动发布至<a href="https://marketplace.visualstudio.com/vscode">VSCode Marketplace</a>。当然要了解详细的发布知识，可以查看官方的<a href="https://code.visualstudio.com/api/working-with-extensions/publishing-extension#create-a-publisher">Publishing Extensions</a>。</p>
+<h2 id="进一步阅读">进一步阅读</h2>
+<p>可研究下VSCode官方提供了一些插件的Demo: <a href="https://github.com/microsoft/vscode-extension-samples">vscode-extension-samples</a>。</p>
+<p>插件开发中不可避免要Debug，VSCode也提供了强大的Debug能力，可参考<a href="https://vscode-docs.readthedocs.io/en/stable/extensions/debugging-extensions/">Debugging extensions</a>。</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://insights.stackoverflow.com/survey/2019"> Developer Survey Results 2019 - Most Popular Development Environments</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              4个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/5750fdef29285eb60bd558bc0522244f1fb90224">5750fde</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/parser_black_magic/">Parser黑魔法</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/self/gtd-tools-i-used/">我的时间管理工具</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

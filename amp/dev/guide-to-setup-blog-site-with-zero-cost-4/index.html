@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>零成本搭建现代博客之加载速度优化篇</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/guide-to-setup-blog-site-with-zero-cost-4\/",
+          "name": "guide-to-setup-blog-site-with-zero-cost-4"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>零成本搭建现代博客之加载速度优化篇</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2020-04-19T00:00:00Z'>
+                2020-04-19
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/">加载速度优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/chrome-audits/">Chrome Audits</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/webpagetest/">webpagetest</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96/">图片优化</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/cdn/">CDN</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/amp/">AMP</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%B9%BF%E5%91%8A%E5%8A%A0%E8%BD%BD%E4%BC%98%E5%8C%96/">广告加载优化</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <blockquote>
+<p>本文属于<a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a>系列第四篇【加载速度优化篇】。
+<div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/e4e1ee7e-2f99-972a-b691-07edeb0b4935.png" alt="" layout="fill"></amp-img></div>
+这个系列不少的东西需要你科学上网才能访问，也就是你需要一把<a href="https://www.bmpi.dev/affiliate">梯子</a>。</p>
+</blockquote>
+<p>个人博客搭建好后，如何优化加载速度？我们都知道如果一个网页在2至3秒还没有加载出来的话，用户因为焦虑就会关闭这个网页了。</p>
+<p>在<a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">《零成本搭建现代博客之SEO优化篇》</a>这篇文章里我们知道网站加载速度属于<a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E6%80%A7%E4%BC%98%E5%8C%96/">SEO技术性优化</a>很重要的一个方面。如何提高网站加载速度对获取流量来说是个很重要的环节。</p>
+<p>通过一个对Google的爬取规律观察，<strong>Google爬虫对新站一天大约爬半个小时，网站响应越慢，爬虫爬的速度也越慢</strong>。所以从网站被收录的角度看，提高网站加载速度也是很有必要的。</p>
+
+<p>先说结果，本博客优化之前，Google PageSpeed Insights 在移动端的评分为76分：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/aab2bb8f-60ca-f2da-cc00-b5d605c4779e.png" alt="" layout="fill"></amp-img></div></p>
+<p>经过以下的一些方法优化后，移动端的评分为95分：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/b171195b-d106-87cf-67ed-73889c9b6417.png" alt="" layout="fill"></amp-img></div></p>
+<p><strong>Google搜索结果现在对移动端越来越重视了，用户在移动端上对网站加载速度的要求也越高，所以对移动端的加载速度优化要更重视一些。</strong></p>
+<h2 id="加载速度评估">加载速度评估</h2>
+<p>要想优化加载速度，我们首先要通过一些方法量化分析网站加载速度，这样才能更好的对加载速度进行优化。以下是常用的一些分析网站加载速度的工具。</p>
+<h3 id="google-pagespeed-insightshttpsdevelopersgooglecomspeedpagespeedinsights"><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></h3>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/tg_media/web_cpc-244.jpg" alt="" layout="fill"></amp-img></div></p>
+<p>PageSpeed是检测网站加载速度很重要的工具，它可以给予我们非常详细的优化点，从中可以发现拖慢网站的元凶。</p>
+<h3 id="chrome-auditslighthouse">Chrome Audits(Lighthouse)</h3>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/tg_media/web_cpc-249.jpg" alt="" layout="fill"></amp-img></div></p>
+<p>Chrome浏览器自带的Audits除了能让我们查看网站的加载速度，还可以查看网站最佳实践、可用性、SEO及PWA方面的评分及改进点。如果你的网站在这几方面评分都超过90分，那一定是Google在这几方面很喜欢的网站了。</p>
+<h3 id="webpagetesthttpswwwwebpagetestorg"><a href="https://www.webpagetest.org/">webpagetest</a></h3>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/tg_media/web_cpc-322.jpg" alt="" layout="fill"></amp-img></div></p>
+<p>webpagetest是<strong>非常强大</strong>的测试网站加载速度并深入分析网站资源加载速度的工具，还可以测试网站在不加载（屏蔽）某些资源的情况下网站加载速度与正常加载的对比，这样可以发现让网站加载速度变慢的资源或库。</p>
+<p>我在测试本站的时候曾保留了一份<a href="https://www.webpagetest.org/video/compare.php?tests=200216_D1_4561cee4859af5b0cb0dcb6740902455%2C200216_GB_ab54b9bcbb4ce9b55b3820a58a6d87fc&amp;thumbSize=100&amp;ival=100&amp;end=visual">测试报告</a>，最终通过这个工具定位到了让网站评分降低的原因。</p>
+<h3 id="用户反馈">用户反馈</h3>
+<p>有时候不同地区的加载速度是不同的，更麻烦的是你很难知道当地的网络情况，这时候就需要用户的反馈了。</p>
+<h2 id="加载速度优化">加载速度优化</h2>
+<h3 id="图片优化">图片优化</h3>
+<h4 id="图片大小优化">图片大小优化</h4>
+<p>在这篇<a href="https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/">《使用AWS Lambda提高网站图片加载速度1X倍》</a>，我使用了Webp这种新型的图片格式让网站在Chrome下图片加载速度提高了十倍多。</p>
+<p>优化图片大小非常重要，网站资源大头一般都是图片，图片太大会导致加载速度很慢，在手机端也很耗费用户的流量。一般可以通过对图片大小进行裁剪，对图片格式进行转换这些方式来降低图片大小。</p>
+<h4 id="图片懒加载">图片懒加载</h4>
+<p>在这篇<a href="https://web.dev/codelab-use-lazysizes-to-lazyload-images/">《Lazy load offscreen images with lazysizes》</a>中提到了使用图片懒加载来延迟图片加载时机。当用户浏览到某个区域的时候该区域的图片才会开始加载，并不会一次加载网页全部的图片，<a href="https://github.com/aFarkas/lazysizes">lazysizes</a>是一个对SEO友好的图片懒加载库，本站使用它实现图片懒加载。</p>
+<h3 id="前端资源优化">前端资源优化</h3>
+<p>网站的前端资源越来越大了，尤其是当你使用了很多第三方库的时候。</p>
+<blockquote>
+<p>用库一时爽，优化火葬场！</p>
+</blockquote>
+<p>如果想极大的提高网站加载速度，尽可能使用少的第三方库。</p>
+<h4 id="js和css优化">JS和CSS优化</h4>
+<p>在这篇<a href="https://web.dev/render-blocking-resources/">《Eliminate render-blocking resources》</a>中提到了如何识别非重要的CSS和JS代码，通过去除不需要的代码减小前端资源文件大小。</p>
+<h4 id="第三方库优化">第三方库优化</h4>
+<p>在这篇<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/">《Loading Third-Party JavaScript》</a>中提到了如何正确加载第三方包，通过分析第三方包的加载时序图来判断对加载速度影响最大的几个因素，从而帮助你优化第三方包的加载。</p>
+<h3 id="内容结构优化">内容结构优化</h3>
+<h4 id="加载更多">加载更多</h4>
+<p>一般对于瀑布流布局的网站，通过加载更多来降低每页返回的页面大小。不过这种方式对爬虫并不算友好，只有第一个页面可以被爬取到。</p>
+<h4 id="分页">分页</h4>
+<p>常规网站一般通过分页来控制每页返回的页面大小。分页页面通过设置唯一的 <a href="https://support.google.com/webmasters/answer/139066?hl=zh-Hans">canonical url</a> 可以让爬虫更好的爬取到分页页面。</p>
+<h3 id="cdn">CDN</h3>
+<p>本站使用了免费的 <a href="https://www.netlify.com/">netlify</a> 作为CDN来提高网站在不同地区的加载速度，CDN通过边缘服务器缓存来提高用户请求网页的速度，一般的CDN都会设置某个失效时间后自动去源站拉取最新的内容缓存到边缘服务器。</p>
+<p>你也可以选择诸如 <a href="https://aws.amazon.com/cn/cloudfront/">Amazon CloudFront</a> 与 <a href="https://www.cloudflare.com/">cloudflare</a> 这类CDN。还有一些特殊的比如具备反爬虫的CDN，如imperva收购的 <a href="https://www.imperva.com/products/bot-management/">distilnetworks</a> 就是很厉害的反爬虫CDN。</p>
+<h3 id="静态化技术">静态化技术</h3>
+<p>动态网站一般需要做一些查询数据库和页面渲染的额外工作，为了提高网站响应速度，一些框架可以自动生成静态化页面部署到CDN中来提高网站响应速度。比如本站使用了基于 <a href="https://gohugo.io/">Hugo</a> 的静态化技术框架，类似的还有 <a href="https://hexo.io/">Hexo</a>，这类技术都属于 <a href="https://jamstack.org/">JAMSTACK</a>，还有新型的 <a href="https://www.gatsbyjs.org/">gatsbyjs</a> 技术让我们更容易开发出更快的网站。</p>
+<h3 id="amphttpsampdev"><a href="https://amp.dev/">AMP</a></h3>
+<p>AMP是Google推出的Web组件框架，可以加速移动端的访问速度，比如你可以看看<a href="https://www.bmpi.dev/amp/dev/guide-to-setup-blog-site-with-zero-cost-4/">本篇文章的AMP</a>版本页面，在移动端访问速度是非常快的。</p>
+<h3 id="广告优化">广告优化</h3>
+<p>使用webpagetest研究本站前端资源的加载速度，最终发现让网站变慢的是Google Adsense广告资源。</p>
+<p>通过将广告延迟5秒展示加载的方式来提高页面访问速度，具体代码见 <a href="https://github.com/bmpi-dev/bmpi.dev/commit/a98beba8e14a4a75884c3ecfa3b9037469caae67">seo improve by delay google ads load</a>，此举将网站加载速度评分提升至90+了。但是测试后发现这种延迟广告展示的方式会降低广告收入😂。</p>
+<h2 id="总结">总结</h2>
+<p>在SEO技术性优化中，提升加载速度是很重要的一个方面，我们需要使用多种手段去降低页面返回的大小来提升网站的加载速度。而且在设计、开发与运营网站的全流程中，加载速度始终是各个环节都需要考虑的问题。本篇文章介绍的只是几个很简单的方面去提升，如果你有更好的方式，请留言交流，共同进步。</p>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

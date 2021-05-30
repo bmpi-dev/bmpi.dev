@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>Adventures in Serverless Application Development</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/en/dev/guide-to-serverless/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Build My Passive Income",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/en\/",
+          "name": "en"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/en\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/en\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  6 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/en\/amp\/dev\/guide-to-serverless\/",
+          "name": "guide-to-serverless"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>Adventures in Serverless Application Development</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2021-02-14T00:00:00Z'>
+                2021-02-14
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/en/tags/aws/">AWS</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/lambda/">Lambda</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/serverless/">Serverless</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/terraform/">Terraform</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/infrastructure-as-code/">Infrastructure as code</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/serverless-architecture/">Serverless Architecture</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/docker/">Docker</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/aws-ecs/">AWS ECS</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/devops/">DevOps</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <h2 id="background">Background</h2>
+<p>This article describes the entire process of developing an application based on AWS Serverless technology. The infrastructure is built using Serverless Framework and Terraform. The core module of the system is a timed task that is executed once a day: the task obtains a set of ETF index fund price data via <a href="https://tushare.pro/"> Tushare </a>, and after processing, generates a text of the trading signals and stores it in an S3 bucket. After that, a message is sent to the AWS SNS Topic, and users subscribed to the topic will receive an email alert. There is a user email subscription portal on the system&rsquo;s web page, and you can also access the daily history of trading signals.</p>
+<p>This article covers the following:</p>
+<ul>
+<li>Build a Docker image to execute Core Service.</li>
+<li>The following AWS infrastructure services are required to build Core Service with Terraform.
+<ul>
+<li>Set up an ECR repository.</li>
+<li>Set up an ECS cluster using Fargate.</li>
+<li>Set up Fargate tasks.</li>
+<li>Set up CloudWatch timed tasks.</li>
+<li>Set up IAM permission roles.</li>
+<li>Setting up SNS Topics.</li>
+<li>Setting up a VPC network.</li>
+</ul>
+</li>
+<li>The following AWS infrastructure services required to build API Services and the Web using the Serverless Framework.
+<ul>
+<li>Set up Lambda functions.</li>
+<li>Set up the API Gateway.</li>
+<li>Setting up Route53.</li>
+<li>Setting up CloudFront.</li>
+<li>Setting up TLS certificates.</li>
+<li>Setting up S3 buckets.</li>
+<li>Setting up CloudFormation.</li>
+</ul>
+</li>
+</ul>
+<p>The final result is available at: <a href="https://money.i365.tech/">Online version</a>.</p>
+<p>The source code is available at: <a href="https://github.com/bmpi-dev/invest-alchemy">Code Repository</a>.</p>
+<p>The technology stack is as follows:</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/b1e5efb6-a764-ec0a-cbed-2573936fe7e3.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You need to register for the following account first:</p>
+<ul>
+<li><a href="https://aws.amazon.com/">AWS Account</a></li>
+<li><a href="https://www.serverless.com/">Serverless Account</a></li>
+</ul>
+<h2 id="background-knowledge">Background Knowledge</h2>
+<h3 id="application-architecture-evolution-history1">Application Architecture Evolution History<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h3>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2d7c4b7a-ceaa-9a6d-0ea5-1e9151cbd5ac.png" alt="" layout="fill"></amp-img></div></p>
+<ul>
+<li>Monolithic application (Monolithic): small applications suitable for startups; good performance.</li>
+<li>Service-oriented (SOA): large applications suitable for complex enterprise business.</li>
+<li>Microservices (Microservices): complex elastic scalable applications for experienced teams.</li>
+<li>Serverless (Serverless): low cost, suitable for background tasks; also suitable for applications with a large number of customers and applications that grow rapidly and need to scale infinitely.</li>
+</ul>
+<h3 id="serverless">Serverless</h3>
+<blockquote>
+<p>Build and run applications without thinking about servers<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+</blockquote>
+<p>Serverless computing, or serverless for short, is an execution model in which a cloud provider (AWS, Azure, or Google Cloud) is responsible for executing a piece of code by dynamically allocating resources and charging only for the resources used to run the code. The code typically runs in a stateless container and can be triggered by a variety of events including HTTP requests, database events, queue services, monitoring alerts, file uploads, scheduling events (cron tasks), and more. The code that is sent to the cloud provider for execution is typically in the form of a function, and thus serverless computing is sometimes referred to as &ldquo;function as a service&rdquo; or FAAS.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h4 id="advantages">Advantages</h4>
+<ul>
+<li>No server management costs</li>
+<li>Flexible scaling</li>
+<li>Pay for service uptime</li>
+<li>Self-contained high availability and fault tolerance</li>
+</ul>
+<h4 id="disadvantages">Disadvantages</h4>
+<ul>
+<li>Poor cold start performance</li>
+<li>Complex monitoring and debugging</li>
+<li>Dependence on cloud vendors</li>
+</ul>
+<h3 id="devops">DevOps</h3>
+<p><div class="fixed-container"><amp-img class="contain" src="https://www.jamesbowman.me/post/cdlandscape/ContinuousDeliveryToolLandscape-fullsize.jpeg" alt="" layout="fill"></amp-img></div></p>
+<p>This is a panorama of DevOps tools, and I have used only a small part of them in this application development process, even without testing process. Of course, the application of these tools also need to consider the actual situation of the project, flexible application.</p>
+<h2 id="application-architecture">Application Architecture</h2>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/48504c01-c2d0-e05a-1eda-d82b88f6496d.png" alt="" layout="fill"></amp-img></div></p>
+<p>The application is divided into three main modules:</p>
+<ul>
+<li>Core Service：Background timing tasks, providing the function of getting fund price data, analyzing and generating trading signals and sending emails.</li>
+<li>API Service：Provides subscription theme API.</li>
+<li>Web：Provides subscription theme entrance page and view historical trading signal records.</li>
+</ul>
+<h2 id="coding-implementation">Coding Implementation</h2>
+<p>Since you&rsquo;ll be using a variety of AWS cloud services next, to learn about them see this article<a href="https://wiki.bmpi.dev/#AWS%E5%90%84%E6%9C%8D%E5%8A%A1%E8%A7%A3%E9%87%8A:AWS%E5%90%84%E6%9C%8D%E5%8A%A1%E8%A7%A3%E9%87%8A%20AWS%E5%A5%BD%E6%96%87%20Index"> AWS Services Explained </a>.</p>
+<h3 id="code-structure">Code Structure</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── api <span style="color:#007f7f"># api service</span>
+│   ├── serverless.yml
+│   └── sns.js <span style="color:#007f7f"># lambda function</span>
+├── core <span style="color:#007f7f"># core service</span>
+│   ├── Dockerfile
+│   ├── Infrastructure
+│   │   └── tf-fargate
+│   │       ├── cloudwatch.tf
+│   │       ├── ecr.tf
+│   │       ├── ecs.tf
+│   │       ├── iam.tf
+│   │       ├── main.tf
+│   │       ├── output.tf
+│   │       ├── sns.tf
+│   │       ├── tasks
+│   │       │   └── task_definition.json
+│   │       ├── variables.tf
+│   │       └── vpc.tf
+│   ├── Makefile <span style="color:#007f7f"># CLI entry</span>
+│   ├── requirements.txt
+│   └── src
+│       ├── fund.txt
+│       └── main.py <span style="color:#007f7f"># fargate task</span>
+└── web <span style="color:#007f7f"># web service</span>
+    ├── binaryMimeTypes.js
+    ├── client
+    │   ├── assets
+    │   │   └── styles
+    │   │       └── global.less
+    │   ├── components
+    │   │   └── navbar.vue
+    │   ├── layouts
+    │   │   └── default.vue
+    │   ├── pages
+    │   │   └── index.vue
+    │   └── plugins
+    │       └── iview.js
+    ├── index.js
+    ├── nuxt.config.js
+    ├── nuxt.js <span style="color:#007f7f"># lambda function</span>
+    ├── package-lock.json
+    ├── package.json
+    ├── secrets_example.json
+    ├── serverless.yml
+    └── yarn.lock
+</code></pre></div><h3 id="core-service">Core Service</h3>
+<p>Core Service runs through AWS Fargate, which is better suited than Lambda for running long background tasks. core Service is developed in Python, and to make it run in an AWS ECS environment, a Docker image is first built and then pushed to an AWS ECR repository.</p>
+<h4 id="docker-image">Docker Image</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">FROM python:3.8-slim-buster
+
+USER root
+WORKDIR /tmp
+
+<span style="color:#007f7f"># for source</span>
+RUN rm /bin/sh &amp;&amp; ln -s /bin/bash /bin/sh
+
+<span style="color:#007f7f"># for compile</span>
+RUN  apt-get update <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  &amp;&amp; apt-get install -y wget <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  &amp;&amp; apt-get install -y build-essential <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+<span style="color:#007f7f"># for TA-Lib</span>
+RUN pip install numpy &amp;&amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz &amp;&amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  tar -xvzf ta-lib-0.4.0-src.tar.gz &amp;&amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  <span style="color:#fff;font-weight:bold">cd</span> ta-lib/ &amp;&amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  ./configure --prefix=/usr &amp;&amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  make &amp;&amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>  make install
+RUN rm -R ta-lib ta-lib-0.4.0-src.tar.gz
+
+<span style="color:#007f7f"># set the working directory in the container</span>
+WORKDIR /code
+<span style="color:#007f7f"># copy the dependencies file to the working directory</span>
+COPY requirements.txt .
+<span style="color:#007f7f"># install dependencies</span>
+RUN pip3 install -r requirements.txt
+<span style="color:#007f7f"># copy the content of the local src directory to the working directory</span>
+COPY src/ .
+<span style="color:#007f7f"># command to run on container start</span>
+CMD [ <span style="color:#0ff;font-weight:bold">&#34;python&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;./main.py&#34;</span> ]
+</code></pre></div><p>One thing to keep in mind here is the choice of base image, usually we use the alpine version when choosing a Python image. However, the alpine version requires a lot of compilation when installing some local binary packages, and this compilation will encounter various errors, so I finally chose the buster version, which is based on ubuntu. If you want to know more about it, see this article<a href="https://pythonspeed.com/articles/alpine-docker-python/">《Using Alpine can make Python Docker builds 50× slower》</a>。</p>
+<p>After obtaining the API Token for Tushare, you need to run Docker locally.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">docker build -t invest-alchemy/core . # Build
+docker run -t -i -e TUSHARE_API_TOKEN=xxxx invest-alchemy/core # Local Run
+</code></pre></div><p>The ECR repository is then created in AWS, and the locally built images can then be pushed to the ECR for use by ECS tasks.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin replace_with_your_ecr_addr.dkr.ecr.us-east-1.amazonaws.com <span style="color:#007f7f"># Login ECR</span>
+
+docker build -t invest-alchemy/core . <span style="color:#007f7f"># Local Build</span>
+
+docker tag invest-alchemy/core:latest replace_with_your_ecr_addr.dkr.ecr.us-east-1.amazonaws.com/invest-alchemy/core:latest <span style="color:#007f7f"># Add Tag</span>
+
+docker push replace_with_your_ecr_addr.dkr.ecr.us-east-1.amazonaws.com/invest-alchemy/core:latest <span style="color:#007f7f"># Push to Remote Repo</span>
+</code></pre></div><h4 id="infrastructure-as-code">Infrastructure as Code</h4>
+<p>The next step is to build the required infrastructure (ECS/IAM/SNS/VPC/CloudWatch) via Terraform. The main reference for this piece is this<a href="https://zoph.me/posts/2019-09-22-serverless-jobs-scheduling-using-aws-fargate/">《Serverless job scheduling using AWS Fargate》</a>。</p>
+<h5 id="ecrecstask">ECR/ECS/Task</h5>
+<p>See the source code for details, note that set <code>capacity_provider</code> to <code>FARGATE_SPOT</code> can significant cost reduction.</p>
+<h5 id="cloudwatch">CloudWatch</h5>
+<p>See the source code for details, note that <code>ecs_target</code>/<code>network_configuration</code> can use the default VPC network, be sure to set the <code>assign_public_ip</code> to <code>true</code>, otherwise the container task will not be able to access the external network.</p>
+<h5 id="vpc">VPC</h5>
+<p>Use the AWS default VPC network. AWS Fargate can run in multiple network modes; the simplest, public subnet mode, is chosen here.</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/ff9ced8e-daf9-b600-f3b8-033a3c78939e.png" alt="" layout="fill"></amp-img></div></p>
+<p>For other scenes see <a href="https://github.com/nathanpeck/aws-cloudformation-fargate">《CloudFormation Templates for AWS Fargate deployments》</a>.</p>
+<p>For further study you can read this article <a href="https://cloudonaut.io/fargate-networking-101/">《Fargate networking 101》</a>.</p>
+<h5 id="iam">IAM</h5>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">######################### Role used by the container regulates what AWS services the task has access to, e.g. your application is using a DynamoDB, then the task role must give the task access to Dynamo.
+resource &#34;aws_iam_role&#34; &#34;ecs_service_role&#34; {
+  name               = &#34;${var.project}_ecs_service_role_${var.env}&#34;
+  assume_role_policy = &#34;${data.aws_iam_policy_document.ecs_service_assume_role_policy.json}&#34;
+}
+
+resource &#34;aws_iam_role_policy&#34; &#34;ecs_service_policy&#34; {
+  name   = &#34;${var.project}_ecs_service_role_policy_${var.env}&#34;
+  policy = &#34;${data.aws_iam_policy_document.ecs_service_policy.json}&#34;
+  role   = &#34;${aws_iam_role.ecs_service_role.id}&#34;
+}
+
+data &#34;aws_iam_policy_document&#34; &#34;ecs_service_policy&#34; {
+  statement {
+    effect = &#34;Allow&#34;
+    resources = [&#34;*&#34;]
+    actions = [
+        &#34;iam:ListPolicies&#34;,
+        &#34;iam:GetPolicyVersion&#34;
+    ]
+  }
+}
+
+data &#34;aws_iam_policy_document&#34; &#34;ecs_service_assume_role_policy&#34; {
+  statement {
+    actions = [&#34;sts:AssumeRole&#34;]
+    principals {
+      type = &#34;Service&#34;
+      identifiers = [&#34;ecs-tasks.amazonaws.com&#34;]
+    }
+  }
+}
+
+resource &#34;aws_iam_role_policy_attachment&#34; &#34;ecs_service_role_policy_attachment&#34; {
+  role       = aws_iam_role.ecs_service_role.name
+  policy_arn = &#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34; # https://gist.github.com/gene1wood/55b358748be3c314f956
+}
+
+######################### Role used by the container enables the service to e.g. pull the image from ECR, spin up or deregister tasks etc
+
+resource &#34;aws_iam_role&#34; &#34;ecs_task_execution_role&#34; {
+  name = &#34;${var.project}_ecs_task_execution_role_${var.env}&#34;
+ 
+  assume_role_policy = &lt;&lt;EOF
+{
+ &#34;Version&#34;: &#34;2012-10-17&#34;,
+ &#34;Statement&#34;: [
+   {
+     &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+     &#34;Principal&#34;: {
+       &#34;Service&#34;: &#34;ecs-tasks.amazonaws.com&#34;
+     },
+     &#34;Effect&#34;: &#34;Allow&#34;,
+     &#34;Sid&#34;: &#34;&#34;
+   }
+ ]
+}
+EOF
+}
+ 
+resource &#34;aws_iam_role_policy_attachment&#34; &#34;ecs_task_execution_role_policy_attachment&#34; {
+  role       = aws_iam_role.ecs_task_execution_role.name
+  policy_arn = &#34;arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy&#34; # https://gist.github.com/gene1wood/55b358748be3c314f956
+}
+
+######################### Role used for ECS Events
+
+resource &#34;aws_iam_role&#34; &#34;ecs_events_role&#34; {
+  name               = &#34;${var.project}_ecs_events_role_${var.env}&#34;
+  assume_role_policy = &#34;${data.aws_iam_policy_document.ecs_events_assume_role_policy.json}&#34;
+}
+
+resource &#34;aws_iam_role_policy_attachment&#34; &#34;ecs_events_role_policy&#34; {
+  policy_arn = &#34;${data.aws_iam_policy.ecs_events_policy.arn}&#34;
+  role       = &#34;${aws_iam_role.ecs_events_role.id}&#34;
+}
+
+data &#34;aws_iam_policy&#34; &#34;ecs_events_policy&#34; {
+  arn = &#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceEventsRole&#34; # https://gist.github.com/gene1wood/55b358748be3c314f956
+}
+
+data &#34;aws_iam_policy_document&#34; &#34;ecs_events_assume_role_policy&#34; {
+  statement {
+    actions = [&#34;sts:AssumeRole&#34;]
+    principals {
+      type = &#34;Service&#34;
+      identifiers = [&#34;events.amazonaws.com&#34;]
+    }
+  }
+}
+</code></pre></div><p>Three roles are defined here.</p>
+<ul>
+<li>ecs_service_role: container application privileges, such as Core Service needs to push data to S3 and SNS, you need to have the relevant privileges for this role.</li>
+<li>ecs_task_execution_role: ECS task execution permission, for example, if ECS needs to pull images from ECR, it needs to have the permission to access ECR.</li>
+<li>ecs_events_role: CloudWatch timing task permission, such as timing tasks need to execute ECS tasks, you need to have the permission of <code>AmazonEC2ContainerServiceEventsRole</code> role.</li>
+</ul>
+<h5 id="application-secrets">Application Secrets</h5>
+<p>Applications always need to rely on some sensitive information, such as various api tokens. Core Service relies on Tushare API token, so it needs to be injected through Terraform. Here i refer to this <a href="https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1">《A comprehensive guide to managing secrets in your Terraform code》</a>.</p>
+<p>The article provides these ways of managing sensitive information.</p>
+<ul>
+<li>Environment variables</li>
+<li>Encrypted files (AWS KMS)</li>
+<li>Key repository (AWS Secrets manager)</li>
+</ul>
+<p>The first way of environment variables is the simplest, and the next two have a certain cost of use, because the key security requirements are not high, the first simple way is used here.</p>
+<p>First define the variables.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#f00">variable</span> <span style="color:#0ff;font-weight:bold">&#34;TUSHARE_API_TOKEN&#34;</span> {
+  <span style="color:#f00">description</span> <span style="color:#f00">=</span> <span style="font-weight:bold">&#34;Tushare API Token from .env&#34;</span>
+  <span style="color:#f00">type</span>        <span style="color:#f00">=</span> <span style="color:#f00">string</span>
+}
+</code></pre></div><p>Then inject this environment variable at the ECS definition.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#f00">data</span> <span style="color:#0ff;font-weight:bold">&#34;template_file&#34;</span> <span style="color:#0ff;font-weight:bold">&#34;task&#34;</span> {
+  <span style="color:#f00">template</span> <span style="color:#f00">=</span> <span style="font-weight:bold">&#34;${file(&#34;</span><span style="color:#f00">./Infrastructure/tf-fargate/tasks/task_definition.json</span><span style="color:#0ff;font-weight:bold">&#34;)}&#34;</span>
+
+  <span style="color:#f00">vars</span> <span style="color:#f00">=</span> {
+    <span style="color:#f00">project</span>             <span style="color:#f00">=</span> <span style="font-weight:bold">&#34;${var.project}&#34;</span>
+    <span style="color:#f00">aws_region</span>          <span style="color:#f00">=</span> <span style="color:#0ff;font-weight:bold">&#34;${var.aws_region}&#34;</span>
+    <span style="color:#f00">ecr_image_uri</span>       <span style="color:#f00">=</span> <span style="color:#0ff;font-weight:bold">&#34;${var.ecr_image_uri}&#34;</span>
+    <span style="color:#f00">TUSHARE_API_TOKEN</span> <span style="color:#f00">=</span> <span style="color:#0ff;font-weight:bold">&#34;${var.TUSHARE_API_TOKEN}&#34;</span> <span style="color:#f00">#</span> <span style="color:#f00">注入变量</span>
+  }
+}
+</code></pre></div><p>Finally, inject this variable into the container at <code>task_definition.json</code>.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0ff;font-weight:bold">&#34;environment&#34;</span><span style="color:#f00">:</span> [{<span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;TUSHARE_API_TOKEN&#34;</span>, <span style="font-weight:bold">&#34;value&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;${TUSHARE_API_TOKEN}&#34;</span>}]
+</code></pre></div><p>This key needs to be entered each time a change is made, so that the key is not leaked to the code repository.</p>
+<h4 id="make-build-script">Make Build Script</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-make" data-lang="make"><span style="color:#007f7f">################ Config ########################
+</span><span style="color:#007f7f"></span>S3_BUCKET ?= invest-alchemy
+AWS_REGION ?= us-east-1
+ENV ?= dev
+ECR := 745121664662.dkr.ecr.us-east-1.amazonaws.com/invest-alchemy-core-ecr-dev <span style="color:#007f7f"># ECR Repository Example: 123456789012.dkr.ecr.eu-west-1.amazonaws.com/{project_name}-ecr-{env}</span>
+<span style="color:#007f7f">################################################
+</span><span style="color:#007f7f"></span>
+<span style="color:#007f7f">################ Artifacts Bucket ##############
+</span><span style="color:#007f7f"></span>artifacts:
+	@echo <span style="color:#0ff;font-weight:bold">&#34;Creation of artifacts bucket&#34;</span>
+	@aws s3 mb s3://<span style="color:#fff;font-weight:bold">$(</span>S3_BUCKET<span style="color:#fff;font-weight:bold">)</span>
+	@aws s3api put-bucket-encryption --bucket <span style="color:#fff;font-weight:bold">$(</span>S3_BUCKET<span style="color:#fff;font-weight:bold">)</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		--server-side-encryption-configuration <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		<span style="color:#0ff;font-weight:bold">&#39;{&#34;Rules&#34;: [{&#34;ApplyServerSideEncryptionByDefault&#34;: {&#34;SSEAlgorithm&#34;: &#34;AES256&#34;}}]}&#39;</span>
+	@aws s3api put-bucket-versioning --bucket <span style="color:#fff;font-weight:bold">$(</span>S3_BUCKET<span style="color:#fff;font-weight:bold">)</span> --versioning-configuration Status=Enabled
+<span style="color:#007f7f">################################################
+</span><span style="color:#007f7f"></span>
+
+build-docker:
+	@echo <span style="color:#0ff;font-weight:bold">&#34;run aws ecr get-login --region </span><span style="color:#fff;font-weight:bold">$(</span>AWS_REGION<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold"> first&#34;</span>
+	@docker build -t <span style="color:#fff;font-weight:bold">$(</span>PROJECT<span style="color:#fff;font-weight:bold">)</span> .
+	@docker tag <span style="color:#fff;font-weight:bold">$(</span>PROJECT<span style="color:#fff;font-weight:bold">)</span> <span style="color:#fff;font-weight:bold">$(</span>ECR<span style="color:#fff;font-weight:bold">)</span>
+	@docker push <span style="color:#fff;font-weight:bold">$(</span>ECR<span style="color:#fff;font-weight:bold">)</span>
+
+<span style="color:#007f7f">################ Terraform #####################
+</span><span style="color:#007f7f"></span>
+init:
+	@. .env
+	@terraform init <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-backend-config=<span style="color:#0ff;font-weight:bold">&#34;bucket=</span><span style="color:#fff;font-weight:bold">$(</span>S3_BUCKET<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-backend-config=<span style="color:#0ff;font-weight:bold">&#34;key=</span><span style="color:#fff;font-weight:bold">$(</span>PROJECT<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">/terraform.tfstate&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		./Infrastructure/tf-fargate/
+
+validate:
+	@terraform validate ./Infrastructure/tf-fargate/
+
+plan:
+	@terraform plan <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;env=</span><span style="color:#fff;font-weight:bold">$(</span>ENV<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;project=</span><span style="color:#fff;font-weight:bold">$(</span>PROJECT<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;description=</span><span style="color:#fff;font-weight:bold">$(</span>DESCRIPTION<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;aws_region=</span><span style="color:#fff;font-weight:bold">$(</span>AWS_REGION<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;artifacts_bucket=</span><span style="color:#fff;font-weight:bold">$(</span>S3_BUCKET<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		./Infrastructure/tf-fargate/
+
+apply:
+	@terraform apply <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;env=</span><span style="color:#fff;font-weight:bold">$(</span>ENV<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;project=</span><span style="color:#fff;font-weight:bold">$(</span>PROJECT<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-var=<span style="color:#0ff;font-weight:bold">&#34;description=</span><span style="color:#fff;font-weight:bold">$(</span>DESCRIPTION<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#34;</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>		-compact-warnings ./Infrastructure/tf-fargate/
+
+destroy:
+	@read -p <span style="color:#0ff;font-weight:bold">&#34;Are you sure that you want to destroy: &#39;</span><span style="color:#fff;font-weight:bold">$(</span>PROJECT<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">-</span><span style="color:#fff;font-weight:bold">$(</span>ENV<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">-</span><span style="color:#fff;font-weight:bold">$(</span>AWS_REGION<span style="color:#fff;font-weight:bold">)</span><span style="color:#0ff;font-weight:bold">&#39;? [yes/N]: &#34;</span> sure &amp;&amp; [ $${sure:-N} = <span style="color:#0ff;font-weight:bold">&#39;yes&#39;</span> ]
+	@terraform destroy ./Infrastructure/tf-fargate/
+</code></pre></div><p>First execute <code>make build-docker</code> to build the image and upload it to ECR, then execute <code>make init</code> to initialize Terraform, then execute <code>make validate &amp;&amp; make plan</code> to verify that there are no problems with the infrastructure configuration. If there are no problems, run <code>make apply</code> to build the real infrastructure.</p>
+<h4 id="workflow">Workflow</h4>
+<p>If there are changes to the system code, the following process can be repeated.</p>
+<ul>
+<li>Modify the code</li>
+<li><code>make build-docker</code></li>
+<li><code>make apply</code></li>
+</ul>
+<h3 id="api-service">API Service</h3>
+<p>The API Service has only one API for subscribing to SNS topics, which is used to help users subscribe to the topics provided by Core Service.</p>
+<h4 id="serverless-framework">Serverless Framework</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="font-weight:bold">service</span>: api
+<span style="font-weight:bold">app</span>: invest-alchemy
+<span style="font-weight:bold">org</span>: madawei2699
+
+<span style="font-weight:bold">provider</span>:
+  <span style="font-weight:bold">name</span>: aws
+  <span style="font-weight:bold">role</span>: arn:aws:iam::745121664662:role/invest-alchemy-lambda
+  <span style="font-weight:bold">runtime</span>: nodejs12.x
+  <span style="font-weight:bold">stage</span>: dev
+  <span style="font-weight:bold">region</span>: us-east-1
+
+<span style="font-weight:bold">functions</span>:
+  <span style="font-weight:bold">subscribe_sns</span>:
+    <span style="font-weight:bold">handler</span>: sns.subscribe_sns
+    <span style="font-weight:bold">memorySize</span>: <span style="color:#ff0;font-weight:bold">128</span>
+    <span style="font-weight:bold">description</span>: Subscribe sns topic.
+    <span style="font-weight:bold">environment</span>:
+      <span style="font-weight:bold">snsTopicArn</span>: arn:aws:sns:us-east-1:745121664662:trade-signal-topic
+    <span style="font-weight:bold">events</span>:
+      - <span style="font-weight:bold">http</span>: 
+          <span style="font-weight:bold">path</span>: subscribe
+          <span style="font-weight:bold">method</span>: post
+          <span style="font-weight:bold">cors</span>: <span style="color:#fff;font-weight:bold">true</span>
+          <span style="font-weight:bold">integration</span>: LAMBDA
+</code></pre></div><p>The function subscribe_sns is defined here, and we implement it with Javascript, the source code is available at <a href="https://raw.githubusercontent.com/bmpi-dev/invest-alchemy/master/api/sns.js">sns.js</a>, so we won&rsquo;t go over it here.</p>
+<p>Note that the code needs to define the SNS topic, so it needs to have the role permission to subscribe to SNS, which we specify in the Serverless configuration as <code>arn:aws:iam::745121664662:role/invest-alchemy-lambda </code>, which has permission to subscribe to the SNS, with the additional policies <code>AWSLambdaBasicExecutionRole</code> and <code>AmazonSNSFullAccess</code>.</p>
+<p>Code executed in Lambda can be imported directly into the AWS SDK without having to install it, and there is no need to set AWS Credentials, as the function executes with the permissions attached to the role directly.</p>
+<h3 id="web">Web</h3>
+<p>The web UI provides user-accessible pages for users to sign up for email subscriptions. Vue.js and Nuxt.js are used in this module to build SEO-friendly Server-Side Rendered web pages. I mainly refer to this article <a href="https://www.serverless.com/examples/aws-node-vue-nuxt-ssr"> AWS | Vue Nuxt Ssr </a>.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="font-weight:bold">service</span>: web
+<span style="font-weight:bold">app</span>: invest-alchemy
+<span style="font-weight:bold">org</span>: madawei2699
+
+<span style="font-weight:bold">provider</span>:
+  <span style="font-weight:bold">name</span>: aws
+  <span style="font-weight:bold">runtime</span>: nodejs12.x
+  <span style="font-weight:bold">stage</span>: ${self:custom.secrets.NODE_ENV}
+  <span style="font-weight:bold">region</span>: us-east-1
+  <span style="font-weight:bold">environment</span>: 
+    <span style="font-weight:bold">NODE_ENV</span>: ${self:custom.secrets.NODE_ENV}
+
+<span style="font-weight:bold">functions</span>:
+  <span style="font-weight:bold">nuxt</span>:
+    <span style="font-weight:bold">handler</span>: index.nuxt
+    <span style="font-weight:bold">memorySize</span>: <span style="color:#ff0;font-weight:bold">256</span>
+    <span style="font-weight:bold">events</span>:
+      - <span style="font-weight:bold">http</span>:
+          <span style="font-weight:bold">path</span>: /
+          <span style="font-weight:bold">method</span>: any
+          <span style="font-weight:bold">cors</span>: <span style="color:#fff;font-weight:bold">true</span>
+      - <span style="font-weight:bold">http</span>:
+          <span style="font-weight:bold">path</span>: /{proxy+} 
+          <span style="font-weight:bold">method</span>: any
+          <span style="font-weight:bold">cors</span>: <span style="color:#fff;font-weight:bold">true</span>
+
+<span style="font-weight:bold">plugins</span>:
+  - serverless-apigw-binary
+  - serverless-domain-manager
+  - serverless-offline
+
+<span style="font-weight:bold">custom</span>:
+  <span style="font-weight:bold">secrets</span>: ${file(secrets.json)}
+  <span style="font-weight:bold">apigwBinary</span>:
+    <span style="font-weight:bold">types</span>:
+      - <span style="color:#0ff;font-weight:bold">&#39;*/*&#39;</span>
+  <span style="font-weight:bold">customDomain</span>:
+    <span style="font-weight:bold">domainName</span>: ${self:custom.secrets.DOMAIN}
+    <span style="font-weight:bold">basePath</span>: <span style="color:#0ff;font-weight:bold">&#39;&#39;</span>
+    <span style="font-weight:bold">stage</span>: ${self:custom.secrets.NODE_ENV}
+    <span style="font-weight:bold">createRoute53Record</span>: <span style="color:#fff;font-weight:bold">true</span>
+</code></pre></div><p>Note here that the gateway integrates custom domain names and TLS certificates: you need to first configure the domain name in AWS Route53 and then apply for a TLS certificate in AWS Certificate Manager, please refer to the article mentioned above for the detailed process.</p>
+<p>Once the certificate application is successful, you can execute <code>sls create_domain</code> to create the DNS information for the domain name.</p>
+<p>Finally, run <code>npm run deploy</code> to deploy to AWS. If you want to debug locally, you can run <code>npm run start-server</code>.</p>
+<h3 id="debugging--logging">Debugging / Logging</h3>
+<p>Select the CloudWatch service in the AWS console to view the log group and locate the issue by analyzing the associated logs. If no logs are generated, you can also see if timed task events are generated by viewing the logs in <code>CloudTrail</code>.</p>
+<h2 id="issues-that-need-attention">Issues That Need Attention</h2>
+<h3 id="serverless-costing">Serverless Costing</h3>
+<p>One of the major advantages of Serverless is that it is pay-as-you-go, which is cheaper than buying a separate VPS for timed tasks or low traffic sites. It also has extremely high availability and elastic scalability, which is not possible with a single VPS.</p>
+<p>To analyze the cost, you can use the AWS Billing service. The billing services we use (excluding some services that have negligible billing on the system such as S3/VPC/CloudFront, etc.) include</p>
+<ul>
+<li>API Gateway: $1 per 1 million requests.</li>
+<li>ECS Spot Fargate: $0.01289974 per vCPU/hour and $0.00141649 per GB of memory/hour.</li>
+<li>Lambda: $0.0000002083 per 128M RAM/100 ms.</li>
+<li>SNS: $2 per 100,000 email pushes.</li>
+</ul>
+<p>All of the above are based on the US East region.</p>
+<p>We know from the CloudWatch log set that Lambda execution time per request is 1200 ms per run of the API and Web service; Core service runs 3 minutes per day. The cost of Lambda is: 200000 * 1200 / 100 * 0.0000002083 = $0.5; ECS cost is 3 * 30 / 60 * (0.01289974 + 0.00141649) + 0.00141649) = $0.02. API Gateway costs 200000 / 1000000 = $0.2; SNS assuming 1,000 people subscribe to the email is 1000 * 30 / 100000 = $0.3.</p>
+<p>Then the monthly cost is: 0.5 + 0.02 + 0.2 + 0.3 = $1.02. Take <code>vultr VPS</code> for example, the cheapest configuration with 1 vCPU + 512 MB configuration is $2.50 a month, and that doesn&rsquo;t include the cost of sending emails.</p>
+<h3 id="cold-starts">Cold Starts</h3>
+<p>The background timing tasks are not sensitive to the start time, if you are very concerned about the start time can be constantly warmed up by some timing tasks, but this will also lead to higher costs. For further information, please refer to this article <a href="https://medium.com/hackernoon/serverless-cold-starts-using-them-to-your-advantage-3dfdf9a0bc66">《Solving Serverless Cold Starts with Advanced Tooling》</a>。</p>
+<h3 id="vpc-price">VPC Price</h3>
+<p>Most of the VPC services are not charged, except VPN/NAT Gateway/Endpoints (Gateway is free/Interface is charged), while the Endpoints of Interface are charged very expensive and should be stopped as much as possible when they are not needed, and you have to remove the related AWS services to stop charging.</p>
+<p>Note that Endpoints are charged based on available zones, so if an Endpoint is created with 6 available zones, it will be charged 6 times as much.</p>
+<h2 id="reading-materials">Reading Materials</h2>
+<ul>
+<li><a href="https://serverless-stack.com/">Serverless Stack</a></li>
+<li><a href="https://wiki.bmpi.dev/#Serverless%E5%A5%BD%E6%96%87:Serverless%E5%A5%BD%E6%96%87">Serverless Notes</a></li>
+</ul>
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://rubygarage.org/blog/monolith-soa-microservices-serverless">https://rubygarage.org/blog/monolith-soa-microservices-serverless</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://aws.amazon.com/serverless/">https://aws.amazon.com/serverless/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://serverless-stack.com/chapters/zh/what-is-serverless.html">https://serverless-stack.com/chapters/zh/what-is-serverless.html</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

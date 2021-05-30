@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>使用AWS Lambda提高网站图片加载速度1X倍</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/aws-lambda-edge-img-to-webp\/",
+          "name": "aws-lambda-edge-img-to-webp"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>使用AWS Lambda提高网站图片加载速度1X倍</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2020-02-06T00:00:00Z'>
+                2020-02-06
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/aws/">AWS</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/lambda/">Lambda</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/webp/">Webp</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/cdn/">CDN</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/cloudfront/">CloudFront</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/">图片压缩</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%97%A0%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">无服务架构</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <p>当你浏览一个网站页面的时候，浏览器开始了加载页面的过程，你当然希望立即看到这个网页的内容，如果网站加载过慢你可能会产生焦虑并直接关闭它，这对网站的影响是致命的，因为搜索引擎会统计网站的跳出率，进而影响网站的域名权重和排名，如果放任网页加载很慢会逐渐导致网站的自然搜索流量降低很多，所以一个好的网站应该加载时间越短越好，最长也不应该超过3秒。现代网站都会使用一些技术去提高网站加载速度，比如我们可以：</p>
+<ol>
+<li>提高域名DNS解析速度；</li>
+<li>通过一些打包工具压缩CSS和JS文件包的大小；</li>
+<li>JS延迟或异步加载；</li>
+<li>图片懒加载；</li>
+<li>静态资源加CDN支持；</li>
+<li>使用高压缩比的有损图片格式等。</li>
+</ol>
+
+<h2 id="网站加载速度影响因素分析">网站加载速度影响因素分析</h2>
+<p>以上影响网站加载速度的因素中，图片资源过大是一个很重要的因素。在Web流量中，图片一直是大头，如何将图片压缩的更小却不损失一些细节是大家一直在研究的话题。为了更好的演示这个问题，我使用Google提供的Pagespeed Insights评估了下我博客的这篇文章页面<a href="https://www.bmpi.dev/money/my-accounting-tool/">《我的财务管理方案》</a>:</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/91eaa951-b7aa-1571-111a-2522a0893528.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上图所示，全部图片加载耗时39秒之多，这纵然和我上传了过大的PNG图片有关系，实际我应该在本地上传图片前做一番压缩的，不过由于我的工作流中写文章是用Markdown格式的，图片一般是截图或者复制直接粘贴进Markdown文件中（通过VSCode插件自动帮我从内存中上传到AWS S3中然后插入CDN链接至VSCode），由于图片在内存中上传S3是PNG无损图片格式的，PNG图片一般都很大的，如果图片很多的话会导致用户流量网页需要加载很长时间：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/c6675094-4ad6-054a-d2f7-cbf4d0b5c6cd.png" alt="" layout="fill"></amp-img></div></p>
+<p>这篇文章如果首次加载需要下载近10MB的图片资源，如果网速慢的话根本加载不完。要解决这个问题，让我们先研究下不同图片格式的差异：</p>
+<h3 id="图片格式对比">图片格式对比</h3>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/9b8f652d-a950-dfd3-4041-b5b40d168b72.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上图，考虑到压缩比与浏览器兼容性，一般我们在网页用的图片主要是JPEG(JPG)/GIF/PNG这三种，JPEG和JPG是同一种格式，只因为早期Windows后缀不允许四个的后缀名。这篇<a href="https://homepages.cae.wisc.edu/~ece533/project/f06/aguilera_rpt.pdf">Comparison of different image
+compression formats</a>论文对比了BMP、TIFF、PNG、JPEG、JPEG 2000图片的压缩比较：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/a49fa944-c326-6b95-171f-5eaa19059628.png" alt="" layout="fill"></amp-img></div></p>
+<p>从上可看，一般网站对图片没啥格式要求的话，尽量使用JPG格式图片，压缩比高的有损图片，如果要支持无损图片，可以使用PNG。</p>
+<p>不过Google在2010年发布了一种黑科技的图片格式：<a href="https://developers.google.com/speed/webp">WebP</a>。</p>
+<h3 id="webp">WebP</h3>
+<p>与PNG相比，WebP无损图像的尺寸要小26％。在同等的SSIM质量指数下，WebP有损图像比同类JPEG图像小25-34％。无损WebP支持透明性（也称为Alpha通道），而仅增加22％的字节数。对于可以接受有损RGB压缩的情况，有损WebP还支持透明性，与PNG相比，文件大小通常小3倍。从我个人的测试中，同一张图片，如：<a href="https://img.bmpi.dev/3461797f-6a16-e9a5-a01c-f583d7086b49.png">https://img.bmpi.dev/3461797f-6a16-e9a5-a01c-f583d7086b49.png</a>，PNG大小为2.1MB，WebP为198KB，而图片细节并没什么丢失（从网页浏览看）。</p>
+<p>这么看WebP很完美，唯一的问题在于兼容性，Safari到2020年了都不支持Webp，十年过去了！！！不仅Safari不支持，所有以Safari内核WebKit开发的浏览器都不支持，包括iOS上的Chrome。那我们能不能不支持Safari或者说iOS平台呢？</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/e488bfc5-40b4-9d2b-070b-68b2bb7183e6.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="要不要支持ios是个问题">要不要支持iOS是个问题</h2>
+<p>如果你网站不在乎iOS的流量，那当然可以不支持，不过当我看到我的一个网站的统计如下时：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/e9cd4185-2372-bccd-62f4-186555917824.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/c7d4be48-a581-34ee-9e22-b06096a7f0b1.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上图所示，近一半的流量都来自iOS平台，所以还是得支持iOS。</p>
+<h2 id="aws-lambdaedge方案">AWS Lambda@Edge方案</h2>
+<p>简单介绍下我博客（https://bmpi.dev）的技术栈：</p>
+<ol>
+<li>博客使用Hugo静态编译Markdown文件生成页面。</li>
+<li>博客使用Netlify集成Github托管。每次我写完文章通过Git Push到Github后会自动触发Netlify构建网站并发布。</li>
+<li>图片都存放在AWS S3中，通过AWS CloudFront作为CDN加速。</li>
+<li>域名通过AWS Route53服务解析。</li>
+</ol>
+<p>我们可以通过判断浏览器User Agent的类型给iOS用户返回jpg/png图片，给支持webp的浏览器返回webp格式图片，如下：</p>
+<p>user-&gt;browser-&gt;js check ua-&gt;imgix(image convert api)-&gt;s3</p>
+<p>不过这个方案存在两个问题：</p>
+<ol>
+<li>imgix处理1000个图片3美刀，太贵！</li>
+<li>由于是静态渲染生成网站，并没有可编程控制的Web服务器，没法直接从服务端处理用户请求。</li>
+</ol>
+<h3 id="方案设计">方案设计</h3>
+<p>我们换一种可行的方案：</p>
+<p>user-&gt;browser-&gt;aws cloudfront-&gt;aws lambda-&gt;s3</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/174a6694-7cf6-7220-71fe-f9e9035ca226.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上图，当用户通过CDN访问S3中的图片时会抛出四种事件：Viewer Request、Origin Request、Viewer Response、Origin Response。AWS允许我们使用Lambda@Edge（Lambda的扩展，只能部署在us-east-1区域中，但是可以同步到各区域的cloudfront中）监听这四种事件并做一些处理，比如对浏览器请求的header与cookie做一些修改，对源响应做一些额外处理，比如转换图片之类。具体流程如下分解<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>：</p>
+<ol>
+<li>监听浏览器对CDN的请求，并触发劫持任何Viewer Request请求的Lambda函数。</li>
+<li>根据我们从请求中收到的浏览器UA，确定请求事件是否针对图像，以及请求资源的浏览器是否支持WebP。</li>
+<li>如果确定请求是针对图像的，并且浏览器支持WebP，则将其替换为.webp的请求uri图像扩展名，并将原始扩展名添加到请求header中。</li>
+<li>接下来，我们触发一个单独的Lambda函数，该Lambda函数劫持任何来自CDN的Origin Response事件。</li>
+<li>如果响应事件的请求uri扩展名为.webp，并且响应状态为404，我们将在S3存储桶中检查同一张图片，但使用原始扩展名，请在步骤3中将其放入请求header中。</li>
+<li>如果在S3中找到具有原始扩展名的图像，则使用Sharp<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>运行webp转换后先存放至S3中供下次使用然后将其放置在原始响应中，否则，将404响应保持不变。</li>
+</ol>
+<h3 id="成本分析">成本分析</h3>
+<p>通过AWS这篇文章<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>分析指出，处理了100万张图像，15GB存储和50GB数据传输也才不到90块钱人民币，的确很便宜。</p>
+<p>在上述方案中，我们每次将处理好的webp图片存放至S3中，供下次用户查询时不需要再次转换立即就可以从S3中取出给用户，响应速度提升了，同时减少了Lambda@Edge函数的运行，可以帮我们省钱，相比新增的S3存储，因为webp格式本身是很小的，这个存储成本也是可以接收的。</p>
+<h3 id="方案实现">方案实现</h3>
+<p>在编写代码之前，确保你先看了这篇AWS官方介绍文章：《Resizing Images with Amazon CloudFront &amp; Lambda@Edge | AWS CDN Blog》<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>。</p>
+<p>最终代码放至<a href="https://github.com/bmpi-dev/aws-lambda-edge-img2webp">aws-lambda-edge-img2webp</a><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>。</p>
+<p>代码组织结构如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── Dockerfile
+├── Makefile
+├── aws-sam-lambda-edge-webp.yaml
+├── dist
+│   ├── origin-response-function.zip
+│   └── viewer-request-function.zip
+├── lambda
+│   ├── origin-response-function
+│   │   ├── index.js
+│   │   ├── package-lock.json
+│   │   └── package.json
+│   └── viewer-request-function
+│       ├── index.js
+│       ├── package-lock.json
+│       └── package.json
+</code></pre></div><ol>
+<li>Viewer-Request Function</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/1973a57c-e896-b425-bbe5-482fa589bc1d.png" alt="" layout="fill"></amp-img></div></p>
+<ol start="2">
+<li>Origin-Response Function</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/eae64234-944a-9914-e136-c72ce7f1f77d.png" alt="" layout="fill"></amp-img></div></p>
+<ol start="3">
+<li>编写Dockerfile与Makefile构建Lambda部署包：</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/6fa60f91-ed99-5599-f262-fba74df80d36.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/4773cb21-d0df-8e6e-e256-47330d3c4c3b.png" alt="" layout="fill"></amp-img></div></p>
+<p>在本地项目根目录执行<code>make all</code>后脚本自动使用Docker打包Lambda@Edge压缩包至dist目录，然后我们上传至AWS的<code>us-east-1</code>中的S3桶中，如果没有可以随便建一个，我建立的是<code>bmpidev-aws-lambda-edge</code>，这个必须和下面的CloudFormation配置文件一致才行，方便我们接下来使用，然后将dist中两个压缩包上传至这个S3桶中。</p>
+<ol start="4">
+<li>CloudFormation配置文件</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/b4ea6049-2067-a856-eb83-065841bc1c7a.png" alt="" layout="fill"></amp-img></div></p>
+<p>将以上文件上传至<code>us-east-1</code>区域的CloudFormation新建一个堆栈，此配置文件会自动生成Lambda函数所需的角色和AWS IAM策略，这个文件执行完毕后，你需要给IAM/角色/权限中赋予S3写入读取权限，这样Origin-Response Function才有权限将webp上传到你的图片资源桶中。</p>
+<ol start="5">
+<li>部署Lambda函数至Lambda@Edge</li>
+</ol>
+<p>在Lambda&gt;函数&gt;bmpidevImgTransformResponse/bmpidevImgTransformRequest中，点击操作&gt;功能&gt;部署到Lambda@Edge。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/21fb28c9-c603-3f7c-4b45-2a0ba822d3ad.png" alt="" layout="fill"></amp-img></div></p>
+<p>如上图，确认后，开始将Lambda函数部署到Lambda@Edge并关联到你的CloudFront中，你在CloudFront监控中应该可以看到部署的Lambda函数的统计信息。</p>
+<ol start="6">
+<li>在CloudWatch中查看Lambda日志</li>
+</ol>
+<p>这个在调试的时候很有用，Lambda的Nodejs支持打印日志的，这样我们就可以看到函数执行的具体情况了。</p>
+<h2 id="aws-lambdaedge方案的坑">AWS Lambda@Edge方案的坑</h2>
+<ol>
+<li>AWS Lambda@Edge Viewer Request部署压缩包不能超过1MB，而Origin Response却可以超过1MB，所以在打包的时候必须将这两个函数分别打包才行，因为Origin Response函数中我们需要使用Sharp转换图片格式，而这个包的node_modules很大，整个压缩包快40MB了。而Viewer Request由于只使用了useragent和path的nodejs包，打包后才102KB。</li>
+<li>AWS与S3的权限配置也很重要，删除Lambda@Edege函数也需要在CloudFront里取消关联后才能删除，一般耗时几小时才能生效。</li>
+<li>Lambda@Edge必须在us-east-1区域部署才行，其他区域无此功能，部署后可以同步到全球各区域的CloudFront关联，如果要删除则必须先全部取消CloudFront Lambda关联才能自行删除。</li>
+<li>需要注意Nodejs版本支持，目前最高支持nodejs10.x。</li>
+<li>给IAM角色赋予S3写入读取权限。</li>
+<li>如果是同一账号，只要给Lambda的执行角色赋予S3操作权限，则无需加入S3 Bucket存储桶策略，否则需要加入相关策略，具体可通过这个工具<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>生成。</li>
+<li>如果还是无法访问S3，请检阅此文件<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></li>
+<li>如果还是不行，则只能通过Lambda测试来发现问题，日志可在CloudWatch查看相关日志流（需注意S3区域，不同用户从不同区域访问CloudFront，日志会放入相关区域的CloudWatch中），也可以通过CloudFront Monitoring查看聚合日志统计。</li>
+<li>如果存储桶是私有的，则Lambda在判定对象是否存在时返回的是403而不是404，这是有意义的，因为可以防止攻击者去枚举桶中的数据。具体查看<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>。</li>
+<li>通过日志观察函数执行时间和内存消耗来调整内存大小和最大执行时间优化服务可用性。</li>
+</ol>
+<h2 id="最终效果">最终效果</h2>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/696de595-9c57-be34-ba54-f9c3964aafe3.png" alt="" layout="fill"></amp-img></div></p>
+<p>同一个页面，在支持webp格式的浏览器中总加载大小从10MB降低至不到1MB，加载时间从12秒降至3秒。</p>
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://medium.com/nona-web/converting-images-to-webp-from-cdn-9433b56a3d52">https://medium.com/nona-web/converting-images-to-webp-from-cdn-9433b56a3d52</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://github.com/lovell/sharp">https://github.com/lovell/sharp</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://docs.aws.amazon.com/solutions/latest/serverless-image-handler/overview.html">https://docs.aws.amazon.com/solutions/latest/serverless-image-handler/overview.html</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://aws.amazon.com/cn/blogs/networking-and-content-delivery/resizing-images-with-amazon-cloudfront-lambdaedge-aws-cdn-blog/">https://aws.amazon.com/cn/blogs/networking-and-content-delivery/resizing-images-with-amazon-cloudfront-lambdaedge-aws-cdn-blog/</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://github.com/bmpi-dev/aws-lambda-edge-img2webp">https://github.com/bmpi-dev/aws-lambda-edge-img2webp</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://awspolicygen.s3.amazonaws.com/policygen.html">https://awspolicygen.s3.amazonaws.com/policygen.html</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://aws.amazon.com/cn/premiumsupport/knowledge-center/lambda-execution-role-s3-bucket/">https://aws.amazon.com/cn/premiumsupport/knowledge-center/lambda-execution-role-s3-bucket/</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://stackoverflow.com/questions/50008445/aws-cloudfront-returns-access-denied-from-s3-origin-with-query-string">https://stackoverflow.com/questions/50008445/aws-cloudfront-returns-access-denied-from-s3-origin-with-query-string</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

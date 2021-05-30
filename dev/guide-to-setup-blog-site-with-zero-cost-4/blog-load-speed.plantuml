@@ -1,0 +1,28 @@
+@startmindmap
+skinparam monochrome true
+* 现代博客指南
+** 博客搭建-1
+** SEO优化-2
+** 订阅推送-3
+** 加载速度优化-4
+*** 评估
+**** Google PageSpeed Insights
+**** Chrome Audits(Lighthouse)
+**** webpagetest
+**** 用户反馈
+*** 优化
+**** 图片优化
+***** 大小优化
+***** 懒加载
+**** 前端资源优化
+***** JS和CSS优化
+***** 第三方库优化
+**** 内容结构优化
+***** 加载更多
+***** 分页
+**** CDN
+**** 静态化技术
+**** AMP
+**** 广告优化
+** 推广-5
+@endmindmap

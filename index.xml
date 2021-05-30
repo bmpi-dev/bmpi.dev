@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>构建我的被动收入</title>
+    <link>https://www.bmpi.dev/</link>
+    <description>Recent content on 构建我的被动收入</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.bmpi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>失败驱动开发</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/failure-driven-development/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/failure-driven-development/</guid>
+      <description>本文分享笔者对失败驱动开发（Failure Driven Development）的理解。</description>
+    </item>
+    
+    <item>
+      <title>加密币挖矿小记</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-mining/</link>
+      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-mining/</guid>
+      <description>本文分享笔者使用 AWS GPU 服务器挖 ETH 和 XMR 加密币的经验。</description>
+    </item>
+    
+    <item>
+      <title>家庭资产配置的阶段 # 组合月报(202104)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202104/</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202104/</guid>
+      <description>被动收入投资组合2021年04月月报</description>
+    </item>
+    
+    <item>
+      <title>OKR &#43; GTD &#43; Note =&gt; Logseq</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/okr-gtd-note-logseq/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/okr-gtd-note-logseq/</guid>
+      <description>本文分享我使用Logseq实现人生管理系统的OKR、GTD与Note的功能。</description>
+    </item>
+    
+    <item>
+      <title>我的个人项目技术栈</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/tech-stack-of-side-project/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/tech-stack-of-side-project/</guid>
+      <description>本文分享我的个人项目技术栈，包括编程语言、框架与库、数据库、基础设施、CI/CD、监控分析、设计及常用的SaaS服务。</description>
+    </item>
+    
+    <item>
+      <title>长期投资之难 # 组合月报(202103)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202103/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202103/</guid>
+      <description>被动收入投资组合2021年03月月报</description>
+    </item>
+    
+    <item>
+      <title>我的人生管理系统</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/life-in-plain-text/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/life-in-plain-text/</guid>
+      <description>本文分享我使用纯文本管理我的目标(OKR)、时间(GTD)、笔记(Logseq)与财务(Beancount)的人生管理经验。</description>
+    </item>
+    
+    <item>
+      <title>重新思考估值策略 # 组合月报(202102)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202102/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202102/</guid>
+      <description>被动收入投资组合2021年02月月报</description>
+    </item>
+    
+    <item>
+      <title>当别人的股票基金上涨时 # 组合月报(202101)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202101/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202101/</guid>
+      <description>被动收入投资组合2021年01月月报</description>
+    </item>
+    
+    <item>
+      <title>基于Serverless实现静态博客访问统计功能</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/</link>
+      <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/</guid>
+      <description>本文介绍了基于Serverless架构的使用Pulumi与AWS实现Hugo静态博客的访问统计功能。</description>
+    </item>
+    
+    <item>
+      <title>构建终身学习体系进行自我提升</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/build-personal-knowledge-system/</link>
+      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/build-personal-knowledge-system/</guid>
+      <description>如何建立个人终身学习知识体系？如何自我管理？如何自我提升？本文分享我的终身学习知识体系建立过程，包括如何收集高质量信息、如何设定个人中长期目标及个人愿景、如何内化知识、如何整理笔记、如何管理时间、如何系统阅读、如何通过写作做知识输出建立个人品牌、如何通过个人项目应用所学知识。</description>
+    </item>
+    
+    <item>
+      <title>我的家庭理财规划</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/my-financial-planning/</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/my-financial-planning/</guid>
+      <description>本文分享一个普通家庭如何做理财规划，包括家庭财务状况的分析、理财目标的设定、投资组合构建、保险规划及医疗规划。</description>
+    </item>
+    
+    <item>
+      <title>投资的秘密 # 组合月报(202012)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202012/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202012/</guid>
+      <description>被动收入投资组合2020年12月月报</description>
+    </item>
+    
+    <item>
+      <title>零成本搭建现代博客之优化国内访问速度</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/</guid>
+      <description>网站部署国外又不想备案，国内访问速度太慢怎么办？本文教你优化国外部署网站在国内的访问速度。</description>
+    </item>
+    
+    <item>
+      <title>我的2020</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/annual-summary/2020/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/annual-summary/2020/</guid>
+      <description>我的2020年度个人总结</description>
+    </item>
+    
+    <item>
+      <title>我的绘图工具箱</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/my-drawing-toolbox/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/my-drawing-toolbox/</guid>
+      <description>本文分享我常用的绘图工具，包括白板绘图、文本绘图、代码绘图与专业绘图等工具。</description>
+    </item>
+    
+    <item>
+      <title>关于银行分期贷款的坑 # 组合月报(202011)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202011/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202011/</guid>
+      <description>被动收入投资组合2020年11月月报</description>
+    </item>
+    
+    <item>
+      <title>投资交易的心理建设 # 组合月报(202010)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202010/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202010/</guid>
+      <description>被动收入投资组合2020年10月月报</description>
+    </item>
+    
+    <item>
+      <title>大跌时我们能做什么 # 组合月报(202009)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202009/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202009/</guid>
+      <description>被动收入投资组合2020年09月月报</description>
+    </item>
+    
+    <item>
+      <title>双均线交易策略 # 组合月报(202008)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202008/</link>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202008/</guid>
+      <description>被动收入投资组合2020年08月月报</description>
+    </item>
+    
+    <item>
+      <title>Serverless应用开发小记</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-serverless/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-serverless/</guid>
+      <description>本文描述了笔者开发一个基于 AWS Serverless 技术的应用的全过程。</description>
+    </item>
+    
+    <item>
+      <title>投资理财书籍推荐 # 组合月报(202007)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202007/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202007/</guid>
+      <description>被动收入投资组合2020年07月月报</description>
+    </item>
+    
+    <item>
+      <title>我的笔记系统</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/note-system/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/note-system/</guid>
+      <description>本文介绍了如何使用TiddlyWiki打造个人长期的知识管理系统（图片使用AWS S3云存储管理），同时介绍了OneNote、EveryNote、Emacs Org等工具的优缺点</description>
+    </item>
+    
+    <item>
+      <title>200万小目标 # 组合月报(202006)</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/passive-income-protfolio/202006/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/passive-income-protfolio/202006/</guid>
+      <description>被动收入投资组合2020年06月月报</description>
+    </item>
+    
+    <item>
+      <title>零成本搭建现代博客之加载速度优化篇</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/</guid>
+      <description>博客搭建好后，如何优化加载速度？本文告诉你答案</description>
+    </item>
+    
+    <item>
+      <title>零成本搭建现代博客之订阅推送篇</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/</guid>
+      <description>个人博客搭建好后，如何让你的读者第一时间收到文章更新？本文告诉你答案</description>
+    </item>
+    
+    <item>
+      <title>我常用的浏览器插件</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/my-favorite-browser-plugin/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/my-favorite-browser-plugin/</guid>
+      <description>本文分享我常用的浏览器Chrome的一些能提高日常工作效率、开发效率与SEO优化的插件。</description>
+    </item>
+    
+    <item>
+      <title>零成本搭建现代博客之SEO优化篇</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/</guid>
+      <description>如何能让搜索引擎给我们带来免费而源源不断的SEO流量？如何给新建的站做基本的SEO？如何分析老站的流量现状通过一些优化方法来提高SEO流量？如何做关键词研究？如何做网站竞品研究？如何做面向SEO搜索意图的内容创作？本文告诉你答案</description>
+    </item>
+    
+    <item>
+      <title>什么是SEO</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/what-is-seo/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/what-is-seo/</guid>
+      <description>什么是SEO？怎么做SEO？SEO有未来吗？SEO的资源和工具有哪些？爬虫和反爬虫怎么做？SEO需要注意的问题有哪些？本文告诉你答案。</description>
+    </item>
+    
+    <item>
+      <title>零成本搭建现代博客之搭建篇</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/</guid>
+      <description>本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南</description>
+    </item>
+    
+    <item>
+      <title>用Markdown可以做什么</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/what-markdown-can-do/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/what-markdown-can-do/</guid>
+      <description>本文介绍了零成本用Markdown搞定博客网站、笔记文档、演讲胶片与年终总结报告，彻底抛弃Word与PPT</description>
+    </item>
+    
+    <item>
+      <title>什么是互联网广告</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/what-is-internet-advertising/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/what-is-internet-advertising/</guid>
+      <description>什么是市场营销？什么是广告？什么是互联网广告？互联网广告对互联网公司意味着什么？互联网的产业组成有哪些？什么是CPC、CPM、CPS、CPI？各种Vlog博主能赚多少钱？普通人如何利用互联网广告赚钱？这篇文章告诉你答案。</description>
+    </item>
+    
+    <item>
+      <title>使用AWS Lambda提高网站图片加载速度1X倍</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/</guid>
+      <description>网站流量中大头是图片资源，如何减少图片大小是很重要的事情。本文分享了使用AWS Lambda@Edge无服务架构通过判断浏览器UA自动转换CDN缓存的图片为Webp，将网站图片加载速度提高了1X倍以上</description>
+    </item>
+    
+    <item>
+      <title>使用TF-IDF算法计算网站页面相似度分布（Python）</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/calculates-similarity-distribution-of-website-by-tf-idf/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/calculates-similarity-distribution-of-website-by-tf-idf/</guid>
+      <description>如果网页重复过多会影响网站排名，那么如何计算网站内网页的相似度分布？本文教你通过开发Python脚本使用TF-IDF计算网站全站页面相似度分布并可视化展示出来</description>
+    </item>
+    
+    <item>
+      <title>我的财务管理方案</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/my-accounting-tool/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/my-accounting-tool/</guid>
+      <description>本文介绍了我使用挖财App坚持8年记账后带来的积极变化，使用记账工具帮助我分析个人以及家庭财务规划最终帮助我作出更好的投资理财决策</description>
+    </item>
+    
+    <item>
+      <title>简单的投资策略为何能赚钱</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/why-simple-investment-strategies-make-money/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/why-simple-investment-strategies-make-money/</guid>
+      <description>本文分析了为何使用简单的ETF指数定投可以带来年化40%多的收益甚至跑赢了华泰证券涨乐财富通App 94.4% 的用户（华泰证券用户量占A股自然人数量的10%，而其App的用户量占其客户的近90%），证明了指数投资的力量</description>
+    </item>
+    
+    <item>
+      <title>2019年金融投资总结</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/invest-review-2019/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/invest-review-2019/</guid>
+      <description>本文总结了我在2019年使用ETF指数定投战胜大盘达到40%多的投资收益的过程</description>
+    </item>
+    
+    <item>
+      <title>VSCode插件开发小记</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/vscode-plugin-development-notes/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/vscode-plugin-development-notes/</guid>
+      <description>本文讲述了基于VSCode编辑器开发一款ToDo插件并分析了Emacs和VSCode架构的差异</description>
+    </item>
+    
+    <item>
+      <title>Parser黑魔法</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/parser_black_magic/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/parser_black_magic/</guid>
+      <description>本文讲述了基于词法分析和语法分析等编译原理知识使用bison开发一款解析ToDo格式文本的解析Parser</description>
+    </item>
+    
+    <item>
+      <title>我的时间管理工具</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/gtd-tools-i-used/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/gtd-tools-i-used/</guid>
+      <description>如何进行时间管理？本文介绍了我近3年对时间管理工具（GTD）的思考，最终构建了一套以VSCode工具为基础结合邮件通知的可以长期免费使用的时间任务目标管理工具，帮助你成为一个高效率的人</description>
+    </item>
+    
+    <item>
+      <title>优惠券项目小结</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/coupon-project-review/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/coupon-project-review/</guid>
+      <description>记录开发HasOffer网站通过SEO提高网站流量的过程，也涉及一些media buy和affiliate以及国外用户使用coupon的介绍</description>
+    </item>
+    
+    <item>
+      <title>人生游戏之路</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/road_to_life_games/</link>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/road_to_life_games/</guid>
+      <description>本文介绍了我对自我提升的理解，分为时间管理、目标管理、资产管理、技能管理、社交管理以及个人品牌的建设</description>
+    </item>
+    
+    <item>
+      <title>玩信用卡的各种姿势</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/use-credit-card-in-various-ways/</link>
+      <pubDate>Tue, 26 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/use-credit-card-in-various-ways/</guid>
+      <description>本文详细介绍了如何玩转信用卡，使用信用卡免费坐飞机住酒店，包括卡组织与等级的介绍、信用卡权益与积分的介绍、信用卡申请、信用卡提额、经典信用卡的介绍</description>
+    </item>
+    
+    <item>
+      <title>小白的交易之路</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/road_to_trading/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/road_to_trading/</guid>
+      <description>本文详细介绍了如何从零构建自己的投资交易系统，包括交易系统的设计与历史回测、股票基金投资基本知识、技术分析与基本面分析的区别、投资交易的心理建设、交易仓位的资金管理及风险管理、止损点的设置、大类资产相关度的分析与配置、海龟交易系统与双均线交易系统的介绍，最后介绍了交易日记的详细编写过程，致力于提高你的股票基金交易能力的建设</description>
+    </item>
+    
+    <item>
+      <title>打造优雅高效的写作环境</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/build-write-tool-v1/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/build-write-tool-v1/</guid>
+      <description>本文介绍了使用GitHub Pages以及Hexo工具打造个人优化高效的写作系统</description>
+    </item>
+    
+    <item>
+      <title>年轻上班族的系统化投资之路</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/investment-path-for-young/</link>
+      <pubDate>Sun, 19 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/investment-path-for-young/</guid>
+      <description>介绍上班族的投资理财方法，包括指数基金定投的策略、如何构建系统化投资交易系统、公募基金、P2P、可转债、分级基金、货币基金的投资特点、基金购买渠道、投资理财入门书籍、交易系统的回测方法等的介绍</description>
+    </item>
+    
+    <item>
+      <title>思维导图 |《创业维艰》读书笔记</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/the-hard-thing/</link>
+      <pubDate>Wed, 15 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/the-hard-thing/</guid>
+      <description>本文分享了《创业维艰》这本书的读书笔记以及对创业的思考</description>
+    </item>
+    
+    <item>
+      <title>如何快速学习一项新技能？</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/learn-skill/</link>
+      <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/learn-skill/</guid>
+      <description>本文介绍了如何使用元学习快速学习一门技能</description>
+    </item>
+    
+    <item>
+      <title>玩CASHFLOW打造你的财务自由之路</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/play-cashflow-to-build-your-financial-freedom/</link>
+      <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/play-cashflow-to-build-your-financial-freedom/</guid>
+      <description>介绍了通过玩富爸爸穷爸爸书中介绍的现金流游戏，了解普通人如何走向财务自由之路，还有一些关于财务会计报表的知识介绍，如收入支出与资产负债及现金流量表的知识</description>
+    </item>
+    
+    <item>
+      <title>用OneNote管理你的知识</title>
+      
+      
+      <category>Lifelong Learner</category>
+      
+      
+      <link>https://www.bmpi.dev/self/onenote-intro/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/self/onenote-intro/</guid>
+      <description>本文介绍了如何使用OneNote打造个人长期的知识管理系统</description>
+    </item>
+    
+    <item>
+      <title>一款产品的从0到1之旅</title>
+      
+      <category>Full-Stack Developer</category>
+      
+      
+      
+      <link>https://www.bmpi.dev/dev/zero-to-one/</link>
+      <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/dev/zero-to-one/</guid>
+      <description>记录交易日记App开发的过程，包括移动端App以及服务端的全栈开发过程，还有一些关于产品运营及营销知识的介绍</description>
+    </item>
+    
+    <item>
+      <title>构建你的交易系统</title>
+      
+      
+      
+      <category>ETF Trader</category>
+      
+      <link>https://www.bmpi.dev/money/build-trade-system/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/money/build-trade-system/</guid>
+      <description>本文详细介绍了如何使用交易日记App去提升自己的交易能力以及一些经典投资理财书籍的介绍</description>
+    </item>
+    
+    <item>
+      <title>关于本站</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/about/</guid>
+      <description>关于本站</description>
+    </item>
+    
+    <item>
+      <title>友情链接</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/link/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/link/</guid>
+      <description>我的朋友们及我关注的博主</description>
+    </item>
+    
+    <item>
+      <title>我的个人项目</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/project/</guid>
+      <description>通过个人产品、项目、副业建立被动收入</description>
+    </item>
+    
+    <item>
+      <title>我的好物推荐</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/affiliate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/affiliate/</guid>
+      <description>分享我在使用的一些产品和服务，基准是我正在使用的感觉不错的东西</description>
+    </item>
+    
+    <item>
+      <title>我的工具清单</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/tool/</guid>
+      <description>分享我在使用的一些实用小工具</description>
+    </item>
+    
+    <item>
+      <title>我的长期目标</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/goal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/goal/</guid>
+      <description>我的长期目标</description>
+    </item>
+    
+    <item>
+      <title>投资组合管理服务</title>
+      
+      
+      
+      <link>https://www.bmpi.dev/invest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bmpi.dev/invest/</guid>
+      <description>投资组合管理服务</description>
+    </item>
+    
+  </channel>
+</rss>

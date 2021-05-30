@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="马大伟">
+  
+  <meta name="description" content="本文介绍了基于Serverless架构的使用Pulumi与AWS实现Hugo静态博客的访问统计功能。">
+  
+  
+  <meta name="keywords" content="AWS、Lambda、Serverless、Pulumi、, Vercel、Infrastructure, as, code、无服务器架构、Hugo、独立博客、个人博客、技术博客">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="基于Serverless实现静态博客访问统计功能"/>
+  <meta name="twitter:description" content="本文介绍了基于Serverless架构的使用Pulumi与AWS实现Hugo静态博客的访问统计功能。"/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="基于Serverless实现静态博客访问统计功能" />
+<meta property="og:description" content="本文介绍了基于Serverless架构的使用Pulumi与AWS实现Hugo静态博客的访问统计功能。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-01-24T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-24T19:50:36&#43;08:00" /><meta property="og:site_name" content="构建我的被动收入" />
+
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "基于Serverless实现静态博客访问统计功能",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2021-01-24T00:00:00Z",
+      "dateModified": "2021-01-24T19:50:36+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "马大伟"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "本文介绍了基于Serverless架构的使用Pulumi与AWS实现Hugo静态博客的访问统计功能。",
+      "keywords": ["AWS", "Lambda", "Serverless", "Pulumi", "Vercel", "Infrastructure as code", "无服务器架构", "Hugo", "独立博客", "个人博客", "技术博客"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/">
+  
+  <title>
+  基于Serverless实现静态博客访问统计功能 · 构建我的被动收入
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/dev/pulumi-aws-serverless-hugo-site-vists/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/amp/dev/pulumi-aws-serverless-hugo-site-vists/" title="构建我的被动收入" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/">
+      构建我的被动收入
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b">Dashboard</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/about/">关于</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/self/">学习</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/dev/">技术</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/money/">投资</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/project/">个人项目</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/goal/">长期目标</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://tg.bmpi.dev">思考</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/en/">English</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">基于Serverless实现静态博客访问统计功能</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2021-01-24T00:00:00Z'>
+                2021-01-24
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              6:18
+              
+            </span>
+            
+            <span class="post-word-count"> | 1386 字 | </span>
+            <span id="post-views"></span> 次阅读
+            
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/aws/">AWS</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/lambda/">Lambda</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/serverless/">Serverless</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/pulumi/">Pulumi</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/vercel/">Vercel</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/infrastructure-as-code/">Infrastructure as code</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%97%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84/">无服务器架构</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/hugo/">Hugo</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">技术博客</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <h2 id="背景">背景</h2>
+<p>我在 <a href="https://www.bmpi.dev/series/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">零成本搭建现代博客指南</a> 系列文章里详细介绍了本博客的搭建过程，本站是基于 Hugo 框架生成的，并部署在 Vercel 平台上。</p>
+<p>和最流行的 CMS 框架 Wordpress 不同，Hugo/Hexo/Gatsby 等静态站点生成的技术好处在于：</p>
+<ul>
+<li>成本极低甚至免费，无需专门的 VPS 服务器，只需要将生成好的静态页面托管到 CDN/GitHub Pages/Vercel/Netlify/AWS S3 这类平台上即可；</li>
+<li>Wordpress 并发性能差，而静态博客只受限于与流量带宽的限制，不存在性能和并发问题。</li>
+</ul>
+<p>但和 Wordpress 相比，因为全站都是静态化生成的页面，没有后台服务器的接口支持，无法实现一些很简单的带状态的功能，如不支持页面阅读数量统计功能。</p>
+<p>这种 <a href="https://jamstack.org/">Jamstack</a> 架构的站点要实现动态的功能，一般会采用 Serverless 的方式去实现。</p>
+<p><img data-src="https://img.bmpi.dev/84527ff9-9fa8-ecbf-63e9-bbfd77712c4a.png" alt="" class="lazyload" loading="lazy"/></p>
+<h2 id="为何要实现博客的访问统计功能">为何要实现博客的访问统计功能</h2>
+<p>本博客早已接入了 Google Analytics ，但是为何还要实现博客的访问统计功能？一方面考虑到文章的阅读数量可以供读者更容易识别此篇文章是否是热门文章，另一方面这种阅读量数据对百度 SEO 有正向提升作用。Google Analytics 的问题在于一旦用户安装了某些屏蔽广告插件后，同时也会导致 GA 无法正常工作，根据某些文章统计说一般会损失近 10% 的流量统计。</p>
+<h2 id="实现访问统计功能的技术选择">实现访问统计功能的技术选择</h2>
+<p>在选择实现此功能的过程中，我有如下选择：</p>
+<ul>
+<li>使用 Vercel/Netlify 提供的 <a href="https://vercel.com/docs/serverless-functions/introduction">Serverless Functions</a>，这种方式可以参考这篇 <a href="https://www.joshwcomeau.com/react/serverless-hit-counter/">Building a Modern-Day Hit Counter</a> ；</li>
+<li>使用 Next.js 框架，这种方式可以参考这篇 <a href="https://leerob.io/blog/real-time-post-views">Real-Time Blog Post Views With Next.js and Firebase</a> ；</li>
+<li>使用基于 AWS 的 Serverless 架构实现。</li>
+</ul>
+<p>因为之前使用过 Terraform 实现基于 AWS 平台的 Serverless 架构，具体过程可以参加这篇 <a href="https://www.bmpi.dev/dev/guide-to-serverless/">Serverless应用开发小记</a> ，所以我最终选择了第三种方式去做。</p>
+<p>这次我使用 Pulumi 实现 Serverless 架构。Pulumi 相比 Terraform 的优势在于可以以编程方式实现 Infrastructure as code ，相信看完该篇文章你就能知道它的强大了。</p>
+<h2 id="使用-pulumi-实现博客访问统计接口">使用 Pulumi 实现博客访问统计接口</h2>
+<p>先创建一个 <a href="https://www.pulumi.com/">Pulumi</a> 工程：</p>
+<p><img data-src="https://img.bmpi.dev/a923b2bd-13bf-4e24-402d-dc6104b92048.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>我们选 AWS + TypeScript 。</p>
+<p>之后按提示创建目录及安装依赖，工程目录如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── Pulumi.dev.yaml
+├── Pulumi.yaml
+├── README.md
+├── index.ts
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+</code></pre></div><p>只需要编辑 index.ts 即可，代码如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">import</span> * <span style="color:#fff;font-weight:bold">as</span> aws <span style="color:#fff;font-weight:bold">from</span> <span style="color:#0ff;font-weight:bold">&#34;@pulumi/aws&#34;</span>;
+<span style="color:#fff;font-weight:bold">import</span> * <span style="color:#fff;font-weight:bold">as</span> awsx <span style="color:#fff;font-weight:bold">from</span> <span style="color:#0ff;font-weight:bold">&#34;@pulumi/awsx&#34;</span>;
+<span style="color:#fff;font-weight:bold">import</span> * <span style="color:#fff;font-weight:bold">as</span> pulumi <span style="color:#fff;font-weight:bold">from</span> <span style="color:#0ff;font-weight:bold">&#34;@pulumi/pulumi&#34;</span>;
+
+<span style="color:#007f7f">// Create a mapping from &#39;route&#39; to a count
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">const</span> counterTable = <span style="color:#fff;font-weight:bold">new</span> aws.dynamodb.Table(<span style="color:#0ff;font-weight:bold">&#34;api-bmpi-dev&#34;</span>, {
+    attributes: [{
+        name: <span style="color:#0ff;font-weight:bold">&#34;id&#34;</span>,
+        <span style="color:#fff;font-weight:bold">type</span>: <span style="color:#0ff;font-weight:bold">&#34;S&#34;</span>,
+    }],
+    hashKey: <span style="color:#0ff;font-weight:bold">&#34;id&#34;</span>,
+    readCapacity: <span style="color:#fff;font-weight:bold">5</span>,
+    writeCapacity: <span style="color:#fff;font-weight:bold">5</span>,
+});
+
+<span style="color:#007f7f">// let bmpiAllPageViewsRoute = &#34;bmpi-dev-all-page-views&#34;; // all page views key
+</span><span style="color:#007f7f"></span>
+<span style="color:#007f7f">// Create an views API endpoint
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">const</span> viewsEndpoint = <span style="color:#fff;font-weight:bold">new</span> awsx.apigateway.API(<span style="color:#0ff;font-weight:bold">&#34;bmpi-dev-post-views&#34;</span>, {
+    routes: [{
+        path: <span style="color:#0ff;font-weight:bold">&#34;/{route+}&#34;</span>,
+        method: <span style="color:#0ff;font-weight:bold">&#34;GET&#34;</span>,
+        eventHandler: <span style="color:#fff;font-weight:bold">async</span> (event) =&gt; {
+            <span style="color:#fff;font-weight:bold">const</span> route = event.pathParameters![<span style="color:#0ff;font-weight:bold">&#34;route&#34;</span>];
+
+            console.log(<span style="color:#0ff;font-weight:bold">`Getting count for &#39;</span><span style="color:#0ff;font-weight:bold">${</span>route<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">&#39;`</span>);
+
+            <span style="color:#fff;font-weight:bold">const</span> client = <span style="color:#fff;font-weight:bold">new</span> aws.sdk.DynamoDB.DocumentClient();
+
+            <span style="color:#fff;font-weight:bold">const</span> result = <span style="color:#fff;font-weight:bold">await</span> client.update({
+                TableName: <span style="color:#fff;font-weight:bold">counterTable.name.get</span>(),
+                Key: { id: <span style="color:#fff;font-weight:bold">route</span> },
+                UpdateExpression: <span style="color:#0ff;font-weight:bold">&#34;SET hit = if_not_exists(hit, :zero) + :incr&#34;</span>,
+                ExpressionAttributeValues: { <span style="color:#0ff;font-weight:bold">&#34;:zero&#34;</span>: <span style="color:#ff0;font-weight:bold">0</span>, <span style="color:#0ff;font-weight:bold">&#34;:incr&#34;</span>: <span style="color:#ff0;font-weight:bold">1</span> },
+                ReturnValues:<span style="color:#0ff;font-weight:bold">&#34;UPDATED_NEW&#34;</span>,
+            }).promise();
+
+            <span style="color:#fff;font-weight:bold">let</span> count = result.Attributes!.hit;
+            
+            <span style="color:#fff;font-weight:bold">return</span> {
+                statusCode: <span style="color:#fff;font-weight:bold">200</span>,
+                headers: {
+                    <span style="color:#0ff;font-weight:bold">&#34;Access-Control-Allow-Headers&#34;</span> : <span style="color:#0ff;font-weight:bold">&#34;Content-Type&#34;</span>,
+                    <span style="color:#0ff;font-weight:bold">&#34;Access-Control-Allow-Origin&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;https://www.bmpi.dev&#34;</span>,
+                    <span style="color:#0ff;font-weight:bold">&#34;Access-Control-Allow-Methods&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;OPTIONS,POST,GET&#34;</span>
+                },
+                body: <span style="color:#fff;font-weight:bold">JSON.stringify</span>({ route, count }),
+            };
+        },
+    }],
+});
+
+<span style="color:#007f7f">// We have registered a domain, and a cert already (we could do most of this with Pulumi as well if we wanted!)
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">let</span> domainName = <span style="color:#0ff;font-weight:bold">&#34;api.bmpi.dev&#34;</span>; <span style="color:#007f7f">// `bmpi.dev` is regitered with Route53 
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">let</span> route53DomainZoneId = <span style="color:#0ff;font-weight:bold">&#34;Z3D746J1ZFXBYQ&#34;</span>; <span style="color:#007f7f">// The Hosted Zone I got when I registered `bmpi.dev`
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">let</span> certARN = <span style="color:#0ff;font-weight:bold">&#34;arn:aws:acm:us-east-1:745121664662:certificate/6e610430-46c8-4884-a1f7-471be45decf4&#34;</span>; <span style="color:#007f7f">// ACM cert for `*.bmpi.dev`
+</span><span style="color:#007f7f"></span>
+<span style="color:#007f7f">// API Gateway requires we register the Domain with it first
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">const</span> domain = <span style="color:#fff;font-weight:bold">new</span> aws.apigateway.DomainName(<span style="color:#0ff;font-weight:bold">&#34;domain&#34;</span>, {
+    certificateArn: <span style="color:#fff;font-weight:bold">certARN</span>,
+    domainName: <span style="color:#fff;font-weight:bold">domainName</span>,
+});
+
+<span style="color:#007f7f">// Then we can map a REST API to a domain with a BasePathMapping
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">const</span> mapping = <span style="color:#fff;font-weight:bold">new</span> aws.apigateway.BasePathMapping(<span style="color:#0ff;font-weight:bold">&#34;mapping&#34;</span>, {
+    restApi: <span style="color:#fff;font-weight:bold">viewsEndpoint.restAPI</span>,
+    basePath: <span style="color:#0ff;font-weight:bold">&#34;page-views&#34;</span>, <span style="color:#007f7f">// We map our API into the &#34;/page-views&#34; base path
+</span><span style="color:#007f7f"></span>    stageName: <span style="color:#fff;font-weight:bold">viewsEndpoint.stage.stageName</span>, <span style="color:#007f7f">// We map the stage we got for free with `.x.API` above
+</span><span style="color:#007f7f"></span>    domainName: <span style="color:#fff;font-weight:bold">domain.domainName</span>, <span style="color:#007f7f">// We map it into the domain we registered above
+</span><span style="color:#007f7f"></span>});
+
+<span style="color:#007f7f">// Finally, we need a DNS reocrd to point at our API Gateway
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">const</span> record = <span style="color:#fff;font-weight:bold">new</span> aws.route53.Record(<span style="color:#0ff;font-weight:bold">&#34;record&#34;</span>, {
+    <span style="color:#fff;font-weight:bold">type</span>: <span style="color:#0ff;font-weight:bold">&#34;A&#34;</span>,
+    zoneId: <span style="color:#fff;font-weight:bold">route53DomainZoneId</span>,
+    name: <span style="color:#fff;font-weight:bold">domainName</span>, <span style="color:#007f7f">// Write a record for `api.bmpi.dev` into the zone for `bmpi.dev`
+</span><span style="color:#007f7f"></span>    aliases: [{
+        name: <span style="color:#fff;font-weight:bold">domain.cloudfrontDomainName</span>, <span style="color:#007f7f">// APIGateway provides it&#39;s own CloudFront distribution we can point at...
+</span><span style="color:#007f7f"></span>        zoneId: <span style="color:#fff;font-weight:bold">domain.cloudfrontZoneId</span>,
+        evaluateTargetHealth: <span style="color:#fff;font-weight:bold">true</span>,
+    }],
+});
+
+<span style="color:#007f7f">// It might take a while after we deploy the record above before the DNS propagates and allows us to resolve these URLs...
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">export</span> <span style="color:#fff;font-weight:bold">let</span> endpoint = pulumi.interpolate<span style="color:#0ff;font-weight:bold">`https://</span><span style="color:#0ff;font-weight:bold">${</span>record.name<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">/page-views`</span>;
+</code></pre></div><p>所有的代码就这些，然后一键部署上线：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pulumi up
+</code></pre></div><p>不到 100 行的代码我们完成了什么功能？</p>
+<ol>
+<li>创建一个 dynamodb 表；</li>
+<li>实现了一个 Serverless API，支持以<strong>原子性</strong>更新特定 URL 的访问计数，并且开启了 <code>CORS</code> 支持；</li>
+<li>创建了一个 API Gateway 并且绑定了 <code>api.bmpi.dev</code> 域名且开启了 HTTPS 支持；</li>
+<li>创建了 <code>api.bmpi.dev</code> 域名的 DNS 记录；</li>
+<li>输出了此接口的请求地址。</li>
+</ol>
+<p>体会到 Pulumi 的强大了吗？一行代码完成了很多基础设施的配置，这就是 IaC 的强大！</p>
+<p>之后的工作就简单了，我们只需要在页面通过 JS 调用此接口即可，代码见这个 commit: <a href="https://github.com/bmpi-dev/bmpi.dev/commit/a7cccfd7e9e25d7eed513b471a53d9327d738d0e">add post page hit count feature</a> 。</p>
+<p>最终效果见：</p>
+<p><img data-src="https://img.bmpi.dev/747c5497-bda7-fd39-2f2a-420ac7718c9e.png" alt="" class="lazyload" loading="lazy"/></p>
+<h2 id="总结">总结</h2>
+<p>Jamstack + Serverless 是实现现代 Web 开发很流行的方式，尤其是在做一些个人项目的时候，一个人就是一个团队。</p>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              4个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/e98fa49d877b6110e43ca9d38fa5cc40aaf68e2d">e98fa49</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可</p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">相关文章推荐</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-5/">零成本搭建现代博客之优化国内访问速度</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-serverless/">Serverless应用开发小记</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-4/">零成本搭建现代博客之加载速度优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-3/">零成本搭建现代博客之订阅推送篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-2/">零成本搭建现代博客之SEO优化篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost-1/">零成本搭建现代博客之搭建篇</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li style="list-style: none;"><a href="https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/">使用AWS Lambda提高网站图片加载速度1X倍</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>每月一份邮件，分享我对如何构建被动收入的思考、推荐文章及资源，欢迎订阅</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="订阅" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /affiliate >Affiliate</a>
+      ⚡️
+      <a href= /tool >Tool</a>
+      ⚡️
+      <a href= /link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

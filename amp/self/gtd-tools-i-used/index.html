@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>我的时间管理工具</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/self/gtd-tools-i-used/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/self\/",
+          "name": "self"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/self\/gtd-tools-i-used\/",
+          "name": "gtd-tools-i-used"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>我的时间管理工具</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2019-12-18T00:00:00Z'>
+                2019-12-18
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/">时间管理</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%B7%A5%E5%85%B7/">工具</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <p>“一寸光阴一寸金，寸金难买寸光阴”<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，&ldquo;Time Is Money&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，这两句尽人皆知的名言，告诉了大家一个道理：穷不要紧，只要你有时间就行。虽然每个人的时间从单位上看都是一样长的，但单位时间的工作效率差异很大，不考虑智力和外部资源的因素，每个人管理时间的方式不同，是决定时间利用率重要的因素。</p>
+
+<p>阿基米德说过：“给我一个支点，我可以举起整个地球。”，这是物理杠杆；期货投资中杠杆可达20倍，赢了会所嫩模，输了下海干活；既然杠杆这么美，有没有一种方法，可以提高我的时间利用率，间接达到时间杠杆的效果？当然有，这就是GTD。</p>
+<h2 id="什么是gtd">什么是GTD?</h2>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/gtd.png" alt="" layout="fill"></amp-img></div></p>
+<p>GTD(Getting Things Done)<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>是一种时间管理方法，它可以帮你把生活中的大小随机事务系统化的制定成计划中的任务，解放你的大脑，帮助你更有效的去工作实现人生的目标。
+让我们先回顾下平时的工作生活中大脑处理事情的过程：“某件很重要的事情，比如锻炼身体需要你每周选几天去运动，这是一件长期回报很高的目标。今天本来你需要去按计划运动，突然发生一件比较紧急但不重要的事情促使你放弃计划转而去解决这件急事，然后大概率你的计划被多件紧急不重要事情给毁了。”为什么经常会出现这种情况？因为我们的大脑在进化中就更偏向于处理急事而不是重要不紧急的事情，这是生存优先决定的，因为急事在短期可能对生活产生比较大的影响。但这却阻碍了很多重要却不紧急的长期计划目标的实现。长期目标需要按照计划来一步步推进，比如阅读习惯、写作习惯、记账习惯及很多重要技能的获得。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/gtd2.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="gtd的流程">GTD的流程</h2>
+<p>从GTD的工作流图中可以看到几个重要的组成部分：</p>
+<ol>
+<li>收集{各种生活/学习/工作事务} -&gt; 清空大脑</li>
+<li>处理{筛选出有效的可付诸行动的事务} -&gt; 识别任务</li>
+<li>组织{将事务组织成待办事项/项目/日程表/等待/未来可能做} -&gt; 制定目标</li>
+<li>检查{每日检查待办事项清单} -&gt; 提醒自己今日要做的事情</li>
+<li>行动{执行待办任务} -&gt; 集中精力完成任务</li>
+<li>回顾{每周/月回顾} -&gt; 从人生目标/长期目标/中短期目标/近期目标/当前任务的角度审视目标</li>
+</ol>
+<p>“把所有事情都从你的脑袋里弄出来。在事情出现，而不是在事情爆发的时候,就做好相关行动的一系列决定。以合适的类别组织好你的项目的各种提醒以及下一步的行动。保持你的系统更新和完整，充分地检查，使你在任何时候都能信任你的对于你正在做（或者不做）的事情直觉的选择。”<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h3 id="gtd的问题">GTD的问题</h3>
+<p>理想很美好，这套理论看起来可以帮助我们规划人生的方方面面，但是实际上很难执行下去。<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>
+虽然难以执行，不过我还是努力使用GTD去形成时间管理的习惯，并做出了自己的时间管理工具v1版本<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>。</p>
+<h2 id="我的时间管理工具v1">我的时间管理工具v1</h2>
+<p>在这个版本中我的工具组合：</p>
+<ol>
+<li>OneNote: 笔记系统，存储各类资料</li>
+<li>OmniFocus: GTD的实现，可以完成GTD的6大环节</li>
+<li>日历: 简单待办事项处理+通知</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2019-12-20-18-21-43.png" alt="" layout="fill"></amp-img></div>
+<div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2019-12-20-18-22-32.png" alt="" layout="fill"></amp-img></div></p>
+<h3 id="v1存在的问题">v1存在的问题</h3>
+<ol>
+<li>学习成本高。要把OmniFocus按照GTD的流程来实践是个困难的事情，要形成使用习惯也需要一定时间。</li>
+<li>操作灵活性差。在手机端将各类事项存入Inbox，然后转化成项目/任务/待办事项清单效率低，在电脑端操作也不灵活。</li>
+<li>购买成本高。OmniFocus的iOS版和Mac版本费用超千元。</li>
+<li>扩展性差。商业软件，不可能让你定制功能的。</li>
+<li>数据不是我的。某天OmniFocus的公司不在做这个软件的话，我数年的数据可能就没有了。数据对GTD这类长期使用的软件尤为重要，而且数据格式最好是通用的，不能只支持特定软件。</li>
+</ol>
+<p>因为以上的问题，我的v1在使用一段时间后，OmniFocus就被我放弃了。</p>
+<h2 id="我的时间管理工具v2">我的时间管理工具v2</h2>
+<p>在这个版本中我的工具组合：</p>
+<ol>
+<li>OneNote: 笔记系统，存储各类资料</li>
+<li>备忘录：GTD的局部实现</li>
+<li>日历: 简单待办事项处理+通知</li>
+</ol>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2019-12-20-18-51-30.png" alt="" layout="fill"></amp-img></div></p>
+<h3 id="v2存在的问题">v2存在的问题</h3>
+<p>备忘录虽然在移动端操作方便，但是没有很好的组织功能、筛选功能、提醒功能、数据迁移不方便，尤其在创建很多项目的时候逐渐变得不灵活，所以这注定是个临时过渡方案。</p>
+<h2 id="我的时间管理工具v3">我的时间管理工具v3</h2>
+<p>这是我目前采用的方案。在经历前两个版本后，我认为时间管理工具需要具备以下特点：</p>
+<ol>
+<li>学习成本低。操作成本不能太高，否则很难坚持很长时间的。所以一定要很快能上手。</li>
+<li>灵活度高。大部分的工具都考虑到使用手机端作为主要平台，但是手机天然有操作灵活性差的问题，电脑相比手机的效率肯定是很高的，所以工具应该以电脑操作为主，手机只需要辅助记录和提醒即可。</li>
+<li>可扩展性强。需要具备一定的定制能力，工具要开源的，可加入自己的功能。</li>
+<li>数据独立存储，纯文本格式，不依赖特定工具和平台，掌控到自己手中。</li>
+</ol>
+<p>v3的工具组合：</p>
+<ol>
+<li>VSCode+插件（TODO++）</li>
+<li>GitHub</li>
+<li>日历</li>
+</ol>
+<p>首先解释下为什么会是这个组合？作为一个开发，平日用到最多的就是编辑器。之所以选择VSCode，是因为他的生态比Emacs好，启动速度在安装很多插件后还是很快，插件开发简单，背靠微软大山，软件使用体验还是很不错的。刚好在里面有个有个Todo+<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>的插件，这个插件支持一种todo后缀的纯文本格式的文件，这种文件很容易新建一个待办事项，支持项目嵌套，使用快捷键标记待办事项状态，如下图所示：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2019-12-20-22-03-47.png" alt="" layout="fill"></amp-img></div></p>
+<p>当我找到这个插件时，经过一段时间使用，发现很适合做待办事项管理，但是有个问题就是这个插件在左侧的窗口不支持查看<strong>正在做的事</strong>，同时我希望能够看到标记为<strong>重要事项但未开始</strong>的待办事项。因为当我创建很多项目的待办事项时，很多项目的优先级并不高，我可能在未来某个时间去做，这些是我目前不关注的。我最关心的是当前正在做的事情，同时我也很关注那些人生目标中最重要但不紧急的事情，得时刻提醒我去回顾检查，不要把重要目标迷失在紧急不重要的事情中。</p>
+<p>因为这个插件是开源的，所以我克隆了一份后加入了查看当前正在做与重要但未开始做的事情查看窗口，并发布为<a href="https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus">Todo++</a>。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/todo++.png" alt="" layout="fill"></amp-img></div></p>
+<p>有了这个VSCode插件后我解决了在电脑端编辑待办事项的问题，这种方式足够灵活，你可以把自己的工作、学习、生活都以如下方式来管理：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── self
+│   ├── idea.todo
+│   └── inbox.todo
+├── study
+│   ├── book.todo
+│   └── 手工皮具学习.todo
+└── work
+    ├── project_a.todo
+    └── project_b.todo
+</code></pre></div><p>每个你关注的领域使用一份todo文件来管理，然后这个领域内你又可以拆分无数的项目，每个项目又可以无限拆分子项目，每个子项目最终拆解为一些可执行的待办事项，使用快捷键可快速标记这个待办事项的三个状态 <strong>（started/done/canceled）</strong> ，还可以使用 <strong>@critical</strong> 来标记任务是否重要。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">项目B_1:
+    ☐ 项目A_1_1 @started(19-12-17 20:45)
+    ✔ 项目A_1_2 @done(19-12-17 20:45)
+
+项目B_2:
+    ☐ 项目A_2_1 @critical 
+    ☐ 项目A_2_2 @low 
+</code></pre></div><p>当你做完这些，可以立即在VSCode的左侧窗口看到那些任务正在做，哪些任务很重要但未开始做。</p>
+<figure >
+    
+        <div class="fixed-container"><amp-img src="https://img.bmpi.dev/2019-12-20-22-57-16.png" class="contain"  layout="fill"></amp-img></div>
+    
+    
+</figure>
+<p>我还做了一个todo的模版库，使用这个模版创建自己的私有仓库：<a href="https://github.com/bmpi-dev/todo_starter">todo_starter</a>。创建好后clone下来使用VSCode与TODO++插件即可开始使用了。</p>
+<p>解决了电脑端的操作问题后，移动端有个很重要的功能就是提醒，如何能在手机端每天收到当前正在做的事情和重要但未开始做的事情？</p>
+<p>为了解决这个问题，我开发了一个todo文件的parser库：<a href="https://github.com/bmpi-dev/todo_parser_lib">todo_parser_lib</a>，这个库可以解析指定目录下的todo文件，筛选出当前正在做的事情和重要但未开始做的事情然后渲染成一个html文件。有了这个库后我们可以结合GitHub提供的Actions<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>功能，在每次我们push更新到仓库时，可以自动使用这个库渲染出html，然后给我们指定的邮箱发邮件来提醒。这个GitHub Actions的配置也放在了 <strong>todo_starter</strong> 这个模版库中了，你只需要在仓库settings-&gt;secrets中提供发送邮件的邮箱和邮件服务商的SMTP地址即可。配置如下：</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">name</span>: schedule-email
+<span style="font-weight:bold">on</span>: 
+  <span style="font-weight:bold">schedule</span>:
+    <span style="color:#007f7f"># * is a special character in YAML so you have to quote this string</span>
+    - <span style="font-weight:bold">cron</span>:  <span style="color:#0ff;font-weight:bold">&#39;0 1 * * *&#39;</span> <span style="color:#007f7f"># Change this to your time</span>
+  <span style="font-weight:bold">push</span>:
+    <span style="font-weight:bold">branches</span>:
+      - master <span style="color:#007f7f"># Change this to your default branch</span>
+<span style="font-weight:bold">jobs</span>:
+  <span style="font-weight:bold">make-html-send-email</span>:
+    <span style="font-weight:bold">name</span>: make-html-send-email
+    <span style="font-weight:bold">runs-on</span>: ubuntu-latest
+    <span style="font-weight:bold">steps</span>:
+    - <span style="font-weight:bold">name</span>: Checkout repository
+      <span style="font-weight:bold">uses</span>: actions/checkout@master
+    - <span style="font-weight:bold">name</span>: Set up Node.js
+      <span style="font-weight:bold">uses</span>: actions/setup-node@master
+      <span style="font-weight:bold">with</span>:
+        <span style="font-weight:bold">node-version</span>: <span style="color:#ff0;font-weight:bold">10.0.0</span>
+    - <span style="font-weight:bold">run</span>: npm install -g todo-plus-parser
+    - <span style="font-weight:bold">run</span>: todo-plus-parser -i &#34;./&#34; -o &#34;./out.html&#34;
+    - <span style="font-weight:bold">name</span>: send-email
+      <span style="font-weight:bold">uses</span>: bmpi-dev/action-send-mail@master
+      <span style="font-weight:bold">with</span>:
+        <span style="font-weight:bold">server_address</span>: ${{secrets.MAIL_SMTP_SERVER}} <span style="color:#007f7f"># your send mail SMTP addr</span>
+        <span style="font-weight:bold">server_port</span>: <span style="color:#ff0;font-weight:bold">465</span>
+        <span style="font-weight:bold">username</span>: ${{secrets.MAIL_USERNAME}} <span style="color:#007f7f"># your send mail username</span>
+        <span style="font-weight:bold">password</span>: ${{secrets.MAIL_PASSWORD}} <span style="color:#007f7f"># your send mail password</span>
+        <span style="font-weight:bold">subject</span>: TODO++
+        <span style="font-weight:bold">body</span>: file://out.html
+        <span style="font-weight:bold">to</span>: ${{secrets.MAIL_TO}} <span style="color:#007f7f"># your receive mail</span>
+        <span style="font-weight:bold">from</span>: ${{secrets.MAIL_FROM}} <span style="color:#007f7f"># your send mail username</span>
+</code></pre></div><p>我同时设置了定时任务，GitHub Actions会在每天的早上9点定时自动构建，然后发送邮件提醒你。由于数据是纯文本的，你可以把他放到任何地方（网盘、GitHub等）。最终的效果如下：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2019-12-20-23-15-24.png" alt="" layout="fill"></amp-img></div></p>
+<h3 id="v3的优点">v3的优点</h3>
+<ol>
+<li>纯文本格式。很容易做一个parser去解析这种类yaml/python的缩进风格格式，同时也很容易编辑，使用任何编辑器都可以操作。当然最好使用VSCode与TODO++插件，这样会方便一些。</li>
+<li>灵活度高。可以随意的通过目录来区分不同领域，同时可以在单个文件中建立各种相关的项目，项目可以无限拆分。</li>
+<li>可扩展性强。比如你要扩展一个功能，加入<strong>非重要但未开始做的</strong>待办事项查看和提醒功能，这时候可以扩展VSCode插件和 todo_parser_lib 。还可以通过GitHub Actions等pipeline做自动化的任务处理，结合IFTTT可以玩出很多花样。</li>
+<li>数据私有。数据是你的，再也不需要依赖特定公司和特定平台了。</li>
+<li>免费。这一切都是免费的，除了耗费你一些时间。</li>
+</ol>
+<h3 id="v3的使用场景">v3的使用场景</h3>
+<p>想象下每天早上你收到一份邮件提醒你今天该做哪些事及那些对你很重要但还没开始做的事情，时刻提醒你自己的重要目标。当有了一些新的要做的事情，打开电脑添加进去，推送到GitHub的云服务中，之后你的手机自动收到一份新构建成功的待办事项清单邮件。当你不在电脑旁的时候，又需要记录一些idea该怎么办？可以临时先记录到手机的备忘录中去，当有了电脑后，再重新整理进你的todo文件中。对于那些在特定时间发生的需要提醒的事件，直接加入到日历中去。</p>
+<h3 id="v3的进一步构想">v3的进一步构想</h3>
+<p>我们有了电脑端编辑TODO的工具，手机端只接受提醒可能还不够好，能不能搞个基于Telegram的Bot通知？能不能搞个App去支持手机端编辑？能不能搞个命令行的工具？当然是可以的，既然我们做出了parser，有了parser解析后的json数据，我们可以进一步基于json这种数据格式做进一步的处理。当我有了这个想法后，突然意识到肯定有人已经想到了并且做了，经过一番查找，最终找到了todotxt<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>。</p>
+<p>虽然todotxt也是基于txt的时间管理工具，但是和我的需求还是不匹配，所以最终我还是搞了v3出来。</p>
+<h2 id="我的时间管理工具v4">我的时间管理工具v4</h2>
+<p><strong><span style="color:red">更新自2021年5月2日：</span>我使用 Logseq 替代 v3 实现 GTD ，具体见这篇 <a href="https://www.bmpi.dev/self/okr-gtd-note-logseq/">OKR + GTD + Note =&gt; Logseq</a> 文章。</strong></p>
+<h2 id="emacs-org-mode">Emacs ORG-MODE</h2>
+<p>提到To Do，不提Emacs的org实在说不过去。</p>
+<blockquote>
+<p>Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
+</blockquote>
+<p>可以说Org是万能的，既可以做笔记，又可以做TODO，还可以规划项目，编写文档，这一切都是纯文本的！唯一的缺点，可能就是你需要掌握Emacs这个上古神器，同时可能还需要掌握上古语言elisp，这两座大山不好爬，吓跑了好多人，所以神器虽好，使用成本也不得不考虑，他不符合我学习成本低的要求。</p>
+
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>出自《增广贤文》&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Time_Is_Money">https://en.wikipedia.org/wiki/Time_Is_Money</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://gettingthingsdone.com/">https://gettingthingsdone.com/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://zh.wikipedia.org/wiki/%E5%B0%BD%E7%AE%A1%E5%8E%BB%E5%81%9A">https://zh.wikipedia.org/wiki/%E5%B0%BD%E7%AE%A1%E5%8E%BB%E5%81%9A</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://www.zhihu.com/question/24287111/answer/30106040">为什么GTD工具对于大部分人的结果都是无法坚持使用？</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://zhuanlan.zhihu.com/p/21265727">用GTD理念管理你的时间</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus">Todo+</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://github.com/features/actions">Github Actions</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="http://todotxt.org/">http://todotxt.org/</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="https://orgmode.org/">https://orgmode.org/</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>

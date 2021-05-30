@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <meta name="author" content="Dawei Ma">
+  
+  <meta name="description" content="This article introduces my thinking about time management tools (GTD) in the past 3 years, and finally built a set of time task target management tools based on VSCode tools combined with email notifications that can be used for free for a long time.">
+  
+  
+  <meta name="keywords" content="VSCode, Emacs, OneNote, GTD">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@BMPI11">
+  <meta name="twitter:creator" content="@madawei2699">
+  <meta name="twitter:title" content="My GTD Tool"/>
+  <meta name="twitter:description" content="This article introduces my thinking about time management tools (GTD) in the past 3 years, and finally built a set of time task target management tools based on VSCode tools combined with email notifications that can be used for free for a long time."/>
+  
+  <meta name="twitter:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+  <meta property="og:title" content="My GTD Tool" />
+<meta property="og:description" content="This article introduces my thinking about time management tools (GTD) in the past 3 years, and finally built a set of time task target management tools based on VSCode tools combined with email notifications that can be used for free for a long time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bmpi.dev/en/self/gtd-tools-i-used/" /><meta property="article:section" content="self" />
+<meta property="article:published_time" content="2020-01-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-03-11T17:17:31&#43;08:00" />
+
+
+
+  
+  <meta name="og:image" content="https://www.bmpi.dev/images/mdw.png">
+  
+
+  
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      
+      "@type": "BlogPosting",
+      
+      "headline": "My GTD Tool",
+      "image": "https://www.bmpi.dev/images/mdw2.png",
+      "datePublished": "2020-01-15T00:00:00Z",
+      "dateModified": "2020-03-11T17:17:31+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "Dawei Ma"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bmpi.dev/en/self/gtd-tools-i-used/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BMPI.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bmpi.dev/images/mdw2.png"
+        }
+      },
+      "description": "This article introduces my thinking about time management tools (GTD) in the past 3 years, and finally built a set of time task target management tools based on VSCode tools combined with email notifications that can be used for free for a long time.",
+      "keywords": ["GTD", "Tool"]
+    }
+    </script>
+
+
+
+  
+  <base href="https://www.bmpi.dev/en/self/gtd-tools-i-used/">
+  
+  <title>
+  My GTD Tool · Build My Passive Income
+</title>
+
+  
+  <link rel="canonical" href="https://www.bmpi.dev/en/self/gtd-tools-i-used/">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder.min.deacf4638e988eb7ad13026417a95fe49dbb6368f04ffe5ffa15de11c942ed6c.css" integrity="sha256-3qz0Y46YjretEwJkF6lf5J27Y2jwT/5f&#43;hXeEclC7Ww="
+    crossorigin="anonymous" media="screen" />
+  
+
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU="
+    crossorigin="anonymous" media="screen" />
+  
+  
+
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/css/main.css" />
+  
+
+  
+  <script src="https://www.bmpi.dev/js/lazysizes.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/flying-pages.min.js" async></script>
+  
+  <script src="https://www.bmpi.dev/js/custom.js" async></script>
+  
+
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-32x32.png"
+    sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.bmpi.dev/images/f3/favicon-16x16.png"
+    sizes="16x16">
+
+  <link rel="amphtml" type="text/html" href="https://www.bmpi.dev/en/amp/self/gtd-tools-i-used/" title="Build My Passive Income" />
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <meta name="baidu-site-verification" content="TiReu51WyJ" />
+
+  
+  
+  <link rel="stylesheet" href="https://www.bmpi.dev/scss/tagcloud.css" media="screen" />
+
+  
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
+  
+
+  
+</head>
+
+
+
+
+
+
+<body class="colorscheme-auto">
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.bmpi.dev/en">
+      Build My Passive Income
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/self/">Self</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/dev/">Dev</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/money/">Money</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/project/">Project</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.bmpi.dev/en/goal/">Goal</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://www.bmpi.dev/">Chinese</a>
+            </li>
+          
+        
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">My GTD Tool</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-01-15T00:00:00Z'>
+                2020-01-15
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              
+              
+              
+              11:30
+              
+            </span>
+            
+            <span class="post-word-count"> | 2511 words | </span>
+            <span id="post-views"></span> views
+            
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://www.bmpi.dev/en/categories/gtd/">GTD</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/en/tags/gtd/">GTD</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/en/tags/tool/">Tool</a></div>
+
+        </div>
+      </header>
+
+      <div class="article">
+        
+        
+        
+        
+        <p>&ldquo;One inch of time, one inch of gold, it is difficult to buy an inch of gold,&rdquo; <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, &ldquo;Time Is Money&rdquo; <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, these two well-known sayings, tell everyone a truth: poor does not matter, as long as you have time. Although everyone ’s time is the same from the unit, the efficiency of unit time is very different. Ignore the factors of intelligence and external resources. Each person manages time in different ways. It is an important factor in determining time utilization.</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<p>Archimedes said, &ldquo;Give me a fulcrum, I can lift the entire planet.&rdquo; This is physical leverage; in futures investments, the leverage can be up to 20 times, winning the club&rsquo;s tender model, and losing to the sea to work; since leverage So beautiful, is there a way to improve my time utilization and indirectly achieve the effect of time leverage? Of course, this is GTD.</p>
+<h2 id="whats-gtd">What&rsquo;s GTD</h2>
+<p><img data-src="https://img.bmpi.dev/gtd.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>GTD (Getting Things Done) <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> is a time management method, which can help you systematically formulate random transactions in life into planned tasks, liberate your brain, and help you work more effectively Achieve the goals of life.
+Let&rsquo;s first review the process of the brain in everyday work and life: &ldquo;A very important thing, such as exercising requires you to choose a few days a week to exercise, which is a long-term return goal. Today was originally You need to move according to plan. Suddenly, a more urgent but insignificant event prompts you to abandon your plan and resolve it, and then there is a high probability that your plan is ruined by many urgent and unimportant things. Will this happen? Because our brains are more inclined to deal with urgent matters rather than important and non-urgent ones in evolution. This is determined by survival priority, because urgent matters may have a greater impact on life in the short term. But this has prevented many important, but urgent, long-term planning goals from being achieved. Long-term goals need to be advanced step by step according to the plan, such as reading habits, writing habits, bookkeeping habits, and acquisition of many important skills.</p>
+<p><img data-src="https://img.bmpi.dev/gtd2.png" alt="" class="lazyload" loading="lazy"/></p>
+<h2 id="gtd-workflow">GTD Workflow</h2>
+<p>Several important components can be seen from the workflow diagram of GTD:</p>
+<ol>
+<li>Collect {Various life / learning / work affairs}-&gt; Clear your brain</li>
+<li>Processing {Screen out effective actionable matters}-&gt; Identification task</li>
+<li>Organize {Organize your affairs into to-dos / projects / schedules / waiting / maybe in the future}-&gt; Set goals</li>
+<li>Check {Daily check to-do list}-&gt; Remind yourself what to do today</li>
+<li>Action {Perform to-do tasks}-&gt; Focus on completing tasks</li>
+<li>Review {Weekly / Monthly Review}-&gt; Review goals from the perspective of life goals / long-term goals / short-term goals / recent goals / current tasks</li>
+</ol>
+<p>&ldquo;Get everything out of your head. Make a series of decisions about actions when things happen, not when they happen. Organize your project&rsquo;s reminders and the next step in the right category. Action. Keep your system updated and complete, and fully checked so that you can trust your intuitive choices about what you are doing (or not doing) at all times. &ldquo;<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h3 id="gtd-problem">GTD Problem</h3>
+<p>The ideal is beautiful. This theory seems to help us plan all aspects of life, but it is actually difficult to implement. <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>
+Although it is difficult to implement, I still tried to use GTD to form a time management habit, and made my own time management tool v1 version <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</p>
+<h2 id="my-gtd-tool-v1">My GTD Tool v1</h2>
+<p>My tool set in this version:</p>
+<ol>
+<li>OneNote: note system, storing all kinds of materials</li>
+<li>OmniFocus: The realization of GTD, can complete 6 major links of GTD</li>
+<li>Calendar: Simple to-do list + notification</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/2019-12-20-18-21-43.png" alt="" class="lazyload" loading="lazy"/>
+<img data-src="https://img.bmpi.dev/2019-12-20-18-22-32.png" alt="" class="lazyload" loading="lazy"/></p>
+<h3 id="v1-problem">v1 problem</h3>
+<ol>
+<li>High learning costs. It is difficult to implement OmniFocus in accordance with the GTD process, and it takes time to form a usage habit.</li>
+<li>Poor operation flexibility. Store all kinds of items in Inbox on the mobile phone side, and then convert them into project / task / to-do list. It is inefficient, and it is not flexible to operate on the computer side.</li>
+<li>High purchase cost. OmniFocus' iOS and Mac versions cost more than a thousand yuan.</li>
+<li>Poor scalability. Commercial software is impossible for you to customize functions.</li>
+<li>The data is not mine. One day, if OmniFocus&rsquo;s company does not make this software, my data for several years may be gone. Data is particularly important for long-term software such as GTD, and the data format is best to be universal, not just supporting specific software.</li>
+</ol>
+<p>Because of the above problems, after using my v1 for a while, OmniFocus was abandoned by me.</p>
+<h2 id="my-gtd-tool-v2">My GTD Tool v2</h2>
+<p>My tool set in this version:
+    </p>
+<ol>
+<li>OneNote: note system, storing all kinds of materials</li>
+<li>Memorandum: Partial implementation of GTD</li>
+<li>Calendar: Simple to-do list + notification</li>
+</ol>
+<p><img data-src="https://img.bmpi.dev/2019-12-20-18-51-30.png" alt="" class="lazyload" loading="lazy"/></p>
+<h3 id="v2-problem">v2 problem</h3>
+<p>Although the memo is easy to operate on the mobile terminal, it does not have good organizational functions, filtering functions, reminder functions, and data migration. It is inconvenient especially when creating many projects, so this is destined to be a temporary transition plan.</p>
+<h2 id="my-gtd-tool-v3">My GTD Tool v3</h2>
+<p>This is the scheme I currently use. After going through the first two versions, I think time management tools need to have the following characteristics:</p>
+<ol>
+<li>Low learning costs. The operating cost cannot be too high, otherwise it will be difficult to persist for a long time. So be sure to get started soon.</li>
+<li>High flexibility. Most of the tools consider the use of the mobile phone as the main platform, but the mobile phone naturally has the problem of poor operation flexibility. The efficiency of the computer compared to the mobile phone is definitely very high. Therefore, the tool should be based on the computer operation. And reminders.</li>
+<li>Strong scalability. Need to have certain customization capabilities, tools must be open source, you can add your own features.</li>
+<li>The data is stored independently, in plain text format, and does not depend on specific tools and platforms, and is in its own hands.</li>
+</ol>
+<p>v3&rsquo;s tool set:</p>
+<ol>
+<li>VSCode + plugin (TODO ++)</li>
+<li>GitHub
+Calendar</li>
+</ol>
+<p>First explain why this combination is? As a developer, the editor is most often used on weekdays. I chose VSCode because his ecology is better than Emacs. The startup speed is still very fast after installing many plug-ins. Plug-in development is simple. Backed by Microsoft, the software experience is very good. There just happens to be a Todo + <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> plug-in. This plug-in supports a plain text file with a todo suffix. This file is very easy to create a to-do item, supports project nesting, and uses shortcut keys to mark pending To do status, as shown below:</p>
+<p><img data-src="https://img.bmpi.dev/2019-12-20-22-03-47.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>When I found this plug-in, after using it for a while, I found it very suitable for to-do management, but there is a problem that the plug-in window on the left does not support viewing <strong>What is being done</strong>, and I hope to see To to-dos that are marked as <strong>important but have not started</strong>. Because when I create a lot of to-do items, the priority of many items is not high, I may do it at some time in the future, these are things that I don&rsquo;t care about at present. I am most concerned about what is currently being done. At the same time, I am also very concerned about the most important but not urgent things in my life goals. I must always remind me to review and do not lose important goals in urgent and unimportant things.</p>
+<p>Because this plugin is open source, I cloned a copy and added a viewing window to view what is currently being done and important but not started, and published it as <a href="https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus">Todo++</a>.
+<img data-src="https://img.bmpi.dev/todo++.png" alt="" class="lazyload" loading="lazy"/></p>
+<p>With this VSCode plug-in, I solved the problem of editing to-do items on the computer. This method is flexible enough. You can manage your work, study, and life in the following ways:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── self
+│   ├── idea.todo
+│   └── inbox.todo
+├── study
+│   ├── book.todo
+│   └── Handmade leather goods learning.todo
+└── work
+    ├── project_a.todo
+    └── project_b.todo
+</code></pre></div><p>Each area you focus on is managed using a todo file. Then you can split countless projects in this area. Each project can be divided into sub-projects indefinitely. Each sub-project is finally disassembled into executable tasks. Item, use shortcut keys to quickly mark the three states of this to-do item <strong>(started / done / canceled)</strong>, and you can also use <strong>@critical</strong> to mark whether the task is important.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Project B_1:
+    ☐ Project A_1_1 @started(19-12-17 20:45)
+    ✔ Project A_1_2 @done(19-12-17 20:45)
+
+Project B_2:
+    ☐ Project A_2_1 @critical 
+    ☐ Project A_2_2 @low 
+</code></pre></div><p>When you have done this, you can immediately see in the left window of VSCode which tasks are being done and which tasks are important but have not started.</p>
+<figure >
+    
+        <img data-src="https://img.bmpi.dev/2019-12-20-22-57-16.png" class="lazyload" loading="lazy"  />
+    
+    
+</figure>
+<p>I also made a template library for todo, use this template to create my own private repository: <a href="https://github.com/bmpi-dev/todo_starter">todo_starter</a>. After creating the clone, use VSCode and TODO ++ plugins to start using it.</p>
+<p>After solving the operation problems on the computer side, a very important function on the mobile side is to remind, how can I receive the current work and important but not started things on the mobile phone every day?</p>
+<p>To solve this problem, I developed a parser library for todo files: <a href="https://github.com/bmpi-dev/todo_parser_lib">todo_parser_lib</a>. This library can parse the todo files in the specified directory and filter out what is currently being done. The things that are important but not started yet are then rendered into an html file. With this library, we can combine the Actions <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> function provided by GitHub. Every time we push update to the repository, we can automatically use this library to render html, and then send an email to our designated mailbox to remind us. The configuration of this GitHub Actions is also placed in the template library <strong>todo_starter</strong>. You only need to provide the email address and SMTP address of the mail service provider in the warehouse settings-&gt; secrets. The configuration is as follows:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="font-weight:bold">name</span>: schedule-email
+<span style="font-weight:bold">on</span>: 
+  <span style="font-weight:bold">schedule</span>:
+    <span style="color:#007f7f"># * is a special character in YAML so you have to quote this string</span>
+    - <span style="font-weight:bold">cron</span>:  <span style="color:#0ff;font-weight:bold">&#39;0 1 * * *&#39;</span> <span style="color:#007f7f"># Change this to your time</span>
+  <span style="font-weight:bold">push</span>:
+    <span style="font-weight:bold">branches</span>:
+      - master <span style="color:#007f7f"># Change this to your default branch</span>
+<span style="font-weight:bold">jobs</span>:
+  <span style="font-weight:bold">make-html-send-email</span>:
+    <span style="font-weight:bold">name</span>: make-html-send-email
+    <span style="font-weight:bold">runs-on</span>: ubuntu-latest
+    <span style="font-weight:bold">steps</span>:
+    - <span style="font-weight:bold">name</span>: Checkout repository
+      <span style="font-weight:bold">uses</span>: actions/checkout@master
+    - <span style="font-weight:bold">name</span>: Set up Node.js
+      <span style="font-weight:bold">uses</span>: actions/setup-node@master
+      <span style="font-weight:bold">with</span>:
+        <span style="font-weight:bold">node-version</span>: <span style="color:#ff0;font-weight:bold">10.0.0</span>
+    - <span style="font-weight:bold">run</span>: npm install -g todo-plus-parser
+    - <span style="font-weight:bold">run</span>: todo-plus-parser -i &#34;./&#34; -o &#34;./out.html&#34;
+    - <span style="font-weight:bold">name</span>: send-email
+      <span style="font-weight:bold">uses</span>: bmpi-dev/action-send-mail@master
+      <span style="font-weight:bold">with</span>:
+        <span style="font-weight:bold">server_address</span>: ${{secrets.MAIL_SMTP_SERVER}} <span style="color:#007f7f"># your send mail SMTP addr</span>
+        <span style="font-weight:bold">server_port</span>: <span style="color:#ff0;font-weight:bold">465</span>
+        <span style="font-weight:bold">username</span>: ${{secrets.MAIL_USERNAME}} <span style="color:#007f7f"># your send mail username</span>
+        <span style="font-weight:bold">password</span>: ${{secrets.MAIL_PASSWORD}} <span style="color:#007f7f"># your send mail password</span>
+        <span style="font-weight:bold">subject</span>: TODO++
+        <span style="font-weight:bold">body</span>: file://out.html
+        <span style="font-weight:bold">to</span>: ${{secrets.MAIL_TO}} <span style="color:#007f7f"># your receive mail</span>
+        <span style="font-weight:bold">from</span>: ${{secrets.MAIL_FROM}} <span style="color:#007f7f"># your send mail username</span>
+</code></pre></div><p>I set up a scheduled task at the same time, GitHub Actions will automatically build at 9 am every day, and then send an email to remind you. Since the data is plain text, you can put it anywhere (web disk, GitHub, etc.). The final effect is as follows:</p>
+<p><img data-src="https://img.bmpi.dev/2019-12-20-23-15-24.png" alt="" class="lazyload" loading="lazy"/></p>
+<h3 id="v3-pro">v3 pro</h3>
+<ol>
+<li>Plain text format. It is easy to make a parser to parse this kind of yaml / python-like indentation style format, and it is also easy to edit, and can be operated with any editor. Of course, it is best to use VSCode and TODO ++ plugins, this will be more convenient.</li>
+<li>High flexibility. You can use the directory to distinguish different areas at will, and you can set up various related projects in a single file, and the projects can be split infinitely.</li>
+<li>Strong scalability. For example, if you want to extend a function, add <strong>non-important but not started</strong> to-do list viewing and reminder functions, at this time you can extend the VSCode plugin and todo_parser_lib. You can also use GitHub Actions and other pipelines to do automated task processing, combined with IFTTT can play a lot of tricks.</li>
+<li>Data is private. The data is yours, and you no longer need to rely on specific companies and platforms.</li>
+<li>Free. It&rsquo;s all free, except it takes some time for you.</li>
+</ol>
+<h3 id="v3-usage-scenarios">v3 Usage Scenarios</h3>
+<p>Imagine that every morning you receive an email reminding you of what you should do today and those things that are important to you but haven&rsquo;t started yet. Always remind yourself of your important goals. When there are some new things to do, turn on your computer to add them, push them to GitHub&rsquo;s cloud service, and then your phone will automatically receive a newly built to-do list email. What do you need to record when you are not at your computer? You can temporarily record it into your mobile phone memo, and when you have a computer, reorganize it into your todo file. For those events that need to be reminded at a specific time, add them directly to the calendar.</p>
+<h3 id="v3-further-ideas">v3 Further Ideas</h3>
+<p>We have a tool for editing TODO on the computer side. It may not be good to just accept the reminder on the mobile phone side. Can we make a Bot notification based on Telegram? Can you create an app to support mobile editing? Can you make a command line tool? Of course it is possible. Now that we have made a parser, with the json data parsed by the parser, we can further do further processing based on the json data format. When I had this idea, I suddenly realized that someone must have thought of it and did it. After some searching, I finally found todotxt <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>.</p>
+<p>Although todotxt is also a txt-based time management tool, it still doesn&rsquo;t match my needs, so I finally came out with v3.</p>
+<h2 id="emacs-org-mode">Emacs ORG-MODE</h2>
+<p>When it comes to To Do, I can&rsquo;t justify Emacs&rsquo;s org.</p>
+<blockquote>
+<p>Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
+</blockquote>
+<p>It can be said that Org is omnipotent. It can take notes and TODO, and can also plan projects and write documents. All of this is pure text! The only drawback may be that you need to master the ancient artifact of Emacs, and you may also need to master the ancient language elisp. These two mountains are not easy to climb and scare away a lot of people, so although the artifact is good, the cost of use has to be considered. Does not meet my requirements for low learning costs.</p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1886683614725279"
+     data-ad-slot="5360039010"></ins>
+<script type='text/javascript'>
+(function() {
+var done = false;
+var script = document.createElement('script');
+script.async = true;
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+
+var createScript = setTimeout(
+function(){
+document.getElementsByTagName('HEAD').item(0).appendChild(script);
+}, 5000
+);
+
+script.onreadystatechange = script.onload = function(e) {
+if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+(adsbygoogle = window.adsbygoogle || []).push({});
+}
+};
+})();
+</script>
+<h4 id="references"><em>References</em></h4>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>From &ldquo;Zeng Guang Xian Wen&rdquo;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Time_Is_Money">https://en.wikipedia.org/wiki/Time_Is_Money</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://gettingthingsdone.com/">https://gettingthingsdone.com/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://zh.wikipedia.org/wiki/%E5%B0%BD%E7%AE%A1%E5%8E%BB%E5%81%9A">https://zh.wikipedia.org/wiki/%E5%B0%BD%E7%AE%A1%E5%8E%BB%E5%81%9A</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://www.zhihu.com/question/24287111/answer/30106040">Why is the GTD tool unsustainable for most people?</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://zhuanlan.zhihu.com/p/21265727">Manage your time with GTD philosophy</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus">Todo+</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://github.com/features/actions">Github Actions</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="http://todotxt.org/">http://todotxt.org/</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="https://orgmode.org/">https://orgmode.org/</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+        
+        <div style="color: #5c7080;font-size: small;font-style: italic;">
+          更新时间:
+          
+          
+          
+          
+          
+              14个月前
+          
+           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/af06f3f033f6c863bfa34f67c01ab9819cedda06">af06f3f</a>
+        </div>
+        
+
+        <div style="text-align: center;color: darkgray;">
+          
+          <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: darkgray;">CC BY-NC-ND 4.0</a></p>
+          
+        </div>
+
+        <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
+      </div>
+
+      <footer>
+        <div>
+  
+  <h2 style="border-style: none;margin: 10px 0;">Related posts recommended</h2>
+  
+  <div style="padding-left: 10px;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 20px auto;"></div>
+</div>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+        <div style="color: darkgreen;">
+  <form style="border:1px dashed #ccc;padding:10px 10px;margin: 10px auto;text-align:center;width: 95%;" action="https://tinyletter.com/i365" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/i365', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    
+    <span>Get weekly updates, right in your mailbox</span>
+    
+    <p style="margin: 10px 0;"><input type="text" style="width:240px;text-align: center;" name="email" id="tlemail" placeholder="Email"/></p>
+    <input type="hidden" value="1" name="embed"/>
+    
+    <input type="submit" value="Subscribe" />
+    
+  </form>
+</div>
+
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+  repo= "bmpi-dev/bmpi.dev"
+  issue-term="title"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <div class="footer-taxonomy">
+    <div style="margin-bottom: 10px;">
+      <a href="https://wiki.bmpi.dev/">Wiki</a>
+      ⚔️
+      <a href="https://talk.bmpi.dev/">Talk</a>
+      ⚔️
+      <a href="https://www.bmpi.dev/invest/">Invest</a>
+    </div>
+    <div>
+      <a href= /en/affiliate >Affiliate</a>
+      ⚡️
+      <a href= /en/tool >Tool</a>
+      ⚡️
+      <a href= /en/link >Link</a>
+    </div>
+  </div>
+  <div class="footer-taxonomy">
+    <a href= /en/tags style="color: #B36D61;">Tags</a>
+    👈
+    <a href= /en/categories style="color: #FF8C31;">Categories</a>
+    👉
+    <a href= /en/series style="color: #519A73;">Series</a>
+  </div>
+  <section class="container">
+    
+     © 2019 - 2021
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154678195-1');
+  </script>
+  
+
+  
+  <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
+  
+
+</body>
+
+</html>

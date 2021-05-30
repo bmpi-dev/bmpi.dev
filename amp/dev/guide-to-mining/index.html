@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+
+
+
+<html amp lang="zh-cn" class="no-js">
+<head>
+  <title>加密币挖矿小记</title>
+  <meta charset="utf-8">
+
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+
+
+
+  <link rel="canonical" href="https://www.bmpi.dev/dev/guide-to-mining/">
+
+  <link rel="icon" href="https://www.bmpi.dev/favicon.png" type="image/png" sizes="144x144">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <meta name="theme-color" content="#000000" />
+
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "构建我的被动收入",
+    
+    "url": "https:\/\/www.bmpi.dev"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.bmpi.dev"
+  
+  
+  
+  
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/",
+          "name": "amp"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/",
+          "name": "dev"
+        }
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@id": "https:\/\/www.bmpi.dev\/amp\/dev\/guide-to-mining\/",
+          "name": "guide-to-mining"
+        }
+    }]
+}
+</script>
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /**
+* stylesheet.html
+* ---------------
+* This is the stylesheet that gets injected as a fallback if no layouts/partials/stylesheet.html file is available
+* in your project file.
+*
+* For further details, please have a look at:
+* https://gohugo-amp.gohugohq.com/install/
+*
+**/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px
+dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em
+0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em
+40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html
+input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html
+input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px
+solid silver;margin:0 2px;padding:.35em .625em
+.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}td,th{padding:0}*{box-sizing:border-box}button,input,select,textarea{font:13px/1.4
+Helvetica,arial,freesans,clean,sans-serif}a{color:#4183c4;text-decoration:none}a:active,a:focus,a:hover{text-decoration:underline}.rule,hr{height:0;margin:15px
+0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid
+#ddd}.rule:after,.rule:before,hr:after,hr:before{display:table;content:""}.rule:after,hr:after{clear:both}fieldset{padding:0;margin:0;border:0}label{font-size:13px;font-weight:700}#adv_code_search
+.search-page-label,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],textarea{min-height:34px;padding:7px
+8px;font-size:13px;color:#333;vertical-align:middle;background-color:#fff;background-repeat:no-repeat;background-position:100%;border:1px
+solid #ccc;border-radius:3px;outline:none;box-shadow:inset 0 1px 2px rgba(0,0,0,.075)}#adv_code_search
+.focus.search-page-label,#adv_code_search .search-page-label:focus,.focused
+.drag-and-drop,input[type=email].focus,input[type=email]:focus,input[type=number].focus,input[type=number]:focus,input[type=password].focus,input[type=password]:focus,input[type=tel].focus,input[type=tel]:focus,input[type=text].focus,input[type=text]:focus,input[type=url].focus,input[type=url]:focus,textarea.focus,textarea:focus{border-color:#51a7e8;box-shadow:inset
+0 1px 2px rgba(0,0,0,.075),0 0 5px
+rgba(81,167,232,.5)}.input-contrast,input.input-contrast{background-color:#fafafa}.input-contrast:focus,input.input-contrast:focus{background-color:#fff}:-moz-placeholder,::-webkit-input-placeholder{color:#aaa}::-webkit-validation-bubble-message{font-size:12px;color:#fff;background:#9c2400;border:0;border-radius:3px;-webkit-box-shadow:1px
+1px 1px
+rgba(0,0,0,.1)}input::-webkit-validation-bubble-icon{display:none}::-webkit-validation-bubble-arrow{background-color:#9c2400;border:1px
+solid #9c2400;-webkit-box-shadow:1px 1px 1px
+rgba(0,0,0,.1)}.absent{color:#c00}.anchor{position:absolute;top:0;bottom:0;left:0;display:block;padding-right:6px;padding-left:30px;margin-left:-30px}.anchor:focus{outline:none}h1,h2,h3,h4,h5,h6{position:relative;margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1
+.octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6
+.octicon-link{display:none;color:#000;vertical-align:middle}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover
+.anchor,h5:hover .anchor,h6:hover
+.anchor{height:1em;padding-left:8px;margin-left:-30px;line-height:1;text-decoration:none}h1:hover .anchor
+.octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover
+.anchor .octicon-link,h6:hover .anchor .octicon-link{display:inline-block}h1 code,h1 tt,h2 code,h2 tt,h3 code,h3 tt,h4
+code,h4 tt,h5 code,h5 tt,h6 code,h6
+tt{font-size:inherit}h1{font-size:2.25em;line-height:1.2}h1,h2{padding-bottom:.3em;border-bottom:1px solid
+#eee}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}h5,h6{font-size:1em}h6{color:#777}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:4px;padding:0;margin:16px
+0;background-color:#e7e7e7;border:0 none}ol,ul{padding-left:2em}ol.no-list,ul.no-list{padding:0;list-style-type:none}ol
+ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li>p{margin-top:16px}dl,dl dt{padding:0}dl
+dt{margin-top:16px;font-size:1em;font-style:italic;font-weight:700}dl dd{padding:0
+16px;margin-bottom:16px}blockquote{padding:0 15px;color:#777;border-left:4px solid
+#ddd}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}table
+th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table
+tr{background-color:#fff;border-top:1px solid #ccc}table
+tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%;box-sizing:border-box}span.frame,span.frame>span{display:block;overflow:hidden}span.frame>span{float:left;width:auto;padding:7px;margin:13px
+0 0;border:1px solid #ddd}span.frame span img{display:block;float:left}span.frame span span{display:block;padding:5px 0
+0;clear:both;color:#333}span.align-center{display:block;overflow:hidden;clear:both}span.align-center>span{display:block;margin:13px
+auto 0;overflow:hidden;text-align:center}span.align-center span img{margin:0
+auto;text-align:center}span.align-right{display:block;overflow:hidden;clear:both}span.align-right>span{display:block;margin:13px
+0 0;overflow:hidden;text-align:right}span.align-right span
+img{margin:0;text-align:right}span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}span.float-left
+span{margin:13px 0
+0}span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}span.float-right>span{display:block;margin:13px
+auto
+0;overflow:hidden;text-align:right}code,tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:"\00a0"}code
+br,tt br{display:none}del
+code{text-decoration:inherit;vertical-align:text-top}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.highlight{margin-bottom:16px}.highlight
+pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.highlight
+pre{margin-bottom:0;word-break:normal}pre,pre code,pre tt{word-wrap:normal}pre code,pre
+tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;background-color:transparent;border:0}pre
+code:after,pre code:before,pre tt:after,pre
+tt:before{content:normal}abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav
+ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}mark{font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px
+dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px
+solid #ccc;margin:1em
+0;padding:0}input,select{vertical-align:middle}body{background-color:#fff;color:#123;font-size:14px;font-family:Helvetica
+Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif}main{max-width:1180px;padding:30px;margin:0 auto}@media
+(min-width:900px){main h1+p{font-size:2em}}h1{font-weight:300;font-size:2em;line-height:1.4em;margin:.5em
+0;font-family:Georgia,serif;-webkit-transition:color .4s;transition:color
+.4s}h2{font-size:2em}h2,h3{font-weight:300;margin:30px
+0}h3{font-size:1.8em}h4{font-size:1.6em}h4,h5{font-weight:300}h5{font-size:1.2em}h6{font-weight:300;font-size:1em}p{line-height:1.4em;font-size:1.2em;margin:15px
+0}blockquote{border-left:5px solid
+#ff1d55;background-color:#ffe9ee;padding:1em;margin-bottom:1em}.lightbox{background-color:rgba(3,121,196,.4);min-height:100vh;min-width:100vw;padding:30px}code{font:12px
+Consolas,Liberation Mono,Menlo,Courier,monospace}p>code{color:#ff1d55}pre
+code{display:block;background-color:#f7f7f7;padding:15px;overflow:auto;color:#123;line-height:1.4em}a{color:#ff1d55;text-decoration:none;-webkit-transition:color
+.4s,background .4s;transition:color .4s,background .4s}a:hover{color:#e9003a}ol,ul{margin:7.5px;padding:7.5px 15px}ol
+li,ul li{margin:7.5px 15px}.doc-parameters{list-style-type:none;padding:0}.doc-parameters
+li{display:block;margin:0;margin-bottom:15px}.doc-parameters .example,.doc-parameters blockquote{border-left:5px solid
+#0379c4;background-color:#96d5fd;color:#123;line-height:1em;font-size:1em;padding:1em;margin:0}.doc-parameters
+.example{background-color:#c8e9fe}.doc-parameters
+.parameter{display:block;padding:1em;background-color:#0379c4;color:#fff;margin:0}.doc-parameters .parameter
+strong{display:inline-block;padding:0
+.5em;border-radius:.25em;line-height:2em;background-color:#025a92}hr{height:.25em;padding:0;margin:24px
+0;background-color:#f7f7f7;border:0}.teaser{display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.teaser
+aside{-ms-flex-preferred-size:60%;flex-basis:60%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;padding:30px}@media
+(max-width:700px){.teaser aside{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content{-ms-flex-preferred-size:40%;flex-basis:40%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;color:dimgray;font-size:12px}@media
+(max-width:700px){.teaser .content{-ms-flex-preferred-size:100%;flex-basis:100%}}.teaser
+.content.content-full{-ms-flex-preferred-size:100%;flex-basis:100%}.teaser .content
+h3{font-size:14px;text-transform:uppercase;font-weight:600;color:#123}.main-index{text-align:center}.main-index
+amp-img{margin:15px auto;width:50%}@media (min-width:900px){.main-index
+p{font-size:2em}}.breadcrumbs{padding:1em;background-color:#f7f7f7}.breadcrumbs
+ul{display:block;margin:0;padding:0}.breadcrumbs ul li{display:inline-block;margin:0 .5em}.breadcrumbs ul
+li:before{content:' / ';position:relative;margin-left:-.5em;color:dimgray}.breadcrumbs ul li
+a{color:dimgray}.breadcrumbs ul li:last-child
+a{color:#ff1d55}header{background-color:#000000;color:#fff;padding:30px;position:relative}header
+.brand{display:inline-block;position:absolute;left:30px;top:20px;line-height:15px;text-transform:uppercase;padding:7.5px;font-size:1.4em}header
+.brand:hover{background-color:#ff1d55;color:#fff}header
+a{color:#fff;text-decoration:none;border-radius:7.5px;padding:7.5px}header
+a:hover{text-decoration:none;background-color:#fff;color:#ff1d55}header nav
+ul{padding:0;margin:0;display:block;text-align:right}header nav ul li{padding:0;margin:0
+7.5px;display:inline-block}header nav ul li.hamburger{display:none}header nav ul li.hamburger
+button{position:absolute;right:30px;top:20px;border:0;background-color:#fff;color:#ff1d55;font-weight:700;border-radius:50%;width:30px;height:30px;overflow:hidden;text-align:center;padding:0;margin:0}@media
+(max-width:900px){header nav ul li{display:none}header nav ul
+li.hamburger{display:inline-block}}.sidebarNavigation{width:210px;max-width:95%}.sidebarNavigation
+ul{padding:0;margin:0}.sidebarNavigation ul li{display:block}.sidebarNavigation ul li
+a{display:block;line-height:1.4em;padding:7.5px}footer{margin:60px
+auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1180px;padding:30px;font-size:12px}footer
+a:hover{text-decoration:none}footer strong{text-transform:uppercase;margin-bottom:15px;display:block}footer strong
+a{color:#1d1d1d}footer ul{display:block;padding:0;margin:0}footer ul li{display:block;line-height:1.4em;padding:7.5px
+0;margin:0}footer ul li a{color:dimgray}footer
+.quarter-section{margin-bottom:30px;-ms-flex-preferred-size:25%;flex-basis:25%}@media (max-width:900px){footer
+.quarter-section{-ms-flex-preferred-size:33%;flex-basis:33%}}@media (max-width:700px){footer
+.quarter-section{-ms-flex-preferred-size:50%;flex-basis:50%}}@media (max-width:500px){footer
+.quarter-section{-ms-flex-preferred-size:100%;flex-basis:100%}}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-size:12px}.boxes
+.box{-ms-flex-preferred-size:30%;flex-basis:30%;background-color:#f7f7f7;padding:30px;margin:7.5px
+0;text-align:left;font-size:12px}.boxes .box h3{font-size:12px;line-height:1em;padding:0;margin:0}.boxes .box
+a{padding:0;color:#ff1d55}.boxes .box p{color:dimgray;font-size:12px;margin:7.5px 0}@media (max-width:900px){.boxes
+.box{-ms-flex-preferred-size:45%;flex-basis:45%}}@media (max-width:500px){.boxes
+.box{-ms-flex-preferred-size:100%;flex-basis:100%}}
+
+.fixed-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+amp-img.contain img {
+  object-fit: contain;
+}
+
+.footnotes {
+  overflow-wrap: break-word;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+
+<main>
+  
+  <section>
+    <article>
+      <header>
+        <div>
+          <h1>加密币挖矿小记</h1>
+        </div>
+        <div>
+          <div style="margin: 10px auto;">
+            <span>
+              <time datetime='2021-05-09T00:00:00Z'>
+                2021-05-09
+              </time>
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.bmpi.dev/tags/btc/">BTC</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/eth/">ETH</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/xmr/">XMR</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/aws/">AWS</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E6%8C%96%E7%9F%BF/">挖矿</a>
+      <span class="separator">•</span>
+    <a href="https://www.bmpi.dev/tags/%E5%8A%A0%E5%AF%86%E5%B8%81/">加密币</a></div>
+
+        </div>
+      </header>
+      <div>
+        
+        
+        
+        
+        <p><strong><span style="color:red">此文有更新，见我这条推文系列: <a href="https://twitter.com/madawei2699/status/1391410996644769796">https://twitter.com/madawei2699/status/1391410996644769796</a></span></strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">股市是人性的放大器，币圈是人性的修罗场
+</code></pre></div><p>今年狗币在马斯克的营销下暴涨了 140 多倍，最近 12 个月涨了快 300 倍。根据 <a href="https://coinmarketcap.com/">coinmarketcap</a> 按市值的排名，目前狗币已成第四大加密币。</p>
+<p>我在 2017 年也就是比特币暴涨过 10000 美刀时跟风买了一点比特币（BTC）和以太坊（ETH），之后一路下跌了到 4000 美刀之下，这两年又暴涨到近 60000 美刀了。由于买的非常少，我几乎没有关注这些币，直到看到当初买的币已经翻了 4 倍后才后知后觉，当周围充斥着赚钱暴富的声音时，我才意识到加密币已经没法被忽视了。</p>
+<p>现在参与进去买币肯定是当韭菜被割，但是我又按耐不住想要参与的心，思来想去只能选择挖矿这种不赚钱的方式来间接参与币圈的狂欢。</p>
+<h2 id="什么是挖矿">什么是挖矿</h2>
+<p>如果你对加密货币还不了解，可以看看李永乐老师的这个科普小视频 <a href="https://www.bilibili.com/video/av45247943/">比特币和区块链啥原理？矿机挖矿咋回事？李永乐老师讲比特币</a>。</p>
+<p>挖矿简单的理解就是一种通过特定的挖矿软件，利用计算机的 CPU 或 GPU 的计算能力，给加密币生态提供算力来获得一些加密币作为报酬的行为。就像矿工去矿山里挖矿一样，你用你的计算机做矿工去挖加密币。</p>
+<p>早期如十年前挖矿还是很容易的，利用普通的电脑 CPU 就可以挖出比特币来，但是随着加密币市场的蓬勃发展，现在普通电脑的 CPU 已经很难挖出比特币和以太坊了。</p>
+<p>要理解这个事情需要先了解下加密币的工作原理，比特币在创立之处设定了 2100 万枚，这些初始的币就像一座金山需要由矿工来挖，矿工就是一堆参与其中的计算机。这么多矿工挖币就需要一种分发激励机制，比特币的设计者中本聪在 <a href="https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf">比特币：一种点对点电子货币系统</a> 的论文中提到：</p>
+<blockquote>
+<p>我们约定，区块中的第一笔交易是区块创建者开启一枚属于他的新货币的特殊的交易。这就增加了对支持网络的节点的激励，并提供了一种分发货币到流通领域的方法，因为这里没有中央机构来发行货币。新货币按固定量稳定地增加就像金矿矿工消耗资源并增加黄金到流通领域一样。对我们而言，消耗的是 CPU 时间和电力。</p>
+</blockquote>
+<p>按上述设计，矿工通过一些计算可以获得区块创建打包的权利，作为奖励可以给这个矿工分发一些币，而这些币自然就流通到市场中了，相当于央行通过各大银行分发新发的货币。而创建区块的行为也相当于记账了，可以记录各种交易行为，这在银行体系里可以理解为完成支付与清算的过程。</p>
+<p>这么多矿工都想要获得创建新区块的权利，如何选出拥有创建区块的权利？比特币的设计是采取工作量（PoW）证明机制，这个机制简单的理解就是比特币系统会出一道很难计算但是验证又很简单的题目，比如解一个用 SHA256 算法运算过的前面带 1 个或 N 个0的哈希值运算。当某矿工算出这个随机散列值，并向全网广播，就拥有了区块的记帐权，从而获得比特币奖励。</p>
+<p>计算哈希值不仅需要很高的计算能力，还需要运气好。现代挖矿都不是单打独斗，而是参与到一个矿池中去。根据这篇 <a href="https://zhuanlan.zhihu.com/p/37385527">什么是矿池/矿池收益结算模式</a> 文章：</p>
+<blockquote>
+<p>矿池将区块难度分成很多难度更小的任务下发给矿工计算，矿工完成一个任务后将结果提交给矿池，叫提交一个 share 。假设全网难度要求 n 的值为 100，即前 100 个比特位为 0，矿池可能会给矿工分配一个任务，要求前 30 位为 0，然后再从所有提交的任务中，寻找有没有凑巧前 100 位为 0 的目标值。</p>
+<p>矿池主要的收益分配模式有 PPS 与 PPLNS。PPS就是打工模式，你把算力卖给了矿池去获得固定收益，矿池自负盈亏；PPLNS更接近真实组队模式，成功挖到区块后，大家根据自己贡献的股份数量来分配收益。</p>
+</blockquote>
+<p>比特币挖矿已经从早期的CPU、GPU发展到专用的 ASIC 芯片构建的矿池挖矿。这里简单说下 CPU 和 GPU 的区别，如下图：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/f4053df3-d840-33cd-1258-f3b09e59ed6a.png" alt="" layout="fill"></amp-img></div></p>
+<p>CPU 可以理解为拥有数量稀少（普通电脑的一般有 4 到 8 个核心）可以执行各种复杂运算的计算单元，GPU 是拥有一堆（上千个）可以执行简单运算的计算单元。比特币的工作量证明的难题其实所需的运算很简单，只是需要大量的计算。因为这种原因在挖矿方面 CPU 显然是比不过 GPU 的。</p>
+<p>当然一些币如门罗币（XMR）采用了 randomx 的工作量证明算法，该算法更适合 CPU 去做计算，所以挖矿采用 CPU 更合适。</p>
+<h2 id="怎么挖矿">怎么挖矿</h2>
+<p>了解了一些背景知识后我们就可以开始挖币了。比特币因为用 GPU 太难挖了，而以太坊还比较好挖，所以我这次是用 GPU 挖以太坊，用 CPU 挖门罗币。因为我没有英伟达的高端显卡，现在也不好买，所以只能用 AWS 的深度学习 GPU 服务器来挖矿了。</p>
+<p>我参考了这篇 <a href="https://michael-ludvig.medium.com/mining-bitcoin-and-other-crypto-on-aws-eb172940059f">Mining Bitcoin and other cryptos on AWS</a> 文章并加入了利用 CPU 挖门罗币的配置，这是我的 <a href="https://github.com/bmpi-dev/aws-ethereum-miner">AWS CloudFormation</a> 模版。所以只要在 AWS CloudFormation 上传了这个模版并配置了你的钱包地址就可以自动开始挖矿了。</p>
+<p>需要注意的是 GPU 服务器是稀缺资源，所以 AWS 给每个账号分配的配额并不多。我的配额一开始是 0，所以需要在 AWS Service Quotas 中申请将 <code>All G Spot Instance Requests</code> 和 <code>Running On-Demand G instances</code> 的配额调高。这个过程可能需要几天，因为是人工审核的，他们需要审查你的历史账单是否满足一定的需求。</p>
+<p>我是开了 5 台 g4dn.xlarge 的服务器，每台竞价不超过 $0.16/h，目前的价格是 $0.1578/h，由于是 spot 实例，每天跑不满 24 小时，晚上价格高的时候是买不到服务器的。不过由于是自动竞价的，人工并不需要干预。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/ca63dfc6-9df7-35f0-cb71-931812079a3c.png" alt="" layout="fill"></amp-img></div></p>
+<p>由于同时用 GPU 挖以太坊，用 CPU 挖门罗币，服务器的 GPU 和 CPU 都已经满负荷运转了。但是内存还有 12 GB，显存有 6 GB 空闲。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/663abc4d-4469-4be0-9d49-75c7e75375f7.png" alt="" layout="fill"></amp-img></div></p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/2ede5b69-a38f-ef3a-8553-88effa533f22.png" alt="" layout="fill"></amp-img></div></p>
+<h2 id="挖矿能赚钱吗">挖矿能赚钱吗</h2>
+<p>目前五台服务器满负荷运行一天的费用是 $0.1578 * 24 * 5 = $18.936，实际一天跑不满 24 小时，总费用比这个低一些。</p>
+<p>我能赚多少钱呢？</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/d0286afd-989a-0500-0aca-c91bee9893d2.png" alt="" layout="fill"></amp-img></div></p>
+<p>这是以太坊的矿池监控页面，五台矿工一天能挖 0.00464 个以太坊，以目前的价格一天能赚 $17.54。</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/9a9600b1-0620-9d35-bd49-50553671f5ad.png" alt="" layout="fill"></amp-img></div></p>
+<p>这是门罗币的矿池监控页面，五台矿工一天能挖 0.002 个，以目前的价格一天能赚 $0.92。</p>
+<p>一天总成本 $18.936，总盈利 $18.46，基本达到无损挖矿了。经过半个月的挖矿，我也收到了以太坊矿池第一笔收益：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/de882a49-f3cb-b528-c68e-e43883c7b460.png" alt="" layout="fill"></amp-img></div></p>
+<p>从上述截图看交易费用非常的便宜，可能是因为矿池自己打包区块所以交易费很便宜。最神奇的是当时收到这笔收益还价值 $92，在写这篇文章的时候这部分币已经价值 $106 了。</p>
+<p>从我这半个月的挖矿经历看，由于加密币处于大牛市的行情，虽然挖矿的算力困难度已经达历史巅峰：</p>
+<p><div class="fixed-container"><amp-img class="contain" src="https://img.bmpi.dev/c7c97890-7016-152d-83ad-3ba0526e243d.png" alt="" layout="fill"></amp-img></div></p>
+<p>但是采用 AWS 的 spot 服务器实例，竟然达到了无损挖矿甚至略有收益的程度。再考虑到 AWS 账单是用美元结算，月底出账单用信用卡支付，之后真正还款已经是两个月之久了。相当于挖矿有两个月的免息期。只要你的服务器配额足够多，用这种方式参与加密币的交易也是一种可行的方式。</p>
+<p>相比直接在交易所入金，可能面临交易所的各种骚操作、国内银行的监管、高昂的交易手续费等一系列问题，用服务器挖矿相比还是很简单的，适合小赌怡情，甚至可以理解为一种参与币圈一级市场的定投行为。</p>
+<h2 id="进阶阅读">进阶阅读</h2>
+<ul>
+<li><a href="https://taresky.com/stable-lps">白话：区块链“稳定币挖矿”是什么</a> - 币圈花样多，这篇文章属于一种高阶的套利操作，可以观摩下。</li>
+</ul>
+<p><em>这篇文章写完之际，因马斯克的言论狗币又大跌了。</em></p>
+
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-154678195-1"
+            },
+            "triggers": {"trackEvent":{"on":"click","request":"event","selector":"body","vars":{"eventAction":"click","eventCategory":"body-click"}},"trackPageview":{"on":"visible","request":"pageview"}}
+        }
+    </script>
+</amp-analytics>
+
+</body>
+
+</html>
