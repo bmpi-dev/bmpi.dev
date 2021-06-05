@@ -45,7 +45,7 @@ const fetch = require("node-fetch");
         console.log(dataString);
 
         var options = {
-            url: 'https://app.webpushr.com/api/v1/notification/send/all',
+            url: 'https://api.webpushr.com/v1/notification/send/all',
             method: 'POST',
             headers: headers,
             body: dataString
@@ -53,11 +53,10 @@ const fetch = require("node-fetch");
 
         function callback(error, response, body) {
 
-            if (response.statusCode !== 200) {
+            if (!error && response.statusCode == 200) {
                 console.log(body);
             } else {
-                console.log(response);
-                console.log(body);
+                console.log(error);
             }
         }
 
