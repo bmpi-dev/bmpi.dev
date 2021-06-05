@@ -24,18 +24,15 @@ jobs:
       - name: Build
         run: hugo --gc
 
-      - name: create env file
-        run: |
-          touch .env
-          echo WEBPUSHRKEY =${{ secrets.WEBPUSHRKEY }} >> .env
-          echo WEBPUSHRAUTHTOKEN =${{ secrets.WEBPUSHRAUTHTOKEN }} >> .env
-
       - name: New Post Check
         uses: actions/setup-node@v2
         with:
           node-version: '12'
       - run: npm install node-fetch
       - run: node _tools/newpostcheck.js
+        env:
+          WEBPUSHRKEY: ${{secrets.WEBPUSHRKEY}}
+          WEBPUSHRAUTHTOKEN: ${{secrets.WEBPUSHRAUTHTOKEN}}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
