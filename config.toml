@@ -1,4 +1,4 @@
-baseurl = "https://www.bmpi.dev"
+baseURL = "https://www.bmpi.dev"
 title = "Build My Passive Income"
 theme = "hugo-coder"
 languagecode = "zh-cn"
@@ -7,8 +7,10 @@ defaultcontentlanguage = "zh-cn"
 enableRobotsTXT = true
 canonifyURLs = true
 
+enableGitInfo = true
+enableEmoji = true
+
 paginate = 9999
-canonifyurls = true
 
 pygmentsstyle = "b2"
 pygmentscodefences = true

@@ -9,9 +9,9 @@ outputs = "html"
 终身学习（认知杠杆） -> 全栈技术（时间杠杆） -> 投资理财（财务杠杆） => 被动收入（人生杠杆）
 ```
 
-## Dashboard
+<!-- ## Dashboard
 
-{{< dashboard >}}
+{{< dashboard >}} -->
 
 ## 关于我
 
@@ -55,6 +55,9 @@ outputs = "html"
 ### 本站变更日志
 
 ```
+✔ 使用GitHub Actions构建页面（推送到gh-pages分支）和推送新文章通知，Vercel仅做静态页面CDN @done(21-05-30 07:48)
+✔ 升级Hugo版本至0.83.1；更新RSS模版；修复AMP输出格式错误；新增文章最新修改时间和Git版本 @done(21-05-29 23:48)
+✔ 新增总文章和字数计数功能 @done(21-05-18 21:02)
 ✔ Notion与Dashboard集成GA @done(21-01-30 22:35)
 ✔ 基于Google Datastudio开发Dashboard @done(21-01-30 22:34)
 ✔ Dashboard数据集成 @started(21-01-23 08:07) @done(21-01-23 10:07) @lasted(2h41s)

@@ -96,7 +96,7 @@ isCJKLanguage: true
 核心是数据。
 ```
 
-- [SQLite](https://github.com/sqlite/sqlite) — SQLite是个 [严肃的数据库](https://antonz.org/sqlite-is-not-a-toy-database/)，甚至是 [真正的 Serverless 数据库](https://www.sqlite.org/serverless.html)，比如这个 [datasette](https://github.com/simonw/datasette) 库可以将 SQLite 数据库的数据直接发布成在线数据。我的一些小工具甚至静态化渲染的网站背后的数据库就是它。其还可以用作强大的数据分析平台。要说缺点的话，它的数据库不支持并发写入，这也是我在个人项目中不得不使用重量级的关系数据库。
+- [SQLite](https://github.com/sqlite/sqlite) — SQLite是个 [严肃的数据库](https://antonz.org/sqlite-is-not-a-toy-database/)，还是 [真正的 Serverless 数据库](https://www.sqlite.org/serverless.html)，比如这个 [datasette](https://github.com/simonw/datasette) 库可以将 SQLite 数据库的数据直接发布成在线数据。甚至可以将 [SQLite 托管至 Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)。我的一些小工具甚至静态化渲染的网站背后的数据库就是它。其还可以用作强大的数据分析平台。要说缺点的话，它的数据库不支持并发写入，这也是我在个人项目中不得不使用重量级的关系数据库。
 - [MySQL](https://github.com/mysql/mysql-server) — 公司项目和个人项目都会用的数据库。MySQL 除了有点重量级外，对于个人项目来说没有啥缺点。
 - [PostgreSQL](https://github.com/postgres/postgres) — 相比 MySQL 来说，PostgreSQL 支持很多高级特性。比如这个 [postgrest](https://github.com/PostgREST/postgrest) 库可直接将 PostgreSQL 数据库发布成 REST API，甚至有基于此库的 SaaS 服务如 [supabase](https://github.com/supabase/supabase) 可提供类 [Google Firebase](https://firebase.google.com/) 的功能。
 - [Redis](https://github.com/redis/redis) — Redis 本身的功能很丰富（缓存、计数、分布式锁与排行榜等），不过我在个人项目中主要用来做缓存。
@@ -107,6 +107,7 @@ isCJKLanguage: true
   - 将日志存放上去做进一步的分析，比如网站的请求日志存放上去通过 [AWS Athena](https://aws.amazon.com/athena/) 以SQL形式查询做数据分析。
 - [Google Sheets](https://www.google.com/sheets/about/) — Google Sheets 不只是个具备实时协作的电子表格。它还可以：
   - 可作为数据库。比如 [Sheety](https://sheety.co/) 这个服务可将电子表格作为数据库并发布成 API 以供应用去消费数据；
+  - 可作为 TMS 系统。这个 [Tweet](https://twitter.com/THlNGSWORK/status/1391641654403256323) 显示如何用 Google Sheets 做多国语言的翻译；
   - 可作为 CMS 系统。比如结合 AWS Lambda 可做出一个 [博客后台管理系统](https://andreaskeller.name/blog/nextjs-google-sheets-cms)。比如我的 [社交数据监控 Dashboard](https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b) 后台就是 Google Sheets，结合 [Apps Script](https://script.google.com/) 可以做到自动获取最新社交数据。
 
 ## 基础设施
