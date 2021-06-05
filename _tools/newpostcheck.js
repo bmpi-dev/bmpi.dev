@@ -14,11 +14,11 @@ const fetch = require("node-fetch");
     }
 
     const currentFeedPosts = await response.json();
-    // console.log("Current feed post is ", currentFeedPosts['latest-post']);
+    console.log("Current feed post is ", currentFeedPosts['latest-post']);
 
     // read the locally built version of the data source
     const onlineFeedPosts = JSON.parse(fs.readFileSync("./public/feed/index.json", { encoding: "utf8" }));
-    // console.log("Online feed post is ", onlineFeedPosts['latest-post']);
+    console.log("Online feed post is ", onlineFeedPosts['latest-post']);
 
     // compare the two
     if (currentFeedPosts['latest-post']['url'] !== onlineFeedPosts['latest-post']['url']) {
@@ -42,7 +42,7 @@ const fetch = require("node-fetch");
 
         var dataString = JSON.stringify(postData);
 
-        // console.log(dataString);
+        console.log(dataString);
 
         var options = {
             url: 'https://app.webpushr.com/api/v1/notification/send/all',
