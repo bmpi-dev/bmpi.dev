@@ -56,7 +56,8 @@ const fetch = require("node-fetch");
             if (response.statusCode !== 200) {
                 console.log(body);
             } else {
-                console.log("Push new post success")
+                console.log(response);
+                console.log(body);
             }
         }
 
