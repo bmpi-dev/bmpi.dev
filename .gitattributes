@@ -1,1 +1,2 @@
 *.m linguist-language=rust
+*.js linguist-language=rust
