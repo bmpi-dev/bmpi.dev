@@ -171,6 +171,10 @@ FootnoteReturnLinkContents = "↑"
                 name = "Goal"
                 weight = 6
                 url  = "/goal/"
+            [[languages.en.menu.main]]
+                name = "Twitter"
+                weight = 7
+                url  = "https://twitter.com/madawei2699"
 
     [languages.zh-cn]
         languagename = "Chinese"
@@ -215,6 +219,6 @@ FootnoteReturnLinkContents = "↑"
                 weight = 7
                 url  = "/goal/"
             [[languages.zh-cn.menu.main]]
-                name = "思考"
+                name = "Twitter"
                 weight = 8
-                url  = "https://tg.bmpi.dev"
+                url  = "https://twitter.com/madawei2699"
