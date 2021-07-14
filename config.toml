@@ -86,7 +86,7 @@ FootnoteReturnLinkContents = "↑"
     googleAnalytics = "UA-154678195-1"
 
     # OG
-    og_image = "images/mdw.png"
+    og_image = "images/bg.png"
 
 # Comments on github issue
 [params.utteranc]
