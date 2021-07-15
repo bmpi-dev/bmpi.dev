@@ -62,6 +62,30 @@ const fetch = require("node-fetch");
 
         await request(options, callback);
 
+        // submit url to Baidu
+        console.log('start submit url to Baidu');
+
+        var headers = {
+            'Content-Type': 'text/plain'
+        };
+
+        var raw = baseUrl + onlineFeedPosts['latest-post']['url'];
+
+        var requestOptions = {
+            method: 'POST',
+            headers: headers,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        const response = await fetch("http://data.zz.baidu.com/urls?site=" + baseUrl + "&token=" + process.env.BAIDU_TOKEN, requestOptions);
+        if (response.status !== 200) {
+            console.error("!!error!!");
+            throw new Error(response);
+        }
+        const r = await response.json();
+        console.log("submit url success!!");
+        console.log(r);
     } else {
         console.log("No New post detected!");
     }

@@ -33,6 +33,7 @@ jobs:
         env:
           WEBPUSHRKEY: ${{secrets.WEBPUSHRKEY}}
           WEBPUSHRAUTHTOKEN: ${{secrets.WEBPUSHRAUTHTOKEN}}
+          BAIDU_TOKEN: ${{secrets.BAIDU_TOKEN}}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
