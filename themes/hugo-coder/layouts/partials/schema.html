@@ -24,7 +24,11 @@
       "@type": "Blog",
       {{ end }}
       "headline": {{ .Title }},
+      {{ if .Params.og_image }}
+      "image": {{ .Params.og_image }},
+      {{ else }}
       "image": {{ .Site.Params.logoImg | absURL }},
+      {{ end }}
       "datePublished": {{ .PublishDate }},
       "dateModified": {{ .Lastmod }},
       "author": {
