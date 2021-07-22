@@ -1,0 +1,32 @@
+@startmindmap
+skinparam monochrome true
+* Localization testing
+** Language related
+*** Glossary of terms
+*** Common phrase base
+*** No grammatical errors
+*** No spelling errors
+*** Punctuation
+*** Name
+*** Location
+*** Title
+** Geography and Culture
+*** Date and time format
+*** Phone Address Format
+*** Currency format
+*** Product name
+*** Unit of measurement
+*** Color
+** UI interface
+*** Image with text
+*** Layout consistency
+*** Hyphen and line break placement
+*** Dialogs/popups/notifications
+*** Text length
+** Functionality testing
+*** Hyperlinks
+*** Input box
+*** Shortcut keys
+*** List sorting
+*** Fonts
+@endmindmap
