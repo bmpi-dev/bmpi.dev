@@ -1,5 +1,5 @@
 ---
-title: "International(i18n) and Localization(L10n)"
+title: "Internationalization(i18n) and Localization(L10n)"
 date: 2021-07-22
 draft: false
 tags: ["i18n", "l10n"]
@@ -9,7 +9,7 @@ description: "This post shares my experience in implementing internationalizatio
 og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
 ---
 
-- [internationalization(i18N)](#internationalizationi18n)
+- [Internationalization(i18N)](#internationalizationi18n)
   - [Problems to be solved for internationalization](#problems-to-be-solved-for-internationalization)
   - [Text Encoding](#text-encoding)
   - [locale](#locale)
@@ -48,7 +48,7 @@ A language environment is the use of a specific language or language variant wit
 
 > They are often abbreviated as i18n (18 means that there are 18 letters between i and n in the word "internationalization") and L10n, respectively, due to the length of their single words, using a capital L to distinguish the i in i18n and to make it easy to distinguish the lowercase l from the 1.([Wikipedia](https://en.wikipedia.org/wiki/Internationalization_and_localization))
 
-## internationalization(i18N)
+## Internationalization(i18N)
 
 ### Problems to be solved for internationalization
 
