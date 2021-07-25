@@ -68,7 +68,7 @@ og_image: "https://img.bmpi.dev/bf1093ef-68c2-c92a-0de5-a08decb02b31.png"
 
 ![建立个人终身学习知识体系流程](https://img.bmpi.dev/bf1093ef-68c2-c92a-0de5-a08decb02b31.png)
 
-### 信息输入
+### [信息输入](/self/my-info-input-channel/)
 
 每天都有大量的信息输入：
 
