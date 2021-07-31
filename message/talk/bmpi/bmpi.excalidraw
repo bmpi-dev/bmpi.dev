@@ -1,0 +1,3125 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "http://localhost:50873",
+  "elements": [
+    {
+      "type": "arrow",
+      "version": 1529,
+      "versionNonce": 1426727444,
+      "isDeleted": false,
+      "id": "F50oCXCf2cVvQXNgtNa9e",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3317.3204758769334,
+      "y": -98.27233902131775,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 225.37557846924392,
+      "height": 425.1037739835688,
+      "seed": 2141177359,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          225.37557846924392,
+          425.1037739835688
+        ]
+      ]
+    },
+    {
+      "type": "rectangle",
+      "version": 815,
+      "versionNonce": 1907341612,
+      "isDeleted": false,
+      "id": "gB06M52H2GeDPUd-Sp2LS",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 801.3449601934408,
+      "y": -1790.7902731847298,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 3936.5374755859375,
+      "height": 2513.060099283854,
+      "seed": 1966429199,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 703,
+      "versionNonce": 220512148,
+      "isDeleted": false,
+      "id": "h0sbgTq9nSiO2jwdB_V2L",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1560.911418259746,
+      "y": -600.2524669916943,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 344.4032796223956,
+      "height": 120.54114786783849,
+      "seed": 339308961,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 86.1008199055989,
+      "fontFamily": 1,
+      "text": "通货膨胀",
+      "baseline": 88.54114786783849,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 1412,
+      "versionNonce": 1412936620,
+      "isDeleted": false,
+      "id": "dPwOoSltSePQf2rFkMfQg",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1678.4020328820125,
+      "y": -462.6784008295849,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 166.57243882590245,
+      "height": 235.11989339192712,
+      "seed": 1582885999,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -166.57243882590245,
+          235.11989339192712
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 1517,
+      "versionNonce": 1930407188,
+      "isDeleted": false,
+      "id": "Uo3dad4Rx4tgg24IMN8RK",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1694.693939046465,
+      "y": -455.76398229117376,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 207.667689482291,
+      "height": 219.78801472981797,
+      "seed": 826634191,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          207.667689482291,
+          219.78801472981797
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1128,
+      "versionNonce": 1222401580,
+      "isDeleted": false,
+      "id": "rJHS4vBGCWT6SVwJHdOft",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1474.3794968730272,
+      "y": -1015.5680492670854,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 655,
+      "height": 85,
+      "seed": 1487229839,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 59.52442251758665,
+      "fontFamily": 1,
+      "text": "本次主题：我的亏钱经验",
+      "baseline": 63,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 754,
+      "versionNonce": 138472084,
+      "isDeleted": false,
+      "id": "qXfsZ1WmVQKIjj9Ja7hig",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2577.190877895163,
+      "y": -1040.2370200109003,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 580,
+      "height": 92,
+      "seed": 353981665,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 64.44674537295388,
+      "fontFamily": 1,
+      "text": "学习 / 技术 / 投资",
+      "baseline": 68,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 581,
+      "versionNonce": 1216854188,
+      "isDeleted": false,
+      "id": "WmQROqocS9cTP_vCs38XN",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1524.1191107239392,
+      "y": -939.0291495275014,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 554,
+      "height": 80,
+      "seed": 1394272065,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 55.4236668178013,
+      "fontFamily": 1,
+      "text": "实业、房地产、加密币",
+      "baseline": 59,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 793,
+      "versionNonce": 795768852,
+      "isDeleted": false,
+      "id": "Ha6E_pXFjyBWXfBINnVVb",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2482.2639776672986,
+      "y": -861.8191275548452,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 795,
+      "height": 163,
+      "seed": 343111759,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 113.55423700241805,
+      "fontFamily": 1,
+      "text": "如何体面养老？",
+      "baseline": 120,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 544,
+      "versionNonce": 518243116,
+      "isDeleted": false,
+      "id": "srM3O2E_EpOXTIIamZgya",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1442.689636846986,
+      "y": -215.86352045849117,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 112,
+      "height": 81,
+      "seed": 2097286159,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 56.206345331101254,
+      "fontFamily": 1,
+      "text": "负债",
+      "baseline": 60,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 635,
+      "versionNonce": 76436884,
+      "isDeleted": false,
+      "id": "P0NIIBbyALwxn1iizwbWa",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1864.5347441526028,
+      "y": -218.35304275666795,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 112,
+      "height": 81,
+      "seed": 914947169,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 56.206345331101254,
+      "fontFamily": 1,
+      "text": "储蓄",
+      "baseline": 60,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 878,
+      "versionNonce": 307920300,
+      "isDeleted": false,
+      "id": "MuMPoAZCY6nYd8e7PQfIB",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1505.406123675235,
+      "y": -122.35259516552242,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 0.23924233841751175,
+      "height": 114.43347167968727,
+      "seed": 1238725441,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.23924233841751175,
+          114.43347167968727
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 535,
+      "versionNonce": 886473492,
+      "isDeleted": false,
+      "id": "eEhzbyjkYf0vEZjzIn__t",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1460.0195522115691,
+      "y": 22.15517664437357,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 93.6808558872765,
+      "height": 65.57659912109351,
+      "seed": 1321561313,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 46.84042794363825,
+      "fontFamily": 1,
+      "text": "投资",
+      "baseline": 47.57659912109351,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 680,
+      "versionNonce": 202762284,
+      "isDeleted": false,
+      "id": "DNQ65gWpPsyioep5QB4bn",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1855.2248192549105,
+      "y": 11.103083138514194,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 187,
+      "height": 68,
+      "seed": 1330499329,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 46.84042794363825,
+      "fontFamily": 1,
+      "text": "生活开支",
+      "baseline": 50,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 954,
+      "versionNonce": 1455227028,
+      "isDeleted": false,
+      "id": "ChV3jt2dxNmBf45YKd-m3",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1931.8433844055799,
+      "y": -138.34392817333492,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 5.2455647786457575,
+      "height": 142.6507568359375,
+      "seed": 1587512641,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          5.2455647786457575,
+          142.6507568359375
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 538,
+      "versionNonce": 1073742508,
+      "isDeleted": false,
+      "id": "BND4F0NpEJMAre0uCDzRL",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2508.5672206686004,
+      "y": -665.7206473302363,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 686,
+      "height": 255,
+      "seed": 793894593,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 59.513796851748474,
+      "fontFamily": 1,
+      "text": "1. 确定退休时间、地点\n2. 如何赚到退休需要的钱\n3. 养老模式",
+      "baseline": 233,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 591,
+      "versionNonce": 1106759188,
+      "isDeleted": false,
+      "id": "ENAf7_mp0jJPa8Lf3g3Ih",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2269.750285447246,
+      "y": -236.7654166173461,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 626,
+      "height": 224,
+      "seed": 562706639,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 78.31989106677838,
+      "fontFamily": 1,
+      "text": "团体固定目标\n共同解决认同问题",
+      "baseline": 195,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 719,
+      "versionNonce": 1422052652,
+      "isDeleted": false,
+      "id": "XctdEfxz49txsU2oblUsJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2914.086997522395,
+      "y": -199.83370516596688,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 209.2141098649554,
+      "height": 92.48584963497296,
+      "seed": 1311594273,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          209.2141098649554,
+          -92.48584963497296
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 509,
+      "versionNonce": 1736240020,
+      "isDeleted": false,
+      "id": "MVRsm_XA9C6JxQj6ddqxU",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3152.9646002258924,
+      "y": -336.8039704910443,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 430,
+      "height": 62,
+      "seed": 662452399,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 42.954886300223194,
+      "fontFamily": 1,
+      "text": "找到问题（群体焦虑）",
+      "baseline": 46,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 410,
+      "versionNonce": 197674924,
+      "isDeleted": false,
+      "id": "SelutUDIqUUJwLlEtd8yJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2932.9686692363084,
+      "y": -99.52760330354431,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 238.56709798177098,
+      "height": 28.221028645833258,
+      "seed": 1473578593,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          238.56709798177098,
+          -28.221028645833258
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 481,
+      "versionNonce": 696408340,
+      "isDeleted": false,
+      "id": "foGMJFsWm8GtRCIal2gvK",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3207.3432623352674,
+      "y": -159.02219151968984,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 135.72814941406259,
+      "height": 47.5048522949219,
+      "seed": 1546774543,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 33.932037353515646,
+      "fontFamily": 1,
+      "text": "定期组织",
+      "baseline": 34.5048522949219,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 402,
+      "versionNonce": 1765437996,
+      "isDeleted": false,
+      "id": "KLQpaCchTl0CDijMvv_tU",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3360.108358363913,
+      "y": -137.30734776968984,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 114.73531087239576,
+      "height": 7.7250162760417425,
+      "seed": 1180138721,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          114.73531087239576,
+          -7.7250162760417425
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 493,
+      "versionNonce": 863901332,
+      "isDeleted": false,
+      "id": "Ed-hJjGDOvYUYRwuqLGnC",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3504.0184739238084,
+      "y": -169.99895747021083,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 645,
+      "height": 46,
+      "seed": 1949681935,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 32.321472167968764,
+      "fontFamily": 1,
+      "text": "每个月最后一周周六早上10点半（一个小时）",
+      "baseline": 34,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 418,
+      "versionNonce": 1543720108,
+      "isDeleted": false,
+      "id": "H-CUTCDiuTrivPmttUShJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3376.197632452455,
+      "y": -107.42382319286662,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 101.15641276041652,
+      "height": 27.520039876302008,
+      "seed": 817679201,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          101.15641276041652,
+          27.520039876302008
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 480,
+      "versionNonce": 1378231316,
+      "isDeleted": false,
+      "id": "HFZJtLVRtwtEer53IyEvD",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3512.10315003058,
+      "y": -98.75475581005458,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 212,
+      "height": 50,
+      "seed": 963457249,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 35.35738990420393,
+      "fontFamily": 1,
+      "text": "提前一周宣传",
+      "baseline": 37,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 415,
+      "versionNonce": 1707923244,
+      "isDeleted": false,
+      "id": "JG5PlA0xt-5VqYJrv9feF",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3362.3062343404754,
+      "y": -87.82024653271037,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 135.73527018229174,
+      "height": 110.28544108072902,
+      "seed": 539927905,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          135.73527018229174,
+          110.28544108072902
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 501,
+      "versionNonce": 1265664404,
+      "isDeleted": false,
+      "id": "c8NEcmkXuNYkKMrsMPu28",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3526.812053025371,
+      "y": -4.743423616044311,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 454,
+      "height": 46,
+      "seed": 327553793,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 32.43344261532727,
+      "fontFamily": 1,
+      "text": "会后记录分享（确定下次议题）",
+      "baseline": 34,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 820,
+      "versionNonce": 1124143532,
+      "isDeleted": false,
+      "id": "BRgkFjw6Qt4zuEbIWkzX6",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3330.2644812073377,
+      "y": -104.95189936474208,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 169.37255859375,
+      "height": 210.77534993489576,
+      "seed": 2103403617,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          169.37255859375,
+          210.77534993489576
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 455,
+      "versionNonce": 915615508,
+      "isDeleted": false,
+      "id": "AiZ847T1UmERqCBl-Eylt",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3534.5843715475075,
+      "y": 111.38949060921641,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 191.40372140066992,
+      "height": 44.66086832682299,
+      "seed": 916613903,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 31.900620233445,
+      "fontFamily": 1,
+      "text": "会议形式确定",
+      "baseline": 32.66086832682299,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 427,
+      "versionNonce": 315227180,
+      "isDeleted": false,
+      "id": "9nDWwYgOfkvtLLnaguiPS",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3313.6733201152147,
+      "y": -83.35099807893494,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 23.87451171875,
+      "height": 277.19268798828125,
+      "seed": 1282717775,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          23.87451171875,
+          277.19268798828125
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 450,
+      "versionNonce": 1409559700,
+      "isDeleted": false,
+      "id": "h6Qzr2I5DvsGdS2GphmOm",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3293.5048630839647,
+      "y": 213.4542590825231,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 91.90678187779021,
+      "height": 42.88983154296876,
+      "seed": 409074031,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 30.6355939592634,
+      "fontFamily": 1,
+      "text": "子目标",
+      "baseline": 31.889831542968757,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 680,
+      "versionNonce": 2131859116,
+      "isDeleted": false,
+      "id": "L3zzViO2Ol2iQ7fp9nAW_",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3324.065776169902,
+      "y": 259.15981022998403,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 100.15523274739576,
+      "height": 122.247314453125,
+      "seed": 1264062273,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -100.15523274739576,
+          122.247314453125
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 431,
+      "versionNonce": 1702459924,
+      "isDeleted": false,
+      "id": "EWv0j1-RtzN4P2abtUpa0",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3155.045593878236,
+      "y": 405.24953190967153,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 99.29263160342285,
+      "height": 34.75242106119799,
+      "seed": 66351343,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 24.823157900855712,
+      "fontFamily": 1,
+      "text": "流量变现",
+      "baseline": 25.752421061197992,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 710,
+      "versionNonce": 1686233388,
+      "isDeleted": false,
+      "id": "PvKkzlEOLG7vPrAXckyDg",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3337.255473435527,
+      "y": 263.460754240401,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 36.834309895833485,
+      "height": 111.75994873046875,
+      "seed": 1401103471,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          36.834309895833485,
+          111.75994873046875
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 439,
+      "versionNonce": 99162004,
+      "isDeleted": false,
+      "id": "2jKRggqLcajXKAEtmqAdJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3333.614116013652,
+      "y": 400.370178068526,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 105.65220424107112,
+      "height": 36.978271484374886,
+      "seed": 394224257,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 26.41305106026778,
+      "fontFamily": 1,
+      "text": "产品工具",
+      "baseline": 26.978271484374886,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 459,
+      "versionNonce": 2055527340,
+      "isDeleted": false,
+      "id": "J98LLh1i3UFSINg5BBpDm",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3506.1452439433397,
+      "y": 336.841125334151,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 159.98456682477672,
+      "height": 37.32973225911458,
+      "seed": 1648079873,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 26.66409447079613,
+      "fontFamily": 1,
+      "text": "应对通货膨胀",
+      "baseline": 27.32973225911458,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 702,
+      "versionNonce": 25756948,
+      "isDeleted": false,
+      "id": "TRRSxMQa_hahWaCrgypgc",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2279.0800075338348,
+      "y": -1611.6705883295867,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 893,
+      "height": 125,
+      "seed": 585294415,
+      "groupIds": [
+        "CoOCAWwwN_Y2QuqJg1L2P"
+      ],
+      "fontSize": 86.93752122961956,
+      "fontFamily": 1,
+      "text": "BMPI 第 1 次会议纪要",
+      "baseline": 92,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 536,
+      "versionNonce": 304981219,
+      "isDeleted": false,
+      "id": "TLkr6kjUpRE5oWAyv5eAS",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10724.317525227863,
+      "y": 2832.9524129231804,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 123,
+      "height": 435,
+      "seed": 897862194,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 114.383056640625,
+      "fontFamily": 1,
+      "text": "¥1\n/\n$1",
+      "baseline": 391,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 601,
+      "versionNonce": 748015309,
+      "isDeleted": false,
+      "id": "IN7A-XcYViX9LX2vYDSYQ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12362.663940429691,
+      "y": -1665.6092987060533,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 949,
+      "height": 125,
+      "seed": 178474478,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 86.93752122961956,
+      "fontFamily": 1,
+      "text": "BMPI 第 2 次会议纪要",
+      "baseline": 92,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 781,
+      "versionNonce": 1804406915,
+      "isDeleted": false,
+      "id": "WNDCsOxYS4Uhj2L84ErWw",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12268.631022135418,
+      "y": -1493.642084757485,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1118,
+      "height": 125,
+      "seed": 1657912238,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 86.93752122961956,
+      "fontFamily": 1,
+      "text": "主题：如何通过技术赚 ¥1/$1",
+      "baseline": 92,
+      "textAlign": "left"
+    },
+    {
+      "type": "ellipse",
+      "version": 329,
+      "versionNonce": 736914733,
+      "isDeleted": false,
+      "id": "djiZ20NYrwN7YKalYE4V6",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9989.422424316417,
+      "y": 2601.065186273493,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 933.6572265625,
+      "height": 933.6572265625,
+      "seed": 884514546,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "ellipse",
+      "version": 360,
+      "versionNonce": 691931171,
+      "isDeleted": false,
+      "id": "s0trFm0X3SJJKm7U3PgOD",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10627.22353786894,
+      "y": 2584.888852316245,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 933.6572265625,
+      "height": 933.6572265625,
+      "seed": 606786542,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 376,
+      "versionNonce": 396377997,
+      "isDeleted": false,
+      "id": "VHgXiMje6IvGawmiukj4s",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10078.562445746542,
+      "y": 2946.765266297365,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 507,
+      "height": 182,
+      "seed": 295603822,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 126.76124209449398,
+      "fontFamily": 1,
+      "text": "国内渠道",
+      "baseline": 134,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 504,
+      "versionNonce": 1630473155,
+      "isDeleted": false,
+      "id": "eeAQxlvdDNyH2NMGDwJK7",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10988.650670611689,
+      "y": 2929.3831658741883,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 507,
+      "height": 182,
+      "seed": 1652295986,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 126.76124209449398,
+      "fontFamily": 1,
+      "text": "国外渠道",
+      "baseline": 134,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 1014,
+      "versionNonce": 1441449453,
+      "isDeleted": false,
+      "id": "sJJlUDmWbabOl8hteKfxb",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10061.456057882122,
+      "y": 2785.8101792387897,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 842.0966593773483,
+      "height": 693.2238990820637,
+      "seed": 1763045998,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -842.0966593773483,
+          -693.2238990820637
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 753,
+      "versionNonce": 1736350563,
+      "isDeleted": false,
+      "id": "qRG3E-GrwxQknnNe5j6Lb",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8695.497695075159,
+      "y": 1913.736111837734,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 282,
+      "height": 273,
+      "seed": 1228862446,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.94610843342253,
+      "fontFamily": 1,
+      "text": "做项目\n1. 做外包\n2. 做咨询",
+      "baseline": 249,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 376,
+      "versionNonce": 1238728781,
+      "isDeleted": false,
+      "id": "a_D0w14OYjdK7zR8tA0BR",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8640.851203070762,
+      "y": 1879.14588026018,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 566.186828613281,
+      "height": 359.46340560913086,
+      "seed": 972687534,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 982,
+      "versionNonce": 142292739,
+      "isDeleted": false,
+      "id": "Qrnz3DfjYNnUic-ukf4I3",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8693.406020270473,
+      "y": 2393.543078619352,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 469,
+      "height": 364,
+      "seed": 985236270,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.94610843342253,
+      "fontFamily": 1,
+      "text": "做工具（流量）\n1. 做一个小程序\n2. 做一个小App\n3. 做一个小网站",
+      "baseline": 340,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 506,
+      "versionNonce": 960097965,
+      "isDeleted": false,
+      "id": "f3HcrxJi74r5tWKKhKoUc",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8637.205776638468,
+      "y": 2357.916470088673,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 566.186828613281,
+      "height": 440.80048243204783,
+      "seed": 167120562,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 1153,
+      "versionNonce": 44261027,
+      "isDeleted": false,
+      "id": "tVqKaqCzk2pLu2byREyfJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9971.17533098114,
+      "y": 2951.3904489835063,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 736.9908882324216,
+      "height": 387.71237730720213,
+      "seed": 1699923506,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -736.9908882324216,
+          -387.71237730720213
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1103,
+      "versionNonce": 1925288205,
+      "isDeleted": false,
+      "id": "vdTgZvzehfH_5XCXGD_a2",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8689.14210425485,
+      "y": 2930.4945760151813,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 567,
+      "height": 364,
+      "seed": 1415087666,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.94610843342253,
+      "fontFamily": 1,
+      "text": "做产品（用户付费）\n1. 做一个小App\n2. 做一个小网站\n3. 做一个SaaS服务",
+      "baseline": 340,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 612,
+      "versionNonce": 1084592707,
+      "isDeleted": false,
+      "id": "1OOBwI9nLe12Tax8QT00q",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8632.941657172323,
+      "y": 2894.3503893595034,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 681.3310750325526,
+      "height": 440.80048243204783,
+      "seed": 536849902,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 1483,
+      "versionNonce": 870705005,
+      "isDeleted": false,
+      "id": "Qb6ZpCpaS-dWw3dGjpOmS",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9962.55771050655,
+      "y": 3040.903648398039,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 635.215633599526,
+      "height": 45.59328821455301,
+      "seed": 26281266,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -635.215633599526,
+          45.59328821455301
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1285,
+      "versionNonce": 1398821347,
+      "isDeleted": false,
+      "id": "B5WSuFs_3hbCiX__kOmWc",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8681.049337175175,
+      "y": 3472.0434448302867,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 718,
+      "height": 455,
+      "seed": 1615107374,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.94610843342253,
+      "fontFamily": 1,
+      "text": "做自媒体（Affiliate）\n1. 做一个公众号\n2. 做一个社交号\n3. 写文章（打赏）\n4. 邮件列表（转化率高）",
+      "baseline": 431,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 800,
+      "versionNonce": 1324380621,
+      "isDeleted": false,
+      "id": "zUJq3kLdE1xRG6I3B67xJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8625.367078569208,
+      "y": 3436.416836299608,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 767.4954223632851,
+      "height": 530.0666364034022,
+      "seed": 601693362,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 1865,
+      "versionNonce": 736238979,
+      "isDeleted": false,
+      "id": "4_hiO0qAHP74LR5_IT0it",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9967.733014651843,
+      "y": 3168.5747274682944,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 551.7367453517018,
+      "height": 480.988618562566,
+      "seed": 1937738862,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -551.7367453517018,
+          480.988618562566
+        ]
+      ]
+    },
+    {
+      "type": "ellipse",
+      "version": 504,
+      "versionNonce": 284864557,
+      "isDeleted": false,
+      "id": "HBleUzxdX--hoiG_u5W2a",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10296.64013332794,
+      "y": 2032.5501097421993,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 933.6572265625,
+      "height": 933.6572265625,
+      "seed": 2078627442,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 487,
+      "versionNonce": 359232803,
+      "isDeleted": false,
+      "id": "5x_FzBxlBVSY5mz3RgiAs",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10589.101290808812,
+      "y": 2342.694000123058,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 417,
+      "height": 150,
+      "seed": 904350638,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 104.21485537574421,
+      "fontFamily": 1,
+      "text": "如何推广",
+      "baseline": 110,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 476,
+      "versionNonce": 1743659661,
+      "isDeleted": false,
+      "id": "yVhyeRf009hlb1lEwo72P",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9844.912126329244,
+      "y": 1106.185912964856,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 524,
+      "height": 300,
+      "seed": 650651502,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 52.20331101190467,
+      "fontFamily": 1,
+      "text": "1. 写文章获取种子用户\n2. 发布到社交媒体\n3. 找相关领域大V互动\n4. 做SEO流量",
+      "baseline": 280,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 426,
+      "versionNonce": 1868880067,
+      "isDeleted": false,
+      "id": "slmR-zoprzrSn_XOjlkwb",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9747.146725124814,
+      "y": 960.9659422617297,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 738.4928385416661,
+      "height": 519.5585123697915,
+      "seed": 650301042,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 298,
+      "versionNonce": 1216628973,
+      "isDeleted": false,
+      "id": "nCsrBBKcWiQhwEq_t2y5d",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10000.676896837049,
+      "y": 985.4454547942814,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 238.53591192336208,
+      "height": 83.48756917317677,
+      "seed": 913115566,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 59.63397798084052,
+      "fontFamily": 1,
+      "text": "免费流量",
+      "baseline": 61.487569173176766,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 437,
+      "versionNonce": 661833827,
+      "isDeleted": false,
+      "id": "FuQMyFqMKfEUD0-22b9wy",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11008.060217963353,
+      "y": 971.5106810312607,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 738.4928385416661,
+      "height": 436.007486979167,
+      "seed": 1583286962,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 335,
+      "versionNonce": 1413915469,
+      "isDeleted": false,
+      "id": "47BOkMbUNQier9Mfx6DQs",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11261.07230292429,
+      "y": 997.2845457773544,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 239,
+      "height": 85,
+      "seed": 49394030,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 59.63397798084052,
+      "fontFamily": 1,
+      "text": "付费流量",
+      "baseline": 63,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 603,
+      "versionNonce": 1935787011,
+      "isDeleted": false,
+      "id": "xl-cOVi1l4b9jLzoT3mYy",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11064.952429877416,
+      "y": 1106.6171873789187,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 629,
+      "height": 225,
+      "seed": 592372850,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 52.20331101190467,
+      "fontFamily": 1,
+      "text": "1. 找到合适的付费推广平台\n2. 测试买量\n3. 扩大规模",
+      "baseline": 205,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 376,
+      "versionNonce": 1066316205,
+      "isDeleted": false,
+      "id": "7vgttT8nAVSJ4Y44xS9Js",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10567.131528976934,
+      "y": 2067.8019890481246,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 458.31750420588287,
+      "height": 580.2310256275414,
+      "seed": 1235169134,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -458.31750420588287,
+          -580.2310256275414
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 379,
+      "versionNonce": 1261456291,
+      "isDeleted": false,
+      "id": "f84DDzafCR26lL15ia0SA",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10924.215959038065,
+      "y": 2046.5412069583663,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 395.3119278637678,
+      "height": 627.5243206862202,
+      "seed": 163045934,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          395.3119278637678,
+          -627.5243206862202
+        ]
+      ]
+    },
+    {
+      "type": "ellipse",
+      "version": 630,
+      "versionNonce": 2005267469,
+      "isDeleted": false,
+      "id": "knXeys0Jzwvt_F1-itdQD",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10369.307776557118,
+      "y": 3113.314981975266,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 933.6572265625,
+      "height": 933.6572265625,
+      "seed": 251265010,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 417,
+      "versionNonce": 588046147,
+      "isDeleted": false,
+      "id": "iRSat71Kv7J9mkOiDtY5Z",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10629.490169949047,
+      "y": 3610.3536986093814,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 485.58381791548294,
+      "height": 174.5562744140625,
+      "seed": 845314290,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 121.39126853315794,
+      "fontFamily": 1,
+      "text": "安全问题",
+      "baseline": 128.5562744140625,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 328,
+      "versionNonce": 136702573,
+      "isDeleted": false,
+      "id": "EEk8LWZFM5Q6DVO1JEaof",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9617.245296902172,
+      "y": 4373.338989136724,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1018.07607014974,
+      "height": 874.2510986328105,
+      "seed": 1619052210,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 236,
+      "versionNonce": 1700134627,
+      "isDeleted": false,
+      "id": "8X1WIQnkJiOsjEaSvXbP6",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9943.185340033684,
+      "y": 4420.038655477871,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 251.32954915364732,
+      "height": 87.96534220377654,
+      "seed": 1281837934,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.83238728841183,
+      "fontFamily": 1,
+      "text": "法律法规",
+      "baseline": 64.96534220377654,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 409,
+      "versionNonce": 1110971597,
+      "isDeleted": false,
+      "id": "EFtrpT-c-ZtyTexm4g9Gm",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11156.673753526524,
+      "y": 4374.000915406256,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1553.8093058268234,
+      "height": 665.8133951822921,
+      "seed": 29625710,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 347,
+      "versionNonce": 748300931,
+      "isDeleted": false,
+      "id": "6pjPxAXpr9KMtZQRsxG2U",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11809.885525173657,
+      "y": 4407.819925822922,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 251,
+      "height": 90,
+      "seed": 1986021490,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.83238728841183,
+      "fontFamily": 1,
+      "text": "公司规定",
+      "baseline": 67,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 638,
+      "versionNonce": 559280941,
+      "isDeleted": false,
+      "id": "ZWWXPRKJv-PhPK57j468D",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10551.303802367114,
+      "y": 3978.643978138147,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 433.42187627973726,
+      "height": 391.5802661675243,
+      "seed": 1991074926,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -433.42187627973726,
+          391.5802661675243
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 683,
+      "versionNonce": 1033364003,
+      "isDeleted": false,
+      "id": "VM6RZ3nP47y_uKdPdMUG5",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11207.98440770397,
+      "y": 3878.2414765139506,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 708.2351377119612,
+      "height": 479.5217082396978,
+      "seed": 740797298,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          708.2351377119612,
+          479.5217082396978
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 504,
+      "versionNonce": 1911096717,
+      "isDeleted": false,
+      "id": "avdR60E1-3TSZ8ry0oHOD",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 9694.843258327954,
+      "y": 4526.421712118494,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 861,
+      "height": 648,
+      "seed": 1088015598,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 56.20026995486384,
+      "fontFamily": 1,
+      "text": "1. 知识产权\n1.1 资源分享（网盘、下载站分享）\n1.2 窃取资源（爬虫）\n1.3 破解\n1.4 版权\n2. 商标\n3. 用户隐私（大数据分析）\n3. 法律特殊规定",
+      "baseline": 627,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 526,
+      "versionNonce": 1094559171,
+      "isDeleted": false,
+      "id": "n3ZP3vlQ7709OS9xH9-Rz",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10861.442496966807,
+      "y": 4056.4205094499957,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 14.351033057268069,
+      "height": 1357.9746940147284,
+      "seed": 82727986,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          14.351033057268069,
+          1357.9746940147284
+        ]
+      ]
+    },
+    {
+      "type": "rectangle",
+      "version": 436,
+      "versionNonce": 925551597,
+      "isDeleted": false,
+      "id": "trwYjHUf5uYh5mldFjd8T",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10397.908291286938,
+      "y": 5425.491190471361,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1018.07607014974,
+      "height": 644.0954589843735,
+      "seed": 936068014,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 342,
+      "versionNonce": 1051325795,
+      "isDeleted": false,
+      "id": "PuCoxXJSZEFyXA0r4pzuv",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10748.83388943147,
+      "y": 5466.457621135424,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 251,
+      "height": 90,
+      "seed": 1883149874,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 62.83238728841183,
+      "fontFamily": 1,
+      "text": "如何规避",
+      "baseline": 67,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 812,
+      "versionNonce": 1361364557,
+      "isDeleted": false,
+      "id": "k0u1prNmnGTmYUtXUGLky",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10475.50625271272,
+      "y": 5578.83270251563,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 809,
+      "height": 405,
+      "seed": 692231662,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 56.20026995486384,
+      "fontFamily": 1,
+      "text": "1. 做之前先了解该领域法律法规\n2. 规模小的时候问题不大\n3. 尽可能做国外的业务\n4. 做好版权声明\n5. 留联系方式（注意信息泄露）",
+      "baseline": 384,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 484,
+      "versionNonce": 1428902147,
+      "isDeleted": false,
+      "id": "Nu2YDRL77O10fgTr9KYHa",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11252.374386257652,
+      "y": 4521.887613811205,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1323,
+      "height": 420,
+      "seed": 662967154,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 58.85977608816963,
+      "fontFamily": 1,
+      "text": "1. 了解公司规定（是否允许个人开展自己的业务）\n2. 不要使用公司资源（网络、计算机、信息）牟利\n3. 不要做和公司同质的业务（避免与公司竞争）\n4. 在下班后做\n5. 最后能与公司内部专业人士沟通了解下",
+      "baseline": 398,
+      "textAlign": "left"
+    },
+    {
+      "type": "rectangle",
+      "version": 686,
+      "versionNonce": 1655731373,
+      "isDeleted": false,
+      "id": "jgT1Kj41uTIrjX1h2fXgq",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11600.60589260532,
+      "y": -1040.740931314121,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 2419.6777343750027,
+      "height": 1363.7431335449198,
+      "seed": 2111825454,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    },
+    {
+      "type": "text",
+      "version": 564,
+      "versionNonce": 910178467,
+      "isDeleted": false,
+      "id": "efGQYEStI9jlUqQd7A_X7",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11873.122982449062,
+      "y": -909.2891948639258,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 501.61117553710915,
+      "height": 100.32223510742186,
+      "seed": 1640126642,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 71.65873936244415,
+      "fontFamily": 1,
+      "text": "国内渠道的特点",
+      "baseline": 73.32223510742186,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 663,
+      "versionNonce": 2004309773,
+      "isDeleted": false,
+      "id": "tWJu76YKJw_7knXA3M2HE",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 13256.911205715667,
+      "y": -911.6992443024023,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 502,
+      "height": 103,
+      "seed": 1766875054,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 71.65873936244415,
+      "fontFamily": 1,
+      "text": "国外渠道的特点",
+      "baseline": 76,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 1040,
+      "versionNonce": 1603742787,
+      "isDeleted": false,
+      "id": "n_YfirfBDKPDlk_d1mL4c",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11731.736492580905,
+      "y": -708.767573159826,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1293,
+      "height": 914,
+      "seed": 2053968942,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 71.65873936244415,
+      "fontFamily": 1,
+      "text": "1. 流量容易获取（存在流量孤岛的问题）\n2. 语言文化优势\n3. 支付渠道便捷\n4. 客单价便宜\n5. 太卷了（没有护城河）\n6. 安全问题（比如内容审查）\n7. 社会主义特色（监管/备案）\n8. 垄断问题（行业资质/利基市场小）\n",
+      "baseline": 887,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 972,
+      "versionNonce": 1777528173,
+      "isDeleted": false,
+      "id": "NbgEvxsQsnM0K4JtheeLl",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 13149.882198757663,
+      "y": -709.3677471100214,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 818,
+      "height": 927,
+      "seed": 515839534,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 71.65873936244415,
+      "fontFamily": 1,
+      "text": "1. 流量获取难\n2. 语言文化劣势\n3. 支付渠道很麻烦\n4. 客单价高（汇率优势）\n5. 蓝海多\n6. 比较安全\n7. 比较自由\n9. 利基市场多\n10. 用户付费意愿强",
+      "baseline": 900,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 194,
+      "versionNonce": 353283043,
+      "isDeleted": false,
+      "id": "LKOTGJhvreVIEM8SQi1Hq",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11520.09808010532,
+      "y": 2836.9562885345113,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 987.6788330078125,
+      "height": 881.1114501953125,
+      "seed": 1608309486,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          987.6788330078125,
+          -881.1114501953125
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 977,
+      "versionNonce": 158119885,
+      "isDeleted": false,
+      "id": "aMRt6JfYKj-kjg3KsuHAT",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12585.144833035007,
+      "y": 1844.102223593105,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 294,
+      "height": 141,
+      "seed": 956341426,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "做网站",
+      "baseline": 104,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 477,
+      "versionNonce": 448083843,
+      "isDeleted": false,
+      "id": "QuNyKuiELUhfKjvIssuPv",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 14119.209091230467,
+      "y": 1450.875831181217,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1228.6413197731963,
+      "height": 896.3898104953769,
+      "seed": 2091147506,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1228.6413197731963,
+          -896.3898104953769
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1617,
+      "versionNonce": 2147366445,
+      "isDeleted": false,
+      "id": "kgF4wzzGipxXceREWZi2N",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 15416.456112331882,
+      "y": -78.27572882559548,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 2219,
+      "height": 1410,
+      "seed": 1569597934,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "1. 利基市场研究\n2. 关键词研究\n3. 网站搭建\n4. 品牌化设计\n5. 内容初始创作\n6. 外链建设\n7. 内容外包（招聘写手）\n8. 货币化（流量广告变现、Affiliate、用户付费）\n9. 网站监控（流量分析）\n10. 卖掉网站（如果没有兴趣做的话）",
+      "baseline": 1373,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 1135,
+      "versionNonce": 784944931,
+      "isDeleted": false,
+      "id": "63UkRIxPBvqSPmNBmKwyx",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12659.1560024686,
+      "y": 2305.221127863858,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 882,
+      "height": 423,
+      "seed": 1603466674,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "卖设计（主题皮肤）\n卖工具\n卖插件",
+      "baseline": 386,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 441,
+      "versionNonce": 2022762637,
+      "isDeleted": false,
+      "id": "ksgYkfD9fckqch9Ea7WYL",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11570.362591346122,
+      "y": 2956.6903808727993,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1083.4840753296721,
+      "height": 449.28631052097717,
+      "seed": 1143574766,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1083.4840753296721,
+          -449.28631052097717
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 661,
+      "versionNonce": 1136227011,
+      "isDeleted": false,
+      "id": "dKn8v4HgSnl36WxDRzr2Z",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11612.928957013293,
+      "y": 3095.831643014591,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1012.1965403790018,
+      "height": 107.1657191412437,
+      "seed": 854352686,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1012.1965403790018,
+          -107.1657191412437
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1271,
+      "versionNonce": 81678061,
+      "isDeleted": false,
+      "id": "o-W5itHdgkglxNU2t_5Qx",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12655.471371120944,
+      "y": 2902.5854999602925,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1225,
+      "height": 141,
+      "seed": 1163262062,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "跨境电商（亚马逊/独立站）",
+      "baseline": 104,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 629,
+      "versionNonce": 2049188451,
+      "isDeleted": false,
+      "id": "HnVw4JLHK8ihn4rPIo-7S",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11610.556074000026,
+      "y": 3161.1558869652763,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 975.0015638733639,
+      "height": 257.95511523604955,
+      "seed": 1977064626,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          975.0015638733639,
+          257.95511523604955
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1406,
+      "versionNonce": 1131407693,
+      "isDeleted": false,
+      "id": "BpIuFRqJRgpzuzI0joJ40",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12634.787411160007,
+      "y": 3353.7902729095113,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1081,
+      "height": 141,
+      "seed": 1557229682,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "Media Buy（难度最高）",
+      "baseline": 104,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 224,
+      "versionNonce": 1524096515,
+      "isDeleted": false,
+      "id": "ZQVt9821pTqdBV82ov1iM",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 13723.675350613132,
+      "y": 3403.7159704619335,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 379.3615722656232,
+      "height": 32.53940604851596,
+      "seed": 1819605934,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          379.3615722656232,
+          -32.53940604851596
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1626,
+      "versionNonce": 1168062381,
+      "isDeleted": false,
+      "id": "v4eAhI2wUxumM7LSBoa0R",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 14168.752987331882,
+      "y": 3163.9020893157613,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 788,
+      "height": 423,
+      "seed": 1556579694,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "1. 接推广产品任务\n2. 买流量\n3. 套利",
+      "baseline": 386,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 764,
+      "versionNonce": 1356015011,
+      "isDeleted": false,
+      "id": "8RQ3xoK2QK2od0lRWjpol",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11593.160042309264,
+      "y": 3263.8039262289867,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1032.5614519248156,
+      "height": 609.9105021622831,
+      "seed": 1495972270,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1032.5614519248156,
+          609.9105021622831
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 1056,
+      "versionNonce": 899004941,
+      "isDeleted": false,
+      "id": "9JFmIItEiokTICPPCdRY1",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12671.825680202975,
+      "y": 3801.2083715162016,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1061,
+      "height": 141,
+      "seed": 753883054,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "做视频频道（Youtube）",
+      "baseline": 104,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 1752,
+      "versionNonce": 1665431875,
+      "isDeleted": false,
+      "id": "ZqAKl5Zt9wF5D1iSHCF_p",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 14162.580624050632,
+      "y": 3757.0740253509175,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 923,
+      "height": 564,
+      "seed": 1974502574,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "1. CPM高\n2. 汇率优势\n3. 内容自由\n4. 流量分发算法友好",
+      "baseline": 527,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 234,
+      "versionNonce": 1011675245,
+      "isDeleted": false,
+      "id": "rVskGxoR_w9VFt2hCCSGk",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 13728.858761257663,
+      "y": 3876.122659987348,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 393.24262815639304,
+      "height": 80.21767406532354,
+      "seed": 1326802542,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          393.24262815639304,
+          80.21767406532354
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 133,
+      "versionNonce": 797595875,
+      "isDeleted": false,
+      "id": "1qH8MVcXvGeBlol_7Gi3U",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 13313.233456081882,
+      "y": 1416.114918905605,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 778.2984270368296,
+      "height": 108.96177978515617,
+      "seed": 418366894,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 77.82984270368297,
+      "fontFamily": 1,
+      "text": "通过内容获取SEO流量",
+      "baseline": 79.96177978515617,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 236,
+      "versionNonce": 663640781,
+      "isDeleted": false,
+      "id": "Xy5NYQavS_8WRXlZpmE68",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12886.64349026157,
+      "y": 1878.2154438079492,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 745.5944824218732,
+      "height": 357.2909545898442,
+      "seed": 339320690,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          745.5944824218732,
+          -357.2909545898442
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 171,
+      "versionNonce": 590562435,
+      "isDeleted": false,
+      "id": "1WpkXIEVHhszLTJlYLr0N",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 12885.295528835788,
+      "y": 1935.4120990813863,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1044.5986938476562,
+      "height": 6.1163330078125,
+      "seed": 1526123570,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1044.5986938476562,
+          -6.1163330078125
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 206,
+      "versionNonce": 1341356333,
+      "isDeleted": false,
+      "id": "JzIExsxL3AaaWFJgdNXmt",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 13985.552138071278,
+      "y": 1889.492915731777,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 779,
+      "height": 111,
+      "seed": 75876594,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 77.82984270368297,
+      "fontFamily": 1,
+      "text": "通过爬虫获取SEO流量",
+      "baseline": 82,
+      "textAlign": "left"
+    },
+    {
+      "type": "text",
+      "version": 1865,
+      "versionNonce": 1979563043,
+      "isDeleted": false,
+      "id": "gcdQjk22u15iY0Azi8rNa",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 15416.96526760532,
+      "y": 1623.65520210873,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1319,
+      "height": 705,
+      "seed": 1287909614,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "fontSize": 98.00279650347488,
+      "fontFamily": 1,
+      "text": "1. 流量非常的大\n2. 开发成本低\n3. 国内人做国外流量相对安全\n4. 对技术要求高一些\n5. 规模化与自动化",
+      "baseline": 668,
+      "textAlign": "left"
+    },
+    {
+      "type": "arrow",
+      "version": 843,
+      "versionNonce": 1055247245,
+      "isDeleted": false,
+      "id": "a9sRnYPn8la1Vh-qBEmrU",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 14793.83896157263,
+      "y": 1935.9827459346843,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 579.3167092999793,
+      "height": 8.087135524373934,
+      "seed": 774503918,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          579.3167092999793,
+          -8.087135524373934
+        ]
+      ]
+    },
+    {
+      "type": "rectangle",
+      "version": 145,
+      "versionNonce": 1675116483,
+      "isDeleted": false,
+      "id": "_L7eXrr6ac3FzROmFkXuL",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "angle": 0,
+      "x": 7332.6801723904755,
+      "y": -1817.2002056061133,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 10835.263366699219,
+      "height": 8138.546752929687,
+      "seed": 1979326510,
+      "groupIds": [
+        "bA1W_YQXI9KVxKUOmeNQg"
+      ]
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff",
+    "gridSize": null
+  }
+}
