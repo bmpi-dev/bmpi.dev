@@ -19,6 +19,7 @@ og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
   - [语言与国家代码](#语言与国家代码)
   - [gettext](#gettext)
   - [国际化流程](#国际化流程)
+  - [国际化标准在Java JDK的实现](#国际化标准在java-jdk的实现)
 - [本地化（L10N）](#本地化l10n)
   - [本地化流程](#本地化流程)
   - [制定本地化策略](#制定本地化策略)
@@ -133,6 +134,10 @@ gettext 的使用流程就是一个典型的使应用支持 i18n 国际化的过
 1. 配置 i18n 框架。i18n 框架通过系统或者浏览器（如果是 Web 应用）的语言标识自动获取相关的语言文件。如 gettext 使用的是 .mo 后缀的文件，而 Javascript 一般是 .json 文件，Java 是 .properties 文件。
 2. 抽取硬编码的源语言文本。在硬编码的地方调用 i18n 函数。对于这部分可以人工抽取，也可以通过程序或者插件（如 Javascript 的 i18next 国际化框架有 i18next-scanner）自动抽取。
 3. 最后实施**本地化**。翻译（可通过人工或机器翻译，也有相关的翻译平台可以集成）这些抽取出来的要支持的国家语言文件。
+
+### 国际化标准在Java JDK的实现
+
+IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，此实践里有 RFC 4647 与 RFC 5646 共同规定了国际化中语言标签（Language Tag）的定义及匹配标准。具体见我这个 [i18N in Java](https://talk.bmpi.dev/i18n_java/#/i18n) 的 Session。
 
 ## 本地化（L10N）
 
