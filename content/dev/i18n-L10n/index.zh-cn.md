@@ -137,7 +137,7 @@ gettext 的使用流程就是一个典型的使应用支持 i18n 国际化的过
 
 ### 国际化标准在Java JDK的实现
 
-IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，此实践里有 RFC 4647 与 RFC 5646 共同规定了国际化中语言标签（Language Tag）的定义及匹配标准。具体见我这个 [i18N in Java](https://talk.bmpi.dev/i18n_java/#/i18n) 的 Session。
+IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，此实践里有 RFC 4647 与 RFC 5646 共同规定了国际化中语言标签（Language Tag）的定义及匹配标准。具体见我这个 [i18N in Java](https://talk.bmpi.dev/2021/i18n-java) 的 Session。
 
 ## 本地化（L10N）
 
