@@ -14,12 +14,12 @@ og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
 
 - [国际化（i18N）](#国际化i18n)
   - [国际化需解决的问题](#国际化需解决的问题)
+  - [国际化相关标准](#国际化相关标准)
   - [文本编码](#文本编码)
-  - [locale](#locale)
+  - [locale 与 language tag](#locale-与-language-tag)
   - [语言与国家代码](#语言与国家代码)
   - [gettext](#gettext)
   - [国际化流程](#国际化流程)
-  - [国际化标准在Java JDK的实现](#国际化标准在java-jdk的实现)
 - [本地化（L10N）](#本地化l10n)
   - [本地化流程](#本地化流程)
   - [制定本地化策略](#制定本地化策略)
@@ -60,6 +60,29 @@ og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
 - 能够以用户本地的语言输入文本；
 - 能够处理以特定编码的用户本地语言的文本。
 
+### 国际化相关标准
+
+我们知道国际化是为了解决与用户本地语言相关的文本显示与输入的问题，这个问题又与用户国家和语言相关，比如同样的英语在美国和英国就不同。在国际化标准还未出现之前，曾经有多种表示国家与语言的方法，这个 [Making Sense of Language Tags](https://www.slideserve.com/shantell/making-sense-of-language-tags) 的 Slide 就分享了这段有趣的国际化标准问世的历史。直到 IETF BCP(Best Current Practice) 47 的出现，才统一规定了国际化中语言标识（Language Tag）的定义及匹配标准。
+
+而由于很多软件与系统早于此标准出现，就会出现一些与此标准不统一的问题。一个突出的问题就是语言标识定义中的连接线的选择，在 Linux 系列的操作系统中用 locale 来定义语言环境，如`en_US`表示美国英语，而在 BCP 47 中用`en-US`表示美国英语。前者选择了用`_`而后者采用了`-`来连接语言和国家。这种混乱有时候会带来很多意想不到的困惑，有时候你使用的某个库支持`en_US`，有的库却支持`en-US`，这不得不让国际化实现的过程中多了一些兼容性处理的工作，甚至因为语言不统一，出现很多沟通上的问题。
+
+国际化相关的标准如下：
+
+- IETF [RFC 6365](https://datatracker.ietf.org/doc/html/rfc6365)：统一定义了和国际化相关的术语。
+- IETF [BCP47](https://www.rfc-editor.org/info/bcp47)
+  - [RFC 4647](https://www.rfc-editor.org/rfc/rfc4647.txt)：制定了如何通过过滤（Filtering）和查找（Lookup）的方式匹配语言标识（Language Tag）。
+  - [RFC 5646](https://www.rfc-editor.org/rfc/rfc5646.txt)：定义了语言标识（Language Tag）的组成，如使用`en-US`标识美国英语。
+- ISO
+  - [ISO 639](https://www.iso.org/iso-639-language-codes.html)：语言编码（Language codes）标准。
+  - [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)：国家编码（Country codes）标准。
+  - [ISO 15924](https://unicode.org/iso15924/iso15924-codes.html)：脚本（Script codes）标准。
+
+一个完整的语言标识（Language Tag）组成如下：
+
+![](https://img.bmpi.dev/2d607dbd-e778-1434-1461-e03a347d06c8.png)
+
+更详细的介绍见我这个 [i18N in Java](https://talk.bmpi.dev/2021/i18n-java) 的 Slide。
+
 ### 文本编码
 
 不同编码有着可以表示不同字符集合的区别，比如我们无法用  ASCII 编码来表示汉字。Unicode 字符集可以用从 0 到 10FFFF （十六进制）范围的码点来显示几乎所有人类已知的字符。它的存储至少需要 21 位。文本编码系统 UTF-8 将 Unicode 码点适配到一个合理的 8 位数据流，并兼容 ASCII 数据处理系统。UTF 表示 Unicode 转换格式（Unicode Transformation Format）。
@@ -74,9 +97,9 @@ og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
 
 > 计算汉字数量时，通常是按照字形来计算的，即将一个代表相同语音语义的字的简化，繁体，异体，新字形，旧字形等等分别进行计算。这种计算方式实为是在计算变体。所以，长期以来错误地把大型字典里收入的字形数看作是汉字系统的规模。([Wikipedia](https://zh.wikipedia.org/wiki/字位))
 
-### locale
+### locale 与 language tag
 
-locale 是软件在运行时的语言环境, 它包括语言（Language）, 地域（Territory）和字符集（Codeset）。一个 locale 的书写格式为: 语言[_地域[.字符集]]，如美国英文是 en_US.UTF8。在 Linux 中 locale 包括以下几个部分：
+locale 是软件在运行时的语言环境, 它包括语言（Language）, 地域（Territory）和字符集（Codeset）。locale 使用 language tag 标识语言国家，比如在 GNU Linux 中的定义格式为: 语言[_地域[.字符集]]，如美国英文是`en_US.UTF8`。在 Linux 中 locale 包括以下几个部分：
 
 - LC_COLLATE：控制字符排序。
 - LC_CTYPE：控制字符处理函数在处理大、小写或判断是否是字符。
@@ -89,9 +112,11 @@ locale 是软件在运行时的语言环境, 它包括语言（Language）, 地�
 
 ![](https://img.bmpi.dev/b40d3f61-046a-df48-735f-b27ec188a3e8.png)
 
+而在 BCP 47 中，language tag 的定义为`langtag = language["-" script]["-" region]*("-" variant)*("-" extension)["-" privateuse]`。
+
 ### 语言与国家代码
 
-同一种语言在不同国家地区可能有一些细微的差异，比如美国英语和英国英语就有一些差异。同一个国家可能也有多种语言，比如中国有简体与繁体语言。在上述 locale 的介绍我们看到了使用`语言_地域`的方式来确切的表达一个国家的语言。
+同一种语言在不同国家地区可能有一些细微的差异，比如美国英语和英国英语就有一些差异。同一个国家可能也有多种语言，比如中国有简体与繁体语言。在上述 locale 的介绍我们看到了使用`语言_地域`或`语言-地域`的方式来确切的表达一个国家的语言。
 
 对于国家和语言 ISO 制定了相应的标准代码：[ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) 与 [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)。
 
@@ -134,10 +159,6 @@ gettext 的使用流程就是一个典型的使应用支持 i18n 国际化的过
 1. 配置 i18n 框架。i18n 框架通过系统或者浏览器（如果是 Web 应用）的语言标识自动获取相关的语言文件。如 gettext 使用的是 .mo 后缀的文件，而 Javascript 一般是 .json 文件，Java 是 .properties 文件。
 2. 抽取硬编码的源语言文本。在硬编码的地方调用 i18n 函数。对于这部分可以人工抽取，也可以通过程序或者插件（如 Javascript 的 i18next 国际化框架有 i18next-scanner）自动抽取。
 3. 最后实施**本地化**。翻译（可通过人工或机器翻译，也有相关的翻译平台可以集成）这些抽取出来的要支持的国家语言文件。
-
-### 国际化标准在Java JDK的实现
-
-IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，此实践里有 RFC 4647 与 RFC 5646 共同规定了国际化中语言标签（Language Tag）的定义及匹配标准。具体见我这个 [i18N in Java](https://talk.bmpi.dev/2021/i18n-java) 的 Session。
 
 ## 本地化（L10N）
 
@@ -198,7 +219,7 @@ IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，�
   - 各团队关于本地化的知识同步
 - 本地化技术标准的制定与组织内部推广
   - 针对日期、时间、时区、数字和货币的特定语言格式使用行业标准库（例如 Unicode Common Locale Data Repository [CLDR](http://cldr.unicode.org/)）
-  - locale 标识采用`语言_地域`格式，如 en_US 代表美国英语语言。
+  - locale 标识采用`语言_地域`或``语言-地域``格式，如`en-US`代表美国英语语言。
 
 #### 本地化多语言的实现方式
 
@@ -245,7 +266,7 @@ IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，�
 
 - 如果您以多种语言提供您的网站，请在每个页面上使用单一语言进行内容和导航，并避免并排翻译；
 - 将每种语言的内容保留在单独的 URL 上，并在 URL 中标记语言。例如，URL `www.mysite.com/de/` 会告诉用户页面是德语的；
-- 通过 hreflang 元标记向 Google 显示您要定位的语言。如`<link rel="alternate" href="http://example.com" hreflang="en-us" />`；
+- 通过`hreflang`元标记向 Google 显示您要定位的语言。如`<link rel="alternate" href="http://example.com" hreflang="en-us" />`；
 - 不要只翻译模版文本，还需要翻译模版内的内容；
 - 不要完全使用自动翻译，这会影响用户体验；
 - 不要使用 cookies 或脚本技术来切换语言，Google 爬虫无法正常索引这些内容。
@@ -272,8 +293,8 @@ IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，�
 
 - 前后端不同技术栈的国际化实现标准。由于微服务中技术栈可能有多种，每种技术栈都有其各自的国际化实现方式，制定不同技术栈的实现标准有助于在不同服务间使用同样的实现方式；
 - locale 标识的确定。
-  - 前端或后端静态文本抽取中，可以将和语言相关的文本存放至语言标识命名的文件中，如 en.json 存放英语的静态文本，而 en_US.json 存放和美国英语相关的文本（如计量单位、日期、数字和货币等）；
-  - 在远程服务调用（前端调用后端或后端调用其他内部或外部服务）中统一采用`语言_地域`格式，如 en_US 代表获取美国地区英语语言的本地化版本。
+  - 前端或后端静态文本抽取中，可以将和语言相关的文本存放至语言标识命名的文件中，如`en.json`存放英语的静态文本，而`en_US.json`存放和美国英语相关的文本（如计量单位、日期、数字和货币等）；
+  - 在远程服务调用（前端调用后端或后端调用其他内部或外部服务）中统一采用`语言-地域`格式，如`en-US`代表获取美国地区英语语言的本地化版本。
 - 日期、时间、时区、数字和货币的特定语言格式使用行业标准库。比如使用实现 [CLDR](https://en.wikipedia.org/wiki/Common_Locale_Data_Repository) 标准的库；
 - 动态数据类型的识别。比如识别出哪些数据是来自内部系统（数据库或文件）；哪些来自外部系统；这些动态数据是否具备国际化能力；如何分阶段本地化这些数据；
 - 文档的本地化。后台系统生成的电子文档（PDF）或电子邮件的本地化。如果这些文档是发给客户的，还需要考虑是否生成客户语言偏好的文档；
@@ -309,7 +330,7 @@ IETF 在软件国际化上有一个 BCP(Best Current Practice) 47 的实践，�
 
 - 静态文本。这类可以通过走读代码的方式去查找相关字符串；
 - 数据库、缓存或文件。通过走读数据库初始化脚本可以查找到不满足本地化需求的初始数据，但对于动态存储的数据，还需要设计满足多语言存储的表。对于一些资源文件有必要翻译的也需要提供多语言版本并改造使用文件的代码；
-- 远程调用其他内部服务（RPC）。内部服务调用的 locale 标识属于本地化技术标准制定的。比如可使用 `locale = en_US` HTTP 头代表请求美国地区英语语言的页面。
+- 远程调用其他内部服务（RPC）。内部服务调用的`locale`标识属于本地化技术标准制定的。比如可使用`locale = en-US`HTTP 头代表请求美国地区英语语言的页面。
 - 生成文档（PDF 或 Email）。生成的文档包括模版静态文本与动态数据渲染的最终语言版本。尤其是这些文档和电子邮件需要发送给用户的时候，需要生成和用户语言相符的语言版本。
 
 如果后端服务的技术栈不同，还需要本地化团队总结后端服务不同技术栈的国际化流程，并在组织内部同步给其他开发团队。
