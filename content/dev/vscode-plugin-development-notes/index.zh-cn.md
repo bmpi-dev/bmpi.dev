@@ -2,7 +2,7 @@
 title: "VSCode插件开发小记"
 date: 2019-12-22
 draft: false
-tags: ["Get Things Done", "时间管理", "工具", "VSCode Extension", "VSCode插件开发"]
+tags: ["Get Things Done", "时间管理", "工具", "VSCode Extension", "VSCode插件开发", "VSCode"]
 aliases: [
     "/zh-cn/dev/vscode-plugin-development-notes/"
 ]
@@ -40,6 +40,8 @@ VSCode是微软开源的一款基于Electron开发的代码编辑器。Electron 
 {{< figure src="https://img.bmpi.dev/2019-12-22-11-46-56.png" caption="Process structure of VSCode" link="https://programmer.help/blogs/disclosure-of-vscode-technology.html">}}
 
 从上图可以看出来渲染进程与调试/插件进程都是隔离的，通过RPC去调用，这保证了VSCode在安装很多插件时都能以极快的速度启动，这点对于用户体验很重要，因为启动太慢会让人焦虑（想想IDEA和Emacs在插件多的时候的感人启动速度）。
+
+更多关于 VSCode 架构设计见 VSCode 团队负责人 Erich Gamma 的这个分享：[Building an App Using JS/TypeScript, Node, Electron & 100 OSS Components • Erich Gamma • GOTO 2016](https://youtu.be/uLrnQtAq5Ec)
 
 ### Emacs Architecture
 
