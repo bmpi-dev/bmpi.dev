@@ -22,12 +22,6 @@ body {
   }
 }
 
-html, body{
-  @media only screen and (max-width : 768px) {
-    overflow-x:hidden;
-  }
-}
-
 a {
   font-weight: 300;
   color: $link-color;

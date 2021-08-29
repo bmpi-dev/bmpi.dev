@@ -175,7 +175,7 @@
   {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
   <script>
     AOS.init({
-      once: true
+      disable: 'mobile'
     });
   </script>
   {{ end }}
