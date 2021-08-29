@@ -291,8 +291,7 @@ a[href^="#fn:"]:after {
   height: auto;
   border-radius: 50%;
   opacity: 1;
-  animation: fadeIn 5s ease;
-  filter: blur(0.5px); }
+  animation: fadeIn 5s ease; }
   @media only screen and (max-width: 768px) {
     .avatar img {
       width: 10rem; } }
