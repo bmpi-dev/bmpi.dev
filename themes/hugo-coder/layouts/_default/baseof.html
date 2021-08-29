@@ -127,6 +127,8 @@
   {{ if eq .RelPermalink "/" }}
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   {{ end }}
 
   <!-- Clarity tracking code for https://www.bmpi.dev/ -->
@@ -172,7 +174,7 @@
   <script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BHuwaXciWicBjh6HQS2tfudv6IYQD11K9u1NUj7nuaEV9NoDT7ns9JjgqyYTflUv-m3TlD7ELY84AHMfgmPXNgU');</script>
   <!-- end webpushr code -->
 
-  {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
+  {{ if or (eq .RelPermalink "/") (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
   <script>
     AOS.init({
       disable: 'mobile'
