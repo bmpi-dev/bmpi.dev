@@ -72,5 +72,8 @@ if (window.mobileCheck()) {
         wrapper.setAttribute('data-aos', "zoom-in");
         wrapper.appendChild(img);
         parent.replaceWith(wrapper);
+        img.addEventListener('load', () =>
+            AOS.refresh()
+        );
     }
 })();
