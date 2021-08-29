@@ -63,3 +63,14 @@ if (window.mobileCheck()) {
     dashboard.remove();
     document.getElementById("dashboard").remove();
 }
+
+(function() {
+	var lazyImages = document.querySelectorAll('.article img');
+    for (var img of lazyImages) {
+        var parent = img.parentNode;
+        var wrapper = document.createElement('div');
+        wrapper.setAttribute('data-aos', "zoom-in");
+        wrapper.appendChild(img);
+        parent.replaceWith(wrapper);
+    }
+})();

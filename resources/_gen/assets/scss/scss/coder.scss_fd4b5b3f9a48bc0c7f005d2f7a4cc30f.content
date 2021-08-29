@@ -289,10 +289,19 @@ a[href^="#fn:"]:after {
 .avatar img {
   width: 20rem;
   height: auto;
-  border-radius: 50%; }
+  border-radius: 50%;
+  opacity: 1;
+  animation: fadeIn 5s ease;
+  filter: blur(0.5px); }
   @media only screen and (max-width: 768px) {
     .avatar img {
       width: 10rem; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .list ul {
   margin: 3.2rem 0 3.2rem 0;
   list-style: none;

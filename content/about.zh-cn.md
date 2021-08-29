@@ -98,6 +98,7 @@ outputs = "html"
 ### 本站变更日志
 
 ```
+✔ 网站图片加载动画优化 @done(21-08-29 13:20)
 ✔ 集成Bing Webmaster和Microsoft Clarity @done(21-07-18 12:20)
 ✔ 添加自动提交新文章至百度收录 @done(21-07-16 12:20)
 ✔ 使用GitHub Actions构建页面（推送到gh-pages分支）和推送新文章通知，Vercel仅做静态页面CDN @done(21-05-30 07:48)
