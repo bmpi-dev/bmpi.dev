@@ -7,6 +7,11 @@ outputs = "html"
 
 ## 2021
 
+### My Blog Architecture
+
+- [Slide](https://talk.bmpi.dev/2021/blog-arch)
+- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2021/blog_arch/blog_arch.pdf)
+
 ### i18N in Java
 
 - [Slide](https://talk.bmpi.dev/2021/i18n-java)
