@@ -10,19 +10,19 @@ outputs = "html"
 ### My Blog Architecture
 
 - [Slide](https://talk.bmpi.dev/2021/blog-arch)
-- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2021/blog_arch/blog_arch.pdf)
+- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2021/blog-arch/blog-arch.pdf)
 
 ### i18N in Java
 
 - [Slide](https://talk.bmpi.dev/2021/i18n-java)
-- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2021/i18n_java/i18n_java.pdf)
+- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2021/i18n-java/i18n-java.pdf)
 
 ## 2020
 
 ### Web Traffic Research
 
 - [Slide](https://talk.bmpi.dev/2020/web-traffic-research)
-- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2020/web_traffic_research/web_traffic_research.pdf)
+- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/master/slides/2020/web-traffic-research/web-traffic-research.pdf)
 
 ## 2019
 
