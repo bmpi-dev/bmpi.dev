@@ -37,6 +37,12 @@ Excalidraw 的优点有以下：
 
 除了 Excalidraw 外，其创始人早期用了另一个白板工具近 10 年，这个工具是 [zwibbler](https://zwibbler.com/)，我看了下感觉用 Excalidraw 完全可以替代它。
 
+### [Miro](https://miro.com/) && [Mural](https://www.mural.co/) && [Figma](https://www.figma.com/)
+
+这几个在线白板很适合团队协作（比如敏捷工作流如 Retro、站会、头脑风暴、工作坊等），和 Excalidraw 不同之处在于，它们支持的模版更为丰富，还能集成不同的 App，比如在白板里插入表格和图片之类。其中 Figma 虽然是个类似 Sketch 的设计工具，但是也支持白板的用法。
+
+不好的地方在于它们都不是开源的，但是也提供了免费版。
+
 ### Perfect FreeHand
 
 [带有压感的在线手写板工具](https://hw.bmpi.dev)，以下是用手写板手写的效果：
