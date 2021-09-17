@@ -5,6 +5,10 @@ keywords = "工具"
 outputs = "html"
 +++
 
+## 开发工具
+
+[VSCode Server](https://code.bmpi.dev)
+
 ## Inbox
 
 [Notion](https://www.notion.so/mdw/Inbox-1fb2a7e9d72747a4ba7aea5cb4541f3f)
