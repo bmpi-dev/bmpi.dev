@@ -9,10 +9,6 @@ outputs = "html"
 
 [VSCode Server](https://code.bmpi.dev)
 
-## Inbox
-
-[Notion](https://www.notion.so/mdw/Inbox-1fb2a7e9d72747a4ba7aea5cb4541f3f)
-
 ## 微信Markdown排版工具
 
 | | |
@@ -29,6 +25,8 @@ outputs = "html"
 | VSCode插件 | [Todo++](https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus) |
 
 ## 笔记工具
+
+[Notion - 书单](https://www.notion.so/mdw/Inbox-1fb2a7e9d72747a4ba7aea5cb4541f3f)
 
 [TiddlyWiki - 公开笔记](https://wiki.bmpi.dev)
 
