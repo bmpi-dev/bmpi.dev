@@ -115,6 +115,20 @@ H6 {
     text-align: left;
 }
 
+.about-social i {
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 60px #0072ff, 0 0 120px #0072ff, 0 0 170px #0072ff;
+}
+
+@keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+}  
+
 .about-social li {
     padding-bottom: 10px;
 }
@@ -184,30 +198,39 @@ fontawesome minify
     line-height: 1
 }
 .fa-twitter:before {
+    animation: animate 3s linear 0.5s infinite;
     content: '\e9b2';
 }
 .fa-youtube:before {
+    animation: animate 3s linear 0.3s infinite;
     content: "\e601"; 
 }
 .fa-envelope:before {
+    animation: animate 3s linear 1.3s infinite;
     content: "\e6eb";
 }
 .fa-github:before {
+    animation: animate 3s linear infinite;
     content: "\e600";
 }
 .fa-rss:before {
+    animation: animate 3s linear 1.5s infinite;
     content: "\e602";
 }
 .fa-telegram:before {
+    animation: animate 3s linear 0.7s infinite;
     content: "\eaf9";
 }
 .fa-weixin:before {
+    animation: animate 3s linear 0.9s infinite;
     content: "\e68b";
 }
 .fa-zhihu:before {
+    animation: animate 3s linear 1.1s infinite;
     content: "\f276";
 }
 .fa-dev-to:before {
+    animation: animate 3s linear infinite;
     content: "\e632";
 }
 .fa-calendar:before {
