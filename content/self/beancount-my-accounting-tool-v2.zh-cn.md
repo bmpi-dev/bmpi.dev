@@ -7,6 +7,7 @@ keywords: "挖财App、记账工具、Beancount"
 description: "本文介绍了我用 Beancount 替换近 9 年多的挖财记账 App。"
 series: ["自我提升"]
 isCJKLanguage: true
+og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 ---
 
 - [使用 Beancount 的心理建设](#使用-beancount-的心理建设)
