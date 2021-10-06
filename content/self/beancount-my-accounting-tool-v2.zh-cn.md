@@ -1,5 +1,5 @@
 ---
-title: "使用 Beancoun 管理家庭财务"
+title: "使用 Beancount 管理家庭财务"
 date: 2021-10-04
 draft: false
 tags: ["挖财App", "记账工具", "Beancount", "复式记账", "家庭财务"]

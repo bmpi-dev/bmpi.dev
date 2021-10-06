@@ -17,7 +17,7 @@ isCJKLanguage: true
 
 <strong><span style="color:red">更新自2021年10月05日</span></strong>
 
-目前我已经用 Beancount 替换了使用近 9 年的挖财记账 App，详见这篇 [使用 Beancoun 管理家庭财务](/self/beancount-my-accounting-tool-v2/) 。
+目前我已经用 Beancount 替换了使用近 9 年的挖财记账 App，详见这篇 [使用 Beancount 管理家庭财务](/self/beancount-my-accounting-tool-v2/) 。
 
 ---
 
