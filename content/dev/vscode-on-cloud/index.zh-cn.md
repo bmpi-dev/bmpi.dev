@@ -15,9 +15,21 @@ og_image: "https://img.bmpi.dev/dafdc38a-8e97-7daa-d860-4ad78c4d182b.png"
   - [跨平台](#跨平台)
   - [开源](#开源)
 - [基于 AWS 与 Pulumi 搭建个人云 IDE](#基于-aws-与-pulumi-搭建个人云-ide)
+- [远程访问](#远程访问)
 - [关于费用](#关于费用)
 - [云 IDE 研发模式](#云-ide-研发模式)
 - [参考文章](#参考文章)
+
+---
+<strong><span style="color:red">更新时间：2021/10/11</span></strong>
+
+最近我将 VSCode Server 从 AWS 迁移到了 Azure 云平台，并且集成了 OAuth2 。具体的实现见 [Out-of-the-Box-CodeServer](https://github.com/bmpi-dev/Out-of-the-Box-CodeServer)。新的实现方案可以做到：
+
+1. 关闭浏览器一定时间后自动关闭服务器以停止计费；
+2. 使用 GitHub OAuth2 登录；
+3. 使用自定义域名访问。
+
+---
 
 前不久 GitHub 官方 Twitter 发了一个如下的 Tweet：
 
@@ -136,6 +148,14 @@ pulumi up # 使用 Pulumi 设置 AWS EC2
 如果暂时不需要这个环境了记得通过`./run rest`休眠这台云服务器，服务器在关闭后 AWS 就不对该 EC2 实例计费了，只对存储卷收取很便宜的费用。
 
 如果你彻底不需要这个环境，想销毁所有资源免得 AWS 继续收费，只需要执行`pulumi destroy`即可删除所有 AWS 资源。
+
+## 远程访问
+
+服务器因安全原因一般只会开启特定端口供客户端远程访问。Code Server 只开放了 `8888` 端口，但这对开发来说很不方便。我们在开发过程中，经常需要不同的端口来测试，比如通过多个端口连接多个 Web Server 或中间件服务等。
+
+一种解决方案是通过临时端口转发来允许远端客户端访问，但这种方法需要不停的修改服务器防火墙配置，不是很方便。
+
+另外一种方案可以通过建立客户端和服务器的 VPN 网络，以使客户端和服务器在同一个虚拟网络之中。我用 [tailscale](https://github.com/tailscale/tailscale) 来实现搭建一个本地电脑和远端服务器间的 VPN 网络。一旦配置好 tailscale 后，Code Server 就变成本地电脑可以直接访问的服务器了。同时安全性也有保障。
 
 ## 关于费用
 
