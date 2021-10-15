@@ -80,7 +80,7 @@ og_image: "https://img.bmpi.dev/cf3a1023-57ae-b3ce-4110-9624c26f860b.png"
 
 在把玩了几天 Logseq 后我发现最强的就是它底层的 DataScript 内存图数据库，可以通过高级查询做很多自定义界面。这样就可以满足我们的很多需求了，比如生成每日待办任务，根据 OKR 生成的 Tag 来过滤和 OKR 相关的任务，统计相关任务的花费时间等。
 
-目前 Logseq 还在开发插件系统，等插件系统上线后，很多难以实现的功能都可以通过插件来完成。当然我的需求还不需要插件系统的支持，光高级查询就可以满足。
+~~目前 Logseq 还在开发插件系统，等插件系统上线后，很多难以实现的功能都可以通过插件来完成~~目前 Logseq 已经实现了 [插件系统](https://logseq.github.io/plugins/)，可以有更高级的玩法。当然我的需求还不需要插件系统的支持，光高级查询就可以满足。
 
 ### 我的方案
 
@@ -117,6 +117,6 @@ og_image: "https://img.bmpi.dev/cf3a1023-57ae-b3ce-4110-9624c26f860b.png"
 
 底部的区块是和 `OKR` 相关的信息，让我可以快速了解到目前最重要的 Objective 有哪些。
 
-当然这个系统远不止如此，更多的信息我会新开一篇文章来介绍 [如何用 Logseq 实现 OKR + GTD + Note](/self/okr-gtd-note-logseq/)。也会写一篇文章介绍如何基于文本使用 Beancount 做复式记账。
+具体的实现见 [如何用 Logseq 实现 OKR + GTD + Note](/self/okr-gtd-note-logseq/) 与 [使用 Beancount 管理家庭财务](/self/beancount-my-accounting-tool-v2/)。
 
 > 本文配图皆用 Excalidraw 绘制，更多我常用的绘图工具见 [我的绘图工具箱](/self/my-drawing-toolbox/) 这篇文章介绍。

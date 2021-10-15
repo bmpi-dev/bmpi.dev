@@ -2,7 +2,7 @@
 title: "使用 Beancount 管理家庭财务"
 date: 2021-10-04
 draft: false
-tags: ["挖财App", "记账工具", "Beancount", "复式记账", "家庭财务"]
+tags: ["挖财App", "记账工具", "Beancount", "复式记账", "家庭财务", "财务管理"]
 keywords: "挖财App、记账工具、Beancount"
 description: "本文介绍了我用 Beancount 替换近 9 年多的挖财记账 App。"
 series: ["自我提升"]
