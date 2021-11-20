@@ -22,6 +22,7 @@ outputs = "html"
 ![Python](https://img.shields.io/badge/-Python-%233776AB?style=flat-square&logo=python&logoColor=ffffff)
 ![Clojure](https://img.shields.io/badge/-Clojure-%235881D8?style=flat-square&logo=clojure&logoColor=ffffff)
 ![Swift](https://img.shields.io/badge/-Swift-%23FA7343?style=flat-square&logo=swift&logoColor=ffffff)
+![Golang](https://img.shields.io/badge/-Golang-%2329BEB0?style=flat-square&logo=go&logoColor=ffffff)
 
 ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
 ![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
