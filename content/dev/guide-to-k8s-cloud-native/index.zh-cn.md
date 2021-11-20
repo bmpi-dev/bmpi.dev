@@ -90,7 +90,7 @@ K8S 创造了一种 DSL 的语言，用户通过这种语言**声明式**的定�
 
 最终效果见：[线上版本](https://www.free4.chat/)。
 
-源码见：[代码仓库](https://github.com/madawei2699/free4chat)。
+源码见：[代码仓库](https://github.com/madawei2699/free4chat/tree/k8s)。
 
 ### 前置条件
 
@@ -137,7 +137,7 @@ K8S 创造了一种 DSL 的语言，用户通过这种语言**声明式**的定�
 
 ### Dockerfile
 
-后端服务是个 Golang 应用，打包的 [Dockerfile](https://github.com/madawei2699/free4chat/blob/main/infra/Dockerfile.backend) 在此。我还做了一个 [Makefile](https://github.com/madawei2699/free4chat/blob/main/backend/Makefile) 的简单配置，用于编译后端服务。本地使用 Docker 部署后端服务可以使用这个 [Makefile](https://github.com/madawei2699/free4chat/blob/main/Makefile)。
+后端服务是个 Golang 应用，打包的 [Dockerfile](https://github.com/madawei2699/free4chat/blob/k8s/infra/Dockerfile.backend) 在此。我还做了一个 [Makefile](https://github.com/madawei2699/free4chat/blob/k8s/backend/Makefile) 的简单配置，用于编译后端服务。本地使用 Docker 部署后端服务可以使用这个 [Makefile](https://github.com/madawei2699/free4chat/blob/k8s/Makefile)。
 
 ### 配置 K8S
 
@@ -167,7 +167,7 @@ K8S 默认有个 kube-system 的 Namespace，这个 Namespace 下存放着和 K8
 kubectl create namespace free4chat
 ```
 
-再创建一个后端 Service 模版 [free4chat-svc.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/free4chat-svc.yaml)：
+再创建一个后端 Service 模版 [free4chat-svc.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/free4chat-svc.yaml)：
 
 ```yaml
 apiVersion: v1
@@ -221,7 +221,7 @@ spec:
 
 这样会自动创建一个 ingress-nginx 的 Namespace，并且会创建一个 DigitalOcean Load Balance 的服务，这个服务费用是 $10/月，有独立的 IP 地址（可在 DigitalOcean 管理界面查看）。之后我们在 DNS 配置的时候会用到这个 IP。
 
-现在我们需要在 default Namespace 下创建一个 ingress 规则，将 LoadBalance 的流量转发至后端服务，这个配置文件是 [ingress-free4-chat.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/ingress-free4-chat.yaml)：
+现在我们需要在 default Namespace 下创建一个 ingress 规则，将 LoadBalance 的流量转发至后端服务，这个配置文件是 [ingress-free4-chat.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/ingress-free4-chat.yaml)：
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -272,7 +272,7 @@ helm repo update
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.2.0 --set installCRDs=true
 ```
 
-执行完这些命令后需要创建一个为生产环境颁发 SSL 证书的 ClusterIssuer 资源，配置文件是 [production_issuer.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/production_issuer.yaml)：
+执行完这些命令后需要创建一个为生产环境颁发 SSL 证书的 ClusterIssuer 资源，配置文件是 [production_issuer.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/production_issuer.yaml)：
 
 ```yaml
 apiVersion: cert-manager.io/v1
@@ -294,7 +294,7 @@ spec:
           class: nginx
 ```
 
-在 DigitalOcean 中，为了让 Cert Manager 能够自检，必须通过 Nginx Ingress Controller 启用 Pod-Pod 通信，这样 Cert Manager 才能正常工作为 K8S 办法证书，创建一个 Service 资源，配置文件是 [ingress_nginx_svc.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/ingress_nginx_svc.yaml)：
+在 DigitalOcean 中，为了让 Cert Manager 能够自检，必须通过 Nginx Ingress Controller 启用 Pod-Pod 通信，这样 Cert Manager 才能正常工作为 K8S 办法证书，创建一个 Service 资源，配置文件是 [ingress_nginx_svc.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/ingress_nginx_svc.yaml)：
 
 ```yaml
 apiVersion: v1
@@ -364,7 +364,7 @@ kubectl apply -f ingress-free4-chat.yaml # 创建 ingress 规则资源
 
 通过 GitHub Actions 来创建后端服务的好处是让开发部署自动化，当后端代码产生变化时，会自动触发 GitHub Actions 来构建新的镜像并创建新的后端服务。
 
-要创建一个 GitHub Workflow，只需要创建 [.github/workflows/workflow.yaml](https://github.com/madawei2699/free4chat/blob/main/.github/workflows/workflow.yml)：
+要创建一个 GitHub Workflow，只需要创建 [.github/workflows/workflow.yaml](https://github.com/madawei2699/free4chat/blob/k8s/.github/workflows/workflow.yml)：
 
 ```yaml
 name: DO_K8S_Deploy

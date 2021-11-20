@@ -88,7 +88,7 @@ The above diagram shows the development and deployment process of this cloud-nat
 
 The final result is available at: [Online version](https://www.free4.chat/).
 
-The source code is available at: [code repository](https://github.com/madawei2699/free4chat).
+The source code is available at: [code repository](https://github.com/madawei2699/free4chat/tree/k8s).
 
 ### Pre-requisites
 
@@ -135,7 +135,7 @@ The overall project is divided into frontend, backend, and infra parts, and this
 
 ### Dockerfile
 
-The backend service is a Golang application, and the packaged [Dockerfile](https://github.com/madawei2699/free4chat/blob/main/infra/Dockerfile.backend) is here. I also made a simple configuration of [Makefile](https://github.com/madawei2699/free4chat/blob/main/backend/Makefile) for compiling the backend service. Local deployment of backend services using Docker can use this [Makefile](https://github.com/madawei2699/free4chat/blob/main/Makefile).
+The backend service is a Golang application, and the packaged [Dockerfile](https://github.com/madawei2699/free4chat/blob/k8s/infra/Dockerfile.backend) is here. I also made a simple configuration of [Makefile](https://github.com/madawei2699/free4chat/blob/k8s/backend/Makefile) for compiling the backend service. Local deployment of backend services using Docker can use this [Makefile](https://github.com/madawei2699/free4chat/blob/k8s/Makefile).
 
 ### Configuring K8S
 
@@ -165,7 +165,7 @@ First create a Namespace for the backend service.
 kubectl create namespace free4chat
 ```
 
-Then create a backend Service template [free4chat-svc.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/free4chat-svc.yaml).
+Then create a backend Service template [free4chat-svc.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/free4chat-svc.yaml).
 
 ```yaml
 apiVersion: v1
@@ -219,7 +219,7 @@ How do you get external traffic to the backend service when you have a Service f
 
 This will automatically create an ingress-nginx namespace and a DigitalOcean Load Balance service, which costs $10/month and has a separate IP address (available in the DigitalOcean administration interface). We will use this IP in our DNS configuration later.
 
-Now we need to create an ingress rule under default Namespace to forward the LoadBalance traffic to the backend service, the configuration file is [ingress-free-4-chat.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/ingress-free4-chat.yaml).
+Now we need to create an ingress rule under default Namespace to forward the LoadBalance traffic to the backend service, the configuration file is [ingress-free-4-chat.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/ingress-free4-chat.yaml).
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -270,7 +270,7 @@ helm repo update
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.2.0 --set installCRDs=true
 ```
 
-After executing these commands you need to create a ClusterIssuer resource that issues SSL certificates for the production environment, the configuration file is [production_issuer.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/production_issuer.yaml).
+After executing these commands you need to create a ClusterIssuer resource that issues SSL certificates for the production environment, the configuration file is [production_issuer.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/production_issuer.yaml).
 
 ```yaml
 apiVersion: cert-manager.io/v1
@@ -292,7 +292,7 @@ spec:
           class: nginx
 ```
 
-In DigitalOcean, in order for Cert Manager to be self-check, Pod-Pod communication must be enabled through the Nginx Ingress Controller for Cert Manager to work properly. To create a Service resource for the K8S approach certificate, the configuration file is [ingress_ nginx_svc.yaml](https://github.com/madawei2699/free4chat/blob/main/infra/k8s/ingress_nginx_svc.yaml).
+In DigitalOcean, in order for Cert Manager to be self-check, Pod-Pod communication must be enabled through the Nginx Ingress Controller for Cert Manager to work properly. To create a Service resource for the K8S approach certificate, the configuration file is [ingress_nginx_svc.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/ingress_nginx_svc.yaml).
 
 ```yaml
 apiVersion: v1
@@ -362,7 +362,7 @@ At this point we can access `https://www.free4.chat`. But `https://api.k.free4.c
 
 The benefit of creating backend services via GitHub Actions is that it automates deployments and automatically triggers GitHub Actions to build new images and create new backend services when changes are made to the backend code.
 
-To create a GitHub Workflow, just create [.github/workflows/workflow.yaml](https://github.com/madawei2699/free4chat/blob/main/.github/workflows/workflow.yml).
+To create a GitHub Workflow, just create [.github/workflows/workflow.yaml](https://github.com/madawei2699/free4chat/blob/k8s/.github/workflows/workflow.yml).
 
 ```yaml
 name: DO_K8S_Deploy
