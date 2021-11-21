@@ -153,6 +153,7 @@ table thead tr th {
 
 p {
     overflow-wrap: break-word;
+    letter-spacing: .5px;
 }
 
 /*
