@@ -71,7 +71,7 @@ if (window.mobileCheck()) {
         var wrapper = document.createElement('div');
         wrapper.setAttribute('data-aos', "zoom-in");
         wrapper.appendChild(img);
-        parent.replaceWith(wrapper);
+        parent.appendChild(wrapper);
         img.addEventListener('load', () =>
             AOS.refresh()
         );
