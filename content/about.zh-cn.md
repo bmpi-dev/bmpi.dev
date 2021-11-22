@@ -9,9 +9,7 @@ outputs = "html"
 终身学习（认知杠杆） -> 全栈技术（时间杠杆） -> 投资理财（财务杠杆） => 被动收入（人生杠杆）
 ```
 
-<!-- ## Dashboard
-
-{{< dashboard >}} -->
+[Dashboard](https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b)
 
 ## 关于我
 
@@ -92,13 +90,14 @@ outputs = "html"
 
 ---
 
-### 本站Logo
+<!-- ### 本站Logo
 
-![](https://img.bmpi.dev/81107268-954c-5a99-a4f6-1a58676ede69.png)
+![](https://img.bmpi.dev/81107268-954c-5a99-a4f6-1a58676ede69.png) -->
 
 ### 本站变更日志
 
 ```
+✔ 去除图片动画特效与Clarity @done(21-11-22 13:20)
 ✔ 网站图片加载动画优化 @done(21-08-29 13:20)
 ✔ 集成Bing Webmaster和Microsoft Clarity @done(21-07-18 12:20)
 ✔ 添加自动提交新文章至百度收录 @done(21-07-16 12:20)

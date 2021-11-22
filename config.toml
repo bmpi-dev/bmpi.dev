@@ -106,39 +106,34 @@ FootnoteReturnLinkContents = "↑"
     weight = 2
     url = "https://www.youtube.com/channel/UCbg-Y24Z1H0nONW-bxgzv6w"    
 [[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter"
-    weight = 3
-    url = "https://twitter.com/madawei2699"
-[[params.social]]
     name = "Telegram"
     icon = "fab fa-telegram"
-    weight = 4
+    weight = 3
     url = "https://t.me/s/bmpi365"
 [[params.social]]
     name = "WeChat"
     icon = "fab fa-weixin"
-    weight = 5
+    weight = 4
     url = "https://img.bmpi.dev/755b406f-43ae-e382-e13c-547116d3e7d5.png"
 [[params.social]]
     name = "ZhiHu"
     icon = "fab fa-zhihu"
-    weight = 6
+    weight = 5
     url = "https://zhuanlan.zhihu.com/improve365"
 [[params.social]]
     name = "Newsletter"
     icon = "fas fa-envelope"
-    weight = 7
+    weight = 6
     url = "https://tinyletter.com/i365"
 [[params.social]]
     name = "RSS"
     icon = "fas fa-rss"
-    weight = 8
+    weight = 7
     url = "index.xml"
 [[params.social]]
     name = "Dev.to"
     icon = "fas fa-dev-to"
-    weight = 9
+    weight = 8
     url = "https://dev.to/madawei2699"
 
 [languages]
@@ -191,9 +186,9 @@ FootnoteReturnLinkContents = "↑"
 
         [languages.zh-cn.menu]
             [[languages.zh-cn.menu.main]]
-                name = "Dashboard"
+                name = "Twitter"
                 weight = 1
-                url  = "https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b"
+                url  = "https://twitter.com/madawei2699"
             [[languages.zh-cn.menu.main]]
                 name = "关于"
                 weight = 2
@@ -218,7 +213,3 @@ FootnoteReturnLinkContents = "↑"
                 name = "长期目标"
                 weight = 7
                 url  = "/goal/"
-            [[languages.zh-cn.menu.main]]
-                name = "Twitter"
-                weight = 8
-                url  = "https://twitter.com/madawei2699"
