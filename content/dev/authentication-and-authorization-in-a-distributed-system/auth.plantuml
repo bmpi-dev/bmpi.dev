@@ -1,0 +1,62 @@
+@startmindmap
+skinparam monochrome true
+* 架构安全
+** 认证
+*** 方式
+**** 通信信道上的认证
+***** SSL/TLS
+****** 加密算法
+****** 生成密钥
+****** 公钥分发
+****** CA 认证
+****** 核验公钥
+****** 签名
+****** 验证
+**** 通信协议上的认证
+***** HTTP
+****** RFC 7235
+******* HTTP Basic
+****** RFC 7616
+******* Digest
+****** RFC 6750
+******* Bearer
+****** RFC 7486
+******* HOBA
+****** RFC 6287
+******* OCRA(质疑/应答算法)
+****** 扩展方案
+******* AWS4-HMAC-SHA256
+******* Windows Live ID
+******* Twitter Basic
+**** 通信内容上的认证
+***** Web认证
+****** 表单认证
+****** RFC 6238
+******* TOTP(基于时间的一次性密码算法)
+****** WebAuthn
+*** SSO
+**** Kerberos-based
+**** CAS
+**** SAML
+**** OIDC
+** 授权
+*** 访问控制
+**** ACL
+**** RBAC
+**** ABAC
+*** OAuth2
+**** 授权码模式
+**** 隐式授权模式
+**** 密码模式
+**** 客户端模式
+** 凭证
+*** 自包含令牌
+**** JWT
+*** 引用令牌
+**** Cookie-Session
+** 实现
+*** Java
+**** JAAS
+**** Shiro
+**** Spring Security
+@endmindmap
