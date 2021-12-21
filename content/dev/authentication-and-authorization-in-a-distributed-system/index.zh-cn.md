@@ -88,7 +88,7 @@ og_image: "https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png"
   - 中心化存储：转移到中间件如 Redis 中去。利用 Redis [极高的并发处理能力](https://redis.io/topics/benchmarks)，也可以做到弹性横行扩容。不过可能会带来中间件高可用性维护难的问题，通过租赁云服务商的托管中间件是降低中间件 [单点故障（SPOF）](https://en.wikipedia.org/wiki/Single_point_of_failure) 的一种方式；
   - 会话复制（Session replication）：让各个节点之间采用复制式的 Session，每一个节点中的 Session 变动都会发送到组播地址的其他服务器上，这样某个节点崩溃了，不会中断该节点用户的服务。但 Session 之间组播复制的同步代价高昂，节点越多时，同步成本越高。
   - 会话粘滞（Sticky session）：通过负载均衡算法如 Nginx 的 [IP Hash](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) 算法将来自同一 IP 的请求转发至同一服务。每个服务节点都不重复地保存着一部分用户的状态，如果这个服务崩溃了，里面的用户状态便完全丢失。
-  > 为什么在分布式系统中共享状态就这么困难？这是因为分布式系统中有一个不可能三角的理论：[CAP](https://en.wikipedia.org/wiki/CAP_theorem)。这个理论简单的理解就是因为在分布式系统中，因为网络无法做到绝对的可靠（分区容错性：**P**artition Tolerance），只能在一致性（**C**onsistency）和可靠性（**A**vailability）间选择一个。
+  > 为什么在分布式系统中共享状态就这么困难？这是因为分布式系统中有一个不可能三角的理论：[CAP](https://en.wikipedia.org/wiki/CAP_theorem)。这个理论简单的理解就是因为在分布式系统中，因为网络无法做到绝对的可靠（分区容错性：**P**artition Tolerance），只能在一致性（**C**onsistency）和可用性（**A**vailability）间选择一个。
   >
   > 比如上述的三种服务端方案其实都是牺牲了 CAP 的某个方面。比如第一种中心化存储方案我们放弃了中心化存储的分区容错性，一旦其网络分区，整个集群都会不可用。第二种会话复制方案我们牺牲了可用性，当节点在同步会话数据时，整个服务会短暂的不可用。第三种会话粘滞方案我们牺牲了一致性，一旦某个节点宕机，整个集群的数据会因该节点的数据丢失而达到不一致的状态。
 - 将状态从服务端转移到客户端。Cookie-Session 是一种引用令牌（Reference tokens），也就是客户端持有的是服务端存储的会话引用标识。还有一种自包含令牌（Self-contained tokens），如 [JWT](https://datatracker.ietf.org/doc/html/rfc7519.html) 就是这种客户端保存会话信息的技术，服务端只是去校验会话信息是否合法。
