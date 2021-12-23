@@ -127,6 +127,9 @@ JWT 解决了 Cookie-Session 方案在分布式系统中因 CAP 的限制而带�
 
 ![](https://img.bmpi.dev/9c440a22-887c-c05c-e381-fd84f6071858.png)
 
+> 1. 此处 Auth 服务承担的是授权（Authorization）的职责，而不是认证（Authentication）的职责；
+> 2. OAuth2 在协议中是做授权框架的，但是其一般需要登录授权，也能实现 SSO 的功能。
+
 1. 用户通过 HTTPS 访问我们的应用。当请求发送至微服务网关层（Gateway），网关检测 HTTP Header 中的 Cookie 发现没有 `SESSIONID` 这个键值对，重定向至 SSO 登录页面。
 2. 用户通过 SSO 登录我们的应用。
    1. 用户信息存放至 AD/LDAP 等系统中。管理员提前给用户配置好角色权限。
