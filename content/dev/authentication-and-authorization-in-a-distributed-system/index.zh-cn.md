@@ -158,7 +158,7 @@ JWT 解决了 Cookie-Session 方案在分布式系统中因 CAP 的限制而带�
 由于这篇文章并不主要讨论云原生，对这部分感兴趣的可以参考以下两篇文章做进一步了解：
 
 1. [Service Mesh架构下的认证与授权](https://insights.thoughtworks.cn/service-mesh-authentication-authorization/)
-2. [Authentication sidecar](https://www.thoughtworks.com/insights/blog/architecture/authentication-sidecar-a-new-experience-in-microservice-architecture-part-one)
+2. [微服务下的身份认证和令牌管理](https://insights.thoughtworks.cn/microservices-authentication-token-management/)
 
 ## 总结
 
