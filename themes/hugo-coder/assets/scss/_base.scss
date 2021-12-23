@@ -285,3 +285,17 @@ a[href^="#fn:"]:after{ content: ']' }
     font-size: 15px;
   }
 }
+
+.article-content {
+  border: 1px solid lightgrey;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  @media only screen and (max-width : 768px) {
+      border: none;
+      padding: 0 0 0 0;
+      margin-bottom: 0;
+  }
+}

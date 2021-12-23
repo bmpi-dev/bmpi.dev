@@ -38,11 +38,13 @@
       </header>
 
       <div class="article">
-        {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
-        {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
-        {{ $REPLACEMENT := "<img data-src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}
-        {{ $outContent := .Content | replaceRE $PATTERN_EMPTY_ALT $REPLACEMENT | replaceRE $PATTERN_ALT $REPLACEMENT | safeHTML }}
-        {{ $outContent }}
+        <div class="article-content">
+          {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
+          {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
+          {{ $REPLACEMENT := "<img data-src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}
+          {{ $outContent := .Content | replaceRE $PATTERN_EMPTY_ALT $REPLACEMENT | replaceRE $PATTERN_ALT $REPLACEMENT | safeHTML }}
+          {{ $outContent }}
+        </div>
 
         {{ if .GitInfo }}
         <div style="color: #5c7080;font-size: small;font-style: italic;">
