@@ -7,6 +7,9 @@ keywords: ""
 description: "本文从高层次梳理在不同架构演进中认证、授权及凭证这些和架构安全相关的技术的发展过程。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png"
+categories: [
+    "什么是X"
+]
 ---
 
 在软件系统设计中，如何让应用能够在各种环境中安全高效的访问是个复杂的问题，这个问题的背后是一系列软件设计时需要考虑的架构安全问题：<sup>[架构安全性 | 凤凰架构](https://icyfenix.cn/architect-perspective/general-architecture/system-security/)</sup>
