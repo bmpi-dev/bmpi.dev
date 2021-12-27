@@ -58,6 +58,8 @@ WIRED 的这篇 [The Inside Story of the Extra Second That Crashed the Web](http
 
 当然 Linux 内核最终修复了这个错误，对技术细节感兴趣的可以看这篇 [Resolve Leap Second Issues in Red Hat Enterprise Linux](https://access.redhat.com/articles/15145)。
 
+更有意思的是同样的事情在五年后又发生在了知名 CDN 厂商 Cloudflare 上，这次闰秒事件的起因是 Cloudflare 的 DNS 服务是用 Go 语言开发的，而当时的 Go 并没有单调时钟（后面会介绍到）的 API。闰秒配合 Go 没有单调时钟的缺陷这一组合拳直接打的 Cloudflare 猝不及防。具体分析见这篇文章 [How and why the leap second affected Cloudflare DNS](https://blog.cloudflare.com/how-and-why-the-leap-second-affected-cloudflare-dns/)。
+
 ## 现实世界中的时间
 
 ### 时间的两个特征
