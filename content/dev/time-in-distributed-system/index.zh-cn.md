@@ -298,3 +298,4 @@ Vector clock 虽然解决了 Lamport timestamp 无法识别并行事件的问题
 7. [Data Laced with History: Causal Trees & Operational CRDTs](http://archagon.net/blog/2018/03/24/data-laced-with-history/)
 8. [antonkharenko/logical-clocks: Lamport and Vector clocks](https://github.com/antonkharenko/logical-clocks)
 9. [gsharma/vector-clock: Vector clocks & Lamport timestamps](https://github.com/gsharma/vector-clock)
+10. [从相对论到区块链：论分布式系统中的时间](https://6up7.com/time-in-distributed-system/)
