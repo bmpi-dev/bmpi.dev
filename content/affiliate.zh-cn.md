@@ -21,20 +21,11 @@ math = true
 
 > 如果你的网络上不了Google/YouTube/Twitter，那你就需要一个机场或梯子，它能去除那股神秘的力量，助你正常上网
 
-主用 [Blinkload](https://blinkload.to/aff/LYWO) ，备用 [JMS](https://justmysocks.net/members/aff.php?aff=3519
-)
+- [Blinkload](https://blinkload.to/aff/LYWO)
 
 ## 我在用的键盘
 
 吃灰中的 [HHKB](https://union-click.jd.com/jdc?e=&p=AyIGZRprFQMTBlUaUhcLFwJUKx9KWkxYZUIeUENQDEsFA1BWThgJBABAHUBZCQUdRUFGGRJDD1MdQlUQQwVKDFRXFk8jQA4SBlQaWxQLEA5QHloleAxfAHw7XH5weTNyWmNwTVcGTBhgYh4LZRprFQMTBFYTWhcHFzdlG1wlVHwHVBpaFAoRAFYTaxQyEgNcG14XBhMGUxtZFzIVB1wrB0VXQkEBQ1gSCho3ZStYJTIiB2UYa1dsFwYBG1gcVhRQAEgJEFZGDl1OXkUAFwFVGVwQV0AEBxxrFwMTA1w%3D)
-
-## 我推荐的课程
-
-### Python
-
-| | | |
-| -- | -- | -- |
-| [蟒营™ Python 入门班](https://py.101.camp/) | 由专注 Python 实践推广 17 年的 `Zoom.Quiet` 亲自授课。只要坚持 6 周，以后再也不用购买任何网课，就能自学任何实用技能。<div style="text-align:center;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;"> 🐍蟒营<sup>™</sup><sub style="margin-left:-10px;">Reactivate Joy by Self-tech with You</sub></div> | 推荐写 `bmpi.dev` 享受 **85** 折优惠 |
 
 ## 我心目中的好书
 
@@ -68,5 +59,3 @@ math = true
 - [中国国家治理的制度逻辑](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgRVHV8VCxE3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUBEgFRG1IWMmdGUh9cZXdgYjBDAFxJGkcdawFsf1QLWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRtdFwETA1ArXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdV1HBEYABUxTHVETD1BIXxBRGg5US14dBhMOVElSEAVHN1caWhEL)
 - [全球通史](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgZUHVwdChs3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUDEwFSE1McMmB8HBw7RUFCZQxtIBNVdmwnXDIUZnILWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRtdEwYSBVErXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdVpCBkYDBR4LEgcaAlASXRQKGgAHHl4VC0BQXRsPEVBHN1caWhEL)
 - [奇特的一生](https://union-click.jd.com/jdc?e=&p=AyIGZRtYFAcXBFIZWR0yEgddGlkVBBI3EUQDS10iXhBeGlcJDBkNXg9JHU4YDk5ER1xOGRNLGEEcVV8BXURFUFdfC0RVU1JRUy1OVxUCGgZXG10VMlZ1Khkdd1tXYk9PDX1paWZQHRldUkQLWStaJQITBlYYUxQAFwJlK1sSMkBpja3tzaejG4Gx1MCKhTdUK1sRCxIFVRtTFQIbB1QrXBULIlsFTgtTVkoEUhNTJTIiBGUraxUyETcXdQtCC0EGABsIEVZAAlBJU0YKRlcCG1JFAEEAVxlSEQtFN1caWhEL)
-
-
