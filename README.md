@@ -1,6 +1,19 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5e008c07-4099-4afe-a9a7-a36cea1bed4a/deploy-status)](https://app.netlify.com/sites/stupefied-kalam-52d501/deploys)
+# BMPI.dev
 
-## [2020年度阅读Top10](https://www.bmpi.dev/self/annual-summary/2020/)
+## [2021年度阅读TOP10](https://www.bmpi.dev/self/annual-summary/2021/)
+
+1. [构建终身学习体系进行自我提升](https://www.bmpi.dev/self/build-personal-knowledge-system/)
+2. [OKR + GTD + Note => Logseq](https://www.bmpi.dev/self/okr-gtd-note-logseq/)
+3. [我的人生管理系统](https://www.bmpi.dev/self/life-in-plain-text/)
+4. [我的个人项目技术栈](https://www.bmpi.dev/dev/tech-stack-of-side-project/)
+5. [我的家庭理财规划](https://www.bmpi.dev/self/my-financial-planning/)
+6. [如何学习一门技术](https://www.bmpi.dev/dev/how-to-learn-tech/)
+7. [云端 IDE](https://www.bmpi.dev/dev/vscode-on-cloud/)
+8. [K8S 云原生应用开发小记](https://www.bmpi.dev/dev/guide-to-k8s-cloud-native/)
+9. [使用 Beancount 管理家庭财务](https://www.bmpi.dev/self/beancount-my-accounting-tool-v2/)
+10. [分布式系统中的时间](https://www.bmpi.dev/dev/time-in-distributed-system/)
+
+## [2020年度阅读TOP10](https://www.bmpi.dev/self/annual-summary/2020/)
 
 1. [我的笔记系统](https://www.bmpi.dev/self/note-system/)
 2. [什么是互联网广告](https://www.bmpi.dev/dev/what-is-internet-advertising/)
