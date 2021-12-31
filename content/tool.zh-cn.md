@@ -30,7 +30,7 @@ outputs = "html"
 
 [TiddlyWiki - 公开笔记](https://wiki.bmpi.dev)
 
-[Logseq - 私有笔记](https://logseq.com/)
+[Logseq - 私有笔记](https://logseq.xyz/)
 
 ## 白板工具
 

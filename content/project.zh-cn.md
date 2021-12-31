@@ -26,6 +26,7 @@ outputs = "html"
 | [awesome-seo](https://github.com/madawei2699/awesome-seo) | 我整理的关于Google SEO系统学习的收藏资源及通过流量变现的介绍 |
 | [notion-sites](https://github.com/madawei2699/notion-sites) | 我整理的Notion好站列表 |
 | [xian-IT](https://github.com/madawei2699/xian-IT) | 如果你对西安互联网公司熟悉，欢迎提交 Issue 或者PR，期待你的参与。 |
+| [logseq.xyz](https://github.com/bmpi-dev/logseq.xyz) | Logseq 自托管版本（v0.5.5） |
 
 ## 流量站
 
