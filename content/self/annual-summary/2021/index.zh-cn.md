@@ -167,7 +167,7 @@ categories: [
 - [xian-IT](https://github.com/madawei2699/xian-IT)：我整理的西安互联网公司列表；
 - [logseq.xyz](https://github.com/bmpi-dev/logseq.xyz)：我独立部署的 Logseq 自托管版本（v0.5.5）。
 
-妥妥的 Markdown 工程师了，希望明年能参与一些大型的开源项目，或是做一些开源产品。
+妥妥的 [Markdown](/dev/what-markdown-can-do/) 工程师了，希望明年能参与一些大型的开源项目，或是做一些开源产品。
 
 ## 影响力
 
