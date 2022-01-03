@@ -6,7 +6,7 @@ outputs = "html"
 +++
 
 ```text
-终身学习（认知杠杆） -> 全栈技术（时间杠杆） -> 投资理财（财务杠杆） => 被动收入（人生杠杆）
+终身学习（认知杠杆）* 全栈技术（时间杠杆）* 投资理财（财务杠杆） => 被动收入（人生杠杆）
 ```
 
 [Dashboard](https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b)
