@@ -83,9 +83,9 @@ Mirror 的数据都存在在 [Arweave](https://www.arweave.org/) 之上，Arweav
 
 当然另外一个目前很火的 Web3 应用领域就是去中心化金融（[DeFi](https://en.wikipedia.org/wiki/Decentralized_finance)）。数字加密货币本身就起源于金融领域，把传统的金融业搬上 Web3 并做一定的创新是必不可少的一个环节。
 
-**Web3 相比于 Web2 的主要吸引力之一，是用户不再是被出售的产品，而是因其积极贡献而被奖励的网络参与者**。当然我也相信基于区块链的 Web3 可能只是未来的一个方向。也可能未来是 Web2 + Web3 这种模式，类似于目前的 5G 应用场景一样。Web3 不是 Web2 的替代，更像是一种可能性的提升。
+**Web3 相比于 Web2 的主要吸引力之一，是用户不再是被出售的产品，而是因其积极贡献而被奖励的网络参与者**。当然我也相信基于区块链的 Web3 可能只是未来的一个方向。也可能未来是 Web2 + Web3 这种模式，类似于目前的 5G 应用场景一样。Web3 不是 Web2 的替代，更像是一个方面的提升。
 
-但 Web3 会不会从去中心化逐渐发展为中心化呢？考虑到比特币的绝大部分算力目前都掌握在少数几个矿池公司手中，再精妙的算法也抵挡不了人性对利益的追求，Web3 这条去中心化之路注定漫长而难走。
+但 Web3 会不会从去中心化逐渐发展为中心化呢？考虑到比特币的绝大部分算力目前都掌握在少数几个矿池公司手中，再精妙的算法也抵挡不了人性对利益的追求，用户为了方便连隐私都可以不要，更不会为了一个去中心化的技术问题而放弃中心化的便利，Web3 这条去中心化之路注定漫长而难走。
 
 本文参考的文章有：
 
@@ -99,8 +99,11 @@ Mirror 的数据都存在在 [Arweave](https://www.arweave.org/) 之上，Arweav
 - [Quarter I 2022](https://mirror.xyz/0xE43a21Ee76b591fe6E479da8a8a388FCfea6F77F/nQ192QDooQl7M5mG1sOf2IroyRzNyQzBK9J1m_lQmjY?continueFlag=6093989111564a68c297d3f4bb8831b0)
 - [Web3.0](https://docs.worklife.vip/web/#/19/2000)
 - [Dapp-Learning](https://github.com/Dapp-Learning-DAO/Dapp-Learning)
+- [Defining the web3 stack](https://edgeandnode.com/blog/defining-the-web3-stack)
+- [My first impressions of web3](https://moxie.org/2022/01/07/web3-first-impressions.html)
 
 > 注：
 >
+> 0. 由于 Web3 和钱相关，目前相比 Web2 存在不少安全问题。比如 ENS 中 0 宽字符可能会导致转账错误的问题，又比如 [My first impressions of web3](https://moxie.org/2022/01/07/web3-first-impressions.html) 这篇文章提到的 NFT 实验 中 Web3 基础设施的安全问题会导致用户资产丢失。
 > 1. 由于 Web3 还处于探索阶段，不少资料或者概念都有一定歧义或不准确的地方，如果本文有错误的地方，欢迎留言指正。
 > 2. 本文 [Mirror](https://mirror.xyz/madawei.eth/d5WqrV5HsWmvLby8oVCDsQrLqx3hoe8A89R6YjvvHOg) 地址。
