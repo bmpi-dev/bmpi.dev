@@ -6,7 +6,7 @@ tags: ["Web3", "区块链", "ETH", "分布式系统", "DAO", "去中心化"]
 keywords: ""
 description: "本文介绍下最近大火的Web3，以及NFTs与DeFi。"
 isCJKLanguage: true
-og_image: ""
+og_image: "https://img.bmpi.dev/6ab55cab-ceaf-3657-77db-4e1660924ca4.png"
 categories: [
     "什么是X"
 ]
