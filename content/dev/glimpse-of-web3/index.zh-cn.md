@@ -12,6 +12,17 @@ categories: [
 ]
 ---
 
+<div class="heti heti--ancient heti--vertical" style="margin: auto;">
+  <h2>青玉案·元夕<span class="heti-meta heti-small">[南宋]<abbr title="原字坦夫，后改字幼安，中年后别号稼轩">辛弃疾</abbr></span></h2>
+  <p class="heti-verse heti-x-large">
+    东风夜放花千树。更吹落、星如雨。<br>
+    宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。<br>
+    蛾儿雪柳黄金缕。笑语盈盈暗香去。<br>
+    众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。<br>
+  </p>
+  <!-- <img src="https://img.bmpi.dev/97a36cb0-7834-9e56-abf7-7b9e52721861.png" style="margin: auto;"> -->
+</div>
+
 互联网诞生之初，大家期望能打造一个去中心化的（decentralized）分布式网络（distributed network），所以有了超文本协议（HTTP）、点对点传输协议（P2P，基于此技术的 BT 下载是互联网第一个去中心化的应用程序）。互联网的信息通过网页（HTML）展示，页面间通过超链接（hyperlink）串联起来。互联网的内容则通过 P2P 的方式共享分发。
 
 之后随着 PC 与移动端的普及与大力发展，资本也涌入进来。互联网的数据与内容逐渐被少数中心化的（centralized）寡头公司掌握，我们的生活都被这些公司的产品所承包。个人隐私、数据逐渐被这些巨头收集分析，通过大数据与人工智能技术对用户画像，精准投放广告。在 [在线广告](/dev/what-is-internet-advertising/) 的加持下，互联网公司的市值也如滚雪球一般膨胀的停不下来。

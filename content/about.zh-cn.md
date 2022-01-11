@@ -97,6 +97,7 @@ outputs = "html"
 ### 本站变更日志
 
 ```
+✔ 使用「赫蹏」库对内容自动排版 @done(22-01-11 22:40)
 ✔ 去除图片动画特效与Clarity @done(21-11-22 13:20)
 ✔ 网站图片加载动画优化 @done(21-08-29 13:20)
 ✔ 集成Bing Webmaster和Microsoft Clarity @done(21-07-18 12:20)

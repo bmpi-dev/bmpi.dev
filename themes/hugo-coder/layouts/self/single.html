@@ -38,7 +38,7 @@
       </header>
 
       <div class="article">
-        <div class="article-content">
+        <div class="article-content heti">
           {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
           {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
           {{ $REPLACEMENT := "<img data-src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}

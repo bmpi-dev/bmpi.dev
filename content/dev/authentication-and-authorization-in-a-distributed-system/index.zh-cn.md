@@ -111,7 +111,7 @@ categories: [
 - 采用对称加密方式签名（Signature）。对称加密密钥一旦泄漏，会让整个服务的基础设施遭受安全威胁。JWT 支持非对称加密算法，只有签名的服务需要私钥，其他验证 JWT 信息的服务只需要使用公钥即可。
 - 不校验 JWT 的签名算法。这篇 [Critical vulnerabilities in JSON Web Token libraries](https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/) 文章提到 JWT 的一种漏洞，通过 `none` 算法规避令牌验证。所以最好每次都验证 JWT header 中的签名算法是否是期望的。
 
-相信看了上述的一些问题，你对 JWT 的“简单、安全”有了新的理解。这还没完，JWT 还有以下一些 Cookie-Session 没有的问题：
+相信看了上述的一些问题，你对 JWT 的<span class="heti-em">简单</span>、<span class="heti-em">安全</span>有了新的理解。这还没完，JWT 还有以下一些 Cookie-Session 没有的问题：
 
 - 令牌难以主动失效：JWT 中虽然有 `exp`、`nbf` 与 `iat` 这些和时间相关的属性，但很难在令牌到期之前让令牌失效，比如很难在用户退出登录时立刻让签发的令牌全部失效。虽然可能通过一些“黑名单”的技术解决这个问题，不过相比 Cookie-Session 来说，引入了一定的复杂性；
 - 令牌数据老旧：很难把签发的令牌全部更新成最新的数据。比如把用户的权限信息（Role）放在 JWT Payload 中，当用户的角色发生变化时，很难把之前签发的令牌信息更新成最新的数据；

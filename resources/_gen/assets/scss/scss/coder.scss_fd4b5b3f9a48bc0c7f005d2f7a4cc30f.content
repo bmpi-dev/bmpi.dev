@@ -102,7 +102,7 @@ code {
   font-family: "Source Code Pro", "Lucida Console", monospace;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: #E0E0E0;
+  background-color: rgba(255, 247, 0, 0.88);
   color: #212121;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem; }
 
@@ -236,14 +236,24 @@ a[href^="#fn:"]:after {
   border: 1px solid lightgrey;
   padding-right: 40px;
   padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 20px; }
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  max-width: none !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32); }
   @media only screen and (max-width: 768px) {
     .article-content {
       border: none;
       padding: 0 0 0 0;
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      box-shadow: none;
+      font-size: 16px !important;
+      line-height: 1.6 !important; } }
+.heti blockquote {
+  background-color: #f7f7f7 !important; }
+
 .content {
   flex: 1;
   display: flex;
