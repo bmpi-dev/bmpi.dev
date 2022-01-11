@@ -11,7 +11,7 @@ categories: [
 ]
 ---
 
-2021 年马上就要过去了。因为疫情，我所在的城市正在经历“封城”，可能还需要居家一段时间才能出门。回顾这一年，整个世界正如 [不要抬头 Don't Look Up](https://movie.douban.com/subject/34884712/) 里呈现的那样：“荒诞、草台班子、麻了”。但我们还得抬头面对生活，继续过好 2022（twenty twenty, too） 年。
+2021 年马上就要过去了。因为疫情，我所在的城市正在经历<q>封城</q>，可能还需要居家一段时间才能出门。回顾这一年，整个世界正如 [不要抬头 Don't Look Up](https://movie.douban.com/subject/34884712/) 里呈现的那样：<q><u title="人类的本质是复读机">荒诞</u>、<u title="清醒的人领导不了世界">草台班子</u>、<span class="heti-em">麻了</span></q>。但我们还得抬头面对生活，继续过好 2022（twenty twenty, too） 年。
 
 这一年我在探索如何将 [长期主义与 OKR](/self/life-in-plain-text/) 结合起来，从 [我的个人愿景](/goal/) 出发制定个人的中短期计划。所以我在年初制定了我的 2021 个人 OKR：
 
