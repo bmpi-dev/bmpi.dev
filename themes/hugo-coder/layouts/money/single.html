@@ -38,7 +38,7 @@
       </header>
 
       <div class="article">
-        <div class="article-content heti">
+        <div class="article-content heti" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
           {{ $PATTERN_EMPTY_ALT := "<img src=\"([^\"]+)\" alt=\"([^\"]+)\">" }}
           {{ $PATTERN_ALT := "<img src=\"([^\"]+)\" alt=\"\">" }}
           {{ $REPLACEMENT := "<img data-src=\"$1\" alt=\"$2\" class=\"lazyload\" loading=\"lazy\"/>" }}
