@@ -288,11 +288,13 @@ Notion 我一般会放一些非公开的个人信息，还可以多人协作，�
 
 排版规范可参考这篇 [中文文案排版指北](https://github.com/mzlogin/chinese-copywriting-guidelines) 。
 
-也可以使用 [赫蹏](https://github.com/sivan/heti) 这个库自动对内容进行优化排版。
+也可以使用 [赫蹏](https://github.com/sivan/heti) 这个库自动对内容进行优化排版（本博客目前中英文混排使用的方案）。
 
 如果使用 VSCode 编辑 Markdown 的话还可以安装这个 [Pangu-Markdown-VSCode](https://marketplace.visualstudio.com/items?itemName=zhuyuanxiang.pangu-markdown-vscode) 插件，在写完文章后一键自动排出上述规范要求的效果。
 
 文章配图可以使用 [TinyPNG](https://tinypng.com/) 压缩后上传，这样不仅可以使网页加载速度变得更快，还可以降低你 CDN 和用户的流量费用。
+
+> 如果你对中文排版设计感兴趣，还可以看 W3C 的这篇 [中文排版需求](https://w3c.github.io/clreq/)。
 
 #### 写作渠道
 
