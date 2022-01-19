@@ -16,13 +16,12 @@ outputs = "html"
 | 相关文章 | [用Markdown可以做什么](/dev/what-markdown-can-do) |
 | 工具链接 | [微信Markdown排版工具](https://wechat.bmpi.dev) |
 
-## 我的时间/任务管理工具
+## 我的目标/时间/任务/知识/财务管理工具
 
 | | |
 | -- | -- |
-| 相关文章 | [我的时间管理工具](/self/gtd-tools-i-used/)<div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[VSCode插件开发小记](/dev/vscode-plugin-development-notes/)<div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[Parser黑魔法](/dev/parser_black_magic/) |
-| 邮件提醒模版 | [todo_starter](https://github.com/bmpi-dev/todo_starter) |
-| VSCode插件 | [Todo++](https://marketplace.visualstudio.com/items?itemName=mdw.vscode-todo-plus-plus) |
+| 目标/时间/任务/知识管理 | [我的人生管理系统](/self/life-in-plain-text/)<div style="text-align:left;border-top-style:dotted;border-top-color:#eee;border-top-width:1px;">[OKR + GTD + Note => Logseq](/self/okr-gtd-note-logseq/) |
+| 财务管理 | [使用 Beancount 管理家庭财务](/self/beancount-my-accounting-tool-v2/) |
 
 ## 笔记工具
 
