@@ -234,6 +234,17 @@ fontawesome minify
     animation: animate 3s linear infinite;
     content: "\e632";
 }
+.fa-jk:before {
+    animation: animate 3s linear 1.2s infinite;
+    content: "即刻";
+    font-weight: 300;
+}
+li .fa-jk {
+    transform: scale(0.7);
+}
+.about-social li:last-child {
+    margin-left: -10px;
+}
 .fa-calendar:before {
     content:"\e9de";
 }

@@ -99,7 +99,7 @@ FootnoteReturnLinkContents = "↑"
     name = "Github"
     icon = "fab fa-github"
     weight = 1
-    url = "https://github.com/bmpi-dev"
+    url = "https://github.com/madawei2699"
 [[params.social]]
     name = "YouTube"
     icon = "fab fa-youtube"
@@ -114,7 +114,7 @@ FootnoteReturnLinkContents = "↑"
     name = "WeChat"
     icon = "fab fa-weixin"
     weight = 4
-    url = "https://img.bmpi.dev/755b406f-43ae-e382-e13c-547116d3e7d5.png"
+    url = "https://img.bmpi.dev/4e0bae9a-fa9d-5b84-d928-592bd9c2c9fb.png"
 [[params.social]]
     name = "ZhiHu"
     icon = "fab fa-zhihu"
@@ -135,6 +135,11 @@ FootnoteReturnLinkContents = "↑"
     icon = "fas fa-dev-to"
     weight = 8
     url = "https://dev.to/madawei2699"
+[[params.social]]
+    name = "即刻"
+    icon = "far fa-jk"
+    weight = 9
+    url = "https://m.okjike.com/users/7A7EB661-B6FC-47CF-B75B-46DB8D096D5C"
 
 [languages]
     [languages.en]
