@@ -3,11 +3,19 @@
     {{ with .Site.Params.avatarurl }}
       <div class="avatar" data-aos="fade-down" data-aos-offset="150" data-aos-delay="200" data-aos-duration="1000"><img src="{{ . | relURL }}" alt="马大伟"></div>
     {{ end }}
-    <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000">
-      <h1>{{ .Site.Params.author }}</h1>
+    <div class="my-skill" data-aos="flip-up" data-aos-delay="500" data-aos-duration="2000">
+      <div class="tooltip">{{ .Site.Params.info1 }}
+        <span class="tooltiptext">{{ .Site.Params.info1Tooltip }}</span>
+      </div>
+      <div class="tooltip">{{ .Site.Params.info2 }}
+        <span class="tooltiptext">{{ .Site.Params.info2Tooltip }}</span>
+      </div>
+      <div class="tooltip">{{ .Site.Params.info3 }}
+        <span class="tooltiptext">{{ .Site.Params.info3Tooltip }}</span>
+      </div>
     </div>
-    <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="500" data-aos-duration="2000">
-      <h2>{{ .Site.Params.info1 }}<br>{{ .Site.Params.info2 }}<br>{{ .Site.Params.info3 }}</h2>
+    <div class="heti heti--ancient" data-aos="fade-right" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000">
+      <h1 class="heti-meta heti-x-large"><abbr title="终身学习 * 全栈技术 * 投资理财 => 被动收入">{{ .Site.Params.author }}</abbr></h1>
     </div>
     <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1500">
       {{ with .Site.Params.social }}

@@ -293,3 +293,29 @@ li .fa-jk {
     display: flex;
     flex-flow: wrap;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: #aaa;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+    font-size: 0.6em;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

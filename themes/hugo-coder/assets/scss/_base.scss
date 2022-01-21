@@ -57,6 +57,23 @@ h1 {
     line-height: 3.4rem;
   }
 }
+
+.about h1 {
+  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-bottom: 1px LightGrey solid;
+  width: 98%;
+  line-height: 150%;
+  color: #666666 !important;
+  font-size: 30px;
+  line-height: 3.6rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 24px;
+    line-height: 3.4rem;
+  }
+}
+
 h2 {
   font-size: 26px;
   line-height: 3.2rem;
@@ -310,4 +327,14 @@ a[href^="#fn:"]:after{ content: ']' }
 
 .heti blockquote {
   background-color: #f7f7f7 !important;
+}
+
+.my-skill {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  @media only screen and (max-width : 768px) {
+      display: none;
+  }
 }
