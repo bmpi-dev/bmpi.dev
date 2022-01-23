@@ -5,6 +5,13 @@ keywords = ""
 outputs = "html"
 +++
 
+## 2022
+
+### 从内容创作到个人品牌
+
+- [Slide](https://talk.bmpi.dev/2022/content-marketing-to-personal-brand/)
+- [PDF](https://github.com/bmpi-dev/talk.bmpi.dev/raw/gh-pages/2022/content-marketing-to-personal-brand.pdf)
+
 ## 2021
 
 ### My Blog Architecture
