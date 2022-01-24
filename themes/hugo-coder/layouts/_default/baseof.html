@@ -25,6 +25,9 @@
   <meta name="twitter:creator" content="@madawei2699">
   <meta name="twitter:title" content="{{ .Title }}"/>
   <meta name="twitter:description" content="{{ .Description }}"/>
+  {{ if .Params.noindex }}
+  <meta name="robots" content="noindex">
+  {{ end }}
   {{ if .Params.og_image }}
   <meta property="twitter:image" content="{{ .Params.og_image }}" />
   {{ else }}
