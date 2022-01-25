@@ -118,12 +118,14 @@
 
   {{ $tag_sass := resources.Get "scss/tagcloud.scss" }}
   {{ $tag_style := $tag_sass | toCSS }}
-  <link rel="stylesheet" href="{{ $tag_style.RelPermalink }}" media="screen" />
+  <link rel="preload" href="{{ $tag_style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ $tag_style.RelPermalink }}"></noscript>
 
   {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=600a642fe0b9b900111a7f08&product=inline-share-buttons' async='async'></script>
   <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css"></noscript>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   {{ end }}
