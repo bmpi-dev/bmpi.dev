@@ -243,7 +243,7 @@ Specific knowledge can be found by pursuing your genuine curiosity
 Figure out what you’re uniquely good at, and apply as much leverage as possible
 ```
 
-在古代，我们可以通过写诗书来获得个人品牌。现代，只需要一个博客、社交媒体账号、公众号或短视频账号，就可以获得个人品牌。
+在古代，我们可以通过写诗书来获得个人品牌。现代，只需要一个博客、社交媒体账号、公众号或短视频账号，就可以获得 [个人品牌](https://talk.bmpi.dev/2022/content-marketing-to-personal-brand/)。
 
 找到自己独特的优势，并给予足够的杠杆，能产生不断积累的个人品牌。打造个人品牌的好处在于你的创作（知识产权）都是你的个人品牌资产，这些资产可以帮助你获得与人连接的机会，而这些机会可能让你赚钱。个人品牌也能降低人与人的信任成本。
 
