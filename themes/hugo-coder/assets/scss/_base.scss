@@ -312,7 +312,7 @@ a[href^="#fn:"]:after{ content: ']' }
   padding-bottom: 40px;;
   margin-bottom: 20px;
   max-width: none !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   line-height: 1.8 !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
   @media only screen and (max-width : 768px) {
@@ -320,7 +320,7 @@ a[href^="#fn:"]:after{ content: ']' }
       padding: 0 0 0 0;
       margin-bottom: 0;
       box-shadow: none;
-      font-size: 16px !important;
+      font-size: 18px !important;
       line-height: 1.6 !important;
   }
 }
