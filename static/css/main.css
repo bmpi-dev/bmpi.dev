@@ -319,3 +319,23 @@ li .fa-jk {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+@media print {
+    .navigation, .post-meta, footer, #article-info, .webpushr-toggle-bell-popup {
+        display: none;
+    }
+
+    .post-title {
+        text-align: center;
+        font-family: "LXGW WenKai";
+    }
+
+    article {
+        margin: 40px 40px;
+    }
+
+    img {
+        width: 100%;
+        margin: auto;
+    }
+}

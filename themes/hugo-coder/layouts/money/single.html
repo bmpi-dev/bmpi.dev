@@ -46,7 +46,8 @@
           {{ $outContent }}
         </div>
 
-        {{ if .GitInfo }}
+        <div id="article-info">
+          {{ if .GitInfo }}
         <div style="color: #5c7080;font-size: small;font-style: italic;">
           更新时间:
           <!-- Calculate the age in days and months -->
@@ -76,6 +77,7 @@
 
         <div style="border-bottom-style: dashed;border-bottom-style: inset;border-bottom-width: 2px;width: 50%;margin: 0 auto;"></div>
         <a href="https://twitter.com/madawei2699"><img style="box-shadow:none !important;width: 200px;" src="https://img.shields.io/twitter/follow/madawei2699?style=social"></a>
+        </div>
       </div>
 
       <footer>
