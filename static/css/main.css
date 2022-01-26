@@ -334,8 +334,20 @@ li .fa-jk {
         margin: 40px 40px;
     }
 
+    .article-content {
+        font-family: "LXGW WenKai" !important;
+    }
+
+    .highlight pre {
+        white-space: pre-wrap !important;
+    }
+
     img {
         width: 100%;
         margin: auto;
+    }
+
+    .adsbygoogle {
+        display: none !important;
     }
 }
