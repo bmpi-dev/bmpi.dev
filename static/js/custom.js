@@ -49,6 +49,150 @@ function main() {
 
 main();
 
+// web share text
+function getSelectionHtml() {
+    var html = "";
+    if (typeof window.getSelection != "undefined") {
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+            var container = document.createElement("div");
+            for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+                container.appendChild(sel.getRangeAt(i).cloneContents());
+            }
+            html = container.innerHTML;
+        }
+    } else if (typeof document.selection != "undefined") {
+        if (document.selection.type == "Text") {
+            html = document.selection.createRange().htmlText;
+        }
+    }
+    return html;
+}
+
+var control = document.importNode(document.querySelector('template').content, true).childNodes[0];
+control.addEventListener('pointerdown', oncontroldown);
+document.querySelectorAll('p').forEach(i => {
+    i.onpointerup = ()=>{
+        if (navigator.canShare) {
+            let selection = document.getSelection(), text = selection.toString();
+            if (text !== "") {
+                let rect = selection.getRangeAt(0).getBoundingClientRect();
+                let articleY =  document.body.getBoundingClientRect().top;
+                control.style.top = `calc(${rect.bottom}px - ${articleY}px + 20px)`;
+                control.style.left = `calc(${rect.left}px + calc(${rect.width}px / 2) - 30px)`;
+                control['html']= getSelectionHtml(); 
+                document.body.appendChild(control);
+            }
+        }
+    }
+});
+
+function dataURItoBlob(dataURI) {
+    // convert base64 to raw binary data held in a string
+    // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+    var byteString = atob(dataURI.split(',')[1]);
+    // separate out the mime component
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+    // write the bytes of the string to an ArrayBuffer
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ab], {type: mimeString});
+}
+
+function addDatePart(html) {
+    let date = new Date();
+    let p = document.createElement('p');
+    p.textContent = '摘录于 ' + date.toISOString().split('T')[0].replace(/-/g, '/');
+    html.insertBefore(p, html.firstChild);
+}
+
+function addAuthorPart(html) {
+    let div = document.createElement('div');
+    let p1 = document.createElement('p');
+    p1.textContent = '/ ' + document.title;
+    p1.setAttribute('style', 'font-size: 0.8em;color: #eee;margin-bottom: 0px;padding-top: 0px;margin-top: 0px;');
+    div.appendChild(p1);
+    let p2 = document.createElement('p');
+    p2.textContent = '/ 马大伟';
+    p2.setAttribute('style', 'font-size: 0.8em;color: #eee;margin-top: -3px;margin-bottom: -3px;padding-bottom: -3px;padding-bottom: -3px;');
+    div.appendChild(p2);
+    let p3 = document.createElement('p');
+    p3.textContent = '/ ' + window.location.href;
+    p3.setAttribute('style', 'font-size: 0.8em;color: #eee;margin-top: 5px;line-height: 15px;');
+    div.appendChild(p3);
+    html.appendChild(div);
+}
+
+function addQRPart(html) {
+    let div = document.createElement('div');
+    let qr = document.createElement('img');
+    qr.setAttribute('src', 'https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=' + window.location.href);
+    qr.setAttribute('style', 'width: 70px; height: 70px;');
+    div.appendChild(qr);
+    html.appendChild(div);
+}
+
+async function html2Img(html) {
+    let control = document.querySelector('#control');
+    let timer = setInterval(()=>{
+        var currentOpacity  = (+control.style.opacity) - 0.1;
+        if (currentOpacity < 0) {
+            control.style.opacity = 1;
+        } else {
+            control.style.opacity = currentOpacity;
+        }
+    }, 10);
+    let div = document.createElement('div');
+    div.id = 'capture';
+    div.setAttribute('style', 'padding: 30px 20px;background: #000;color: #f7f4cb;font-family: "LXGW WenKai";');
+    div.innerHTML = html;
+    addDatePart(div);
+    let footer = document.createElement('div');
+    footer.setAttribute('style', 'display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-top: 20px;padding-top: -20px;padding-top: -20px;border-top-style: dashed;border-top-width: 1px;padding-top: 10px;');
+    addAuthorPart(footer);
+    addQRPart(footer);
+    div.appendChild(footer);
+    document.body.appendChild(div);
+    let canvas = await html2canvas(div, {allowTaint: true, useCORS: true});
+    let dataURL = canvas.toDataURL("image/png");
+    const blob = dataURItoBlob(dataURL);
+    const data = {
+        files: [
+            new File([blob], document.querySelector('.title').textContent + '.png', {
+            type: blob.type,
+            }),
+        ],
+        // title: document.title,
+        // text: text,
+    };
+    if (navigator.canShare && navigator.canShare(data)) {
+        try {
+            await navigator.share(data);
+        } catch(error) {
+            console.log('Sharing failed: ', error);
+        }
+    } else {
+        console.log(`Your system doesn't support sharing files.`);
+    }
+    document.body.removeChild(div);
+    clearInterval(timer);
+    control.style.opacity = 1;
+}
+
+async function oncontroldown(event) {
+    await html2Img(this.html);
+	this.remove();
+	document.getSelection().removeAllRanges();
+	event.stopPropagation();
+}
+document.onpointerdown = ()=>{	
+	let control = document.querySelector('#control');
+	if (control !== null) {control.remove();document.getSelection().removeAllRanges();}
+}
+
 // remove dashboard iframe on mobile
 
 // window.mobileCheck = function() {

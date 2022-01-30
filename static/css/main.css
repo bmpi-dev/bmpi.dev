@@ -351,3 +351,25 @@ li .fa-jk {
         display: none !important;
     }
 }
+
+#control {
+	--color: #c04851;
+	position: absolute;
+}
+
+#control::before{
+	content: "分享书签";
+	display: block;
+	background-color: var(--color);
+	color: #fff;
+	font-weight: 100;
+	font-size: 0.9em;
+	width: max-content;
+	border-radius: 10px;
+	box-shadow: -16px 0 -1 #eee;
+	display: inline;
+	padding: 5px;
+    will-change: filter;
+	filter: drop-shadow(2px 4px 6px #666);
+    font-family: "LXGW WenKai";
+}
