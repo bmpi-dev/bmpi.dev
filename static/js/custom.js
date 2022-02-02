@@ -136,15 +136,6 @@ function addQRPart(html) {
 }
 
 async function html2Img(html) {
-    let control = document.querySelector('#control');
-    let timer = setInterval(()=>{
-        var currentOpacity  = (+control.style.opacity) - 0.1;
-        if (currentOpacity < 0) {
-            control.style.opacity = 1;
-        } else {
-            control.style.opacity = currentOpacity;
-        }
-    }, 10);
     let div = document.createElement('div');
     div.id = 'capture';
     div.setAttribute('style', 'padding: 30px 20px;background: #000;color: #f7f4cb;font-family: "LXGW WenKai";');
@@ -171,15 +162,25 @@ async function html2Img(html) {
     if (navigator.canShare && navigator.canShare(data)) {
         try {
             await navigator.share(data);
+            ga('gtag_UA_154678195_1.send', {
+                hitType: 'event',
+                eventCategory: 'bookmark',
+                eventAction: 'bookmark_success',
+                eventLabel: window.location.href
+            });
         } catch(error) {
             console.log('Sharing failed: ', error);
+            ga('gtag_UA_154678195_1.send', {
+                hitType: 'event',
+                eventCategory: 'bookmark',
+                eventAction: 'bookmark_fail',
+                eventLabel: error.name
+            });
         }
     } else {
         console.log(`Your system doesn't support sharing files.`);
     }
     document.body.removeChild(div);
-    clearInterval(timer);
-    control.style.opacity = 1;
 }
 
 async function oncontroldown(event) {
