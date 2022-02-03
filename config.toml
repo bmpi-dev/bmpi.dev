@@ -142,7 +142,7 @@ FootnoteReturnLinkContents = "↑"
     name = "即刻"
     icon = "far fa-jk"
     weight = 9
-    url = "https://m.okjike.com/users/7A7EB661-B6FC-47CF-B75B-46DB8D096D5C"
+    url = "https://web.okjike.com/u/7A7EB661-B6FC-47CF-B75B-46DB8D096D5C"
 
 [languages]
     [languages.en]
