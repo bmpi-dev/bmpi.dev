@@ -277,6 +277,48 @@ a[href^="#fn:"]:after {
   @media only screen and (max-width: 768px) {
     .my-skill {
       display: none; } }
+.brand-ad {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #777; }
+  @media only screen and (max-width: 768px) {
+    .brand-ad {
+      font-size: 13px; } }
+.brand-content {
+  border-style: dotted;
+  border-width: 1px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  border-bottom: none; }
+
+.brand-ad-link {
+  text-align: right;
+  margin-top: -12px;
+  margin-right: 8px;
+  font-size: 14px; }
+  @media only screen and (max-width: 768px) {
+    .brand-ad-link {
+      font-size: 10px; } }
+  .brand-ad-link a {
+    color: #777; }
+
+.brand-ad-link-line {
+  display: block;
+  border-style: dotted;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: -13px;
+  margin-bottom: 25px;
+  margin-right: 72px;
+  margin-left: 3px; }
+  @media only screen and (max-width: 768px) {
+    .brand-ad-link-line {
+      margin-top: -8px;
+      margin-right: 51px;
+      margin-left: 2px; } }
 .content {
   flex: 1;
   display: flex;
