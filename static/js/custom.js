@@ -49,6 +49,16 @@ function main() {
 
 main();
 
+// toast
+function launch_toast(text) {
+    var x = document.getElementById("toast")
+    x.textContent = text;
+    x.className = "show";
+    setTimeout(function(){ 
+        x.className = x.className.replace("show", ""); 
+    }, 5000);
+}
+
 // web share text
 function getSelectionHtml() {
     var html = "";
@@ -170,6 +180,7 @@ async function html2Img(html) {
             });
         } catch(error) {
             console.log('Sharing failed: ', error);
+            launch_toast("失败，请多试几次，建议用 Chrome 浏览器");
             ga('gtag_UA_154678195_1.send', {
                 hitType: 'event',
                 eventCategory: 'bookmark',
@@ -178,6 +189,7 @@ async function html2Img(html) {
             });
         }
     } else {
+        launch_toast("浏览器不支持此功能");
         console.log(`Your system doesn't support sharing files.`);
     }
     document.body.removeChild(div);
