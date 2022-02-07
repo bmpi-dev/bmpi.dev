@@ -180,7 +180,9 @@ async function html2Img(html) {
             });
         } catch(error) {
             console.log('Sharing failed: ', error);
-            launch_toast("失败，请多试几次，建议用 Chrome 浏览器");
+            if (error.name !== 'AbortError') {
+                launch_toast("失败，请多试几次，建议用 Chrome 浏览器");
+            }
             ga('gtag_UA_154678195_1.send', {
                 hitType: 'event',
                 eventCategory: 'bookmark',
