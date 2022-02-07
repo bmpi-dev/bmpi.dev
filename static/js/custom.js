@@ -81,7 +81,11 @@ function getSelectionHtml() {
 
 var control = document.importNode(document.querySelector('template').content, true).childNodes[0];
 control.addEventListener('pointerdown', oncontroldown);
-document.querySelectorAll('p').forEach(i => {
+
+let elements = [...document.querySelectorAll('.article p'), ...document.querySelectorAll('.article li'), 
+                ...document.querySelectorAll('.article code')];
+
+elements.forEach(i => {
     i.onpointerup = ()=>{
         if (navigator.canShare) {
             let selection = document.getSelection(), text = selection.toString();
@@ -121,6 +125,7 @@ function addDatePart(html) {
 
 function addAuthorPart(html) {
     let div = document.createElement('div');
+    div.setAttribute('style', 'padding: 5px; word-break: break-all;');
     let p1 = document.createElement('p');
     p1.textContent = '/ ' + document.title;
     p1.setAttribute('style', 'font-size: 0.8em;color: #eee;margin-bottom: 0px;padding-top: 0px;margin-top: 0px;');
@@ -140,7 +145,7 @@ function addQRPart(html) {
     let div = document.createElement('div');
     let qr = document.createElement('img');
     qr.setAttribute('src', 'https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=' + window.location.href);
-    qr.setAttribute('style', 'width: 70px; height: 70px;');
+    qr.setAttribute('style', 'width: 70px; height: 70px; max-width: none !important;');
     div.appendChild(qr);
     html.appendChild(div);
 }
