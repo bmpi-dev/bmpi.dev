@@ -20,16 +20,13 @@ og_image: "https://img.bmpi.dev/dafdc38a-8e97-7daa-d860-4ad78c4d182b.png"
 - [云 IDE 研发模式](#云-ide-研发模式)
 - [参考文章](#参考文章)
 
----
-<strong><span style="color:red">更新时间：2021/10/11</span></strong>
-
-最近我将 VSCode Server 从 AWS 迁移到了 Azure 云平台，并且集成了 OAuth2 。具体的实现见 [Out-of-the-Box-CodeServer](https://github.com/bmpi-dev/Out-of-the-Box-CodeServer)。新的实现方案可以做到：
-
-1. 关闭浏览器一定时间后自动关闭服务器以停止计费；
-2. 使用 GitHub OAuth2 登录；
-3. 使用自定义域名访问。
-
----
+{{% notice info %}}
+<strong>更新时间：2021/10/11</strong><br>
+最近我将 VSCode Server 从 AWS 迁移到了 Azure 云平台，并且集成了 OAuth2 。具体的实现见 [Out-of-the-Box-CodeServer](https://github.com/bmpi-dev/Out-of-the-Box-CodeServer)。新的实现方案可以做到：<br>
+1、关闭浏览器一定时间后自动关闭服务器以停止计费；<br>
+2、使用 GitHub OAuth2 登录；<br>
+3、使用自定义域名访问。
+{{% /notice %}}
 
 前不久 GitHub 官方 Twitter 发了一个如下的 Tweet：
 

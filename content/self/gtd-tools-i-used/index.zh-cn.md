@@ -202,7 +202,10 @@ jobs:
 
 ## 我的时间管理工具v4
 
-<strong><span style="color:red">更新自2021年5月2日：</span>我使用 Logseq 替代 v3 实现 GTD ，具体见这篇 [OKR + GTD + Note => Logseq](/self/okr-gtd-note-logseq/) 文章。</strong>
+{{% notice info %}}
+<strong>更新自2021年5月2日</strong><br>
+我使用 Logseq 替代 v3 实现 GTD ，具体见这篇 [OKR + GTD + Note => Logseq](/self/okr-gtd-note-logseq/) 文章。
+{{% /notice %}}
 
 ## Emacs ORG-MODE
 

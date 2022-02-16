@@ -13,13 +13,10 @@ series: ["自我提升"]
 isCJKLanguage: true
 ---
 
----
-
-<strong><span style="color:red">更新自2021年10月05日</span></strong>
-
+{{% notice info %}}
+<strong>更新自2021年10月05日</strong><br>
 目前我已经用 Beancount 替换了使用近 9 年的挖财记账 App，详见这篇 [使用 Beancount 管理家庭财务](/self/beancount-my-accounting-tool-v2/) 。
-
----
+{{% /notice %}}
 
 自2012年2月9日14:05分用挖财记下第一笔帐后，至今已经持续了2888天（8年），这算是我坚持最久的一个习惯。
 

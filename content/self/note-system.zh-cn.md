@@ -135,7 +135,10 @@ Wiki 资料通过 GitHub 公共仓库托管，通过 netlify 生成静态网站�
 
 私人备忘和工作涉及的私有非公开的资料集合，其中非文本的资源如图片、PDF、Office格式文件、Keynote等存放至Google Drive/Microsoft OneDrive。然后将这些链接存放至私有Markdown文件中，通过 GitHub 私有库托管。
 
-<strong><span style="color:red">更新自2021年5月2日：</span>我使用 Logseq 实现私有 Note 的管理，具体见这篇 [OKR + GTD + Note => Logseq](/self/okr-gtd-note-logseq/) 文章。</strong>
+{{% notice info %}}
+<strong>更新自2021年5月2日</strong><br>
+我使用 Logseq 实现私有 Note 的管理，具体见这篇 [OKR + GTD + Note => Logseq](/self/okr-gtd-note-logseq/) 文章。
+{{% /notice %}}
 
 ## 重要资料
 
