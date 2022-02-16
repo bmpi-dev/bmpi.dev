@@ -190,9 +190,19 @@
     AOS.init({
       disable: 'mobile'
     });
+
+    var mermaid = document.getElementsByClassName('mermaid');
+    if (mermaid.length > 0) {
+      var tag = document.createElement('script');
+      tag.src = 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js';
+      document.getElementsByTagName('body')[0].appendChild(tag);
+
+      var tag = document.createElement('script');
+      tag.type = 'text/javascript';
+      tag.text = "mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'})";
+      document.getElementsByTagName('body')[0].appendChild(tag);
+    }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
   {{ end }}
 
 </body>
