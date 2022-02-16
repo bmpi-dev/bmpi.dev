@@ -10,20 +10,14 @@ series: ["自我提升", "人生管理系统"]
 og_image: "https://img.bmpi.dev/d33c93b6-734c-cf47-a3cf-866ccfd29872.png"
 ---
 
----
-<strong><span style="color:red">2021.12.31 更新</span></strong>
-
-由于 Logseq 计划在移动端发布之后会放弃支持集成 GitHub 功能，具体见这条 [ logseq will deprecate the GitHub integration once the mobile app is working](https://discord.com/channels/725182569297215569/735735090784632913/861656585578086400) 公告。
-
-由于我挺喜欢目前的 Logseq 稳定版本（v0.5.5），也对此做了一些主题改动，GitHub 集成也挺方便的。所以我独立部署了 Logseq 目前的最新版本，包括前端、后端、数据库、S3 存储等服务，可以理解为克隆了目前的 Logseq 网页版本。
-
-如果你也喜欢这个网页版本的话，可以使用这个网站 [logseq.xyz](https://logseq.xyz) 。
-
-具体的改动及部署方式我都发布到了这个 [Repo](https://github.com/bmpi-dev/logseq.xyz)，想部署自己的 Logseq 也可以按照这些操作指南自己来做。
-
+{{% notice info %}}
+<strong>2021.12.31 更新</strong><br>
+由于 Logseq 计划在移动端发布之后会放弃支持集成 GitHub 功能，具体见这条 [ logseq will deprecate the GitHub integration once the mobile app is working](https://discord.com/channels/725182569297215569/735735090784632913/861656585578086400) 公告。<br>
+由于我挺喜欢目前的 Logseq 稳定版本（v0.5.5），也对此做了一些主题改动，GitHub 集成也挺方便的。所以我独立部署了 Logseq 目前的最新版本，包括前端、后端、数据库、S3 存储等服务，可以理解为克隆了目前的 Logseq 网页版本。<br>
+如果你也喜欢这个网页版本的话，可以使用这个网站 [logseq.xyz](https://logseq.xyz) 。<br>
+具体的改动及部署方式我都发布到了这个 [Repo](https://github.com/bmpi-dev/logseq.xyz)，想部署自己的 Logseq 也可以按照这些操作指南自己来做。<br>
 最后，感谢 Logseq 开源精神及为知识管理而做的贡献，谢谢你们！
-
----
+{{% /notice %}}
 
 在 [我的人生管理系统](/self/life-in-plain-text/) 这篇文章中我分享了如何从个人愿景出发设定个人 OKR ，将 OKR 使用 [GTD](/tags/时间管理/) 的方法拆解成多个 TODO ，这些 TODO 所产生的笔记通过反向链接关联起来。
 

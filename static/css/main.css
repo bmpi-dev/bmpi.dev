@@ -350,6 +350,61 @@ li .fa-jk {
     .adsbygoogle {
         display: none !important;
     }
+    div.notices {
+        margin: 2rem 0;
+        position: relative;
+    }
+    .notices p {
+        padding: 15px;
+        display: block;
+        font-size: 1.1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        color: #666;
+    }
+    .notices p:first-child:before {
+        position: absolute;
+        top: 2px;
+        color: #fff;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f06a";
+        left: 10px;
+    }
+    .notices p:first-child:after {
+        position: absolute;
+        top: 2px;
+        color: #fff;
+        left: 2rem;
+    }
+    .notices.info p {
+        border-top: 30px solid #F0B37E;
+        background: #FFF2DB;
+    }
+    .notices.info p:first-child:after {
+        content: 'Info';
+    }
+    .notices.warning p {
+        border-top: 30px solid rgba(217, 83, 79, 0.8);
+        background: #FAE2E2;
+    }
+    .notices.warning p:first-child:after {
+        content: 'Warning';
+    }
+    .notices.note p {
+        border-top: 30px solid #6AB0DE;
+        background: #E7F2FA;
+    }
+    .notices.note p:first-child:after {
+        content: 'Note';
+    }
+    .notices.tip p {
+        border-top: 30px solid rgba(92, 184, 92, 0.8);
+        background: #E6F9E6;
+    }
+    .notices.tip p:first-child:after {
+        content: 'Tip';
+    }      
 }
 
 #control {
