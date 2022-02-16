@@ -97,7 +97,11 @@ outputs = "html"
 ### 本站变更日志
 
 ```
-✔ 文章页Markdown支持PlantUML @done(22-02-16 12:50)
+✔ 文章页Markdown支持Notice @done(22-02-16 8:39)
+  用法：https://learn.netlify.app/en/shortcodes/notice/
+✔ 文章页Markdown支持Mermaid @done(22-02-16 8:39)
+  用法：https://learn.netlify.app/en/shortcodes/mermaid/
+✔ 文章页Markdown支持PlantUML @done(22-02-16 00:50)
 ✔ 文章页支持移动端分享书签功能 @done(22-02-02 12:10)
 ✔ 文章页支持打印样式 @done(22-01-26 18:53)
 ✔ 文章页使用「霞鹜文楷」字体 @done(22-01-26 06:28)
