@@ -79,28 +79,6 @@ function getSelectionHtml() {
     return html;
 }
 
-var control = document.importNode(document.querySelector('template').content, true).childNodes[0];
-control.addEventListener('pointerdown', oncontroldown);
-
-let elements = [...document.querySelectorAll('.article p'), ...document.querySelectorAll('.article li'), 
-                ...document.querySelectorAll('.article code')];
-
-elements.forEach(i => {
-    i.onpointerup = ()=>{
-        if (navigator.canShare) {
-            let selection = document.getSelection(), text = selection.toString();
-            if (text !== "") {
-                let rect = selection.getRangeAt(0).getBoundingClientRect();
-                let articleY =  document.body.getBoundingClientRect().top;
-                control.style.top = `calc(${rect.bottom}px - ${articleY}px + 20px)`;
-                control.style.left = `calc(${rect.left}px + calc(${rect.width}px / 2) - 30px)`;
-                control['html']= getSelectionHtml(); 
-                document.body.appendChild(control);
-            }
-        }
-    }
-});
-
 function dataURItoBlob(dataURI) {
     // convert base64 to raw binary data held in a string
     // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
@@ -208,9 +186,40 @@ async function oncontroldown(event) {
 	document.getSelection().removeAllRanges();
 	event.stopPropagation();
 }
+
 document.onpointerdown = ()=>{	
 	let control = document.querySelector('#control');
 	if (control !== null) {control.remove();document.getSelection().removeAllRanges();}
+}
+
+function webShare() {
+    var control = document.importNode(document.querySelector('template').content, true).childNodes[0];
+    control.addEventListener('pointerdown', oncontroldown);
+
+    let elements = [...document.querySelectorAll('.article p'), ...document.querySelectorAll('.article li'), 
+                    ...document.querySelectorAll('.article code')];
+
+    elements.forEach(i => {
+        i.onpointerup = ()=>{
+            if (navigator.canShare) {
+                let selection = document.getSelection(), text = selection.toString();
+                if (text !== "") {
+                    let rect = selection.getRangeAt(0).getBoundingClientRect();
+                    let articleY =  document.body.getBoundingClientRect().top;
+                    control.style.top = `calc(${rect.bottom}px - ${articleY}px + 20px)`;
+                    control.style.left = `calc(${rect.left}px + calc(${rect.width}px / 2) - 30px)`;
+                    control['html']= getSelectionHtml(); 
+                    document.body.appendChild(control);
+                }
+            }
+        }
+    });
+}
+
+document.onreadystatechange = function () {
+    if (document.readyState == "interactive") {
+        webShare();
+    }
 }
 
 // remove dashboard iframe on mobile
