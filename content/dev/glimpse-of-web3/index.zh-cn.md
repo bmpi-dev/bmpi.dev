@@ -10,6 +10,7 @@ og_image: "https://img.bmpi.dev/6ab55cab-ceaf-3657-77db-4e1660924ca4.png"
 categories: [
     "什么是X"
 ]
+isMermaidEnabled: true
 ---
 
 <div class="heti heti--ancient heti--vertical" style="margin: auto;">
@@ -98,13 +99,13 @@ Mirror 的数据都存在在 [Arweave](https://www.arweave.org/) 之上，Arweav
 
 但 Web3 会不会从去中心化逐渐发展为中心化呢？考虑到比特币的绝大部分算力目前都掌握在少数几个矿池公司手中，再精妙的算法也抵挡不了人性对利益的追求，用户为了方便连隐私都可以不要，更不会为了一个去中心化的技术问题而放弃中心化的便利，Web3 这条去中心化之路注定漫长而难走。
 
-{{<mermaid align="center">}}
-graph LR;
+```mermaid
+graph LR
     Web1 --> Web2
     Web2 -->|Blockchain?| D[Web3]
     Web2 -->|AI?| E[Web3]
     Web2 -->|Other?| F[Web3]
-{{< /mermaid >}}
+```
 
 本文参考的文章有：
 

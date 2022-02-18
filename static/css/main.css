@@ -526,3 +526,10 @@ li .fa-jk {
     font-size: .3em;
     font-family: 'LXGW WenKai';
 }
+
+.mermaid {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: 1px dashed #ccc;
+}

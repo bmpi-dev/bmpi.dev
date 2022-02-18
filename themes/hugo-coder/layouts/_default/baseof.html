@@ -189,19 +189,12 @@
   <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
   <script>
     // init heti: https://github.com/sivan/heti
-    const heti = new Heti('.heti');
+    const heti = new Heti('.heti p, li, a, h1, h2, h3, h4, h5, h6, .title');
     heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
     // init AOS: https://github.com/michalsnik/aos
     AOS.init({
       disable: 'mobile'
     });
-    // add mermaid: https://github.com/mermaid-js/mermaid
-    var mermaid = document.getElementsByClassName('mermaid');
-    if (mermaid.length > 0) {
-      var tag = document.createElement('script');
-      tag.src = 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js';
-      document.getElementsByTagName('body')[0].appendChild(tag);
-    }
     // add markup: https://github.com/gera2ld/markmap
     let markups = document.querySelectorAll('code[data-lang=markmap]');
     Array.prototype.forEach.call(markups, function(e) {
@@ -212,6 +205,24 @@
       e.parentElement.replaceWith(markupDiv);
     });
   </script>
+  {{ if .Params.isMermaidEnabled }}
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js"></script>
+  <script>
+    // add mermaid: https://github.com/mermaid-js/mermaid
+    let mermaidBlocks = document.querySelectorAll('code[data-lang=mermaid]');
+    Array.prototype.forEach.call(mermaidBlocks, function(e) {
+      let text = e.textContent;
+      let mermaidDiv = document.createElement('div');
+      mermaidDiv.className = 'mermaid';
+      mermaidDiv.textContent = text;
+      e.parentElement.replaceWith(mermaidDiv);
+    });
+    window.mermaid.mermaidAPI.initialize(
+    window.mermaidOptions
+      ? window.mermaidOptions
+      : { securityLevel: "loose", theme: "base" });
+  </script>
+  {{ end }}
   {{ end }}
 
 </body>
