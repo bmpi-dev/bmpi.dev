@@ -194,7 +194,7 @@ document.onpointerdown = ()=>{
 
 function webShare() {
     console.log('start init web share feature');
-    
+
     var control = document.importNode(document.querySelector('template').content, true).childNodes[0];
     control.addEventListener('pointerdown', oncontroldown);
 
@@ -218,9 +218,13 @@ function webShare() {
     });
 }
 
-window.addEventListener('DOMContentLoaded', (event) => {
+if( document.readyState !== 'loading' ) {
     webShare();
-});
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        webShare();
+    });
+}
 
 // remove dashboard iframe on mobile
 
