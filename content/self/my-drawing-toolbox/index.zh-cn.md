@@ -7,6 +7,8 @@ keywords: "浏览器插件、Chrome插件、SEO浏览器插件"
 description: "本文分享我常用的绘图工具，包括白板绘图、文本绘图、代码绘图与专业绘图等工具。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png"
+isMarkupEnabled: true
+isMermaidEnabled: true
 ---
 
 由于在写作中经常需要配图，本文分享下我常用的绘图工具以及如何存储并展示配图。
@@ -75,11 +77,105 @@ skinparam monochrome true
 
 可以使用在线编辑器 [PlantUML Editor](http://www.plantuml.com/plantuml/uml/) 在线编辑预览。
 
+<u title="2022/02/18日更新">除了PlantUML外还可以用 [Markmap](https://github.com/gera2ld/markmap)</u>，相比PlantUML的好处在于它基于Web，不需要通过渲染生成图片的方式就可以从文本生成可交互的思维导图。比如下面的通过Markdown生成思维导图的例子：
+
+```text
+# markmap
+
+## Links
+
+- <https://markmap.js.org/>
+- [GitHub](https://github.com/gera2ld/markmap)
+
+## Related
+
+- [coc-markmap](https://github.com/gera2ld/coc-markmap)
+- [gatsby-remark-markmap](https://github.com/gera2ld/gatsby-remark-markmap)
+
+## Features
+
+- links
+- **inline** ~~text~~ *styles*
+- multiline
+  text
+- `inline code`
+-
+    ```js
+    console.log('code block');
+    ```
+- Katex - $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+
+## 当然也支持中文啦
+```
+
+通过此库最终生成的效果：
+
+```markmap
+# markmap
+
+## Links
+
+- <https://markmap.js.org/>
+- [GitHub](https://github.com/gera2ld/markmap)
+
+## Related
+
+- [coc-markmap](https://github.com/gera2ld/coc-markmap)
+- [gatsby-remark-markmap](https://github.com/gera2ld/gatsby-remark-markmap)
+
+## Features
+
+- links
+- **inline** ~~text~~ *styles*
+- multiline
+  text
+- `inline code`
+-
+    ```js
+    console.log('code block');
+    ```
+- Katex - $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+
+## 当然也支持中文啦
+```
+
 ### 架构图
 
 ![](https://img.bmpi.dev/48504c01-c2d0-e05a-1eda-d82b88f6496d.png)
 
 源文本见 [arch_aws.plantuml](https://raw.githubusercontent.com/bmpi-dev/bmpi.dev/master/content/dev/guide-to-serverless/arch_aws.plantuml)。
+
+<u title="2022/02/18日更新">除了PlantUML外还可以用 [Mermaid](https://github.com/mermaid-js/mermaid) </u>来通过文本生成各种UML图。比如下面通过文本生成时序图的例子：
+
+```text
+sequenceDiagram
+    autonumber
+    张三->>李四: Hello John, how are you?
+    loop Healthcheck
+        李四->>李四: Fight against hypochondria
+    end
+    Note right of 李四: Rational thoughts!
+    李四-->>张三: Great!
+    李四->>王五: How about you?
+    王五-->>李四: Jolly good!
+```
+
+生成的效果图如下：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    张三->>李四: Hello John, how are you?
+    loop Healthcheck
+        李四->>李四: Fight against hypochondria
+    end
+    Note right of 李四: Rational thoughts!
+    李四-->>张三: Great!
+    李四->>王五: How about you?
+    王五-->>李四: Jolly good!
+```
+
+GitHub的Markdown已经支持Mermaid了，相比PlantUML的优势在于其原生支持Web，无需通过生成图片即可集成到网站页面中。
 
 关于文本绘图的进一步思考，推荐看 [C4 Model](https://c4model.com/) 的作者这篇 [Software architecture diagrams as text](https://dev.to/simonbrown/visio-draw-io-lucidchart-gliffy-etc-not-recommended-for-software-architecture-diagrams-4bmm)。
 
@@ -123,5 +219,3 @@ skinparam monochrome true
 ## 关于绘图工具的思考
 
 没有一种工具是万能的，万能如 Excalidraw 也无法替代 Lucidchart/Draw.io/Google Drawings/Visio 这些复杂的工具（他们更适合复杂的对精确性有高度要求的图）。更没有一种软件工具能替代纸和笔。工具更重要的是背后使用它的人，能用图片讲好一个故事才是我们需要不断提升的能力，一个工具能做到不限制你的发挥就算适合的好的工具。
-
-***文章更新时间：2021年2月28日***
