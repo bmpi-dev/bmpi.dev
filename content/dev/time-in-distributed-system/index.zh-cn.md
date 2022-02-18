@@ -10,6 +10,7 @@ og_image: "https://img.bmpi.dev/3d3413ee-7024-5ff7-5904-e9120dd5690f.png"
 categories: [
     "什么是X"
 ]
+isMarkupEnabled: true
 ---
 
 - [多出一秒让互联网暂停](#多出一秒让互联网暂停)
@@ -37,7 +38,61 @@ categories: [
 - [结语](#结语)
 - [参考文章 && 进阶阅读](#参考文章--进阶阅读)
 
-{{< figure src="https://img.bmpi.dev/3d3413ee-7024-5ff7-5904-e9120dd5690f.png" caption="和本文中时间相关概念">}}
+<!-- {{< figure src="https://img.bmpi.dev/3d3413ee-7024-5ff7-5904-e9120dd5690f.png" caption="和本文中时间相关概念">}} -->
+
+```markmap
+# 时间
+## 物理时钟
+### 时间标准
+#### 与地球自转相关
+##### 恒星时
+##### 太阳时
+#### 与天体运动相关
+##### 历书时（Ephemeris Time）
+##### 相对论力学时
+#### 与谐波振荡相关
+##### 原子时
+###### 国际原子时（TAI）
+###### 协调世界时（UTC/Zulu time）
+###### GPS时
+### 时钟仪器
+#### 太阳钟
+#### 机械钟
+#### 石英钟
+#### 原子钟
+### 时钟同步
+#### PTP
+#### NTP
+#### GPS
+#### 北斗授时
+#### TrueTime
+### 时间表示
+#### ISO 8601
+#### RFC 3339
+#### Unix Time/Timestamp/Epoch time/Posix time
+### 时钟类型
+#### 墙上时钟（Wall Clock）
+#### 单调时钟（Monotonic Clock）
+## 逻辑时钟
+### 相关理论
+#### 狭义相对论（Special Relativity）
+#### 序理论（Order theory）
+##### 偏序（Partially ordered set）
+##### 全序（Total order）
+#### 因果排序（Causal ordering）
+### 算法
+#### Lamport timestamp
+#### Vector clock
+#### 混合逻辑时钟
+#### 布隆时钟（Bloom clock）
+### 应用场景
+#### 分布式锁
+#### 分布式节点状态同步（Replication）
+#### 数据冲突检测
+#### 强制因果通信
+#### CRDT
+#### 实时协作应用（Collaborative）
+```
 
 ## 多出一秒让互联网暂停
 
@@ -212,7 +267,7 @@ e<sub>i</sub> 导致了事件 e<sub>j</sub>，那么一定 e<sub>i</sub> 发生�
 
 发送进程端：
 
-```
+```c
 # event is known
 time = time + 1;
 # event happens
@@ -221,7 +276,7 @@ send(message, time);
 
 接受进程端：
 
-```
+```c
 (message, time_stamp) = receive();
 time = max(time_stamp, time) + 1;
 ```

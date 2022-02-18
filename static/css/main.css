@@ -518,3 +518,11 @@ li .fa-jk {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 60px; opacity: 0;}
 }
+
+.markmap > svg {
+    width: 100%;
+    height: 350px;
+    border: 1px dashed #ccc;
+    font-size: .3em;
+    font-family: 'LXGW WenKai';
+}

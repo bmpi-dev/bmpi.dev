@@ -95,6 +95,10 @@
   {{ end }}
   {{ end }}
 
+  {{ if .Params.isMarkupEnabled }}
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.1.2/dist/index.min.js"></script>
+  {{ end }}
+
   {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ . | relURL }}" />
   {{ end }}
@@ -184,24 +188,29 @@
   {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
   <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
   <script>
+    // init heti: https://github.com/sivan/heti
     const heti = new Heti('.heti');
     heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
-
+    // init AOS: https://github.com/michalsnik/aos
     AOS.init({
       disable: 'mobile'
     });
-
+    // add mermaid: https://github.com/mermaid-js/mermaid
     var mermaid = document.getElementsByClassName('mermaid');
     if (mermaid.length > 0) {
       var tag = document.createElement('script');
       tag.src = 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js';
       document.getElementsByTagName('body')[0].appendChild(tag);
-
-      var tag = document.createElement('script');
-      tag.type = 'text/javascript';
-      tag.text = "mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'})";
-      document.getElementsByTagName('body')[0].appendChild(tag);
     }
+    // add markup: https://github.com/gera2ld/markmap
+    let markups = document.querySelectorAll('code[data-lang=markmap]');
+    Array.prototype.forEach.call(markups, function(e) {
+      let text = e.textContent;
+      let markupDiv = document.createElement('div');
+      markupDiv.className = 'markmap';
+      markupDiv.textContent = text;
+      e.parentElement.replaceWith(markupDiv);
+    });
   </script>
   {{ end }}
 

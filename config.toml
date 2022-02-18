@@ -14,7 +14,7 @@ paginate = 9999
 
 pygmentsstyle = "b2"
 pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+pygmentscodefencesguesssyntax = false
 pluralizelisttitles = false
 
 FootnoteReturnLinkContents = "↑"

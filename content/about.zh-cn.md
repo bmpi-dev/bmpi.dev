@@ -96,7 +96,9 @@ outputs = "html"
 
 ### 本站变更日志
 
-```
+```text
+✔ 文章页Markdown支持Markmap @done(22-02-18 1:16)
+  https://github.com/gera2ld/markmap
 ✔ 文章页Markdown支持Notice @done(22-02-16 8:39)
   用法：https://learn.netlify.app/en/shortcodes/notice/
 ✔ 文章页Markdown支持Mermaid @done(22-02-16 8:39)
