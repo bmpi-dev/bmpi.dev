@@ -97,6 +97,12 @@
 
   {{ if .Params.isMarkupEnabled }}
   <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.1.2/dist/index.min.js"></script>
+  <style>
+    code[class*="language-"], pre[class*="language-"] {
+      text-shadow: none !important;
+      font-size: initial !important;
+    }
+  </style>
   {{ end }}
 
   {{ range .Site.Params.custom_css }}
