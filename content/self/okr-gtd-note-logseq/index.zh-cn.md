@@ -117,7 +117,7 @@ Logseq 有 [极为强大的查询能力](https://logseq.github.io/#/page/Advance
 
 1. 通过 Key Result 标题获取其具体内容。因为我们每个 Key Result 的具体内容都在其 Objective 页面存放，所以需要使用 Logseq 的高级查询实现：
 
-```
+```clojure
 #+BEGIN_QUERY
 {:title "KR内容"
  :query [:find (pull ?b [*])
@@ -136,7 +136,7 @@ Logseq 有 [极为强大的查询能力](https://logseq.github.io/#/page/Advance
 
 2. 统计 Key Result 关联的所有完成的 TODO 任务的总耗费时间。
 
-```
+```clojure
 #+BEGIN_QUERY
 {:title [:code "花费时间 (分钟)"]
 :query [:find (sum ?spent-min)
@@ -158,7 +158,7 @@ Logseq 有 [极为强大的查询能力](https://logseq.github.io/#/page/Advance
 
 3. 统计 Key Result 关联的所有完成的 TODO 任务的总打卡次数。
 
-```
+```clojure
 #+BEGIN_QUERY
 {:title "打卡（次数）"
  :query [:find (count ?b)
@@ -201,7 +201,7 @@ Logseq 有 [极为强大的查询能力](https://logseq.github.io/#/page/Advance
 
 Logseq 新建一个 TODO 很简单，比如：
 
-```
+```text
 TODO 读《毛选》
 DOING 读《毛选》
 DONE 读《毛选》
@@ -215,7 +215,7 @@ DONE 读《毛选》
 
 - 📅 在做计划事项。
 
-```
+```clojure
 #+BEGIN_QUERY
 {:query [:find (pull ?b [*])
          :where
@@ -232,7 +232,7 @@ DONE 读《毛选》
 
 - 🌞 待做计划事项。
 
-```
+```clojure
 #+BEGIN_QUERY
 {:query [:find (pull ?b [*])
          :where
@@ -249,7 +249,7 @@ DONE 读《毛选》
 
 - ⏰ 在做其他事项。
 
-```
+```clojure
 #+BEGIN_QUERY
 {:query [:find (pull ?b [*])
          :where
@@ -266,7 +266,7 @@ DONE 读《毛选》
 
 - 🚮 待做其他事项。
 
-```
+```clojure
 #+BEGIN_QUERY
 {:query [:find (pull ?b [*])
          :where

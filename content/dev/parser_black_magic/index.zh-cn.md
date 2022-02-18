@@ -50,8 +50,10 @@ void do_awesome_stuff(int a, string b) {
     /* Code here */
 }
 ```
+
 Token化为：
-```
+
+```text
 TYPE: void
 IDENTIFIER: do_awesome_stuff
 OPEN_BRACKET: (
@@ -140,7 +142,7 @@ jison到底有多强，可以从这里感受下: [ProjectsUsingJison](https://gi
 
 todo文件是一种类似yaml/python缩进风格的纯文本格式的文件，如下：
 
-```
+```text
 test1:
     ☐ test list1 @started(19-12-11 21:16)
     > test list1 comm
@@ -257,7 +259,8 @@ lexer.addRule(/$/gm, function() {
 ```
 
 Token化的核心是使用特殊的Token替代被Token化文件中的符合正则表达式的字符串，我们这里只关注缩进INDENT/DEDENT和Todo待办事项的NAME，还有文件结束符EOF，所以你可以猜到最终被lexer输出的是个Token List:
-```
+
+```text
 NAME: test1:
 INDENT
 NAME: ☐ test list1 @started(19-12-11 21:16)
@@ -279,7 +282,7 @@ EOF
 
 有了上述Token List做输入给jison做BNF语法分析，最终解析出json AST。先看BNF语法：
 
-```
+```json
 {
   'bnf': {
     'todo-plus': [
@@ -333,7 +336,7 @@ module.exports = function render(doingJson, criticalJson) {
 };
 ```
 
-```
+```html
 <ul class='todos' style='margin: 10px 0;'>
 {{#todo}}
 <li class='todo' style='list-style-type: none;'> {{ name }} </li>

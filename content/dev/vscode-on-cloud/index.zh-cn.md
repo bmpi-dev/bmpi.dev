@@ -171,7 +171,7 @@ pulumi up # 使用 Pulumi 设置 AWS EC2
 
 一句话总结就是：
 
-```
+```text
 Cloud IDE, Coding Anytime Anywhere.
 ```
 

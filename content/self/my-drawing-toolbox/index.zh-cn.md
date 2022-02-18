@@ -59,7 +59,7 @@ Excalidraw 的优点有以下：
 
 文本如下：
 
-```
+```text
 @startmindmap
 skinparam monochrome true
 * Markdown排版

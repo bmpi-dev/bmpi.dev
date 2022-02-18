@@ -13,7 +13,7 @@ og_image: "https://img.bmpi.dev/d0286afd-989a-0500-0aca-c91bee9893d2.png"
 此文有更新，见我这条推文系列: https://twitter.com/madawei2699/status/1391410996644769796
 {{% /notice %}}
 
-```
+```text
 股市是人性的放大器，币圈是人性的修罗场
 ```
 

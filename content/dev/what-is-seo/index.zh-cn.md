@@ -195,7 +195,7 @@ sitemap相当于站点地图，当然一般网站也会有html版本的站点地
 
 如下是我曾做过的一个站点的robots.txt：
 
-```
+```text
 User-agent: *
 Disallow: /search
 Disallow: /search/

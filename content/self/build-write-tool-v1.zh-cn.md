@@ -122,19 +122,19 @@ hexo.on('new', function(data){
 
 在Mac打开iTerm终端
 
-```
+```bash
 cd blog
 ```
 
 新建文章并用Mou编写文章内容
 
-```
+```bash
 hexo new title
 ```
 
 发布文章到GitHub Pages
 
-```
+```bash
 hexo d -g
 ```
 
@@ -144,7 +144,7 @@ hexo d -g
 
 如果我们想回到某一个写作版本的话也可以很方便的通过GitHub仓库里面进行回滚操作。每次当我们执行hexo d -g命令的时候实际上就是产生一个版本，你可以登陆到GitHub仓库里面看到每次提交的版本，当然这个仓库存放的是已经产生的Html文件，也就是在blog目录里面的public目录，这个目录的所有文件都会被发布到GitHub仓库里面去。但是source/_post目录里面存放的才是你真正的源文件，都是些md文件，那这些文件并没有被GitHub仓库管理，所以为了对这些源文件进行版本管理，你需要在GitHub新建一个仓库用来存放blog目录，blog目录里面有些文件并不需要发布到GitHub，这些不需要的文件你可以在.gitignore（存放在blog根目录下，如果没有你可以新建一个）里面写明，我的这个文件内容如下：
 
-```
+```text
 .DS_Store
 Thumbs.db
 db.json
@@ -156,7 +156,7 @@ public/
 
 这里面的node_modules目录里面放着一些node的模块，public目录存放着hexo产生的html文件（也就是你的博客）。当你部署好这个仓库后，你可以通过以下git命令来把你的博客系统发布GitHub仓库：
 
-```
+```bash
 git add . #把此次更改写入git缓存
 git commit -m "some changes" #把此次更改提交到本地库里去
 git push #把本地库更改同步到GitHub远程库里去
@@ -193,7 +193,7 @@ git status #查看本地git库状态
 在这里把src替换成泥实际目录的绝对路径。dest里面替换access_key、secret_key及bucket。
 这样每当你在src目录里添加图片后，执行如下命令即可把src目录的文件推送到bucket里面。
 
-```
+```bash
 qrsync conf.json
 ```
 

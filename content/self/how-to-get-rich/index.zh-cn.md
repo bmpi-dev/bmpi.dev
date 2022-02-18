@@ -193,7 +193,7 @@ Combining all three forms of leverage is a magic combination
 
 这是一个神奇的组合，这就是为什么你看到技术初创公司突然爆发的原因，因为它使用大量的杠杆，成功后自然获得巨大的超额回报。
 
-```
+```text
 Product and media leverage are permissionless
 ```
 

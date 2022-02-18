@@ -34,7 +34,7 @@ Markdown由 John Gruber 于 2004 年创立，它是一种纯文本标记语言�
 
 上述思维导图使用VSCode插件[`PlantUML`](https://plantuml.com/zh/)[^2]预览纯文本生成的，纯文本如下：
 
-```
+```text
 @startmindmap
 skinparam monochrome true
 * Markdown排版

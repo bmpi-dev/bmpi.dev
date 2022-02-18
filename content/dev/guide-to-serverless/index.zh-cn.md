@@ -196,7 +196,7 @@ CMD [ "python", "./main.py" ]
 
 需要先获取 Tushare 的 API Token 后，在本地运行 Docker：
 
-```
+```bash
 docker build -t invest-alchemy/core . # 构建
 docker run -t -i -e TUSHARE_API_TOKEN=xxxx invest-alchemy/core # 本地运行
 ```
@@ -237,7 +237,7 @@ docker push replace_with_your_ecr_addr.dkr.ecr.us-east-1.amazonaws.com/invest-al
 
 ##### IAM
 
-```
+```yaml
 ######################### Role used by the container regulates what AWS services the task has access to, e.g. your application is using a DynamoDB, then the task role must give the task access to Dynamo.
 resource "aws_iam_role" "ecs_service_role" {
   name               = "${var.project}_ecs_service_role_${var.env}"

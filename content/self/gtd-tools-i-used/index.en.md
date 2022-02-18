@@ -119,7 +119,7 @@ With this VSCode plug-in, I solved the problem of editing to-do items on the com
 
 Each area you focus on is managed using a todo file. Then you can split countless projects in this area. Each project can be divided into sub-projects indefinitely. Each sub-project is finally disassembled into executable tasks. Item, use shortcut keys to quickly mark the three states of this to-do item **(started / done / canceled)**, and you can also use **@critical** to mark whether the task is important.
 
-```
+```text
 Project B_1:
     ☐ Project A_1_1 @started(19-12-17 20:45)
     ✔ Project A_1_2 @done(19-12-17 20:45)

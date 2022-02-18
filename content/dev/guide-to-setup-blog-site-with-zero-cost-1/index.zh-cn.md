@@ -83,7 +83,7 @@ isCJKLanguage: true
 
 1. 安装Hugo和Git
 
-```
+```bash
 brew install hugo
 brew install git
 ```
@@ -92,13 +92,13 @@ brew install git
 
 在 Hugo 官方的[主题站](https://themes.gohugo.io/)我们可以找到大量别人已经开发好的主题皮肤。我们以本博客主题 [Coder](https://themes.gohugo.io/hugo-coder/) 为例：
 
-```
+```bash
 hugo new site bmpi.dev
 ```
 
 执行这个命令后我们得到了这些文件:
 
-```
+```text
 .
 ├── archetypes
 │   └── default.md
@@ -116,7 +116,7 @@ hugo new site bmpi.dev
 
 然后开始添加主题：
 
-```
+```bash
 cd bmpi.dev
 git init
 git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
@@ -135,13 +135,13 @@ theme = "hugo-coder"
 
 复制一些主题样本数据：
 
-```
+```bash
 cp -R themes/hugo-coder/exampleSite/ .
 ```
 
 启动！
 
-```
+```bash
 hugo server
 ```
 
@@ -165,7 +165,7 @@ GitHub 目前已经从代码存放库进化到了无所不包，有人在里面�
 
 接下来让我们把上一步创建的网站数据通过 Git 上传到 GitHub 托管。
 
-```
+```bash
 git add .
 git commit -m "first commit"
 git remote add origin https://github.com/bmpi-dev/test.bmpi.dev.git
@@ -176,7 +176,7 @@ git push -u origin master
 
 至此，我们已经将网站上传到了 GitHub 。如果之后你要新增文章后上传也只需要执行：
 
-```
+```bash
 git add .
 git commit -m "update"
 git push
@@ -303,7 +303,7 @@ theme = "hugo-coder"
 
 对于商业产品用户都是国内的话那必须要备案，备案后你也可以使用国内的云服务和 CDN 了，这样网站在国内的加载速度也会很快。
 
-```
+```text
 最初，
 没有人在意这场灾难，
 这不过是一场山火，

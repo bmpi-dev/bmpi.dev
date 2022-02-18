@@ -71,7 +71,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 而用 Beancount 记账是这样的：
 
-```
+```text
 2021-10-01 * "请客吃饭"
   Liabilities:CreditCard:CN:PINGAN-6467      -83.0 CNY
   Expenses:Food:Lunch
@@ -98,7 +98,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 在`accounts`这个目录里存放着：
 
-```
+```text
 .
 ├── assets.bean # 资产账户，包括银行卡、信用卡、投资组合、房产、车、加密币钱包、RSU 等账户
 ├── liabilities.bean # 负债账户
@@ -114,7 +114,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 #### liabilities.bean
 
-```
+```text
 ;房贷
 2021-02-11 open Liabilities:Bank:CN:BOC:Mortgage:Loan       CNY ;中国银行
 
@@ -128,7 +128,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 #### income.bean
 
-```
+```text
 ;主动收入
 2021-02-11 open Income:CN:Salary:XYZ    CNY     ;上班公司收入
 
@@ -166,7 +166,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 #### expenses.bean
 
-```
+```text
 ;居家
 2021-02-11 open Expenses:Home:Phone ;手机电话
 2021-02-11 open Expenses:Home:Mortgage:Loan:Interest ;房贷利息
@@ -256,7 +256,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 #### equity.bean
 
-```
+```text
 ;权益账户
 
 2021-02-11 open Equity:Opening-Balances
@@ -292,7 +292,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 #### price.bean
 
-```
+```text
 ;Commodity Price
 
 ;🏠
@@ -339,7 +339,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 由于日常消费的账目是最多的，所以每月一个文件来记录消费账目。比如 10 月份的账目存放在`./2021/0-default/10-expenses.bean`文件中：
 
-```
+```text
 2021-10-03 ! "AWS" "9月账单"
   Liabilities:CreditCard:CN:CMB-9848          -10.35 USD @@ 66.72 CNY
   Expenses:Invest:Dev
@@ -371,7 +371,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 #### 周期性记账
 
-```
+```text
 .
 ├── 00.bean
 ├── bankcard.bean # 银行卡转账、信用卡还款、提现等
@@ -391,7 +391,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 1. 在`./accounts/assets.bean`里创建被动收入投资组合货币
 
-```
+```text
 2021-02-11 commodity BDSR
   export: "BDSR"
   name: "被动收入投资组合"
@@ -401,14 +401,14 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 2. 在`accounts/equity.bean`初始化投资组合资产
 
-```
+```text
 2021-02-12 pad Assets:Current:Invest:Portfolio:CN:HTZQ Equity:Opening-Balances
 2021-02-13 balance Assets:Current:Invest:Portfolio:CN:HTZQ      185418.43 BDSR
 ```
 
 3. 在`2021/1-invest/00.bean`里记录投资组合资金出入
 
-```
+```text
 2021-05-31 * "BDSR" "卖出投资组合"
   Assets:Current:Invest:Portfolio:CN:HTZQ -123456 BDSR @@ 123456.00 CNY
   Liabilities:CreditCard:CN:POS-TX
@@ -416,13 +416,13 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 4. 在`2021/0-default/event.bean`里记录投资组合资金出入事件
 
-```
+```text
 2021-05-31 event "投资" "华泰证券转出资金123456元至信用卡"
 ```
 
 5. 在`accounts/price.bean`创建自定义货币汇率
 
-```
+```text
 ;💹
 2021-01-31 price BDSR                                  1.533 CNY
 2021-05-31 price BDSR                                  1.581 CNY
@@ -439,7 +439,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 1. 创建加密货币与钱包账户
 
-```
+```text
 ;₿
 2021-02-11 commodity BTC
   export: "BTC"
@@ -467,14 +467,14 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 2. 初始化资产
 
-```
+```text
 2021-02-12 pad Assets:Current:Crypto:ImToken:Wallet Equity:Opening-Balances
 2021-02-13 balance Assets:Current:Crypto:ImToken:Wallet 0.1318 ETH
 ```
 
 3. 记录交易
 
-```
+```text
 2021-06-21 * "币安" "买入ETH"
   Assets:Current:Bank:CN:CMB               -10000.0 CNY @@ 0.7942440945 ETH
   Assets:Current:Bank:CN:CMB                -2700.0 CNY @@ 0.2144459055 ETH
@@ -483,7 +483,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 4. 创建自定义货币汇率
 
-```
+```text
 2021-02-14 price BTC                                   305528 CNY
 2021-02-14 price BNB                                   838   CNY
 2021-02-14 price ETH                                   11725  CNY
@@ -507,7 +507,7 @@ og_image: "https://img.bmpi.dev/3f09e4aa-6318-36ba-4d94-7296af047f21.png"
 
 可以通过给自住房创建人民币的变种价格（估值价格），比如我的自住房是这样记账的：
 
-```
+```text
 ;创建房产货币
 2021-02-11 commodity HOUSE.XYZ
   name: "你房子的名字"
@@ -671,7 +671,7 @@ if __name__ == '__main__':
 
 这样每月月初就可以收到一份统计家庭月开支的报表：
 
-```
+```text
 2021/9
 Net income report
 Monthly total income
