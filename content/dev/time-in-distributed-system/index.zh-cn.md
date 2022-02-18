@@ -10,7 +10,8 @@ og_image: "https://img.bmpi.dev/3d3413ee-7024-5ff7-5904-e9120dd5690f.png"
 categories: [
     "什么是X"
 ]
-isMarkupEnabled: true
+markmap:
+  enabled: true
 ---
 
 - [多出一秒让互联网暂停](#多出一秒让互联网暂停)

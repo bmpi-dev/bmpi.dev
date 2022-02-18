@@ -7,7 +7,8 @@ keywords: "浏览器插件、Chrome插件、SEO浏览器插件"
 description: "本文分享我常用的绘图工具，包括白板绘图、文本绘图、代码绘图与专业绘图等工具。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png"
-isMarkupEnabled: true
+markmap:
+  enabled: true
 isMermaidEnabled: true
 ---
 

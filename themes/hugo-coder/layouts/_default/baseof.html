@@ -95,7 +95,7 @@
   {{ end }}
   {{ end }}
 
-  {{ if .Params.isMarkupEnabled }}
+  {{ if .Params.markmap.enabled }}
   <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.1.2/dist/index.min.js"></script>
   <style>
     code[class*="language-"], pre[class*="language-"] {
@@ -201,16 +201,9 @@
     AOS.init({
       disable: 'mobile'
     });
-    // add markup: https://github.com/gera2ld/markmap
-    let markups = document.querySelectorAll('code[data-lang=markmap]');
-    Array.prototype.forEach.call(markups, function(e) {
-      let text = e.textContent;
-      let markupDiv = document.createElement('div');
-      markupDiv.className = 'markmap';
-      markupDiv.textContent = text;
-      e.parentElement.replaceWith(markupDiv);
-    });
   </script>
+  {{ end }}
+
   {{ if .Params.isMermaidEnabled }}
   <script src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js"></script>
   <script>
@@ -229,6 +222,22 @@
       : { securityLevel: "loose", theme: "base" });
   </script>
   {{ end }}
+
+  {{ if .Params.markmap.enabled }}
+  <script>
+    // add markmap: https://github.com/gera2ld/markmap
+    let markups = document.querySelectorAll('code[data-lang=markmap]');
+    var i = 0;
+    Array.prototype.forEach.call(markups, function(e) {
+      let text = e.textContent;
+      let markupDiv = document.createElement('div');
+      markupDiv.className = 'markmap';
+      markupDiv.textContent = text;
+      markupDiv.id = 'markmap-' + '{{ .Params.markmap.id }}-' + i;
+      e.parentElement.replaceWith(markupDiv);
+      i++;
+    });
+  </script>
   {{ end }}
 
 </body>
