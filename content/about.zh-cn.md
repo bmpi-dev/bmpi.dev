@@ -84,6 +84,11 @@ id = "about"
 [![Twitter Follow](https://img.shields.io/twitter/follow/madawei2699?style=social)](https://twitter.com/madawei2699)
 
 电报群：[![](https://img.shields.io/badge/-BMPI-%23000000?style=flat&logo=telegram&logoColor=ffffff)](https://t.me/bmpi_group)
+
+### 品牌赞助
+
+本站也接受品牌赞助，具体赞助方式见这个 <a href="/_ad" rel="nofollow">赞助</a> 页面。
+
 ## 流量站日志频道
 
 分享我如何在一周开发一个图片流量站并在一个月达到Google千万索引自然搜索达百万UV并赚取上千美刀💰然后在三个月被Google Kill的神奇经历。
