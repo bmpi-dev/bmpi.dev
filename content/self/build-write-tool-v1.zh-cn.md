@@ -2,7 +2,7 @@
 title: "打造优雅高效的写作环境"
 date: 2016-06-26
 draft: false
-tags: ["写作系统", "Hexo", "GitHub Pages", "图床"]
+tags: ["写作", "Hexo", "GitHub Pages", "图床"]
 aliases: [
     "/zh-cn/self/build-write-tool-v1/"
 ]

@@ -315,6 +315,9 @@ a[href^="#fn:"]:after{ content: ']' }
   font-size: 20px !important;
   line-height: 1.8 !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+  a {
+    margin: 0 1px;
+  }
   @media only screen and (max-width : 768px) {
       border: none;
       padding: 0 0 0 0;
