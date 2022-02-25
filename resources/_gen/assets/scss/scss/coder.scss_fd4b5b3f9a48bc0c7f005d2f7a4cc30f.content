@@ -269,7 +269,13 @@ a[href^="#fn:"]:after {
       font-size: 18px !important;
       line-height: 1.6 !important; } }
 .heti blockquote {
-  background-color: #f7f7f7 !important; }
+  background-color: #f7f7f7 !important;
+  font-style: normal; }
+  .heti blockquote p {
+    margin: 10px 0; }
+
+.heti code {
+  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important; }
 
 .my-skill {
   display: flex;

@@ -330,6 +330,14 @@ a[href^="#fn:"]:after{ content: ']' }
 
 .heti blockquote {
   background-color: #f7f7f7 !important;
+  font-style: normal;
+  p {
+    margin: 10px 0;
+  }
+}
+
+.heti code {
+  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
 }
 
 .my-skill {
