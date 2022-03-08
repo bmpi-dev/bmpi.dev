@@ -44,8 +44,8 @@ FootnoteReturnLinkContents = "↑"
     info3Tooltip = "ETF Trader"
     description = "Study + Craft + Invest = BMPI.dev"
     keywords = "life,dev,trade,passive income,money,developer,Self-management,IT technology,investment transactions"
-    avatarurl = "images/mdw2.png"
-    logoImg = "images/mdw2.png"
+    avatarurl = "images/avatar/5_512.PNG"
+    logoImg = "images/logo.png"
     header = "BMPI.dev"
 
     twitter = "madawei2699"
@@ -53,8 +53,7 @@ FootnoteReturnLinkContents = "↑"
     telegram = "bmpi365"
     zhihu = "improve365"
 
-    favicon_32 = "images/f3/favicon-32x32.png"
-    favicon_16 = "images/f3/favicon-16x16.png"
+    favicon_root_path = "images/ico"
 
     # footercontent = "self/dev/money"
 
