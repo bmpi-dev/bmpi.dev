@@ -6,7 +6,7 @@ tags: ["编程语言", "泛型", "参数多态", "模版", "参数化类型"]
 keywords: ""
 description: "本文介绍Go/Java/C/C++/Swift等编程语言是如何实现泛型的。"
 isCJKLanguage: true
-og_image: "https://img.bmpi.dev/8a530b2b-cc37-2b49-7601-cc7362be3d5c.png"
+og_image: "https://img.bmpi.dev/14cb2569-57a7-76b8-05f0-ce3dcf3b0886.png"
 categories: [
     "编程技术"
 ]
