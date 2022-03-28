@@ -390,7 +390,7 @@ flowchart LR
 
 总的来说Go在1.18实现泛型的方式和Rust挺类似的，如果感兴趣可以看这篇Rust泛型的文章：
 
-- [透过 Rust 探索系统的本原：泛型](https://mp.weixin.qq.com/s/ZA-_BARVAWe0Q4eM0lYgwg)
+- [透过 Rust 探索系统的本原：泛型](https://mp.weixin.qq.com/s/SJsEurfZr4TG-I3rncid5A)
 
 ## 总结
 
