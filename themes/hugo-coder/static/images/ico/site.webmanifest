@@ -1,6 +1,7 @@
 {
     "name": "BMPI.dev",
     "short_name": "BMPI",
+    "start_url": "/index.html",
     "icons": [
         {
             "src": "/images/ico/android-chrome-192x192.png",
