@@ -4,7 +4,7 @@
   "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/5e008c07-4099-4afe-a9a7-a36cea1bed4a/deploy-status)](https://app.netlify.com/sites/stupefied-kalam-52d501/deploys)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node ./node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "dependencies": {
     "node-fetch": "^2.6.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-shell": "^0.8.0",
+    "workbox-build": "^6.5.2"
   }
 }

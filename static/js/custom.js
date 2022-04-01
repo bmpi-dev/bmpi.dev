@@ -1,3 +1,12 @@
+// load sw.js
+if("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").then(swReg => {}).catch(err => {
+            console.error('Service Worker Error', err);
+        });
+    });
+}
+
 function httpGetAsync(theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 

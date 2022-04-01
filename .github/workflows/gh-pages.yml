@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --gc
+        run: npm install gulp -g && npm i && gulp build
 
       - name: New Post Check
         uses: actions/setup-node@v2
