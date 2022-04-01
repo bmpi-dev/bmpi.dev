@@ -114,6 +114,8 @@ id = "about"
 ### 本站变更日志
 
 ```text
+✔ 添加PWA支持 @done(22-04-01 22:37)
+  Service Worker + Mainfest
 ✔ 文章页Markdown支持Markmap @done(22-02-18 1:16)
   https://github.com/gera2ld/markmap
 ✔ 文章页Markdown支持Notice @done(22-02-16 8:39)
