@@ -178,7 +178,81 @@ sequenceDiagram
 
 GitHub的Markdown已经支持Mermaid了，相比PlantUML的优势在于其原生支持Web，无需通过生成图片即可集成到网站页面中。
 
-关于文本绘图的进一步思考，推荐看 [C4 Model](https://c4model.com/) 的作者这篇 [Software architecture diagrams as text](https://dev.to/simonbrown/visio-draw-io-lucidchart-gliffy-etc-not-recommended-for-software-architecture-diagrams-4bmm)。
+如果想更灵活的绘制复杂的架构图，推荐使用PlantUML底层使用的[graphviz](https://graphviz.org/)工具，它的效果可参考这篇[Graphviz and Hugo](https://mullikine.github.io/posts/graphviz/)文章。甚至可以用它来绘制RFC协议标准里的<q>ascii</q>风格的文本配图，比如下面的例子：
+
+```text
+digraph {
+    subgraph cluster_0 {
+        a0 -> a1 -> a2 -> a3;
+        label = "process \#1";
+    }
+
+    subgraph cluster_1 {
+        b0 -> b1 -> b2 -> b3;
+        label = "process \#2";
+    }
+
+    start -> a0;
+    start -> b0;
+    a1 -> b3;
+    b2 -> a3;
+    a3 -> a0;
+    a3 -> end;
+    b3 -> end;
+}
+```
+
+会生成如下ascii文本图形：
+
+```ascii
+     +- - - - - - - - - - - - - +
+     '        process #1        '
+     '                          '
+     ' +----+            +----+ '       +----------+
+  +- ' | a1 | <--------- | a0 | ' <--   |  start   |
+  |  ' +----+            +----+ '       +----------+
+  |  '   |                 ^    '         |
+  |  '   |                 |    '         |
+  |  '   |                 |    '         v
+  |  '   |                 |    '     + - - - - - - -+
+  |  '   |                 |    '     '  process #2  '
+  |  '   v                 |    '     '              '
+  |  ' +----+              |    '     ' +----------+ '
+  |  ' | a2 |              |    '     ' |    b0    | '
+  |  ' +----+              |    '     ' +----------+ '
+  |  '   |                 |    '     '   |          '
+  |  '   |                 |    '     '   |          '
+  |  '   |                 |    '     '   v          '
+  |  '   |                 |    '     ' +----------+ '
+  |  '   |                 |    '     ' |    b1    | '
+  |  '   |                 |    '     ' +----------+ '
+  |  '   |                 |    '     '   |          '
+  |  '   |                 |    '     '   |          '
+  |  '   |                 |    '     '   v          '
+  |  '   |               +----+ '     ' +----------+ '
+  |  '   +-------------> | a3 | ' <-- ' |    b2    | '
+  |  '                   +----+ '     ' +----------+ '
+  |  '                          '     '   |          '
+  |  +- - - - - - - - - - - - - +     '   |          '
+  |                        |          '   |          '
+  |                        |          '   |          '
+  |                        |          '   v          '
+  |                        |          ' +----------+ '
+  +------------------------+--------> ' |    b3    | '
+                           |          ' +----------+ '
+                           |          '              '
+                           |          + - - - - - - -+
+                           |              |
+                           |              |
+                           |              v
+                           |            +----------+
+                           +-------->   |   end    |
+                                        +----------+
+```
+
+可以通过graphviz的命令行工具来生成，也可以使用这个在线网站：[dot-to-ascii](https://dot-to-ascii.ggerganov.com/)。
+
+> 关于如何用文本画好一幅好的架构图，推荐看 [C4 Model](https://c4model.com/) 的作者的这篇 [Software architecture diagrams as text](https://dev.to/simonbrown/visio-draw-io-lucidchart-gliffy-etc-not-recommended-for-software-architecture-diagrams-4bmm)。
 
 ## 专业绘图
 
@@ -220,3 +294,10 @@ GitHub的Markdown已经支持Mermaid了，相比PlantUML的优势在于其原生
 ## 关于绘图工具的思考
 
 没有一种工具是万能的，万能如 Excalidraw 也无法替代 Lucidchart/Draw.io/Google Drawings/Visio 这些复杂的工具（他们更适合复杂的对精确性有高度要求的图）。更没有一种软件工具能替代纸和笔。工具更重要的是背后使用它的人，能用图片讲好一个故事才是我们需要不断提升的能力，一个工具能做到不限制你的发挥就算适合的好的工具。
+
+![](https://img.bmpi.dev/c5519e95-440b-3edb-4f2e-dfe8f3a2db63.png)
+
+## 进一步阅读
+
+- [技术文章配图指南](https://draveness.me/sketch-and-sketch/)
+- [技术配图的一些心得](https://www.codedump.info/post/20220304-weekly-8/)

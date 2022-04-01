@@ -536,3 +536,7 @@ li .fa-jk {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 60px; opacity: 0;}
 }
+
+code.language-ascii {
+    font-family: monospace !important;
+}
