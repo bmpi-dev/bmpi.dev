@@ -12,7 +12,6 @@ categories: [
 ]
 markmap:
   enabled: true
-isMermaidEnabled: true
 noindex: true
 ---
 
