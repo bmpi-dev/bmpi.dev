@@ -8,7 +8,7 @@ description: "本文介绍Go/Java/C/C++/Swift等编程语言是如何实现泛�
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/14cb2569-57a7-76b8-05f0-ce3dcf3b0886.png"
 categories: [
-    "编程技术"
+    "编程语言"
 ]
 markmap:
   enabled: true
