@@ -338,7 +338,15 @@ li .fa-jk {
         font-family: "LXGW WenKai" !important;
     }
 
+    .highlight pre code {
+        white-space: pre-wrap !important;
+    }
+
     .highlight pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre {
         white-space: pre-wrap !important;
     }
 
@@ -407,10 +415,10 @@ li .fa-jk {
     }
     
     .markmap > svg {
-        width: 100%;
+        width: 120%;
         height: 400px;
-        border: 1px dashed #ccc;
-        font-size: .3em;
+        margin-left: -60px;
+        font-size: .2em;
         font-family: 'LXGW WenKai';
         @media only screen and (max-width : 768px) {
           height: 230px;
