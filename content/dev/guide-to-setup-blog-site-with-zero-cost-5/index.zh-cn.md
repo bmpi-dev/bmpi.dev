@@ -11,6 +11,22 @@ isCJKLanguage: true
 
 > 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第五篇【优化国内访问速度篇】。
 
+<strong><span style="color:red">更新自2022年04月15日</span></strong>
+
+最近将博客部署的CDN从Vercel更换为[Cloudflare Pages](https://pages.cloudflare.com/)，从测试的结果以及用户的反馈看，国内访问的速度更快了（如果你所在的地区响应很慢，请留言告知）。
+
+现在的博客架构图如下：
+
+![](https://img.bmpi.dev/d867de0f-a759-96db-ca45-e3f614344f12.png)
+
+这个旧图并没有体现出网站部署到Cloudflare Pages，目前Vercel唯一的作用是将`bmpi.dev`的请求301重定向到`www.bmpi.dev`（域名在AWS Route53上管理），实际静态页面是从Cloudflare Pages获取的。
+
+所以用户的请求实际上是这样的：
+
+```ascci
+Browser -> bmpi.dev -> AWS Route53 -> Vercel -> www.bmpi.dev -> Cloudflare Pages
+```
+
 <strong><span style="color:red">更新自2020年12月29日</span></strong>
 
 ---
