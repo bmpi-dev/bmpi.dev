@@ -272,7 +272,8 @@ a[href^="#fn:"]:after {
   background-color: #f7f7f7 !important;
   font-style: normal; }
   .heti blockquote p {
-    margin: 10px 0; }
+    margin: 10px 0;
+    line-height: 30px; }
 
 .heti code {
   font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important; }
