@@ -114,6 +114,7 @@ id = "about"
 ### 本站变更日志
 
 ```text
+✔ 添加Plotly绘图支持 @done(22-04-28 00:15)
 ✔ 添加PWA支持 @done(22-04-01 22:37)
   Service Worker + Mainfest
 ✔ 文章页Markdown支持Markmap @done(22-02-18 1:16)
