@@ -8,6 +8,7 @@ outputs = "html"
 ## 开发工具
 
 [VSCode Server](https://code.bmpi.dev)
+[judge0 IDE - Online Code Runner](https://ide.judge0.com/)
 
 ## 微信Markdown排版工具
 
