@@ -1,4 +1,5 @@
 <li class="heti" style="max-width: fit-content;">
-  <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
-  <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
+  <span class="date" style="color: #1111;">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+  <a class="title" style="color: #e5b751;" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
+  <!-- http://zhongguose.com/#shashihuang -->
 </li>

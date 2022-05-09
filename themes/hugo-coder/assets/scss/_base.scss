@@ -59,7 +59,7 @@ h1 {
 }
 
 article h1 {
-  background: -webkit-linear-gradient(45deg, #FFCC00,#5AC8FB, #FF2C55 80%);
+  background: -webkit-linear-gradient(45deg, #e5b751,#1677b3, #cc5595 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -499,13 +499,13 @@ figure a {
 }
 
 a[href$="/self/"] {
-  color: #FFCC00 !important;
+  color: #e5b751 !important;
 }
 
 a[href$="/dev/"] {
-  color: #5AC8FB !important;
+  color: #1677b3 !important;
 }
 
 a[href$="/money/"] {
-  color: #FF2C55 !important;
+  color: #cc5595 !important;
 }
