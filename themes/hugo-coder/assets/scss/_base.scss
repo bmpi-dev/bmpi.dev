@@ -58,6 +58,12 @@ h1 {
   }
 }
 
+article h1 {
+  background: -webkit-linear-gradient(45deg, #FFCC00,#5AC8FB, #FF2C55 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .about h1 {
   margin-bottom: 30px;
   margin-bottom: 20px;
