@@ -418,6 +418,15 @@ figure a {
   text-decoration: auto !important;
   margin: 0 !important; }
 
+a[href$="/self/"] {
+  color: #FFCC00 !important; }
+
+a[href$="/dev/"] {
+  color: #5AC8FB !important; }
+
+a[href$="/money/"] {
+  color: #FF2C55 !important; }
+
 .content {
   flex: 1;
   display: flex;
