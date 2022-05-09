@@ -117,7 +117,7 @@ H6 {
 
 .about-social i {
     animation: animate 3s linear infinite;
-    text-shadow: 0 0 60px #0072ff, 0 0 120px #0072ff, 0 0 170px #0072ff;
+    text-shadow: 0 0 60px #e5b751, 0 0 120px #1677b3, 0 0 170px #cc5595;
 }
 
 @keyframes animate {
