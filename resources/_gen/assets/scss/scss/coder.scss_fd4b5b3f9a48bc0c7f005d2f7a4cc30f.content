@@ -528,8 +528,7 @@ a[href$="/money/"] {
       margin-right: 3.0rem; }
       @media only screen and (max-width: 768px) {
         .list ul li .date {
-          display: block;
-          text-align: left; } }
+          display: none; } }
     .list ul li .title {
       font-size: 1.8rem;
       color: #428bca;

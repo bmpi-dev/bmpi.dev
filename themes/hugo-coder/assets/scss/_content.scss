@@ -141,8 +141,7 @@
         text-align: right;
         margin-right: 3.0rem;
         @media only screen and (max-width : 768px) {
-          display: block;
-          text-align: left;
+          display: none;
         }
       }
       .title {
