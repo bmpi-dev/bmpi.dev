@@ -4,7 +4,7 @@ date: 2022-05-13
 draft: false
 tags: ["Web3", "BlockChain", "ETH", "Bitcoin", "DAO", "decentralization"]
 keywords: ""
-description: "This post introduces Web3 from the perspective of Web2."
+description: "Standing on Web2 and peering into Web3."
 og_image: "https://img.bmpi.dev/c9f5b6f6-977c-6fbd-c855-83dae14f9b96.png"
 ---
 
