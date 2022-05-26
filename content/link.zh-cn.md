@@ -31,7 +31,7 @@ outputs = "html"
 | [麻广广的博客](https://maguangguang.xyz/) | 关注领域：企业架构设计（分布式架构设计、微服务架构设计），企业数字化转型，自我提升及个人成长，读书/学习思考笔记等 |
 | [少个分号](https://shaogefenhao.com/) | 软件架构、高认知软件工程、DDD、领域驱动设计、敏捷、研发自测、敏捷团队 |
 | [爱码叔-iCodeBook](https://icodebook.com/) | 专注于软件设计、系统架构 |
-| [Bright LGM's Blog](http://brightliao.com/) | 专注于数据架构 |
+| [Bright LGM's Blog](https://brightliao.com/) | 专注于数据架构 |
 | [BY林子](https://www.bylinzi.com/) | 关注和讨论软件质量，不仅限于软件测试 |
 | [软件测试与质量沉思](https://liuranthinking.com/) | 软件测试、软件质量 |
 | [于晓南](https://qualityfocus.club/yxn) | 关注软件质量 |
