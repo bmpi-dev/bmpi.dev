@@ -2,7 +2,7 @@
 title: "编程语言是如何实现并发的之操作系统篇"
 date: 2022-04-10
 draft: false
-tags: ["编程语言", "并发编程"]
+tags: ["编程语言", "并发编程", "线程安全"]
 keywords: ""
 description: "本文从操作系统的视角介绍编程语言实现并发的底层概念，包括进程调度与I/O模型等。"
 isCJKLanguage: true
@@ -187,37 +187,7 @@ auxv         clear_refs  cpu_resctrl_groups  environ  fdinfo  limits   mem      
 
 ## 总结
 
-本篇从操作系统的视角介绍编程语言实现并发的底层概念，包括进程调度与I/O模型等。下篇开始介绍常见的并发模型。
-
-```markmap
-## 并发模型
-### 多进程(Multiprocessing)
-- Fork
-### 多线程(Multithreaded)
-- Lock
-- STM
-- Fork/Join
-### 函数并行(Functional Parallelism)
-- Async/Await
-### 事件驱动(Event Driven)
-- Reactive
-  - ReactiveX
-  - Project Reactor
-- Event Loop 
-  with Multiplexing
-  - Nginx
-  - V8
-  - Redis
-  - Twisted(Python)
-  - Netty(Java)
-- CSP
-  - Go/Channel
-- Actor
-  - Erlang/OTP
-  - Akka
-  - Vert.x
-### Lambda
-```
+本篇从操作系统的视角介绍编程语言实现并发的底层概念，包括进程调度与I/O模型等。下篇开始介绍常见的[并发模型](/dev/deep-in-program-language/how-to-implement-concurrency/concurrency-model/)。
 
 {{% notice info %}}
 <strong>更新日志</strong></br>
