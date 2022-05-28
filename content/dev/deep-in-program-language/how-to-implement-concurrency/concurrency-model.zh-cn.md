@@ -6,7 +6,7 @@ tags: ["编程语言", "并发编程", "线程安全"]
 keywords: ""
 description: "本文介绍多种并发模型包括锁、STM、CSP、Actor及I/O多路复用等，还有对Java、Go、Erlang/Elixir与Clojure等对这些模型的实现的介绍。"
 isCJKLanguage: true
-og_image: ""
+og_image: "https://img.bmpi.dev/a4a21be1-5b7a-3cb7-3c75-bddd9323dc34.png"
 categories: [
     "编程语言"
 ]
