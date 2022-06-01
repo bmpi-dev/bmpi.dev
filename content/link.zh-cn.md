@@ -36,4 +36,4 @@ outputs = "html"
 | [软件测试与质量沉思](https://liuranthinking.com/) | 软件测试、软件质量 |
 | [于晓南](https://qualityfocus.club/yxn) | 关注软件质量 |
 | [聂子云](http://www.niezitalk.com/) | 聂子云 |
-| [张凯峰](http://www.kaifengzhang.com/) | 张凯峰 |
+| [张凯峰](https://www.kaifengzhang.com/) | 张凯峰 |
