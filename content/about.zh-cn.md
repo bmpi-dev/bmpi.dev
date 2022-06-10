@@ -75,6 +75,9 @@ id = "about"
 #### 被动收入投资组合
 - [组合报告](/categories/被动收入投资组合/)
 - [组合持仓](https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea)
+## 我在做什么
+- [阅读](https://note.bmpi.dev/#/page/read)
+- [写作](https://note.bmpi.dev/#/page/blog)
 ```
 
 ### 联系我
