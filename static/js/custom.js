@@ -35,7 +35,7 @@ function get_post_views(url, callback) {
     httpGetAsync(url, callback);
 }
 
-function main() {
+function set_stats_on_home() {
     if (window.location.pathname === "/") {
         set_home_page_site_run_days();
         get_post_views(allPageViewsAPI, res => {
@@ -55,8 +55,6 @@ function main() {
         }
     }
 }
-
-main();
 
 // toast
 function launch_toast(text) {
@@ -170,6 +168,7 @@ async function html2Img(html) {
                 eventAction: 'bookmark_success',
                 eventLabel: window.location.href
             });
+            umami.trackEvent('bookmark_success', 'bookmark');
         } catch(error) {
             console.log('Sharing failed: ', error);
             if (error.name !== 'AbortError') {
@@ -181,6 +180,7 @@ async function html2Img(html) {
                 eventAction: 'bookmark_fail',
                 eventLabel: error.name
             });
+            umami.trackEvent('bookmark_fail', 'bookmark');
         }
     } else {
         launch_toast("浏览器不支持此功能");
@@ -202,6 +202,10 @@ document.onpointerdown = ()=>{
 }
 
 function webShare() {
+    if (document.querySelector('template') == null) {
+        return;
+    }
+
     console.log('start init web share feature');
 
     var control = document.importNode(document.querySelector('template').content, true).childNodes[0];
@@ -227,11 +231,22 @@ function webShare() {
     });
 }
 
+function set_track_event() {
+    document.querySelector('a[href="https://twitter.com/madawei2699"]').onclick = () => umami('Twitter menu click');
+    if (document.getElementById('follow-my-twitter') !== null) {
+        document.getElementById('follow-my-twitter').onclick = () => umami('Twitter follow click');
+    }
+}
+
 if( document.readyState !== 'loading' ) {
     webShare();
+    set_stats_on_home();
+    set_track_event();
 } else {
     document.addEventListener('DOMContentLoaded', function () {
         webShare();
+        set_stats_on_home();
+        set_track_event();
     });
 }
 
