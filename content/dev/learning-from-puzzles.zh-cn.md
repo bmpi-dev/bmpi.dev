@@ -83,6 +83,7 @@ og_image: "https://img.bmpi.dev/dcdaa6da-7d19-8810-7029-b91bed5a12a2.png"
 
 当文档不准确或者过于简单，只能通过阅读相关的源码来了解一些底层的实现。阅读源码是一种很好的提高自己技术能力的方式，这也是难题给我们创造了一种可能不得不读源码来解决问题的场景。从这个角度看，难题是能提高我们对底层框架实现的了解。如何更好的读代码，可以阅读这篇文章：
 
+- [如何阅读一份代码？](https://zhuanlan.zhihu.com/p/26222486)
 - [我是怎么读代码的](https://lenshood.github.io/2022/05/22/how-i-read-code/)
 
 > 为了确定是否是HTTP客户端的影响，我走读了clj-http的源码，发现它在异步请求模式下底层封装了HttpAsyncClients。于是写了一个Java版本做对比，发现存在相同的问题，很可能是因为异步模式下需要做很多重量级的初始化工作导致的问题。于是给提了一个[issue](https://github.com/dakrone/clj-http/issues/610)，但没有得到回复。
