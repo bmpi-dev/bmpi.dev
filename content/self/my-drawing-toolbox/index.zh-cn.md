@@ -257,6 +257,21 @@ digraph {
 
 ## 专业绘图
 
+## ASCII
+
+ASCII风格的绘图很适合放在代码或纯文本文档中，如：
+
+![](https://img.bmpi.dev/b2b51eab-7a45-637b-04fc-21fcc43fd8b4.png)
+
+![](https://img.bmpi.dev/e053e651-8507-f792-cdcb-8c64a4302f62.png)
+
+手工画显然太困难，可以使用相关的工具绘制：
+
+1. [asciiflow](https://asciiflow.com/)是款功能简单的免费在线绘制ASCII风格图的网站。
+2. [monodraw](https://monodraw.helftone.com/)是Mac上功能强大的付费App，可以绘制复杂的ASCII图形，如下图：
+
+![](https://img.bmpi.dev/4a1c8325-2fcf-e2df-2cb8-3603d10dbe53.png)
+
 ### Sketch/OmniGraffle
 
 ![](https://img.bmpi.dev/0fa1a962-7d25-4263-7844-d6f76d2360c1.png)
