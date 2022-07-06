@@ -85,6 +85,7 @@ og_image: "https://img.bmpi.dev/dcdaa6da-7d19-8810-7029-b91bed5a12a2.png"
 
 - [如何阅读一份代码？](https://zhuanlan.zhihu.com/p/26222486)
 - [我是怎么读代码的](https://lenshood.github.io/2022/05/22/how-i-read-code/)
+- [如何阅读一份源代码？（2020年版）](https://www.codedump.info/post/20200605-how-to-read-code-v2020/)
 
 > 为了确定是否是HTTP客户端的影响，我走读了clj-http的源码，发现它在异步请求模式下底层封装了HttpAsyncClients。于是写了一个Java版本做对比，发现存在相同的问题，很可能是因为异步模式下需要做很多重量级的初始化工作导致的问题。于是给提了一个[issue](https://github.com/dakrone/clj-http/issues/610)，但没有得到回复。
 
