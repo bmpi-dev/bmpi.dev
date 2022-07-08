@@ -27,12 +27,10 @@ isMermaidEnabled: true
     - [反射(Reflection)](#反射reflection)
     - [接口(Interface)](#接口interface)
 - [实现泛型](#实现泛型)
-  - [装箱(Boxing)](#装箱boxing)
-    - [类型擦除(Type-erased)](#类型擦除type-erased)
+  - [类型擦除(Type erasure)](#类型擦除type-erasure)
     - [虚函数表(Vtable)](#虚函数表vtable)
-    - [字典(Dictionary)](#字典dictionary)
+  - [字典(Dictionary)](#字典dictionary)
   - [单态化(Monomorphization)](#单态化monomorphization)
-    - [代码生成(Code Generation)](#代码生成code-generation-1)
     - [模版(Template)](#模版template)
     - [蜡印(Stenciling)](#蜡印stenciling)
 - [总结](#总结)
@@ -97,44 +95,9 @@ function compare(a, b) {
 
 #### 类型检查
 
-- 强弱类型：如果一个编程语言有着严格的类型检查限制，那么可以说其是一个强类型的编程语言，反之则为弱类型。强类型的编程语言可以在类型不匹配时发生错误（编译与运行时都可能发生），而弱类型的语言在类型不匹配时会做隐式的类型转换，这会导致无法预料的运行时错误。强类型的拥护者认为严格类型检查可以带来类型安全、内存安全的好处，这方面的极致就是Rust为首的语言，而弱类型的拥护者认为过分夸大了类型和内存不安全带来的缺陷。
+- 强弱类型：强弱类型并没有标准的定义，但是普遍认为强弱类型的核心区别在于，语言能否在某一个时刻能检查出来类型导出的错误，而不是抛出运行时错误（Unchecked RuntimeError）。强类型的编程语言可以在类型不匹配时发生错误（编译与运行时都可能发生），而弱类型的语言在类型不匹配时会做隐式的类型转换或无视类型进行操作，这会导致无法预料的运行时错误。这二者区分出来的核心现象就是，弱类型语言往往无法信赖变量的值，需要写很多额外的代码做额外的类型验证操作。
 - 静动检查：<q>动态类型一时爽，重构代码火葬场</q>。开发过大型项目的人一定会对这句话深有体会。动态与静态的区别在于类型检查发生的阶段，动态是在运行时阶段，静态是在编译阶段。但实际上一些编程语言是混合的类型检查，比如在C#中开发者可以通过关键字来标识此数据类型检查是动态还是静态的。不少静态类型检查的编程语言也有动态的类型检查，比如Java中既有编译阶段的静态类型检查，又有运行时的动态类型检查（如父类与子类的<u title="Downcasting与Liskov Substitution principle">互相转换</u>）。
 - 类型推导：一些编程语言虽然不需要开发者显示定义数据类型，但编译器能够做类型推导，帮助开发者定义数据类型，如Scala与Kotlin。
-
-```markmap
-# 类型检查
-## 强类型
-- C#
-- Java
-- Swift
-- Rust
-- Elixir
-- Clojure
-- Go
-- Python
-- Ruby
-## 弱类型
-- C
-- C++
-- PHP
-- JavaScript
-## 动态类型检查
-- Elixir
-- Clojure
-- Python
-- Ruby
-- JavaScript
-- PHP
-## 静态类型检查
-- C
-- C++
-- C#
-- Scala
-- Java
-- Rust
-- Swift
-- Go
-```
 
 现在再回到起初的那个问题上，我们可以看到C与JavaScript同为`弱类型`的编程语言，真正的区别在于`动态类型检查`上。这让JavaScript的函数可以不受类型检查的限制，而C却受到了编译阶段的类型检查。
 
@@ -224,7 +187,15 @@ classDiagram
 
 ## 实现泛型
 
-准确的说这里的实现泛型指的是在编译器及运行时的支持下，编程语言自动实现泛型的功能。由于这些实现方式和运行时的一个概念强相关，这里提前介绍下动态派发([Dynamic Dispatch](https://en.wikipedia.org/wiki/Dynamic_dispatch))的概念。
+通常意义下的泛型也叫[参数多态](https://zh.wikipedia.org/wiki/参数多态)，指的是声明与定义函数、复合类型、变量时不指定其具体的类型，而把这部分类型作为参数使用，使得该定义对各种具体类型都适用。参数化多态使得语言更具表达力，同时保持了完全的静态类型安全。这被称为泛化函数、泛化数据类型、泛型变量，形成了泛型编程的基础。
+
+> 编程语言理论(PLT)中多态(Polymorphism)包含三个主要方面：特设多态(Ad-hoc)，参数多态(Parametric)和子类型(Subtyping)。
+> 
+> Ad-hoc：也叫重载(Overloading)，允许具有相同名称的函数对不同类型执行不同的操作。例如，`+`运算符即可以将两个整数相加，也可以连接两个字符串。
+> 
+> Subtyping：也叫包容性多态(Inclusion)，是指通过基类指针和引用使用派生类的能力。
+
+子类型多态(Subtyping)是面向对象编程(OOP)中很重要的一个概念，它也称为运行时多态性，因为编译器在编译时不定位函数的地址，而是在运行时动态调用函数。这也称为动态派发([Dynamic Dispatch](https://en.wikipedia.org/wiki/Dynamic_dispatch))。
 
 派发目的是让程序运行时知道被执行的函数或方法所在的内存位置。派发分为：
 
@@ -238,33 +209,22 @@ classDiagram
 
 ```markmap
 # 实现泛型的方式
-## 装箱(Boxing)
-### 类型擦除(Type-erased) `Java`
-### 虚函数表(Vtable)
-#### Embedded vtable `Java`
-### 字典传递(Dictionary passing)
-#### `Go`
-#### Witness table `Swift`
+## 类型擦除(Type erasure) `Java`
+## 字典(Dictionary)
+### `Go`
+### Witness table `Swift`
 ## 单态化(Monomorphization)
-### 代码生成(Code Generation) `C`
 ### 模版(Template) `C++`
 ### 蜡印(Stenciling)
 #### GC Shape Stenciling `Go`
 ```
-
-大致来说编译器实现泛型的两种方式是装箱(Boxing)和单态化(Monomorphization)。
-
-### 装箱(Boxing)
-
-装箱的思路是将所有类型包装成统一的类型，有了统一的类型就有了统一的内存模型，这样函数在调用时传递的是统一的数据类型，也就不会出现类型不匹配的问题。这种思路我们在手工实现的方式里就用到了，比如[类型断言(Type assertation)](#类型断言type-assertation)、[反射(Reflection)](#反射reflection)与[接口(Interface)](#接口interface)的实现。
-
-#### 类型擦除(Type-erased)
+### 类型擦除(Type erasure)
 
 对Java来说统一的数据类型就是Object，在编译阶段做完类型检查后就将类型信息通过转换成Object进行擦除，这样只需要生成一份泛型函数的副本即可。类型擦除保证了泛型函数生成的字节码和非泛型函数的是相同的，也符合Java对<u title="这对Java生态来说很重要，旧的代码不需要迁移即可调用新的泛型库。但也让这个泛型的能力和其他语言相比差了很多，有很多限制（如不支持基本类型）。">兼容性</u>的要求。不过类型擦除也给Java的泛型带来了很多的[限制](https://en.wikipedia.org/wiki/Generics_in_Java#Problems_with_type_erasure)。
 
 #### 虚函数表(Vtable)
 
-之前在动态派发中介绍了虚函数表，对Java来说通过类型擦除结合虚函数表就实现了泛型的效果：运行时同样的数据类型`Object`，却能调用原始类型的方法。
+之前在动态派发中介绍了虚函数表（虚方法表），对Java来说通过类型擦除结合虚方法表来实现泛型的效果：运行时同样的数据类型`Object`，却能调用原始类型的方法。
 
 ```mermaid
 classDiagram
@@ -294,11 +254,11 @@ classDiagram
       }
 ```
 
-#### 字典(Dictionary)
+### 字典(Dictionary)
 
 编译器在编译泛型函数时只生成了一份函数副本，通过新增一个字典参数来供调用方传递类型参数(Type Parameters)，这种实现方式称为字典传递(Dictionary passing)。
 
-还记得Go泛型的正式名称叫什么吗？类型参数(Type Parameters)！这也暗示了Go实现泛型的方式，那就是在编译阶段，通过将类型信息以字典的方式传递给泛型函数。当然这个字典不仅包含了类型信息，还包含了此类型的内存操作函数如`make/len/new`等。
+Go实现泛型的方式，就是在编译阶段，通过将类型信息以字典的方式传递给泛型函数。当然这个字典不仅包含了类型信息，还包含了此类型的内存操作函数如`make/len/new`等。
 
 同样的Swift也通过字典传递了一种名为`Witness table`的数据结构，这种数据结构包含着类型的大小及类型的内存操作函数（移动、复制与释放）。如下图：
 
@@ -360,10 +320,6 @@ void getSecond(opaque *result, opaque *pair, type *T) {
 - 生成调用类型的函数版本：这种需要编译器分阶段或多次编译，比如需要遍历寻找调用点来确定最终的类型列表，对于不同包的同名函数的处理等。
 - 是否支持独立编译：如果调用泛型函数的类型与泛型函数不在同一个包内，是否能支持泛型函数独立的编译。
 
-#### 代码生成(Code Generation)
-
-这种技术是编译器不支持泛型时可采用的最简单的方案，比如C语言的宏就可以实现代码生成泛型函数的功能。不过这种技术实现的泛型有很多边界问题和限制，只有在编程语言不支持泛型特性的情况下才会使用。
-
 #### 模版(Template)
 
 C++通过模板实现泛型类、方法和函数，这导致编译器为每个唯一的类型参数集编译了代码的单独副本。这种方法的一个关键优势是没有运行时性能开销，尽管它以增加二进制文件大小和编译时间为代价。
@@ -396,11 +352,15 @@ flowchart LR
 
 对静态类型检查的编程语言，实现泛型的方式有很多，如：
 
-- C：通过**宏定义**来实现，简单方案却能满足大部分需求，还有着不错的性能。
 - C++：通过**模版**实现，相比C的宏，模版显然更强大灵活。
-- Java：通过**类型擦除的装箱技术结合虚函数表**实现，虽然类型擦除导致Java的泛型实现不如人意，但这种代价确保了兼容性。
+- Java：通过**类型擦除的装箱技术结合虚方法表**实现，虽然类型擦除导致Java的泛型实现不如人意，但这种代价确保了兼容性。
 - Swift：通过**字典传入的方式配合Witness table**的实现，这种巧妙的方式在编译速度与运行时速度之间取得了不错的平衡。
 - Go：通过**字典传入的方式配合GC Shape的蜡印技术**实现，这种方式在编译速度与运行时速度之间取得了不错的平衡。
+
+虽然看起来方式多样，但实际上只有两种思路：
+
+- Type Erasure/Dictionary：调用方法统一，运行时对代码进行检查。在这种场景下，要么方法表会被传入对应的泛型参数，要么在调用时编译器去解析(Resolve)。本质上这两种技术都用来实现某种[RTTI](https://en.wikipedia.org/wiki/Run-time_type_information)的替代品。
+- Monomorphization/Stenciling：根据不同类型生成不同的代码。现代编译器已经支持了只针对使用到的类型进行代码生成了，C++的模板跟Rust的静态Trait都是此类。
 
 总的来说泛型是个和编译技术强相关的概念，由于本文涉及了多种编程语言，文中可能存在一些因笔者能力有限而导致的错误，欢迎读者指正。同时一些编程语言如Go也在不断的改进自己实现泛型的机制，所以此文也会存在一些时效性的问题。
 
@@ -418,3 +378,10 @@ flowchart LR
 - [Go语言设计与实现（@Draven）](https://book.douban.com/subject/35635836/)
 - [Go泛型是怎么实现的?](https://colobu.com/2021/08/30/how-is-go-generic-implemented/)
 - [Swift - 派发机制](https://www.cnblogs.com/baitongtong/p/14762857.html)
+- [类型 vs. 类型检查](https://github.com/FrankHB/pl-docs/blob/master/zh-CN/typing-vs-typechecking.md)
+
+{{% notice info %}}
+<strong>更新日志</strong></br>
+2022-04-24：根据此[讨论帖](https://www.v2ex.com/t/843140)修改更新。（感谢[@FrankHB](https://www.v2ex.com/member/FrankHB)、[@lxdlam](https://www.v2ex.com/member/lxdlam)）</br>
+2022-03-25：初稿发布。
+{{% /notice %}}

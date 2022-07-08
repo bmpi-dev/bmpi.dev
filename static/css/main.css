@@ -117,7 +117,7 @@ H6 {
 
 .about-social i {
     animation: animate 3s linear infinite;
-    text-shadow: 0 0 60px #0072ff, 0 0 120px #0072ff, 0 0 170px #0072ff;
+    text-shadow: 0 0 60px #e5b751, 0 0 120px #1677b3, 0 0 170px #cc5595;
 }
 
 @keyframes animate {
@@ -338,7 +338,15 @@ li .fa-jk {
         font-family: "LXGW WenKai" !important;
     }
 
+    .highlight pre code {
+        white-space: pre-wrap !important;
+    }
+
     .highlight pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre {
         white-space: pre-wrap !important;
     }
 
@@ -407,10 +415,10 @@ li .fa-jk {
     }
     
     .markmap > svg {
-        width: 100%;
+        width: 120%;
         height: 400px;
-        border: 1px dashed #ccc;
-        font-size: .3em;
+        margin-left: -60px;
+        font-size: .2em;
         font-family: 'LXGW WenKai';
         @media only screen and (max-width : 768px) {
           height: 230px;

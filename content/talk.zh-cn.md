@@ -7,6 +7,10 @@ outputs = "html"
 
 ## 2022
 
+### 编程语言是如何实现并发的
+
+- [Slide](https://talk.bmpi.dev/2022/how-to-implement-concurrency/)
+
 ### 从内容创作到个人品牌
 
 - [Slide](https://talk.bmpi.dev/2022/content-marketing-to-personal-brand/)

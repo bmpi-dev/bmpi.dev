@@ -9,6 +9,12 @@ isCJKLanguage: true
 og_image: "https://img.bmpi.dev/d0286afd-989a-0500-0aca-c91bee9893d2.png"
 ---
 
+{{% notice warning %}}
+一、本文目的仅在于分享我个人<strong>学习与测试挖矿相关的技术与流程</strong>，不负责对任何因模仿本文而造成的经济或其他损失；<br>
+二、本文的时效性非常强，如果你现在看到这篇文章，可能其中的方法与结论已经无效了；<br>
+三、挖矿需谨慎，不仅是经济上可能的损失，甚至会触犯本地的相关法律，在做之前最好先了解本地的法律或政策；
+{{% /notice %}}
+
 {{% notice info %}}
 此文有更新，见我这条推文系列: https://twitter.com/madawei2699/status/1391410996644769796
 {{% /notice %}}

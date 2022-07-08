@@ -10,6 +10,7 @@ og_image: "https://img.bmpi.dev/4928b4de-db94-968e-115b-767d2e2f007a.png"
 markmap:
   enabled: true
 isMermaidEnabled: true
+plotly: true
 ---
 
 由于在写作中经常需要配图，本文分享下我常用的绘图工具以及如何存储并展示配图。
@@ -256,6 +257,21 @@ digraph {
 
 ## 专业绘图
 
+## ASCII
+
+ASCII风格的绘图很适合放在代码或纯文本文档中，如：
+
+![](https://img.bmpi.dev/b2b51eab-7a45-637b-04fc-21fcc43fd8b4.png)
+
+![](https://img.bmpi.dev/e053e651-8507-f792-cdcb-8c64a4302f62.png)
+
+手工画显然太困难，可以使用相关的工具绘制：
+
+1. [asciiflow](https://asciiflow.com/)是款功能简单的免费在线绘制ASCII风格图的网站。
+2. [monodraw](https://monodraw.helftone.com/)是Mac上功能强大的付费App，可以绘制复杂的ASCII图形，如下图：
+
+![](https://img.bmpi.dev/4a1c8325-2fcf-e2df-2cb8-3603d10dbe53.png)
+
 ### Sketch/OmniGraffle
 
 ![](https://img.bmpi.dev/0fa1a962-7d25-4263-7844-d6f76d2360c1.png)
@@ -271,6 +287,16 @@ digraph {
 在线绘图工具如 [Google Drawings](https://docs.google.com/drawings) 的多人实时协作功能更是团队协作绘图利器。这篇[《分布式事务中的时间戳》](https://ericfu.me/timestamp-in-distributed-trans/#more)中的配图就是用 Google Drawings 绘制的。
 
 ## 代码绘图
+
+### Plotly
+
+[Plotly](https://plotly.com/javascript/)是一个基于[d3.js](https://d3js.org/)与[stack.gl](https://github.com/stackgl)的图形库，它可以用来绘制各种类型的图表，比如散点图、折线图、饼图、柱状图甚至3D图形等。
+
+{{< plotly json="/self/my-drawing-toolbox/scatter3d.json" height="400px" >}}
+
+> - 与Hugo的集成可参考这篇[Plotly & Hugo](https://mertbakir.gitlab.io/hugo/plotly-with-hugo/)。
+>
+> - 如果是想基于各类数据库做商业数据分析的话还可以使用如[Metabase](https://github.com/metabase/metabase)这类开源方案。
 
 ### Python Jupyter Notebook
 

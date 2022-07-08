@@ -18,7 +18,7 @@ isCJKLanguage: true
 
 这款插件可以自动屏蔽网站里的绝大多数广告，无需额外复杂的配置，安装好即可。
 
-### [workona]((https://workona.com/))
+### [workona](https://workona.com/)
 
 这款插件可以帮助我在不同的工作区组织多个Tab。比如我们可以在浏览器里分多个区域，如下图：
 

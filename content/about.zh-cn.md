@@ -75,6 +75,9 @@ id = "about"
 #### 被动收入投资组合
 - [组合报告](/categories/被动收入投资组合/)
 - [组合持仓](https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea)
+## 我在做什么
+- [阅读](https://note.bmpi.dev/#/page/read)
+- [写作](https://note.bmpi.dev/#/page/blog)
 ```
 
 ### 联系我
@@ -114,6 +117,9 @@ id = "about"
 ### 本站变更日志
 
 ```text
+✔ 添加umami追踪站点流量 @done(22-06-18 18:00)
+✔ 文章页支持expand shortcode @done(22-06-10 18:20)
+✔ 添加Plotly绘图支持 @done(22-04-28 00:15)
 ✔ 添加PWA支持 @done(22-04-01 22:37)
   Service Worker + Mainfest
 ✔ 文章页Markdown支持Markmap @done(22-02-18 1:16)

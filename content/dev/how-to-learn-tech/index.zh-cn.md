@@ -133,7 +133,7 @@ og_image: "https://img.bmpi.dev/feafeb84-b5f7-3b81-3b07-3bc04fa4375d.png"
 
 这两个都是基于 pion/webrtc 库开发的语音聊天网站。基于这两个开源项目，我可以逐渐学习并开发自己的开源项目。
 
-在学习完这两个开源项目（读完源码）后，我制定了基于 WebRTC 的应用开发目标：做一个隐私与本地优先的语音聊天的网站 [Free for Chat](https://www.free4.chat/)。
+在学习完这两个开源项目（读完源码）后，我制定了基于 WebRTC 的应用开发目标：做一个隐私与本地优先的语音聊天的项目：[free4.chat](https://github.com/madawei2699/free4chat)。
 
 ![](https://img.bmpi.dev/fa10713d-7e8c-c8ce-1282-fff0ed51c1b8.png)
 

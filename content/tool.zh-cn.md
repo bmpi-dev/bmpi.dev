@@ -7,7 +7,11 @@ outputs = "html"
 
 ## 开发工具
 
-[VSCode Server](https://code.bmpi.dev)
+- [VSCode Server - Web IDE](https://code.bmpi.dev)
+- [Judge0 IDE - Online Code Runner](https://ide.judge0.com/)
+- [Nextjournal - Data-driven Research Livebook](https://nextjournal.com/)
+- [Elixir Livebook](https://bmpi.fly.dev)
+- [Metabase - Database Visualization](https://github.com/metabase/metabase)
 
 ## 微信Markdown排版工具
 
@@ -25,22 +29,17 @@ outputs = "html"
 
 ## 笔记工具
 
-[Notion - 书单](https://www.notion.so/mdw/Inbox-1fb2a7e9d72747a4ba7aea5cb4541f3f)
-
-[TiddlyWiki - 公开笔记](https://wiki.bmpi.dev)
-
-[Logseq - 私有笔记](https://logseq.xyz/)
+- [Notion - 书单](https://www.notion.so/mdw/Inbox-1fb2a7e9d72747a4ba7aea5cb4541f3f)
+- [TiddlyWiki - 公开笔记](https://wiki.bmpi.dev)
+- [Logseq - 私有笔记](https://logseq.xyz/)
 
 ## 白板工具
 
-[whiteboard](https://wb.bmpi.dev)
-
-[handwriting](https://hw.bmpi.dev)
+- [whiteboard](https://wb.bmpi.dev)
+- [handwriting](https://hw.bmpi.dev)
 
 ## 英语学习
 
-[匿名语音聊天](https://free4.chat)
-
-[单词练习](https://word.bmpi.dev)
-
-[口语游戏](https://esl.bmpi.dev/)
+- [匿名语音聊天](https://free4.chat)
+- [单词练习](https://word.bmpi.dev)
+- [口语游戏](https://esl.bmpi.dev/)

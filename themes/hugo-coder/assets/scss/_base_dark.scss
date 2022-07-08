@@ -28,8 +28,13 @@
     }
   }
 
-  blockquote {
+  .heti blockquote {
     border-left: 2px solid $alt-bg-color-dark;
+    background-color: $alt-bg-color-dark !important;
+    font-style: normal;
+    p {
+      margin: 10px 0;
+    }
   }
 
   table td, table th {

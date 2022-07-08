@@ -67,6 +67,7 @@ isCJKLanguage: true
 - [Clojure](https://github.com/clojure/clojure) — 可能是 JVM 生态里最适合个人项目的编程语言了。无论是 Java/Kotlin/Scala 都不小巧。Clojure 是一种 Lisp 方言，拥有很多 Lisp 的优点，内核小巧但具备极强的扩展能力。同时能利用 Java 生态丰富的轮子，不用重复造轮子就是高生产力的体现。Clojure 也是全栈，既可以做后端也可以做前端（[ClojureScript](https://clojurescript.org/)，开源的类 [Roam Research](https://roamresearch.com/) 的笔记工具 [Logseq](https://github.com/logseq/logseq) 就是使用它开发的）。我在个人项目中还没有使用过它，不过准备尝试在一些个人项目中使用。
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) — Web 开发离不开 JavaScript，无论你爱不爱它，都离不开它。我的前端技术仅限于开发简单的网站。不过 JavaScript 的应用范围是越来越大了，除了在网页端的应用，很多跨平台的桌面端程序都通过 [Electron](https://www.electronjs.org/) 技术将 JavaScript 程序封装打包出的。随着 [Serverless](/dev/guide-to-serverless/) 技术的普及，JavaScript 也成为 Serverless 开发第一支持的编程语言，不只可以做 Function，也可以实现 [IaC](/tags/infrastructure-as-code/) 构建基础设施（如 [Pulumi](https://www.pulumi.com/) 中支持用 JavaScript 描述云服务基础设施）。
 - [Swift](https://github.com/apple/swift) — 想在 Apple 生态赚钱离不开的编程语言。早先做 iOS 开发的时候，我用 Swift 开发上架过两个 App。Swift 当时 ABI 还没稳定，经常从入门到重新入门，语法很不稳定，不过其语言的表达力相比它的老大哥 Objective-C 还是强不少（曾经用 Swift 重构过一个 App，同样的功能其比 Objective-C 要少 4/5 的代码）。如果未来还要在 iOS 上开发 App，我还是会选择 Swift。
+- [Go](https://github.com/golang/go) - Go有着非常简单的语法，几天就可以上手，并且非常适合开发一些I/O密集型的应用。在JVM的世界中，如果你要开发一个高性能的Web应用，可能需要掌握很多底层的知识，但用Go却很容易实现相同甚至更高的并发吞吐量，这都得益于Go的编译器与运行时做了很多的优化。我现在会用Go去写一些个人项目所需的小工具。我曾经做过一些压力测试来对比Go与基于Nginx的Clojure的应用的并发性能，详见这个[GitHub Issue](https://github.com/nginx-clojure/nginx-clojure/issues/263)，这也会让你对Go的简单与高并发有个直观的认知。
 
 ## 框架与库
 

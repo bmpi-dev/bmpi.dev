@@ -10,6 +10,13 @@ series: ["自我提升", "人生管理系统"]
 og_image: "https://img.bmpi.dev/d33c93b6-734c-cf47-a3cf-866ccfd29872.png"
 ---
 
+{{< expand "历史更新" >}}
+
+{{% notice info %}}
+<strong>2022.06.10 更新</strong><br>
+由于Logseq的桌面版可以发布静态化的页面，所以我计划过一段时间下线 [logseq.xyz](https://logseq.xyz) 网站，只使用桌面版。使用桌面版可以配合Git实现版本控制，只不过需要手动提交推送变更到GitHub。好处就是我们可以把能公开的页面独立部署成站点，比如我的私人Logseq公开页面在此：[note.bmpi.dev](https://note.bmpi.dev/#/all-pages) ，在这里可以分享我在写的文章和读的书籍。
+{{% /notice %}}
+
 {{% notice info %}}
 <strong>2021.12.31 更新</strong><br>
 由于 Logseq 计划在移动端发布之后会放弃支持集成 GitHub 功能，具体见这条 [ logseq will deprecate the GitHub integration once the mobile app is working](https://discord.com/channels/725182569297215569/735735090784632913/861656585578086400) 公告。<br>
@@ -18,6 +25,10 @@ og_image: "https://img.bmpi.dev/d33c93b6-734c-cf47-a3cf-866ccfd29872.png"
 具体的改动及部署方式我都发布到了这个 [Repo](https://github.com/bmpi-dev/logseq.xyz)，想部署自己的 Logseq 也可以按照这些操作指南自己来做。<br>
 最后，感谢 Logseq 开源精神及为知识管理而做的贡献，谢谢你们！
 {{% /notice %}}
+
+{{< /expand >}}
+
+---
 
 在 [我的人生管理系统](/self/life-in-plain-text/) 这篇文章中我分享了如何从个人愿景出发设定个人 OKR ，将 OKR 使用 [GTD](/tags/时间管理/) 的方法拆解成多个 TODO ，这些 TODO 所产生的笔记通过反向链接关联起来。
 
