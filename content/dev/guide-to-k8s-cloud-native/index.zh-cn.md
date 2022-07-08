@@ -294,7 +294,7 @@ spec:
           class: nginx
 ```
 
-在 DigitalOcean 中，为了让 Cert Manager 能够自检，必须通过 Nginx Ingress Controller 启用 Pod-Pod 通信，这样 Cert Manager 才能正常工作为 K8S 办法证书，创建一个 Service 资源，配置文件是 [ingress_nginx_svc.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/ingress_nginx_svc.yaml)：
+在 DigitalOcean 中，为了让 Cert Manager 能够自检，必须通过 Nginx Ingress Controller 启用 Pod-Pod 通信，这样 Cert Manager 才能正常工作为 K8S 颁发证书，创建一个 Service 资源，配置文件是 [ingress_nginx_svc.yaml](https://github.com/madawei2699/free4chat/blob/k8s/infra/k8s/ingress_nginx_svc.yaml)：
 
 ```yaml
 apiVersion: v1
