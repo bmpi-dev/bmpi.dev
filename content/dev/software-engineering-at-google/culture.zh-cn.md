@@ -6,7 +6,7 @@ tags: ["软件工程", "Tech Lead"]
 keywords: ""
 description: "本文是《Software Engineering at Google》的读书笔记，同时会穿插分享我对软件工程的理解。本文主要介绍软件工程中人的因素，也就是文化部分。"
 isCJKLanguage: true
-og_image: ""
+og_image: "https://img.bmpi.dev/fb352645-8a44-1b52-f54c-50c0b6e651a0.png"
 categories: [
     "软件工程"
 ]
