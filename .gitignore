@@ -18,3 +18,4 @@ out/
 
 .clj-kondo/
 .lsp/
+.hugo_build.lock

@@ -405,6 +405,11 @@ div.notices.tip p:first-child:after {
   @media only screen and (max-width: 768px) {
     *[id^='markmap-about-'] > svg {
       height: 350px; } }
+*[id^='markmap-software-engineering-at-google-culture-3'] > svg {
+  height: 1000px; }
+  @media only screen and (max-width: 768px) {
+    *[id^='markmap-software-engineering-at-google-culture-3'] > svg {
+      height: 350px; } }
 .mermaid {
   width: 100%;
   height: auto;
