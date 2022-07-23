@@ -6,6 +6,9 @@ tags: ["编程语言", "基础设施", "SaaS", "监控分析", "技术栈", "Inf
 keywords: ""
 description: "本文分享我的个人项目技术栈，包括编程语言、框架与库、数据库、基础设施、CI/CD、监控分析、设计及常用的SaaS服务。"
 isCJKLanguage: true
+categories: [
+    "个人成长"
+]
 ---
 
 ---

@@ -8,6 +8,9 @@ description: "本文分享我使用Logseq实现人生管理系统的OKR、GTD与
 isCJKLanguage: true
 series: ["自我提升", "人生管理系统"]
 og_image: "https://img.bmpi.dev/d33c93b6-734c-cf47-a3cf-866ccfd29872.png"
+categories: [
+    "个人成长"
+]
 ---
 
 {{< expand "历史更新" >}}

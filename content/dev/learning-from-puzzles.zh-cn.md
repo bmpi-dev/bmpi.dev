@@ -7,6 +7,9 @@ keywords: ""
 description: "本文通过一个难题的解决场景分享我解决技术难题的一些思路及从中不断学习提升的个人经验。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/dcdaa6da-7d19-8810-7029-b91bed5a12a2.png"
+categories: [
+    "个人成长"
+]
 ---
 
 - [难题的成因](#难题的成因)

@@ -7,6 +7,9 @@ keywords: ""
 description: "本文分享笔者基于AWS与Pulumi搭建类GitHub Codespaces的云端VSCode的经验。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/dafdc38a-8e97-7daa-d860-4ad78c4d182b.png"
+categories: [
+    "什么是X"
+]
 ---
 
 - [云端 IDE](#云端-ide)

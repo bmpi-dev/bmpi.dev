@@ -8,6 +8,9 @@ description: "本文分享我使用纯文本管理我的目标(OKR)、时间(GTD
 isCJKLanguage: true
 series: ["自我提升", "人生管理系统"]
 og_image: "https://img.bmpi.dev/cf3a1023-57ae-b3ce-4110-9624c26f860b.png"
+categories: [
+    "个人成长"
+]
 ---
 
 我在 [我的时间管理工具](/self/gtd-tools-i-used/) 与 [我的笔记系统](/self/note-system/) 中分享过我不断演进的时间管理工具与笔记系统。在使用这些系统多年后，始终有个困惑萦绕在我耳边，那就是：

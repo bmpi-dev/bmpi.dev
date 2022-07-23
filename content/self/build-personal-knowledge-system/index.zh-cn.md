@@ -8,6 +8,9 @@ description: "如何建立个人终身学习知识体系？如何自我管理？
 series: ["自我提升"]
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/bf1093ef-68c2-c92a-0de5-a08decb02b31.png"
+categories: [
+    "个人成长"
+]
 ---
 
 - [为何要建立个人终身学习知识体系](#为何要建立个人终身学习知识体系)

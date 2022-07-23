@@ -11,6 +11,9 @@ markmap:
   enabled: true
 isMermaidEnabled: true
 plotly: true
+categories: [
+    "技术写作"
+]
 ---
 
 由于在写作中经常需要配图，本文分享下我常用的绘图工具以及如何存储并展示配图。

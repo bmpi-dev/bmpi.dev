@@ -6,6 +6,9 @@ tags: ["Markdown", "排版", "LaTex"]
 keywords: "Markdown"
 description: "本文介绍了零成本用Markdown搞定博客网站、笔记文档、演讲胶片与年终总结报告，彻底抛弃Word与PPT"
 isCJKLanguage: true
+categories: [
+    "技术写作"
+]
 ---
 你是否遇到这些问题：写报告需要打开Word/PPT，每次浪费不少时间在排版上？写博客需要在管理后台网页里排版？在这篇文章里我将会介绍如何使用一种纯文本标记语言Markdown去排版各类型文档。
 

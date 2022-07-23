@@ -8,7 +8,7 @@ description: "本文梳理在分布式系统中时间对事件序列的影响，
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/3d3413ee-7024-5ff7-5904-e9120dd5690f.png"
 categories: [
-    "什么是X"
+    "分布式技术"
 ]
 markmap:
   enabled: true

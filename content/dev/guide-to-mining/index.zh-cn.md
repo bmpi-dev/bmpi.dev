@@ -7,6 +7,9 @@ keywords: ""
 description: "本文分享笔者使用 AWS GPU 服务器挖 ETH 和 XMR 加密币的经验。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/d0286afd-989a-0500-0aca-c91bee9893d2.png"
+categories: [
+    "什么是X"
+]
 ---
 
 {{% notice warning %}}
