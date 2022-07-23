@@ -8,6 +8,9 @@ description: "本文分享笔者对失败驱动开发（Failure Driven Developme
 isCJKLanguage: true
 series: ["技术洞见"]
 og_image: "https://img.bmpi.dev/27015307-1633-2ad8-7868-f1edb27bfeb8.png"
+categories: [
+    "个人成长"
+]
 ---
 
 ![](https://img.bmpi.dev/27015307-1633-2ad8-7868-f1edb27bfeb8.png)

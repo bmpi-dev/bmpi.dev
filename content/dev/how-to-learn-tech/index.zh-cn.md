@@ -7,6 +7,9 @@ keywords: ""
 description: "本文分享笔者在学习一门新技术时的一些经验。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/feafeb84-b5f7-3b81-3b07-3bc04fa4375d.png"
+categories: [
+    "个人成长"
+]
 ---
 
 - [要学否](#要学否)

@@ -7,6 +7,9 @@ keywords: ""
 description: "本文分享了笔者使用 K8S 云原生技术开发个人项目的踩坑经验。"
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/4c613ca1-0874-d09b-79ad-243cd926bfba.png"
+categories: [
+    "什么是X"
+]
 ---
 
 > 注：本篇文章是作者与 [GitHub Copilot](https://copilot.github.com/) 结对创作完成。Copilot 大概完成了本文 5% 左右的部分。作者也在这个 [Tweet](https://twitter.com/madawei2699/status/1458313535792955393) 上部分记录了 Copilot 的创作部分。

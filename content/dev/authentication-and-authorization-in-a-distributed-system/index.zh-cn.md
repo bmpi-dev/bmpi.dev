@@ -8,7 +8,7 @@ description: "本文从高层次梳理在不同架构演进中认证、授权及
 isCJKLanguage: true
 og_image: "https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png"
 categories: [
-    "什么是X"
+    "分布式技术"
 ]
 ---
 
