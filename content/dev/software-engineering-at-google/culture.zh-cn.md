@@ -359,6 +359,7 @@ Google是一家伟大的互联网公司，同时研发出来了大量知名的�
 - [The Definition of a Tech Lead](https://www.patkua.com/blog/the-definition-of-a-tech-lead/)
 - [What Does a Software Tech Lead Do?](http://allyouneedisbackend.com/blog/2018/08/03/what-does-a-tech-lead-do/)
 - [Tech Lead](https://icodebook.com/tags/tl/)
+- [如何应对团队协作的五大障碍](https://insights.thoughtworks.cn/how-to-solve-five-dysfunctions-of-team/)
 
 ### 工程效率测量
 
