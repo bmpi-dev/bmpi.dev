@@ -90,12 +90,6 @@ FootnoteReturnLinkContents = "↑"
     # OG
     og_image = "images/bg2.png"
 
-# Comments on github issue
-[params.utteranc]
-    repo = "bmpi-dev/bmpi.dev"
-    issue-term = "pathname"
-    theme = "github-light"
-
 # Social links
 [[params.social]]
     name = "Github"

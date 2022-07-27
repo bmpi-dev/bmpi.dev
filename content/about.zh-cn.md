@@ -117,6 +117,7 @@ id = "about"
 ### 本站变更日志
 
 ```text
+✔ 网站评论集成giscus @done(22-07-27 23:20)
 ✔ 添加umami追踪站点流量 @done(22-06-18 18:00)
 ✔ 文章页支持expand shortcode @done(22-06-10 18:20)
 ✔ 添加Plotly绘图支持 @done(22-04-28 00:15)
