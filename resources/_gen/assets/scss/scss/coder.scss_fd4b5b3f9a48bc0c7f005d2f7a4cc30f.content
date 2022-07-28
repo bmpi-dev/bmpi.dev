@@ -432,6 +432,21 @@ a[href$="/dev/"] {
 a[href$="/money/"] {
   color: #cc5595 !important; }
 
+.share-twitter-container {
+  text-align: center;
+  background: -webkit-linear-gradient(45deg, #e5b751, #1677b3, #cc5595 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  .share-twitter-container a {
+    display: inline; }
+    @media only screen and (max-width: 768px) {
+      .share-twitter-container a {
+        display: block; } }
+.share-twitter-container-dashed {
+  display: inline; }
+  @media only screen and (max-width: 768px) {
+    .share-twitter-container-dashed {
+      display: none; } }
 .content {
   flex: 1;
   display: flex;
