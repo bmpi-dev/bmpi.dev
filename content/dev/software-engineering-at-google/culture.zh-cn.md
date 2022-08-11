@@ -360,6 +360,7 @@ Google是一家伟大的互联网公司，同时研发出来了大量知名的�
 - [What Does a Software Tech Lead Do?](http://allyouneedisbackend.com/blog/2018/08/03/what-does-a-tech-lead-do/)
 - [Tech Lead](https://icodebook.com/tags/tl/)
 - [如何应对团队协作的五大障碍](https://insights.thoughtworks.cn/how-to-solve-five-dysfunctions-of-team/)
+- [技术决策与团队认知负载](https://insights.thoughtworks.cn/monolith-microservice-architectural-tradeoff-cognitive-load/)
 
 ### 工程效率测量
 
@@ -380,6 +381,10 @@ Google是一家伟大的互联网公司，同时研发出来了大量知名的�
 ```
 
 工程效率的测量一般发生在大规模团队或组织级别，我所经历的项目上并没有此实践。对小型团队来说，可以通过简单的一些问卷调查这类定性的方式来收集团队成员的反馈，当然也可以通过一些量化的指标如流水线构建速度、迭代开发速率、代码静态分析结果、测试覆盖率等指标测量团队的工程效率。
+
+推荐进一步阅读的文章：
+
+- [敏捷交付的工程效能治理](https://insights.thoughtworks.cn/engineering-productivity-governance-in-agile-delivery/)
 
 ## 总结
 
