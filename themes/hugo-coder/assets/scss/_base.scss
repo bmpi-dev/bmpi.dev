@@ -490,6 +490,27 @@ div.notices.tip p:first-child:after {
   }
 }
 
+*[id^='markmap-software-engineering-at-google-process-0'] > svg {
+  height: 1000px;
+  @media only screen and (max-width : 768px) {
+    height: 350px;
+  }
+}
+
+*[id^='markmap-software-engineering-at-google-process-2'] > svg {
+  height: 1000px;
+  @media only screen and (max-width : 768px) {
+    height: 350px;
+  }
+}
+
+*[id^='markmap-software-engineering-at-google-tool-0'] > svg {
+  height: 1000px;
+  @media only screen and (max-width : 768px) {
+    height: 350px;
+  }
+}
+
 .mermaid {
   width: 100%;
   height: auto;
