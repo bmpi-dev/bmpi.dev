@@ -21,13 +21,6 @@ outputs = "html"
 | [ZoomQuiet](https://blog.zoomquiet.io/) | 是也乎(￣▽￣) |
 | [认知.xKnow](https://blog.xknow.net/) | 认知.xKnow |
 | [刘悦的技术博客](https://v3u.cn/) | 刘悦的技术博客 |
-
-## 我关注的博客
-
-| | |
-| -- | -- |
-| [面向信仰编程](https://draveness.me/) | Go语言设计与实现 |
-| [酷壳](https://coolshell.cn/) | 享受编程和技术所带来的快乐 |
 | [麻广广的博客](https://maguangguang.xyz/) | 关注领域：企业架构设计（分布式架构设计、微服务架构设计），企业数字化转型，自我提升及个人成长，读书/学习思考笔记等 |
 | [少个分号](https://shaogefenhao.com/) | 软件架构、高认知软件工程、DDD、领域驱动设计、敏捷、研发自测、敏捷团队 |
 | [爱码叔-iCodeBook](https://icodebook.com/) | 专注于软件设计、系统架构 |
@@ -37,3 +30,11 @@ outputs = "html"
 | [于晓南](https://qualityfocus.club/yxn) | 关注软件质量 |
 | [聂子云](http://www.niezitalk.com/) | 聂子云 |
 | [张凯峰](https://www.kaifengzhang.com/) | 张凯峰 |
+
+## 我关注的博客
+
+| | |
+| -- | -- |
+| [面向信仰编程](https://draveness.me/) | Go语言设计与实现 |
+| [酷壳](https://coolshell.cn/) | 享受编程和技术所带来的快乐 |
+| [Limboy](https://limboy.me/) | Limboy |
