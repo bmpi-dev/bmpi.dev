@@ -15,6 +15,10 @@ outputs = "html"
 
 - [Slide](https://talk.bmpi.dev/2022/how-to-implement-concurrency/)
 
+### 技术写作的那点事
+
+- [直播回放](https://app.ma.scrmtech.com/meetings-api/sapIndex/SapSourceData?pf_uid=7019_1254&sid=54902&source=2&pf_type=3&code=031Pre0006oOmO1qG6000qe8ei0Pre0p&state=&appid=wx4bd00f95dd7c7ca1)
+
 ### 从内容创作到个人品牌
 
 - [Slide](https://talk.bmpi.dev/2022/content-marketing-to-personal-brand/)
