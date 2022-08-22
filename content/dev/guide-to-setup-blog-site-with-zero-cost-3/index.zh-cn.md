@@ -11,7 +11,6 @@ isCJKLanguage: true
 
 > 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第三篇【订阅推送篇】。
 > ![](https://img.bmpi.dev/e456f0cb-bb75-3f7c-fd9e-dec5fbfd3761.png)
-> 这个系列不少的东西需要你科学上网才能访问，也就是你需要一把[梯子](/affiliate)。
 
 博客搭建好后，如何让你的读者第一时间收到文章更新？
 

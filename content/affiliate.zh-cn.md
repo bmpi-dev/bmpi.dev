@@ -11,23 +11,7 @@ math = true
 这种模式在国外称之为Affiliate Network（联盟营销）/ CPS，也就是我们常说的的推广链接。
 ```
 
-## 我在用的服务器与域名
-
-{{< figure src="https://img.bmpi.dev/f81c828c-acb1-224b-cda5-a42a65066af2.png" caption="Vultr" link="https://www.vultr.com/?ref=7252988">}}
-
-{{< figure src="https://img.bmpi.dev/2619ddcc-f159-0ca3-62b0-e5c9ecbde404.png" caption="Namecheap" link="https://www.tkqlhce.com/kp97mu2-u1HRKNKNLMHJLKOOOOQ">}}
-
-## 我在用的机场/梯子
-
-> 如果你的网络上不了Google/YouTube/Twitter，那你就需要一个机场或梯子，它能去除那股神秘的力量，助你正常上网
-
-- [Blinkload](https://blinkload.to/aff/LYWO)
-
-## 我在用的键盘
-
-吃灰中的 [HHKB](https://union-click.jd.com/jdc?e=&p=AyIGZRprFQMTBlUaUhcLFwJUKx9KWkxYZUIeUENQDEsFA1BWThgJBABAHUBZCQUdRUFGGRJDD1MdQlUQQwVKDFRXFk8jQA4SBlQaWxQLEA5QHloleAxfAHw7XH5weTNyWmNwTVcGTBhgYh4LZRprFQMTBFYTWhcHFzdlG1wlVHwHVBpaFAoRAFYTaxQyEgNcG14XBhMGUxtZFzIVB1wrB0VXQkEBQ1gSCho3ZStYJTIiB2UYa1dsFwYBG1gcVhRQAEgJEFZGDl1OXkUAFwFVGVwQV0AEBxxrFwMTA1w%3D)
-
-## 我心目中的好书
+## 好书推荐
 
 ### 投资类
 
