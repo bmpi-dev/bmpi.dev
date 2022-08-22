@@ -11,7 +11,6 @@ isCJKLanguage: true
 
 > 本文属于[零成本搭建现代博客指南](/series/零成本搭建现代博客指南/)系列第二篇【SEO优化篇】。
 > ![](https://img.bmpi.dev/adc30b81-2169-a595-ece1-174b05630393.png)
-> 这个系列不少的东西需要你科学上网才能访问，也就是你需要一把[梯子](/affiliate)。
 
 > 如果你对`SEO`并不了解，请先看这篇[《什么是SEO》](/money/what-is-seo/)。
 
