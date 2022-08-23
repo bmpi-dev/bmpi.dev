@@ -12,6 +12,7 @@ outputs = "html"
 - [Nextjournal - Data-driven Research Livebook](https://nextjournal.com/)
 - [Elixir Livebook](https://bmpi.fly.dev)
 - [Metabase - Database Visualization](https://github.com/metabase/metabase)
+- [ServerCat - Server Status, Docker Management and SSH client for iOS/macOS](https://servercat.app/)
 
 ## 微信Markdown排版工具
 
