@@ -425,6 +425,11 @@ div.notices.tip p:first-child:after {
   @media only screen and (max-width: 768px) {
     *[id^='markmap-software-engineering-at-google-tool-0'] > svg {
       height: 350px; } }
+*[id^='markmap-authentication-and-authorization-in-a-distributed-system-0'] > svg {
+  height: 600px; }
+  @media only screen and (max-width: 768px) {
+    *[id^='markmap-authentication-and-authorization-in-a-distributed-system-0'] > svg {
+      height: 350px; } }
 .mermaid {
   width: 100%;
   height: auto;

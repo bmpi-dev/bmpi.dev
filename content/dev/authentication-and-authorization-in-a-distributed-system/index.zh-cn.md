@@ -10,6 +10,9 @@ og_image: "https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png"
 categories: [
     "分布式技术"
 ]
+markmap:
+  enabled: true
+  id: "authentication-and-authorization-in-a-distributed-system"
 ---
 
 在软件系统设计中，如何让应用能够在各种环境中安全高效的访问是个复杂的问题，这个问题的背后是一系列软件设计时需要考虑的架构安全问题：<sup>[架构安全性 | 凤凰架构](https://icyfenix.cn/architect-perspective/general-architecture/system-security/)</sup>
@@ -22,7 +25,69 @@ categories: [
 
 在漫长的架构演进历史中，业界对这些问题已经有很成熟的解决方案。在架构安全这块，最好的是遵循技术标准与最佳实践，尽可能**不重复造轮子或“创新”**。下面这个思维导图就是针对这些问题的常见的技术标准及方案：
 
-![](https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png)
+<!-- ![](https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png) -->
+
+```markmap
+# 架构安全
+## 认证
+### 方式
+#### 通信信道上的认证
+##### SSL/TLS
+- 加密算法
+- 生成密钥
+- 公钥分发
+- CA 认证
+- 核验公钥
+- 签名
+- 验证
+#### 通信协议上的认证
+##### HTTP
+- RFC 7235
+   - HTTP Basic
+- RFC 7616
+   - Digest
+- RFC 6750
+   - Bearer
+- RFC 7486
+   - HOBA
+- RFC 6287
+   - OCRA(质疑/应答算法)
+- 扩展方案
+   - AWS4-HMAC-SHA256
+   - Windows Live ID
+   - Twitter Basic
+#### 通信内容上的认证
+##### Web认证
+- 表单认证
+- RFC 6238
+   - TOTP(基于时间的一次性密码算法)
+- WebAuthn
+### SSO
+- Kerberos-based
+- CAS
+- SAML
+- OIDC
+## 授权
+### 访问控制
+- ACL
+- RBAC
+- ABAC
+### OAuth2
+- 授权码模式
+- 隐式授权模式
+- 密码模式
+- 客户端模式
+## 凭证
+### 自包含令牌
+- JWT
+### 引用令牌
+- Cookie-Session
+## 实现
+### Java
+- JAAS
+- Shiro
+- Spring Security
+```
 
 在研究分布式系统的认证和授权问题前，让我们回到单体架构的时代，看看在单体架构上这些问题是如何被解决的。
 
