@@ -154,6 +154,7 @@ async function html2Img(html) {
     addQRPart(footer);
     div.appendChild(footer);
     let bodyBackup = document.body;
+    let postionBackup = window.pageYOffset || document.documentElement.scrollTop;
     if (window.mobileCheck()) {
         document.body = document.createElement("body");
     }
@@ -161,6 +162,7 @@ async function html2Img(html) {
     let canvas = await html2canvas(div, {allowTaint: true, useCORS: true});
     if (window.mobileCheck()) {
         document.body = bodyBackup;
+        window.scrollTo(0, postionBackup);
     } else {
         document.body.removeChild(div);
     }
