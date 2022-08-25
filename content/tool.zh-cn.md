@@ -14,6 +14,12 @@ outputs = "html"
 - [Metabase - Database Visualization](https://github.com/metabase/metabase)
 - [ServerCat - Server Status, Docker Management and SSH client for iOS/macOS](https://servercat.app/)
 
+## SaaS云服务
+
+### 网络代理
+
+- [Rotating Reverse Proxies](https://stormproxies.com/clients/aff/go/madawei2699)
+
 ## 微信Markdown排版工具
 
 | | |
