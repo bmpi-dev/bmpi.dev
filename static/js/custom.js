@@ -146,7 +146,7 @@ function addAuthorPart(html) {
 function addQRPart(html) {
     let div = document.createElement('div');
     let qr = document.createElement('img');
-    qr.setAttribute('src', 'https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=' + window.location.href);
+    qr.setAttribute('src', 'https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=' + window.location.href + '?utm_source=bookmark');
     qr.setAttribute('style', 'width: 70px; height: 70px; max-width: none !important;');
     div.appendChild(qr);
     html.appendChild(div);
