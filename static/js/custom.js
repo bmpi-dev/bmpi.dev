@@ -14,6 +14,16 @@ if("serviceWorker" in navigator) {
     });
 }
 
+function fileReader (blob) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader()
+      reader.onload = (e) => {
+        resolve(e.target.result)
+      }
+      reader.readAsDataURL(blob)
+    })
+}
+
 function httpGetAsync(theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
@@ -147,6 +157,18 @@ async function html2Img(html) {
     div.id = 'capture';
     div.setAttribute('style', 'padding: 30px 20px;background: #000;color: #f7f4cb;font-family: "LXGW WenKai";max-width: 768px;margin: auto;');
     div.innerHTML = html;
+    let containImages = div.getElementsByTagName('img');
+    for (let i = 0; i < containImages.length; i++) {
+        let originImg = containImages[i];
+        let originImgSrc = originImg.getAttribute('src');
+        let imgDataURL = await fetch(originImgSrc)
+                        .then(function (response) {
+                            return response.blob();
+                        }).then(function (blob) {
+                            return fileReader(blob);
+                        });
+        originImg.src = imgDataURL;
+    }
     addDatePart(div);
     let footer = document.createElement('div');
     footer.setAttribute('style', 'display: flex;flex-direction: row;justify-content: space-between;align-items: center;margin-top: 20px;padding-top: -20px;padding-top: -20px;border-top-style: dashed;border-top-width: 1px;padding-top: 10px;');
