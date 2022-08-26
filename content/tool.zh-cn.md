@@ -14,7 +14,15 @@ outputs = "html"
 - [Metabase - Database Visualization](https://github.com/metabase/metabase)
 - [ServerCat - Server Status, Docker Management and SSH client for iOS/macOS](https://servercat.app/)
 
-## SaaS云服务
+## SaaS
+
+### 云平台
+
+- [AWS](https://aws.amazon.com/)
+- [Azure](https://azure.microsoft.com/)
+- [Vercel](https://vercel.com/)
+- [Cloudflare](https://cloudflare.net/)
+- [Fly.io](https://fly.io/)
 
 ### 网络代理
 
