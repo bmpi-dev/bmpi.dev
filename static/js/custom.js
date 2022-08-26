@@ -181,6 +181,7 @@ async function html2Img(html) {
         document.body = document.createElement("body");
     }
     document.body.appendChild(div);
+    launch_toast("请稍等。。失败请用电脑浏览器尝试");
     let canvas = await html2canvas(div, {allowTaint: true, useCORS: true});
     if (window.mobileCheck()) {
         document.body = bodyBackup;
