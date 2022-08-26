@@ -22,6 +22,7 @@ outputs = "html"
 - [Azure](https://azure.microsoft.com/)
 - [Vercel](https://vercel.com/)
 - [Cloudflare](https://cloudflare.net/)
+- [Supabase](https://supabase.com/)
 - [Fly.io](https://fly.io/)
 
 ### 网络代理
