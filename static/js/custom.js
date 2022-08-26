@@ -158,6 +158,10 @@ async function html2Img(html) {
     div.setAttribute('style', 'padding: 30px 20px;background: #000;color: #f7f4cb;font-family: "LXGW WenKai";max-width: 768px;margin: auto;');
     div.innerHTML = html;
     let containImages = div.getElementsByTagName('img');
+    if (containImages.length > 0 && window.mobileCheck()) {
+        launch_toast("手机端不支持图片书签，请用电脑浏览器");
+        return;
+    }
     for (let i = 0; i < containImages.length; i++) {
         let originImg = containImages[i];
         let originImgSrc = originImg.getAttribute('src');
@@ -181,7 +185,6 @@ async function html2Img(html) {
         document.body = document.createElement("body");
     }
     document.body.appendChild(div);
-    launch_toast("请稍等。。失败请用电脑浏览器尝试");
     let canvas = await html2canvas(div, {allowTaint: true, useCORS: true});
     if (window.mobileCheck()) {
         document.body = bodyBackup;
