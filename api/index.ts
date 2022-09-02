@@ -29,15 +29,51 @@ const viewsEndpoint = new awsx.apigateway.API("bmpi-dev-post-views", {
 
             const client = new aws.sdk.DynamoDB.DocumentClient();
 
-            const result = await client.update({
-                TableName: counterTable.name.get(),
-                Key: { id: route },
-                UpdateExpression: "SET hit = if_not_exists(hit, :zero) + :incr",
-                ExpressionAttributeValues: { ":zero": 0, ":incr": incr },
-                ReturnValues:"UPDATED_NEW",
-            }).promise();
+            var count = 0;
 
-            let count = result.Attributes!.hit;
+            if (route == 'bmpi-dev-dev-page-views') {
+                const result = await client.scan({
+                    TableName: counterTable.name.get(),
+                    FilterExpression: "begins_with(id, :q) AND hit > :hit_filter",
+                    ExpressionAttributeValues: {":q": "bmpi.dev/dev/", ":hit_filter": 100},
+                    ProjectionExpression: "hit"
+                }).promise();
+                let items = result.Items!;
+                for (let item of items) {
+                    count = count + item.hit;
+                }
+            } else if (route == 'bmpi-dev-self-page-views') {
+                const result = await client.scan({
+                    TableName: counterTable.name.get(),
+                    FilterExpression: "begins_with(id, :q) AND hit > :hit_filter",
+                    ExpressionAttributeValues: {":q": "bmpi.dev/self/", ":hit_filter": 100},
+                    ProjectionExpression: "hit"
+                }).promise();
+                let items = result.Items!;
+                for (let item of items) {
+                    count = count + item.hit;
+                }
+            } else if (route == 'bmpi-dev-money-page-views') {
+                const result = await client.scan({
+                    TableName: counterTable.name.get(),
+                    FilterExpression: "begins_with(id, :q) AND hit > :hit_filter",
+                    ExpressionAttributeValues: {":q": "bmpi.dev/money/", ":hit_filter": 100},
+                    ProjectionExpression: "hit"
+                }).promise();
+                let items = result.Items!;
+                for (let item of items) {
+                    count = count + item.hit;
+                }
+            } else {
+                const result = await client.update({
+                    TableName: counterTable.name.get(),
+                    Key: { id: route },
+                    UpdateExpression: "SET hit = if_not_exists(hit, :zero) + :incr",
+                    ExpressionAttributeValues: { ":zero": 0, ":incr": incr },
+                    ReturnValues:"UPDATED_NEW",
+                }).promise();
+                count = result.Attributes!.hit;
+            }
             
             return {
                 statusCode: 200,
