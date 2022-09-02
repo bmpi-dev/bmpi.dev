@@ -3,7 +3,15 @@
 {{ end }}
 {{ define "content" }}
   <section class="container list">
-    <h1 class="title" style="font-size: 1.6rem !important;border-bottom:1px dotted #bf7326;padding-bottom:20px;">{{ .Description }}</h1>
+    {{$scratch := newScratch}}
+    {{ range (where .Site.RegularPages "Section" "==" "dev") }}
+        {{$scratch.Add "total" (countwords .Content)}}
+    {{ end }}
+    <h1 class="title" style="font-size: 1.6rem !important;border-bottom:1px dotted #bf7326;padding-bottom:20px;">
+      {{ .Description }}
+      <br>
+      <div style="text-align:left;font-size: 1.2rem !important;">共 {{ len (where .Site.RegularPages "Section" "==" "dev") }} 篇文章 / 总计 {{$scratch.Get "total" }} 字 / 浏览量 <span id="money-page-views"></span> 次</div>
+    </h1>
 
     <ul>
       {{- range .Paginator.Pages -}}

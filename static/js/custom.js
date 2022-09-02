@@ -46,6 +46,9 @@ function set_home_page_site_run_days() {
 }
 
 let allPageViewsAPI = "https://api.bmpi.dev/page-views/bmpi-dev-all-page-views/";
+let devPageViewsAPI = "https://api.bmpi.dev/page-views/bmpi-dev-dev-page-views/";
+let selfPageViewsAPI = "https://api.bmpi.dev/page-views/bmpi-dev-self-page-views/";
+let moneyPageViewsAPI = "https://api.bmpi.dev/page-views/bmpi-dev-money-page-views/";
 let singlePageViewsAPI = "https://api.bmpi.dev/page-views/bmpi.dev" + window.location.pathname;
 
 function get_post_views(url, callback) {
@@ -61,6 +64,24 @@ function set_stats_on_home() {
         get_post_views(singlePageViewsAPI, res => {});
     } else {
         postViews = document.getElementById("post-views");
+        devPostViews = document.getElementById("dev-page-views");
+        selfPostViews = document.getElementById("self-page-views");
+        moneyPostViews = document.getElementById("money-page-views");
+        if (devPostViews != undefined) {
+            get_post_views(devPageViewsAPI, res => {
+                devPostViews.textContent = JSON.parse(res).count;
+            });
+        }
+        if (selfPostViews != undefined) {
+            get_post_views(selfPageViewsAPI, res => {
+                selfPostViews.textContent = JSON.parse(res).count;
+            });
+        }
+        if (moneyPostViews != undefined) {
+            get_post_views(moneyPageViewsAPI, res => {
+                moneyPostViews.textContent = JSON.parse(res).count;
+            });
+        }
         if (postViews != undefined) {
             get_post_views(allPageViewsAPI, res => {});
             get_post_views(singlePageViewsAPI, res => {
