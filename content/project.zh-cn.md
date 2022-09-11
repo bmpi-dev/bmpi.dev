@@ -20,26 +20,23 @@ outputs = "html"
 | | |
 | -- | -- |
 | [投资炼金术](https://money.bmpi.dev/) | 投资交易助手 |
-| [scrape_google_keyword](https://github.com/bmpi-dev/scrape_google_keyword) | 刮取Google关键词Top10排名网站信息 |
+| [free4.chat](https://github.com/madawei2699/free4chat) | 匿名语音聊天室 |
 | [tg2web](https://github.com/bmpi-dev/tg2web) | 电报频道静态化工具 |
-| [git2pdf](https://github.com/bmpi-dev/git2pdf) | 打印GitHub README文档 |
 | [awesome-seo](https://github.com/madawei2699/awesome-seo) | 我整理的关于Google SEO系统学习的收藏资源及通过流量变现的介绍 |
 | [notion-sites](https://github.com/madawei2699/notion-sites) | 我整理的Notion好站列表 |
 | [xian-IT](https://github.com/madawei2699/xian-IT) | 如果你对西安互联网公司熟悉，欢迎提交 Issue 或者PR，期待你的参与。 |
-| [logseq.xyz](https://github.com/bmpi-dev/logseq.xyz) | Logseq 自托管版本（v0.5.5） |
-| [free4.chat](https://github.com/madawei2699/free4chat) | 匿名语音聊天室 |
 
-## 流量站
+## SEO流量站
 
 | | |
 | -- | -- |
 | [gitopx.com](https://www.gitopx.com) | GitHub Top100 用户/仓库排名信息 |
 | [webtg.org](https://www.webtg.org) | Web Telegram |
-| [instaghub](https://github.com/bmpi-dev/instaghub) | Instagram流量站 |
 
 ## 归档
 
 | | |
 | -- | -- |
-| [一款产品的从0到1之旅](/dev/zero-to-one/) | 交易日记iOS App[已下线] |
-| [项目Google邮件列表](https://groups.google.com/forum/#!forum/qunpin) | 群品电子书项目[已下线] |
+| [instaghub](https://github.com/bmpi-dev/instaghub) | Ins Viewer |
+| [一款产品的从0到1之旅](/dev/zero-to-one/) | 交易日记 iOS App |
+| [项目Google Groups](https://groups.google.com/forum/#!forum/qunpin) | 群品电子书项目 |
