@@ -32,7 +32,7 @@ This article covers the following:
   - Setting up S3 buckets.
   - Setting up CloudFormation.
 
-The final result is available at: [Online version](https://money.i365.tech/).
+The final result is available at: [Online version](https://money.bmpi.dev/).
 
 The source code is available at: [Code Repository](https://github.com/bmpi-dev/invest-alchemy).
 
