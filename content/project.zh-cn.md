@@ -37,6 +37,7 @@ outputs = "html"
 
 | | |
 | -- | -- |
+| [logseq.xyz](https://github.com/bmpi-dev/logseq.xyz) | Logseq 自托管版本（v0.5.5） |
 | [instaghub](https://github.com/bmpi-dev/instaghub) | Ins Viewer |
 | [一款产品的从0到1之旅](/dev/zero-to-one/) | 交易日记 iOS App |
 | [项目Google Groups](https://groups.google.com/forum/#!forum/qunpin) | 群品电子书项目 |
