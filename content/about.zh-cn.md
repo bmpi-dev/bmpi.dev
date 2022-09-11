@@ -47,9 +47,9 @@ id = "about"
 - [Web3](https://twitter.com/madawei2699/status/1479829788139286533)
 - [内容营销](https://twitter.com/madawei2699/status/1481596368716451842)
 #### 开源项目
+- [Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy)
 - [free4chat](https://github.com/madawei2699/free4chat)
 - [instaghub](https://github.com/bmpi-dev/instaghub)
-- [Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy)
 - [tg2web](https://github.com/bmpi-dev/tg2web)
 #### 个人产品
 - bmpi.dev
@@ -63,9 +63,8 @@ id = "about"
   - [word](https://word.bmpi.dev/)
   - [wechat](https://wechat.bmpi.dev/)
 - [free4.chat](https://free4.chat/)
-- [双均线交易策略系统](https://money.i365.tech/)
+- [投资炼金术](https://money.bmpi.dev/)
 - 自用托管网站
-  - [logseq.xyz](https://logseq.xyz/)
   - [excalidraw](https://wb.bmpi.dev/)
 - 流量站
   - [gitopx.com](https://www.gitopx.com/)
