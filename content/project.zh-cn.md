@@ -19,7 +19,7 @@ outputs = "html"
 
 | | |
 | -- | -- |
-| [Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy) | 被动收入投资助手 |
+| [投资炼金术](https://money.bmpi.dev/) | 投资交易助手 |
 | [scrape_google_keyword](https://github.com/bmpi-dev/scrape_google_keyword) | 刮取Google关键词Top10排名网站信息 |
 | [tg2web](https://github.com/bmpi-dev/tg2web) | 电报频道静态化工具 |
 | [git2pdf](https://github.com/bmpi-dev/git2pdf) | 打印GitHub README文档 |
