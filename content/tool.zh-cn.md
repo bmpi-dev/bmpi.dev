@@ -29,6 +29,10 @@ outputs = "html"
 
 - [Rotating Reverse Proxies](https://stormproxies.com/clients/aff/go/madawei2699)
 
+## Open Graph Image
+
+- [Open Graph Image for bmpi.dev](https://og.bmpi.dev/)
+
 ## 微信Markdown排版工具
 
 | | |
