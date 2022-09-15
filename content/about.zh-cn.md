@@ -116,6 +116,7 @@ id = "about"
 ### 本站变更日志
 
 ```text
+✔ Open Graph Image(og.bmpi.dev) @done(22-09-15 18:51)
 ✔ 网站分享功能移除sharethis @done(22-07-28 23:00)
 ✔ 网站评论集成giscus @done(22-07-27 23:20)
 ✔ 添加umami追踪站点流量 @done(22-06-18 18:00)
