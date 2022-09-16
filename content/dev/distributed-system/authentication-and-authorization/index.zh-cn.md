@@ -10,6 +10,9 @@ og_image: "https://img.bmpi.dev/0f3dfb95-7f80-2311-74f1-f70ea7fd9a69.png"
 categories: [
     "分布式技术"
 ]
+aliases: [
+    "/dev/authentication-and-authorization-in-a-distributed-system/"
+]
 markmap:
   enabled: true
   id: "authentication-and-authorization-in-a-distributed-system"

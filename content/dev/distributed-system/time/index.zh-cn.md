@@ -10,6 +10,9 @@ og_image: "https://img.bmpi.dev/3d3413ee-7024-5ff7-5904-e9120dd5690f.png"
 categories: [
     "分布式技术"
 ]
+aliases: [
+    "/dev/time-in-distributed-system/"
+]
 markmap:
   enabled: true
 ---

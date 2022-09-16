@@ -6,6 +6,9 @@ tags: ["SEO", "独立博客", "个人博客", "技术博客", "SEO流量研究",
 keywords: "SEO、独立博客、SEO流量研究、关键词挖掘、博客SEO"
 description: "如何能让搜索引擎给我们带来免费而源源不断的SEO流量？如何给新建的站做基本的SEO？如何分析老站的流量现状通过一些优化方法来提高SEO流量？如何做关键词研究？如何做网站竞品研究？如何做面向SEO搜索意图的内容创作？本文告诉你答案"
 series: ["零成本搭建现代博客指南", "SEO实践日志"]
+aliases: [
+    "/dev/guide-to-setup-blog-site-with-zero-cost-2/"
+]
 isCJKLanguage: true
 ---
 

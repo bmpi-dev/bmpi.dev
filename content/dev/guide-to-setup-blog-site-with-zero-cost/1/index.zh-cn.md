@@ -6,6 +6,9 @@ tags: ["Markdown", "独立博客", "个人博客", "技术博客", "GitHub博客
 keywords: "Markdown, 独立博客, Hugo, Netlify, Github, Namecheap, AWS"
 description: "本文介绍了如何零成本搭建一个自由独立的写作平台-基于GitHub的个人技术博客搭建指南"
 series: ["零成本搭建现代博客指南"]
+aliases: [
+    "/dev/guide-to-setup-blog-site-with-zero-cost-1/"
+]
 isCJKLanguage: true
 ---
 

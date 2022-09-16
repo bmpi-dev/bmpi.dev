@@ -6,6 +6,9 @@ tags: ["独立博客", "个人博客", "技术博客", "加载速度优化", "Ch
 keywords: "独立博客、加载速度优化、Chrome Audits、webpagetest、图片优化、CDN、AMP、广告加载优化"
 description: "博客搭建好后，如何优化加载速度？本文告诉你答案"
 series: ["零成本搭建现代博客指南"]
+aliases: [
+    "/dev/guide-to-setup-blog-site-with-zero-cost-4/"
+]
 isCJKLanguage: true
 ---
 

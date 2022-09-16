@@ -6,6 +6,9 @@ tags: ["独立博客", "个人博客", "技术博客", "加载速度优化", "CD
 keywords: "独立博客、加载速度优化、CDN、阿里云、境外网站国内访问速度优化、HTTPS加速"
 description: "网站部署国外又不想备案，国内访问速度太慢怎么办？本文教你优化国外部署网站在国内的访问速度。"
 series: ["零成本搭建现代博客指南"]
+aliases: [
+    "/dev/guide-to-setup-blog-site-with-zero-cost-5/"
+]
 isCJKLanguage: true
 ---
 
