@@ -51,7 +51,6 @@ outputs = "html"
 
 - [Notion - 书单](https://www.notion.so/mdw/Inbox-1fb2a7e9d72747a4ba7aea5cb4541f3f)
 - [TiddlyWiki - 公开笔记](https://wiki.bmpi.dev)
-- [Logseq - 私有笔记](https://logseq.xyz/)
 
 ## 白板工具
 
