@@ -5,7 +5,9 @@ keywords = "工具"
 outputs = "html"
 +++
 
-## 开发工具
+## Dev
+
+### Tool
 
 - [VSCode Server - Web IDE](https://code.bmpi.dev)
 - [Judge0 IDE - Online Code Runner](https://ide.judge0.com/)
@@ -14,9 +16,7 @@ outputs = "html"
 - [Metabase - Database Visualization](https://github.com/metabase/metabase)
 - [ServerCat - Server Status, Docker Management and SSH client for iOS/macOS](https://servercat.app/)
 
-## SaaS
-
-### 云平台
+### Cloud
 
 - [AWS](https://aws.amazon.com/)
 - [Azure](https://azure.microsoft.com/)
@@ -25,8 +25,9 @@ outputs = "html"
 - [Supabase](https://supabase.com/)
 - [Fly.io](https://fly.io/)
 
-### 网络代理
+### Network
 
+- [Tailscale](https://tailscale.com/)
 - [Rotating Reverse Proxies](https://stormproxies.com/clients/aff/go/madawei2699)
 
 ## Open Graph Image
