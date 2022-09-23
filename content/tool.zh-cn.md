@@ -14,7 +14,8 @@ outputs = "html"
 - [Nextjournal - Data-driven Research Livebook](https://nextjournal.com/)
 - [Elixir Livebook](https://bmpi.fly.dev)
 - [Metabase - Database Visualization](https://github.com/metabase/metabase)
-- [ServerCat - Server Status, Docker Management and SSH client for iOS/macOS](https://servercat.app/)
+- [NocoDB - The Airtable Alternative](https://github.com/nocodb/nocodb)
+- [ServerCat - SSH client for iOS/macOS](https://servercat.app/)
 
 ### Cloud
 
@@ -22,8 +23,9 @@ outputs = "html"
 - [Azure](https://azure.microsoft.com/)
 - [Vercel](https://vercel.com/)
 - [Cloudflare](https://cloudflare.net/)
-- [Supabase](https://supabase.com/)
-- [Fly.io](https://fly.io/)
+- [Supabase - The Firebase alternative](https://supabase.com/)
+- [Fly.io - Running full stack apps and databases](https://fly.io/)
+- [Upstash - Serverless Redis® and Kafka®](https://www.upstash.com/)
 
 ### Network
 
