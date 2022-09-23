@@ -469,11 +469,14 @@ div.notices.tip p:first-child:after {
   border-bottom: 1px dashed transparent;
   border-image: linear-gradient(to left,white,red,hotpink,violet,gold,white);
   border-image-slice: 1%;
-  font-size: .3em;
-  font-family: 'LXGW WenKai';
+  font: 300 14px/20px 'LXGW wenkai' !important;
   @media only screen and (max-width : 768px) {
     height: 230px;
   }
+}
+
+.markmap > svg > g > g > foreignObject > div {
+  font: 300 14px/20px 'LXGW wenkai' !important;
 }
 
 *[id^='markmap-about-'] > svg {
@@ -526,6 +529,9 @@ div.notices.tip p:first-child:after {
   border-bottom: 1px dashed transparent;
   border-image: linear-gradient(to left,white,red,hotpink,violet,gold,white);
   border-image-slice: 1%;
+  text {
+    font-family: 'LXGW wenkai' !important;
+  }
 }
 
 figure a {
