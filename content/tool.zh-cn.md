@@ -25,6 +25,9 @@ outputs = "html"
 - [Cloudflare](https://cloudflare.net/)
 - [Supabase - The Firebase alternative](https://supabase.com/)
 - [Fly.io - Running full stack apps and databases](https://fly.io/)
+  - It only supports some types of services and has blackbox forbidden running rules, see this [tweet](https://twitter.com/madawei2699/status/1573471650376400896).
+- [Railway](https://railway.app/)
+  - It does not support changing deployment regions.
 - [Upstash - Serverless Redis® and Kafka®](https://www.upstash.com/)
 
 ### Network
