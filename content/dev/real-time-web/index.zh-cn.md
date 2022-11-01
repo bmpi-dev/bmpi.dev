@@ -27,7 +27,7 @@ categories: [
 
 Web正变的实时可交互(Real-time Interactive)起来，从早期的内容发布通知类应用，再到移动时代社交媒体的分享类应用，现在逐渐涌现出很多实时协作类的应用。
 
-{{< figure src="https://img.bmpi.dev/7dbd0ba7-d4c1-be69-764b-9d488f96f9d9.png" caption="The evolving online user experience." link="https://ably.com/blog/the-realtime-web-evolution-of-the-user-experience">}}
+{{< figure src="https://img.bmpi.dev/181e8496-78dc-b7c6-079d-ca5c4ef73d11.png" caption="The evolving online user experience." link="https://ably.com/blog/the-realtime-web-evolution-of-the-user-experience">}}
 
 这在变迁的驱动是由底层技术发展而带来了的，进而提升了Web类应用的用户交互体验。比如Web应用前后端通信协议从单向的HTTP REST到双向的WebSockets的发展，带来了Web用户体验更快的更新速度与更强的交互能力。
 
