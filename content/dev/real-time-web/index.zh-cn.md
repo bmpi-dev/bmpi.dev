@@ -167,4 +167,7 @@ Real-time Web开发本身不复杂，复杂的是Real-time叠加分布式带来�
 
 分布式领域有非常复杂的经典问题，Erlang/OTP在该领域深耕了很多年，很多都有了工业级的解决方案，站在Erlang/OTP巨人肩膀上的Elixir不仅继承了其强大的分布式解决方案，还在多个领域开辟了新的开发体验，比如Phoenix LiveView另辟蹊径带来了新的Web开发体验。
 
-本文没有提到的是，上述的例子并没有考虑数据库的问题，如果再引入传统的数据库，会让问题变得更为复杂。数据库如何能给Realtime Web带来新的开发体验？也许Rethinkdb这篇[Advancing the realtime web](https://rethinkdb.com/blog/realtime-web)能给我们更多启发。
+本文没有提到的是，上述的例子并没有考虑数据库的问题，如果再引入传统的数据库，会让问题变得更为复杂。数据库如何能给Realtime Web带来新的开发体验？也许这两篇文章能给我们更多启发：
+
+- [Advancing the realtime web - RethinkDB](https://rethinkdb.com/blog/realtime-web)
+- [SurrealDB | Why use SurrealDB?](https://surrealdb.com/blog/why-use-surrealdb)
