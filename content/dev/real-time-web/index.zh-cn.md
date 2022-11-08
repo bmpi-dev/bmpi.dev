@@ -122,6 +122,8 @@ Elixir是如何解决Real-time Web应用开发的痛点？下面从两个方面�
 
 如图所示，左侧是常规的Web页面渲染机制，数据通过网络从服务端拉取，前端通过数据控制页面组件的渲染。而Phoenix的[LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html)可以让后端开发者摆脱写Javascript的困扰，所有的逻辑都在服务端完成，页面的渲染也是通过服务端计算页面更新的差异，将小部分差异通过WebSocket推送给浏览器。
 
+![](https://img.bmpi.dev/6089c09e-ca07-e8fa-cf95-fd32a61980e4.png)
+
 Elixir让一切Live起来！
 
 ### 让分布式变得简单起来
