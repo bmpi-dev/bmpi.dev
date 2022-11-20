@@ -7,6 +7,11 @@ outputs = "html"
 
 ## 2022
 
+### 用ELIXIR开发WEBRTC应用
+
+- [Elixir Meetup #7](https://mp.weixin.qq.com/s/M5ku3U1KZNOww3PrnrXPTg)
+- [Slide](https://dev-notes.free4.chat/slide/20221126.html)
+
 ### 软件工程师如何打造个人技术影响力
 
 - [XConf China 2022](https://app.ma.scrmtech.com/meetings-api/sapIndex/SapSourceData?pf_uid=7019_1254&sid=63242&source=2&pf_type=3&code=061qOR1006W8lO1cFc200VuVl42qOR1q&state=&appid=wx4bd00f95dd7c7ca1)
