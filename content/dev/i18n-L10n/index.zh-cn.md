@@ -44,6 +44,12 @@ og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
   - [本地化的测试](#本地化的测试)
   - [本地化平台](#本地化平台)
 
+{{% notice info %}}
+本文已翻译成以下语言版本：<br>
+英文：[Internationalization(i18n) and Localization(L10n)](https://dev.to/madawei2699/international-i18n-and-localization-l10n-48d2) <br>
+西班牙语：[Internacionalización (i18n) y localización (L10n)](https://www.ibidemgroup.com/edu/traduccion-internacionalizacion-software/)
+{{% /notice %}}
+
 一个成功的产品要走向全球需要经历很多环节，从软件开发的视角主要有国际化和本地化两个流程：
 
 ![](https://img.bmpi.dev/53875fc9-00ac-e8e2-8d91-06399755dcba.png)
