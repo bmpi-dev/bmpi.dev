@@ -9,7 +9,7 @@ outputs = "html"
 
 ### 用ELIXIR开发WEBRTC应用
 
-- [Elixir Meetup #7](https://mp.weixin.qq.com/s/M5ku3U1KZNOww3PrnrXPTg)
+- [Elixir Meetup #7](https://mp.weixin.qq.com/s/F8BykMTK4Ui8ZFIWOAO6qQ)
 - [Slide](https://dev-notes.free4.chat/slide/20221126.html)
 
 ### 软件工程师如何打造个人技术影响力
