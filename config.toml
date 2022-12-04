@@ -144,33 +144,21 @@ FootnoteReturnLinkContents = "↑"
         [languages.en.menu]
 
             [[languages.en.menu.main]]
-                name = "About"
+                name = "GitHub"
                 weight = 1
-                url = "/about/"
+                url  = "https://github.com/madawei2699"
             [[languages.en.menu.main]]
-                name = "Self"
+                name = "Twitter"
                 weight = 2
+                url  = "https://twitter.com/madawei2699"
+            [[languages.en.menu.main]]
+                name = "Learn"
+                weight = 3
                 url  = "/self/"
             [[languages.en.menu.main]]
                 name = "Dev"
-                weight = 3
-                url  = "/dev/"
-            [[languages.en.menu.main]]
-                name = "Money"
                 weight = 4
-                url  = "/money/"
-            [[languages.en.menu.main]]
-                name = "Project"
-                weight = 5
-                url  = "/project/"
-            [[languages.en.menu.main]]
-                name = "Goal"
-                weight = 6
-                url  = "/goal/"
-            [[languages.en.menu.main]]
-                name = "Twitter"
-                weight = 7
-                url  = "https://twitter.com/madawei2699"
+                url  = "/dev/"
 
     [languages.zh-cn]
         languagename = "Chinese"

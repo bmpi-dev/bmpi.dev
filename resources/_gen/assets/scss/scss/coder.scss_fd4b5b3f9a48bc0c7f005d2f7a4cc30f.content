@@ -10,7 +10,7 @@ html {
 body {
   color: #212121;
   background-color: #FFFFFF;
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai", Roboto, "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8em; }
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+  font-family: "LXGW WenKai", Roboto, "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
   font-weight: 700;
   color: #000;
   color: #666666; }
@@ -105,7 +105,7 @@ b, strong {
 
 pre {
   display: block;
-  font-family: "Source Code Pro", "Lucida Console", monospace;
+  font-family: "LXGW WenKai", Roboto, "Source Code Pro", "Lucida Console", monospace;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.6rem;
@@ -118,7 +118,7 @@ pre {
     color: inherit; }
 
 code {
-  font-family: "Source Code Pro", "Lucida Console", monospace;
+  font-family: "LXGW WenKai", Roboto, "Source Code Pro", "Lucida Console", monospace;
   font-size: 1.6rem;
   font-weight: 400;
   background-color: rgba(255, 247, 0, 0.88);
@@ -253,7 +253,7 @@ a[href^="#fn:"]:after {
 
 .article-content {
   border: 1px solid lightgrey;
-  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  font-family: "LXGW WenKai","Roboto","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 40px;
@@ -281,7 +281,7 @@ a[href^="#fn:"]:after {
     line-height: 30px; }
 
 .heti code {
-  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important; }
+  font-family: "LXGW WenKai","Roboto","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important; }
 
 .my-skill {
   display: flex;
@@ -441,7 +441,7 @@ div.notices.tip p:first-child:after {
   border-image: linear-gradient(to left, white, red, hotpink, violet, gold, white);
   border-image-slice: 1%; }
   .mermaid text {
-    font-family: 'LXGW wenkai' !important; }
+    font-family: "LXGW wenkai","Roboto" !important; }
 
 figure a {
   text-decoration: auto !important;
@@ -576,7 +576,7 @@ a[href$="/money/"] {
     .list ul li .title {
       font-size: 1.8rem;
       color: #428bca;
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+      font-family: "LXGW WenKai", Roboto, "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
       font-weight: 700; }
 
 .centered {
@@ -637,7 +637,7 @@ a[href$="/money/"] {
   .navigation a, .navigation span {
     display: inline;
     font-size: 1.6rem;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    font-family: "LXGW WenKai", Roboto, "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     font-weight: 700;
     line-height: 6.0rem;
     color: #212121; }
@@ -714,7 +714,7 @@ a[href$="/money/"] {
 .pagination {
   margin-top: 6.0rem;
   text-align: center;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif; }
+  font-family: "LXGW WenKai", Roboto, "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif; }
   .pagination li {
     display: inline;
     text-align: center;

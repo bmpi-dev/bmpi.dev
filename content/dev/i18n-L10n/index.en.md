@@ -40,6 +40,12 @@ og_image: "https://img.bmpi.dev/9adbc2f4-7fa4-0f67-046b-f135c4b117b7.png"
   - [Localized testing](#localized-testing)
   - [Localization Platform](#localization-platform)
 
+{{% notice info %}}
+This post also has localization version：<br>
+Chinese: [Internationalization(i18n) and Localization(L10n)](/dev/i18n-l10n/) <br>
+Spanish: [Internacionalización (i18n) y localización (L10n)](https://www.ibidemgroup.com/edu/traduccion-internacionalizacion-software/)
+{{% /notice %}}
+
 A successful product needs to go global through many stages, from the perspective of software development there are two main processes: internationalization and localization.
 
 ![](https://img.bmpi.dev/53875fc9-00ac-e8e2-8d91-06399755dcba.png)

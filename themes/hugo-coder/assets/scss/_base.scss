@@ -311,7 +311,7 @@ a[href^="#fn:"]:after{ content: ']' }
 
 .article-content {
   border: 1px solid lightgrey;
-  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  font-family: "LXGW WenKai","Roboto","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
   padding-right: 40px;;
   padding-left: 40px;;
   padding-top: 40px;;
@@ -344,7 +344,7 @@ a[href^="#fn:"]:after{ content: ']' }
 }
 
 .heti code {
-  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  font-family: "LXGW WenKai","Roboto","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
 }
 
 .my-skill {
@@ -530,7 +530,7 @@ div.notices.tip p:first-child:after {
   border-image: linear-gradient(to left,white,red,hotpink,violet,gold,white);
   border-image-slice: 1%;
   text {
-    font-family: 'LXGW wenkai' !important;
+    font-family: "LXGW wenkai","Roboto" !important;
   }
 }
 
