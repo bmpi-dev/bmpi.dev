@@ -2,16 +2,24 @@
   <div class="about">
     <div style="margin:0 auto;text-align:left;line-height:4rem;">
       {{$scratch := newScratch}}
-      {{ range .Site.RegularPages }}
+      {{ if not (hasPrefix .RelPermalink "/en") }}
+        {{ range where .Site.RegularPages "Section" "in" (slice "self" "dev" "money") }}
+          {{$scratch.Add "postNum" 1}}
           {{$scratch.Add "total" (countwords .Content)}}
+        {{ end }}
+      {{ else}}
+        {{ range where .Site.RegularPages "Section" "in" (slice "self" "dev") }}
+          {{$scratch.Add "postNum" 1}}
+          {{$scratch.Add "total" (countwords .Content)}}
+        {{ end }}
       {{ end }}
       👋 I am <a href="https://madawei.bmpi.dev/">Dawei Ma</a>, a full stack developer live in China.<br>
-      ✍️ I have written <span style="text-decoration:underline;">{{ len .Site.RegularPages }}</span> posts about <a href="{{ .RelPermalink }}self/">Learn</a> / <a href="{{ .RelPermalink }}dev/">Dev</a> / <a href="/money/">Trade</a>, total <span style="text-decoration:underline;">{{$scratch.Get "total" }}</span> words.<br>
-      🚩 For now, My blog has been viewed for <span id="all-page-views" style="text-decoration:underline;"></span> times in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
+      ✍️ I have written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> {{ if not (hasPrefix .RelPermalink "/en") }}chinese {{ else }}english {{ end }}posts about <a href="{{ .RelPermalink }}self/">Learn</a> / <a href="{{ .RelPermalink }}dev/">Dev</a>{{ if not (hasPrefix .RelPermalink "/en") }} / <a href="/money/">Trade</a>{{ end }}, total <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words.<br>
+      🚩 For now, My blog has been viewed for <span id="all-page-views" style="text-decoration:underline;"></span>K times in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
       🔨 Love to build <a href="https://github.com/madawei2699">OSS</a>, currently focuse on <a href="https://github.com/madawei2699/free4chat">free4chat</a> and <a href="https://github.com/bmpi-dev/invest-alchemy">invest-alchemy</a>.<br>
       🤑 I manage a <a href="https://money.bmpi.dev/portfolio?t=bmpi&p=被动收入">ETF portfolio</a> to build my passive income.<br>
       📫 You can reach me via <a href="mailto:bmpidev@gmail.com">Email</a> or <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>, more about me is <a href="/about/">here</a>.<br>
-      🔗 Also find me on <a href="https://www.youtube.com/@bmpi">YouTube</a>, <a href="https://img.bmpi.dev/4e0bae9a-fa9d-5b84-d928-592bd9c2c9fb.png">WeChat</a>, <a href="https://zhuanlan.zhihu.com/improve365">ZhiHu</a>, <a href="https://t.me/s/bmpi365">Telegram</a>, <a href="https://tinyletter.com/bmpi-dev">Newsletter</a>, <a href="https://www.bmpi.dev/index.xml">RSS</a>.<br>
+      🔗 Also find me on {{ if (hasPrefix .RelPermalink "/en") }}<a href="https://dev.to/madawei2699">Dev.to</a>, {{ end }}<a href="https://www.youtube.com/@bmpi">YouTube</a>, {{ if not (hasPrefix .RelPermalink "/en") }}<a href="https://img.bmpi.dev/4e0bae9a-fa9d-5b84-d928-592bd9c2c9fb.png">WeChat</a>, <a href="https://zhuanlan.zhihu.com/improve365">ZhiHu</a>, {{ end }}<a href="https://t.me/s/bmpi365">Telegram</a>, <a href="https://tinyletter.com/bmpi-dev">Newsletter</a>, <a href="https://www.bmpi.dev/index.xml">RSS</a>.<br>
       🙊 If you are very curious about the blog name, please read this <a href="/self/build-leverage/">post</a>.<br>
       ⛽️ What keeps me going are these long-term <a href="/goal/">goals</a>.<br>
       🚮 Other stuffs which I have built are <a href="/project/">here</a>.<br>

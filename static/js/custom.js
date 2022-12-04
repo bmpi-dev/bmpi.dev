@@ -35,7 +35,7 @@ function httpGetAsync(theUrl, callback) {
 }
 
 function set_home_page_all_views(hit) {
-    document.getElementById("all-page-views").textContent = hit;
+    document.getElementById("all-page-views").textContent = hit / 1000;
 }
 
 function set_home_page_site_run_days() {
@@ -56,7 +56,7 @@ function get_post_views(url, callback) {
 }
 
 function set_stats_on_home() {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/" || window.location.pathname === "/en" || window.location.pathname === "/en/") {
         set_home_page_site_run_days();
         get_post_views(allPageViewsAPI, res => {
             set_home_page_all_views(JSON.parse(res).count);
