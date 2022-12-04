@@ -175,7 +175,7 @@ categories: [
 
 ![](https://img.bmpi.dev/88c1dad5-ce1a-cca1-c798-f4db87c1c034.png)
 
-今年博客流量相比去年增长了 180%，Twitter followers 增长了 1900%，YouTube 增长了 1200%，公众号增长了 65% 。明年我会将博客、Twitter 与 [Newsletter](https://tinyletter.com/i365) 作为主要的输出渠道，公众号和知乎只是作为长文保护版权而发表的渠道。
+今年博客流量相比去年增长了 180%，Twitter followers 增长了 1900%，YouTube 增长了 1200%，公众号增长了 65% 。明年我会将博客、Twitter 与 [Newsletter](https://tinyletter.com/bmpi-dev) 作为主要的输出渠道，公众号和知乎只是作为长文保护版权而发表的渠道。
 
 ## 展望 2022 年
 

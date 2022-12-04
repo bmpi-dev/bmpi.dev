@@ -212,7 +212,7 @@ Time is money. 用钱买 SaaS 服务是提高个人效率最直接的方式。
 
 ### 邮箱服务
 
-- [TinyLetter](https://tinyletter.com/) — 免费的邮件订阅平台。我用它实现博客的 [邮件订阅](https://tinyletter.com/i365) 功能。
+- [TinyLetter](https://tinyletter.com/) — 免费的邮件订阅平台。我用它实现博客的 [邮件订阅](https://tinyletter.com/bmpi-dev) 功能。
 
 ### 知识管理
 

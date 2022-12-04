@@ -64,6 +64,7 @@ H6 {
 .list .title {
     font-family: 'LXGW WenKai',Roboto,STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif !important;
     font-size: 24px !important;
+    font-weight: 100 !important;
 }
 
 /* .footer .container {

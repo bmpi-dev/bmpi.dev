@@ -200,6 +200,10 @@ img {
   width: 100%;
   padding-left: 2.0rem;
   padding-right: 2.0rem;
+  width: 60%;
+  @media only screen and (max-width : 768px) {
+    width: 90%;
+  }
 }
 
 .fab {

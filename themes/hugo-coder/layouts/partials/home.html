@@ -1,72 +1,20 @@
 <section class="container centered">
   <div class="about">
-    {{ if or (hasPrefix .RelPermalink "/en") }}
-      <div style="margin:0 auto;text-align:left;">
-      👋 I am <a href="https://madawei.bmpi.dev/">Dawei Ma</a>, a full stack developer live in China.<br>
-      ❤️ Love to build <a href="https://github.com/madawei2699">open source projects</a> and <a href="https://dev.to/madawei2699">write</a>.<br>
-      📫 You can reach me via <a href="mailto:bmpidev@gmail.com">email</a> or <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>.
-      </div>
-    {{ else }}
-      {{ with .Site.Params.avatarurl }}
-        <div class="avatar" data-aos="fade-down" data-aos-offset="150" data-aos-delay="200" data-aos-duration="1000"><img width="512" height="512" src="{{ . | relURL }}" alt="马大伟"></div>
+    <div style="margin:0 auto;text-align:left;line-height:4rem;">
+      {{$scratch := newScratch}}
+      {{ range .Site.RegularPages }}
+          {{$scratch.Add "total" (countwords .Content)}}
       {{ end }}
-      <div class="my-skill" data-aos="flip-up" data-aos-delay="500" data-aos-duration="2000">
-        <div class="tooltip">{{ .Site.Params.info1 }}
-          <span class="tooltiptext">{{ .Site.Params.info1Tooltip }}</span>
-        </div>
-        <div class="tooltip">{{ .Site.Params.info2 }}
-          <span class="tooltiptext">{{ .Site.Params.info2Tooltip }}</span>
-        </div>
-        <div class="tooltip">{{ .Site.Params.info3 }}
-          <span class="tooltiptext">{{ .Site.Params.info3Tooltip }}</span>
-        </div>
+      👋 I am <a href="https://madawei.bmpi.dev/">Dawei Ma</a>, a full stack developer live in China.<br>
+      ✍️ I have written <span style="text-decoration:underline;">{{ len .Site.RegularPages }}</span> posts about Learn / Dev / Trade, total <span style="text-decoration:underline;">{{$scratch.Get "total" }}</span> words.<br>
+      🚩 For now, My blog has been viewed for <span id="all-page-views" style="text-decoration:underline;"></span> times in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
+      🔨 Love to build <a href="https://github.com/madawei2699">OSS</a>, currently focuse on <a href="https://github.com/madawei2699/free4chat">free4chat</a> and <a href="https://github.com/bmpi-dev/invest-alchemy">invest-alchemy</a>.<br>
+      📫 You can reach me via <a href="mailto:bmpidev@gmail.com">Email</a> or <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>, more about me is <a href="/about/">here</a>.<br>
+      🔗 Also find me on <a href="https://www.youtube.com/@bmpi">YouTube</a>, <a href="https://img.bmpi.dev/4e0bae9a-fa9d-5b84-d928-592bd9c2c9fb.png">WeChat</a>, <a href="https://zhuanlan.zhihu.com/improve365">ZhiHu</a>, <a href="https://t.me/s/bmpi365">Telegram</a>, <a href="https://tinyletter.com/bmpi-dev">Newsletter</a>, <a href="https://www.bmpi.dev/index.xml">RSS</a>.<br>
+      🙊 If you are very curious about the blog name, please read this <a href="/self/build-leverage/">post</a>.<br>
+      ⛽️ What keeps me going are these long-term <a href="/goal/">goals</a>.<br>
+      🚮 Other stuffs which I have built is <a href="/project/">here</a>.<br>
+      👀 I have a <a href="https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b/page/MnJzB">dashboard</a> for monitoring my blog & social data.
       </div>
-      <div class="heti heti--ancient" data-aos="fade-right" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000">
-        <h1 class="heti-meta heti-x-large"><abbr title="终身学习 * 全栈技术 * 投资理财 => 被动收入">{{ .Site.Params.author }}</abbr></h1>
-      </div>
-      <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="200" data-aos-duration="1500">
-        {{ with .Site.Params.social }}
-        <ul class="about-social">
-          {{ range sort .}}
-            {{ if .icon }}
-              <li>
-                <a href="{{ .url }}" rel="nofollow" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
-                  <i class="{{ .icon }}" aria-hidden="true"></i>
-                </a>
-              </li>
-            {{ else }}
-              <li>
-                <a href="{{ .url }}" rel="nofollow" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
-              </li>
-            {{ end }}
-          {{ end }}
-        </ul>
-        {{ end }}
-        {{ if eq .Site.Language.Lang "zh-cn" }}
-        <div class="dashboard">
-          <div class="pure-g">
-            <div class="pure-u-1 pure-u-md-1-2 left">
-              共 {{ len .Site.RegularPages }} 篇文章
-            </div>
-            <div class="pure-u-1 pure-u-md-1-2 right">
-              {{$scratch := newScratch}}
-              {{ range .Site.RegularPages }}
-                  {{$scratch.Add "total" (countwords .Content)}}
-              {{ end }}
-              总计 {{$scratch.Get "total" }} 字
-            </div>
-          </div>
-          <div class="pure-g">
-            <div class="pure-u-1 pure-u-md-1-2 left">
-              <span>网站总 PV: </span><span id="all-page-views"></span>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-2 right">
-              网站运行时间: <span id="site-run-days"></span> 天
-            </div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    {{ end }}
   </div>
 </section>

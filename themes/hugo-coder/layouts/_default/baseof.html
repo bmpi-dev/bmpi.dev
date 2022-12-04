@@ -131,7 +131,7 @@
   <link rel="preload" href="{{ $tag_style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ $tag_style.RelPermalink }}"></noscript>
 
-  {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/money/") }}
+  {{ if not (hasPrefix .RelPermalink "/en/") }}
   <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css"></noscript>

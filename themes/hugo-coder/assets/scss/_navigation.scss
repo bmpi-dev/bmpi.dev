@@ -44,6 +44,7 @@
       transition: opacity 0.25s, max-height 0.15s linear;
     }
     .navigation-item {
+      min-width: 60px;
       float: left;
       margin: 0;
       position: relative;
@@ -60,6 +61,7 @@
       }
     }
     .menu-separator {
+      min-width: 10px !important;
       @media only screen and (max-width : 768px) {
         border-top: 2px solid $fg-color;
         margin: 0 8.0rem;

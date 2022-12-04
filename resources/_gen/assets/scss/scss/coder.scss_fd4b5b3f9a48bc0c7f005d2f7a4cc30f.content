@@ -169,8 +169,11 @@ img {
   max-width: 90.0rem;
   width: 100%;
   padding-left: 2.0rem;
-  padding-right: 2.0rem; }
-
+  padding-right: 2.0rem;
+  width: 60%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 90%; } }
 .fab {
   font-weight: 400; }
 
@@ -672,6 +675,7 @@ a[href$="/money/"] {
         border-bottom: solid 2px #E0E0E0;
         transition: opacity 0.25s, max-height 0.15s linear; } }
     .navigation .navigation-list .navigation-item {
+      min-width: 60px;
       float: left;
       margin: 0;
       position: relative; }
@@ -684,12 +688,14 @@ a[href$="/money/"] {
       .navigation .navigation-list .navigation-item a, .navigation .navigation-list .navigation-item span {
         margin-left: 1.0rem;
         margin-right: 1.0rem; }
-    @media only screen and (max-width: 768px) {
-      .navigation .navigation-list .menu-separator {
-        border-top: 2px solid #212121;
-        margin: 0 8.0rem; }
-        .navigation .navigation-list .menu-separator span {
-          display: none; } }
+    .navigation .navigation-list .menu-separator {
+      min-width: 10px !important; }
+      @media only screen and (max-width: 768px) {
+        .navigation .navigation-list .menu-separator {
+          border-top: 2px solid #212121;
+          margin: 0 8.0rem; }
+          .navigation .navigation-list .menu-separator span {
+            display: none; } }
   .navigation #menu-toggle {
     display: none; }
     @media only screen and (max-width: 768px) {

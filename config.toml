@@ -120,7 +120,7 @@ FootnoteReturnLinkContents = "↑"
     name = "Newsletter"
     icon = "fas fa-envelope"
     weight = 6
-    url = "https://tinyletter.com/i365"
+    url = "https://tinyletter.com/bmpi-dev"
 [[params.social]]
     name = "RSS"
     icon = "fas fa-rss"
@@ -177,30 +177,14 @@ FootnoteReturnLinkContents = "↑"
 
         [languages.zh-cn.menu]
             [[languages.zh-cn.menu.main]]
-                name = "Twitter"
-                weight = 1
-                url  = "https://twitter.com/madawei2699"
-            [[languages.zh-cn.menu.main]]
-                name = "关于"
-                weight = 2
-                url = "/about/"
-            [[languages.zh-cn.menu.main]]
                 name = "学习"
-                weight = 3
+                weight = 1
                 url  = "/self/"
             [[languages.zh-cn.menu.main]]
                 name = "技术"
-                weight = 4
+                weight = 2
                 url  = "/dev/"
             [[languages.zh-cn.menu.main]]
                 name = "投资"
-                weight = 5
+                weight = 3
                 url  = "/money/"
-            [[languages.zh-cn.menu.main]]
-                name = "个人项目"
-                weight = 6
-                url  = "/project/"
-            [[languages.zh-cn.menu.main]]
-                name = "长期目标"
-                weight = 7
-                url  = "/goal/"

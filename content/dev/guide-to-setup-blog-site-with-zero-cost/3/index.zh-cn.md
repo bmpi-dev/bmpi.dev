@@ -27,7 +27,7 @@ isCJKLanguage: true
 
 ![](https://img.bmpi.dev/585423cf-a4f4-de95-1936-90afc2661fe0.png)
 
-不过对于博客不需要这么复杂的解决方案，虽然他们也都有免费计划。在这里我使用了 [tinyletter](https://tinyletter.com/)，一个 mailchimp 提供的针对个人使用的长期免费的邮件订阅方案。效果见这个链接：[Newsletter](https://tinyletter.com/i365)。
+不过对于博客不需要这么复杂的解决方案，虽然他们也都有免费计划。在这里我使用了 [tinyletter](https://tinyletter.com/)，一个 mailchimp 提供的针对个人使用的长期免费的邮件订阅方案。效果见这个链接：[Newsletter](https://tinyletter.com/bmpi-dev)。
 
 当读者订阅后，你可以给他们发任何你想发的信息，包括推送新文章。一个好的实践，可以提高邮件打开率的方式是撰写合适的推荐短语而不是直接全文复制一篇文章然后发送，比如：
 
