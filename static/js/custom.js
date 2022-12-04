@@ -35,7 +35,7 @@ function httpGetAsync(theUrl, callback) {
 }
 
 function set_home_page_all_views(hit) {
-    document.getElementById("all-page-views").textContent = hit / 1000;
+    document.getElementById("all-page-views").textContent = Math.round(hit / 1000);
 }
 
 function set_home_page_site_run_days() {
