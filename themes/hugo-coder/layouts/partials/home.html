@@ -13,7 +13,7 @@
           {{$scratch.Add "total" (countwords .Content)}}
         {{ end }}
       {{ end }}
-      👋 I am <a href="https://madawei.bmpi.dev/">Dawei Ma</a>, a full stack developer live in China.<br>
+      👋 I am <a href="https://www.linkedin.com/in/madawei2699/">Dawei Ma</a>, a full stack developer live in China.<br>
       ✍️ I have written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> {{ if not (hasPrefix .RelPermalink "/en") }}chinese {{ else }}english {{ end }}posts about <a href="{{ .RelPermalink }}self/">Learn</a> / <a href="{{ .RelPermalink }}dev/">Dev</a>{{ if not (hasPrefix .RelPermalink "/en") }} / <a href="/money/">Trade</a>{{ end }}, total <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words.<br>
       🚩 For now, My blog has been viewed for <span id="all-page-views" style="text-decoration:underline;"></span>K times in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
       🔨 Love to build <a href="https://github.com/madawei2699">OSS</a>, currently focuse on <a href="https://github.com/madawei2699/free4chat">free4chat</a> and <a href="https://github.com/bmpi-dev/invest-alchemy">invest-alchemy</a>.<br>
