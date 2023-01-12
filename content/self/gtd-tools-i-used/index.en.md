@@ -12,8 +12,6 @@ description: "This article introduces my thinking about time management tools (G
 ---
 "One inch of time, one inch of gold, it is difficult to buy an inch of gold," [^0], "Time Is Money" [^1], these two well-known sayings, tell everyone a truth: poor does not matter, as long as you have time. Although everyone ’s time is the same from the unit, the efficiency of unit time is very different. Ignore the factors of intelligence and external resources. Each person manages time in different ways. It is an important factor in determining time utilization.
 
-{{< ad_embed_post >}}
-
 Archimedes said, "Give me a fulcrum, I can lift the entire planet." This is physical leverage; in futures investments, the leverage can be up to 20 times, winning the club's tender model, and losing to the sea to work; since leverage So beautiful, is there a way to improve my time utilization and indirectly achieve the effect of time leverage? Of course, this is GTD.
 
 ## What's GTD
@@ -204,8 +202,6 @@ When it comes to To Do, I can't justify Emacs's org.
 > Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.[^9]
 
 It can be said that Org is omnipotent. It can take notes and TODO, and can also plan projects and write documents. All of this is pure text! The only drawback may be that you need to master the ancient artifact of Emacs, and you may also need to master the ancient language elisp. These two mountains are not easy to climb and scare away a lot of people, so although the artifact is good, the cost of use has to be considered. Does not meet my requirements for low learning costs.
-
-{{< ad_embed_post >}}
 
 #### *References*
 [^0]: From "Zeng Guang Xian Wen"

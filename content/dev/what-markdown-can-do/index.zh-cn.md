@@ -19,8 +19,6 @@ categories: [
 
 开始之前，如果觉得本文不错，可以分享给你的朋友。让我们开始吧！
 
-{{< ad_embed_post >}}
-
 ## 基于Markdown的工作流
 
 ### Markdown是什么

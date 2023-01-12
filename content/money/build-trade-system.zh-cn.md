@@ -24,8 +24,6 @@ isCJKLanguage: true
 
 <https://v.qq.com/txp/iframe/player.html?vid=i0302w125p1>
 
-{{< ad_embed_post >}}
-
 ### 产品特性
 
 组合管理-可管理多个实盘组合，设置买入股票或基金的止损和目标价格，自动提醒当前持仓是否可卖。
@@ -91,8 +89,6 @@ A：目前支持ETF基金交易记录，你按照交易时间记录进去即可�
 5、App支持场外基金和海外市场吗？
 
 A：目前不支持场外基金和海外市场品种。
-
-{{< ad_embed_post >}}
 
 ## 未来计划
 

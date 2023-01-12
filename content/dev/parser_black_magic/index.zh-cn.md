@@ -16,8 +16,6 @@ categories: [
 
 我们在开发过程中对于文本处理一般会用Regex来搞定，比如识别一个字符串中的邮箱及手机号之类。但是对于复杂的文本格式，我们可能会通过写一个解析工具来解析，但是你可能很难想到用flex/bison来做。想象下这么一个场景，你需要将Nginx的conf文件转换成json格式。
 
-{{< ad_embed_post >}}
-
 ```nginx
 worker_processes  1;
 events {
@@ -395,8 +393,6 @@ module.exports = function render(doingJson, criticalJson) {
 当然也可以看看王垠的 [《对 Parser 的误解》](http://www.yinwang.org/blog-cn/2015/09/19/parser) 。
 
 想看大型编程语言的语法分析，可以看看Elixir基于Erlang平台是怎么把自己编译成Erlang的：[elixir_parser.yrl](https://github.com/elixir-lang/elixir/blob/master/lib/elixir/src/elixir_parser.yrl)
-
-{{< ad_embed_post >}}
 
 #### *References*
 [^0]: [List of Text Processing Tools](https://www.shlomifish.org/open-source/resources/text-processing-tools/)

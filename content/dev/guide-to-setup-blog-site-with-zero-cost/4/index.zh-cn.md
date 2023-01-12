@@ -21,8 +21,6 @@ isCJKLanguage: true
 
 通过一个对Google的爬取规律观察，**Google爬虫对新站一天大约爬半个小时，网站响应越慢，爬虫爬的速度也越慢**。所以从网站被收录的角度看，提高网站加载速度也是很有必要的。
 
-{{< ad_embed_post >}}
-
 先说结果，本博客优化之前，Google PageSpeed Insights 在移动端的评分为76分：
 
 ![](https://img.bmpi.dev/aab2bb8f-60ca-f2da-cc00-b5d605c4779e.png)

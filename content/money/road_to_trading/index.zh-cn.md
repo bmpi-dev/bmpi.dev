@@ -14,8 +14,6 @@ isCJKLanguage: true
 
 ![](https://img.bmpi.dev/road-to-trade.001.png)
 
-{{< ad_embed_post >}}
-
 ![](https://img.bmpi.dev/road-to-trade.002.png)
 
 ![](https://img.bmpi.dev/road-to-trade.003.png)
@@ -209,7 +207,5 @@ isCJKLanguage: true
 ![](https://img.bmpi.dev/road-to-trade.097.png)
 
 ![](https://img.bmpi.dev/road-to-trade.098.png)
-
-{{< ad_embed_post >}}
 
 ![](https://img.bmpi.dev/road-to-trade.099.png)

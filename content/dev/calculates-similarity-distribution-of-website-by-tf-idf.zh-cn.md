@@ -12,8 +12,6 @@ isCJKLanguage: true
 
 本文教你通过开发Python脚本使用TF-IDF算法计算网站全站页面相似度分布并可视化展示出来。
 
-{{< ad_embed_post >}}
-
 ## 0. TF-IDF
 
 TF-IDF（英语：term frequency–inverse document frequency）是一种用于信息检索与文本挖掘的常用加权技术。TF-IDF是一种统计方法，用以评估一字词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要性随着它在文件中出现的次数成正比增加，但同时会随着它在语料库中出现的频率成反比下降。TF-IDF加权的各种形式常被搜索引擎应用，作为文件与用户查询之间相关程度的度量或评级。除了TF-IDF以外，互联网上的搜索引擎还会使用基于链接分析的评级方法，以确定文件在搜索结果中出现的顺序。[^0]
@@ -43,8 +41,6 @@ TF-IDF（英语：term frequency–inverse document frequency）是一种用于�
 ![](https://img.bmpi.dev/3d01a59b-52e6-31ac-d73f-e7ef1db51c93.png)
 
 红色区域表示这些相关页面相似度极高。
-
-{{< ad_embed_post >}}
 
 #### *References*
 [^0]: <https://zh.wikipedia.org/wiki/Tf-idf>

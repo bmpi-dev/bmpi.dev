@@ -10,8 +10,6 @@ isCJKLanguage: true
 
 本文分享我常用的浏览器Chrome的一些能提高日常工作效率、开发效率与SEO优化的插件。
 
-{{< ad_embed_post >}}
-
 ## 常用插件
 
 ### [AdblockPlus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)

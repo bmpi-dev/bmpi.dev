@@ -11,8 +11,6 @@ Having a decent and stable job, a happy family, and a savings certificate that a
 
 Passive Income or residual income, that is "after sleeping income"! Warren buffett once said, "if you don't find a way to make money while you sleep, you'll work yourself to death."
 
-{{< ad_embed_post >}}
-
 Post-sleep income is also called passive income. As long as your passive income is greater than your daily expenses, you are likely to achieve financial freedom.
 
 Here are 10 possible ways to achieve passive income/residual income:
@@ -79,7 +77,5 @@ In the current society, we find that there are a lot of people are becoming more
 There are other sources of passive income that we can think about.
 
 As the saying goes, the best thing is not how much money you can make by working hard, but how much money you can make without doing it.
-
-{{< ad_embed_post >}}
 
 There will be no pie in the sky. If you want to get a continuous source of passive income, you need to use your brain and study more. In the early stage, you need to pay time and energy.

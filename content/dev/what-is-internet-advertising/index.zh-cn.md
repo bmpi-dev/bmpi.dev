@@ -16,8 +16,6 @@ isCJKLanguage: true
 
 广告无处不在，它是支撑互联网高速发展的经济基石。互联网广告对互联网公司意味着什么？互联网的产业组成有哪些？CPC/CPM/CPS/CPI，这些术语意味着什么？各种Vlog博主能赚多少钱？普通人如何利用互联网广告赚钱？这篇文章告诉你答案。
 
-{{< ad_embed_post >}}
-
 ## 历史起源
 
 ### 市场营销
@@ -274,8 +272,6 @@ YouTube真是一个高CPM的平台，哪怕你只有上万的粉丝，每个月�
 ### Affiliate Network
 
 当然除了广告，网站还可以对接Affiliate Network，如果你对此不了解可以查看我的[Affiliate](/affiliate)[^8]。
-
-{{< ad_embed_post >}}
 
 #### *References*
 [^0]: https://en.wikipedia.org/wiki/Marketing
