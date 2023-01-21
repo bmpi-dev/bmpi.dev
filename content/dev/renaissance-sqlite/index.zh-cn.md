@@ -29,7 +29,7 @@ isMermaidEnabled: true
 
 ## SQLite的故事
 
-第一次被SQLite震撼到的一个事是关于[它的测试代码](https://www.sqlite.org/testing.html)，其源码有15多万行，但测试代码和脚本竟有九千多万行。作者Dwayne Richard Hipp是一个完美主义者，为了能自由的开发SQLite，他编写了底层的存储引擎、[Parser](/dev/parser_black_magic/)、源码托管工具[Fossil](https://www2.fossil-scm.org/home/doc/trunk/www/index.wiki)，除了C编译器和一些底层库如libc外，Richard几乎从零构建了SQLite所依赖的库或工具。
+第一次被SQLite震撼到的一个是关于[它的测试代码](https://www.sqlite.org/testing.html)，其源码有15多万行，但测试代码和脚本竟有九千多万行。作者Dwayne Richard Hipp是一个完美主义者，为了能自由的开发SQLite，他编写了底层的存储引擎、[Parser](/dev/parser_black_magic/)、源码托管工具[Fossil](https://www2.fossil-scm.org/home/doc/trunk/www/index.wiki)，除了C编译器和一些底层库如libc外，Richard几乎从零构建了SQLite所依赖的库或工具。
 
 运行SQLite官网的Web服务器[Althttpd](https://sqlite.org/althttpd/doc/trunk/althttpd.md)也是Richard开发的，所有代码仅在一个C文件中，除了标准C库之外没有依赖任何其他代码库。
 
@@ -95,7 +95,11 @@ SQLite的架构主要包括三大部分：编译器、虚拟机与存储引擎�
 
 SQLite是个已经超过20岁高龄的并不新的软件，很多人对它的认知还停留在<q>一个玩具类的数据库，拿它用来做一些简单的本地存储或测试，很少用来在生产系统中使用</q>。但就是这样古老的软件，却长期在[Hacker News](https://news.ycombinator.com/item?id=32478907)中被热议，因为一些有趣的项目，让SQLite老树逢春、文艺复兴。
 
-> SQLite的极限测试，单机百万级并发压测：[Scaling SQLite to 4M QPS on a Single Server (EC2 vs Bare Metal)](https://blog.expensify.com/2018/01/08/scaling-sqlite-to-4m-qps-on-a-single-server/)。
+> 一些你可能觉得SQLite做不到的事：
+>
+> - SQLite单机百万TPS并发压测：[Scaling SQLite to 4M QPS on a Single Server (EC2 vs Bare Metal)](https://blog.expensify.com/2018/01/08/scaling-sqlite-to-4m-qps-on-a-single-server/)。
+>
+> - SQLite未来可支持多个并发写入: 官方出品的[SQLite HC-tree](https://sqlite.org/hctree/doc/hctree/doc/hctree/index.html)，尝试替换老的[B-tree](https://sqlite.org/src4/doc/trunk/www/bt.wiki)数据结构，能实现多写多读、分布式节点复制与更大的数据库大小限制，[压测结果很不错](https://sqlite.org/hctree/doc/hctree/doc/hctree/threadtest.wiki)。
 
 ### Serverless / Edge Computing
 
@@ -154,6 +158,7 @@ SQLite也可以作为一个Client/Server架构的数据库。当然这种用法�
 
 - [postlite](https://github.com/benbjohnson/postlite)：一个网络代理库，支持PostgreSQL的通信协议，后端使用SQLite作为存储。
 - [sqlite3vfshttp](https://github.com/psanford/sqlite3vfshttp)：一个SQLite VFS，支持通过HTTP协议访问SQLite数据库文件。相比sql.js需要下载整个SQLite数据库文件，该库只需要通过客户端指定`HTTP range`头即可获取指定范围的数据，在一个大的数据库文件中，这种优化可以节省大量的网络开销。
+- [Cloud Backed SQLite](https://sqlite.org/cloudsqlite/doc/trunk/www/index.wiki): 官方支持的云端SQLite，支持Azure和GCP，可以通过Storage Client直接读取或写入数据库，无需下载整个数据库。
 
 ### OLAP
 
