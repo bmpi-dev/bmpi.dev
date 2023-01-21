@@ -304,9 +304,6 @@ function webShare() {
 function set_track_event() {
     document.querySelector('a[href="https://twitter.com/madawei2699"]').onclick = () => umami('Twitter menu click');
     document.querySelector('a[href="https://github.com/madawei2699"]').onclick = () => umami('GitHub menu click');
-    if (document.getElementById('follow-my-twitter') !== null) {
-        document.getElementById('follow-my-twitter').onclick = () => umami('Twitter follow click');
-    }
 }
 
 if( document.readyState !== 'loading' ) {
