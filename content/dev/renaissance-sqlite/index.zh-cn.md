@@ -179,7 +179,8 @@ SQLite这种In-Process的架构看起来与分布式数据库完全不相关，�
   - 推荐阅读作者的这两篇文章了解实现细节：1. [Turning SQLite into a distributed database](https://su3.io/posts/mvsqlite)，2. [Storage and transaction in mvSQLite](https://su3.io/posts/mvsqlite-2)。
   - 与同样通过VFS模块实现分布式的Litefs相比，mvsqlite需要额外部署`FoundationDB`集群与`mvstore`无状态实例，所以部署与运维成本更高。
   - 有趣的是，FoundationDB在`7.0.0`之前SSD存储引擎使用的是SQLite，不过在这之后，FoundationDB实现了自己的存储引擎[Redwood](https://youtu.be/nlus1Z7TVTI)。
-- [cr-sqlite](https://github.com/vlcn-io/cr-sqlite)：前面项目如rqlite实现分布式的方式，是通过共识算法选举出某个Leader，之后由Leader对数据进行变更，实现了最终一致性。如果多个写入者同时对同一个数据库做修改而不发生冲突呢？我们知道实时协作领域中就存在一种解决多人实时协作的无冲突复制的数据结构：[CRDT](https://crdt.tech/)。而这个cr-sqlite项目就巧妙的把CRDT带入了SQLite，最终实现了和mvsqlite一样的集群多节点并发写入特性。
+- [cr-sqlite](https://github.com/vlcn-io/cr-sqlite)：前面项目如rqlite实现分布式的方式，是通过共识算法选举出某个Leader，之后由Leader对数据进行变更，实现了最终一致性。如果多个写入者同时对同一个数据库做修改而不发生冲突呢？我们知道实时协作领域中就存在一种解决多人实时协作的无冲突复制的数据结构：[CRDT](https://crdt.tech/)。而这个cr-sqlite项目就巧妙的通过SQLite的[运行时扩展](https://www.sqlite.org/loadext.html)把CRDT带入了SQLite，最终实现了和mvsqlite一样的集群多节点并发写入特性。
+  - 推荐阅读作者的这篇文章：[Why SQLite? Why Now?](https://tantaman.com/2022-08-23-why-sqlite-why-now.html)
 - [Bedrock](https://github.com/Expensify/Bedrock)：Bedrock是一个建立在SQLite之上的网络和分布式事务层。它是为异地复制而设计的分布式关系数据库管理系统。采用P2P的分布式架构风格，数据最终被写入到所有节点的私有区块链中。🤯
   - Bedrock使用Paxos分布式共识算法选举集群Leader，Leader负责协调分布式两阶段提交事务。
   - Bedrock的[同步引擎](https://bedrockdb.com/synchronization.html)是一个[私有区块链](https://bedrockdb.com/blockchain.html)。每个线程都有一个叫做journal的内部表，它有3个列，叫做id、query、hash。每次查询被提交到数据库时，都会在日志中插入一条新行。新行记录了查询，并根据前一行计算新的增量哈希值。当一个服务器连接到一个集群时，最新的ID和哈希值被广播出来。如果两台服务器对ID对应的哈希值意见不一，那么它们就知道它们在某个时间点上 "分叉 "了，并停止彼此的通信。Leader决定哪个分叉能成为新的主分支。
