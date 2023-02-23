@@ -143,13 +143,13 @@ FootnoteReturnLinkContents = "↑"
 
         [languages.en.menu]
             [[languages.en.menu.main]]
-                name = "GitHub"
+                name = "LinkedIn"
                 weight = 1
-                url  = "https://github.com/madawei2699"
+                url  = "https://www.linkedin.com/in/madawei2699"
             [[languages.en.menu.main]]
-                name = "Twitter"
+                name = "GitHub"
                 weight = 2
-                url  = "https://twitter.com/madawei2699"
+                url  = "https://github.com/madawei2699"
             [[languages.en.menu.main]]
                 name = "Learn"
                 weight = 3
