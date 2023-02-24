@@ -13,8 +13,8 @@ isMermaidEnabled: true
 ---
 
 {{% notice info %}}
-<strong>初稿征集意见中</strong></br>
-本文处于初稿状态，可能存在很多错误，如果你有不同的看法，欢迎不吝赐教，先行感谢！
+本文已翻译成以下语言版本：<br>
+英文：[SQLite Renaissance](/en/dev/renaissance-sqlite/) <br>
 {{% /notice %}}
 
 - [SQLite的故事](#sqlite的故事)
