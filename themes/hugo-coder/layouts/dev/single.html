@@ -80,14 +80,14 @@
               {{ if eq .Site.Language.Lang "zh-cn" }}
                 {{ $ageDays }}天前
               {{ else }}
-                {{ $ageDays }}days ago
+                {{ $ageDays }}d ago
               {{ end }}
           <!-- Published month(s) ago -->
           {{ else }}
               {{ if eq .Site.Language.Lang "zh-cn" }}
                 {{ $ageMonths }}个月前
               {{ else }}
-                {{ $ageMonths }}months ago
+                {{ $ageMonths }}m ago
               {{ end }}
           {{ end }}
           {{ if eq .Site.Language.Lang "zh-cn" }}
