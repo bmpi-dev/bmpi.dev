@@ -59,23 +59,43 @@
 
         <div id="article-info">
           {{ if .GitInfo }}
-        <div style="color: #5c7080;font-size: small;font-style: italic;">
-          更新时间:
-          <!-- Calculate the age in days and months -->
-          {{ $ageDays := div (sub now.Unix .Page.Lastmod.Unix) 86400 }}
-          {{ $ageMonths := div (sub now.Unix .Page.Lastmod.Unix) 2592000 }}
-          <!-- Published today -->
-          {{ if eq $ageDays 0 }}
-              今日
-          <!-- Published in the last 31 days -->
-          {{ else if lt $ageDays 31 }}
-              {{ $ageDays }}天前
-          <!-- Published month(s) ago -->
-          {{ else }}
-              {{ $ageMonths }}个月前
-          {{ end }}
-           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>
-        </div>
+          <div style="color: #5c7080;font-size: small;font-style: italic;">
+            {{ if eq .Site.Language.Lang "zh-cn" }}
+            更新时间:
+            {{ else }}
+            Update time:
+            {{ end }}
+            <!-- Calculate the age in days and months -->
+            {{ $ageDays := div (sub now.Unix .Page.Lastmod.Unix) 86400 }}
+            {{ $ageMonths := div (sub now.Unix .Page.Lastmod.Unix) 2592000 }}
+            <!-- Published today -->
+            {{ if eq $ageDays 0 }}
+                {{ if eq .Site.Language.Lang "zh-cn" }}
+                  今日
+                {{ else }}
+                  Today
+                {{ end }}
+            <!-- Published in the last 31 days -->
+            {{ else if lt $ageDays 31 }}
+                {{ if eq .Site.Language.Lang "zh-cn" }}
+                  {{ $ageDays }}天前
+                {{ else }}
+                  {{ $ageDays }}days ago
+                {{ end }}
+            <!-- Published month(s) ago -->
+            {{ else }}
+                {{ if eq .Site.Language.Lang "zh-cn" }}
+                  {{ $ageMonths }}个月前
+                {{ else }}
+                  {{ $ageMonths }}months ago
+                {{ end }}
+            {{ end }}
+            {{ if eq .Site.Language.Lang "zh-cn" }}
+              版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>
+            {{ else }}
+              Version: <a href="https://github.com/madawei2699/bmpi.dev/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>
+            {{ end }}
+          </div>
         {{ end }}
 
         <div style="text-align: center;color: darkgray;">
