@@ -1,5 +1,5 @@
 baseURL = "https://www.bmpi.dev"
-title = "Build My Passive Income"
+title = "BMPI"
 theme = "hugo-coder"
 languagecode = "zh-cn"
 defaultcontentlanguage = "zh-cn"
@@ -161,7 +161,7 @@ FootnoteReturnLinkContents = "↑"
 
     [languages.zh-cn]
         languagename = "Chinese"
-        title = "构建我的被动收入"
+        title = "BMPI"
 
         [languages.zh-cn.params]
             author = "马大伟"
