@@ -257,6 +257,35 @@
   </script>
   {{ end }}
 
+  {{ if or (eq .RelPermalink "/en/") (eq .RelPermalink "/en/") (eq .RelPermalink "/en") (eq .RelPermalink "/") (eq .RelPermalink "") }}
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script>
+    function setTyperWriterEffect() {
+      var title = document.getElementById('site-title');
+
+      var typewriter = new Typewriter(title, {
+          loop: true,
+          delay: 75,
+      });
+
+      typewriter
+      .typeString('BMPI')
+      .pauseFor(2000)
+      .deleteChars(3)
+      .typeString('uild My Personal Insights')
+      .pauseFor(2000)
+      .deleteChars(16)
+      .typeString('rogramming Insights')
+      .pauseFor(2000)
+      .deleteChars(19)
+      .typeString('assive Income')
+      .pauseFor(2000)
+      .start();
+    }
+    setTyperWriterEffect();
+  </script>
+  {{ end }}
+
 </body>
 
 </html>
