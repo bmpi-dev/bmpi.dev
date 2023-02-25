@@ -639,18 +639,19 @@ a[href$="/money/"] {
   width: 100%; }
   .navigation a, .navigation span {
     display: inline;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family: "LXGW WenKai", Roboto, "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
     font-weight: 700;
     line-height: 6.0rem;
     color: #212121; }
+    @media only screen and (max-width: 768px) {
+      .navigation a, .navigation span {
+        font-size: 1.3rem; } }
   .navigation a {
     color: #666666; }
     .navigation a:hover, .navigation a:focus {
       color: #428bca; }
   .navigation .navigation-title {
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
     background: -webkit-linear-gradient(45deg, #e5b751, #1677b3, #cc5595 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }

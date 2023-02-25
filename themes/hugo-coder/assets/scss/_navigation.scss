@@ -3,11 +3,14 @@
   width: 100%;
   a, span {
     display: inline;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family: $heading-font-family;
     font-weight: 700;
     line-height: 6.0rem;
     color: $fg-color;
+    @media only screen and (max-width : 768px) {
+      font-size: 1.3rem;
+    }
   }
   a {
     &:hover,
@@ -17,8 +20,6 @@
     color: $header-color;
   }
   .navigation-title {
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
     background: -webkit-linear-gradient(45deg, #e5b751,#1677b3, #cc5595 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
