@@ -13,17 +13,16 @@
           {{$scratch.Add "total" (countwords .Content)}}
         {{ end }}
       {{ end }}
-      👋 I am <a href="https://www.linkedin.com/in/madawei2699/">Dawei Ma</a>, a full stack developer live in China.<br>
-      ✍️ I have written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> {{ if not (hasPrefix .RelPermalink "/en") }}chinese {{ else }}english {{ end }}posts about <a href="{{ .RelPermalink }}self/">Learn</a> / <a href="{{ .RelPermalink }}dev/">Dev</a>{{ if not (hasPrefix .RelPermalink "/en") }} / <a href="/money/">Trade</a>{{ end }}, total <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words.<br>
-      🚩 For now, My blog has been viewed for <span id="all-page-views" style="text-decoration:underline;"></span>K times in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
-      🔨 Love to build <a href="https://github.com/madawei2699">OSS</a>, currently focuse on <a href="https://github.com/madawei2699/free4chat">free4chat</a> and <a href="https://github.com/bmpi-dev/invest-alchemy">invest-alchemy</a>.<br>
-      🤑 I manage a <a href="https://money.bmpi.dev/portfolio?t=bmpi&p=被动收入">ETF portfolio</a> to build my passive income.<br>
-      📫 You can reach me via <a href="mailto:bmpidev@gmail.com">Email</a> or <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>, more about me is <a href="/about/">here</a>.<br>
-      🔗 Also find me on {{ if (hasPrefix .RelPermalink "/en") }}<a href="https://dev.to/madawei2699">Dev.to</a>, {{ end }}<a href="https://www.youtube.com/@bmpi">YouTube</a>, {{ if not (hasPrefix .RelPermalink "/en") }}<a href="https://img.bmpi.dev/4e0bae9a-fa9d-5b84-d928-592bd9c2c9fb.png">WeChat</a>, <a href="https://zhuanlan.zhihu.com/improve365">ZhiHu</a>, {{ end }}<a href="https://t.me/s/bmpi365">Telegram</a>, <a href="https://tinyletter.com/bmpi-dev">Newsletter</a>, <a href="https://www.bmpi.dev/index.xml">RSS</a>.<br>
-      🙊 If you are very curious about the blog name, please read this <a href="/self/build-leverage/">post</a>.<br>
-      ⛽️ What keeps me going are these long-term <a href="/goal/">goals</a>.<br>
-      🚮 Other stuffs which I have built are <a href="/project/">here</a>.<br>
-      👀 I have a <a href="https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b/page/MnJzB">dashboard</a> for monitoring my blog & social data.
+      👋 Hi, I'm Dawei Ma, a full-stack developer based in China.<br>
+      ✍️ I write blog posts about topics such as <a href="{{ .RelPermalink }}self/">learning</a>{{ if not (hasPrefix .RelPermalink "/en") }}, {{ else }} and {{ end }}<a href="{{ .RelPermalink }}dev/">development</a>{{ if not (hasPrefix .RelPermalink "/en") }}, and <a href="/money/">trading</a>{{ end }}.<br>
+      🎯 I've written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> posts totaling <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words in {{ if not (hasPrefix .RelPermalink "/en") }}Chinese{{ else }}English{{ end }}.<br>
+      🚩 My blog has been viewed over <span id="all-page-views" style="text-decoration:underline;"></span>K times by readers in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
+      🔨 I enjoy building <a href="https://github.com/madawei2699">open-source</a> software projects like <a href="https://github.com/madawei2699/free4chat">free4chat</a> and <a href="https://github.com/bmpi-dev/invest-alchemy">invest-alchemy</a>.<br>
+      {{ if not (hasPrefix .RelPermalink "/en") }}🤑 I manage an <a href="https://money.bmpi.dev/portfolio?t=bmpi&p=被动收入">ETF portfolio</a> to build passive income.<br>
+      📫 Subscribe to my <a href="https://tinyletter.com/bmpi-dev">newsletter</a> and get to know more <a href="/about/">about me</a>.<br>
+      ⛽️ I'm focused on achieving my long-term <a href="/goal/">goals</a>.<br>
+      🚮 I've built various other projects, which you can find <a href="/project/">here</a>.<br>
+      👀 I have a <a href="https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b/page/MnJzB">dashboard</a> to track my personal professional impact.{{ end }}
       </div>
   </div>
 </section>
