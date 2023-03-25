@@ -5,6 +5,12 @@ keywords = ""
 outputs = "html"
 +++
 
+## 2023
+
+### 基于 chatGPT 的应用开发
+
+- [直播回放](https://www.youtube.com/live/XZIogwFU7jE?feature=share)
+
 ## 2022
 
 ### 用ELIXIR开发WEBRTC应用
