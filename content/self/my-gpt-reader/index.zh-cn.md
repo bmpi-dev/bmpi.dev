@@ -1,5 +1,5 @@
 ---
-title: "我的 AI 阅读助手"
+title: "我的AI阅读助手"
 date: 2023-03-26
 draft: false
 tags: ["chatGPT", "信息输入", "自我提升", "知识管理"]
