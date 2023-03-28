@@ -38,6 +38,7 @@ isCJKLanguage: true
 5. 支持多国语音交互（英文、中文、德语与日语），它会根据你的语言使用相关语言的声音来回答你的问题，从而帮助你训练外语能力，可以理解为它是你的私人外教。
    ![](https://img.bmpi.dev/my-gpt-reader-voice-1.gif)
    ![](https://img.bmpi.dev/my-gpt-reader-voice-2.gif)
+
 这是一个开源软件，意味着你可以私有部署它到你的 workspace 中，当然也可以加入我的 [slack](https://slack-redirect.i365.tech/) 频道来免费体验它的强大。
 
 ## AI 时代的学习范式
