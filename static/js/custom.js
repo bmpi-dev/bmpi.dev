@@ -302,9 +302,13 @@ function webShare() {
 }
 
 function set_track_event() {
-    document.querySelector('a[href="https://twitter.com/madawei2699"]').onclick = () => umami('Twitter menu click');
     document.querySelector('a[href="https://github.com/madawei2699"]').onclick = () => umami('GitHub menu click');
-    document.querySelector('a[href="https://www.linkedin.com/in/madawei2699"]').onclick = () => umami('LinkedIn menu click');
+    if (document.querySelector('a[href="https://twitter.com/madawei2699"]') != null) {
+        document.querySelector('a[href="https://twitter.com/madawei2699"]').onclick = () => umami('Twitter menu click');
+    }
+    if (document.querySelector('a[href="https://www.linkedin.com/in/madawei2699"]') != null) {
+        document.querySelector('a[href="https://www.linkedin.com/in/madawei2699"]').onclick = () => umami('LinkedIn menu click');
+    }   
 }
 
 if( document.readyState !== 'loading' ) {
