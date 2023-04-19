@@ -7,6 +7,11 @@ outputs = "html"
 
 ## 2023
 
+### 如何开发基于 ChatGPT 的应用
+
+- [直播回放](https://mp.weixin.qq.com/s/3XubEJe6gUNM5TqiqRoJdw)
+- [Slide](https://github.com/bmpi-dev/talk.bmpi.dev/blob/master/slides/2023/chatgpt-development-notes/slides.pdf)
+
 ### 基于 chatGPT 的应用开发
 
 - [直播回放](https://www.youtube.com/live/XZIogwFU7jE?feature=share)
