@@ -159,7 +159,7 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   {{ end }}
 
-  <script async defer data-website-id="356d3289-e627-409c-a9d7-a272cf789f0b" src="https://umami.bmpi.dev/umami.js"></script>
+  <script async defer data-website-id="356d3289-e627-409c-a9d7-a272cf789f0b" src="https://umami.bmpi.dev/script.js"></script>
 </head>
 
 {{ $csClass := "colorscheme-light" }}
@@ -222,7 +222,10 @@
   {{ end }}
 
   {{ if .Params.isMermaidEnabled }}
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
   <script>
     // add mermaid: https://github.com/mermaid-js/mermaid
     let mermaidBlocks = document.querySelectorAll('code[data-lang=mermaid]');
