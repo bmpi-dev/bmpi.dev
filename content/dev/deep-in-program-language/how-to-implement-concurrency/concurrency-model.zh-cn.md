@@ -15,11 +15,6 @@ markmap:
 isMermaidEnabled: true
 ---
 
-{{% notice info %}}
-<strong>初稿征集意见中</strong></br>
-本文处于初稿状态，可能存在很多错误，如果你有不同的看法，欢迎不吝赐教，先行感谢！
-{{% /notice %}}
-
 - [常见的并发模型](#常见的并发模型)
   - [多进程(Multiprocessing)](#多进程multiprocessing)
   - [多线程(Multithreaded)](#多线程multithreaded)
