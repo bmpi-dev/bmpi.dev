@@ -617,5 +617,5 @@ code.language-ascii {
 }
 
 .katex-display {
-    overflow-x: auto;
+    overflow-x: scroll;
 }
