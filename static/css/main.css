@@ -615,3 +615,7 @@ code.language-ascii {
       width: 100%;
     }
 }
+
+.katex-display {
+    overflow-x: auto;
+}
