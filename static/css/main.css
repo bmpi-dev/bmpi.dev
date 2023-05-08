@@ -618,4 +618,5 @@ code.language-ascii {
 
 .katex-display {
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
