@@ -34,6 +34,9 @@ outputs = "html"
       - $200k+ PPS / ▰▰▰▱▱▱▱▱▱▱ 30%
 
 > PV: Page View
+>
 > MRR: Monthly Recurring Revenue
+>
 > CAGR: Compound Annual Growth Rate
+>
 > PPS: Portfolio Position Size
