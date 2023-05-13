@@ -20,7 +20,7 @@ outputs = "html"
     - Blog
       - 1M+ PV/Year / ▰▰▰▰▰▰▱▱▱▱▱▱ 50%
     - GitHub
-      - 10k+ Star / ▰▰▰▰▰▰▰▱▱▱ 70%
+      - 10k+ Stars / ▰▰▰▰▰▰▰▱▱▱ 70%
       - 3k+ Followers / ▰▰▰▰▰▱▱▱▱ 56%
     - Twitter
       - 100k+ Followers / ▰▰▰▱▱▱▱▱▱▱ 30%
