@@ -13,19 +13,27 @@ outputs = "html"
 
 ## 长期目标
 
+<!-- https://changaco.oy.lc/unicode-progress-bars/ -->
+
 - 2020 - 2030 🚀
   - 打造个人专业技术影响力
     - Blog
-      - 1M+ PV/Year
+      - 1M+ PV/Year / ▰▰▰▰▰▰▱▱▱▱▱▱ 50%
     - GitHub
-      - 10k+ Star
-      - 3k+ Followers
+      - 10k+ Star / ▰▰▰▰▰▰▰▱▱▱ 70%
+      - 3k+ Followers / ▰▰▰▰▰▱▱▱▱ 56%
     - Twitter
-      - 100k+ Followers
+      - 100k+ Followers / ▰▰▰▱▱▱▱▱▱▱ 30%
   - 被动收入总收入 50% 以上
     - 创作
-      - $1k+ MRR
+      - $1k+ MRR / ▰▱▱▱▱▱▱▱▱▱▱▱▱ 1%
     - 产品
-      - $2k+ MRR
+      - $2k+ MRR / ▰▱▱▱▱▱▱▱▱▱▱▱▱ 5%
     - 投资
-      - 12%+ CAGR
+      - 12%+ CAGR / ▰▰▰▰▰▰▰▰▰▱▱▱ 75%
+      - $200k+ PPS / ▰▰▰▱▱▱▱▱▱▱ 30%
+
+> PV: Page View
+> MRR: Monthly Recurring Revenue
+> CAGR: Compound Annual Growth Rate
+> PPS: Portfolio Position Size
