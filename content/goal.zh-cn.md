@@ -13,12 +13,19 @@ outputs = "html"
 
 ## 长期目标
 
-- 2020 - 2030
-  - 投资交易年复合回报率达 15% 以上
-  - 建立个人专业影响力
-    - 技术
-    - 投资
+- 2020 - 2030 🚀
+  - 打造个人专业技术影响力
+    - Blog
+      - 1M+ PV/Year
+    - GitHub
+      - 10k+ Star
+      - 3k+ Followers
+    - Twitter
+      - 100k+ Followers
   - 被动收入总收入 50% 以上
     - 创作
+      - $1k+ MRR
     - 产品
+      - $2k+ MRR
     - 投资
+      - 12%+ CAGR
