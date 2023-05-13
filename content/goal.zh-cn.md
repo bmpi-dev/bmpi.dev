@@ -1,6 +1,6 @@
 +++
-title = "我的长期目标"
-description = "我的长期目标"
+title = "我的愿景与目标"
+description = "我的愿景与目标"
 keywords = "技术创造、投资交易、独立自由、交易系统、个人品牌、被动收入"
 outputs = "html"
 +++
@@ -15,7 +15,7 @@ outputs = "html"
 
 <!-- https://changaco.oy.lc/unicode-progress-bars/ -->
 
-- 2020 - 2030 🚀
+- 2020 - 2030 🚀 ⣿⣶⣀⣀⣀⣀
   - 打造个人专业技术影响力
     - Blog
       - 1M+ PV/Year / ⣿⣿⣿⣀⣀⣀ 50%
