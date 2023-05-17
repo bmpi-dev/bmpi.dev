@@ -37,5 +37,5 @@ outputs = "html"
 | -- | -- |
 | [Thoughtworks洞见](https://insights.thoughtworks.cn/) | Thoughtworks洞见 |
 | [面向信仰编程](https://draveness.me/) | Go语言设计与实现 |
-| [酷壳](https://coolshell.cn/) | 享受编程和技术所带来的快乐 |
+| [酷壳 (R.I.P.)](https://coolshell.cn/) | 享受编程和技术所带来的快乐 |
 | [Limboy](https://limboy.me/) | Limboy |
