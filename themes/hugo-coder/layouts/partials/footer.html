@@ -1,15 +1,15 @@
 <footer class="footer">
   <div class="footer-taxonomy">
     <div>
-      <a href="/talk/">Talk</a>
+      <a href="/talk/">{{ if (hasPrefix .RelPermalink "/en") }} Talk {{ else }} 演讲 {{ end }}</a>
       ⚡️
-      <a href="https://money.bmpi.dev/">Invest</a>
+      <a href="https://money.bmpi.dev/">{{ if (hasPrefix .RelPermalink "/en") }} Invest {{ else }} 投资炼金术 {{ end }}</a>
       ⚡️
-      <a href="https://www.bmpi.dev/_ad/">AD</a>
+      <a href="https://www.bmpi.dev/_ad/">{{ if (hasPrefix .RelPermalink "/en") }} AD {{ else }} 广告 {{ end }}</a>
       ⚡️
-      <a href= {{ relLangURL "tool" }} >Tool</a>
+      <a href= {{ relLangURL "tool" }} >{{ if (hasPrefix .RelPermalink "/en") }} Tool {{ else }} 工具 {{ end }}</a>
       ⚡️
-      <a href= {{ relLangURL "link" }} >Link</a>
+      <a href= {{ relLangURL "link" }} >{{ if (hasPrefix .RelPermalink "/en") }} Link {{ else }} 友链 {{ end }}</a>
     </div>
   </div>
   <section class="container">
