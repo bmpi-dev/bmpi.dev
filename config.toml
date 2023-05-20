@@ -194,4 +194,4 @@ FootnoteReturnLinkContents = "↑"
             [[languages.zh-cn.menu.main]]
                 name = "投资"
                 weight = 5
-                url  = "/money/"
+                url  = "https://money.bmpi.dev/"

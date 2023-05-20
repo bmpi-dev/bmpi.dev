@@ -459,6 +459,9 @@ a[href$="/dev/"] {
 a[href$="/money/"] {
   color: #cc5595 !important; }
 
+a[href$="https://money.bmpi.dev/"] {
+  color: #cc5595 !important; }
+
 .share-twitter-container {
   text-align: center;
   background: -webkit-linear-gradient(45deg, #e5b751, #1677b3, #cc5595 80%);
