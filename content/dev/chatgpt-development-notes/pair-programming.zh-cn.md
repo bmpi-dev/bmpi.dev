@@ -11,7 +11,7 @@ isMermaidEnabled: true
 
 在软件开发过程中，结对编程（Pair Programming）是提升代码质量的一种有效方式。在之前的文章[Google软件工程之文化篇](/dev/software-engineering-at-google/culture/#打造知识共享文化)打造团队知识共享文化中，我曾对这种编程方式做过简单的介绍。
 
-结对编程有两种模式：乒乓模式（Ping-Pong）与领航员观察者模式（Driver-Observer），前者适合以TDD的方式开发，后者适合老带新。本文主要采用后者的方式，我以一个观察员的身份去规划系统功能设计并审查代码，然后使用一些Prompt Engineering的技巧让ChatGPT以驾驶员的身份去开发实现。
+结对编程有两种模式：乒乓模式（Ping-Pong）与驾驶员观察者模式（Driver-Observer），前者适合以TDD的方式开发，后者适合老带新。本文主要采用后者的方式，我以一个观察员的身份去规划系统功能设计并审查代码，然后使用一些Prompt Engineering的技巧让ChatGPT以驾驶员的身份去开发实现。
 
 Prompt Engineering相关的课程推荐观看由Andrew Ng与Isa Fulford讲授的[ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)免费短课程，本文也会将课程中的一些Prompt Engineering技巧应用到此次的实际开发中。
 
