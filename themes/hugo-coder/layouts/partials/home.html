@@ -14,16 +14,12 @@
         {{ end }}
       {{ end }}
       👋 Hi, I'm Dawei Ma, a full-stack developer based in China.<br>
-      ✍️ I write blog posts about topics such as <a href="{{ .RelPermalink }}self/">learning</a>{{ if not (hasPrefix .RelPermalink "/en") }}, {{ else }} and {{ end }}<a href="{{ .RelPermalink }}dev/">development</a>{{ if not (hasPrefix .RelPermalink "/en") }}, and <a href="/money/">trading</a>{{ end }}.<br>
       🎯 I've written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> posts totaling <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words in {{ if not (hasPrefix .RelPermalink "/en") }}Chinese{{ else }}English{{ end }}.<br>
       🚩 My blog has been viewed over <span id="all-page-views" style="text-decoration:underline;"></span>K times by readers in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
-      🔨 I enjoy building <a href="https://github.com/madawei2699">open-source</a> software like <a href="https://github.com/madawei2699/myGPTReader">myGPTReader</a>, <a href="https://github.com/madawei2699/free4chat">free4chat</a> and <a href="https://github.com/bmpi-dev/invest-alchemy">invest-alchemy</a>.<br>
-      💬 Anything you want to discuss, you can join me on this <a href="https://slack-redirect.i365.tech/">slack channel</a>.<br>
-      {{ if not (hasPrefix .RelPermalink "/en") }}🤑 I manage an <a href="https://money.bmpi.dev/portfolio?t=bmpi&p=被动收入">ETF portfolio</a> to build passive income.<br>
-      📫 Subscribe to my <a href="https://tinyletter.com/bmpi-dev">newsletter</a> and get to know more <a href="/about/">about me</a>.<br>
+      🔨 I'm building <a href="https://www.myreader.io/">myGPTReader</a>, <a href="https://money.bmpi.dev/">investAlchemy</a> and <a href="https://www.free4.chat/">free4chat</a>.<br>
+      {{ if not (hasPrefix .RelPermalink "/en") }}🤑 I'm managing an <a href="https://money.bmpi.dev/portfolio?t=bmpi&p=被动收入">ETF portfolio</a> to build passive income.<br>
       ⛽️ I'm focused on achieving my long-term <a href="/goal/">goals</a>.<br>
-      🚮 I've built various other projects, which you can find <a href="/project/">here</a>.<br>
-      👀 I have a <a href="https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b/page/MnJzB">dashboard</a> to track my personal professional impact.{{ end }}
+      📫 Subscribe to my <a href="https://tinyletter.com/bmpi-dev">newsletter</a> and get to know more <a href="/about/">about me</a>.<br>{{ end }}
       </div>
   </div>
 </section>

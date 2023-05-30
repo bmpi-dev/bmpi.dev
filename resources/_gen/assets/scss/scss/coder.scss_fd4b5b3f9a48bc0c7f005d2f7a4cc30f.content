@@ -453,7 +453,13 @@ figure a {
 a[href$="/self/"] {
   color: #e5b751 !important; }
 
+a[href$="https://www.myreader.io/"] {
+  color: #e5b751 !important; }
+
 a[href$="/dev/"] {
+  color: #1677b3 !important; }
+
+a[href$="https://www.free4.chat/"] {
   color: #1677b3 !important; }
 
 a[href$="/money/"] {

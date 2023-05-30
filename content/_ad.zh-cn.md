@@ -45,7 +45,7 @@ _注_：
 
 ## 本站用户流量数据
 
-在选择本站投放品牌广告之前，可以先了解下本站历年的[流量统计数据](https://umami.bmpi.dev/share/ilNU9n5W/bmpi.dev)。
+在选择本站投放品牌广告之前，可以先了解下本站历年的[流量统计数据](https://umami.bmpi.dev/share/ilNU9n5W/bmpi.dev)及我的[个人影响力](https://datastudio.google.com/u/0/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b/page/MnJzB)。
 
 _注_：
 
