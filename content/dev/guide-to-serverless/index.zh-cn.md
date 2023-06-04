@@ -36,7 +36,7 @@ categories: [
   - 设置 S3 桶。
   - 设置 CloudFormation。
 
-最终效果见：[线上版本](https://money.bmpi.dev/)。
+最终效果见：[线上版本](https://www.myinvestpilot.com/)。
 
 源码见：[代码仓库](https://github.com/bmpi-dev/invest-alchemy)。
 

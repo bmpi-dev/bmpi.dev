@@ -465,7 +465,7 @@ a[href$="https://www.free4.chat/"] {
 a[href$="/money/"] {
   color: #cc5595 !important; }
 
-a[href$="https://money.bmpi.dev/"] {
+a[href$="https://www.myinvestpilot.com/"] {
   color: #cc5595 !important; }
 
 .share-twitter-container {

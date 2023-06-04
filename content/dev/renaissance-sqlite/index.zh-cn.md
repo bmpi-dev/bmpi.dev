@@ -146,7 +146,7 @@ SQLite可以通过WebAssembly(WASM)技术运行在浏览器中，以下两个项
 - [sql.js](https://github.com/sql-js/sql.js/)：JS代码导入该库后，通过网络请求下载SQLite数据库文件到浏览器内存中，即可发起SQL查询获取数据结果。
 - [absurd-sql](https://github.com/jlongster/absurd-sql)：和sql.js的区别在于，该项目可以使用浏览器的IndexedDB作为持久化存储，能对SQLite数据库文件进行读写操作。
 
-在浏览器中使用SQLite有什么好处？以我的这个[Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy)开源项目为例，它是一个ETF投资组合管理系统，它需要管理多个ETF投资组合，每个ETF投资组合的所有数据都存放在一个SQLite数据库中，而这个数据库文件存放的位置是在AWS S3中。每天都会有一个定时程序自动下载AWS S3桶中所有的SQLite数据库，之后更新这些组合的数据，最后再上传至S3中。当用户浏览某个投资组合的页面，以这个[投资组合](https://money.bmpi.dev/portfolio?t=robot_dma_v02&p=dma_11_22)为例，该页面在初始化渲染时会先从S3中下载SQLite数据库到浏览器内存，之后使用sql.js初始化SQLite数据库，最后发起多个SQL查询获取数据结果，然后渲染页面。
+在浏览器中使用SQLite有什么好处？以我的这个[Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy)开源项目为例，它是一个ETF投资组合管理系统，它需要管理多个ETF投资组合，每个ETF投资组合的所有数据都存放在一个SQLite数据库中，而这个数据库文件存放的位置是在AWS S3中。每天都会有一个定时程序自动下载AWS S3桶中所有的SQLite数据库，之后更新这些组合的数据，最后再上传至S3中。当用户浏览某个投资组合的页面，以这个[投资组合](https://www.myinvestpilot.com/portfolio?t=robot_dma_v02&p=dma_11_22)为例，该页面在初始化渲染时会先从S3中下载SQLite数据库到浏览器内存，之后使用sql.js初始化SQLite数据库，最后发起多个SQL查询获取数据结果，然后渲染页面。
 
 这种架构的好处在于，浏览器页面只需要发起一次查询请求，就可以获取整个组合的全部数据。如果使用传统的数据库，一方面是费用的问题，另外一方面每次查询都需要经过网络传输，这样会增加页面的加载时间。
 

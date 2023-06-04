@@ -127,7 +127,7 @@ SQLite can be run in the browser using WebAssembly (WASM) technology, and there 
 
 > What are the advantages of using SQLite in the browser? Take this open source project of mine [Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy) as an example. It is an ETF portfolio management system that needs to manage multiple ETF portfolios, and all the data of each ETF portfolio is stored in a SQLite database. The location of this database file is stored in AWS S3. Every day, a scheduled program automatically downloads all SQLite databases to the AWS S3 bucket. After which, the data of these portfolios is updated and finally uploaded to S3.
 >
-> When a user views a page of a portfolio, such as this [portfolio](https://money.bmpi.dev/portfolio?t=robot_dma_v02&p=dma_11_22), the page will first download the SQLite database from S3 to the browser's memory when it is first rendered. Later, it uses sql.js to initialize the SQLite database and launches multiple SQL queries to get the data results, then renders the page.
+> When a user views a page of a portfolio, such as this [portfolio](https://www.myinvestpilot.com/portfolio?t=robot_dma_v02&p=dma_11_22), the page will first download the SQLite database from S3 to the browser's memory when it is first rendered. Later, it uses sql.js to initialize the SQLite database and launches multiple SQL queries to get the data results, then renders the page.
 >
 > The advantage of this architecture is that the browser page only needs to make one query request to get all the data for the entire portfolio. When using a traditional database, this is a matter of cost, and each query must be transmitted over the network, which increases the load time of the page.
 >

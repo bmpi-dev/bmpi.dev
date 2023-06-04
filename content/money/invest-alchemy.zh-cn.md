@@ -36,11 +36,11 @@ isCJKLanguage: true
 
 在肝了近百小时后，这个系统上线了：
 
-[money.bmpi.dev](https://money.bmpi.dev/)
+[money.bmpi.dev](https://www.myinvestpilot.com/)
 
 我給它起了一个很俗的名字：<q>投资炼金术</q>。
 
-## [投资炼金术](https://money.bmpi.dev/)
+## [投资炼金术](https://www.myinvestpilot.com/)
 
 从功能上来讲，投资炼金术可以做下面的事情：
 

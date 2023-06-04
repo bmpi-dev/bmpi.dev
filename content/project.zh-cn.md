@@ -19,7 +19,7 @@ outputs = "html"
 
 | | |
 | -- | -- |
-| [投资炼金术](https://money.bmpi.dev/) | 投资交易助手 |
+| [我的投资助手](https://www.myinvestpilot.com/) | 投资交易助手 |
 | [free4.chat](https://github.com/madawei2699/free4chat) | 匿名语音聊天室 |
 | [tg2web](https://github.com/bmpi-dev/tg2web) | 电报频道静态化工具 |
 | [awesome-seo](https://github.com/madawei2699/awesome-seo) | 我整理的关于Google SEO系统学习的收藏资源及通过流量变现的介绍 |

@@ -38,4 +38,4 @@ outputs = "html"
 
 ## 双均线交易信号邮件订阅
 
-- 你可以在这里邮件订阅 [双均线交易策略信号](https://money.bmpi.dev/)
+- 你可以在这里邮件订阅 [双均线交易策略信号](https://www.myinvestpilot.com/)

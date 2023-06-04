@@ -63,7 +63,7 @@ id = "about"
   - [word](https://word.bmpi.dev/)
   - [wechat](https://wechat.bmpi.dev/)
 - [free4.chat](https://free4.chat/)
-- [投资炼金术](https://money.bmpi.dev/)
+- [我的投资助手](https://www.myinvestpilot.com/)
 - 自用托管网站
   - [excalidraw](https://wb.bmpi.dev/)
 - 流量站
