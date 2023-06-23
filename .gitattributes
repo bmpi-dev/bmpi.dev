@@ -1,2 +1,7 @@
-*.m linguist-language=rust
-*.js linguist-language=rust
+*.md linguist-detectable
+themes/* linguist-vendored
+static/* linguist-vendored
+layouts/* linguist-vendored
+api/* linguist-vendored
+public/* linguist-generated
+resources/* linguist-generated
