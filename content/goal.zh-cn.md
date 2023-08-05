@@ -22,17 +22,15 @@ outputs = "html"
     - 投资
       - 12%+ CAGR / ⣿⣿⣿⣿⣦⣀ 75%
       - $200k+ PPS / ⣿⣶⣀⣀⣀⣀ 30%
-    - 产品
-      - $2k+ MRR / ⣄⣀⣀⣀⣀⣀ 5%
-    - 创作
-      - $1k+ MRR / ⣄⣀⣀⣀⣀⣀ 1%
+    - 产品/项目/内容
+      - $5k+ MRR / ⣄⣀⣀⣀⣀⣀ 3%
   - 打造个人专业技术影响力（占比10%）
-    - Blog
+    - Write(Blog)
       - 1M+ PV/Year / ⣿⣿⣿⣀⣀⣀ 50%
-    - GitHub
+    - Code(GitHub)
       - 10k+ Stars / ⣿⣿⣿⣿⣄⣀ 70%
       - 3k+ Followers / ⣿⣿⣿⣦⣀⣀ 60%
-    - Twitter
+    - SNS(Twitter/LinkedIn)
       - 100k+ Followers / ⣿⣶⣀⣀⣀⣀ 30%
 
 > PV: Page View
