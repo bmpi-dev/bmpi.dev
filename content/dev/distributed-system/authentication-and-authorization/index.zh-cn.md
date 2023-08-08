@@ -128,7 +128,7 @@ markmap:
 
 - [ACL](https://en.wikipedia.org/wiki/Access-control_list)：访问控制列表（Access-control list）广泛用于操作系统内部的文件系统、网络及进程权限控制方面。如在 Linux 中，可通过 `getfacl` 获取目录的默认 ACL 设置。
 - [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control)：RBAC 通过将权限属性从 ACL 方案中的单个用户抽取成更为抽象的角色（Role），通过给角色一组权限属性，再将多个角色赋予某个用户，实现了比 ACL 更为灵活强大的权限控制方案。实际上大部分系统的授权方案采用 RBAC 就足够了。但 RBAC 在面临复杂的权限控制需求时可能面临角色爆炸的问题，这时可以考虑采用更细粒度的 ABAC 方案。
-- [ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control)：ABAC 是比 RBAC 更细粒度的权限控制方案。通过引入一组称为“属性“的特征，包括用户属性、环境属性和资源属性。例如，ABAC 可以对用户的访问做进一步的控制，如只允许在特定的时间或与相关员工相关的某些分支机构进行访问员工信息的操作，而不是让某部门的人员总是能够访问员工信息。但 ABAC 的问题在于初始设置需要定义大量的属性，工作量比 RBAC 要大。
+- [ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control)：ABAC 是比 RBAC 更细粒度的权限控制方案。通过引入一组称为“属性“的特征，包括用户属性、环境属性和资源属性。例如，ABAC 可以对用户的访问做进一步的控制，如只允许在特定的时间或与相关员工相关的某些分支机构进行访问员工信息的操作，而不是让某部门的人员总是能够访问员工信息。但 ABAC 的问题在于初始设置需要定义大量的属性，工作量比 RBAC 要大。一种实现ABAC的技术标准是[XACML](https://www.nextlabs.com/a-business-users-guide-to-xacml/)，它通过定义了一些抽象的组件如策略执行点（PEP）与策略决策点 (PDP)及其他一些组件完成细粒度的权限控制。
 - [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749)：OAuth2 是为了解决应用系统给第三方系统授权的问题而设计的授权框架。传统的客户端服务器交互模式中，客户端持有资源访问凭证（如用户名密码），服务端验证成功后放行。而在给第三方系统提供资源时，如果给第三方系统资源凭证，可能会带来未知的安全问题，比如凭证泄漏，凭证回收等问题。如果应用系统需面向第三方系统提供服务，那需要使用此方案。同时因为 OAuth2 做授权的时候一般需要用户登录，也能实现单点登录的功能。
 
 如果想对授权做进一步的了解，可以参考这篇文章：
