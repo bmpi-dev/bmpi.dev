@@ -62,6 +62,7 @@ outputs = "html"
 
 - [whiteboard](https://wb.bmpi.dev)
 - [handwriting](https://hw.bmpi.dev)
+- (Tools for better thinking](https://untools.co/)
 
 ## 英语学习
 
