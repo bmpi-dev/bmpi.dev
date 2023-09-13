@@ -1,7 +1,7 @@
 +++
-title = "关于本站"
-description = "关于本站"
-keywords = "关于本站"
+title = "关于我"
+description = "关于我"
+keywords = "关于我"
 outputs = "html"
 [markmap]
 enabled = true
@@ -9,109 +9,13 @@ id = "about"
 +++
 
 ```text
-终身学习（认知杠杆）* 全栈技术（时间杠杆）* 投资理财（财务杠杆） => 被动收入（人生杠杆）
-```
-
-## 关于我
-
-```markmap
-# 🥷
-## 个人愿景
-- 认知升级
-- 长期主义
-- 积极分享
-## 长期目标
-- 投资交易年复合回报率达 15% 以上
-- 建立领域个人影响力
-- 被动收入总收入 50% 以上
-## 关注领域
-### 学习
-#### 自我提升
-- [目标管理](/self/life-in-plain-text/)
-- [时间管理](/self/gtd-tools-i-used/)
-- [笔记管理](/self/note-system/)
-- [财务管理](/self/beancount-my-accounting-tool-v2/)
-- [博客写作](/series/零成本搭建现代博客指南/)
-- [投资交易](/money/investment-path-for-young/)
-#### 终身学习
-- [信息输入](/self/my-info-input-channel/)
-- [知识输出](/self/build-personal-knowledge-system/#知识输出)
-### 技术
-#### [GitHub](https://github.com/madawei2699)
-#### [我的技术栈](/dev/tech-stack-of-side-project/)
-#### 关注技术领域
-- [SEO](https://twitter.com/madawei2699/status/1467359935998488577)
-- [WebRTC](https://twitter.com/madawei2699/status/1462051768389361670)
-- [云原生](https://twitter.com/madawei2699/status/1454453779718295556)
-- [分布式技术](https://twitter.com/madawei2699/status/1451837146097020928)
-- [Web3](https://twitter.com/madawei2699/status/1479829788139286533)
-- [内容营销](https://twitter.com/madawei2699/status/1481596368716451842)
-#### 开源项目
-- [Invest Alchemy](https://github.com/bmpi-dev/invest-alchemy)
-- [free4chat](https://github.com/madawei2699/free4chat)
-- [instaghub](https://github.com/bmpi-dev/instaghub)
-- [tg2web](https://github.com/bmpi-dev/tg2web)
-#### 个人产品
-- bmpi.dev
-  - [dashboard](https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b)
-  - [blog](https://www.bmpi.dev)
-  - [talk](/talk/)
-  - [code](https://code.bmpi.dev/)
-  - [wiki](https://wiki.bmpi.dev/)
-  - [think](https://tg.bmpi.dev/)
-  - [game](https://esl.bmpi.dev/)
-  - [word](https://word.bmpi.dev/)
-  - [wechat](https://wechat.bmpi.dev/)
-- [free4.chat](https://free4.chat/)
-- [我的投资助手](https://www.myinvestpilot.com/)
-- 自用托管网站
-  - [excalidraw](https://wb.bmpi.dev/)
-- 流量站
-  - [gitopx.com](https://www.gitopx.com/)
-  - [webtg.org](https://www.webtg.org/)
-### 投资
-#### [我的交易系统](/invest/)
-#### 被动收入投资组合
-- [组合报告](/categories/被动收入投资组合/)
-- [组合持仓](https://www.notion.so/mdw/e0ed086e701a4d0aaa4839d2c7aa62ea)
-## 我在做什么
-- [阅读](https://note.bmpi.dev/#/page/read)
-- [写作](https://note.bmpi.dev/#/page/blog)
+终身学习 * 全栈技术 * 投资理财 => BMPI.dev
+认知杠杆 * 时间杠杆 * 财务杠杆 => I365.tech
 ```
 
 ### 联系我
 
 **学习、技术与投资，我长期关注的三个领域。欲付费咨询可通过 [Email](mailto:bmpidev@gmail.com) 与我联络。**
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/madawei2699?style=social)](https://twitter.com/madawei2699)
-
-电报群：[![](https://img.shields.io/badge/-BMPI-%23000000?style=flat&logo=telegram&logoColor=ffffff)](https://t.me/bmpi_group)
-
-### 品牌赞助
-
-本站也接受品牌赞助，具体赞助方式见这个 <a href="/_ad" rel="nofollow">赞助</a> 页面。
-
-## 流量站日志频道
-
-分享我如何在一周开发一个图片流量站并在一个月达到Google千万索引自然搜索达百万UV并赚取上千美刀💰然后在三个月被Google Kill的神奇经历。
-
-![](https://img.bmpi.dev/5494437c-08e0-0d08-5f91-6bdb4fcdece6.png)
-
-也会分享一些Web流量站创建相关的核心技术，如SEO技术、爬虫、资源聚合、API对接、Affiliate Network、Adsense、广告对接平台评测、CPC/CPM/CTR的研究、社交引流等。
-
-电报频道地址：<https://t.me/web_cpc>([不翻墙镜像版](https://tg.bmpi.dev/web_cpc/index.html))
-
-## BMPI频道
-
-通过研究【网赚/被动收入/投资理财/技术/联盟营销/Media Buy/SEO/搜索聚合站/社交引流/Niche/套利/关键词挖掘/广告/Amazon/Google/FB】等建立个人被动收入，期望达到躺赚月入上千美刀💰
-
-电报频道地址：<https://t.me/bmpi365>([不翻墙镜像版](https://tg.bmpi.dev/bmpi365/index.html))
-
----
-
-<!-- ### 本站Logo
-
-![](https://img.bmpi.dev/81107268-954c-5a99-a4f6-1a58676ede69.png) -->
 
 ### 本站变更日志
 
