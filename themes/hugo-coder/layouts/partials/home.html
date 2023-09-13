@@ -13,7 +13,7 @@
           {{$scratch.Add "total" (countwords .Content)}}
         {{ end }}
       {{ end }}
-      👋 Hi, I'm Dawei Ma, a full-stack developer based in China.<br>
+      👋 Hi, I'm Dawei Ma, a full-stack developer from Earth.<br>
       🎯 I've written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> posts totaling <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words in {{ if not (hasPrefix .RelPermalink "/en") }}Chinese{{ else }}English{{ end }}.<br>
       🚩 My blog has been viewed over <span id="all-page-views" style="text-decoration:underline;"></span>K times by readers in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
       🔨 I'm building 📈 <a href="https://www.chat2invest.com">chat2invest.com</a> 💹 <a href="https://www.myinvestpilot.com/">myinvestpilot.com</a> 📚 <a href="https://www.myreader.io/">myreader.io</a> 💬 <a href="https://www.free4.chat/">free4.chat</a>.<br>
