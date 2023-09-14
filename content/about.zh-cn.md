@@ -15,7 +15,7 @@ id = "about"
 
 ### 联系我
 
-**学习、技术与投资，我长期关注的三个领域。欲付费咨询可通过 [Email](mailto:me@i365.tech) 或微信 `improve365_cn` 与我联络。**
+**学习、技术与投资，我长期关注的三个领域。欲付费咨询可通过 [Email](mailto:me@i365.tech) 或微信`improve365_cn`与我联络。**
 
 <div style="text-align:center">
   <img src="https://img.bmpi.dev/i365_wechat.jpeg" alt="improve365_cn" width="200"/>
