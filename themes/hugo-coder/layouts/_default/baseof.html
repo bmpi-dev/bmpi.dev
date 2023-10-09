@@ -53,8 +53,10 @@
   <link rel="canonical" href="{{ .Permalink }}">
   {{ end }}
 
+  <!-- disable google fonts
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap"
     rel="stylesheet">
+  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 
@@ -96,7 +98,7 @@
   {{ end }}
 
   {{ if .Params.markmap.enabled }}
-  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.1.2/dist/index.min.js"></script>
+  <script src="/js/markmap-autoloader@0.1.2.min.js"></script>
   <style>
     code[class*="language-"], pre[class*="language-"] {
       text-shadow: none !important;
@@ -132,31 +134,31 @@
   <noscript><link rel="stylesheet" href="{{ $tag_style.RelPermalink }}"></noscript>
 
   {{ if not (hasPrefix .RelPermalink "/en/") }}
-  <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css"></noscript>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heti/0.9.4/heti.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/lxgwwenkai-regular.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-webfont/1.7.0/lxgwwenkai-regular.min.css"></noscript>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   {{ end }}
 
   {{ if or (hasPrefix .RelPermalink "/en/") }}
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   {{ end }}
 
   {{ if eq .RelPermalink "/" }}
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
-  <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/pure-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/grids-responsive.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heti/0.9.4/heti.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   {{ end }}
 
   {{ if .Params.plotly }}
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.58.5/plotly.min.js"></script>
   {{ end }}
 
   <script async defer data-website-id="356d3289-e627-409c-a9d7-a272cf789f0b" src="https://umami.bmpi.dev/script.js"></script>
@@ -186,6 +188,7 @@
   </div>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154678195-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -194,6 +197,7 @@
 
     gtag('config', 'UA-154678195-1');
   </script>
+  -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
   <!-- start webpushr code -->
@@ -209,7 +213,7 @@
   {{end}}
 
   {{ if or (hasPrefix .RelPermalink "/dev/") (hasPrefix .RelPermalink "/en/dev/") (hasPrefix .RelPermalink "/self/") (hasPrefix .RelPermalink "/en/self/") (hasPrefix .RelPermalink "/money/") (hasPrefix .RelPermalink "/en/money/") }}
-  <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/heti/0.9.4/heti-addon.min.js"></script>
   <script>
     // init heti: https://github.com/sivan/heti
     const heti = new Heti('.heti p, li, a, h1, h2, h3, h4, h5, h6, .title');
@@ -223,7 +227,7 @@
 
   {{ if .Params.isMermaidEnabled }}
   <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.5.0/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
   </script>
   <script>
@@ -261,7 +265,7 @@
   {{ end }}
 
   {{ if or (eq .RelPermalink "/en/") (eq .RelPermalink "/en/") (eq .RelPermalink "/en") (eq .RelPermalink "/") (eq .RelPermalink "") }}
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypeWriter.js/1.0.1/typewriter.min.js"></script>
   <script>
     function setTyperWriterEffect() {
       var title = document.getElementById('site-title');
