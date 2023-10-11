@@ -9,7 +9,7 @@ outputs = "html"
 
 ### Tool
 
-- [VSCode Server - Web IDE](https://code.bmpi.dev)
+- [VSCode Server - Web IDE](https://github.com/bmpi-dev/Out-of-the-Box-CodeServer)
 - [Judge0 IDE - Online Code Runner](https://ide.judge0.com/)
 - [Nextjournal - Data-driven Research Livebook](https://nextjournal.com/)
 - [Elixir Livebook](https://bmpi.fly.dev)
