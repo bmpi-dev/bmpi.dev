@@ -16,6 +16,7 @@ outputs = "html"
 - [Metabase - Database Visualization](https://github.com/metabase/metabase)
 - [NocoDB - The Airtable Alternative](https://github.com/nocodb/nocodb)
 - [ServerCat - SSH client for iOS/macOS](https://servercat.app/)
+- [Vercel AI](https://v0.dev/)
 
 ### Cloud
 
@@ -39,12 +40,12 @@ outputs = "html"
 
 - [Open Graph Image for bmpi.dev](https://og.bmpi.dev/)
 
-## 微信Markdown排版工具
+## Markdown排版
 
 | | |
 | -- | -- |
 | 相关文章 | [用Markdown可以做什么](/dev/what-markdown-can-do) |
-| 工具链接 | [微信Markdown排版工具](https://wechat.bmpi.dev) |
+| 工具链接 | [Markdown排版](https://write.bmpi.dev) |
 
 ## 我的目标/时间/任务/知识/财务管理工具
 
