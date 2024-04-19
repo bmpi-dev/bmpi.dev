@@ -142,7 +142,7 @@ isCJKLanguage: true
 
 ![](https://img.bmpi.dev/d1ad1145-154b-d81b-39ce-3281ad82aa33.png)
 
-开通华盛通证券，点击[华盛通证券开户邀请链接1](https://www.vcltrade.com/activitiesr/guide-open-account?_scnl=XXEA&t=1)或者[华盛通证券开户邀请链接2](./https://www.vbkr.com/kh/apply/app-switch?_scnl=XXEA&_p=1)，通过链接注册后，开通入金即可。
+开通华盛通证券，点击[华盛通证券开户邀请链接1](https://www.vcltrade.com/activitiesr/guide-open-account?_scnl=XXEA&t=1)或者[华盛通证券开户邀请链接2](https://www.vbkr.com/kh/apply/app-switch?_scnl=XXEA&_p=1)，通过链接注册后，开通入金即可。
 
 提示：进入APP，依次点击【我的】-【邀请码】-【首入资产】-【填写邀请码：`XXEA`】，也能参与本次活动。很久之前开户但是没入金的用户可以按照这个路径更改，再去入金。
 关于华盛通证券的详细开户流程，可以参看这篇[华盛通证券开户指南](/open-account/hk-vcltrade/)。
