@@ -17,7 +17,7 @@ isCJKLanguage: true
 ## 组合介绍
 
 - 名称：[美股1号](https://www.myinvestpilot.com/portfolios/myinvestpilot_us_1)
-- 标识：myinvestpilot_us_1
+- 标识：`myinvestpilot_us_1`
 - 描述：基于特定止损与均线策略的美股杠杆ETF组合
 - 货币：美元
 - 市场：美股
