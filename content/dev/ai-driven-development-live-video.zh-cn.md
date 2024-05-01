@@ -16,7 +16,7 @@ og_image: "https://img.bmpi.dev/963eb59b-a3bc-5e66-134d-d66bda5845aa.png"
 
 在2022年发布的文章[AI降临](/self/ai-arrival/)后，我一直在用AI驱动开发的方式开发产品，这种方式已经成为我的工作方式。
 
-在2023年，我与[ChatGPT结对编程](/dev/chatgpt-development-notes/pair-programming/)，开发了一个[myGPTReader](/dev/chatgpt-development-notes/my-gpt-reader/)的产品，在这个产品的开发过程中，我几乎没有单独写过代码，而是通过ChatGPT生成的代码来完成开发。这种方式在我看来是一种新的开发方式，我称之为AI驱动开发。
+在2023年，我与[ChatGPT结对编程](/dev/chatgpt-development-notes/pair-programming/)，开发了一个[myGPTReader](/dev/chatgpt-development-notes/my-gpt-reader/)的产品，在这个产品的开发过程中，我几乎没有单独写过代码，而是通过ChatGPT生成的代码来完成开发。这种方式在我看来是一种新的开发方式，我称之为<u title="AI Driven Development">AI驱动开发</u>。
 
 在2024年，我又尝试完全用ChatGPT开发[策引](https://www.myinvestpilot.com/)产品一个复杂的功能：[多策略服务](/tags/全球投资/)，策引产品[旧的策略服务](https://github.com/bmpi-dev/invest-alchemy)是一个复杂的遗留系统，不仅功能复杂，而且扩展性差，所以我用GPT4完全重构了技术架构，并优化了业务流程，提高了系统的可维护性和可扩展性。我的角色是决策宏观的架构与设计，其他尽可能让GPT4来写代码，而且所有的过程都在一个会话里完成，持续几个月的开发，消耗的Token过百万。这个过程的体验我已经在[i365社区](https://www.i365.tech/)分享过，详情请看：[完全用GPT4开发复杂服务的体验](https://www.i365.tech/post)。
 
