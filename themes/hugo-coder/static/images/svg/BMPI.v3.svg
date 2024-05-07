@@ -1,7 +1,1 @@
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="background-color: white;">
-  <!-- 绘制颜色区域，中间的蓝色部分更大 -->
-  <path fill="#cc5595" d="M0,0 h200 v60 Q150 40, 100 60 Q50 80, 0 60 Z" />
-  <path fill="#428bca" d="M0,65 Q50 85, 100 65 Q150 45, 200 65 v95 Q150 165, 140 140 Q85 160, 0 160 Z" />
-  <path fill="white" d="M0,145 Q50 170, 100 145 Q150 125, 200 145 v20 H0 Z" />
-  <path fill="#e5b751" d="M0,150 Q50 175, 100 150 Q150 130, 200 150 v50 H0 Z" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" style="background-color:#fff"><path fill="#cc5595" d="M0,0 h200 v60 Q150 40, 100 60 Q50 80, 0 60 Z"/><path fill="#428bca" d="M0,65 Q50 85, 100 65 Q150 45, 200 65 v95 Q150 165, 140 140 Q85 160, 0 160 Z"/><path fill="#fff" d="M0,145 Q50 170, 100 145 Q150 125, 200 145 v20 H0 Z"/><path fill="#e5b751" d="M0,150 Q50 175, 100 150 Q150 130, 200 150 v50 H0 Z"/></svg>
