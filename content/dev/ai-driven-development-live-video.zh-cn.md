@@ -65,6 +65,7 @@ og_image: "https://img.bmpi.dev/963eb59b-a3bc-5e66-134d-d66bda5845aa.png"
 
 - 小红书：[6739032172](https://www.xiaohongshu.com/user/profile/63c020180000000026013d6b)
 - YouTube：[BMPI](https://www.youtube.com/@bmpi)
+- 其他待定
 
 ## 围观交流
 
