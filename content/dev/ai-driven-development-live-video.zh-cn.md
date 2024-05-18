@@ -26,23 +26,29 @@ og_image: "https://img.bmpi.dev/963eb59b-a3bc-5e66-134d-d66bda5845aa.png"
 
 以下是系列直播计划开发的产品，但最终产出可能会有所变化，一切依最终开发进度而定。
 
-#### 邮件列表小工具（小型项目）
+#### LetterDrop（小型项目）
 
-这个产品可以帮助我很容易创建一个邮件列表供关注者邮件订阅，用来替代曾经我使用过的Tinyletter，并且能使用Mixpanel统计邮件打开率。
+LetterDrop 是一款由 Cloudflare Workers 驱动的安全高效的 Newsletter 管理服务，可轻松创建、分发和管理订阅。
 
-完成进度：▭▭▭▭▭▭▭▭▭▭▭▭▭ 0%
+Repo: https://github.com/i365dev/LetterDrop
+
+回放：[YouTube LetterDrop Playlist](https://youtube.com/playlist?list=PL21oMWN6Y7PCqSwbwesD4_wmXEVSeeQ7h&si=BpX9tRL4YrmBycj_)
+
+<!-- https://changaco.oy.lc/unicode-progress-bars/ -->
+
+完成进度：▰▰▱▱▱▱▱▱▱▱ 20%
 
 #### 点对点通信产品（中小型项目）
 
 这个产品的灵感来自于在开发[策引](https://www.myinvestpilot.com/)产品时需要一个能在线支持客户的功能。经过对现有SaaS产品和开源项目的调研后，发现都不太符合需求，因此决定自行开发一个能支持此需求的产品。经过在[i365社区](https://www.i365.tech/)讨论后，觉得将这个开发过程直播出来会很有意思。这个系列直播也是i365社区《[AI驱动开发指南](https://www.i365.tech/post)》系列的一部分。
 
-完成进度：▭▭▭▭▭▭▭▭▭▭▭▭▭ 0%
+完成进度：▱▱▱▱▱▱▱▱▱▱▱▱▱ 0%
 
 #### 信息订阅机器人（中大型项目）
 
 打造多个信息订阅机器人，能帮助我自动追踪、自动总结多个Feed消息流。
 
-完成进度：▭▭▭▭▭▭▭▭▭▭▭▭▭ 0%
+完成进度：▱▱▱▱▱▱▱▱▱▱▱▱▱ 0%
 
 ### 范围
 
@@ -69,9 +75,9 @@ og_image: "https://img.bmpi.dev/963eb59b-a3bc-5e66-134d-d66bda5845aa.png"
 
 ### 渠道
 
-- 小红书：[6739032172](https://www.xiaohongshu.com/user/profile/63c020180000000026013d6b)
-- YouTube：[BMPI](https://www.youtube.com/@bmpi)
-- 其他待定
+- YouTube: [BMPI](https://www.youtube.com/@bmpi)
+- 小红书: [6739032172](https://www.xiaohongshu.com/user/profile/63c020180000000026013d6b)
+- B站: [1820902713](http://live.bilibili.com/1820902713)
 
 ### 回放
 
