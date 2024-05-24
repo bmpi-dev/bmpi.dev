@@ -120,7 +120,7 @@ isCJKLanguage: true
 - 首次入资3400新元的用户可享受72新加坡元的股票卡、5美元的期权现金券，以及港股和美股终生免佣金的福利；
 - 本渠道客户额外补贴88元京东卡。
 
-开通长桥证券，点击[长桥新加坡证券开户邀请链接](https://link.longbridge.cn/KVNrWc?channel=HB100010&invite-code=FZ9UNP)，
+开通长桥证券，点击[长桥新加坡证券开户邀请链接](https://tinyurl.com/2tc6y9jr?channel=HB100010&invite-code=T7DM5A)，
 开通入金成功后，我们双方都可以得到券商的奖励。除此之外，您在开通过程中遇到的任何问题都可以咨询我。具体操作流程可以阅读这篇文章[长桥新加坡证券开户指南](/open-account/sg-longbridge/)，里边有详细的开户流程，以及注意事项。
 
 ##### Usmart（盈立证券）

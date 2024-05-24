@@ -26,7 +26,7 @@ outputs = "html"
 
 ## 长桥新加坡证券开户流程
 
-点击[长桥新加坡证券开户邀请链接](https://link.longbridge.cn/KVNrWc?channel=HB100010&invite-code=FZ9UNP)注册并开户。点击进去后，用手机号登陆，输入验证码，点击领取奖励，选择其他开户方式。
+点击[长桥新加坡证券开户邀请链接](https://tinyurl.com/2tc6y9jr?channel=HB100010&invite-code=T7DM5A)注册并开户。点击进去后，用手机号登陆，输入验证码，点击领取奖励，选择其他开户方式。
 
 ![](https://img.bmpi.dev/2e064d2a-ea5e-cdf0-4241-e44ad063cc0f.png)
 
