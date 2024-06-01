@@ -36,7 +36,7 @@ Repo: https://github.com/i365dev/LetterDrop
 
 <!-- https://changaco.oy.lc/unicode-progress-bars/ -->
 
-完成进度：▰▰▱▱▱▱▱▱▱▱ 20%
+完成进度：▰▰▰▰▰▰▱▱▱▱ 60%
 
 #### 点对点通信产品（中小型项目）
 
