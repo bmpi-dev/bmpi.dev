@@ -156,7 +156,7 @@ isCJKLanguage: true
 
 ![](https://img.bmpi.dev/ffa51e3d-6509-6e4c-2fdd-95c603bdd837.png)
 
-开通长桥香港证券，点击[长桥香港证券开户邀请链接](https://link.longbridge.cn/KOudEB?channel=HB100010&invite-code=FZ9UNP)，通过这个邀请码，开通入金成功后，我们双方都可以获得券商的奖励。
+开通长桥香港证券，点击[长桥香港证券开户邀请链接](https://app.longbridgehk.com/ac/oa?account_channel=lb&channel=HB100010&invite-code=FZ9UNP)，通过这个邀请码，开通入金成功后，我们双方都可以获得券商的奖励。
 
 关于香港长桥证券开户流程，可以参看我另外一篇文章[长桥香港证券开户指南](/open-account/hk-longbridge/)。
 

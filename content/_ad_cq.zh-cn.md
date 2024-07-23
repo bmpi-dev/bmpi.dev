@@ -10,7 +10,7 @@ noindex = true
 
 香港[长桥证券](https://longbridge.hk/)是一家有[阿里背景](https://longbridge.hk/about)的券商，持有美国、新加坡、新西兰与香港的证券牌照。我本人就是长桥证券的用户，其App的功能及用户体验是我用过的证券应用程序中最好的之一。即使你不是它的用户，我也推荐你体验一下它的App，尤其是它所提供的对个股的详细分析。我最喜欢的是其个股简况介绍页面，有对供应链的详细介绍和财务报告的分析。当然，它还提供了股单功能，我自己还专门建立了一个追踪我感兴趣的[ETF的股单](https://longportapp.com/sharelist/127982?app_id=longbridge&invite-code=FZ9UNP)，你也可以看到[巴菲特持仓的股单](https://longportapp.com/sharelist/22764?app_id=longbridge&invite-code=FZ9UNP)。
 
-目前，本站与香港长桥证券达成合作，为本站用户提供香港长桥证券开户活动。活动奖励详见这个[长桥证券开户页面](https://link.longbridge.cn/KOudEB?channel=HB100010&invite-code=FZ9UNP)。除了开户奖励外，还有以下额外奖励：
+目前，本站与香港长桥证券达成合作，为本站用户提供香港长桥证券开户活动。活动奖励详见这个[长桥证券开户页面](https://app.longbridgehk.com/ac/oa?account_channel=lb&channel=HB100010&invite-code=FZ9UNP)。除了开户奖励外，还有以下额外奖励：
 
 - 入金2万港币，额外再享400港币股票卡；
 - 入资达标享港股美股终身免佣；

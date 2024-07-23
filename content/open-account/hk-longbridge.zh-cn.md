@@ -39,7 +39,7 @@ outputs = "html"
 
 ## 长桥香港证券开户邀请链接
 
-点击[长桥香港证券开户邀请链接](https://link.longbridge.cn/KOudEB?channel=HB100010&invite-code=FZ9UNP)注册开户。
+点击[长桥香港证券开户邀请链接](https://app.longbridgehk.com/ac/oa?account_channel=lb&channel=HB100010&invite-code=FZ9UNP)注册开户。
 
 ![](https://img.bmpi.dev/cedf1daa-d150-4102-ed21-89ac6298bd86.png)
 
