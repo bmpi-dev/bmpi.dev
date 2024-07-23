@@ -182,7 +182,7 @@ isCJKLanguage: true
 
 开户的话扫描下面的二维码按流程注册即可：
 
-![](https://img.bmpi.dev/45fea0e3-63b2-36db-9d31-ed4869330b90.png)
+![](https://img.bmpi.dev/784205dd-ed13-a887-b660-02299bb65393.png)
 
 **需要注意的是，开户入金后需要联系我来帮你调整佣金到最低，不然还是默认的佣金**。
 
