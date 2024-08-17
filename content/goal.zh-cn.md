@@ -13,25 +13,28 @@ outputs = "html"
 
 ## 长期目标
 
+人生如交易，设止损而勇试错。
+
 <!-- https://changaco.oy.lc/unicode-progress-bars/ -->
 
-- 2020 - 2030
-  - 拥有一个健康的身体
-    - 体检异常指标清零
-  - 拥有一定的被动收入
-    - 投资
-      - 12%+ CAGR
-      - $500k+ PPS
-    - 产品/项目/内容
-      - $5k+ MRR
-  - 拥有一定的个人影响力
-    - Write(Blog)
-      - 1M+ PV/Year
-    - Code(GitHub)
-      - 10k+ Stars
-      - 3k+ Followers
-    - SNS(Twitter/LinkedIn)
-      - 100k+ Followers
+### 2020 - 2030
+
+- 拥有一个健康的身体
+  - 体检异常指标清零
+- 拥有一定的被动收入
+  - 投资
+    - 12%+ CAGR
+    - $500k+ PPS
+  - 产品/项目/内容
+    - $5k+ MRR
+- 拥有一定的个人影响力
+  - Write(Blog)
+    - 1M+ PV/Year
+  - Code(GitHub)
+    - 10k+ Stars
+    - 3k+ Followers
+  - SNS(Twitter/LinkedIn)
+    - 100k+ Followers
 
 > PV: Page View
 >
