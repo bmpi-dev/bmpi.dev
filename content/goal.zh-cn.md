@@ -13,7 +13,7 @@ outputs = "html"
 
 ## 长期目标
 
-人生如交易，设止损而勇试错。
+人生如交易，独立思考，设止损而勇试错。
 
 <!-- https://changaco.oy.lc/unicode-progress-bars/ -->
 
