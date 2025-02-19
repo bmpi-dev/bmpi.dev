@@ -13,13 +13,18 @@
           {{$scratch.Add "total" (countwords .Content)}}
         {{ end }}
       {{ end }}
-      👋 Hi, I'm Dawei Ma, a full-stack developer from Earth.<br>
-      🎯 I've written <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> posts totaling <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words in {{ if not (hasPrefix .RelPermalink "/en") }}Chinese{{ else }}English{{ end }}.<br>
-      🚩 My blog has been viewed over <span id="all-page-views" style="text-decoration:underline;"></span>K times by readers in <span id="site-run-days" style="text-decoration:underline;"></span> days.<br>
-      🔨 I'm building 📈 <a href="https://www.chat2invest.com">chat2invest.com</a> 💹 <a href="https://www.myinvestpilot.com/">myinvestpilot.com</a> 📚 <a href="https://www.myreader.io/">myreader.io</a>.<br>
-      {{ if not (hasPrefix .RelPermalink "/en") }}🤑 I'm managing an <a href="https://www.myinvestpilot.com/portfolio?t=bmpi&p=被动收入">ETF portfolio</a> to build passive income.<br>
-      ⛽️ I'm focused on achieving my long-term <a href="/goal/">goals</a>.<br>
-      📬 Stay in touch by subscribing to my <a href="https://ld.i365.tech/newsletter/e0b379d3-0be0-4ae5-9fe2-cd972a667cdb">newsletter</a>.
+      👋 Hello! I'm Dawei Ma, a full-stack developer and indie maker.<br>
+      ✍️ I've authored <span style="text-decoration:underline;">{{ $scratch.Get "postNum" }}</span> articles with <span style="text-decoration:underline;">{{ div ($scratch.Get "total") 1000 }}</span>K words in {{ if not (hasPrefix .RelPermalink "/en") }}Chinese{{ else }}English{{ end }}.<br>
+      📈 My blog has reached <span id="all-page-views" style="text-decoration:underline;"></span>K readers across <span id="site-run-days" style="text-decoration:underline;"></span> days of sharing knowledge.<br>
+      {{ if not (hasPrefix .RelPermalink "/en") }}
+      💡 Currently building <a href="https://www.myinvestpilot.com/">MyInvestPilot</a>, a smart investment platform.<br>
+      {{ else }}
+      💡 Currently building <a href="https://www.chat2invest.com/">Chat2Invest</a>, an AI-powered investment advisor.<br>
+      {{ end }}
+      {{ if not (hasPrefix .RelPermalink "/en") }}
+      📊 Actively managing <a href="https://www.myinvestpilot.com/portfolios">ETF portfolios</a> for sustainable passive income.<br>
+      🎯 Pursuing ambitious <a href="/goal/">long-term goals</a> in tech and investment.<br>
+      🤝 Let's chat on <a href="https://img.bmpi.dev/improve365_cn.JPG">WeChat</a> about learning, tech, or investment!
       {{ end }}
       </div>
   </div>
