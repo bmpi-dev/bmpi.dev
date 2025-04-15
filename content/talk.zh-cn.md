@@ -13,7 +13,7 @@ outputs = "html"
 
 ### 程序员如何高效学习 AIGC (Podcast)
 
-- [小宇宙](https://www.xiaoyuzhoufm.com/episode/658ce1f3de00e5a52f9f9029)
+- [程序员新声](https://www.xiaoyuzhoufm.com/episode/658ce1f3de00e5a52f9f9029)
 
 ## 2023
 
