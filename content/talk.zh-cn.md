@@ -5,6 +5,16 @@ keywords = ""
 outputs = "html"
 +++
 
+## 2025
+
+- TBD
+
+## 2024
+
+### 程序员如何高效学习 AIGC (Podcast)
+
+- [小宇宙](https://www.xiaoyuzhoufm.com/episode/658ce1f3de00e5a52f9f9029)
+
 ## 2023
 
 ### 如何开发基于 ChatGPT 的应用
