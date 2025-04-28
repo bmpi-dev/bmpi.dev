@@ -7,7 +7,9 @@ outputs = "html"
 
 ## 2025
 
-- TBD
+### AI 能否帮我们做出更好的投资决策？(Podcast)
+
+- [捕蛇者说](https://pythonhunter.org/episodes/ep53)
 
 ## 2024
 
