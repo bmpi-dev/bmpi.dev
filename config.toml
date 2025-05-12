@@ -190,8 +190,8 @@ FootnoteReturnLinkContents = "↑"
             [[languages.zh-cn.menu.main]]
                 name = "技术"
                 weight = 4
-                url  = "https://www.i365.tech/"
+                url  = "/dev/"
             [[languages.zh-cn.menu.main]]
                 name = "投资"
                 weight = 5
-                url  = "https://www.myinvestpilot.com/"
+                url  = "/money/"
