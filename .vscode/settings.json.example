@@ -1,0 +1,10 @@
+{
+    "markdownPasteImage": {
+        "cdnType": "r2",
+        "s3Bucket": "img-bmpi-dev",
+        "s3PreUrl": "https://img.bmpi.dev/",
+        "s3Endpoint": "",
+        "s3AccessKeyId": "",
+        "s3SecretAccessKey": ""
+    }
+}
