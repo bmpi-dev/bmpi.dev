@@ -11,6 +11,10 @@ outputs = "html"
 
 - [捕蛇者说](https://pythonhunter.org/episodes/ep53)
 
+### 2025年程序员还需要学习排序算法吗？| Vibe Coding
+
+- [程序员新声](https://www.xiaoyuzhoufm.com/episode/68896df7458c6086ef29ac79)
+
 ## 2024
 
 ### 程序员如何高效学习 AIGC (Podcast)
