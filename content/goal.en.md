@@ -5,14 +5,14 @@ keywords = "Technology creation, investment transactions, independence and freed
 outputs = "html"
 +++
 
-## My Life Goal
+## About Me
 
-- TECHNOLOGY CREATION、 INVESTMENT TRANSACTIONS
-- POSITIVELY INFLUENCE OTHERS
-- BE INDEPENDENT AND DO WHAT I LIKE
+By title, a developer. In my mind, a builder. But at my core, I am a trader.
 
-## My Ten Years Goal（2020-2030）
+## My Infinite Game
 
-- ESTABLISH INVESTMENT TRADING SYSTEM (15% COMPOUND ANNUAL RETURN)
-- ESTABLISH A PERSONAL DOMAIN BRAND (INVESTMENT TRANSACTION / WEBSITE COMMUNITY / MAILING LIST)
-- INCREASING PASSIVE INCOME (CREATION INCOME / TRADING SYSTEM INCOME / EXTRA PROJECT INCOME)
+I believe in connecting with ropes, not conquering with sticks.
+
+Therefore, everything I create serves a single purpose: to build an ecosystem that expresses my investment philosophy.
+
+Its foundation is writing. Its bridge is products. Its horizon is a gamified, immersive world.

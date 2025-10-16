@@ -5,41 +5,14 @@ keywords = "技术创造、投资交易、独立自由、交易系统、个人�
 outputs = "html"
 +++
 
-## 我的愿景
+## 关于我
 
-- **思想自由**：持续学习，提升认知。
-- **财务自由**：专注长期，写作投资。
-- **时间自由**：健康生活，追求热爱。
+头衔是开发者，思绪是构建者，但内心深处，我是一名交易员。
 
-## 长期目标
+## 我的无限游戏
 
-人生如交易，独立思考，设止损而勇试错。
+我相信，最好的方式是用「绳」去连接，而非用「棍」去征服。
 
-<!-- https://changaco.oy.lc/unicode-progress-bars/ -->
+因此，我所有的创造都服务于一个目标：构建一个能表达我投资理念的生态系统。
 
-### 2020 - 2030
-
-- 拥有一个健康的身体
-  - 体检异常指标清零
-- 拥有一定的被动收入
-  - 投资
-    - 12%+ CAGR
-    - $500k+ PPS
-  - 产品/项目/内容
-    - $5k+ MRR
-- 拥有一定的个人影响力
-  - Write(Blog)
-    - 1M+ PV/Year
-  - Code(GitHub)
-    - 10k+ Stars
-    - 3k+ Followers
-  - SNS(Twitter/LinkedIn)
-    - 100k+ Followers
-
-> PV: Page View
->
-> MRR: Monthly Recurring Revenue
->
-> CAGR: Compound Annual Growth Rate
->
-> PPS: Portfolio Position Size
+它的基石，是文字的沉淀； 它的桥梁，是产品的赋能； 它的远方，是一个游戏化的沉浸世界。
