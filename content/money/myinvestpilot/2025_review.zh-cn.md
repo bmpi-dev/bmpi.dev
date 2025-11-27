@@ -8,7 +8,7 @@ description: "2025 年，面对 A 股硬科技爆发与加密币机构消化期�
 isCJKLanguage: true
 ---
 
-![](https://img.bmpi.dev/bbdf462e-d36b-eba7-b850-67f5d9fa8c5c.png)
+![](https://img.bmpi.dev/438cd119-c668-16ac-a906-e91ded7f874e.png)
 
 > **【写在前面】**
 > 
