@@ -25,3 +25,13 @@
 8. [Serverless应用开发小记](https://www.bmpi.dev/dev/guide-to-serverless/)
 9. [使用AWS Lambda提高网站图片加载速度1X倍](https://www.bmpi.dev/dev/aws-lambda-edge-img-to-webp/)
 10. [我常用的浏览器插件](https://www.bmpi.dev/self/my-favorite-browser-plugin/)
+
+---
+
+## About the Author
+
+This project is maintained by the creator of **MyInvestPilot** —
+a systematic investment assistance platform focused on
+rule-based, long-term investing and transparent strategy research.
+
+🔗 https://www.myinvestpilot.com
