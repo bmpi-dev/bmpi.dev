@@ -264,7 +264,7 @@ isCJKLanguage: true
 
 **投资收入(20-30%)**：这是杠杆，基于策略而非运气。一些原则：
 
-- 用简单策略捕捉大趋势，不预测市场
+- 用[简单策略捕捉大趋势](https://www.myinvestpilot.com/docs/strategies/dual-moving-average)，不预测市场
 - 严格执行止损，单次亏损不超过总资金的2%
 - 接受低胜率，但确保盈亏比足够高
 
@@ -330,4 +330,10 @@ isCJKLanguage: true
 - **投资系统咋建**：[《我的投资之路》](/self/my-investment-path/) 写了从2015年崩盘到搭出策引的整个过程
 - **三杠杆理论**：[《构建自己的杠杆》](/self/build-leverage/) 讲了认知、时间、财务三个杠杆咋叠加起来用
 - **系统化思维**：[《系统化思维》](/self/systemic-thinking/) 用对话的方式聊了系统化方法在不同领域的用法
-- **有限到无限**：[《三十五》](/self/35/) 写了从“有限游戏”到“无限游戏”的转变
+- **有限到无限**：[《三十五》](/self/35/) 写了从"有限游戏"到"无限游戏"的转变
+
+如果你对系统化投资工具感兴趣：
+
+- [策引投资哲学](https://www.myinvestpilot.com/docs/concepts/philosophy) - 为什么系统优于直觉，建立投资情绪防火墙
+- [双均线趋势策略](https://www.myinvestpilot.com/docs/strategies/dual-moving-average) - 文中提到的"简单策略捕捉大趋势"
+- [风险分析与控制](https://www.myinvestpilot.com/docs/concepts/risk-analysis) - 构建反脆弱收入结构的风险管理方法

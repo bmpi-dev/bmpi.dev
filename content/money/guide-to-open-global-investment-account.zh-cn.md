@@ -245,12 +245,21 @@ OCBC 已经关停了对大陆居民的开户服务，所以目前此路不通。
 
 ## 全球投资组合
 
-在您了解了全球开户的各个步骤后，可能需要合适的交易工具来简化你的投资。这时，[策引](https://www.myinvestpilot.com/)可能正是您所需要的。策引旨在让长期投资更加简单省心。这款产品是我历时多年根据自己的投资经验和需求而打造的，它支持多种投资交易策略，通过模拟组合来回测交易策略的表现，还能[订阅策略的每日交易提醒](https://www.myinvestpilot.com/strategy)，支持多种市场如A股、美股和加密币，最后它还有一个[AI投资助手](https://www.myinvestpilot.com/chat2invest)，能帮助你分析个股和市场的走势。
+在您了解了全球开户的各个步骤后，可能需要合适的交易工具来简化你的投资。这时，[策引投资分析平台](https://www.myinvestpilot.com/)可能正是您所需要的。策引旨在让长期投资更加简单省心。这款产品是我历时多年根据自己的投资经验和需求而打造的，它支持多种投资交易策略，通过模拟组合来回测交易策略的表现，还能[订阅策略的每日交易提醒](https://www.myinvestpilot.com/strategy)，支持多种市场如A股、美股和加密币，最后它还有一个[AI投资助手](https://www.myinvestpilot.com/chat2invest)，能帮助你分析个股和市场的走势。
 
-策引目前开发了多个[全球投资组合](https://www.myinvestpilot.com/portfolios)，包括美股、A股和加密币，这些组合都是基于特定的交易策略，通过回测和实盘验证，来保证策略的有效性。
+策引目前开发了多个[全球投资组合](https://www.myinvestpilot.com/portfolios)，包括美股、A股和加密币，这些组合都是基于特定的交易策略，如[动量轮动](https://www.myinvestpilot.com/docs/strategies/momentum-rotation)、[双均线趋势跟踪](https://www.myinvestpilot.com/docs/strategies/dual-moving-average)、[经典60/40资产配置](https://www.myinvestpilot.com/docs/asset-allocation/classic-60-40)等，通过回测和实盘验证，来保证策略的有效性。
 
 ## 额外福利
 
-如果你使用我的邀请链接，每成功入金一户我还额外赠送您价值500元的[策引](https://www.myinvestpilot.com/)年会员资格（多户可以叠加），让你的长期投资简单又省心。
+如果你使用我的邀请链接，每成功入金一户我还额外赠送您价值500元的[策引平台](https://www.myinvestpilot.com/)年会员资格（多户可以叠加），让你的长期投资简单又省心。
 
 因为不同券商的入金条件要求不同，建议在开户入金请联系我，我会协助您完成入金流程。如果在开户过程中遇到任何问题，可以添加我的微信`improve365_cn`，我们可以进一步沟通。
+
+## 延伸阅读
+
+开户完成后，以下资源可以帮助你更好地管理全球投资：
+
+- [资产配置入门](https://www.myinvestpilot.com/docs/asset-allocation/introduction) - 了解如何分散投资于不同资产类别
+- [经典60/40组合](https://www.myinvestpilot.com/docs/asset-allocation/classic-60-40) - 被养老金和大学基金广泛采用的配置方案
+- [永久组合策略](https://www.myinvestpilot.com/docs/asset-allocation/permanent-portfolio) - 在任何经济环境下都能稳定运行的配置
+- [动量轮动策略](https://www.myinvestpilot.com/docs/strategies/momentum-rotation) - 利用动量效应捕捉强势资产

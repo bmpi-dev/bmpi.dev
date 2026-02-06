@@ -22,7 +22,7 @@ isCJKLanguage: true
 
 ![](https://img.bmpi.dev/7ea206be-409c-d2a2-bd39-7b618e3ba345.png)
 
-在长达几年的实操中，我逐渐青睐技术分析中的[双均线投资策略](/money/passive-income-protfolio/202008/)，为此开发了一个策略提醒的小工具，这个工具每天会自动将投资交易的买卖信号通过邮件的方式去提醒交易者。
+在长达几年的实操中，我逐渐青睐技术分析中的[双均线投资策略](https://www.myinvestpilot.com/docs/strategies/dual-moving-average)，为此开发了一个策略提醒的小工具，这个工具每天会自动将投资交易的买卖信号通过邮件的方式去提醒交易者。
 
 ![](https://img.bmpi.dev/ed73c1ad-0a1c-cd37-7b10-250ae3cdd56b.png)
 
@@ -77,3 +77,12 @@ isCJKLanguage: true
 当然也可以把真实用户的投资交易记录用这个系统生成投资组合并自动维护，也可以方便的知道自己的交易水平与全球主流指数相比到底相差几何，我相信这种可视化的风险监控方式对我们长期投资来说是有益处的。
 
 最后这套系统的代码是[开源](https://github.com/bmpi-dev/invest-alchemy)的，这意味着你可以按照自己的想法去开发，也可以免费的自用。当然如果你不想花时间折腾这些，但是又想用这种方式去量化理解自己的投资组合，那也可以[与我联系](/about/)。
+
+## 延伸阅读
+
+如果你对系统化投资感兴趣，以下资源可以帮助你深入了解：
+
+- [策引投资哲学](https://www.myinvestpilot.com/docs/concepts/philosophy) - 为什么系统优于直觉，建立投资情绪防火墙
+- [双均线趋势策略详解](https://www.myinvestpilot.com/docs/strategies/dual-moving-average) - 经典的趋势跟踪方法
+- [动量轮动策略](https://www.myinvestpilot.com/docs/strategies/momentum-rotation) - 利用动量效应构建抗周期投资组合
+- [原语策略系统入门](https://www.myinvestpilot.com/docs/primitives/getting-started) - 像搭积木一样配置你的交易系统
